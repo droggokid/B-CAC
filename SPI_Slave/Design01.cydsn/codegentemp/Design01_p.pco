@@ -1,0 +1,33 @@
+dont_use_io iocell 1 0
+dont_use_io iocell 1 1
+dont_use_io iocell 1 3
+set_location "\SPIS_2:BSPIS:dpcounter_one\" macrocell 1 4 1 1
+set_location "Net_20" macrocell 1 3 1 1
+set_location "\SPIS_2:BSPIS:inv_ss\" macrocell 0 3 0 2
+set_location "\SPIS_2:BSPIS:mosi_to_dp\" macrocell 1 4 1 0
+set_location "\SPIS_2:BSPIS:rx_status_4\" macrocell 0 3 0 1
+set_location "\SPIS_2:BSPIS:rx_buf_overrun\" macrocell 0 4 0 3
+set_location "\SPIS_2:BSPIS:sR8:Dp:u0\" datapathcell 1 3 2 
+set_location "\SPIS_2:BSPIS:BitCounter\" count7cell 1 3 7 
+set_location "\SPIS_2:BSPIS:RxStsReg\" statusicell 0 3 4 
+set_location "\SPIS_2:BSPIS:tx_status_0\" macrocell 0 4 0 0
+set_location "\SPIS_2:BSPIS:byte_complete\" macrocell 0 4 0 2
+set_location "\SPIS_2:BSPIS:mosi_buf_overrun_fin\" macrocell 0 4 1 0
+set_location "\SPIS_2:BSPIS:mosi_buf_overrun\" macrocell 1 3 1 0
+set_location "\SPIS_2:BSPIS:dpcounter_one_reg\" macrocell 0 4 0 1
+set_location "\SPIS_2:BSPIS:tx_load\" macrocell 1 3 0 3
+set_location "\SPIS_2:BSPIS:mosi_tmp\" macrocell 1 3 0 1
+set_location "\SPIS_2:BSPIS:TxStsReg\" statusicell 0 4 4 
+set_location "\SPIS_2:BSPIS:sync_4\" synccell 1 4 5 0
+set_io "Button_1(0)" iocell 2 2
+set_io "SCLK_1(0)" iocell 2 0
+set_io "MISO_1(0)" iocell 1 6
+set_location "\SPIS_2:BSPIS:sync_3\" synccell 1 4 5 1
+# Note: port 15 is the logical name for port 8
+set_io "SS_1(0)" iocell 15 4
+set_location "\SPIS_2:BSPIS:sync_1\" synccell 1 4 5 2
+set_location "\SPIS_2:BSPIS:sync_2\" synccell 1 4 5 3
+set_io "MOSI_1(0)" iocell 1 7
+set_location "SPI_RX_ISR" interrupt -1 -1 0
+set_io "LED_1(0)" iocell 2 1
+set_location "ClockBlock" clockblockcell -1 -1 0
