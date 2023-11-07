@@ -16,14 +16,22 @@ function TextBorder(props) {
         justifyContent: 'center',
         alignItems: 'center',
     };
-    //const textStyles    
+    const textStyles = {
+        //Text properties:
+        color: color || 'white',
+        fontFamily: fontFamily || 'Inter',
+        fontSize: fontSize || '40px',
+        fontStyle: fontStyle || 'normal',
+        fontWeight: fontWeight || 400,
+        label: label || 'Sample text',
+        lineHeight: lineHeight || 'normal'        
+    }    
     
     return (
-        <TextBorder>
-            <Text label={label} styles={borderStyle}/>
+        <>
+            <Text label={textStyles.label} styles={textStyles}/>
             <div className='border' style={borderStyle}/>
-        </TextBorder>
-        //<div className="border" style={borderStyle} />
+        </>
     );
 }
 
