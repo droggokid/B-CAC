@@ -1,10 +1,34 @@
+body
+{
+    background-color: #F0F0F0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .playerStat
 {
-    background-color: red;
-    display:inline-flex;
+    display: inline-flex;
 }
 
 .playerStat > *
 {
+    margin: 20px;
+}
+
+.dropdown > select
+{
+    display: flex;
+    padding: 20px;
+    border: none;
+    appearance: none;
+}
+
+.dropdown > img
+{
+    height: 20px;
+}
+
+#drinkType > *
+{
+    display: inline-flex;
     margin: 20px;
 }
