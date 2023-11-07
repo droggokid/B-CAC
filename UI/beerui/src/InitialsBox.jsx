@@ -5,8 +5,9 @@ import TextBox from './TextBox';
 function InitialsBox(props){
     return (
         <div>
-            <TextBorder>
-                <TextBox />
+            <TextBorder label={props.label}>
+                
+                <TextBox/>
             </TextBorder>
         </div>
     );
