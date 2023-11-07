@@ -16,6 +16,7 @@ function TextBorder(props) {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        position: 'relative', // Ensure the positioning context for absolute positioning
     };
     const textStyles = {
         //Text properties:
@@ -25,7 +26,10 @@ function TextBorder(props) {
         fontStyle: fontStyle || 'normal',
         fontWeight: fontWeight || 400,
         label: label || 'Sample text',
-        lineHeight: lineHeight || 'normal'        
+        lineHeight: lineHeight || 'normal',
+        position: 'absolute', // Position the text absolutely within the TextBorder
+        zIndex: 1, // Set a higher z-index to make sure it's on top
+
     }    
     
     return (

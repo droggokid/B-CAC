@@ -5,7 +5,7 @@ function Text(props) {
     const { label, color, fontFamily, fontSize, fontStyle, fontWeight, lineHeight, styles } = props;
 
     return (
-        <div style={{
+        <div style={styles ||{
             color: color || 'white',
             fontFamily: fontFamily || 'Inter',
             fontSize: fontSize || '40px',
