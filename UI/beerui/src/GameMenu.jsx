@@ -6,8 +6,8 @@ function GameMenu(props)
 {
     return (
         <>
-            <PlayerStat id="1" initial="abc" time="01:56.40" />
-            <PlayerStat id="2" initial="def" time="02:56.40"/>
+            <PlayerStat id="1" initials="abc" time="01:56.40" />
+            <PlayerStat id="2" initials="def" time="02:56.40"/>
         </>
     );
 }
