@@ -6,14 +6,14 @@ function Text(props) {
 
     return (
         <div style={{
-            color: color || 0,
+            color: color || 'white',
             fontFamily: fontFamily || 'Inter',
             fontSize: fontSize || '40px',
             fontStyle: fontStyle || 'normal',
             fontWeight: fontWeight || 400,
             lineHeight: lineHeight || 'normal'
         }}>
-            <p>{label}</p> 
+            <p>{props.label}</p> 
         </div>
     );
 }
