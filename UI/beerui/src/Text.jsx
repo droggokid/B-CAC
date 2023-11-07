@@ -5,15 +5,15 @@ function Text(props) {
     const { label, color, fontFamily, fontSize, fontStyle, fontWeight, lineHeight, styles } = props;
 
     return (
-        <div style={styles || {
-            color: color || 0,
+        <div style={{
+            color: color || 'white',
             fontFamily: fontFamily || 'Inter',
             fontSize: fontSize || '40px',
             fontStyle: fontStyle || 'normal',
             fontWeight: fontWeight || 400,
             lineHeight: lineHeight || 'normal'
         }}>
-            <p>{label}</p> 
+            <p>{props.label}</p> 
         </div>
     );
 }
