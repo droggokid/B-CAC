@@ -11,9 +11,10 @@ function Text(props) {
             fontSize: fontSize || '40px',
             fontStyle: fontStyle || 'normal',
             fontWeight: fontWeight || 400,
-            lineHeight: lineHeight || 'normal'
+            lineHeight: lineHeight || 'normal',
+            label: label || 'Sample Text'
         }}>
-            <p>{props.label}</p> 
+            <p>{label}</p> 
         </div>
     );
 }
