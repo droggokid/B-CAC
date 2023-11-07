@@ -2,10 +2,10 @@ import React from 'react';
 import Button from './Button';
 
 function Text(props) {
-    const { label, color, fontFamily, fontSize, fontStyle, fontWeight, lineHeight } = props;
+    const { label, color, fontFamily, fontSize, fontStyle, fontWeight, lineHeight, styles } = props;
 
     return (
-        <div style={{
+        <div style={styles || {
             color: color || 0,
             fontFamily: fontFamily || 'Inter',
             fontSize: fontSize || '40px',
