@@ -2,8 +2,8 @@ import React from 'react';
 import Text from './Text';
 
 function TextBorder(props) {
-    const { label, width, height, borderRadius, border, background, boxShadow } = props;
-    const { color, fontFamily, fontSize, fontStyle, fontWeight, lineHeight } = props;
+    const { label, width, height, borderRadius, border, background, boxShadow, 
+    /*Text options*/color, fontFamily, fontSize, fontStyle, fontWeight, lineHeight } = props;
 
     const borderStyle = {
         //Border properties:
@@ -28,6 +28,7 @@ function TextBorder(props) {
         lineHeight: lineHeight || 'normal',
         position: 'absolute', // Position the text absolutely within the TextBorder
         zIndex: 1, // Set a higher z-index to make sure it's on top
+        padding: "0 20px 0 20px"
 
     }    
     
