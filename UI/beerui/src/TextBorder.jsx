@@ -2,8 +2,7 @@ import React from 'react';
 import Text from './Text';
 
 function TextBorder(props) {
-    const { label, width, height, borderRadius, border, background, boxShadow,
-        /*text props:*/color, fontFamily, fontSize, fontStyle, fontWeight, lineHeight } = props;
+    const { label, width, height, borderRadius, border, background, boxShadow } = props;
 
     const borderStyle = {
         //Border properties:
