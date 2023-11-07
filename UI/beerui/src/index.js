@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom';
 import Text from './Text';
 import Button from './Button';
 import TextBox from './TextBox';
+import TextBorder from './TextBorder';
+import MainMenu from './MainMenu';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Button label="Prepare Game" />);
+root.render(<MainMenu />);

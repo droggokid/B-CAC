@@ -6,9 +6,14 @@ import InitialsBox from "./InitialsBox";
 
 function MainMenu() {
     return (
-        <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
-            <Button label="Prepare Game" />
-            <InitialsBox />
+        <div className="MainMenu">
+            <div className="Button">
+                <Button label="Prepare Game" />
+            </div>
+
+            <div className="InitialsBox">
+                <InitialsBox label="Player 1 " />
+            </div>
         </div>
     );
 }
