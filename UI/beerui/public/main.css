@@ -1,0 +1,10 @@
+.playerStat
+{
+    background-color: red;
+    display:inline-flex;
+}
+
+.playerStat > *
+{
+    margin: 20px;
+}
