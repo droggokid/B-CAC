@@ -2,7 +2,7 @@ import React from 'react';
 import Text from './Text';
 
 function InitialsBorder(props) {
-    const { label, width, height, borderRadius, border, background, boxShadow } = props;
+    const { width, height, borderRadius, border, background, boxShadow } = props;
 
     const borderStyle = {
         width: width || '578px',
