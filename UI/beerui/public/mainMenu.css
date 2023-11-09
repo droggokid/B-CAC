@@ -1,0 +1,21 @@
+.MainMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.Button {
+    margin: 20px;
+    margin-top: auto; /* added */
+    margin-bottom: 0; /* added */
+}
+
+.InitialsBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
