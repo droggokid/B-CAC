@@ -6,7 +6,7 @@ import InitialsBox from "./InitialsBox";
 
 function MainMenu() {
     return (
-        <div className="MainMenu">
+        <div>
             <div className="Button">
                 <Button label="Prepare Game" />
             </div>
