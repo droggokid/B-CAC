@@ -9,4 +9,4 @@ import InitialsBox from './InitialsBox';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<InitialsBox />);
+root.render(<MainMenu />);

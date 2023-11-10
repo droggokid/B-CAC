@@ -1,0 +1,49 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #ff6b6b, #556270); /* Adjust colors as needed */
+    color: white; /* Set text color to contrast with the gradient background */
+  }
+  
+  /* mainMenu.css */
+
+.MainMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.InitialsBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.Button {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 20px;
+}
+
+.TopRightImage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 250px; 
+  height: 100px; 
+  margin: 30px; 
+}
+
+
+  

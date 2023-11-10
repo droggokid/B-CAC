@@ -3,11 +3,15 @@ import React from 'react';
 import TextBorder from './TextBorder';
 import TextBox from './TextBox';
 
-const InitialsBox = () => {
+const InitialsBox = ({ label, onLabelChange }) => {
+  const handleTextBoxChange = (newValue) => {
+    onLabelChange(newValue);
+  };
+
   return (
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
       <TextBorder
-        label="Your Label"
+        label={label}
         width="578px"
         height="122px"
         borderRadius="23px"
@@ -22,7 +26,7 @@ const InitialsBox = () => {
         lineHeight="normal"
       >
         {/* Place TextBox inside TextBorder */}
-        <TextBox />
+        <TextBox onValueChange={handleTextBoxChange} />
       </TextBorder>
     </div>
   );
