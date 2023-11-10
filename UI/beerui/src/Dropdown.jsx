@@ -11,7 +11,7 @@ function Dropdown(props)
         fontSize: fontSize || "40px",
         color: color || '#F0F0F0',
         width: width || '578px',
-        height: height || '122px',
+        height: height || '80px',
         borderRadius: borderRadius || '23px',
         border: border || '1px solid #000',
         background: background || '#000',
@@ -25,7 +25,7 @@ function Dropdown(props)
                     <option value={opt}>{opt}</option>
                 ))}
             </select>
-            <img src={chev} alt="chevron-down" />
+            <img src={chev} alt="chevron-down" style={{ transform: `translateX(calc(${dropdownStyle.height} / 2 * -1))` }} />
         </div>
     );
 }

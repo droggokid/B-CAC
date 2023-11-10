@@ -10,7 +10,7 @@ function GameMenu(props)
             <PlayerStat id="1" initials="abc" time="01:56.40" />
             <PlayerStat id="2" initials="def" time="02:56.40" />
             <div id="drinkType">
-                <Text label="Drink type" fontSize="30px" fontFamily="Arial" />
+                <Text label="Drink type" fontSize="30px" fontFamily="Arial" height="80px" />
                 <Dropdown options={["Bajer", "Mokai"]} fontSize="30px" />
             </div>
         </>
