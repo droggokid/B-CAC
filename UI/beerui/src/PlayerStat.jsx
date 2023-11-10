@@ -8,8 +8,8 @@ function PlayerStat(props)
 
     return (
         <div className='playerStat'>
-            <Text label={`Player ${id}: ${initials}`} fontSize="30px" fontFamily="Arial" />
-            <TextBorder label={`${time}`} fontSize="30px" fontFamily="Arial" />
+            <Text label={`Player ${id}: ${initials}`} fontSize="30px" fontFamily="Arial" color="black"/>
+            <TextBorder label={`${time}`} fontSize="30px" fontFamily="Arial" height="80px" />
         </div>
     );
 }
