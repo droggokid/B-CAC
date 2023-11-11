@@ -20,10 +20,14 @@ function MainMenu() {
 
     return (
         <div className="MainMenu">
-            <img src={yourImage} alt="Your Alt Text" className="TopRightImage" />
+            <img src={yourImage} alt="Beer logo" className="TopRightImage" />
             
-            <div className="Button">
+            <div className="Button--top">
                 <Button label="Prepare Game" />
+            </div>
+
+            <div className="Button--bottom">
+                <Button label="Leaderboard" />
             </div>
 
             <div className="InitialsBox">

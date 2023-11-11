@@ -28,7 +28,15 @@ body {
   margin: 20px;
 }
 
-.Button {
+.Button--top {
+  position: fixed;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 20px;
+}
+
+.Button--bottom {
   position: fixed;
   bottom: 0;
   left: 50%;
