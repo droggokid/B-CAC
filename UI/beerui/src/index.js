@@ -5,10 +5,11 @@ import Text from './Text';
 import Button from './Button';
 import TextBox from './TextBox';
 import GameMenu from './GameMenu';
+import Leaderboard from './Leaderboard'
 
 
 const App = () => {
-  const [currentComponent, setCurrentComponent] = useState('MainMenu');
+  const [currentComponent, setCurrentComponent] = useState('Leaderboard');
 
   const handleComponentChange = (newComponent) => {
     setCurrentComponent(newComponent);
@@ -19,6 +20,8 @@ const App = () => {
       case 'MainMenu':
         return <MainMenu onComponentChange={handleComponentChange} />;
       // Add more cases for other components as needed
+      case 'Leaderboard':
+        return <Leaderboard/>;
       default:
         return null;
     }
