@@ -26,6 +26,8 @@ const TextBox = (props) => {
       setValue('');
     }
   };
+  
+  
 
   return (
     <input

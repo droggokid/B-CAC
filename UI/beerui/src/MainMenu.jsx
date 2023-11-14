@@ -3,6 +3,7 @@ import "./mainMenu.css";
 import Button from "./Button";
 import InitialsBox from "./InitialsBox";
 import yourImage from "./b-cac_logo.png";
+import Leaderboard from "./Leaderboard";
 
 function MainMenu({onComponentChange}) {
     const [playerLabel, setPlayerLabel] = useState("Enter Player 1 initials: ");
@@ -10,24 +11,26 @@ function MainMenu({onComponentChange}) {
     const [secondInputGiven, setSecondInputGiven] = useState(false);
     const [activeComponent, setActiveComponent] = useState(null);
 
-    const handlePlayerLabelChange = (newLabel) => {
-        if (secondInputGiven) {
+    const handlePlayerLabelChange = () => {
+        if (initialInputGiven) {
             setPlayerLabel("Starting game in 1 second...");
             setTimeout(() => {
-              onComponentChange("GameMenu");
-            }, 1000);
-          } else if (initialInputGiven) {
+            onComponentChange("GameMenu");
+          }, 1000);
+        } else {
             setPlayerLabel("Enter Player 2 initials: ");
-            setSecondInputGiven(true);
-          } else {
             setInitialInputGiven(true);
-          }
-    }
+        }
+      };
       
   
 
     const handleOnClickPrepareGame = () => {
         setActiveComponent("InitialsBox");
+    }
+
+    const handleOnClickLeaderboard = () => {
+        setActiveComponent("Leaderboard");
     }
 
     const renderActiveComponent = () => {
@@ -38,6 +41,13 @@ function MainMenu({onComponentChange}) {
                         <InitialsBox label={playerLabel} onLabelChange={handlePlayerLabelChange} />
                     </div>
                 );
+            case "Leaderboard": {
+                return(
+                    <div className="Leaderboard">
+                        <Leaderboard />
+                    </div>
+                );
+            }
             default:
                 return null;
         }
@@ -52,7 +62,7 @@ function MainMenu({onComponentChange}) {
             </div>
 
             <div className="Button--bottom">
-                <Button label="Leaderboard" />
+                <Button label="Leaderboard" onClick={handleOnClickLeaderboard}/>
             </div>
 
             {renderActiveComponent()} 

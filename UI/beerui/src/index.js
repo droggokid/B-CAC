@@ -1,15 +1,12 @@
 import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import MainMenu from './MainMenu';
-import Text from './Text';
-import Button from './Button';
-import TextBox from './TextBox';
 import GameMenu from './GameMenu';
-import Leaderboard from './Leaderboard'
+
 
 
 const App = () => {
-    const [currentComponent, setCurrentComponent] = useState('Leaderboard');
+    const [currentComponent, setCurrentComponent] = useState('MainMenu');
   
     const handleComponentChange = (newComponent) => {
       setCurrentComponent(newComponent);
@@ -21,8 +18,6 @@ const App = () => {
           return <MainMenu onComponentChange={handleComponentChange} />;
         case 'GameMenu':
           return <GameMenu onComponentChange={handleComponentChange} />;
-        case 'Leaderboard':
-        return <Leaderboard/>;
       default:
           return null;
       }
