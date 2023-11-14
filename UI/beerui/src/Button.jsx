@@ -1,5 +1,6 @@
 import React from 'react';
 import Text from './Text';
+import InitialsBox from './InitialsBox';
 
 function Button(props) {
     const { onClick, label, width, height, borderRadius, border, background, boxShadow } = props;

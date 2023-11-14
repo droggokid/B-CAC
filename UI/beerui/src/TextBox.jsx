@@ -1,8 +1,8 @@
 // TextBox.js
 import React, { useState, useEffect } from 'react';
 
-let player1initials = "";
-let player2initials = "";
+export let player1initials = "";
+export let player2initials = "";
 
 const TextBox = (props) => {
   const [value, setValue] = useState('');
@@ -20,9 +20,9 @@ const TextBox = (props) => {
     if (firstInputGiven) {
       player2initials = value;
       onValueChange(player2initials); // Trigger label change
-      setValue(''); // Clear the input value after processing
     }
   }, [firstInputGiven, value, onValueChange]);
+  
 
   const handleKeyDown = (event) => {
     if (event.key === 'Enter') {
@@ -33,6 +33,7 @@ const TextBox = (props) => {
         setFirstInputGiven(true);
         player1initials = value;
       }
+      setValue('');
     }
   };
 
