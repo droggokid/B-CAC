@@ -1,28 +1,13 @@
 // TextBox.js
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 export let player1initials = "";
 export let player2initials = "";
 
 const TextBox = (props) => {
   const [value, setValue] = useState('');
-  const { width, height, onValueChange } = props;
+  const { onValueChange } = props;
   const [firstInputGiven, setFirstInputGiven] = useState(false);
-
-  const textBoxStyle = {
-    width: width || '88px',
-    height: height || '50px',
-    flexShrink: 0,
-  };
-
-  useEffect(() => {
-    // Check if the variable is empty, i.e., it's the first input
-    if (firstInputGiven) {
-      player2initials = value;
-      onValueChange(player2initials); // Trigger label change
-    }
-  }, [firstInputGiven, value, onValueChange]);
-  
 
   const handleKeyDown = (event) => {
     if (event.key === 'Enter') {
@@ -32,7 +17,12 @@ const TextBox = (props) => {
       if (!firstInputGiven) {
         setFirstInputGiven(true);
         player1initials = value;
+        onValueChange(player1initials); // Trigger label change for the first input
+      } else {
+        player2initials = value;
+        onValueChange(player2initials); // Trigger label change for the second input
       }
+
       setValue('');
     }
   };
@@ -44,7 +34,7 @@ const TextBox = (props) => {
       value={value}
       onChange={(event) => setValue(event.target.value)}
       onKeyDown={handleKeyDown}
-      style={textBoxStyle}
+      style={{ width: '88px', height: '50px', flexShrink: 0 }}
     />
   );
 };

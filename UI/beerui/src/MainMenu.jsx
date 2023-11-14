@@ -1,23 +1,30 @@
-// MainMenu.js
 import React, { useState } from "react";
 import "./mainMenu.css"; 
 import Button from "./Button";
 import InitialsBox from "./InitialsBox";
 import yourImage from "./b-cac_logo.png";
 
-function MainMenu() {
+function MainMenu({onComponentChange}) {
     const [playerLabel, setPlayerLabel] = useState("Enter Player 1 initials: ");
     const [initialInputGiven, setInitialInputGiven] = useState(false);
+    const [secondInputGiven, setSecondInputGiven] = useState(false);
     const [activeComponent, setActiveComponent] = useState(null);
 
     const handlePlayerLabelChange = (newLabel) => {
-        if (initialInputGiven) {
+        if (secondInputGiven) {
+            setPlayerLabel("Starting game in 1 second...");
+            setTimeout(() => {
+              onComponentChange("GameMenu");
+            }, 1000);
+          } else if (initialInputGiven) {
             setPlayerLabel("Enter Player 2 initials: ");
-        } else {
+            setSecondInputGiven(true);
+          } else {
             setInitialInputGiven(true);
-            // Do not update the label immediately; wait for Enter key
-        }
-    };
+          }
+    }
+      
+  
 
     const handleOnClickPrepareGame = () => {
         setActiveComponent("InitialsBox");
@@ -52,5 +59,6 @@ function MainMenu() {
         </div>
     );
 }
+
 
 export default MainMenu;
