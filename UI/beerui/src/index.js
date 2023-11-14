@@ -4,10 +4,7 @@ import MainMenu from './MainMenu';
 import Text from './Text';
 import Button from './Button';
 import TextBox from './TextBox';
-import TextBorder from './TextBorder';
-
-import InitialsBox from './InitialsBox';
-
+import GameMenu from './GameMenu';
 
 
 const App = () => {
