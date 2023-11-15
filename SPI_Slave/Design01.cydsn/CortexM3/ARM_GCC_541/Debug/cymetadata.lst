@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUHQQqt.s 			page 1
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUHQQqt.s 			page 1
   55 001a 01       		.byte	1
   56 001b 40       		.byte	64
   57 001c 1E       		.byte	30
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUHQQqt.s 			page 2
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 2
 
 
   58 001d 0D       		.byte	13
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUHQQqt.s 			page 1
  112 0053 08       		.byte	8
  113 0054 B5       		.byte	-75
  114 0055 01       		.byte	1
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUHQQqt.s 			page 3
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 3
 
 
  115 0056 0C       		.byte	12
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUHQQqt.s 			page 1
  169 008c BF       		.byte	-65
  170 008d 05       		.byte	5
  171 008e C0       		.byte	-64
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUHQQqt.s 			page 4
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 4
 
 
  172 008f 02       		.byte	2
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUHQQqt.s 			page 1
  226 00c5 01       		.byte	1
  227 00c6 EA       		.byte	-22
  228 00c7 C0       		.byte	-64
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUHQQqt.s 			page 5
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 5
 
 
  229 00c8 EB       		.byte	-21
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUHQQqt.s 			page 1
  283 00fe 60       		.byte	96
  284 00ff 85       		.byte	-123
  285 0100 62       		.byte	98
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUHQQqt.s 			page 6
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 6
 
 
  286 0101 04       		.byte	4
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUHQQqt.s 			page 1
  340 0137 60       		.byte	96
  341 0138 CC       		.byte	-52
  342 0139 90       		.byte	-112
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUHQQqt.s 			page 7
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 7
 
 
  343 013a CE       		.byte	-50
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUHQQqt.s 			page 1
  397 0170 9E       		.byte	-98
  398 0171 01       		.byte	1
  399 0172 A6       		.byte	-90
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUHQQqt.s 			page 8
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 8
 
 
  400 0173 07       		.byte	7
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUHQQqt.s 			page 1
  454 01a9 08       		.byte	8
  455 01aa 5A       		.byte	90
  456 01ab 60       		.byte	96
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUHQQqt.s 			page 9
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 9
 
 
  457 01ac 5D       		.byte	93
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUHQQqt.s 			page 1
  511 01e2 E2       		.byte	-30
  512 01e3 02       		.byte	2
  513 01e4 EA       		.byte	-22
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUHQQqt.s 			page 10
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 10
 
 
  514 01e5 04       		.byte	4
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUHQQqt.s 			page 1
  568 021b 00       		.byte	0
  569 021c 00       		.byte	0
  570 021d 00       		.byte	0
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUHQQqt.s 			page 11
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 11
 
 
  571 021e 00       		.byte	0
@@ -650,28 +650,28 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUHQQqt.s 			page 1
  613      00000000 
  614              		.text
  615              	.Letext0:
- 616              		.file 1 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
- 617              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 616              		.file 1 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 617              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
  618              		.file 3 "Generated_Source\\PSoC5\\cymetadata.c"
  619              		.section	.debug_info,"",%progbits
  620              	.Ldebug_info0:
  621 0000 31010000 		.4byte	0x131
  622 0004 0400     		.2byte	0x4
  623 0006 00000000 		.4byte	.Ldebug_abbrev0
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUHQQqt.s 			page 12
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 12
 
 
  624 000a 04       		.byte	0x4
  625 000b 01       		.uleb128 0x1
- 626 000c 7F000000 		.4byte	.LASF17
+ 626 000c 24000000 		.4byte	.LASF17
  627 0010 0C       		.byte	0xc
- 628 0011 D9010000 		.4byte	.LASF18
- 629 0015 16000000 		.4byte	.LASF19
+ 628 0011 C9010000 		.4byte	.LASF18
+ 629 0015 06010000 		.4byte	.LASF19
  630 0019 00000000 		.4byte	.Ldebug_line0
  631 001d 02       		.uleb128 0x2
  632 001e 01       		.byte	0x1
  633 001f 06       		.byte	0x6
- 634 0020 CD010000 		.4byte	.LASF0
+ 634 0020 BD010000 		.4byte	.LASF0
  635 0024 03       		.uleb128 0x3
  636 0025 00000000 		.4byte	.LASF9
  637 0029 01       		.byte	0x1
@@ -680,31 +680,31 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUHQQqt.s 			page 1
  640 002f 02       		.uleb128 0x2
  641 0030 01       		.byte	0x1
  642 0031 08       		.byte	0x8
- 643 0032 71000000 		.4byte	.LASF1
+ 643 0032 16000000 		.4byte	.LASF1
  644 0036 02       		.uleb128 0x2
  645 0037 02       		.byte	0x2
  646 0038 05       		.byte	0x5
- 647 0039 BA010000 		.4byte	.LASF2
+ 647 0039 AA010000 		.4byte	.LASF2
  648 003d 02       		.uleb128 0x2
  649 003e 02       		.byte	0x2
  650 003f 07       		.byte	0x7
- 651 0040 1F010000 		.4byte	.LASF3
+ 651 0040 C4000000 		.4byte	.LASF3
  652 0044 02       		.uleb128 0x2
  653 0045 04       		.byte	0x4
  654 0046 05       		.byte	0x5
- 655 0047 C4010000 		.4byte	.LASF4
+ 655 0047 B4010000 		.4byte	.LASF4
  656 004b 02       		.uleb128 0x2
  657 004c 04       		.byte	0x4
  658 004d 07       		.byte	0x7
- 659 004e 0D010000 		.4byte	.LASF5
+ 659 004e B2000000 		.4byte	.LASF5
  660 0052 02       		.uleb128 0x2
  661 0053 08       		.byte	0x8
  662 0054 05       		.byte	0x5
- 663 0055 AC010000 		.4byte	.LASF6
+ 663 0055 9C010000 		.4byte	.LASF6
  664 0059 02       		.uleb128 0x2
  665 005a 08       		.byte	0x8
  666 005b 07       		.byte	0x7
- 667 005c 61010000 		.4byte	.LASF7
+ 667 005c 51010000 		.4byte	.LASF7
  668 0060 04       		.uleb128 0x4
  669 0061 04       		.byte	0x4
  670 0062 05       		.byte	0x5
@@ -712,13 +712,13 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUHQQqt.s 			page 1
  672 0067 02       		.uleb128 0x2
  673 0068 04       		.byte	0x4
  674 0069 07       		.byte	0x7
- 675 006a 54010000 		.4byte	.LASF8
+ 675 006a F9000000 		.4byte	.LASF8
  676 006e 03       		.uleb128 0x3
- 677 006f 78010000 		.4byte	.LASF10
+ 677 006f 68010000 		.4byte	.LASF10
  678 0073 02       		.byte	0x2
  679 0074 18       		.byte	0x18
  680 0075 24000000 		.4byte	0x24
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUHQQqt.s 			page 13
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 13
 
 
  681 0079 05       		.uleb128 0x5
@@ -731,11 +731,11 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUHQQqt.s 			page 1
  688 008a 02       		.uleb128 0x2
  689 008b 04       		.byte	0x4
  690 008c 07       		.byte	0x7
- 691 008d A3010000 		.4byte	.LASF11
+ 691 008d 93010000 		.4byte	.LASF11
  692 0091 07       		.uleb128 0x7
  693 0092 6E000000 		.4byte	0x6e
  694 0096 08       		.uleb128 0x8
- 695 0097 42010000 		.4byte	.LASF12
+ 695 0097 E7000000 		.4byte	.LASF12
  696 009b 03       		.byte	0x3
  697 009c 1F       		.byte	0x1f
  698 009d A7000000 		.4byte	0xa7
@@ -752,7 +752,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUHQQqt.s 			page 1
  709 00ba 03       		.byte	0x3
  710 00bb 00       		.byte	0
  711 00bc 08       		.uleb128 0x8
- 712 00bd 32010000 		.4byte	.LASF13
+ 712 00bd D7000000 		.4byte	.LASF13
  713 00c1 03       		.byte	0x3
  714 00c2 70       		.byte	0x70
  715 00c3 CD000000 		.4byte	0xcd
@@ -762,7 +762,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUHQQqt.s 			page 1
  719 00cd 07       		.uleb128 0x7
  720 00ce AC000000 		.4byte	0xac
  721 00d2 08       		.uleb128 0x8
- 722 00d3 95010000 		.4byte	.LASF14
+ 722 00d3 85010000 		.4byte	.LASF14
  723 00d7 03       		.byte	0x3
  724 00d8 7E       		.byte	0x7e
  725 00d9 E3000000 		.4byte	0xe3
@@ -778,11 +778,11 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUHQQqt.s 			page 1
  735 00f2 8A000000 		.4byte	0x8a
  736 00f6 FF       		.byte	0xff
  737 00f7 00       		.byte	0
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUHQQqt.s 			page 14
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 14
 
 
  738 00f8 08       		.uleb128 0x8
- 739 00f9 80010000 		.4byte	.LASF15
+ 739 00f9 70010000 		.4byte	.LASF15
  740 00fd 03       		.byte	0x3
  741 00fe 8C       		.byte	0x8c
  742 00ff 09010000 		.4byte	0x109
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUHQQqt.s 			page 1
  792 0018 00       		.byte	0
  793 0019 00       		.byte	0
  794 001a 03       		.uleb128 0x3
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUHQQqt.s 			page 15
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 15
 
 
  795 001b 16       		.uleb128 0x16
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUHQQqt.s 			page 1
  849 0051 0B       		.uleb128 0xb
  850 0052 3B       		.uleb128 0x3b
  851 0053 0B       		.uleb128 0xb
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUHQQqt.s 			page 16
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 16
 
 
  852 0054 49       		.uleb128 0x49
@@ -944,81 +944,81 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUHQQqt.s 			page 1
  886 000a 63795F6D 		.ascii	"cy_metadata\000"
  886      65746164 
  886      61746100 
- 887              	.LASF19:
- 888 0016 433A5C55 		.ascii	"C:\\Users\\jespe\\OneDrive\\Dokumenter\\3semester\\"
- 888      73657273 
- 888      5C6A6573 
- 888      70655C4F 
- 888      6E654472 
- 889 0043 4746565C 		.ascii	"GFV\\oevelse2\\slave\\Workspace01\\Design01.cydsn\000"
- 889      6F657665 
- 889      6C736532 
- 889      5C736C61 
- 889      76655C57 
- 890              	.LASF1:
- 891 0071 756E7369 		.ascii	"unsigned char\000"
- 891      676E6564 
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUHQQqt.s 			page 17
+ 887              	.LASF1:
+ 888 0016 756E7369 		.ascii	"unsigned char\000"
+ 888      676E6564 
+ 888      20636861 
+ 888      7200
+ 889              	.LASF17:
+ 890 0024 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 890      43313120 
+ 890      352E342E 
+ 890      31203230 
+ 890      31363036 
+ 891 0057 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 891      20726576 
+ 891      6973696F 
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 17
 
 
- 891      20636861 
- 891      7200
- 892              	.LASF17:
- 893 007f 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 893      43313120 
- 893      352E342E 
- 893      31203230 
- 893      31363036 
- 894 00b2 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 894      20726576 
- 894      6973696F 
- 894      6E203233 
- 894      37373135 
- 895 00e5 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 895      66756E63 
- 895      74696F6E 
- 895      2D736563 
- 895      74696F6E 
- 896              	.LASF5:
- 897 010d 6C6F6E67 		.ascii	"long unsigned int\000"
- 897      20756E73 
- 897      69676E65 
- 897      6420696E 
- 897      7400
- 898              	.LASF3:
- 899 011f 73686F72 		.ascii	"short unsigned int\000"
- 899      7420756E 
- 899      7369676E 
- 899      65642069 
- 899      6E7400
- 900              	.LASF13:
- 901 0132 63795F6D 		.ascii	"cy_meta_custnvl\000"
- 901      6574615F 
- 901      63757374 
- 901      6E766C00 
- 902              	.LASF12:
- 903 0142 63795F6D 		.ascii	"cy_meta_configecc\000"
- 903      6574615F 
- 903      636F6E66 
- 903      69676563 
- 903      6300
- 904              	.LASF8:
- 905 0154 756E7369 		.ascii	"unsigned int\000"
- 905      676E6564 
- 905      20696E74 
- 905      00
+ 891      6E203233 
+ 891      37373135 
+ 892 008a 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 892      66756E63 
+ 892      74696F6E 
+ 892      2D736563 
+ 892      74696F6E 
+ 893              	.LASF5:
+ 894 00b2 6C6F6E67 		.ascii	"long unsigned int\000"
+ 894      20756E73 
+ 894      69676E65 
+ 894      6420696E 
+ 894      7400
+ 895              	.LASF3:
+ 896 00c4 73686F72 		.ascii	"short unsigned int\000"
+ 896      7420756E 
+ 896      7369676E 
+ 896      65642069 
+ 896      6E7400
+ 897              	.LASF13:
+ 898 00d7 63795F6D 		.ascii	"cy_meta_custnvl\000"
+ 898      6574615F 
+ 898      63757374 
+ 898      6E766C00 
+ 899              	.LASF12:
+ 900 00e7 63795F6D 		.ascii	"cy_meta_configecc\000"
+ 900      6574615F 
+ 900      636F6E66 
+ 900      69676563 
+ 900      6300
+ 901              	.LASF8:
+ 902 00f9 756E7369 		.ascii	"unsigned int\000"
+ 902      676E6564 
+ 902      20696E74 
+ 902      00
+ 903              	.LASF19:
+ 904 0106 433A5C55 		.ascii	"C:\\Users\\ZakiN\\OneDrive\\Skrivebord\\projekt3\\B"
+ 904      73657273 
+ 904      5C5A616B 
+ 904      694E5C4F 
+ 904      6E654472 
+ 905 0133 2D434143 		.ascii	"-CAC\\SPI_Slave\\Design01.cydsn\000"
+ 905      5C535049 
+ 905      5F536C61 
+ 905      76655C44 
+ 905      65736967 
  906              	.LASF7:
- 907 0161 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 907 0151 6C6F6E67 		.ascii	"long long unsigned int\000"
  907      206C6F6E 
  907      6720756E 
  907      7369676E 
  907      65642069 
  908              	.LASF10:
- 909 0178 75696E74 		.ascii	"uint8_t\000"
+ 909 0168 75696E74 		.ascii	"uint8_t\000"
  909      385F7400 
  910              	.LASF15:
- 911 0180 63795F6D 		.ascii	"cy_meta_flashprotect\000"
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUHQQqt.s 			page 18
+ 911 0170 63795F6D 		.ascii	"cy_meta_flashprotect\000"
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 18
 
 
  911      6574615F 
@@ -1026,33 +1026,33 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccUHQQqt.s 			page 1
  911      6870726F 
  911      74656374 
  912              	.LASF14:
- 913 0195 63795F6D 		.ascii	"cy_meta_wonvl\000"
+ 913 0185 63795F6D 		.ascii	"cy_meta_wonvl\000"
  913      6574615F 
  913      776F6E76 
  913      6C00
  914              	.LASF11:
- 915 01a3 73697A65 		.ascii	"sizetype\000"
+ 915 0193 73697A65 		.ascii	"sizetype\000"
  915      74797065 
  915      00
  916              	.LASF6:
- 917 01ac 6C6F6E67 		.ascii	"long long int\000"
+ 917 019c 6C6F6E67 		.ascii	"long long int\000"
  917      206C6F6E 
  917      6720696E 
  917      7400
  918              	.LASF2:
- 919 01ba 73686F72 		.ascii	"short int\000"
+ 919 01aa 73686F72 		.ascii	"short int\000"
  919      7420696E 
  919      7400
  920              	.LASF4:
- 921 01c4 6C6F6E67 		.ascii	"long int\000"
+ 921 01b4 6C6F6E67 		.ascii	"long int\000"
  921      20696E74 
  921      00
  922              	.LASF0:
- 923 01cd 7369676E 		.ascii	"signed char\000"
+ 923 01bd 7369676E 		.ascii	"signed char\000"
  923      65642063 
  923      68617200 
  924              	.LASF18:
- 925 01d9 47656E65 		.ascii	"Generated_Source\\PSoC5\\cymetadata.c\000"
+ 925 01c9 47656E65 		.ascii	"Generated_Source\\PSoC5\\cymetadata.c\000"
  925      72617465 
  925      645F536F 
  925      75726365 

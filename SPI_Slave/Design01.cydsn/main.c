@@ -21,10 +21,10 @@ CY_ISR(SPI_RX_ISR)
     status = modtagetSPi();
     
     //håndtering af status
-    if(status==0b10000000)
+    //if(status==0b10000000)
      LED_1_Write(1);
-    else
-     LED_1_Write(0);
+    //else
+     //LED_1_Write(0);
     
     //læser om knappen er tændt eller slukket
     //slukket
@@ -48,10 +48,9 @@ int main(void)
     InitializeSPI();
 
     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
-
     for(;;)
     {
-        
+        LED_1_Write(0);
     }
 }
 

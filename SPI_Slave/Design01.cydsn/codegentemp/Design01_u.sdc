@@ -1,3 +1,3 @@
-# Component constraints for C:\Users\jespe\OneDrive\Dokumenter\3semester\GFV\oevelse2\slave\Workspace01\Design01.cydsn\TopDesign\TopDesign.cysch
-# Project: C:\Users\jespe\OneDrive\Dokumenter\3semester\GFV\oevelse2\slave\Workspace01\Design01.cydsn\Design01.cyprj
-# Date: Wed, 27 Sep 2023 10:34:47 GMT
+# Component constraints for C:\Users\ZakiN\OneDrive\Skrivebord\projekt3\B-CAC\SPI_Slave\Design01.cydsn\TopDesign\TopDesign.cysch
+# Project: C:\Users\ZakiN\OneDrive\Skrivebord\projekt3\B-CAC\SPI_Slave\Design01.cydsn\Design01.cyprj
+# Date: Wed, 15 Nov 2023 09:50:15 GMT

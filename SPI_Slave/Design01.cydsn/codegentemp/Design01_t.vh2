@@ -1,6 +1,6 @@
--- Project:   C:\Users\jespe\OneDrive\Dokumenter\3semester\GFV\oevelse2\slave\Workspace01\Design01.cydsn\Design01.cyprj
--- Generated: 09/27/2023 12:34:49
--- PSoC Creator  4.2
+-- Project:   C:\Users\ZakiN\OneDrive\Skrivebord\projekt3\B-CAC\SPI_Slave\Design01.cydsn\Design01.cyprj
+-- Generated: 11/15/2023 10:50:18
+-- PSoC Creator  4.4
 
 ENTITY Design01 IS
     PORT(
