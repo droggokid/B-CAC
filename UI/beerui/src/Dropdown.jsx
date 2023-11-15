@@ -5,7 +5,7 @@ import chev from './assets/chev.png';
 
 function Dropdown(props)
 {
-    const {options, fontSize, color, width, height, borderRadius, border, background, boxShadow} = props;
+    const {options, callback, disable, fontSize, color, width, height, borderRadius, border, background, boxShadow} = props;
 
     const dropdownStyle = {
         fontSize: fontSize || "40px",
@@ -26,7 +26,7 @@ function Dropdown(props)
 
     return (
         <div className='dropdown'>
-            <select style={dropdownStyle}>
+            <select style={dropdownStyle} onChange={callback} disabled={disable}>
                 {options.map((opt) => (
                     <option value={opt}>{opt}</option>
                 ))}
