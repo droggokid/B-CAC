@@ -1,0 +1,2124 @@
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc7jxOIC.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.InterruptHandler,"ax",%progbits
+  20              		.align	2
+  21              		.global	InterruptHandler
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	InterruptHandler, %function
+  25              	InterruptHandler:
+  26              	.LFB64:
+  27              		.file 1 "main.c"
+   1:main.c        **** #include "project.h"
+   2:main.c        **** #include <stdio.h>
+   3:main.c        **** #include <inttypes.h>
+   4:main.c        **** 
+   5:main.c        **** volatile uint16 startCount = 0;
+   6:main.c        **** volatile uint16 stopCount = 0;
+   7:main.c        **** static char outputBuffer[256];
+   8:main.c        **** uint32 InterruptCnt;
+   9:main.c        **** uint32 counter=0;
+  10:main.c        **** 
+  11:main.c        **** const uint32 tick_period_ms = 10;
+  12:main.c        **** uint32 start_counter = 0;
+  13:main.c        ****  uint32 stop_counter=0;
+  14:main.c        ****  uint32 time_interval_ticks = 0;
+  15:main.c        **** uint32 time_interval_ms=0;
+  16:main.c        **** 
+  17:main.c        **** CY_ISR_PROTO(ISR_UART_rx_handler);
+  18:main.c        **** void handleByteReceived(uint8_t byteReceived);
+  19:main.c        **** void stopTidsTagning();
+  20:main.c        **** void startTidsTagning();
+  21:main.c        **** 
+  22:main.c        **** CY_ISR(InterruptHandler)
+  23:main.c        **** {
+  28              		.loc 1 23 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+  24:main.c        ****     /* Read Status register in order to clear the sticky Terminal Count (TC) bit
+  25:main.c        ****      * in the status register. Note that the function is not called, but rather
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc7jxOIC.s 			page 2
+
+
+  26:main.c        ****      * the status is read directly.
+  27:main.c        ****      */
+  28:main.c        ****     Timer_1_STATUS;
+  33              		.loc 1 28 0
+  34 0000 034B     		ldr	r3, .L2
+  35 0002 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+  29:main.c        **** 
+  30:main.c        ****     /* Increment the Counter to indicate the keep track of the number of
+  31:main.c        ****      * interrupts received */
+  32:main.c        ****     InterruptCnt++;
+  36              		.loc 1 32 0
+  37 0004 034A     		ldr	r2, .L2+4
+  38 0006 1368     		ldr	r3, [r2]
+  39 0008 0133     		adds	r3, r3, #1
+  40 000a 1360     		str	r3, [r2]
+  41 000c 7047     		bx	lr
+  42              	.L3:
+  43 000e 00BF     		.align	2
+  44              	.L2:
+  45 0010 6B640040 		.word	1073767531
+  46 0014 00000000 		.word	InterruptCnt
+  47              		.cfi_endproc
+  48              	.LFE64:
+  49              		.size	InterruptHandler, .-InterruptHandler
+  50              		.section	.text.main,"ax",%progbits
+  51              		.align	2
+  52              		.global	main
+  53              		.thumb
+  54              		.thumb_func
+  55              		.type	main, %function
+  56              	main:
+  57              	.LFB65:
+  33:main.c        **** }
+  34:main.c        **** 
+  35:main.c        **** int main(void)
+  36:main.c        **** {
+  58              		.loc 1 36 0
+  59              		.cfi_startproc
+  60              		@ Volatile: function does not return.
+  61              		@ args = 0, pretend = 0, frame = 0
+  62              		@ frame_needed = 0, uses_anonymous_args = 0
+  63 0000 08B5     		push	{r3, lr}
+  64              		.cfi_def_cfa_offset 8
+  65              		.cfi_offset 3, -8
+  66              		.cfi_offset 14, -4
+  37:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
+  67              		.loc 1 37 0
+  68              		.syntax unified
+  69              	@ 37 "main.c" 1
+  70 0002 62B6     		CPSIE   i
+  71              	@ 0 "" 2
+  38:main.c        **** 
+  39:main.c        ****     UART_1_Start();
+  72              		.loc 1 39 0
+  73              		.thumb
+  74              		.syntax unified
+  75 0004 FFF7FEFF 		bl	UART_1_Start
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc7jxOIC.s 			page 3
+
+
+  76              	.LVL0:
+  40:main.c        ****     TimerISR_StartEx(InterruptHandler);
+  77              		.loc 1 40 0
+  78 0008 2C48     		ldr	r0, .L7
+  79 000a FFF7FEFF 		bl	TimerISR_StartEx
+  80              	.LVL1:
+  41:main.c        **** 
+  42:main.c        ****     /* Start the components */
+  43:main.c        ****     Timer_1_Start();
+  81              		.loc 1 43 0
+  82 000e FFF7FEFF 		bl	Timer_1_Start
+  83              	.LVL2:
+  44:main.c        **** 
+  45:main.c        ****     UART_1_PutString("Stop Watch started\r\n");
+  84              		.loc 1 45 0
+  85 0012 2B48     		ldr	r0, .L7+4
+  86 0014 FFF7FEFF 		bl	UART_1_PutString
+  87              	.LVL3:
+  46:main.c        ****     UART_1_PutString("a: Start TidsTagning\r\n");
+  88              		.loc 1 46 0
+  89 0018 2A48     		ldr	r0, .L7+8
+  90 001a FFF7FEFF 		bl	UART_1_PutString
+  91              	.LVL4:
+  47:main.c        ****     UART_1_PutString("s: Stop TidsTagning\r\n");
+  92              		.loc 1 47 0
+  93 001e 2A48     		ldr	r0, .L7+12
+  94 0020 FFF7FEFF 		bl	UART_1_PutString
+  95              	.LVL5:
+  96              	.L5:
+  48:main.c        **** 
+  49:main.c        ****     for(;;)
+  50:main.c        ****     {
+  51:main.c        ****         
+  52:main.c        ****         
+  53:main.c        ****         
+  54:main.c        **** 
+  55:main.c        ****        
+  56:main.c        ****         
+  57:main.c        ****         
+  58:main.c        ****         
+  59:main.c        ****         //startTidsTagning();
+  60:main.c        ****         start_counter = Timer_1_ReadCounter();
+  97              		.loc 1 60 0 discriminator 1
+  98 0024 FFF7FEFF 		bl	Timer_1_ReadCounter
+  99              	.LVL6:
+ 100 0028 284C     		ldr	r4, .L7+16
+ 101 002a 2060     		str	r0, [r4]
+  61:main.c        ****         
+  62:main.c        ****         CyDelay(2000);
+ 102              		.loc 1 62 0 discriminator 1
+ 103 002c 4FF4FA60 		mov	r0, #2000
+ 104 0030 FFF7FEFF 		bl	CyDelay
+ 105              	.LVL7:
+  63:main.c        ****         
+  64:main.c        ****         stop_counter = Timer_1_ReadCounter();
+ 106              		.loc 1 64 0 discriminator 1
+ 107 0034 FFF7FEFF 		bl	Timer_1_ReadCounter
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc7jxOIC.s 			page 4
+
+
+ 108              	.LVL8:
+ 109 0038 6060     		str	r0, [r4, #4]
+  65:main.c        **** 
+  66:main.c        ****         // Beregn tidsintervallet i ticks
+  67:main.c        ****         time_interval_ticks = start_counter - stop_counter;
+ 110              		.loc 1 67 0 discriminator 1
+ 111 003a 2368     		ldr	r3, [r4]
+ 112 003c 181A     		subs	r0, r3, r0
+ 113 003e A060     		str	r0, [r4, #8]
+  68:main.c        **** 
+  69:main.c        ****         // Konverter tidsintervallet til tid i millisekunder
+  70:main.c        ****         time_interval_ms = time_interval_ticks * tick_period_ms;
+ 114              		.loc 1 70 0 discriminator 1
+ 115 0040 00EB8000 		add	r0, r0, r0, lsl #2
+ 116 0044 4200     		lsls	r2, r0, #1
+ 117 0046 E260     		str	r2, [r4, #12]
+  71:main.c        ****         
+  72:main.c        ****         sprintf(outputBuffer, "Counter: %lu\r\n",time_interval_ms);
+ 118              		.loc 1 72 0 discriminator 1
+ 119 0048 214E     		ldr	r6, .L7+20
+ 120 004a 04F11005 		add	r5, r4, #16
+ 121 004e 3146     		mov	r1, r6
+ 122 0050 2846     		mov	r0, r5
+ 123 0052 FFF7FEFF 		bl	sprintf
+ 124              	.LVL9:
+  73:main.c        ****         
+  74:main.c        ****         UART_1_PutString(outputBuffer);
+ 125              		.loc 1 74 0 discriminator 1
+ 126 0056 2846     		mov	r0, r5
+ 127 0058 FFF7FEFF 		bl	UART_1_PutString
+ 128              	.LVL10:
+  75:main.c        **** 
+  76:main.c        ****         //stopTidsTagning();
+  77:main.c        ****         
+  78:main.c        ****         //startTidsTagning();
+  79:main.c        ****         start_counter = Timer_1_ReadCounter();
+ 129              		.loc 1 79 0 discriminator 1
+ 130 005c FFF7FEFF 		bl	Timer_1_ReadCounter
+ 131              	.LVL11:
+ 132 0060 2060     		str	r0, [r4]
+  80:main.c        ****         CyDelay(4000);
+ 133              		.loc 1 80 0 discriminator 1
+ 134 0062 4FF47A60 		mov	r0, #4000
+ 135 0066 FFF7FEFF 		bl	CyDelay
+ 136              	.LVL12:
+  81:main.c        **** 
+  82:main.c        **** 
+  83:main.c        ****         // Slut tidspunkt
+  84:main.c        ****         stop_counter = Timer_1_ReadCounter();
+ 137              		.loc 1 84 0 discriminator 1
+ 138 006a FFF7FEFF 		bl	Timer_1_ReadCounter
+ 139              	.LVL13:
+ 140 006e 6060     		str	r0, [r4, #4]
+  85:main.c        **** 
+  86:main.c        ****         // Beregn tidsintervallet i ticks
+  87:main.c        ****         time_interval_ticks = start_counter - stop_counter;
+ 141              		.loc 1 87 0 discriminator 1
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc7jxOIC.s 			page 5
+
+
+ 142 0070 2368     		ldr	r3, [r4]
+ 143 0072 181A     		subs	r0, r3, r0
+ 144 0074 A060     		str	r0, [r4, #8]
+  88:main.c        **** 
+  89:main.c        ****         // Konverter tidsintervallet til tid i millisekunder
+  90:main.c        ****         time_interval_ms = time_interval_ticks * tick_period_ms;
+ 145              		.loc 1 90 0 discriminator 1
+ 146 0076 00EB8000 		add	r0, r0, r0, lsl #2
+ 147 007a 4200     		lsls	r2, r0, #1
+ 148 007c E260     		str	r2, [r4, #12]
+  91:main.c        ****         
+  92:main.c        ****         sprintf(outputBuffer, "Counter: %lu\r\n",time_interval_ms);
+ 149              		.loc 1 92 0 discriminator 1
+ 150 007e 3146     		mov	r1, r6
+ 151 0080 2846     		mov	r0, r5
+ 152 0082 FFF7FEFF 		bl	sprintf
+ 153              	.LVL14:
+  93:main.c        ****         
+  94:main.c        ****         UART_1_PutString(outputBuffer);
+ 154              		.loc 1 94 0 discriminator 1
+ 155 0086 2846     		mov	r0, r5
+ 156 0088 FFF7FEFF 		bl	UART_1_PutString
+ 157              	.LVL15:
+  95:main.c        ****         //stopTidsTagning();
+  96:main.c        ****         
+  97:main.c        ****         //startTidsTagning();
+  98:main.c        ****         
+  99:main.c        ****         start_counter = Timer_1_ReadCounter();
+ 158              		.loc 1 99 0 discriminator 1
+ 159 008c FFF7FEFF 		bl	Timer_1_ReadCounter
+ 160              	.LVL16:
+ 161 0090 2060     		str	r0, [r4]
+ 100:main.c        ****         CyDelay(3000);
+ 162              		.loc 1 100 0 discriminator 1
+ 163 0092 40F6B830 		movw	r0, #3000
+ 164 0096 FFF7FEFF 		bl	CyDelay
+ 165              	.LVL17:
+ 101:main.c        **** 
+ 102:main.c        ****         // Slut tidspunkt
+ 103:main.c        ****         //stop_counter = Timer_1_ReadCounter();
+ 104:main.c        **** 
+ 105:main.c        ****         // Beregn tidsintervallet i ticks
+ 106:main.c        ****         time_interval_ticks = start_counter - stop_counter;
+ 166              		.loc 1 106 0 discriminator 1
+ 167 009a 2368     		ldr	r3, [r4]
+ 168 009c 6268     		ldr	r2, [r4, #4]
+ 169 009e 9B1A     		subs	r3, r3, r2
+ 170 00a0 A360     		str	r3, [r4, #8]
+ 107:main.c        **** 
+ 108:main.c        ****         // Konverter tidsintervallet til tid i millisekunder
+ 109:main.c        ****         time_interval_ms = time_interval_ticks * tick_period_ms;
+ 171              		.loc 1 109 0 discriminator 1
+ 172 00a2 03EB8303 		add	r3, r3, r3, lsl #2
+ 173 00a6 5A00     		lsls	r2, r3, #1
+ 174 00a8 E260     		str	r2, [r4, #12]
+ 110:main.c        ****         
+ 111:main.c        ****         sprintf(outputBuffer, "Counter: %lu\r\n",time_interval_ms);
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc7jxOIC.s 			page 6
+
+
+ 175              		.loc 1 111 0 discriminator 1
+ 176 00aa 3146     		mov	r1, r6
+ 177 00ac 2846     		mov	r0, r5
+ 178 00ae FFF7FEFF 		bl	sprintf
+ 179              	.LVL18:
+ 112:main.c        ****         
+ 113:main.c        ****         UART_1_PutString(outputBuffer);
+ 180              		.loc 1 113 0 discriminator 1
+ 181 00b2 2846     		mov	r0, r5
+ 182 00b4 FFF7FEFF 		bl	UART_1_PutString
+ 183              	.LVL19:
+ 184 00b8 B4E7     		b	.L5
+ 185              	.L8:
+ 186 00ba 00BF     		.align	2
+ 187              	.L7:
+ 188 00bc 00000000 		.word	InterruptHandler
+ 189 00c0 00000000 		.word	.LC0
+ 190 00c4 18000000 		.word	.LC1
+ 191 00c8 30000000 		.word	.LC2
+ 192 00cc 00000000 		.word	.LANCHOR0
+ 193 00d0 48000000 		.word	.LC3
+ 194              		.cfi_endproc
+ 195              	.LFE65:
+ 196              		.size	main, .-main
+ 197              		.section	.text.startTidsTagning,"ax",%progbits
+ 198              		.align	2
+ 199              		.global	startTidsTagning
+ 200              		.thumb
+ 201              		.thumb_func
+ 202              		.type	startTidsTagning, %function
+ 203              	startTidsTagning:
+ 204              	.LFB68:
+ 114:main.c        ****         
+ 115:main.c        ****         //stopTidsTagning();
+ 116:main.c        ****         
+ 117:main.c        ****     }
+ 118:main.c        **** }
+ 119:main.c        **** 
+ 120:main.c        **** CY_ISR(ISR_UART_rx_handler)
+ 121:main.c        **** {
+ 122:main.c        ****     uint8_t bytesToRead = UART_1_GetRxBufferSize();
+ 123:main.c        ****     while (bytesToRead > 0)
+ 124:main.c        ****     {
+ 125:main.c        ****         uint8_t byteReceived = UART_1_ReadRxData();
+ 126:main.c        ****         UART_1_WriteTxData(byteReceived); // echo back
+ 127:main.c        **** 
+ 128:main.c        ****         handleByteReceived(byteReceived);
+ 129:main.c        **** 
+ 130:main.c        ****         bytesToRead--;
+ 131:main.c        ****     }
+ 132:main.c        **** }
+ 133:main.c        **** 
+ 134:main.c        **** void handleByteReceived(uint8_t byteReceived)
+ 135:main.c        **** {
+ 136:main.c        ****     switch (byteReceived)
+ 137:main.c        ****     {
+ 138:main.c        ****     case 'a':
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc7jxOIC.s 			page 7
+
+
+ 139:main.c        ****     {
+ 140:main.c        ****         startTidsTagning();
+ 141:main.c        ****     }
+ 142:main.c        ****     break;
+ 143:main.c        ****     case 's':
+ 144:main.c        ****     {
+ 145:main.c        ****         stopTidsTagning();
+ 146:main.c        ****     }
+ 147:main.c        ****     break;
+ 148:main.c        ****     default:
+ 149:main.c        ****     {
+ 150:main.c        ****         // nothing
+ 151:main.c        ****     }
+ 152:main.c        ****     break;
+ 153:main.c        ****     }
+ 154:main.c        **** }
+ 155:main.c        **** 
+ 156:main.c        **** void startTidsTagning()
+ 157:main.c        **** {
+ 205              		.loc 1 157 0
+ 206              		.cfi_startproc
+ 207              		@ args = 0, pretend = 0, frame = 0
+ 208              		@ frame_needed = 0, uses_anonymous_args = 0
+ 209 0000 08B5     		push	{r3, lr}
+ 210              		.cfi_def_cfa_offset 8
+ 211              		.cfi_offset 3, -8
+ 212              		.cfi_offset 14, -4
+ 158:main.c        ****     UART_1_PutString("Time started\r\n");
+ 213              		.loc 1 158 0
+ 214 0002 0548     		ldr	r0, .L11
+ 215 0004 FFF7FEFF 		bl	UART_1_PutString
+ 216              	.LVL20:
+ 159:main.c        ****     Timer_1_Start();
+ 217              		.loc 1 159 0
+ 218 0008 FFF7FEFF 		bl	Timer_1_Start
+ 219              	.LVL21:
+ 160:main.c        ****     startCount = InterruptCnt;
+ 220              		.loc 1 160 0
+ 221 000c 034B     		ldr	r3, .L11+4
+ 222 000e 1A88     		ldrh	r2, [r3]
+ 223 0010 034B     		ldr	r3, .L11+8
+ 224 0012 A3F81021 		strh	r2, [r3, #272]	@ movhi
+ 225 0016 08BD     		pop	{r3, pc}
+ 226              	.L12:
+ 227              		.align	2
+ 228              	.L11:
+ 229 0018 58000000 		.word	.LC4
+ 230 001c 00000000 		.word	InterruptCnt
+ 231 0020 00000000 		.word	.LANCHOR0
+ 232              		.cfi_endproc
+ 233              	.LFE68:
+ 234              		.size	startTidsTagning, .-startTidsTagning
+ 235              		.section	.text.stopTidsTagning,"ax",%progbits
+ 236              		.align	2
+ 237              		.global	stopTidsTagning
+ 238              		.thumb
+ 239              		.thumb_func
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc7jxOIC.s 			page 8
+
+
+ 240              		.type	stopTidsTagning, %function
+ 241              	stopTidsTagning:
+ 242              	.LFB69:
+ 161:main.c        **** }
+ 162:main.c        **** 
+ 163:main.c        **** void stopTidsTagning()
+ 164:main.c        **** {
+ 243              		.loc 1 164 0
+ 244              		.cfi_startproc
+ 245              		@ args = 0, pretend = 0, frame = 0
+ 246              		@ frame_needed = 0, uses_anonymous_args = 0
+ 247 0000 10B5     		push	{r4, lr}
+ 248              		.cfi_def_cfa_offset 8
+ 249              		.cfi_offset 4, -8
+ 250              		.cfi_offset 14, -4
+ 165:main.c        ****     Timer_1_Stop();
+ 251              		.loc 1 165 0
+ 252 0002 FFF7FEFF 		bl	Timer_1_Stop
+ 253              	.LVL22:
+ 166:main.c        ****     stopCount = InterruptCnt;
+ 254              		.loc 1 166 0
+ 255 0006 0E4B     		ldr	r3, .L15
+ 256 0008 1B88     		ldrh	r3, [r3]
+ 257 000a 0E48     		ldr	r0, .L15+4
+ 258 000c A0F81231 		strh	r3, [r0, #274]	@ movhi
+ 167:main.c        ****     uint16 elapsed = (stopCount - startCount)*10;
+ 259              		.loc 1 167 0
+ 260 0010 B0F81221 		ldrh	r2, [r0, #274]
+ 261 0014 93B2     		uxth	r3, r2
+ 262 0016 B0F81021 		ldrh	r2, [r0, #272]
+ 263 001a 92B2     		uxth	r2, r2
+ 264 001c 9A1A     		subs	r2, r3, r2
+ 265 001e 02EB8202 		add	r2, r2, r2, lsl #2
+ 266 0022 5300     		lsls	r3, r2, #1
+ 267 0024 9BB2     		uxth	r3, r3
+ 268              	.LVL23:
+ 168:main.c        ****     snprintf(outputBuffer, sizeof(outputBuffer), "Time passed: %u ms \r\n", elapsed);
+ 269              		.loc 1 168 0
+ 270 0026 00F11004 		add	r4, r0, #16
+ 271 002a 074A     		ldr	r2, .L15+8
+ 272 002c 4FF48071 		mov	r1, #256
+ 273 0030 2046     		mov	r0, r4
+ 274 0032 FFF7FEFF 		bl	snprintf
+ 275              	.LVL24:
+ 169:main.c        ****     UART_1_PutString(outputBuffer);
+ 276              		.loc 1 169 0
+ 277 0036 2046     		mov	r0, r4
+ 278 0038 FFF7FEFF 		bl	UART_1_PutString
+ 279              	.LVL25:
+ 280 003c 10BD     		pop	{r4, pc}
+ 281              	.L16:
+ 282 003e 00BF     		.align	2
+ 283              	.L15:
+ 284 0040 00000000 		.word	InterruptCnt
+ 285 0044 00000000 		.word	.LANCHOR0
+ 286 0048 68000000 		.word	.LC5
+ 287              		.cfi_endproc
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc7jxOIC.s 			page 9
+
+
+ 288              	.LFE69:
+ 289              		.size	stopTidsTagning, .-stopTidsTagning
+ 290              		.section	.text.handleByteReceived,"ax",%progbits
+ 291              		.align	2
+ 292              		.global	handleByteReceived
+ 293              		.thumb
+ 294              		.thumb_func
+ 295              		.type	handleByteReceived, %function
+ 296              	handleByteReceived:
+ 297              	.LFB67:
+ 135:main.c        ****     switch (byteReceived)
+ 298              		.loc 1 135 0
+ 299              		.cfi_startproc
+ 300              		@ args = 0, pretend = 0, frame = 0
+ 301              		@ frame_needed = 0, uses_anonymous_args = 0
+ 302              	.LVL26:
+ 303 0000 08B5     		push	{r3, lr}
+ 304              		.cfi_def_cfa_offset 8
+ 305              		.cfi_offset 3, -8
+ 306              		.cfi_offset 14, -4
+ 136:main.c        ****     {
+ 307              		.loc 1 136 0
+ 308 0002 6128     		cmp	r0, #97
+ 309 0004 02D0     		beq	.L19
+ 310 0006 7328     		cmp	r0, #115
+ 311 0008 03D0     		beq	.L20
+ 312 000a 08BD     		pop	{r3, pc}
+ 313              	.L19:
+ 140:main.c        ****     }
+ 314              		.loc 1 140 0
+ 315 000c FFF7FEFF 		bl	startTidsTagning
+ 316              	.LVL27:
+ 142:main.c        ****     case 's':
+ 317              		.loc 1 142 0
+ 318 0010 08BD     		pop	{r3, pc}
+ 319              	.LVL28:
+ 320              	.L20:
+ 145:main.c        ****     }
+ 321              		.loc 1 145 0
+ 322 0012 FFF7FEFF 		bl	stopTidsTagning
+ 323              	.LVL29:
+ 324 0016 08BD     		pop	{r3, pc}
+ 325              		.cfi_endproc
+ 326              	.LFE67:
+ 327              		.size	handleByteReceived, .-handleByteReceived
+ 328              		.section	.text.ISR_UART_rx_handler,"ax",%progbits
+ 329              		.align	2
+ 330              		.global	ISR_UART_rx_handler
+ 331              		.thumb
+ 332              		.thumb_func
+ 333              		.type	ISR_UART_rx_handler, %function
+ 334              	ISR_UART_rx_handler:
+ 335              	.LFB66:
+ 121:main.c        ****     uint8_t bytesToRead = UART_1_GetRxBufferSize();
+ 336              		.loc 1 121 0
+ 337              		.cfi_startproc
+ 338              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc7jxOIC.s 			page 10
+
+
+ 339              		@ frame_needed = 0, uses_anonymous_args = 0
+ 340 0000 38B5     		push	{r3, r4, r5, lr}
+ 341              		.cfi_def_cfa_offset 16
+ 342              		.cfi_offset 3, -16
+ 343              		.cfi_offset 4, -12
+ 344              		.cfi_offset 5, -8
+ 345              		.cfi_offset 14, -4
+ 122:main.c        ****     while (bytesToRead > 0)
+ 346              		.loc 1 122 0
+ 347 0002 FFF7FEFF 		bl	UART_1_GetRxBufferSize
+ 348              	.LVL30:
+ 349 0006 0446     		mov	r4, r0
+ 350              	.LVL31:
+ 123:main.c        ****     {
+ 351              		.loc 1 123 0
+ 352 0008 09E0     		b	.L23
+ 353              	.L24:
+ 354              	.LBB2:
+ 125:main.c        ****         UART_1_WriteTxData(byteReceived); // echo back
+ 355              		.loc 1 125 0
+ 356 000a FFF7FEFF 		bl	UART_1_ReadRxData
+ 357              	.LVL32:
+ 358 000e 0546     		mov	r5, r0
+ 359              	.LVL33:
+ 126:main.c        **** 
+ 360              		.loc 1 126 0
+ 361 0010 FFF7FEFF 		bl	UART_1_WriteTxData
+ 362              	.LVL34:
+ 128:main.c        **** 
+ 363              		.loc 1 128 0
+ 364 0014 2846     		mov	r0, r5
+ 365 0016 FFF7FEFF 		bl	handleByteReceived
+ 366              	.LVL35:
+ 130:main.c        ****     }
+ 367              		.loc 1 130 0
+ 368 001a 013C     		subs	r4, r4, #1
+ 369              	.LVL36:
+ 370 001c E4B2     		uxtb	r4, r4
+ 371              	.LVL37:
+ 372              	.L23:
+ 373              	.LBE2:
+ 123:main.c        ****     {
+ 374              		.loc 1 123 0
+ 375 001e 002C     		cmp	r4, #0
+ 376 0020 F3D1     		bne	.L24
+ 132:main.c        **** 
+ 377              		.loc 1 132 0
+ 378 0022 38BD     		pop	{r3, r4, r5, pc}
+ 379              		.cfi_endproc
+ 380              	.LFE66:
+ 381              		.size	ISR_UART_rx_handler, .-ISR_UART_rx_handler
+ 382              		.global	time_interval_ms
+ 383              		.global	time_interval_ticks
+ 384              		.global	stop_counter
+ 385              		.global	start_counter
+ 386              		.global	tick_period_ms
+ 387              		.global	counter
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc7jxOIC.s 			page 11
+
+
+ 388              		.comm	InterruptCnt,4,4
+ 389              		.global	stopCount
+ 390              		.global	startCount
+ 391              		.section	.rodata
+ 392              		.align	2
+ 393              		.type	tick_period_ms, %object
+ 394              		.size	tick_period_ms, 4
+ 395              	tick_period_ms:
+ 396 0000 0A000000 		.word	10
+ 397              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 398              		.align	2
+ 399              	.LC0:
+ 400 0000 53746F70 		.ascii	"Stop Watch started\015\012\000"
+ 400      20576174 
+ 400      63682073 
+ 400      74617274 
+ 400      65640D0A 
+ 401 0015 000000   		.space	3
+ 402              	.LC1:
+ 403 0018 613A2053 		.ascii	"a: Start TidsTagning\015\012\000"
+ 403      74617274 
+ 403      20546964 
+ 403      73546167 
+ 403      6E696E67 
+ 404 002f 00       		.space	1
+ 405              	.LC2:
+ 406 0030 733A2053 		.ascii	"s: Stop TidsTagning\015\012\000"
+ 406      746F7020 
+ 406      54696473 
+ 406      5461676E 
+ 406      696E670D 
+ 407 0046 0000     		.space	2
+ 408              	.LC3:
+ 409 0048 436F756E 		.ascii	"Counter: %lu\015\012\000"
+ 409      7465723A 
+ 409      20256C75 
+ 409      0D0A00
+ 410 0057 00       		.space	1
+ 411              	.LC4:
+ 412 0058 54696D65 		.ascii	"Time started\015\012\000"
+ 412      20737461 
+ 412      72746564 
+ 412      0D0A00
+ 413 0067 00       		.space	1
+ 414              	.LC5:
+ 415 0068 54696D65 		.ascii	"Time passed: %u ms \015\012\000"
+ 415      20706173 
+ 415      7365643A 
+ 415      20257520 
+ 415      6D73200D 
+ 416              		.bss
+ 417              		.align	2
+ 418              		.set	.LANCHOR0,. + 0
+ 419              		.type	start_counter, %object
+ 420              		.size	start_counter, 4
+ 421              	start_counter:
+ 422 0000 00000000 		.space	4
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc7jxOIC.s 			page 12
+
+
+ 423              		.type	stop_counter, %object
+ 424              		.size	stop_counter, 4
+ 425              	stop_counter:
+ 426 0004 00000000 		.space	4
+ 427              		.type	time_interval_ticks, %object
+ 428              		.size	time_interval_ticks, 4
+ 429              	time_interval_ticks:
+ 430 0008 00000000 		.space	4
+ 431              		.type	time_interval_ms, %object
+ 432              		.size	time_interval_ms, 4
+ 433              	time_interval_ms:
+ 434 000c 00000000 		.space	4
+ 435              		.type	outputBuffer, %object
+ 436              		.size	outputBuffer, 256
+ 437              	outputBuffer:
+ 438 0010 00000000 		.space	256
+ 438      00000000 
+ 438      00000000 
+ 438      00000000 
+ 438      00000000 
+ 439              		.type	startCount, %object
+ 440              		.size	startCount, 2
+ 441              	startCount:
+ 442 0110 0000     		.space	2
+ 443              		.type	stopCount, %object
+ 444              		.size	stopCount, 2
+ 445              	stopCount:
+ 446 0112 0000     		.space	2
+ 447              		.type	counter, %object
+ 448              		.size	counter, 4
+ 449              	counter:
+ 450 0114 00000000 		.space	4
+ 451              		.text
+ 452              	.Letext0:
+ 453              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 454              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 455              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 456              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
+ 457              		.file 6 "Generated_Source\\PSoC5/UART_1.h"
+ 458              		.file 7 "Generated_Source\\PSoC5/TimerISR.h"
+ 459              		.file 8 "Generated_Source\\PSoC5/Timer_1.h"
+ 460              		.file 9 "Generated_Source\\PSoC5/CyLib.h"
+ 461              		.file 10 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4
+ 462              		.section	.debug_info,"",%progbits
+ 463              	.Ldebug_info0:
+ 464 0000 17050000 		.4byte	0x517
+ 465 0004 0400     		.2byte	0x4
+ 466 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 467 000a 04       		.byte	0x4
+ 468 000b 01       		.uleb128 0x1
+ 469 000c D3000000 		.4byte	.LASF52
+ 470 0010 0C       		.byte	0xc
+ 471 0011 8C020000 		.4byte	.LASF53
+ 472 0015 98020000 		.4byte	.LASF54
+ 473 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 474 001d 00000000 		.4byte	0
+ 475 0021 00000000 		.4byte	.Ldebug_line0
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc7jxOIC.s 			page 13
+
+
+ 476 0025 02       		.uleb128 0x2
+ 477 0026 01       		.byte	0x1
+ 478 0027 06       		.byte	0x6
+ 479 0028 3A030000 		.4byte	.LASF0
+ 480 002c 03       		.uleb128 0x3
+ 481 002d 17000000 		.4byte	.LASF4
+ 482 0031 02       		.byte	0x2
+ 483 0032 1D       		.byte	0x1d
+ 484 0033 37000000 		.4byte	0x37
+ 485 0037 02       		.uleb128 0x2
+ 486 0038 01       		.byte	0x1
+ 487 0039 08       		.byte	0x8
+ 488 003a C5000000 		.4byte	.LASF1
+ 489 003e 02       		.uleb128 0x2
+ 490 003f 02       		.byte	0x2
+ 491 0040 05       		.byte	0x5
+ 492 0041 F3020000 		.4byte	.LASF2
+ 493 0045 02       		.uleb128 0x2
+ 494 0046 02       		.byte	0x2
+ 495 0047 07       		.byte	0x7
+ 496 0048 53000000 		.4byte	.LASF3
+ 497 004c 03       		.uleb128 0x3
+ 498 004d 40000000 		.4byte	.LASF5
+ 499 0051 02       		.byte	0x2
+ 500 0052 3F       		.byte	0x3f
+ 501 0053 57000000 		.4byte	0x57
+ 502 0057 02       		.uleb128 0x2
+ 503 0058 04       		.byte	0x4
+ 504 0059 05       		.byte	0x5
+ 505 005a 25030000 		.4byte	.LASF6
+ 506 005e 02       		.uleb128 0x2
+ 507 005f 04       		.byte	0x4
+ 508 0060 07       		.byte	0x7
+ 509 0061 8E010000 		.4byte	.LASF7
+ 510 0065 02       		.uleb128 0x2
+ 511 0066 08       		.byte	0x8
+ 512 0067 05       		.byte	0x5
+ 513 0068 7E020000 		.4byte	.LASF8
+ 514 006c 02       		.uleb128 0x2
+ 515 006d 08       		.byte	0x8
+ 516 006e 07       		.byte	0x7
+ 517 006f 39020000 		.4byte	.LASF9
+ 518 0073 04       		.uleb128 0x4
+ 519 0074 04       		.byte	0x4
+ 520 0075 05       		.byte	0x5
+ 521 0076 696E7400 		.ascii	"int\000"
+ 522 007a 02       		.uleb128 0x2
+ 523 007b 04       		.byte	0x4
+ 524 007c 07       		.byte	0x7
+ 525 007d 2C020000 		.4byte	.LASF10
+ 526 0081 03       		.uleb128 0x3
+ 527 0082 50020000 		.4byte	.LASF11
+ 528 0086 03       		.byte	0x3
+ 529 0087 18       		.byte	0x18
+ 530 0088 2C000000 		.4byte	0x2c
+ 531 008c 03       		.uleb128 0x3
+ 532 008d 6D020000 		.4byte	.LASF12
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc7jxOIC.s 			page 14
+
+
+ 533 0091 03       		.byte	0x3
+ 534 0092 2C       		.byte	0x2c
+ 535 0093 4C000000 		.4byte	0x4c
+ 536 0097 05       		.uleb128 0x5
+ 537 0098 FD020000 		.4byte	.LASF13
+ 538 009c 04       		.byte	0x4
+ 539 009d E701     		.2byte	0x1e7
+ 540 009f 37000000 		.4byte	0x37
+ 541 00a3 05       		.uleb128 0x5
+ 542 00a4 1E020000 		.4byte	.LASF14
+ 543 00a8 04       		.byte	0x4
+ 544 00a9 E801     		.2byte	0x1e8
+ 545 00ab 45000000 		.4byte	0x45
+ 546 00af 05       		.uleb128 0x5
+ 547 00b0 25020000 		.4byte	.LASF15
+ 548 00b4 04       		.byte	0x4
+ 549 00b5 E901     		.2byte	0x1e9
+ 550 00b7 5E000000 		.4byte	0x5e
+ 551 00bb 02       		.uleb128 0x2
+ 552 00bc 04       		.byte	0x4
+ 553 00bd 04       		.byte	0x4
+ 554 00be AA000000 		.4byte	.LASF16
+ 555 00c2 02       		.uleb128 0x2
+ 556 00c3 08       		.byte	0x8
+ 557 00c4 04       		.byte	0x4
+ 558 00c5 46030000 		.4byte	.LASF17
+ 559 00c9 02       		.uleb128 0x2
+ 560 00ca 01       		.byte	0x1
+ 561 00cb 08       		.byte	0x8
+ 562 00cc 93020000 		.4byte	.LASF18
+ 563 00d0 05       		.uleb128 0x5
+ 564 00d1 61010000 		.4byte	.LASF19
+ 565 00d5 04       		.byte	0x4
+ 566 00d6 9102     		.2byte	0x291
+ 567 00d8 DC000000 		.4byte	0xdc
+ 568 00dc 06       		.uleb128 0x6
+ 569 00dd 97000000 		.4byte	0x97
+ 570 00e1 06       		.uleb128 0x6
+ 571 00e2 A3000000 		.4byte	0xa3
+ 572 00e6 02       		.uleb128 0x2
+ 573 00e7 08       		.byte	0x8
+ 574 00e8 04       		.byte	0x4
+ 575 00e9 2E030000 		.4byte	.LASF20
+ 576 00ed 02       		.uleb128 0x2
+ 577 00ee 04       		.byte	0x4
+ 578 00ef 07       		.byte	0x7
+ 579 00f0 75020000 		.4byte	.LASF21
+ 580 00f4 07       		.uleb128 0x7
+ 581 00f5 66000000 		.4byte	.LASF55
+ 582 00f9 01       		.byte	0x1
+ 583 00fa 16       		.byte	0x16
+ 584 00fb 00000000 		.4byte	.LFB64
+ 585 00ff 18000000 		.4byte	.LFE64-.LFB64
+ 586 0103 01       		.uleb128 0x1
+ 587 0104 9C       		.byte	0x9c
+ 588 0105 08       		.uleb128 0x8
+ 589 0106 19020000 		.4byte	.LASF56
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc7jxOIC.s 			page 15
+
+
+ 590 010a 01       		.byte	0x1
+ 591 010b 23       		.byte	0x23
+ 592 010c 73000000 		.4byte	0x73
+ 593 0110 00000000 		.4byte	.LFB65
+ 594 0114 D4000000 		.4byte	.LFE65-.LFB65
+ 595 0118 01       		.uleb128 0x1
+ 596 0119 9C       		.byte	0x9c
+ 597 011a 7F020000 		.4byte	0x27f
+ 598 011e 09       		.uleb128 0x9
+ 599 011f 08000000 		.4byte	.LVL0
+ 600 0123 96040000 		.4byte	0x496
+ 601 0127 0A       		.uleb128 0xa
+ 602 0128 0E000000 		.4byte	.LVL1
+ 603 012c A1040000 		.4byte	0x4a1
+ 604 0130 3E010000 		.4byte	0x13e
+ 605 0134 0B       		.uleb128 0xb
+ 606 0135 01       		.uleb128 0x1
+ 607 0136 50       		.byte	0x50
+ 608 0137 05       		.uleb128 0x5
+ 609 0138 03       		.byte	0x3
+ 610 0139 00000000 		.4byte	InterruptHandler
+ 611 013d 00       		.byte	0
+ 612 013e 09       		.uleb128 0x9
+ 613 013f 12000000 		.4byte	.LVL2
+ 614 0143 AC040000 		.4byte	0x4ac
+ 615 0147 0A       		.uleb128 0xa
+ 616 0148 18000000 		.4byte	.LVL3
+ 617 014c B7040000 		.4byte	0x4b7
+ 618 0150 5E010000 		.4byte	0x15e
+ 619 0154 0B       		.uleb128 0xb
+ 620 0155 01       		.uleb128 0x1
+ 621 0156 50       		.byte	0x50
+ 622 0157 05       		.uleb128 0x5
+ 623 0158 03       		.byte	0x3
+ 624 0159 00000000 		.4byte	.LC0
+ 625 015d 00       		.byte	0
+ 626 015e 0A       		.uleb128 0xa
+ 627 015f 1E000000 		.4byte	.LVL4
+ 628 0163 B7040000 		.4byte	0x4b7
+ 629 0167 75010000 		.4byte	0x175
+ 630 016b 0B       		.uleb128 0xb
+ 631 016c 01       		.uleb128 0x1
+ 632 016d 50       		.byte	0x50
+ 633 016e 05       		.uleb128 0x5
+ 634 016f 03       		.byte	0x3
+ 635 0170 18000000 		.4byte	.LC1
+ 636 0174 00       		.byte	0
+ 637 0175 0A       		.uleb128 0xa
+ 638 0176 24000000 		.4byte	.LVL5
+ 639 017a B7040000 		.4byte	0x4b7
+ 640 017e 8C010000 		.4byte	0x18c
+ 641 0182 0B       		.uleb128 0xb
+ 642 0183 01       		.uleb128 0x1
+ 643 0184 50       		.byte	0x50
+ 644 0185 05       		.uleb128 0x5
+ 645 0186 03       		.byte	0x3
+ 646 0187 30000000 		.4byte	.LC2
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc7jxOIC.s 			page 16
+
+
+ 647 018b 00       		.byte	0
+ 648 018c 09       		.uleb128 0x9
+ 649 018d 28000000 		.4byte	.LVL6
+ 650 0191 C2040000 		.4byte	0x4c2
+ 651 0195 0A       		.uleb128 0xa
+ 652 0196 34000000 		.4byte	.LVL7
+ 653 019a CD040000 		.4byte	0x4cd
+ 654 019e AA010000 		.4byte	0x1aa
+ 655 01a2 0B       		.uleb128 0xb
+ 656 01a3 01       		.uleb128 0x1
+ 657 01a4 50       		.byte	0x50
+ 658 01a5 03       		.uleb128 0x3
+ 659 01a6 0A       		.byte	0xa
+ 660 01a7 D007     		.2byte	0x7d0
+ 661 01a9 00       		.byte	0
+ 662 01aa 09       		.uleb128 0x9
+ 663 01ab 38000000 		.4byte	.LVL8
+ 664 01af C2040000 		.4byte	0x4c2
+ 665 01b3 0A       		.uleb128 0xa
+ 666 01b4 56000000 		.4byte	.LVL9
+ 667 01b8 D8040000 		.4byte	0x4d8
+ 668 01bc CD010000 		.4byte	0x1cd
+ 669 01c0 0B       		.uleb128 0xb
+ 670 01c1 01       		.uleb128 0x1
+ 671 01c2 50       		.byte	0x50
+ 672 01c3 02       		.uleb128 0x2
+ 673 01c4 75       		.byte	0x75
+ 674 01c5 00       		.sleb128 0
+ 675 01c6 0B       		.uleb128 0xb
+ 676 01c7 01       		.uleb128 0x1
+ 677 01c8 51       		.byte	0x51
+ 678 01c9 02       		.uleb128 0x2
+ 679 01ca 76       		.byte	0x76
+ 680 01cb 00       		.sleb128 0
+ 681 01cc 00       		.byte	0
+ 682 01cd 0A       		.uleb128 0xa
+ 683 01ce 5C000000 		.4byte	.LVL10
+ 684 01d2 B7040000 		.4byte	0x4b7
+ 685 01d6 E1010000 		.4byte	0x1e1
+ 686 01da 0B       		.uleb128 0xb
+ 687 01db 01       		.uleb128 0x1
+ 688 01dc 50       		.byte	0x50
+ 689 01dd 02       		.uleb128 0x2
+ 690 01de 75       		.byte	0x75
+ 691 01df 00       		.sleb128 0
+ 692 01e0 00       		.byte	0
+ 693 01e1 09       		.uleb128 0x9
+ 694 01e2 60000000 		.4byte	.LVL11
+ 695 01e6 C2040000 		.4byte	0x4c2
+ 696 01ea 0A       		.uleb128 0xa
+ 697 01eb 6A000000 		.4byte	.LVL12
+ 698 01ef CD040000 		.4byte	0x4cd
+ 699 01f3 FF010000 		.4byte	0x1ff
+ 700 01f7 0B       		.uleb128 0xb
+ 701 01f8 01       		.uleb128 0x1
+ 702 01f9 50       		.byte	0x50
+ 703 01fa 03       		.uleb128 0x3
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc7jxOIC.s 			page 17
+
+
+ 704 01fb 0A       		.byte	0xa
+ 705 01fc A00F     		.2byte	0xfa0
+ 706 01fe 00       		.byte	0
+ 707 01ff 09       		.uleb128 0x9
+ 708 0200 6E000000 		.4byte	.LVL13
+ 709 0204 C2040000 		.4byte	0x4c2
+ 710 0208 0A       		.uleb128 0xa
+ 711 0209 86000000 		.4byte	.LVL14
+ 712 020d D8040000 		.4byte	0x4d8
+ 713 0211 22020000 		.4byte	0x222
+ 714 0215 0B       		.uleb128 0xb
+ 715 0216 01       		.uleb128 0x1
+ 716 0217 50       		.byte	0x50
+ 717 0218 02       		.uleb128 0x2
+ 718 0219 75       		.byte	0x75
+ 719 021a 00       		.sleb128 0
+ 720 021b 0B       		.uleb128 0xb
+ 721 021c 01       		.uleb128 0x1
+ 722 021d 51       		.byte	0x51
+ 723 021e 02       		.uleb128 0x2
+ 724 021f 76       		.byte	0x76
+ 725 0220 00       		.sleb128 0
+ 726 0221 00       		.byte	0
+ 727 0222 0A       		.uleb128 0xa
+ 728 0223 8C000000 		.4byte	.LVL15
+ 729 0227 B7040000 		.4byte	0x4b7
+ 730 022b 36020000 		.4byte	0x236
+ 731 022f 0B       		.uleb128 0xb
+ 732 0230 01       		.uleb128 0x1
+ 733 0231 50       		.byte	0x50
+ 734 0232 02       		.uleb128 0x2
+ 735 0233 75       		.byte	0x75
+ 736 0234 00       		.sleb128 0
+ 737 0235 00       		.byte	0
+ 738 0236 09       		.uleb128 0x9
+ 739 0237 90000000 		.4byte	.LVL16
+ 740 023b C2040000 		.4byte	0x4c2
+ 741 023f 0A       		.uleb128 0xa
+ 742 0240 9A000000 		.4byte	.LVL17
+ 743 0244 CD040000 		.4byte	0x4cd
+ 744 0248 54020000 		.4byte	0x254
+ 745 024c 0B       		.uleb128 0xb
+ 746 024d 01       		.uleb128 0x1
+ 747 024e 50       		.byte	0x50
+ 748 024f 03       		.uleb128 0x3
+ 749 0250 0A       		.byte	0xa
+ 750 0251 B80B     		.2byte	0xbb8
+ 751 0253 00       		.byte	0
+ 752 0254 0A       		.uleb128 0xa
+ 753 0255 B2000000 		.4byte	.LVL18
+ 754 0259 D8040000 		.4byte	0x4d8
+ 755 025d 6E020000 		.4byte	0x26e
+ 756 0261 0B       		.uleb128 0xb
+ 757 0262 01       		.uleb128 0x1
+ 758 0263 50       		.byte	0x50
+ 759 0264 02       		.uleb128 0x2
+ 760 0265 75       		.byte	0x75
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc7jxOIC.s 			page 18
+
+
+ 761 0266 00       		.sleb128 0
+ 762 0267 0B       		.uleb128 0xb
+ 763 0268 01       		.uleb128 0x1
+ 764 0269 51       		.byte	0x51
+ 765 026a 02       		.uleb128 0x2
+ 766 026b 76       		.byte	0x76
+ 767 026c 00       		.sleb128 0
+ 768 026d 00       		.byte	0
+ 769 026e 0C       		.uleb128 0xc
+ 770 026f B8000000 		.4byte	.LVL19
+ 771 0273 B7040000 		.4byte	0x4b7
+ 772 0277 0B       		.uleb128 0xb
+ 773 0278 01       		.uleb128 0x1
+ 774 0279 50       		.byte	0x50
+ 775 027a 02       		.uleb128 0x2
+ 776 027b 75       		.byte	0x75
+ 777 027c 00       		.sleb128 0
+ 778 027d 00       		.byte	0
+ 779 027e 00       		.byte	0
+ 780 027f 0D       		.uleb128 0xd
+ 781 0280 14030000 		.4byte	.LASF22
+ 782 0284 01       		.byte	0x1
+ 783 0285 9C       		.byte	0x9c
+ 784 0286 00000000 		.4byte	.LFB68
+ 785 028a 24000000 		.4byte	.LFE68-.LFB68
+ 786 028e 01       		.uleb128 0x1
+ 787 028f 9C       		.byte	0x9c
+ 788 0290 B5020000 		.4byte	0x2b5
+ 789 0294 0A       		.uleb128 0xa
+ 790 0295 08000000 		.4byte	.LVL20
+ 791 0299 B7040000 		.4byte	0x4b7
+ 792 029d AB020000 		.4byte	0x2ab
+ 793 02a1 0B       		.uleb128 0xb
+ 794 02a2 01       		.uleb128 0x1
+ 795 02a3 50       		.byte	0x50
+ 796 02a4 05       		.uleb128 0x5
+ 797 02a5 03       		.byte	0x3
+ 798 02a6 58000000 		.4byte	.LC4
+ 799 02aa 00       		.byte	0
+ 800 02ab 09       		.uleb128 0x9
+ 801 02ac 0C000000 		.4byte	.LVL21
+ 802 02b0 AC040000 		.4byte	0x4ac
+ 803 02b4 00       		.byte	0
+ 804 02b5 0D       		.uleb128 0xd
+ 805 02b6 09020000 		.4byte	.LASF23
+ 806 02ba 01       		.byte	0x1
+ 807 02bb A3       		.byte	0xa3
+ 808 02bc 00000000 		.4byte	.LFB69
+ 809 02c0 4C000000 		.4byte	.LFE69-.LFB69
+ 810 02c4 01       		.uleb128 0x1
+ 811 02c5 9C       		.byte	0x9c
+ 812 02c6 17030000 		.4byte	0x317
+ 813 02ca 0E       		.uleb128 0xe
+ 814 02cb 58020000 		.4byte	.LASF26
+ 815 02cf 01       		.byte	0x1
+ 816 02d0 A7       		.byte	0xa7
+ 817 02d1 A3000000 		.4byte	0xa3
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc7jxOIC.s 			page 19
+
+
+ 818 02d5 00000000 		.4byte	.LLST0
+ 819 02d9 09       		.uleb128 0x9
+ 820 02da 06000000 		.4byte	.LVL22
+ 821 02de E3040000 		.4byte	0x4e3
+ 822 02e2 0A       		.uleb128 0xa
+ 823 02e3 36000000 		.4byte	.LVL24
+ 824 02e7 EE040000 		.4byte	0x4ee
+ 825 02eb 06030000 		.4byte	0x306
+ 826 02ef 0B       		.uleb128 0xb
+ 827 02f0 01       		.uleb128 0x1
+ 828 02f1 50       		.byte	0x50
+ 829 02f2 02       		.uleb128 0x2
+ 830 02f3 74       		.byte	0x74
+ 831 02f4 00       		.sleb128 0
+ 832 02f5 0B       		.uleb128 0xb
+ 833 02f6 01       		.uleb128 0x1
+ 834 02f7 51       		.byte	0x51
+ 835 02f8 03       		.uleb128 0x3
+ 836 02f9 0A       		.byte	0xa
+ 837 02fa 0001     		.2byte	0x100
+ 838 02fc 0B       		.uleb128 0xb
+ 839 02fd 01       		.uleb128 0x1
+ 840 02fe 52       		.byte	0x52
+ 841 02ff 05       		.uleb128 0x5
+ 842 0300 03       		.byte	0x3
+ 843 0301 68000000 		.4byte	.LC5
+ 844 0305 00       		.byte	0
+ 845 0306 0C       		.uleb128 0xc
+ 846 0307 3C000000 		.4byte	.LVL25
+ 847 030b B7040000 		.4byte	0x4b7
+ 848 030f 0B       		.uleb128 0xb
+ 849 0310 01       		.uleb128 0x1
+ 850 0311 50       		.byte	0x50
+ 851 0312 02       		.uleb128 0x2
+ 852 0313 74       		.byte	0x74
+ 853 0314 00       		.sleb128 0
+ 854 0315 00       		.byte	0
+ 855 0316 00       		.byte	0
+ 856 0317 0F       		.uleb128 0xf
+ 857 0318 B2010000 		.4byte	.LASF24
+ 858 031c 01       		.byte	0x1
+ 859 031d 86       		.byte	0x86
+ 860 031e 00000000 		.4byte	.LFB67
+ 861 0322 18000000 		.4byte	.LFE67-.LFB67
+ 862 0326 01       		.uleb128 0x1
+ 863 0327 9C       		.byte	0x9c
+ 864 0328 4E030000 		.4byte	0x34e
+ 865 032c 10       		.uleb128 0x10
+ 866 032d B8000000 		.4byte	.LASF28
+ 867 0331 01       		.byte	0x1
+ 868 0332 86       		.byte	0x86
+ 869 0333 81000000 		.4byte	0x81
+ 870 0337 13000000 		.4byte	.LLST1
+ 871 033b 09       		.uleb128 0x9
+ 872 033c 10000000 		.4byte	.LVL27
+ 873 0340 7F020000 		.4byte	0x27f
+ 874 0344 09       		.uleb128 0x9
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc7jxOIC.s 			page 20
+
+
+ 875 0345 16000000 		.4byte	.LVL29
+ 876 0349 B5020000 		.4byte	0x2b5
+ 877 034d 00       		.byte	0
+ 878 034e 0F       		.uleb128 0xf
+ 879 034f 66010000 		.4byte	.LASF25
+ 880 0353 01       		.byte	0x1
+ 881 0354 78       		.byte	0x78
+ 882 0355 00000000 		.4byte	.LFB66
+ 883 0359 24000000 		.4byte	.LFE66-.LFB66
+ 884 035d 01       		.uleb128 0x1
+ 885 035e 9C       		.byte	0x9c
+ 886 035f C6030000 		.4byte	0x3c6
+ 887 0363 0E       		.uleb128 0xe
+ 888 0364 86000000 		.4byte	.LASF27
+ 889 0368 01       		.byte	0x1
+ 890 0369 7A       		.byte	0x7a
+ 891 036a 81000000 		.4byte	0x81
+ 892 036e 4D000000 		.4byte	.LLST2
+ 893 0372 11       		.uleb128 0x11
+ 894 0373 0A000000 		.4byte	.LBB2
+ 895 0377 14000000 		.4byte	.LBE2-.LBB2
+ 896 037b BC030000 		.4byte	0x3bc
+ 897 037f 0E       		.uleb128 0xe
+ 898 0380 B8000000 		.4byte	.LASF28
+ 899 0384 01       		.byte	0x1
+ 900 0385 7D       		.byte	0x7d
+ 901 0386 81000000 		.4byte	0x81
+ 902 038a 6B000000 		.4byte	.LLST3
+ 903 038e 09       		.uleb128 0x9
+ 904 038f 0E000000 		.4byte	.LVL32
+ 905 0393 F9040000 		.4byte	0x4f9
+ 906 0397 0A       		.uleb128 0xa
+ 907 0398 14000000 		.4byte	.LVL34
+ 908 039c 04050000 		.4byte	0x504
+ 909 03a0 AB030000 		.4byte	0x3ab
+ 910 03a4 0B       		.uleb128 0xb
+ 911 03a5 01       		.uleb128 0x1
+ 912 03a6 50       		.byte	0x50
+ 913 03a7 02       		.uleb128 0x2
+ 914 03a8 75       		.byte	0x75
+ 915 03a9 00       		.sleb128 0
+ 916 03aa 00       		.byte	0
+ 917 03ab 0C       		.uleb128 0xc
+ 918 03ac 1A000000 		.4byte	.LVL35
+ 919 03b0 17030000 		.4byte	0x317
+ 920 03b4 0B       		.uleb128 0xb
+ 921 03b5 01       		.uleb128 0x1
+ 922 03b6 50       		.byte	0x50
+ 923 03b7 02       		.uleb128 0x2
+ 924 03b8 75       		.byte	0x75
+ 925 03b9 00       		.sleb128 0
+ 926 03ba 00       		.byte	0
+ 927 03bb 00       		.byte	0
+ 928 03bc 09       		.uleb128 0x9
+ 929 03bd 06000000 		.4byte	.LVL30
+ 930 03c1 0F050000 		.4byte	0x50f
+ 931 03c5 00       		.byte	0
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc7jxOIC.s 			page 21
+
+
+ 932 03c6 12       		.uleb128 0x12
+ 933 03c7 C9000000 		.4byte	0xc9
+ 934 03cb D6030000 		.4byte	0x3d6
+ 935 03cf 13       		.uleb128 0x13
+ 936 03d0 ED000000 		.4byte	0xed
+ 937 03d4 FF       		.byte	0xff
+ 938 03d5 00       		.byte	0
+ 939 03d6 14       		.uleb128 0x14
+ 940 03d7 60020000 		.4byte	.LASF29
+ 941 03db 01       		.byte	0x1
+ 942 03dc 07       		.byte	0x7
+ 943 03dd C6030000 		.4byte	0x3c6
+ 944 03e1 05       		.uleb128 0x5
+ 945 03e2 03       		.byte	0x3
+ 946 03e3 10000000 		.4byte	outputBuffer
+ 947 03e7 15       		.uleb128 0x15
+ 948 03e8 C5010000 		.4byte	.LASF30
+ 949 03ec 05       		.byte	0x5
+ 950 03ed 1207     		.2byte	0x712
+ 951 03ef F3030000 		.4byte	0x3f3
+ 952 03f3 06       		.uleb128 0x6
+ 953 03f4 8C000000 		.4byte	0x8c
+ 954 03f8 16       		.uleb128 0x16
+ 955 03f9 92000000 		.4byte	.LASF31
+ 956 03fd 01       		.byte	0x1
+ 957 03fe 05       		.byte	0x5
+ 958 03ff E1000000 		.4byte	0xe1
+ 959 0403 05       		.uleb128 0x5
+ 960 0404 03       		.byte	0x3
+ 961 0405 00000000 		.4byte	startCount
+ 962 0409 16       		.uleb128 0x16
+ 963 040a 00000000 		.4byte	.LASF32
+ 964 040e 01       		.byte	0x1
+ 965 040f 06       		.byte	0x6
+ 966 0410 E1000000 		.4byte	0xe1
+ 967 0414 05       		.uleb128 0x5
+ 968 0415 03       		.byte	0x3
+ 969 0416 00000000 		.4byte	stopCount
+ 970 041a 16       		.uleb128 0x16
+ 971 041b 9D000000 		.4byte	.LASF33
+ 972 041f 01       		.byte	0x1
+ 973 0420 08       		.byte	0x8
+ 974 0421 AF000000 		.4byte	0xaf
+ 975 0425 05       		.uleb128 0x5
+ 976 0426 03       		.byte	0x3
+ 977 0427 00000000 		.4byte	InterruptCnt
+ 978 042b 16       		.uleb128 0x16
+ 979 042c B0000000 		.4byte	.LASF34
+ 980 0430 01       		.byte	0x1
+ 981 0431 09       		.byte	0x9
+ 982 0432 AF000000 		.4byte	0xaf
+ 983 0436 05       		.uleb128 0x5
+ 984 0437 03       		.byte	0x3
+ 985 0438 00000000 		.4byte	counter
+ 986 043c 16       		.uleb128 0x16
+ 987 043d 77000000 		.4byte	.LASF35
+ 988 0441 01       		.byte	0x1
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc7jxOIC.s 			page 22
+
+
+ 989 0442 0B       		.byte	0xb
+ 990 0443 4D040000 		.4byte	0x44d
+ 991 0447 05       		.uleb128 0x5
+ 992 0448 03       		.byte	0x3
+ 993 0449 00000000 		.4byte	tick_period_ms
+ 994 044d 17       		.uleb128 0x17
+ 995 044e AF000000 		.4byte	0xaf
+ 996 0452 16       		.uleb128 0x16
+ 997 0453 E5020000 		.4byte	.LASF36
+ 998 0457 01       		.byte	0x1
+ 999 0458 0C       		.byte	0xc
+ 1000 0459 AF000000 		.4byte	0xaf
+ 1001 045d 05       		.uleb128 0x5
+ 1002 045e 03       		.byte	0x3
+ 1003 045f 00000000 		.4byte	start_counter
+ 1004 0463 16       		.uleb128 0x16
+ 1005 0464 FC010000 		.4byte	.LASF37
+ 1006 0468 01       		.byte	0x1
+ 1007 0469 0D       		.byte	0xd
+ 1008 046a AF000000 		.4byte	0xaf
+ 1009 046e 05       		.uleb128 0x5
+ 1010 046f 03       		.byte	0x3
+ 1011 0470 00000000 		.4byte	stop_counter
+ 1012 0474 16       		.uleb128 0x16
+ 1013 0475 7A010000 		.4byte	.LASF38
+ 1014 0479 01       		.byte	0x1
+ 1015 047a 0E       		.byte	0xe
+ 1016 047b AF000000 		.4byte	0xaf
+ 1017 047f 05       		.uleb128 0x5
+ 1018 0480 03       		.byte	0x3
+ 1019 0481 00000000 		.4byte	time_interval_ticks
+ 1020 0485 16       		.uleb128 0x16
+ 1021 0486 2F000000 		.4byte	.LASF39
+ 1022 048a 01       		.byte	0x1
+ 1023 048b 0F       		.byte	0xf
+ 1024 048c AF000000 		.4byte	0xaf
+ 1025 0490 05       		.uleb128 0x5
+ 1026 0491 03       		.byte	0x3
+ 1027 0492 00000000 		.4byte	time_interval_ms
+ 1028 0496 18       		.uleb128 0x18
+ 1029 0497 0A000000 		.4byte	.LASF40
+ 1030 049b 0A000000 		.4byte	.LASF40
+ 1031 049f 06       		.byte	0x6
+ 1032 04a0 54       		.byte	0x54
+ 1033 04a1 18       		.uleb128 0x18
+ 1034 04a2 03030000 		.4byte	.LASF41
+ 1035 04a6 03030000 		.4byte	.LASF41
+ 1036 04aa 07       		.byte	0x7
+ 1037 04ab 18       		.byte	0x18
+ 1038 04ac 18       		.uleb128 0x18
+ 1039 04ad 21000000 		.4byte	.LASF42
+ 1040 04b1 21000000 		.4byte	.LASF42
+ 1041 04b5 08       		.byte	0x8
+ 1042 04b6 5A       		.byte	0x5a
+ 1043 04b7 18       		.uleb128 0x18
+ 1044 04b8 5A030000 		.4byte	.LASF43
+ 1045 04bc 5A030000 		.4byte	.LASF43
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc7jxOIC.s 			page 23
+
+
+ 1046 04c0 06       		.byte	0x6
+ 1047 04c1 8B       		.byte	0x8b
+ 1048 04c2 18       		.uleb128 0x18
+ 1049 04c3 D1020000 		.4byte	.LASF44
+ 1050 04c7 D1020000 		.4byte	.LASF44
+ 1051 04cb 08       		.byte	0x8
+ 1052 04cc 69       		.byte	0x69
+ 1053 04cd 18       		.uleb128 0x18
+ 1054 04ce 73030000 		.4byte	.LASF45
+ 1055 04d2 73030000 		.4byte	.LASF45
+ 1056 04d6 09       		.byte	0x9
+ 1057 04d7 76       		.byte	0x76
+ 1058 04d8 18       		.uleb128 0x18
+ 1059 04d9 6B030000 		.4byte	.LASF46
+ 1060 04dd 6B030000 		.4byte	.LASF46
+ 1061 04e1 0A       		.byte	0xa
+ 1062 04e2 E7       		.byte	0xe7
+ 1063 04e3 18       		.uleb128 0x18
+ 1064 04e4 4D030000 		.4byte	.LASF47
+ 1065 04e8 4D030000 		.4byte	.LASF47
+ 1066 04ec 08       		.byte	0x8
+ 1067 04ed 5B       		.byte	0x5b
+ 1068 04ee 18       		.uleb128 0x18
+ 1069 04ef 4A000000 		.4byte	.LASF48
+ 1070 04f3 4A000000 		.4byte	.LASF48
+ 1071 04f7 0A       		.byte	0xa
+ 1072 04f8 FD       		.byte	0xfd
+ 1073 04f9 18       		.uleb128 0x18
+ 1074 04fa A0010000 		.4byte	.LASF49
+ 1075 04fe A0010000 		.4byte	.LASF49
+ 1076 0502 06       		.byte	0x6
+ 1077 0503 6F       		.byte	0x6f
+ 1078 0504 18       		.uleb128 0x18
+ 1079 0505 D2010000 		.4byte	.LASF50
+ 1080 0509 D2010000 		.4byte	.LASF50
+ 1081 050d 06       		.byte	0x6
+ 1082 050e 88       		.byte	0x88
+ 1083 050f 18       		.uleb128 0x18
+ 1084 0510 E5010000 		.4byte	.LASF51
+ 1085 0514 E5010000 		.4byte	.LASF51
+ 1086 0518 06       		.byte	0x6
+ 1087 0519 73       		.byte	0x73
+ 1088 051a 00       		.byte	0
+ 1089              		.section	.debug_abbrev,"",%progbits
+ 1090              	.Ldebug_abbrev0:
+ 1091 0000 01       		.uleb128 0x1
+ 1092 0001 11       		.uleb128 0x11
+ 1093 0002 01       		.byte	0x1
+ 1094 0003 25       		.uleb128 0x25
+ 1095 0004 0E       		.uleb128 0xe
+ 1096 0005 13       		.uleb128 0x13
+ 1097 0006 0B       		.uleb128 0xb
+ 1098 0007 03       		.uleb128 0x3
+ 1099 0008 0E       		.uleb128 0xe
+ 1100 0009 1B       		.uleb128 0x1b
+ 1101 000a 0E       		.uleb128 0xe
+ 1102 000b 55       		.uleb128 0x55
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc7jxOIC.s 			page 24
+
+
+ 1103 000c 17       		.uleb128 0x17
+ 1104 000d 11       		.uleb128 0x11
+ 1105 000e 01       		.uleb128 0x1
+ 1106 000f 10       		.uleb128 0x10
+ 1107 0010 17       		.uleb128 0x17
+ 1108 0011 00       		.byte	0
+ 1109 0012 00       		.byte	0
+ 1110 0013 02       		.uleb128 0x2
+ 1111 0014 24       		.uleb128 0x24
+ 1112 0015 00       		.byte	0
+ 1113 0016 0B       		.uleb128 0xb
+ 1114 0017 0B       		.uleb128 0xb
+ 1115 0018 3E       		.uleb128 0x3e
+ 1116 0019 0B       		.uleb128 0xb
+ 1117 001a 03       		.uleb128 0x3
+ 1118 001b 0E       		.uleb128 0xe
+ 1119 001c 00       		.byte	0
+ 1120 001d 00       		.byte	0
+ 1121 001e 03       		.uleb128 0x3
+ 1122 001f 16       		.uleb128 0x16
+ 1123 0020 00       		.byte	0
+ 1124 0021 03       		.uleb128 0x3
+ 1125 0022 0E       		.uleb128 0xe
+ 1126 0023 3A       		.uleb128 0x3a
+ 1127 0024 0B       		.uleb128 0xb
+ 1128 0025 3B       		.uleb128 0x3b
+ 1129 0026 0B       		.uleb128 0xb
+ 1130 0027 49       		.uleb128 0x49
+ 1131 0028 13       		.uleb128 0x13
+ 1132 0029 00       		.byte	0
+ 1133 002a 00       		.byte	0
+ 1134 002b 04       		.uleb128 0x4
+ 1135 002c 24       		.uleb128 0x24
+ 1136 002d 00       		.byte	0
+ 1137 002e 0B       		.uleb128 0xb
+ 1138 002f 0B       		.uleb128 0xb
+ 1139 0030 3E       		.uleb128 0x3e
+ 1140 0031 0B       		.uleb128 0xb
+ 1141 0032 03       		.uleb128 0x3
+ 1142 0033 08       		.uleb128 0x8
+ 1143 0034 00       		.byte	0
+ 1144 0035 00       		.byte	0
+ 1145 0036 05       		.uleb128 0x5
+ 1146 0037 16       		.uleb128 0x16
+ 1147 0038 00       		.byte	0
+ 1148 0039 03       		.uleb128 0x3
+ 1149 003a 0E       		.uleb128 0xe
+ 1150 003b 3A       		.uleb128 0x3a
+ 1151 003c 0B       		.uleb128 0xb
+ 1152 003d 3B       		.uleb128 0x3b
+ 1153 003e 05       		.uleb128 0x5
+ 1154 003f 49       		.uleb128 0x49
+ 1155 0040 13       		.uleb128 0x13
+ 1156 0041 00       		.byte	0
+ 1157 0042 00       		.byte	0
+ 1158 0043 06       		.uleb128 0x6
+ 1159 0044 35       		.uleb128 0x35
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc7jxOIC.s 			page 25
+
+
+ 1160 0045 00       		.byte	0
+ 1161 0046 49       		.uleb128 0x49
+ 1162 0047 13       		.uleb128 0x13
+ 1163 0048 00       		.byte	0
+ 1164 0049 00       		.byte	0
+ 1165 004a 07       		.uleb128 0x7
+ 1166 004b 2E       		.uleb128 0x2e
+ 1167 004c 00       		.byte	0
+ 1168 004d 3F       		.uleb128 0x3f
+ 1169 004e 19       		.uleb128 0x19
+ 1170 004f 03       		.uleb128 0x3
+ 1171 0050 0E       		.uleb128 0xe
+ 1172 0051 3A       		.uleb128 0x3a
+ 1173 0052 0B       		.uleb128 0xb
+ 1174 0053 3B       		.uleb128 0x3b
+ 1175 0054 0B       		.uleb128 0xb
+ 1176 0055 27       		.uleb128 0x27
+ 1177 0056 19       		.uleb128 0x19
+ 1178 0057 11       		.uleb128 0x11
+ 1179 0058 01       		.uleb128 0x1
+ 1180 0059 12       		.uleb128 0x12
+ 1181 005a 06       		.uleb128 0x6
+ 1182 005b 40       		.uleb128 0x40
+ 1183 005c 18       		.uleb128 0x18
+ 1184 005d 9742     		.uleb128 0x2117
+ 1185 005f 19       		.uleb128 0x19
+ 1186 0060 00       		.byte	0
+ 1187 0061 00       		.byte	0
+ 1188 0062 08       		.uleb128 0x8
+ 1189 0063 2E       		.uleb128 0x2e
+ 1190 0064 01       		.byte	0x1
+ 1191 0065 3F       		.uleb128 0x3f
+ 1192 0066 19       		.uleb128 0x19
+ 1193 0067 03       		.uleb128 0x3
+ 1194 0068 0E       		.uleb128 0xe
+ 1195 0069 3A       		.uleb128 0x3a
+ 1196 006a 0B       		.uleb128 0xb
+ 1197 006b 3B       		.uleb128 0x3b
+ 1198 006c 0B       		.uleb128 0xb
+ 1199 006d 27       		.uleb128 0x27
+ 1200 006e 19       		.uleb128 0x19
+ 1201 006f 49       		.uleb128 0x49
+ 1202 0070 13       		.uleb128 0x13
+ 1203 0071 8701     		.uleb128 0x87
+ 1204 0073 19       		.uleb128 0x19
+ 1205 0074 11       		.uleb128 0x11
+ 1206 0075 01       		.uleb128 0x1
+ 1207 0076 12       		.uleb128 0x12
+ 1208 0077 06       		.uleb128 0x6
+ 1209 0078 40       		.uleb128 0x40
+ 1210 0079 18       		.uleb128 0x18
+ 1211 007a 9742     		.uleb128 0x2117
+ 1212 007c 19       		.uleb128 0x19
+ 1213 007d 01       		.uleb128 0x1
+ 1214 007e 13       		.uleb128 0x13
+ 1215 007f 00       		.byte	0
+ 1216 0080 00       		.byte	0
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc7jxOIC.s 			page 26
+
+
+ 1217 0081 09       		.uleb128 0x9
+ 1218 0082 898201   		.uleb128 0x4109
+ 1219 0085 00       		.byte	0
+ 1220 0086 11       		.uleb128 0x11
+ 1221 0087 01       		.uleb128 0x1
+ 1222 0088 31       		.uleb128 0x31
+ 1223 0089 13       		.uleb128 0x13
+ 1224 008a 00       		.byte	0
+ 1225 008b 00       		.byte	0
+ 1226 008c 0A       		.uleb128 0xa
+ 1227 008d 898201   		.uleb128 0x4109
+ 1228 0090 01       		.byte	0x1
+ 1229 0091 11       		.uleb128 0x11
+ 1230 0092 01       		.uleb128 0x1
+ 1231 0093 31       		.uleb128 0x31
+ 1232 0094 13       		.uleb128 0x13
+ 1233 0095 01       		.uleb128 0x1
+ 1234 0096 13       		.uleb128 0x13
+ 1235 0097 00       		.byte	0
+ 1236 0098 00       		.byte	0
+ 1237 0099 0B       		.uleb128 0xb
+ 1238 009a 8A8201   		.uleb128 0x410a
+ 1239 009d 00       		.byte	0
+ 1240 009e 02       		.uleb128 0x2
+ 1241 009f 18       		.uleb128 0x18
+ 1242 00a0 9142     		.uleb128 0x2111
+ 1243 00a2 18       		.uleb128 0x18
+ 1244 00a3 00       		.byte	0
+ 1245 00a4 00       		.byte	0
+ 1246 00a5 0C       		.uleb128 0xc
+ 1247 00a6 898201   		.uleb128 0x4109
+ 1248 00a9 01       		.byte	0x1
+ 1249 00aa 11       		.uleb128 0x11
+ 1250 00ab 01       		.uleb128 0x1
+ 1251 00ac 31       		.uleb128 0x31
+ 1252 00ad 13       		.uleb128 0x13
+ 1253 00ae 00       		.byte	0
+ 1254 00af 00       		.byte	0
+ 1255 00b0 0D       		.uleb128 0xd
+ 1256 00b1 2E       		.uleb128 0x2e
+ 1257 00b2 01       		.byte	0x1
+ 1258 00b3 3F       		.uleb128 0x3f
+ 1259 00b4 19       		.uleb128 0x19
+ 1260 00b5 03       		.uleb128 0x3
+ 1261 00b6 0E       		.uleb128 0xe
+ 1262 00b7 3A       		.uleb128 0x3a
+ 1263 00b8 0B       		.uleb128 0xb
+ 1264 00b9 3B       		.uleb128 0x3b
+ 1265 00ba 0B       		.uleb128 0xb
+ 1266 00bb 11       		.uleb128 0x11
+ 1267 00bc 01       		.uleb128 0x1
+ 1268 00bd 12       		.uleb128 0x12
+ 1269 00be 06       		.uleb128 0x6
+ 1270 00bf 40       		.uleb128 0x40
+ 1271 00c0 18       		.uleb128 0x18
+ 1272 00c1 9742     		.uleb128 0x2117
+ 1273 00c3 19       		.uleb128 0x19
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc7jxOIC.s 			page 27
+
+
+ 1274 00c4 01       		.uleb128 0x1
+ 1275 00c5 13       		.uleb128 0x13
+ 1276 00c6 00       		.byte	0
+ 1277 00c7 00       		.byte	0
+ 1278 00c8 0E       		.uleb128 0xe
+ 1279 00c9 34       		.uleb128 0x34
+ 1280 00ca 00       		.byte	0
+ 1281 00cb 03       		.uleb128 0x3
+ 1282 00cc 0E       		.uleb128 0xe
+ 1283 00cd 3A       		.uleb128 0x3a
+ 1284 00ce 0B       		.uleb128 0xb
+ 1285 00cf 3B       		.uleb128 0x3b
+ 1286 00d0 0B       		.uleb128 0xb
+ 1287 00d1 49       		.uleb128 0x49
+ 1288 00d2 13       		.uleb128 0x13
+ 1289 00d3 02       		.uleb128 0x2
+ 1290 00d4 17       		.uleb128 0x17
+ 1291 00d5 00       		.byte	0
+ 1292 00d6 00       		.byte	0
+ 1293 00d7 0F       		.uleb128 0xf
+ 1294 00d8 2E       		.uleb128 0x2e
+ 1295 00d9 01       		.byte	0x1
+ 1296 00da 3F       		.uleb128 0x3f
+ 1297 00db 19       		.uleb128 0x19
+ 1298 00dc 03       		.uleb128 0x3
+ 1299 00dd 0E       		.uleb128 0xe
+ 1300 00de 3A       		.uleb128 0x3a
+ 1301 00df 0B       		.uleb128 0xb
+ 1302 00e0 3B       		.uleb128 0x3b
+ 1303 00e1 0B       		.uleb128 0xb
+ 1304 00e2 27       		.uleb128 0x27
+ 1305 00e3 19       		.uleb128 0x19
+ 1306 00e4 11       		.uleb128 0x11
+ 1307 00e5 01       		.uleb128 0x1
+ 1308 00e6 12       		.uleb128 0x12
+ 1309 00e7 06       		.uleb128 0x6
+ 1310 00e8 40       		.uleb128 0x40
+ 1311 00e9 18       		.uleb128 0x18
+ 1312 00ea 9742     		.uleb128 0x2117
+ 1313 00ec 19       		.uleb128 0x19
+ 1314 00ed 01       		.uleb128 0x1
+ 1315 00ee 13       		.uleb128 0x13
+ 1316 00ef 00       		.byte	0
+ 1317 00f0 00       		.byte	0
+ 1318 00f1 10       		.uleb128 0x10
+ 1319 00f2 05       		.uleb128 0x5
+ 1320 00f3 00       		.byte	0
+ 1321 00f4 03       		.uleb128 0x3
+ 1322 00f5 0E       		.uleb128 0xe
+ 1323 00f6 3A       		.uleb128 0x3a
+ 1324 00f7 0B       		.uleb128 0xb
+ 1325 00f8 3B       		.uleb128 0x3b
+ 1326 00f9 0B       		.uleb128 0xb
+ 1327 00fa 49       		.uleb128 0x49
+ 1328 00fb 13       		.uleb128 0x13
+ 1329 00fc 02       		.uleb128 0x2
+ 1330 00fd 17       		.uleb128 0x17
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc7jxOIC.s 			page 28
+
+
+ 1331 00fe 00       		.byte	0
+ 1332 00ff 00       		.byte	0
+ 1333 0100 11       		.uleb128 0x11
+ 1334 0101 0B       		.uleb128 0xb
+ 1335 0102 01       		.byte	0x1
+ 1336 0103 11       		.uleb128 0x11
+ 1337 0104 01       		.uleb128 0x1
+ 1338 0105 12       		.uleb128 0x12
+ 1339 0106 06       		.uleb128 0x6
+ 1340 0107 01       		.uleb128 0x1
+ 1341 0108 13       		.uleb128 0x13
+ 1342 0109 00       		.byte	0
+ 1343 010a 00       		.byte	0
+ 1344 010b 12       		.uleb128 0x12
+ 1345 010c 01       		.uleb128 0x1
+ 1346 010d 01       		.byte	0x1
+ 1347 010e 49       		.uleb128 0x49
+ 1348 010f 13       		.uleb128 0x13
+ 1349 0110 01       		.uleb128 0x1
+ 1350 0111 13       		.uleb128 0x13
+ 1351 0112 00       		.byte	0
+ 1352 0113 00       		.byte	0
+ 1353 0114 13       		.uleb128 0x13
+ 1354 0115 21       		.uleb128 0x21
+ 1355 0116 00       		.byte	0
+ 1356 0117 49       		.uleb128 0x49
+ 1357 0118 13       		.uleb128 0x13
+ 1358 0119 2F       		.uleb128 0x2f
+ 1359 011a 0B       		.uleb128 0xb
+ 1360 011b 00       		.byte	0
+ 1361 011c 00       		.byte	0
+ 1362 011d 14       		.uleb128 0x14
+ 1363 011e 34       		.uleb128 0x34
+ 1364 011f 00       		.byte	0
+ 1365 0120 03       		.uleb128 0x3
+ 1366 0121 0E       		.uleb128 0xe
+ 1367 0122 3A       		.uleb128 0x3a
+ 1368 0123 0B       		.uleb128 0xb
+ 1369 0124 3B       		.uleb128 0x3b
+ 1370 0125 0B       		.uleb128 0xb
+ 1371 0126 49       		.uleb128 0x49
+ 1372 0127 13       		.uleb128 0x13
+ 1373 0128 02       		.uleb128 0x2
+ 1374 0129 18       		.uleb128 0x18
+ 1375 012a 00       		.byte	0
+ 1376 012b 00       		.byte	0
+ 1377 012c 15       		.uleb128 0x15
+ 1378 012d 34       		.uleb128 0x34
+ 1379 012e 00       		.byte	0
+ 1380 012f 03       		.uleb128 0x3
+ 1381 0130 0E       		.uleb128 0xe
+ 1382 0131 3A       		.uleb128 0x3a
+ 1383 0132 0B       		.uleb128 0xb
+ 1384 0133 3B       		.uleb128 0x3b
+ 1385 0134 05       		.uleb128 0x5
+ 1386 0135 49       		.uleb128 0x49
+ 1387 0136 13       		.uleb128 0x13
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc7jxOIC.s 			page 29
+
+
+ 1388 0137 3F       		.uleb128 0x3f
+ 1389 0138 19       		.uleb128 0x19
+ 1390 0139 3C       		.uleb128 0x3c
+ 1391 013a 19       		.uleb128 0x19
+ 1392 013b 00       		.byte	0
+ 1393 013c 00       		.byte	0
+ 1394 013d 16       		.uleb128 0x16
+ 1395 013e 34       		.uleb128 0x34
+ 1396 013f 00       		.byte	0
+ 1397 0140 03       		.uleb128 0x3
+ 1398 0141 0E       		.uleb128 0xe
+ 1399 0142 3A       		.uleb128 0x3a
+ 1400 0143 0B       		.uleb128 0xb
+ 1401 0144 3B       		.uleb128 0x3b
+ 1402 0145 0B       		.uleb128 0xb
+ 1403 0146 49       		.uleb128 0x49
+ 1404 0147 13       		.uleb128 0x13
+ 1405 0148 3F       		.uleb128 0x3f
+ 1406 0149 19       		.uleb128 0x19
+ 1407 014a 02       		.uleb128 0x2
+ 1408 014b 18       		.uleb128 0x18
+ 1409 014c 00       		.byte	0
+ 1410 014d 00       		.byte	0
+ 1411 014e 17       		.uleb128 0x17
+ 1412 014f 26       		.uleb128 0x26
+ 1413 0150 00       		.byte	0
+ 1414 0151 49       		.uleb128 0x49
+ 1415 0152 13       		.uleb128 0x13
+ 1416 0153 00       		.byte	0
+ 1417 0154 00       		.byte	0
+ 1418 0155 18       		.uleb128 0x18
+ 1419 0156 2E       		.uleb128 0x2e
+ 1420 0157 00       		.byte	0
+ 1421 0158 3F       		.uleb128 0x3f
+ 1422 0159 19       		.uleb128 0x19
+ 1423 015a 3C       		.uleb128 0x3c
+ 1424 015b 19       		.uleb128 0x19
+ 1425 015c 6E       		.uleb128 0x6e
+ 1426 015d 0E       		.uleb128 0xe
+ 1427 015e 03       		.uleb128 0x3
+ 1428 015f 0E       		.uleb128 0xe
+ 1429 0160 3A       		.uleb128 0x3a
+ 1430 0161 0B       		.uleb128 0xb
+ 1431 0162 3B       		.uleb128 0x3b
+ 1432 0163 0B       		.uleb128 0xb
+ 1433 0164 00       		.byte	0
+ 1434 0165 00       		.byte	0
+ 1435 0166 00       		.byte	0
+ 1436              		.section	.debug_loc,"",%progbits
+ 1437              	.Ldebug_loc0:
+ 1438              	.LLST0:
+ 1439 0000 26000000 		.4byte	.LVL23
+ 1440 0004 35000000 		.4byte	.LVL24-1
+ 1441 0008 0100     		.2byte	0x1
+ 1442 000a 53       		.byte	0x53
+ 1443 000b 00000000 		.4byte	0
+ 1444 000f 00000000 		.4byte	0
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc7jxOIC.s 			page 30
+
+
+ 1445              	.LLST1:
+ 1446 0013 00000000 		.4byte	.LVL26
+ 1447 0017 0F000000 		.4byte	.LVL27-1
+ 1448 001b 0100     		.2byte	0x1
+ 1449 001d 50       		.byte	0x50
+ 1450 001e 0F000000 		.4byte	.LVL27-1
+ 1451 0022 12000000 		.4byte	.LVL28
+ 1452 0026 0400     		.2byte	0x4
+ 1453 0028 F3       		.byte	0xf3
+ 1454 0029 01       		.uleb128 0x1
+ 1455 002a 50       		.byte	0x50
+ 1456 002b 9F       		.byte	0x9f
+ 1457 002c 12000000 		.4byte	.LVL28
+ 1458 0030 15000000 		.4byte	.LVL29-1
+ 1459 0034 0100     		.2byte	0x1
+ 1460 0036 50       		.byte	0x50
+ 1461 0037 15000000 		.4byte	.LVL29-1
+ 1462 003b 18000000 		.4byte	.LFE67
+ 1463 003f 0400     		.2byte	0x4
+ 1464 0041 F3       		.byte	0xf3
+ 1465 0042 01       		.uleb128 0x1
+ 1466 0043 50       		.byte	0x50
+ 1467 0044 9F       		.byte	0x9f
+ 1468 0045 00000000 		.4byte	0
+ 1469 0049 00000000 		.4byte	0
+ 1470              	.LLST2:
+ 1471 004d 08000000 		.4byte	.LVL31
+ 1472 0051 1C000000 		.4byte	.LVL36
+ 1473 0055 0100     		.2byte	0x1
+ 1474 0057 54       		.byte	0x54
+ 1475 0058 1E000000 		.4byte	.LVL37
+ 1476 005c 24000000 		.4byte	.LFE66
+ 1477 0060 0100     		.2byte	0x1
+ 1478 0062 54       		.byte	0x54
+ 1479 0063 00000000 		.4byte	0
+ 1480 0067 00000000 		.4byte	0
+ 1481              	.LLST3:
+ 1482 006b 10000000 		.4byte	.LVL33
+ 1483 006f 1E000000 		.4byte	.LVL37
+ 1484 0073 0100     		.2byte	0x1
+ 1485 0075 55       		.byte	0x55
+ 1486 0076 00000000 		.4byte	0
+ 1487 007a 00000000 		.4byte	0
+ 1488              		.section	.debug_aranges,"",%progbits
+ 1489 0000 44000000 		.4byte	0x44
+ 1490 0004 0200     		.2byte	0x2
+ 1491 0006 00000000 		.4byte	.Ldebug_info0
+ 1492 000a 04       		.byte	0x4
+ 1493 000b 00       		.byte	0
+ 1494 000c 0000     		.2byte	0
+ 1495 000e 0000     		.2byte	0
+ 1496 0010 00000000 		.4byte	.LFB64
+ 1497 0014 18000000 		.4byte	.LFE64-.LFB64
+ 1498 0018 00000000 		.4byte	.LFB65
+ 1499 001c D4000000 		.4byte	.LFE65-.LFB65
+ 1500 0020 00000000 		.4byte	.LFB68
+ 1501 0024 24000000 		.4byte	.LFE68-.LFB68
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc7jxOIC.s 			page 31
+
+
+ 1502 0028 00000000 		.4byte	.LFB69
+ 1503 002c 4C000000 		.4byte	.LFE69-.LFB69
+ 1504 0030 00000000 		.4byte	.LFB67
+ 1505 0034 18000000 		.4byte	.LFE67-.LFB67
+ 1506 0038 00000000 		.4byte	.LFB66
+ 1507 003c 24000000 		.4byte	.LFE66-.LFB66
+ 1508 0040 00000000 		.4byte	0
+ 1509 0044 00000000 		.4byte	0
+ 1510              		.section	.debug_ranges,"",%progbits
+ 1511              	.Ldebug_ranges0:
+ 1512 0000 00000000 		.4byte	.LFB64
+ 1513 0004 18000000 		.4byte	.LFE64
+ 1514 0008 00000000 		.4byte	.LFB65
+ 1515 000c D4000000 		.4byte	.LFE65
+ 1516 0010 00000000 		.4byte	.LFB68
+ 1517 0014 24000000 		.4byte	.LFE68
+ 1518 0018 00000000 		.4byte	.LFB69
+ 1519 001c 4C000000 		.4byte	.LFE69
+ 1520 0020 00000000 		.4byte	.LFB67
+ 1521 0024 18000000 		.4byte	.LFE67
+ 1522 0028 00000000 		.4byte	.LFB66
+ 1523 002c 24000000 		.4byte	.LFE66
+ 1524 0030 00000000 		.4byte	0
+ 1525 0034 00000000 		.4byte	0
+ 1526              		.section	.debug_line,"",%progbits
+ 1527              	.Ldebug_line0:
+ 1528 0000 DB020000 		.section	.debug_str,"MS",%progbits,1
+ 1528      0200F101 
+ 1528      00000201 
+ 1528      FB0E0D00 
+ 1528      01010101 
+ 1529              	.LASF32:
+ 1530 0000 73746F70 		.ascii	"stopCount\000"
+ 1530      436F756E 
+ 1530      7400
+ 1531              	.LASF40:
+ 1532 000a 55415254 		.ascii	"UART_1_Start\000"
+ 1532      5F315F53 
+ 1532      74617274 
+ 1532      00
+ 1533              	.LASF4:
+ 1534 0017 5F5F7569 		.ascii	"__uint8_t\000"
+ 1534      6E74385F 
+ 1534      7400
+ 1535              	.LASF42:
+ 1536 0021 54696D65 		.ascii	"Timer_1_Start\000"
+ 1536      725F315F 
+ 1536      53746172 
+ 1536      7400
+ 1537              	.LASF39:
+ 1538 002f 74696D65 		.ascii	"time_interval_ms\000"
+ 1538      5F696E74 
+ 1538      65727661 
+ 1538      6C5F6D73 
+ 1538      00
+ 1539              	.LASF5:
+ 1540 0040 5F5F696E 		.ascii	"__int32_t\000"
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc7jxOIC.s 			page 32
+
+
+ 1540      7433325F 
+ 1540      7400
+ 1541              	.LASF48:
+ 1542 004a 736E7072 		.ascii	"snprintf\000"
+ 1542      696E7466 
+ 1542      00
+ 1543              	.LASF3:
+ 1544 0053 73686F72 		.ascii	"short unsigned int\000"
+ 1544      7420756E 
+ 1544      7369676E 
+ 1544      65642069 
+ 1544      6E7400
+ 1545              	.LASF55:
+ 1546 0066 496E7465 		.ascii	"InterruptHandler\000"
+ 1546      72727570 
+ 1546      7448616E 
+ 1546      646C6572 
+ 1546      00
+ 1547              	.LASF35:
+ 1548 0077 7469636B 		.ascii	"tick_period_ms\000"
+ 1548      5F706572 
+ 1548      696F645F 
+ 1548      6D7300
+ 1549              	.LASF27:
+ 1550 0086 62797465 		.ascii	"bytesToRead\000"
+ 1550      73546F52 
+ 1550      65616400 
+ 1551              	.LASF31:
+ 1552 0092 73746172 		.ascii	"startCount\000"
+ 1552      74436F75 
+ 1552      6E7400
+ 1553              	.LASF33:
+ 1554 009d 496E7465 		.ascii	"InterruptCnt\000"
+ 1554      72727570 
+ 1554      74436E74 
+ 1554      00
+ 1555              	.LASF16:
+ 1556 00aa 666C6F61 		.ascii	"float\000"
+ 1556      7400
+ 1557              	.LASF34:
+ 1558 00b0 636F756E 		.ascii	"counter\000"
+ 1558      74657200 
+ 1559              	.LASF28:
+ 1560 00b8 62797465 		.ascii	"byteReceived\000"
+ 1560      52656365 
+ 1560      69766564 
+ 1560      00
+ 1561              	.LASF1:
+ 1562 00c5 756E7369 		.ascii	"unsigned char\000"
+ 1562      676E6564 
+ 1562      20636861 
+ 1562      7200
+ 1563              	.LASF52:
+ 1564 00d3 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1564      43313120 
+ 1564      352E342E 
+ 1564      31203230 
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc7jxOIC.s 			page 33
+
+
+ 1564      31363036 
+ 1565 0106 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1565      20726576 
+ 1565      6973696F 
+ 1565      6E203233 
+ 1565      37373135 
+ 1566 0139 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1566      66756E63 
+ 1566      74696F6E 
+ 1566      2D736563 
+ 1566      74696F6E 
+ 1567              	.LASF19:
+ 1568 0161 72656738 		.ascii	"reg8\000"
+ 1568      00
+ 1569              	.LASF25:
+ 1570 0166 4953525F 		.ascii	"ISR_UART_rx_handler\000"
+ 1570      55415254 
+ 1570      5F72785F 
+ 1570      68616E64 
+ 1570      6C657200 
+ 1571              	.LASF38:
+ 1572 017a 74696D65 		.ascii	"time_interval_ticks\000"
+ 1572      5F696E74 
+ 1572      65727661 
+ 1572      6C5F7469 
+ 1572      636B7300 
+ 1573              	.LASF7:
+ 1574 018e 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1574      20756E73 
+ 1574      69676E65 
+ 1574      6420696E 
+ 1574      7400
+ 1575              	.LASF49:
+ 1576 01a0 55415254 		.ascii	"UART_1_ReadRxData\000"
+ 1576      5F315F52 
+ 1576      65616452 
+ 1576      78446174 
+ 1576      6100
+ 1577              	.LASF24:
+ 1578 01b2 68616E64 		.ascii	"handleByteReceived\000"
+ 1578      6C654279 
+ 1578      74655265 
+ 1578      63656976 
+ 1578      656400
+ 1579              	.LASF30:
+ 1580 01c5 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1580      52784275 
+ 1580      66666572 
+ 1580      00
+ 1581              	.LASF50:
+ 1582 01d2 55415254 		.ascii	"UART_1_WriteTxData\000"
+ 1582      5F315F57 
+ 1582      72697465 
+ 1582      54784461 
+ 1582      746100
+ 1583              	.LASF51:
+ 1584 01e5 55415254 		.ascii	"UART_1_GetRxBufferSize\000"
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc7jxOIC.s 			page 34
+
+
+ 1584      5F315F47 
+ 1584      65745278 
+ 1584      42756666 
+ 1584      65725369 
+ 1585              	.LASF37:
+ 1586 01fc 73746F70 		.ascii	"stop_counter\000"
+ 1586      5F636F75 
+ 1586      6E746572 
+ 1586      00
+ 1587              	.LASF23:
+ 1588 0209 73746F70 		.ascii	"stopTidsTagning\000"
+ 1588      54696473 
+ 1588      5461676E 
+ 1588      696E6700 
+ 1589              	.LASF56:
+ 1590 0219 6D61696E 		.ascii	"main\000"
+ 1590      00
+ 1591              	.LASF14:
+ 1592 021e 75696E74 		.ascii	"uint16\000"
+ 1592      313600
+ 1593              	.LASF15:
+ 1594 0225 75696E74 		.ascii	"uint32\000"
+ 1594      333200
+ 1595              	.LASF10:
+ 1596 022c 756E7369 		.ascii	"unsigned int\000"
+ 1596      676E6564 
+ 1596      20696E74 
+ 1596      00
+ 1597              	.LASF9:
+ 1598 0239 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1598      206C6F6E 
+ 1598      6720756E 
+ 1598      7369676E 
+ 1598      65642069 
+ 1599              	.LASF11:
+ 1600 0250 75696E74 		.ascii	"uint8_t\000"
+ 1600      385F7400 
+ 1601              	.LASF26:
+ 1602 0258 656C6170 		.ascii	"elapsed\000"
+ 1602      73656400 
+ 1603              	.LASF29:
+ 1604 0260 6F757470 		.ascii	"outputBuffer\000"
+ 1604      75744275 
+ 1604      66666572 
+ 1604      00
+ 1605              	.LASF12:
+ 1606 026d 696E7433 		.ascii	"int32_t\000"
+ 1606      325F7400 
+ 1607              	.LASF21:
+ 1608 0275 73697A65 		.ascii	"sizetype\000"
+ 1608      74797065 
+ 1608      00
+ 1609              	.LASF8:
+ 1610 027e 6C6F6E67 		.ascii	"long long int\000"
+ 1610      206C6F6E 
+ 1610      6720696E 
+ 1610      7400
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc7jxOIC.s 			page 35
+
+
+ 1611              	.LASF53:
+ 1612 028c 6D61696E 		.ascii	"main.c\000"
+ 1612      2E6300
+ 1613              	.LASF18:
+ 1614 0293 63686172 		.ascii	"char\000"
+ 1614      00
+ 1615              	.LASF54:
+ 1616 0298 433A5C55 		.ascii	"C:\\Users\\jespe\\Downloads\\DC-Motor-PWM\\DC-Motor"
+ 1616      73657273 
+ 1616      5C6A6573 
+ 1616      70655C44 
+ 1616      6F776E6C 
+ 1617 02c6 2D50574D 		.ascii	"-PWM.cydsn\000"
+ 1617      2E637964 
+ 1617      736E00
+ 1618              	.LASF44:
+ 1619 02d1 54696D65 		.ascii	"Timer_1_ReadCounter\000"
+ 1619      725F315F 
+ 1619      52656164 
+ 1619      436F756E 
+ 1619      74657200 
+ 1620              	.LASF36:
+ 1621 02e5 73746172 		.ascii	"start_counter\000"
+ 1621      745F636F 
+ 1621      756E7465 
+ 1621      7200
+ 1622              	.LASF2:
+ 1623 02f3 73686F72 		.ascii	"short int\000"
+ 1623      7420696E 
+ 1623      7400
+ 1624              	.LASF13:
+ 1625 02fd 75696E74 		.ascii	"uint8\000"
+ 1625      3800
+ 1626              	.LASF41:
+ 1627 0303 54696D65 		.ascii	"TimerISR_StartEx\000"
+ 1627      72495352 
+ 1627      5F537461 
+ 1627      72744578 
+ 1627      00
+ 1628              	.LASF22:
+ 1629 0314 73746172 		.ascii	"startTidsTagning\000"
+ 1629      74546964 
+ 1629      73546167 
+ 1629      6E696E67 
+ 1629      00
+ 1630              	.LASF6:
+ 1631 0325 6C6F6E67 		.ascii	"long int\000"
+ 1631      20696E74 
+ 1631      00
+ 1632              	.LASF20:
+ 1633 032e 6C6F6E67 		.ascii	"long double\000"
+ 1633      20646F75 
+ 1633      626C6500 
+ 1634              	.LASF0:
+ 1635 033a 7369676E 		.ascii	"signed char\000"
+ 1635      65642063 
+ 1635      68617200 
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc7jxOIC.s 			page 36
+
+
+ 1636              	.LASF17:
+ 1637 0346 646F7562 		.ascii	"double\000"
+ 1637      6C6500
+ 1638              	.LASF47:
+ 1639 034d 54696D65 		.ascii	"Timer_1_Stop\000"
+ 1639      725F315F 
+ 1639      53746F70 
+ 1639      00
+ 1640              	.LASF43:
+ 1641 035a 55415254 		.ascii	"UART_1_PutString\000"
+ 1641      5F315F50 
+ 1641      75745374 
+ 1641      72696E67 
+ 1641      00
+ 1642              	.LASF46:
+ 1643 036b 73707269 		.ascii	"sprintf\000"
+ 1643      6E746600 
+ 1644              	.LASF45:
+ 1645 0373 43794465 		.ascii	"CyDelay\000"
+ 1645      6C617900 
+ 1646              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
