@@ -67,7 +67,7 @@ function MainMenu({onComponentChange}) {
             </div>
 
             <Button label="POST (test)" onClick={() => {
-                axios.post('127.0.0.1:8080/author', {
+                axios.post('/author', {
                     initials: 'ABC',
                     score: 123
                 });
