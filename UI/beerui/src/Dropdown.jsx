@@ -5,7 +5,7 @@ import chev from './assets/chev.png';
 
 function Dropdown(props)
 {
-    const {options, fontSize, color, width, height, borderRadius, border, background, boxShadow} = props;
+    const {options, callback, disable, fontSize, color, width, height, borderRadius, border, background, boxShadow} = props;
 
     const dropdownStyle = {
         fontSize: fontSize || "40px",
@@ -18,14 +18,20 @@ function Dropdown(props)
         boxShadow: boxShadow || '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
     };
 
+    const imgStyle = {
+        transform: `translateX(calc(${dropdownStyle.height} * -1))`,
+        height: `calc(${dropdownStyle.height} * 0.25)`,
+        margin: `calc(${dropdownStyle.height} * (0.75 / 2))`,
+    };
+
     return (
         <div className='dropdown'>
-            <select style={dropdownStyle}>
+            <select style={dropdownStyle} onChange={callback} disabled={disable}>
                 {options.map((opt) => (
                     <option value={opt}>{opt}</option>
                 ))}
             </select>
-            <img src={chev} alt="chevron-down" style={{ transform: `translateX(calc(${dropdownStyle.height} / 2 * -1))` }} />
+            <img src={chev} alt="chevron-down" style={imgStyle} />
         </div>
     );
 }

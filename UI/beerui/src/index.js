@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import MainMenu from './MainMenu';
 import GameMenu from './GameMenu';
-
-
+import axios from 'axios';
 
 const App = () => {
     const [currentComponent, setCurrentComponent] = useState('MainMenu');

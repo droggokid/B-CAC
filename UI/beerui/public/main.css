@@ -25,11 +25,15 @@ body
 .dropdown > img
 {
     height: 20px;
-    margin: auto;
 }
 
 #drinkType > *
 {
     display: inline-flex;
     margin: 20px;
+}
+
+.activeCont
+{
+    margin: auto;
 }
