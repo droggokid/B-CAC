@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Text from './Text';
 import PlayerStat from './PlayerStat';
 import Dropdown from './Dropdown';
@@ -14,9 +14,22 @@ function GameMenu(props) {
     const [p2Initials, setP2Initials] = useState(data.players[1].initials);
     const [p1Time, setP1Time] = useState("00:00.00");
     const [p2Time, setP2Time] = useState("00:00.00");
-    const [timerTime, setTimerTime] = useState("00:00");
+    const [timerSec, setTimerSec] = useState(0);
     const [dropdownDisabled, setDropdownDisabled] = useState(false);
     const [drinkType, setDrinkType] = useState("Vælg");
+    const [gameRunning, setGameRunning] = useState(false);
+    const [count, setCount] = useState(0);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setCount((count) => count + 1);
+            if (gameRunning)
+            {
+                setGameRunning(server.getGameRunning());
+                setTimerSec(timerSec + 1);
+            }
+        }, 1000);
+    });
 
     const gameMenuStyle = {
         display: "grid",
@@ -48,6 +61,7 @@ function GameMenu(props) {
         setStartBtnShow(false);
         setTimerShow(true);
         setDropdownDisabled(true);
+        setGameRunning(true);
 
         server.postStartGame(p1Initials, p2Initials, drinkType);
     }
@@ -67,7 +81,7 @@ function GameMenu(props) {
                     show={startBtnShow}
                     onclick={startGame}
                 />
-                <Text label={timerTime} show={timerShow} color="#000000" fontFamily="Arial" fontSize="100px" />
+                <Text label={JSON.stringify(timerSec)} show={timerShow} color="#000000" fontFamily="Arial" fontSize="100px" />
             </div>
         </div>
     );

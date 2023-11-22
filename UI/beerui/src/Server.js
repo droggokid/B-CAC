@@ -8,11 +8,19 @@ class Server
 
     getTime()
     {
+        // Returns the exact times of the players
         return this.get("time");
+    }
+
+    getGameRunning()
+    {
+        // Return boolean if the game is running
+        return this.get("gameRunning") == "true" ? true : false;
     }
 
     getLeaderboard()
     {
+        // Returns all the leaderboard data
         return this.get("leaderboard");
     }
 

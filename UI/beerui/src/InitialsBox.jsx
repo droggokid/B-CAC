@@ -10,12 +10,10 @@ const InitialsBox = ({ label, onLabelChange }) => {
     
     if (label.includes("1"))
     {
-      console.log(label);
       data.players[0].initials = newValue;
     }
     else if (label.includes("2"))
     {
-      console.log(label);
       data.players[1].initials = newValue;
     }
   };
