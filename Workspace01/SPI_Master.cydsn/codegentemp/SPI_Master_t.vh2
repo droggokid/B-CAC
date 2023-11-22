@@ -1,5 +1,5 @@
--- Project:   C:\Users\rgram\Documents\GitHub\GFV_Oevelse2\Workspace01\SPI_Master.cydsn\SPI_Master.cyprj
--- Generated: 09/27/2023 10:52:16
+-- Project:   C:\Users\raduf\OneDrive\Desktop\SemesterProjekt\B-CAC\Workspace01\SPI_Master.cydsn\SPI_Master.cyprj
+-- Generated: 11/15/2023 10:49:40
 -- PSoC Creator  4.4
 
 ENTITY SPI_Master IS

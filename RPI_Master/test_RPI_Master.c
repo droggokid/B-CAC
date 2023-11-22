@@ -12,9 +12,9 @@
 #define SPI_SPEED 1000000
 
 int spi_fd;
-uint8_t slaveOne[8] = {1, 0, 0, 0, 0, 0, 0, 0};
-uint8_t slaveTwo[8] = {0, 1, 0, 0, 0, 0, 0, 0};
-uint8_t sendData_[8] = {0, 0, 0, 0, 0, 0, 0, 0};
+uint8_t slaveOne[1] = {0x01};
+uint8_t slaveTwo[1] = {0x01};
+uint8_t sendData_[1] = {0x03};
 
 struct spi_ioc_transfer transfer1 = {
     .tx_buf = 0,
@@ -91,30 +91,21 @@ void updateDataFromUI()
     // Simulate updating data from UI
     // You can replace this with actual UI data update logic
     // For testing, let's set some values in sendData_
-    sendData_[0] = 0xAA;
-    sendData_[1] = 0xBB;
-    sendData_[2] = 0xCC;
+    sendData_[0] = 0x04;
 }
 
 void sendData(struct spi_ioc_transfer transfer)
 {
+    // Perform bitwise OR operation with sendData
+    ((uint8_t *)transfer.tx_buf)[0] |= sendData_[0];
+
     // Print the data before sending (for testing purposes)
-    printf("Sending data:\n");
-    for (int i = 0; i < transfer.len; ++i)
-    {
-        printf("0x%02X ", ((uint8_t *)transfer.tx_buf)[i]);
-    }
-    printf("\n");
+    printf("Sending data: %x\n", ((uint8_t *)transfer.tx_buf)[0]);
 
     ioctl(spi_fd, SPI_IOC_MESSAGE(1), &transfer);
 
     // Print received data (for testing purposes)
-    printf("Received data:\n");
-    for (int i = 0; i < transfer.len; ++i)
-    {
-        printf("0x%02X ", ((uint8_t *)transfer.rx_buf)[i]);
-    }
-    printf("\n");
+    printf("Received data: %x\n", ((uint8_t *)transfer.rx_buf)[0]);
 }
 
 int main()
@@ -137,6 +128,10 @@ int main()
 
     sendData(transfer1);
     sendData(transfer2);
+
+    // Handle received data
+    printf("Received data from transfer1: %x\n", ((uint8_t *)transfer1.rx_buf)[0]);
+    printf("Received data from transfer2: %x\n", ((uint8_t *)transfer2.rx_buf)[0]);
 
     cleanup();
     close(spi_fd);

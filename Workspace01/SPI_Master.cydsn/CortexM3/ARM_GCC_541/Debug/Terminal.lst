@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\rgram\AppData\Local\Temp\ccwikDjP.s 			page 1
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccCyGjlO.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\rgram\AppData\Local\Temp\ccwikDjP.s 			page 1
   38 0004 FFF7FEFF 		bl	UART_1_PutString
   39              	.LVL0:
   18:Terminal.c    ****     
-ARM GAS  C:\Users\rgram\AppData\Local\Temp\ccwikDjP.s 			page 2
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccCyGjlO.s 			page 2
 
 
   19:Terminal.c    ****     if(rx_data & 0x80)
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\rgram\AppData\Local\Temp\ccwikDjP.s 			page 1
   84 0050 2C000000 		.word	.LC3
   85 0054 40000000 		.word	.LC4
   86 0058 58000000 		.word	.LC5
-ARM GAS  C:\Users\rgram\AppData\Local\Temp\ccwikDjP.s 			page 3
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccCyGjlO.s 			page 3
 
 
   87              		.cfi_endproc
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\rgram\AppData\Local\Temp\ccwikDjP.s 			page 1
  127 002c 4B6E6170 		.ascii	"Knap er trykket\015\012\000"
  127      20657220 
  127      7472796B 
-ARM GAS  C:\Users\rgram\AppData\Local\Temp\ccwikDjP.s 			page 4
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccCyGjlO.s 			page 4
 
 
  127      6B65740D 
@@ -215,7 +215,7 @@ ARM GAS  C:\Users\rgram\AppData\Local\Temp\ccwikDjP.s 			page 1
  148 000c 36000000 		.4byte	.LASF20
  149 0010 0C       		.byte	0xc
  150 0011 25010000 		.4byte	.LASF21
- 151 0015 85010000 		.4byte	.LASF22
+ 151 0015 8B010000 		.4byte	.LASF22
  152 0019 00000000 		.4byte	.Ldebug_ranges0+0
  153 001d 00000000 		.4byte	0
  154 0021 00000000 		.4byte	.Ldebug_line0
@@ -235,10 +235,10 @@ ARM GAS  C:\Users\rgram\AppData\Local\Temp\ccwikDjP.s 			page 1
  168 003e 02       		.uleb128 0x2
  169 003f 02       		.byte	0x2
  170 0040 05       		.byte	0x5
- 171 0041 D5010000 		.4byte	.LASF2
+ 171 0041 DE010000 		.4byte	.LASF2
  172 0045 02       		.uleb128 0x2
  173 0046 02       		.byte	0x2
-ARM GAS  C:\Users\rgram\AppData\Local\Temp\ccwikDjP.s 			page 5
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccCyGjlO.s 			page 5
 
 
  174 0047 07       		.byte	0x7
@@ -278,14 +278,14 @@ ARM GAS  C:\Users\rgram\AppData\Local\Temp\ccwikDjP.s 			page 1
  208 0087 18       		.byte	0x18
  209 0088 2C000000 		.4byte	0x2c
  210 008c 03       		.uleb128 0x3
- 211 008d DF010000 		.4byte	.LASF12
+ 211 008d E8010000 		.4byte	.LASF12
  212 0091 03       		.byte	0x3
  213 0092 2C       		.byte	0x2c
  214 0093 4C000000 		.4byte	0x4c
  215 0097 02       		.uleb128 0x2
  216 0098 04       		.byte	0x4
  217 0099 04       		.byte	0x4
- 218 009a CF010000 		.4byte	.LASF13
+ 218 009a 85010000 		.4byte	.LASF13
  219 009e 02       		.uleb128 0x2
  220 009f 08       		.byte	0x8
  221 00a0 04       		.byte	0x4
@@ -298,13 +298,13 @@ ARM GAS  C:\Users\rgram\AppData\Local\Temp\ccwikDjP.s 			page 1
  228 00ad 08       		.byte	0x8
  229 00ae 04       		.byte	0x4
  230 00af 6F010000 		.4byte	.LASF16
-ARM GAS  C:\Users\rgram\AppData\Local\Temp\ccwikDjP.s 			page 6
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccCyGjlO.s 			page 6
 
 
  231 00b3 02       		.uleb128 0x2
  232 00b4 04       		.byte	0x4
  233 00b5 07       		.byte	0x7
- 234 00b6 E7010000 		.4byte	.LASF17
+ 234 00b6 F0010000 		.4byte	.LASF17
  235 00ba 05       		.uleb128 0x5
  236 00bb C4000000 		.4byte	.LASF23
  237 00bf 01       		.byte	0x1
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\rgram\AppData\Local\Temp\ccwikDjP.s 			page 1
  285 0125 03       		.byte	0x3
  286 0126 2C000000 		.4byte	.LC3
  287 012a 00       		.byte	0
-ARM GAS  C:\Users\rgram\AppData\Local\Temp\ccwikDjP.s 			page 7
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccCyGjlO.s 			page 7
 
 
  288 012b 06       		.uleb128 0x6
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\rgram\AppData\Local\Temp\ccwikDjP.s 			page 1
  342 019b 0E       		.uleb128 0xe
  343 019c E6000000 		.4byte	.LASF26
  344 01a0 E6000000 		.4byte	.LASF26
-ARM GAS  C:\Users\rgram\AppData\Local\Temp\ccwikDjP.s 			page 8
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccCyGjlO.s 			page 8
 
 
  345 01a4 05       		.byte	0x5
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\rgram\AppData\Local\Temp\ccwikDjP.s 			page 1
  399 0031 0B       		.uleb128 0xb
  400 0032 03       		.uleb128 0x3
  401 0033 08       		.uleb128 0x8
-ARM GAS  C:\Users\rgram\AppData\Local\Temp\ccwikDjP.s 			page 9
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccCyGjlO.s 			page 9
 
 
  402 0034 00       		.byte	0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\rgram\AppData\Local\Temp\ccwikDjP.s 			page 1
  456 0072 09       		.uleb128 0x9
  457 0073 2E       		.uleb128 0x2e
  458 0074 01       		.byte	0x1
-ARM GAS  C:\Users\rgram\AppData\Local\Temp\ccwikDjP.s 			page 10
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccCyGjlO.s 			page 10
 
 
  459 0075 3F       		.uleb128 0x3f
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\rgram\AppData\Local\Temp\ccwikDjP.s 			page 1
  513 00ac 0C       		.uleb128 0xc
  514 00ad 35       		.uleb128 0x35
  515 00ae 00       		.byte	0
-ARM GAS  C:\Users\rgram\AppData\Local\Temp\ccwikDjP.s 			page 11
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccCyGjlO.s 			page 11
 
 
  516 00af 49       		.uleb128 0x49
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\rgram\AppData\Local\Temp\ccwikDjP.s 			page 1
  570              	.Ldebug_ranges0:
  571 0000 00000000 		.4byte	.LFB64
  572 0004 5C000000 		.4byte	.LFE64
-ARM GAS  C:\Users\rgram\AppData\Local\Temp\ccwikDjP.s 			page 12
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccCyGjlO.s 			page 12
 
 
  573 0008 00000000 		.4byte	.LFB65
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\rgram\AppData\Local\Temp\ccwikDjP.s 			page 1
  595      65642069 
  596              	.LASF25:
  597 00e1 64617461 		.ascii	"data\000"
-ARM GAS  C:\Users\rgram\AppData\Local\Temp\ccwikDjP.s 			page 13
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccCyGjlO.s 			page 13
 
 
  597      00
@@ -778,36 +778,36 @@ ARM GAS  C:\Users\rgram\AppData\Local\Temp\ccwikDjP.s 			page 1
  623 016f 6C6F6E67 		.ascii	"long double\000"
  623      20646F75 
  623      626C6500 
-ARM GAS  C:\Users\rgram\AppData\Local\Temp\ccwikDjP.s 			page 14
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccCyGjlO.s 			page 14
 
 
  624              	.LASF5:
  625 017b 5F5F696E 		.ascii	"__int32_t\000"
  625      7433325F 
  625      7400
- 626              	.LASF22:
- 627 0185 433A5C55 		.ascii	"C:\\Users\\rgram\\Documents\\GitHub\\GFV_Oevelse2\\"
- 627      73657273 
- 627      5C726772 
- 627      616D5C44 
- 627      6F63756D 
- 628 01b2 576F726B 		.ascii	"Workspace01\\SPI_Master.cydsn\000"
- 628      73706163 
- 628      6530315C 
- 628      5350495F 
- 628      4D617374 
- 629              	.LASF13:
- 630 01cf 666C6F61 		.ascii	"float\000"
- 630      7400
+ 626              	.LASF13:
+ 627 0185 666C6F61 		.ascii	"float\000"
+ 627      7400
+ 628              	.LASF22:
+ 629 018b 433A5C55 		.ascii	"C:\\Users\\raduf\\OneDrive\\Desktop\\SemesterProjek"
+ 629      73657273 
+ 629      5C726164 
+ 629      75665C4F 
+ 629      6E654472 
+ 630 01b9 745C422D 		.ascii	"t\\B-CAC\\Workspace01\\SPI_Master.cydsn\000"
+ 630      4341435C 
+ 630      576F726B 
+ 630      73706163 
+ 630      6530315C 
  631              	.LASF2:
- 632 01d5 73686F72 		.ascii	"short int\000"
+ 632 01de 73686F72 		.ascii	"short int\000"
  632      7420696E 
  632      7400
  633              	.LASF12:
- 634 01df 696E7433 		.ascii	"int32_t\000"
+ 634 01e8 696E7433 		.ascii	"int32_t\000"
  634      325F7400 
  635              	.LASF17:
- 636 01e7 73697A65 		.ascii	"sizetype\000"
+ 636 01f0 73697A65 		.ascii	"sizetype\000"
  636      74797065 
  636      00
  637              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

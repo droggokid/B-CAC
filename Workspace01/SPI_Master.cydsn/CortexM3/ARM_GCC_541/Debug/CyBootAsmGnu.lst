@@ -3,14 +3,14 @@ ARM GAS  Generated_Source\PSoC5\CyBootAsmGnu.s 			page 1
 
    1              	/***************************************************************************//**
    2              	* \file CyBootAsmGnu.s
-   3              	* \version 6.0
+   3              	* \version 6.10
    4              	*
    5              	*  \brief
    6              	*   Assembly routines for GNU as.
    7              	*
    8              	********************************************************************************
    9              	* \copyright
-  10              	* Copyright 2010-2015, Cypress Semiconductor Corporation.  All rights reserved.
+  10              	* Copyright 2010-2021, Cypress Semiconductor Corporation.  All rights reserved.
   11              	* You may use this file only in accordance with the license, terms, conditions,
   12              	* disclaimers, and limitations in the end user license agreement accompanying
   13              	* the software package with which this file was provided.

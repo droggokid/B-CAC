@@ -1,5 +1,5 @@
 -- Project:   SPI_Master
--- Generated: 09/27/2023 10:52:12
+-- Generated: 11/15/2023 10:49:33
 -- PSoC Creator  4.4
 
 ENTITY SPI_Master IS

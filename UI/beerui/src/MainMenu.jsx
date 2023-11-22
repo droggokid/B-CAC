@@ -1,14 +1,13 @@
 import React, { useState } from "react";
-import "./mainMenu.css"; 
 import Button from "./Button";
 import InitialsBox from "./InitialsBox";
-import yourImage from "./b-cac_logo.png";
 import Leaderboard from "./Leaderboard";
+import yourImage from "./b-cac_logo.png";
+import "./mainMenu.css";
 
 function MainMenu({onComponentChange}) {
     const [playerLabel, setPlayerLabel] = useState("Enter Player 1 initials: ");
     const [initialInputGiven, setInitialInputGiven] = useState(false);
-    const [secondInputGiven, setSecondInputGiven] = useState(false);
     const [activeComponent, setActiveComponent] = useState(null);
 
     const handlePlayerLabelChange = () => {
