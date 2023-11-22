@@ -159,13 +159,13 @@ CYPACKED typedef struct
 #define cy_cfg_data_table ((const cy_cfg_addrvalue_t CYFAR *)0x48000044u)
 
 /* IOPINS0_8 Address: CYREG_PRT15_DM0 Size (bytes): 8 */
-#define BS_IOPINS0_8_VAL ((const uint8 CYFAR *)0x48000204u)
+#define BS_IOPINS0_8_VAL ((const uint8 CYFAR *)0x480001FCu)
 
 /* IOPINS0_1 Address: CYREG_PRT1_DM0 Size (bytes): 8 */
-#define BS_IOPINS0_1_VAL ((const uint8 CYFAR *)0x4800020Cu)
+#define BS_IOPINS0_1_VAL ((const uint8 CYFAR *)0x48000204u)
 
 /* IOPINS0_2 Address: CYREG_PRT2_DR Size (bytes): 10 */
-#define BS_IOPINS0_2_VAL ((const uint8 CYFAR *)0x48000214u)
+#define BS_IOPINS0_2_VAL ((const uint8 CYFAR *)0x4800020Cu)
 
 
 /*******************************************************************************
@@ -382,6 +382,9 @@ void cyfitter_cfg(void)
 		}
 
 		cfg_write_bytes32(cy_cfg_addr_table, cy_cfg_data_table);
+
+		/* B0_P5_U1_CFG24 Starting address: CYDEV_UCFG_B0_P5_U1_CFG24 */
+		CY_SET_XTND_REG32((void CYFAR *)(CYREG_B0_P5_U1_CFG24), 0x64000004u);
 
 		/* Enable digital routing */
 		CY_SET_XTND_REG8((void CYFAR *)CYREG_BCTL0_BANK_CTL, CY_GET_XTND_REG8((void CYFAR *)CYREG_BCTL0_BANK_CTL) | 0x02u);

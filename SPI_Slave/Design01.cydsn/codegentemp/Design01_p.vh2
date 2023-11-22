@@ -1,5 +1,5 @@
 -- Project:   Design01
--- Generated: 11/21/2023 13:45:55
+-- Generated: 11/22/2023 13:38:49
 -- PSoC Creator  4.4
 
 ENTITY Design01 IS
@@ -57,7 +57,6 @@ ARCHITECTURE __DEFAULT__ OF Design01 IS
     SIGNAL \SPIS_2:BSPIS:dpMOSI_fifo_full\ : bit;
     SIGNAL \SPIS_2:BSPIS:dpMOSI_fifo_full_reg\ : bit;
     SIGNAL \SPIS_2:BSPIS:dpMOSI_fifo_not_empty\ : bit;
-    SIGNAL \SPIS_2:BSPIS:dpcounter_one\ : bit;
     SIGNAL \SPIS_2:BSPIS:dpcounter_one_fin\ : bit;
     SIGNAL \SPIS_2:BSPIS:dpcounter_one_reg\ : bit;
     SIGNAL \SPIS_2:BSPIS:inv_ss\ : bit;
@@ -105,14 +104,13 @@ ARCHITECTURE __DEFAULT__ OF Design01 IS
     ATTRIBUTE lib_model OF \SPIS_2:BSPIS:mosi_buf_overrun\ : LABEL IS "macrocell6";
     ATTRIBUTE lib_model OF \SPIS_2:BSPIS:tx_status_0\ : LABEL IS "macrocell7";
     ATTRIBUTE lib_model OF \SPIS_2:BSPIS:rx_status_4\ : LABEL IS "macrocell8";
-    ATTRIBUTE lib_model OF \SPIS_2:BSPIS:dpcounter_one\ : LABEL IS "macrocell9";
-    ATTRIBUTE lib_model OF \SPIS_2:BSPIS:mosi_to_dp\ : LABEL IS "macrocell10";
+    ATTRIBUTE lib_model OF \SPIS_2:BSPIS:mosi_to_dp\ : LABEL IS "macrocell9";
     ATTRIBUTE lib_model OF \SPIS_2:BSPIS:TxStsReg\ : LABEL IS "statusicell1";
     ATTRIBUTE lib_model OF \SPIS_2:BSPIS:RxStsReg\ : LABEL IS "statusicell2";
     ATTRIBUTE lib_model OF \SPIS_2:BSPIS:sR8:Dp:u0\ : LABEL IS "datapathcell1";
-    ATTRIBUTE lib_model OF \SPIS_2:BSPIS:dpcounter_one_reg\ : LABEL IS "macrocell11";
-    ATTRIBUTE lib_model OF \SPIS_2:BSPIS:mosi_buf_overrun_fin\ : LABEL IS "macrocell12";
-    ATTRIBUTE lib_model OF \SPIS_2:BSPIS:mosi_tmp\ : LABEL IS "macrocell13";
+    ATTRIBUTE lib_model OF \SPIS_2:BSPIS:dpcounter_one_reg\ : LABEL IS "macrocell10";
+    ATTRIBUTE lib_model OF \SPIS_2:BSPIS:mosi_buf_overrun_fin\ : LABEL IS "macrocell11";
+    ATTRIBUTE lib_model OF \SPIS_2:BSPIS:mosi_tmp\ : LABEL IS "macrocell12";
     COMPONENT clockblockcell
         PORT (
             dclk_0 : OUT std_ulogic;
@@ -1008,7 +1006,7 @@ BEGIN
 
     \SPIS_2:BSPIS:tx_load\:macrocell
         GENERIC MAP(
-            eqn_main => "(!main_0 * !main_1 * !main_2 * !main_3)",
+            eqn_main => "(!main_0 * !main_1 * !main_2 * main_3)",
             regmode => 0,
             clken_mode => 1)
         PORT MAP(
@@ -1050,7 +1048,7 @@ BEGIN
 
     \SPIS_2:BSPIS:mosi_buf_overrun\:macrocell
         GENERIC MAP(
-            eqn_main => "(main_0 * !main_1 * !main_2 * !main_3 * !main_4)",
+            eqn_main => "(main_0 * !main_1 * !main_2 * !main_3 * main_4)",
             regmode => 0,
             clken_mode => 1)
         PORT MAP(
@@ -1081,21 +1079,9 @@ BEGIN
             q => \SPIS_2:BSPIS:rx_status_4\,
             main_0 => \SPIS_2:BSPIS:dpMOSI_fifo_not_empty\);
 
-    \SPIS_2:BSPIS:dpcounter_one\:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * !main_1 * !main_2 * main_3)",
-            regmode => 0,
-            clken_mode => 1)
-        PORT MAP(
-            q => \SPIS_2:BSPIS:dpcounter_one\,
-            main_0 => \SPIS_2:BSPIS:count_3\,
-            main_1 => \SPIS_2:BSPIS:count_2\,
-            main_2 => \SPIS_2:BSPIS:count_1\,
-            main_3 => \SPIS_2:BSPIS:count_0\);
-
     \SPIS_2:BSPIS:mosi_to_dp\:macrocell
         GENERIC MAP(
-            eqn_main => "(main_0 * !main_1 * !main_2 * !main_3 * !main_4) + (main_1 * main_5) + (main_2 * main_5) + (main_3 * main_5) + (main_4 * main_5)",
+            eqn_main => "(main_0 * !main_1 * !main_2 * !main_3 * main_4) + (main_1 * main_5) + (main_2 * main_5) + (main_3 * main_5) + (!main_4 * main_5)",
             regmode => 0,
             clken_mode => 1)
         PORT MAP(
@@ -1121,7 +1107,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             clock => \SPIS_2:Net_81\,
-            in => \SPIS_2:BSPIS:dpcounter_one\,
+            in => \SPIS_2:BSPIS:tx_load\,
             out => \SPIS_2:BSPIS:dpcounter_one_fin\);
 
     \SPIS_2:BSPIS:sync_2\:synccell
@@ -1158,11 +1144,11 @@ BEGIN
             cy_period => "0000111",
             cy_route_en => 1,
             cy_route_ld => 0,
-            clk_inv => '0',
+            clk_inv => '1',
             clken_mode => 1,
             reset_inv => '0')
         PORT MAP(
-            clock => Net_17,
+            clock_n => Net_17,
             reset => Net_18,
             load => open,
             enable => \SPIS_2:BSPIS:inv_ss\,
@@ -1234,7 +1220,7 @@ BEGIN
             z1_sync => 1,
             uses_p_in => '0',
             uses_p_out => '0',
-            clk_inv => '0',
+            clk_inv => '1',
             clken_mode => 1)
         PORT MAP(
             clock => Net_17,
@@ -1275,7 +1261,7 @@ BEGIN
         GENERIC MAP(
             eqn_main => "(main_0)",
             regmode => 1,
-            clk_inv => '1',
+            clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
             q => \SPIS_2:BSPIS:mosi_tmp\,

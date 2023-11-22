@@ -1,13 +1,13 @@
-Loading plugins phase: Elapsed time ==> 2s.674ms
+Loading plugins phase: Elapsed time ==> 0s.128ms
 <CYPRESSTAG name="CyDsfit arguments...">
 cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\raduf\OneDrive\Desktop\SemesterProjekt\B-CAC\SPI_Slave\Design01.cydsn\Design01.cyprj -d CY8C5888LTI-LP097 -s C:\Users\raduf\OneDrive\Desktop\SemesterProjekt\B-CAC\SPI_Slave\Design01.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
 </CYPRESSTAG>
 <CYPRESSTAG name="Design elaboration results...">
 </CYPRESSTAG>
-Elaboration phase: Elapsed time ==> 17s.571ms
+Elaboration phase: Elapsed time ==> 0s.970ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.019ms
+HDL generation phase: Elapsed time ==> 0s.031ms
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -41,7 +41,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\raduf
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
-Tue Nov 21 13:45:53 2023
+Wed Nov 22 13:38:46 2023
 
 
 ======================================================================
@@ -51,7 +51,7 @@ Options  :    -yv2 -q10 Design01.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
-Tue Nov 21 13:45:53 2023
+Wed Nov 22 13:38:47 2023
 
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_SPI_Slave_v2_70\B_SPI_Slave_v2_70.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.v'
@@ -87,7 +87,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\raduf
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
-Tue Nov 21 13:45:53 2023
+Wed Nov 22 13:38:48 2023
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -118,7 +118,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\raduf
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
-Tue Nov 21 13:45:54 2023
+Wed Nov 22 13:38:49 2023
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -154,10 +154,11 @@ Detecting unused logic.
 	\SPIS_2:BSPIS:control_1\
 	\SPIS_2:BSPIS:control_0\
 	\SPIS_2:Net_182\
+	\SPIS_2:BSPIS:dpcounter_zero\
 	Net_21
 
 
-Deleted 11 User equations/components.
+Deleted 12 User equations/components.
 Deleted 0 Synthesized equations/components.
 
 ------------------------------------------------------
@@ -167,7 +168,6 @@ Aliasing one to tmpOE__MOSI_1_net_0
 Aliasing tmpOE__SCLK_1_net_0 to tmpOE__MOSI_1_net_0
 Aliasing tmpOE__MISO_1_net_0 to tmpOE__MOSI_1_net_0
 Aliasing tmpOE__SS_1_net_0 to tmpOE__MOSI_1_net_0
-Aliasing \SPIS_2:BSPIS:load\ to \SPIS_2:BSPIS:tx_load\
 Aliasing \SPIS_2:BSPIS:tx_status_5\ to zero
 Aliasing \SPIS_2:BSPIS:tx_status_4\ to zero
 Aliasing \SPIS_2:BSPIS:tx_status_3\ to zero
@@ -183,24 +183,24 @@ Removing Lhs of wire tmpOE__SCLK_1_net_0[15] = tmpOE__MOSI_1_net_0[7]
 Removing Lhs of wire tmpOE__MISO_1_net_0[21] = tmpOE__MOSI_1_net_0[7]
 Removing Lhs of wire tmpOE__SS_1_net_0[28] = tmpOE__MOSI_1_net_0[7]
 Removing Lhs of wire \SPIS_2:BSPIS:cnt_reset\[33] = Net_18[29]
-Removing Rhs of wire \SPIS_2:BSPIS:tx_load\[35] = \SPIS_2:BSPIS:dpcounter_zero\[36]
-Removing Lhs of wire \SPIS_2:BSPIS:dp_clk_src\[44] = Net_17[16]
+Removing Rhs of wire \SPIS_2:BSPIS:tx_load\[35] = \SPIS_2:BSPIS:load\[36]
+Removing Rhs of wire \SPIS_2:BSPIS:tx_load\[35] = \SPIS_2:BSPIS:dpcounter_one\[53]
+Removing Lhs of wire \SPIS_2:BSPIS:prc_clk_src\[43] = Net_17[16]
 Removing Rhs of wire \SPIS_2:Net_81\[46] = \SPIS_2:Net_176\[135]
-Removing Lhs of wire \SPIS_2:BSPIS:load\[64] = \SPIS_2:BSPIS:tx_load\[35]
-Removing Lhs of wire \SPIS_2:BSPIS:tx_status_2\[66] = \SPIS_2:BSPIS:miso_tx_empty_reg_fin\[56]
-Removing Rhs of wire \SPIS_2:BSPIS:tx_status_1\[67] = \SPIS_2:BSPIS:dpMISO_fifo_not_full\[68]
-Removing Lhs of wire \SPIS_2:BSPIS:tx_status_6\[69] = \SPIS_2:BSPIS:byte_complete\[37]
-Removing Lhs of wire \SPIS_2:BSPIS:rx_status_3\[72] = \SPIS_2:BSPIS:dpMOSI_fifo_not_empty\[71]
-Removing Lhs of wire \SPIS_2:BSPIS:rx_status_5\[73] = \SPIS_2:BSPIS:rx_buf_overrun\[40]
-Removing Lhs of wire \SPIS_2:BSPIS:rx_status_6\[74] = \SPIS_2:BSPIS:dpMOSI_fifo_full_reg\[61]
-Removing Lhs of wire \SPIS_2:BSPIS:tx_status_5\[75] = zero[8]
-Removing Lhs of wire \SPIS_2:BSPIS:tx_status_4\[76] = zero[8]
-Removing Lhs of wire \SPIS_2:BSPIS:tx_status_3\[77] = zero[8]
-Removing Lhs of wire \SPIS_2:BSPIS:rx_status_2\[78] = zero[8]
-Removing Lhs of wire \SPIS_2:BSPIS:rx_status_1\[79] = zero[8]
-Removing Lhs of wire \SPIS_2:BSPIS:rx_status_0\[80] = zero[8]
-Removing Lhs of wire \SPIS_2:BSPIS:mosi_fin\[81] = \SPIS_2:Net_75\[82]
-Removing Lhs of wire \SPIS_2:Net_75\[82] = Net_16[9]
+Removing Lhs of wire \SPIS_2:BSPIS:tx_status_2\[65] = \SPIS_2:BSPIS:miso_tx_empty_reg_fin\[56]
+Removing Rhs of wire \SPIS_2:BSPIS:tx_status_1\[66] = \SPIS_2:BSPIS:dpMISO_fifo_not_full\[67]
+Removing Lhs of wire \SPIS_2:BSPIS:tx_status_6\[68] = \SPIS_2:BSPIS:byte_complete\[37]
+Removing Lhs of wire \SPIS_2:BSPIS:rx_status_3\[71] = \SPIS_2:BSPIS:dpMOSI_fifo_not_empty\[70]
+Removing Lhs of wire \SPIS_2:BSPIS:rx_status_5\[72] = \SPIS_2:BSPIS:rx_buf_overrun\[40]
+Removing Lhs of wire \SPIS_2:BSPIS:rx_status_6\[73] = \SPIS_2:BSPIS:dpMOSI_fifo_full_reg\[61]
+Removing Lhs of wire \SPIS_2:BSPIS:tx_status_5\[74] = zero[8]
+Removing Lhs of wire \SPIS_2:BSPIS:tx_status_4\[75] = zero[8]
+Removing Lhs of wire \SPIS_2:BSPIS:tx_status_3\[76] = zero[8]
+Removing Lhs of wire \SPIS_2:BSPIS:rx_status_2\[77] = zero[8]
+Removing Lhs of wire \SPIS_2:BSPIS:rx_status_1\[78] = zero[8]
+Removing Lhs of wire \SPIS_2:BSPIS:rx_status_0\[79] = zero[8]
+Removing Lhs of wire \SPIS_2:BSPIS:mosi_fin\[80] = \SPIS_2:Net_75\[81]
+Removing Lhs of wire \SPIS_2:Net_75\[81] = Net_16[9]
 Removing Lhs of wire \SPIS_2:BSPIS:reset\[106] = zero[8]
 Removing Lhs of wire \SPIS_2:BSPIS:sR8:Dp:cs_addr_1\[107] = zero[8]
 Removing Lhs of wire tmpOE__LED_1_net_0[139] = tmpOE__MOSI_1_net_0[7]
@@ -220,7 +220,7 @@ Circuit simplification
 Substituting virtuals - pass 1:
 
 Note:  Expanding virtual equation for '\SPIS_2:BSPIS:tx_load\' (cost = 6):
-\SPIS_2:BSPIS:tx_load\ <= ((not \SPIS_2:BSPIS:count_3\ and not \SPIS_2:BSPIS:count_2\ and not \SPIS_2:BSPIS:count_1\ and not \SPIS_2:BSPIS:count_0\));
+\SPIS_2:BSPIS:tx_load\ <= ((not \SPIS_2:BSPIS:count_3\ and not \SPIS_2:BSPIS:count_2\ and not \SPIS_2:BSPIS:count_1\ and \SPIS_2:BSPIS:count_0\));
 
 Note:  Expanding virtual equation for '\SPIS_2:BSPIS:byte_complete\' (cost = 1):
 \SPIS_2:BSPIS:byte_complete\ <= ((not \SPIS_2:BSPIS:dpcounter_one_reg\ and \SPIS_2:BSPIS:dpcounter_one_fin\));
@@ -257,14 +257,14 @@ CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\wa
 Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\bin\warp.exe
 Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\raduf\OneDrive\Desktop\SemesterProjekt\B-CAC\SPI_Slave\Design01.cydsn\Design01.cyprj -dcpsoc3 Design01.v -verilog
 </CYPRESSTAG>
-Warp synthesis phase: Elapsed time ==> 2s.288ms
+Warp synthesis phase: Elapsed time ==> 3s.232ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V4.4.0.80, Family: PSoC3, Started at: Tuesday, 21 November 2023 13:45:54
+cyp3fit: V4.4.0.80, Family: PSoC3, Started at: Wednesday, 22 November 2023 13:38:49
 Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\raduf\OneDrive\Desktop\SemesterProjekt\B-CAC\SPI_Slave\Design01.cydsn\Design01.cyprj -d CY8C5888LTI-LP097 Design01.v -verilog
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
-Design parsing phase: Elapsed time ==> 0s.019ms
+Design parsing phase: Elapsed time ==> 0s.024ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Tech Mapping">
 <CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
@@ -570,9 +570,9 @@ Design Equations
         Main Equation            : 1 pterm
         (
               !\SPIS_2:BSPIS:count_3\ * !\SPIS_2:BSPIS:count_2\ * 
-              !\SPIS_2:BSPIS:count_1\ * !\SPIS_2:BSPIS:count_0\
+              !\SPIS_2:BSPIS:count_1\ * \SPIS_2:BSPIS:count_0\
         );
-        Output = \SPIS_2:BSPIS:tx_load\ (fanout=2)
+        Output = \SPIS_2:BSPIS:tx_load\ (fanout=3)
 
     MacroCell: Name=\SPIS_2:BSPIS:byte_complete\, Mode=(Combinatorial)
         Total # of inputs        : 2
@@ -614,7 +614,7 @@ Design Equations
         (
               \SPIS_2:BSPIS:dpMOSI_fifo_full\ * !\SPIS_2:BSPIS:count_3\ * 
               !\SPIS_2:BSPIS:count_2\ * !\SPIS_2:BSPIS:count_1\ * 
-              !\SPIS_2:BSPIS:count_0\
+              \SPIS_2:BSPIS:count_0\
         );
         Output = \SPIS_2:BSPIS:mosi_buf_overrun\ (fanout=1)
 
@@ -640,17 +640,6 @@ Design Equations
         );
         Output = \SPIS_2:BSPIS:rx_status_4\ (fanout=1)
 
-    MacroCell: Name=\SPIS_2:BSPIS:dpcounter_one\, Mode=(Combinatorial)
-        Total # of inputs        : 4
-        Total # of product terms : 1
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              !\SPIS_2:BSPIS:count_3\ * !\SPIS_2:BSPIS:count_2\ * 
-              !\SPIS_2:BSPIS:count_1\ * \SPIS_2:BSPIS:count_0\
-        );
-        Output = \SPIS_2:BSPIS:dpcounter_one\ (fanout=1)
-
     MacroCell: Name=\SPIS_2:BSPIS:mosi_to_dp\, Mode=(Combinatorial)
         Total # of inputs        : 6
         Total # of product terms : 5
@@ -658,11 +647,11 @@ Design Equations
         Main Equation            : 5 pterms
         (
               Net_16 * !\SPIS_2:BSPIS:count_3\ * !\SPIS_2:BSPIS:count_2\ * 
-              !\SPIS_2:BSPIS:count_1\ * !\SPIS_2:BSPIS:count_0\
+              !\SPIS_2:BSPIS:count_1\ * \SPIS_2:BSPIS:count_0\
             + \SPIS_2:BSPIS:count_3\ * \SPIS_2:BSPIS:mosi_tmp\
             + \SPIS_2:BSPIS:count_2\ * \SPIS_2:BSPIS:mosi_tmp\
             + \SPIS_2:BSPIS:count_1\ * \SPIS_2:BSPIS:mosi_tmp\
-            + \SPIS_2:BSPIS:count_0\ * \SPIS_2:BSPIS:mosi_tmp\
+            + !\SPIS_2:BSPIS:count_0\ * \SPIS_2:BSPIS:mosi_tmp\
         );
         Output = \SPIS_2:BSPIS:mosi_to_dp\ (fanout=1)
 
@@ -694,7 +683,7 @@ Design Equations
         Total # of inputs        : 1
         Total # of product terms : 1
         List of special equations: 
-            Clock  = !(Net_17)
+            Clock  = (Net_17)
             Clock Enable: True
         Main Equation            : 1 pterm
         (
@@ -744,7 +733,7 @@ Design Equations
             z0_sync = 1
             z1_sync = 1
         }
-        Clock Polarity: Active High
+        Clock Polarity: Active Low
         Clock Enable: True
     </CYPRESSTAG>
     <CYPRESSTAG name="Status register listing">
@@ -797,7 +786,7 @@ Design Equations
     synccell: Name =\SPIS_2:BSPIS:sync_1\
         PORT MAP (
             clock => \SPIS_2:Net_81\ ,
-            in => \SPIS_2:BSPIS:dpcounter_one\ ,
+            in => \SPIS_2:BSPIS:tx_load\ ,
             out => \SPIS_2:BSPIS:dpcounter_one_fin\ );
         Clock Polarity: Active High
         Clock Enable: True
@@ -854,7 +843,7 @@ Design Equations
             cy_route_en = 1
             cy_route_ld = 0
         }
-        Clock Polarity: Active High
+        Clock Polarity: Active Low
         Clock Enable: True
     </CYPRESSTAG>
     <CYPRESSTAG name="DRQ listing">
@@ -896,9 +885,9 @@ USB                           :    0 :    1 :    1 :  0.00 %
 DMA Channels                  :    0 :   24 :   24 :  0.00 %
 Timer                         :    0 :    4 :    4 :  0.00 %
 UDB                           :      :      :      :        
-  Macrocells                  :   13 :  179 :  192 :  6.77 %
-  Unique P-terms              :   17 :  367 :  384 :  4.43 %
-  Total P-terms               :   17 :      :      :        
+  Macrocells                  :   12 :  180 :  192 :  6.25 %
+  Unique P-terms              :   16 :  368 :  384 :  4.17 %
+  Total P-terms               :   16 :      :      :        
   Datapath Cells              :    1 :   23 :   24 :  4.17 %
   Status Cells                :    4 :   20 :   24 : 16.67 %
     StatusI Registers         :    2 :      :      :        
@@ -915,8 +904,8 @@ Analog (SC/CT) Blocks         :    0 :    4 :    4 :  0.00 %
 DAC                           :      :      :      :        
   VIDAC                       :    0 :    4 :    4 :  0.00 %
 </CYPRESSTAG>
-Technology Mapping: Elapsed time ==> 0s.042ms
-Tech Mapping phase: Elapsed time ==> 0s.098ms
+Technology Mapping: Elapsed time ==> 0s.054ms
+Tech Mapping phase: Elapsed time ==> 0s.112ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Placement">
 Initial Analog Placement Results:
@@ -926,7 +915,7 @@ IO_6@[IOP=(1)][IoId=(6)] : MISO_1(0) (fixed)
 IO_7@[IOP=(1)][IoId=(7)] : MOSI_1(0) (fixed)
 IO_0@[IOP=(2)][IoId=(0)] : SCLK_1(0) (fixed)
 IO_4@[IOP=(15)][IoId=(4)] : SS_1(0) (fixed)
-Analog Placement phase: Elapsed time ==> 0s.009ms
+Analog Placement phase: Elapsed time ==> 0s.024ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Routing">
 Analog Routing phase: Elapsed time ==> 0s.000ms
@@ -944,11 +933,11 @@ Dump of CyP35AnalogRoutingResultsDB
 IsVddaHalfUsedForComp = False
 IsVddaHalfUsedForSar0 = False
 IsVddaHalfUsedForSar1 = False
-Analog Code Generation phase: Elapsed time ==> 0s.174ms
+Analog Code Generation phase: Elapsed time ==> 0s.156ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
-I2076: Total run-time: 0.5 sec.
+I2076: Total run-time: 0.6 sec.
 
 </CYPRESSTAG>
 <CYPRESSTAG name="PLD Packing">
@@ -959,27 +948,27 @@ PLD Packing Summary
 ------------------------------------------------------------
             Resource Type : Used : Free :  Max :  % Used
     ====================================================
-                     PLDs :    6 :   42 :   48 :  12.50%
+                     PLDs :    5 :   43 :   48 :  10.42%
 
 <CYPRESSTAG name="PLD Statistics">
 
         PLD Resource Type :     Average/LAB
     =======================================
-                   Inputs :            4.33
-                   Pterms :            2.83
-               Macrocells :            2.17
+                   Inputs :            5.00
+                   Pterms :            3.20
+               Macrocells :            2.40
 </CYPRESSTAG>
 <CYPRESSTAG name="Packed PLD Contents">
 Packed PLD Contents not displayed at this verbose level.</CYPRESSTAG>
 </CYPRESSTAG>
-PLD Packing: Elapsed time ==> 0s.001ms
+PLD Packing: Elapsed time ==> 0s.003ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Partitioning">
 <CYPRESSTAG name="Initial Partitioning Summary">
 Initial Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
 <CYPRESSTAG name="Final Partitioning Summary">
 Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
-Partitioning: Elapsed time ==> 0s.008ms
+Partitioning: Elapsed time ==> 0s.023ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Final Placement Summary">
 
@@ -989,7 +978,7 @@ Final Placement Summary
 
        Resource Type :      Count : Avg Inputs : Avg Outputs
     ========================================================
-                 UDB :          4 :       5.25 :       3.25
+                 UDB :          4 :       5.00 :       3.00
 <CYPRESSTAG name="Final Placement Details">
 <CYPRESSTAG name="Component Details">
 
@@ -1000,23 +989,72 @@ UDB [UDB=(0,0)] is empty.
 UDB [UDB=(0,1)] is empty.
 UDB [UDB=(0,2)] is empty.
 UDB [UDB=(0,3)] contents:
-LAB@[UDB=(0,3)][LB=0] #macrocells=2, #inputs=2, #pterms=2
+LAB@[UDB=(0,3)][LB=0] #macrocells=4, #inputs=10, #pterms=8
 {
-    [McSlotId=0]: (empty)
-    [McSlotId=1]:     MacroCell: Name=\SPIS_2:BSPIS:rx_status_4\, Mode=(Combinatorial) @ [UDB=(0,3)][LB=0][MC=1]
-        Total # of inputs        : 1
+    [McSlotId=0]:     MacroCell: Name=Net_20, Mode=(Combinatorial) @ [UDB=(0,3)][LB=0][MC=0]
+        Total # of inputs        : 2
         Total # of product terms : 1
             Clock Enable: True
         Main Equation            : 1 pterm
         (
-              !\SPIS_2:BSPIS:dpMOSI_fifo_not_empty\
+              !Net_18 * \SPIS_2:BSPIS:miso_from_dp\
         );
-        Output = \SPIS_2:BSPIS:rx_status_4\ (fanout=1)
+        Output = Net_20 (fanout=1)
         Properties               : 
         {
         }
 
-    [McSlotId=2]:     MacroCell: Name=\SPIS_2:BSPIS:inv_ss\, Mode=(Combinatorial) @ [UDB=(0,3)][LB=0][MC=2]
+    [McSlotId=1]:     MacroCell: Name=\SPIS_2:BSPIS:rx_buf_overrun\, Mode=(Combinatorial) @ [UDB=(0,3)][LB=0][MC=1]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \SPIS_2:BSPIS:mosi_buf_overrun_reg\ * 
+              !\SPIS_2:BSPIS:mosi_buf_overrun_fin\
+        );
+        Output = \SPIS_2:BSPIS:rx_buf_overrun\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\SPIS_2:BSPIS:mosi_buf_overrun_fin\, Mode=(D-Register) @ [UDB=(0,3)][LB=0][MC=2]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (\SPIS_2:Net_81\) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \SPIS_2:BSPIS:mosi_buf_overrun_reg\
+        );
+        Output = \SPIS_2:BSPIS:mosi_buf_overrun_fin\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=\SPIS_2:BSPIS:mosi_to_dp\, Mode=(Combinatorial) @ [UDB=(0,3)][LB=0][MC=3]
+        Total # of inputs        : 6
+        Total # of product terms : 5
+            Clock Enable: True
+        Main Equation            : 5 pterms
+        (
+              Net_16 * !\SPIS_2:BSPIS:count_3\ * !\SPIS_2:BSPIS:count_2\ * 
+              !\SPIS_2:BSPIS:count_1\ * \SPIS_2:BSPIS:count_0\
+            + \SPIS_2:BSPIS:count_3\ * \SPIS_2:BSPIS:mosi_tmp\
+            + \SPIS_2:BSPIS:count_2\ * \SPIS_2:BSPIS:mosi_tmp\
+            + \SPIS_2:BSPIS:count_1\ * \SPIS_2:BSPIS:mosi_tmp\
+            + !\SPIS_2:BSPIS:count_0\ * \SPIS_2:BSPIS:mosi_tmp\
+        );
+        Output = \SPIS_2:BSPIS:mosi_to_dp\ (fanout=1)
+        Properties               : 
+        {
+        }
+}
+
+LAB@[UDB=(0,3)][LB=1] #macrocells=2, #inputs=6, #pterms=2
+{
+    [McSlotId=0]:     MacroCell: Name=\SPIS_2:BSPIS:inv_ss\, Mode=(Combinatorial) @ [UDB=(0,3)][LB=1][MC=0]
         Total # of inputs        : 1
         Total # of product terms : 1
             Clock Enable: True
@@ -1029,6 +1067,22 @@ LAB@[UDB=(0,3)][LB=0] #macrocells=2, #inputs=2, #pterms=2
         {
         }
 
+    [McSlotId=1]:     MacroCell: Name=\SPIS_2:BSPIS:mosi_buf_overrun\, Mode=(Combinatorial) @ [UDB=(0,3)][LB=1][MC=1]
+        Total # of inputs        : 5
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \SPIS_2:BSPIS:dpMOSI_fifo_full\ * !\SPIS_2:BSPIS:count_3\ * 
+              !\SPIS_2:BSPIS:count_2\ * !\SPIS_2:BSPIS:count_1\ * 
+              \SPIS_2:BSPIS:count_0\
+        );
+        Output = \SPIS_2:BSPIS:mosi_buf_overrun\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]: (empty)
     [McSlotId=3]: (empty)
 }
 
@@ -1050,7 +1104,7 @@ statusicell: Name =\SPIS_2:BSPIS:RxStsReg\
     Clock Enable: True
 
 UDB [UDB=(0,4)] contents:
-LAB@[UDB=(0,4)][LB=0] #macrocells=4, #inputs=5, #pterms=4
+LAB@[UDB=(0,4)][LB=0] #macrocells=4, #inputs=4, #pterms=4
 {
     [McSlotId=0]:     MacroCell: Name=\SPIS_2:BSPIS:tx_status_0\, Mode=(Combinatorial) @ [UDB=(0,4)][LB=0][MC=0]
         Total # of inputs        : 3
@@ -1096,16 +1150,15 @@ LAB@[UDB=(0,4)][LB=0] #macrocells=4, #inputs=5, #pterms=4
         {
         }
 
-    [McSlotId=3]:     MacroCell: Name=\SPIS_2:BSPIS:rx_buf_overrun\, Mode=(Combinatorial) @ [UDB=(0,4)][LB=0][MC=3]
-        Total # of inputs        : 2
+    [McSlotId=3]:     MacroCell: Name=\SPIS_2:BSPIS:rx_status_4\, Mode=(Combinatorial) @ [UDB=(0,4)][LB=0][MC=3]
+        Total # of inputs        : 1
         Total # of product terms : 1
             Clock Enable: True
         Main Equation            : 1 pterm
         (
-              \SPIS_2:BSPIS:mosi_buf_overrun_reg\ * 
-              !\SPIS_2:BSPIS:mosi_buf_overrun_fin\
+              !\SPIS_2:BSPIS:dpMOSI_fifo_not_empty\
         );
-        Output = \SPIS_2:BSPIS:rx_buf_overrun\ (fanout=1)
+        Output = \SPIS_2:BSPIS:rx_status_4\ (fanout=1)
         Properties               : 
         {
         }
@@ -1113,107 +1166,18 @@ LAB@[UDB=(0,4)][LB=0] #macrocells=4, #inputs=5, #pterms=4
 
 LAB@[UDB=(0,4)][LB=1] #macrocells=1, #inputs=1, #pterms=1
 {
-    [McSlotId=0]:     MacroCell: Name=\SPIS_2:BSPIS:mosi_buf_overrun_fin\, Mode=(D-Register) @ [UDB=(0,4)][LB=1][MC=0]
-        Total # of inputs        : 1
-        Total # of product terms : 1
-        List of special equations: 
-            Clock  = (\SPIS_2:Net_81\) => Global
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \SPIS_2:BSPIS:mosi_buf_overrun_reg\
-        );
-        Output = \SPIS_2:BSPIS:mosi_buf_overrun_fin\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=1]: (empty)
-    [McSlotId=2]: (empty)
-    [McSlotId=3]: (empty)
-}
-
-statusicell: Name =\SPIS_2:BSPIS:TxStsReg\
-    PORT MAP (
-        clock => \SPIS_2:Net_81\ ,
-        status_6 => \SPIS_2:BSPIS:byte_complete\ ,
-        status_2 => \SPIS_2:BSPIS:miso_tx_empty_reg_fin\ ,
-        status_1 => \SPIS_2:BSPIS:tx_status_1\ ,
-        status_0 => \SPIS_2:BSPIS:tx_status_0\ );
-    Properties:
-    {
-        cy_force_order = 1
-        cy_int_mask = "1111111"
-        cy_md_select = "1000001"
-    }
-    Clock Polarity: Active High
-    Clock Enable: True
-
-UDB [UDB=(0,5)] is empty.
-UDB [UDB=(1,0)] is empty.
-UDB [UDB=(1,1)] is empty.
-UDB [UDB=(1,2)] is empty.
-UDB [UDB=(1,3)] contents:
-LAB@[UDB=(1,3)][LB=0] #macrocells=2, #inputs=5, #pterms=2
-{
     [McSlotId=0]: (empty)
-    [McSlotId=1]:     MacroCell: Name=\SPIS_2:BSPIS:mosi_tmp\, Mode=(D-Register) @ [UDB=(1,3)][LB=0][MC=1]
+    [McSlotId=1]:     MacroCell: Name=\SPIS_2:BSPIS:mosi_tmp\, Mode=(D-Register) @ [UDB=(0,4)][LB=1][MC=1]
         Total # of inputs        : 1
         Total # of product terms : 1
         List of special equations: 
-            Clock  = !(Net_17)
+            Clock  = (Net_17)
             Clock Enable: True
         Main Equation            : 1 pterm
         (
               Net_16
         );
         Output = \SPIS_2:BSPIS:mosi_tmp\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=2]: (empty)
-    [McSlotId=3]:     MacroCell: Name=\SPIS_2:BSPIS:tx_load\, Mode=(Combinatorial) @ [UDB=(1,3)][LB=0][MC=3]
-        Total # of inputs        : 4
-        Total # of product terms : 1
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              !\SPIS_2:BSPIS:count_3\ * !\SPIS_2:BSPIS:count_2\ * 
-              !\SPIS_2:BSPIS:count_1\ * !\SPIS_2:BSPIS:count_0\
-        );
-        Output = \SPIS_2:BSPIS:tx_load\ (fanout=2)
-        Properties               : 
-        {
-        }
-}
-
-LAB@[UDB=(1,3)][LB=1] #macrocells=2, #inputs=7, #pterms=2
-{
-    [McSlotId=0]:     MacroCell: Name=\SPIS_2:BSPIS:mosi_buf_overrun\, Mode=(Combinatorial) @ [UDB=(1,3)][LB=1][MC=0]
-        Total # of inputs        : 5
-        Total # of product terms : 1
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \SPIS_2:BSPIS:dpMOSI_fifo_full\ * !\SPIS_2:BSPIS:count_3\ * 
-              !\SPIS_2:BSPIS:count_2\ * !\SPIS_2:BSPIS:count_1\ * 
-              !\SPIS_2:BSPIS:count_0\
-        );
-        Output = \SPIS_2:BSPIS:mosi_buf_overrun\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=1]:     MacroCell: Name=Net_20, Mode=(Combinatorial) @ [UDB=(1,3)][LB=1][MC=1]
-        Total # of inputs        : 2
-        Total # of product terms : 1
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              !Net_18 * \SPIS_2:BSPIS:miso_from_dp\
-        );
-        Output = Net_20 (fanout=1)
         Properties               : 
         {
         }
@@ -1258,70 +1222,8 @@ datapathcell: Name =\SPIS_2:BSPIS:sR8:Dp:u0\
         z0_sync = 1
         z1_sync = 1
     }
-    Clock Polarity: Active High
+    Clock Polarity: Active Low
     Clock Enable: True
-
-count7cell: Name =\SPIS_2:BSPIS:BitCounter\
-    PORT MAP (
-        clock => Net_17 ,
-        reset => Net_18 ,
-        enable => \SPIS_2:BSPIS:inv_ss\ ,
-        count_6 => \SPIS_2:BSPIS:count_6\ ,
-        count_5 => \SPIS_2:BSPIS:count_5\ ,
-        count_4 => \SPIS_2:BSPIS:count_4\ ,
-        count_3 => \SPIS_2:BSPIS:count_3\ ,
-        count_2 => \SPIS_2:BSPIS:count_2\ ,
-        count_1 => \SPIS_2:BSPIS:count_1\ ,
-        count_0 => \SPIS_2:BSPIS:count_0\ );
-    Properties:
-    {
-        cy_alt_mode = 0
-        cy_init_value = "0000000"
-        cy_period = "0000111"
-        cy_route_en = 1
-        cy_route_ld = 0
-    }
-    Clock Polarity: Active High
-    Clock Enable: True
-
-UDB [UDB=(1,4)] contents:
-LAB@[UDB=(1,4)][LB=1] #macrocells=2, #inputs=6, #pterms=6
-{
-    [McSlotId=0]:     MacroCell: Name=\SPIS_2:BSPIS:mosi_to_dp\, Mode=(Combinatorial) @ [UDB=(1,4)][LB=1][MC=0]
-        Total # of inputs        : 6
-        Total # of product terms : 5
-            Clock Enable: True
-        Main Equation            : 5 pterms
-        (
-              Net_16 * !\SPIS_2:BSPIS:count_3\ * !\SPIS_2:BSPIS:count_2\ * 
-              !\SPIS_2:BSPIS:count_1\ * !\SPIS_2:BSPIS:count_0\
-            + \SPIS_2:BSPIS:count_3\ * \SPIS_2:BSPIS:mosi_tmp\
-            + \SPIS_2:BSPIS:count_2\ * \SPIS_2:BSPIS:mosi_tmp\
-            + \SPIS_2:BSPIS:count_1\ * \SPIS_2:BSPIS:mosi_tmp\
-            + \SPIS_2:BSPIS:count_0\ * \SPIS_2:BSPIS:mosi_tmp\
-        );
-        Output = \SPIS_2:BSPIS:mosi_to_dp\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=1]:     MacroCell: Name=\SPIS_2:BSPIS:dpcounter_one\, Mode=(Combinatorial) @ [UDB=(1,4)][LB=1][MC=1]
-        Total # of inputs        : 4
-        Total # of product terms : 1
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              !\SPIS_2:BSPIS:count_3\ * !\SPIS_2:BSPIS:count_2\ * 
-              !\SPIS_2:BSPIS:count_1\ * \SPIS_2:BSPIS:count_0\
-        );
-        Output = \SPIS_2:BSPIS:dpcounter_one\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=2]: (empty)
-    [McSlotId=3]: (empty)
-}
 
 synccell: Name =\SPIS_2:BSPIS:sync_4\
     PORT MAP (
@@ -1348,7 +1250,7 @@ synccell: Name =\SPIS_2:BSPIS:sync_3\
 synccell: Name =\SPIS_2:BSPIS:sync_1\
     PORT MAP (
         clock => \SPIS_2:Net_81\ ,
-        in => \SPIS_2:BSPIS:dpcounter_one\ ,
+        in => \SPIS_2:BSPIS:tx_load\ ,
         out => \SPIS_2:BSPIS:dpcounter_one_fin\ );
     Properties:
     {
@@ -1363,6 +1265,72 @@ synccell: Name =\SPIS_2:BSPIS:sync_2\
         out => \SPIS_2:BSPIS:miso_tx_empty_reg_fin\ );
     Properties:
     {
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+UDB [UDB=(0,5)] is empty.
+UDB [UDB=(1,0)] is empty.
+UDB [UDB=(1,1)] is empty.
+UDB [UDB=(1,2)] is empty.
+UDB [UDB=(1,3)] contents:
+LAB@[UDB=(1,3)][LB=0] #macrocells=1, #inputs=4, #pterms=1
+{
+    [McSlotId=0]:     MacroCell: Name=\SPIS_2:BSPIS:tx_load\, Mode=(Combinatorial) @ [UDB=(1,3)][LB=0][MC=0]
+        Total # of inputs        : 4
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !\SPIS_2:BSPIS:count_3\ * !\SPIS_2:BSPIS:count_2\ * 
+              !\SPIS_2:BSPIS:count_1\ * \SPIS_2:BSPIS:count_0\
+        );
+        Output = \SPIS_2:BSPIS:tx_load\ (fanout=3)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]: (empty)
+    [McSlotId=2]: (empty)
+    [McSlotId=3]: (empty)
+}
+
+count7cell: Name =\SPIS_2:BSPIS:BitCounter\
+    PORT MAP (
+        clock => Net_17 ,
+        reset => Net_18 ,
+        enable => \SPIS_2:BSPIS:inv_ss\ ,
+        count_6 => \SPIS_2:BSPIS:count_6\ ,
+        count_5 => \SPIS_2:BSPIS:count_5\ ,
+        count_4 => \SPIS_2:BSPIS:count_4\ ,
+        count_3 => \SPIS_2:BSPIS:count_3\ ,
+        count_2 => \SPIS_2:BSPIS:count_2\ ,
+        count_1 => \SPIS_2:BSPIS:count_1\ ,
+        count_0 => \SPIS_2:BSPIS:count_0\ );
+    Properties:
+    {
+        cy_alt_mode = 0
+        cy_init_value = "0000000"
+        cy_period = "0000111"
+        cy_route_en = 1
+        cy_route_ld = 0
+    }
+    Clock Polarity: Active Low
+    Clock Enable: True
+
+UDB [UDB=(1,4)] contents:
+statusicell: Name =\SPIS_2:BSPIS:TxStsReg\
+    PORT MAP (
+        clock => \SPIS_2:Net_81\ ,
+        status_6 => \SPIS_2:BSPIS:byte_complete\ ,
+        status_2 => \SPIS_2:BSPIS:miso_tx_empty_reg_fin\ ,
+        status_1 => \SPIS_2:BSPIS:tx_status_1\ ,
+        status_0 => \SPIS_2:BSPIS:tx_status_0\ );
+    Properties:
+    {
+        cy_force_order = 1
+        cy_int_mask = "1111111"
+        cy_md_select = "1000001"
     }
     Clock Polarity: Active High
     Clock Enable: True
@@ -1711,32 +1679,32 @@ Port | Pin | Fixed |      Type |       Drive Mode |        Name | Connections
 </CYPRESSTAG>
 </CYPRESSTAG>
 Digital component placer commit/Report: Elapsed time ==> 0s.009ms
-Digital Placement phase: Elapsed time ==> 1s.184ms
+Digital Placement phase: Elapsed time ==> 1s.152ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
 "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\bin/sjrouter.exe" --xml-path "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\psoc5/psoc5lp/route_arch-rrg.cydata" --vh2-path "Design01_r.vh2" --pcf-path "Design01.pco" --des-name "Design01" --dsf-path "Design01.dsf" --sdc-path "Design01.sdc" --lib-path "Design01_r.lib"
 Routing successful.
-Digital Routing phase: Elapsed time ==> 0s.785ms
+Digital Routing phase: Elapsed time ==> 0s.807ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Generation">
-Bitstream Generation phase: Elapsed time ==> 0s.115ms
+Bitstream Generation phase: Elapsed time ==> 0s.131ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Verification">
-Bitstream Verification phase: Elapsed time ==> 0s.023ms
+Bitstream Verification phase: Elapsed time ==> 0s.020ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Static timing analysis">
 Timing report is in Design01_timing.html.
-Static timing analysis phase: Elapsed time ==> 0s.311ms
+Static timing analysis phase: Elapsed time ==> 0s.234ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Data reporting">
 Data reporting phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
-Design database save phase: Elapsed time ==> 0s.179ms
+Design database save phase: Elapsed time ==> 0s.166ms
 </CYPRESSTAG>
-cydsfit: Elapsed time ==> 3s.053ms
+cydsfit: Elapsed time ==> 2s.994ms
 </CYPRESSTAG>
-Fitter phase: Elapsed time ==> 3s.053ms
-API generation phase: Elapsed time ==> 1s.534ms
+Fitter phase: Elapsed time ==> 2s.997ms
+API generation phase: Elapsed time ==> 1s.317ms
 Dependency generation phase: Elapsed time ==> 0s.010ms
 Cleanup phase: Elapsed time ==> 0s.000ms

@@ -2,7 +2,7 @@
 --	Conversion of Design01.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Tue Nov 21 13:45:54 2023
+--	Wed Nov 22 13:38:49 2023
 --
 
 USE cypress.cypress.all;
@@ -41,7 +41,7 @@ SIGNAL tmpINTERRUPT_0__SS_1_net_0 : bit;
 SIGNAL \SPIS_2:BSPIS:cnt_reset\ : bit;
 SIGNAL \SPIS_2:BSPIS:inv_ss\ : bit;
 SIGNAL \SPIS_2:BSPIS:tx_load\ : bit;
-SIGNAL \SPIS_2:BSPIS:dpcounter_zero\ : bit;
+SIGNAL \SPIS_2:BSPIS:load\ : bit;
 SIGNAL \SPIS_2:BSPIS:byte_complete\ : bit;
 SIGNAL \SPIS_2:BSPIS:dpcounter_one_fin\ : bit;
 SIGNAL \SPIS_2:BSPIS:dpcounter_one_reg\ : bit;
@@ -62,7 +62,6 @@ SIGNAL \SPIS_2:BSPIS:dpMOSI_fifo_full\ : bit;
 SIGNAL \SPIS_2:BSPIS:dpMOSI_fifo_full_reg\ : bit;
 SIGNAL \SPIS_2:BSPIS:miso_from_dp\ : bit;
 SIGNAL \SPIS_2:BSPIS:dpMISO_fifo_not_empty\ : bit;
-SIGNAL \SPIS_2:BSPIS:load\ : bit;
 SIGNAL \SPIS_2:BSPIS:tx_status_0\ : bit;
 SIGNAL \SPIS_2:BSPIS:tx_status_2\ : bit;
 SIGNAL \SPIS_2:BSPIS:tx_status_1\ : bit;
@@ -97,6 +96,7 @@ SIGNAL \SPIS_2:BSPIS:count_3\ : bit;
 SIGNAL \SPIS_2:BSPIS:count_2\ : bit;
 SIGNAL \SPIS_2:BSPIS:count_1\ : bit;
 SIGNAL \SPIS_2:BSPIS:count_0\ : bit;
+SIGNAL \SPIS_2:BSPIS:dpcounter_zero\ : bit;
 SIGNAL Net_14 : bit;
 SIGNAL \SPIS_2:BSPIS:mosi_tmp\ : bit;
 SIGNAL \SPIS_2:BSPIS:mosi_to_dp\ : bit;
@@ -182,26 +182,24 @@ tmpOE__MOSI_1_net_0 <=  ('1') ;
 
 \SPIS_2:BSPIS:inv_ss\ <= (not Net_18);
 
-\SPIS_2:BSPIS:tx_load\ <= ((not \SPIS_2:BSPIS:count_3\ and not \SPIS_2:BSPIS:count_2\ and not \SPIS_2:BSPIS:count_1\ and not \SPIS_2:BSPIS:count_0\));
+\SPIS_2:BSPIS:tx_load\ <= ((not \SPIS_2:BSPIS:count_3\ and not \SPIS_2:BSPIS:count_2\ and not \SPIS_2:BSPIS:count_1\ and \SPIS_2:BSPIS:count_0\));
 
 \SPIS_2:BSPIS:byte_complete\ <= ((not \SPIS_2:BSPIS:dpcounter_one_reg\ and \SPIS_2:BSPIS:dpcounter_one_fin\));
 
 \SPIS_2:BSPIS:rx_buf_overrun\ <= ((not \SPIS_2:BSPIS:mosi_buf_overrun_fin\ and \SPIS_2:BSPIS:mosi_buf_overrun_reg\));
 
-\SPIS_2:BSPIS:prc_clk_src\ <= (not Net_17);
+\SPIS_2:BSPIS:dp_clk_src\ <= (not Net_17);
 
 Net_20 <= ((not Net_18 and \SPIS_2:BSPIS:miso_from_dp\));
 
-\SPIS_2:BSPIS:mosi_buf_overrun\ <= ((not \SPIS_2:BSPIS:count_3\ and not \SPIS_2:BSPIS:count_2\ and not \SPIS_2:BSPIS:count_1\ and not \SPIS_2:BSPIS:count_0\ and \SPIS_2:BSPIS:dpMOSI_fifo_full\));
+\SPIS_2:BSPIS:mosi_buf_overrun\ <= ((not \SPIS_2:BSPIS:count_3\ and not \SPIS_2:BSPIS:count_2\ and not \SPIS_2:BSPIS:count_1\ and \SPIS_2:BSPIS:dpMOSI_fifo_full\ and \SPIS_2:BSPIS:count_0\));
 
 \SPIS_2:BSPIS:tx_status_0\ <= ((not \SPIS_2:BSPIS:dpcounter_one_reg\ and \SPIS_2:BSPIS:dpcounter_one_fin\ and \SPIS_2:BSPIS:miso_tx_empty_reg_fin\));
 
 \SPIS_2:BSPIS:rx_status_4\ <= (not \SPIS_2:BSPIS:dpMOSI_fifo_not_empty\);
 
-\SPIS_2:BSPIS:dpcounter_one\ <= ((not \SPIS_2:BSPIS:count_3\ and not \SPIS_2:BSPIS:count_2\ and not \SPIS_2:BSPIS:count_1\ and \SPIS_2:BSPIS:count_0\));
-
-\SPIS_2:BSPIS:mosi_to_dp\ <= ((not \SPIS_2:BSPIS:count_3\ and not \SPIS_2:BSPIS:count_2\ and not \SPIS_2:BSPIS:count_1\ and not \SPIS_2:BSPIS:count_0\ and Net_16)
-	OR (\SPIS_2:BSPIS:count_0\ and \SPIS_2:BSPIS:mosi_tmp\)
+\SPIS_2:BSPIS:mosi_to_dp\ <= ((not \SPIS_2:BSPIS:count_3\ and not \SPIS_2:BSPIS:count_2\ and not \SPIS_2:BSPIS:count_1\ and Net_16 and \SPIS_2:BSPIS:count_0\)
+	OR (not \SPIS_2:BSPIS:count_0\ and \SPIS_2:BSPIS:mosi_tmp\)
 	OR (\SPIS_2:BSPIS:count_1\ and \SPIS_2:BSPIS:mosi_tmp\)
 	OR (\SPIS_2:BSPIS:count_2\ and \SPIS_2:BSPIS:mosi_tmp\)
 	OR (\SPIS_2:BSPIS:count_3\ and \SPIS_2:BSPIS:mosi_tmp\));
@@ -507,17 +505,17 @@ SS_1:cy_psoc3_pins_v1_10
 		clock_out=>\SPIS_2:BSPIS:clock_fin\);
 \SPIS_2:BSPIS:PrcClkEn\:cy_psoc3_udb_clock_enable_v1_0
 	GENERIC MAP(sync_mode=>'0')
-	PORT MAP(clock_in=>\SPIS_2:BSPIS:prc_clk_src\,
+	PORT MAP(clock_in=>Net_17,
 		enable=>tmpOE__MOSI_1_net_0,
 		clock_out=>\SPIS_2:BSPIS:prc_clk\);
 \SPIS_2:BSPIS:DpClkEn\:cy_psoc3_udb_clock_enable_v1_0
 	GENERIC MAP(sync_mode=>'0')
-	PORT MAP(clock_in=>Net_17,
+	PORT MAP(clock_in=>\SPIS_2:BSPIS:dp_clk_src\,
 		enable=>tmpOE__MOSI_1_net_0,
 		clock_out=>\SPIS_2:BSPIS:dp_clock\);
 \SPIS_2:BSPIS:sync_1\:cy_psoc3_sync
 	PORT MAP(clock=>\SPIS_2:BSPIS:clock_fin\,
-		sc_in=>\SPIS_2:BSPIS:dpcounter_one\,
+		sc_in=>\SPIS_2:BSPIS:tx_load\,
 		sc_out=>\SPIS_2:BSPIS:dpcounter_one_fin\);
 \SPIS_2:BSPIS:sync_2\:cy_psoc3_sync
 	PORT MAP(clock=>\SPIS_2:BSPIS:clock_fin\,

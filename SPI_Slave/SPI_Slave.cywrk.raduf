@@ -131,6 +131,38 @@
 <VisibleNodeIds>
 <v>SPI_Slave</v>
 <v>SPI_Slave\Design01</v>
+<v>SPI_Slave\Design01\CortexM3</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Button_1.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\LED_1.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\MISO_1.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\MOSI_1.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\SCLK_1.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\SPI_RX_ISR.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\spi_Slave.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\SPIS_2.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\SPIS_2_BOOT.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\SPIS_2_INT.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\SPIS_2_IntClock.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\SPIS_2_PM.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\SS_1.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Design01.elf</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Design01.hex</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Design01.map</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -183,6 +215,8 @@
 <OpenDocs>
 <name v=".\Design01.cydsn\main.c" />
 <name v=".\Design01.cydsn\spi_Slave.c" />
+<name v=".\Design01.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Design01.cydsn\Design01.cydwr" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -190,7 +224,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1013, 471" SelectedTabbedMdiWindow="7c54fcb9-938f-4ae5-8657-a401e5f2e5dc"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="e120bde4-430f-4c6e-9160-4abc61f603c2" /><DocumentWindow Key="C:\Users\raduf\OneDrive\Desktop\SemesterProjekt\B-CAC\SPI_Slave\Design01.cydsn\main.c" Guid="03210c29-349e-4667-8891-30a212fe6496" /><DocumentWindow Key="C:\Users\raduf\OneDrive\Desktop\SemesterProjekt\B-CAC\SPI_Slave\Design01.cydsn\spi_Slave.c" Guid="7c54fcb9-938f-4ae5-8657-a401e5f2e5dc" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="799, 471" SelectedTabbedMdiWindow="9cc8d727-a9a6-46d6-90ab-4925f1d894ee"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="e120bde4-430f-4c6e-9160-4abc61f603c2" /><DocumentWindow Key="C:\Users\raduf\OneDrive\Desktop\SemesterProjekt\B-CAC\SPI_Slave\Design01.cydsn\main.c" Guid="03210c29-349e-4667-8891-30a212fe6496" /><DocumentWindow Key="C:\Users\raduf\OneDrive\Desktop\SemesterProjekt\B-CAC\SPI_Slave\Design01.cydsn\spi_Slave.c" Guid="7c54fcb9-938f-4ae5-8657-a401e5f2e5dc" /><DocumentWindow Key="C:\Users\raduf\OneDrive\Desktop\SemesterProjekt\B-CAC\SPI_Slave\Design01.cydsn\TopDesign\TopDesign.cysch" Guid="9cc8d727-a9a6-46d6-90ab-4925f1d894ee" /><DocumentWindow Key="C:\Users\raduf\OneDrive\Desktop\SemesterProjekt\B-CAC\SPI_Slave\Design01.cydsn\Design01.cydwr" Guid="2d729106-d5fb-4c2c-95a9-0747d1810bcf" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

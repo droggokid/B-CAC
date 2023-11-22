@@ -5,15 +5,15 @@ CY_ISR(SPI_RX_ISR)
 {
     // Define status
     uint8_t status;
-    
+
     // Get the command from SPI
     status = modtagetSPi();
-    
+
     // Handle the status
     // If anything is received, turn off the LED
     if(status != 0)
     {
-        LED_1_Write(1); // Turn on the LED
+        LED_1_Write(0); // Turn off the LED
     }
     else
     {
@@ -24,12 +24,12 @@ CY_ISR(SPI_RX_ISR)
         // If the button is on, set the least significant bit
         else
             status |= 0b00000001;
-        
+
         // Send back the status
         sendSPi(status);
-        
-        // Turn off the LED
-        LED_1_Write(0);
+
+        // Turn on the LED
+        LED_1_Write(1);
     }
 }
 
@@ -45,7 +45,6 @@ int main(void)
     for(;;)
     {
         // Your main loop code here
+        CyDelay(10);  // Add a delay to allow time for processing
     }
 }
-
-/* [] END OF FILE */

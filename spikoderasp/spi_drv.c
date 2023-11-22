@@ -1,21 +1,22 @@
-#include <linux/cdev.h>   // cdev_add, cdev_init
-#include <linux/uaccess.h>  // copy_to_user
-#include <linux/module.h> // module_init, GPL
+#include <linux/cdev.h>    // cdev_add, cdev_init
+#include <linux/uaccess.h> // copy_to_user
+#include <linux/module.h>  // module_init, GPL
 #include <linux/spi/spi.h> // spi_sync,
 
 #define MAXLEN 32
-#define MODULE_DEBUG 1   // Enable/Disable Debug messages
+#define MODULE_DEBUG 1 // Enable/Disable Debug messages
 
 /* Char Driver Globals */
 static struct spi_driver spi_drv_spi_driver;
 struct file_operations spi_drv_fops;
-static struct class* spi_drv_class;
+static struct class *spi_drv_class;
 static dev_t devno;
 static struct cdev spi_drv_cdev;
 
 /* Definition of SPI devices */
-struct mcp3202dev {
-    struct spi_device* spi; // Pointer to SPI device
+struct mcp3202dev
+{
+    struct spi_device *spi; // Pointer to SPI device
     int channel;            // channel, ex. adc ch 0
 };
 /* Array of SPI devices */
@@ -25,19 +26,20 @@ const int spi_devs_len = 2;  // Max nbr of devices
 static int spi_devs_cnt = 0; // Nbr devices present
 
 /* Macro to handle Errors */
-#define ERRGOTO(label, ...)                     \
-  {                                             \
-    printk (__VA_ARGS__);                       \
-    goto label;                                 \
-  } while(0)
+#define ERRGOTO(label, ...)  \
+    {                        \
+        printk(__VA_ARGS__); \
+        goto label;          \
+    }                        \
+    while (0)
 
 /**********************************************************
  * CHARACTER DRIVER METHODS
  **********************************************************/
 
- /*
-  * Character Driver Module Init Method
-  */
+/*
+ * Character Driver Module Init Method
+ */
 static int __init spi_drv_init(void)
 {
     int err = 0;
@@ -99,8 +101,8 @@ static void __exit spi_drv_exit(void)
 /*
  * Character Driver Write File Operations Method
  */
-ssize_t spi_drv_write(struct file* filep, const char __user* ubuf,
-    size_t count, loff_t* f_pos)
+ssize_t spi_drv_write(struct file *filep, const char __user *ubuf,
+                      size_t count, loff_t *f_pos)
 {
     int minor, len, value;
     char kbuf[MAXLEN];
@@ -142,15 +144,15 @@ ssize_t spi_drv_write(struct file* filep, const char __user* ubuf,
 /*
  * Character Driver Read File Operations Method
  */
-ssize_t spi_drv_read(struct file* filep, char __user* ubuf,
-    size_t count, loff_t* f_pos)
+ssize_t spi_drv_read(struct file *filep, char __user *ubuf,
+                     size_t count, loff_t *f_pos)
 {
     int err;
     int minor, len;
-    struct spi_transfer t[3];
+    struct spi_transfer t[1];
     struct spi_message m;
     char resultBuf[MAXLEN];
-    uint8_t resultBuff[2];
+    uint8_t resultBuff[1];
     s16 result = 1234;
 
     minor = iminor(filep->f_inode);
@@ -160,52 +162,29 @@ ssize_t spi_drv_read(struct file* filep, char __user* ubuf,
     spi_message_init(&m);
     m.spi = spi_devs[minor].spi;
 
-    //uin8_t writebuf[2]
+    // uin8_t writebuf[2]
 
-    //writebuf
+    // writebuf
     /* Set up the SPI transfer for sending the command */
 
-
     /* Set up the SPI transfer for receiving data with the first command_byte */
-    uint8_t command_byte[3];
+    uint8_t command_byte[1];
     command_byte[0] = 0b00000001;
     t[0].tx_buf = &command_byte[0];
-    t[0].rx_buf = NULL;
+    t[0].rx_buf = &resultBuff[0];
     t[0].len = 1;
     spi_message_add_tail(&t[0], &m);
-
-    /* Set up the SPI transfer for receiving data with the second command_byte based on the minor value */
-    if (minor == 1)
-        command_byte[1] = 0b10100000 | 0b01000000;
-    else
-        command_byte[1] = 0b10100000;
-
-    t[1].tx_buf = &command_byte[1];
-    t[1].rx_buf = &resultBuff[0];
-    t[1].len = 1;
-    spi_message_add_tail(&t[1], &m);
-
-    /* Set up the SPI transfer for receiving data with the third command_byte */
-    command_byte[2] = 0b00000000;
-    t[2].tx_buf = &command_byte[2];
-    t[2].rx_buf = &resultBuff[1];
-    t[2].len = 1;
-    spi_message_add_tail(&t[2], &m);
 
     err = spi_sync(spi_devs[minor].spi, &m);
 
     result = resultBuff[0];
-    result = result << 8;
-    result = result | resultBuff[1];
 
-    result = (3300 * result) / (4096);
     if (err)
         printk(KERN_ALERT "FAILED spi_sync\n");
 
-
     if (MODULE_DEBUG)
         printk(KERN_ALERT "%s-%i read: %i\n",
-            spi_devs[minor].spi->modalias, spi_devs[minor].channel, result);
+               spi_devs[minor].spi->modalias, spi_devs[minor].channel, result);
 
     /* Convert integer to string limited to "count" size. Returns
      * length excluding NULL termination */
@@ -224,37 +203,37 @@ ssize_t spi_drv_read(struct file* filep, char __user* ubuf,
     return len;
 }
 
-
 /*
  * Character Driver File Operations Structure
  */
 struct file_operations spi_drv_fops =
-{
-  .owner = THIS_MODULE,
-  .write = spi_drv_write,
-  .read = spi_drv_read,
+    {
+        .owner = THIS_MODULE,
+        .write = spi_drv_write,
+        .read = spi_drv_read,
 };
 
 /**********************************************************
  * LINUX DEVICE MODEL METHODS (spi)
  **********************************************************/
 
- /*
-  * spi_drv Probe
-  * Called when a device with the name "spi_drv" is
-  * registered.
-  */
-static int spi_drv_probe(struct spi_device* sdev)
+/*
+ * spi_drv Probe
+ * Called when a device with the name "spi_drv" is
+ * registered.
+ */
+static int spi_drv_probe(struct spi_device *sdev)
 {
     int err = 0;
-    struct device* spi_drv_device;
+    struct device *spi_drv_device;
 
     printk(KERN_DEBUG "New SPI device: %s using chip select: %i\n",
-        sdev->modalias, sdev->chip_select);
+           sdev->modalias, sdev->chip_select);
 
     /* Check we are not creating more
        devices than we have space for */
-    if (spi_devs_cnt > spi_devs_len) {
+    if (spi_devs_cnt > spi_devs_len)
+    {
         printk(KERN_ERR "Too many SPI devices for driver\n");
         return -ENODEV;
     }
@@ -266,16 +245,17 @@ static int spi_drv_probe(struct spi_device* sdev)
     /* Create devices, populate sysfs and
        active udev to create devices in /dev */
 
-       /* We map spi_devs index to minor number here */
-    for (int i = 0; i < 2; i++) {
+    /* We map spi_devs index to minor number here */
+    for (int i = 0; i < 2; i++)
+    {
         spi_drv_device = device_create(spi_drv_class, NULL,
-            MKDEV(MAJOR(devno), spi_devs_cnt),
-            NULL, "spi_drv%d", spi_devs_cnt);
+                                       MKDEV(MAJOR(devno), spi_devs_cnt),
+                                       NULL, "spi_drv%d", spi_devs_cnt);
         if (IS_ERR(spi_drv_device))
             printk(KERN_ALERT "FAILED TO CREATE DEVICE\n");
         else
             printk(KERN_ALERT "Using spi_devs%i on major:%i, minor:%i\n",
-                spi_devs_cnt, MAJOR(devno), spi_devs_cnt);
+                   spi_devs_cnt, MAJOR(devno), spi_devs_cnt);
 
         /* Update local array of SPI devices */
         spi_devs[spi_devs_cnt].spi = sdev;
@@ -290,14 +270,15 @@ static int spi_drv_probe(struct spi_device* sdev)
  * Called when the device is removed
  * Can deallocate data if needed
  */
-static int spi_drv_remove(struct spi_device* sdev)
+static int spi_drv_remove(struct spi_device *sdev)
 {
     int its_minor = 0;
 
     printk(KERN_ALERT "Removing spi device\n");
 
     /* Destroy devices created in probe() */
-    for (int i = 0; i < spi_devs_len; i++) {
+    for (int i = 0; i < spi_devs_len; i++)
+    {
         device_destroy(spi_drv_class, MKDEV(MAJOR(devno), its_minor));
         ++its_minor;
     }
@@ -311,27 +292,30 @@ static int spi_drv_remove(struct spi_device* sdev)
  * methods and the name under which it is registered
  */
 static const struct of_device_id of_spi_drv_spi_device_match[] = {
-  {.compatible = "ase, spi_drv", }, {},
+    {
+        .compatible = "ase, spi_drv",
+    },
+    {},
 };
 
 static struct spi_driver spi_drv_spi_driver = {
-  .probe = spi_drv_probe,
-  .remove = spi_drv_remove,
-  .driver = {
-    .name = "spi_drv",
-    .bus = &spi_bus_type,
-    .of_match_table = of_spi_drv_spi_device_match,
-    .owner = THIS_MODULE,
-  },
+    .probe = spi_drv_probe,
+    .remove = spi_drv_remove,
+    .driver = {
+        .name = "spi_drv",
+        .bus = &spi_bus_type,
+        .of_match_table = of_spi_drv_spi_device_match,
+        .owner = THIS_MODULE,
+    },
 };
 
 /**********************************************************
  * GENERIC LINUX DEVICE DRIVER STUFF
  **********************************************************/
 
- /*
-  * Assignment of module init/exit methods
-  */
+/*
+ * Assignment of module init/exit methods
+ */
 module_init(spi_drv_init);
 module_exit(spi_drv_exit);
 

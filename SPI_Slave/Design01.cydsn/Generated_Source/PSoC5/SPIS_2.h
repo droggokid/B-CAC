@@ -31,9 +31,9 @@
 #define SPIS_2_DATA_WIDTH                  (8u)
 #define SPIS_2_INTERNAL_TX_INT_ENABLED     (0u)
 #define SPIS_2_INTERNAL_RX_INT_ENABLED     (0u)
-#define SPIS_2_MODE_USE_ZERO               (0u)
+#define SPIS_2_MODE_USE_ZERO               (1u)
 #define SPIS_2_BIDIRECTIONAL_MODE          (0u)
-#define SPIS_2_MODE                        (2u)
+#define SPIS_2_MODE                        (0u)
 
 #define SPIS_2_FIFO_SIZE                  (4u)
 /* Internal interrupt handling */

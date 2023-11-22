@@ -14,6 +14,7 @@ Verifying bitstream.
 Utilized "udb_hv_a@[UDB Pair=(0,2)]"
 Utilized "udb_hv_b@[UDB Pair=(0,3)]"
 Utilized "udb_hc@[UDB Pair=(0,3)]"
+Utilized "udb_hv_a@[UDB Pair=(0,4)]"
 Utilized "udb_hc@[UDB Pair=(0,4)]"
 Utilized "dsi_hc@[DSI=(0,1)][side=top]"
 Utilized "dsi_hv_b@[DSI=(0,2)][side=top]"

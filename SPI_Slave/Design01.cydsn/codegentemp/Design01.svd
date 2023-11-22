@@ -19,7 +19,7 @@
         <register>
           <name>SPIS_2_TX_DATA</name>
           <description>SPIS TX Data</description>
-          <addressOffset>0x4000640B</addressOffset>
+          <addressOffset>0x4000640D</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -28,7 +28,7 @@
         <register>
           <name>SPIS_2_RX_DATA</name>
           <description>SPIS RX Data</description>
-          <addressOffset>0x4000640B</addressOffset>
+          <addressOffset>0x4000640D</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -83,7 +83,7 @@
         <register>
           <name>SPIS_2_TXSTATUS</name>
           <description>SPIS TX Status Register</description>
-          <addressOffset>0x4000646D</addressOffset>
+          <addressOffset>0x4000646C</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
