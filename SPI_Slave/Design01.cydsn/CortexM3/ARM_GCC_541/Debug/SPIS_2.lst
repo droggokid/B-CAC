@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
   28:Generated_Source\PSoC5/SPIS_2.c **** 
   29:Generated_Source\PSoC5/SPIS_2.c **** #if (SPIS_2_RX_SOFTWARE_BUF_ENABLED)
   30:Generated_Source\PSoC5/SPIS_2.c **** 
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 2
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 2
 
 
   31:Generated_Source\PSoC5/SPIS_2.c ****     volatile uint8 SPIS_2_rxBuffer[SPIS_2_RX_BUFFER_SIZE];
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
   85:Generated_Source\PSoC5/SPIS_2.c ****     #if(SPIS_2_INTERNAL_RX_INT_ENABLED)
   86:Generated_Source\PSoC5/SPIS_2.c **** 
   87:Generated_Source\PSoC5/SPIS_2.c ****         CyIntDisable(SPIS_2_RX_ISR_NUMBER);
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 3
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 3
 
 
   88:Generated_Source\PSoC5/SPIS_2.c **** 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  142:Generated_Source\PSoC5/SPIS_2.c **** void SPIS_2_Enable(void) 
  143:Generated_Source\PSoC5/SPIS_2.c **** {
   28              		.loc 1 143 0
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 4
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 4
 
 
   29              		.cfi_startproc
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  154:Generated_Source\PSoC5/SPIS_2.c ****         CyIntEnable(SPIS_2_TX_ISR_NUMBER);
  155:Generated_Source\PSoC5/SPIS_2.c ****     #endif /* SPIS_2_INTERNAL_TX_INT_ENABLED */
  156:Generated_Source\PSoC5/SPIS_2.c **** 
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 5
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 5
 
 
  157:Generated_Source\PSoC5/SPIS_2.c ****     #if(SPIS_2_INTERNAL_RX_INT_ENABLED)
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  211:Generated_Source\PSoC5/SPIS_2.c **** *
  212:Generated_Source\PSoC5/SPIS_2.c **** * Theory:
  213:Generated_Source\PSoC5/SPIS_2.c **** *  Disable the internal interrupt if one is used.
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 6
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 6
 
 
  214:Generated_Source\PSoC5/SPIS_2.c **** *
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  228:Generated_Source\PSoC5/SPIS_2.c ****     #endif /* SPIS_2_INTERNAL_TX_INT_ENABLED */
  229:Generated_Source\PSoC5/SPIS_2.c **** 
  230:Generated_Source\PSoC5/SPIS_2.c ****     #if(SPIS_2_INTERNAL_RX_INT_ENABLED)
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 7
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 7
 
 
  231:Generated_Source\PSoC5/SPIS_2.c ****         CyIntDisable(SPIS_2_RX_ISR_NUMBER);
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  268:Generated_Source\PSoC5/SPIS_2.c **** * Parameters:
  269:Generated_Source\PSoC5/SPIS_2.c **** *  None.
  270:Generated_Source\PSoC5/SPIS_2.c **** *
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 8
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 8
 
 
  271:Generated_Source\PSoC5/SPIS_2.c **** * Return:
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  150              		@ frame_needed = 0, uses_anonymous_args = 0
  151              		@ link register save eliminated.
  152 0000 7047     		bx	lr
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 9
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 9
 
 
  153              		.cfi_endproc
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  331:Generated_Source\PSoC5/SPIS_2.c ****         CyIntDisable(SPIS_2_RX_ISR_NUMBER);
  332:Generated_Source\PSoC5/SPIS_2.c ****     #endif /* SPIS_2_INTERNAL_RX_INT_ENABLED */
  333:Generated_Source\PSoC5/SPIS_2.c **** }
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 10
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 10
 
 
  334:Generated_Source\PSoC5/SPIS_2.c **** 
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  363:Generated_Source\PSoC5/SPIS_2.c **** *
  364:Generated_Source\PSoC5/SPIS_2.c **** * Summary:
  365:Generated_Source\PSoC5/SPIS_2.c **** *  Configure which status bits trigger an interrupt event.
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 11
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 11
 
 
  366:Generated_Source\PSoC5/SPIS_2.c **** *
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  395:Generated_Source\PSoC5/SPIS_2.c **** *  Contents of the Tx status register.
  396:Generated_Source\PSoC5/SPIS_2.c **** *
  397:Generated_Source\PSoC5/SPIS_2.c **** * Global variables:
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 12
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 12
 
 
  398:Generated_Source\PSoC5/SPIS_2.c **** *  SPIS_2_swStatusTx - used to store in software status register,
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  248              		.size	SPIS_2_ReadTxStatus, .-SPIS_2_ReadTxStatus
  249              		.section	.text.SPIS_2_ReadRxStatus,"ax",%progbits
  250              		.align	2
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 13
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 13
 
 
  251              		.global	SPIS_2_ReadRxStatus
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  478:Generated_Source\PSoC5/SPIS_2.c ****         SPIS_2_EnableRxInt();
  479:Generated_Source\PSoC5/SPIS_2.c **** 
  480:Generated_Source\PSoC5/SPIS_2.c ****     #else /* !SPIS_2_RX_SOFTWARE_BUF_ENABLED */
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 14
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 14
 
 
  481:Generated_Source\PSoC5/SPIS_2.c **** 
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  514:Generated_Source\PSoC5/SPIS_2.c **** *
  515:Generated_Source\PSoC5/SPIS_2.c **** * Side Effects:
  516:Generated_Source\PSoC5/SPIS_2.c **** *  If this function is called again before the previous byte is finished then
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 15
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 15
 
 
  517:Generated_Source\PSoC5/SPIS_2.c **** *  the next byte will be appended to the transfer with no time between
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  564:Generated_Source\PSoC5/SPIS_2.c ****             {
  565:Generated_Source\PSoC5/SPIS_2.c ****                 SPIS_2_txBufferWrite = 0u;
  566:Generated_Source\PSoC5/SPIS_2.c ****             }
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 16
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 16
 
 
  567:Generated_Source\PSoC5/SPIS_2.c **** 
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  596:Generated_Source\PSoC5/SPIS_2.c **** }
  597:Generated_Source\PSoC5/SPIS_2.c **** 
  598:Generated_Source\PSoC5/SPIS_2.c **** #if(SPIS_2_MODE_USE_ZERO != 0u)
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 17
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 17
 
 
  599:Generated_Source\PSoC5/SPIS_2.c **** 
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  653:Generated_Source\PSoC5/SPIS_2.c **** * Side Effects:
  654:Generated_Source\PSoC5/SPIS_2.c **** *  Will return invalid data if the FIFO is empty.  User should poll for FIFO
  655:Generated_Source\PSoC5/SPIS_2.c **** *  empty status before calling Read function.
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 18
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 18
 
 
  656:Generated_Source\PSoC5/SPIS_2.c **** *
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  325 0004 7047     		bx	lr
  326              	.L31:
  327 0006 00BF     		.align	2
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 19
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 19
 
 
  328              	.L30:
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  736:Generated_Source\PSoC5/SPIS_2.c ****         if(SPIS_2_rxBufferRead == SPIS_2_rxBufferWrite)
  737:Generated_Source\PSoC5/SPIS_2.c ****         {
  738:Generated_Source\PSoC5/SPIS_2.c ****             size = 0u; /* No data in RX buffer */
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 20
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 20
 
 
  739:Generated_Source\PSoC5/SPIS_2.c ****         }
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  766:Generated_Source\PSoC5/SPIS_2.c **** *
  767:Generated_Source\PSoC5/SPIS_2.c **** * Summary:
  768:Generated_Source\PSoC5/SPIS_2.c **** *  Returns the number of bytes/words of data currently held in the TX buffer.
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 21
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 21
 
 
  769:Generated_Source\PSoC5/SPIS_2.c **** *  If TX Software Buffer not used then function return 0 - if FIFO empty, 1 - if
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  818:Generated_Source\PSoC5/SPIS_2.c **** 
  819:Generated_Source\PSoC5/SPIS_2.c ****         size = SPIS_2_TX_STATUS_REG;
  378              		.loc 1 819 0
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 22
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 22
 
 
  379 0000 074B     		ldr	r3, .L41
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  413              		.thumb_func
  414              		.type	SPIS_2_ClearRxBuffer, %function
  415              	SPIS_2_ClearRxBuffer:
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 23
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 23
 
 
  416              	.LFB16:
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  877:Generated_Source\PSoC5/SPIS_2.c ****     {
  429              		.loc 1 877 0
  430 0006 044B     		ldr	r3, .L46+4
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 24
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 24
 
 
  431 0008 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  913:Generated_Source\PSoC5/SPIS_2.c **** *  call - resets to zero.
  914:Generated_Source\PSoC5/SPIS_2.c **** *  SPIS_2_txBufferRead - used for the account of the bytes which
  915:Generated_Source\PSoC5/SPIS_2.c **** *  have been read from the TX software buffer, modified every function call -
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 25
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 25
 
 
  916:Generated_Source\PSoC5/SPIS_2.c **** *  resets to zero.
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  950:Generated_Source\PSoC5/SPIS_2.c ****         SPIS_2_TX_AUX_CONTROL_DP1_REG &= (uint8)~SPIS_2_FIFO_CLR;
  951:Generated_Source\PSoC5/SPIS_2.c **** 
  952:Generated_Source\PSoC5/SPIS_2.c ****     #endif /* SPIS_2_DATA_WIDTH > 8u */
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 26
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 26
 
 
  953:Generated_Source\PSoC5/SPIS_2.c **** 
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  988:Generated_Source\PSoC5/SPIS_2.c ****     * Return:
  989:Generated_Source\PSoC5/SPIS_2.c ****     *  None.
  990:Generated_Source\PSoC5/SPIS_2.c ****     *
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 27
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 27
 
 
  991:Generated_Source\PSoC5/SPIS_2.c ****     *******************************************************************************/
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
 1045:Generated_Source\PSoC5/SPIS_2.c **** *
 1046:Generated_Source\PSoC5/SPIS_2.c **** *******************************************************************************/
 1047:Generated_Source\PSoC5/SPIS_2.c **** void SPIS_2_PutArray(const uint8 buffer[], uint8 byteCount)
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 28
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 28
 
 
 1048:Generated_Source\PSoC5/SPIS_2.c ****                                                                     
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  532              	.LFE18:
  533              		.size	SPIS_2_PutArray, .-SPIS_2_PutArray
  534 001e 00BF     		.section	.text.SPIS_2_ClearFIFO,"ax",%progbits
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 29
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 29
 
 
  535              		.align	2
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
 1086:Generated_Source\PSoC5/SPIS_2.c ****     }
 1087:Generated_Source\PSoC5/SPIS_2.c **** 
 1088:Generated_Source\PSoC5/SPIS_2.c ****     enableInterrupts = CyEnterCriticalSection();
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 30
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 30
 
 
  562              		.loc 1 1088 0
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  597              		@ args = 0, pretend = 0, frame = 0
  598              		@ frame_needed = 0, uses_anonymous_args = 0
  599 0000 08B5     		push	{r3, lr}
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 31
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 31
 
 
  600              		.cfi_def_cfa_offset 8
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  647              		.cfi_offset 3, -8
  648              		.cfi_offset 14, -4
  189:Generated_Source\PSoC5/SPIS_2.c ****     {
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 32
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 32
 
 
  649              		.loc 1 189 0
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
 1127:Generated_Source\PSoC5/SPIS_2.c **** *
 1128:Generated_Source\PSoC5/SPIS_2.c **** * Theory:
 1129:Generated_Source\PSoC5/SPIS_2.c **** *  Enable the internal interrupt output -or- the interrupt component itself.
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 33
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 33
 
 
 1130:Generated_Source\PSoC5/SPIS_2.c **** *
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  701              		@ link register save eliminated.
  702 0000 7047     		bx	lr
  703              		.cfi_endproc
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 34
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 34
 
 
  704              	.LFE21:
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  726 0008 7047     		bx	lr
  727              	.L75:
  728 000a 00BF     		.align	2
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 35
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 35
 
 
  729              	.L74:
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
 1231:Generated_Source\PSoC5/SPIS_2.c **** 
 1232:Generated_Source\PSoC5/SPIS_2.c ****         SPIS_2_DisableInt();
 1233:Generated_Source\PSoC5/SPIS_2.c **** 
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 36
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 36
 
 
 1234:Generated_Source\PSoC5/SPIS_2.c ****         tmpStatus = SPIS_2_GET_STATUS_TX(SPIS_2_swStatusTx) |
@@ -2157,48 +2157,48 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  782 0006 00000000 		.4byte	.Ldebug_abbrev0
  783 000a 04       		.byte	0x4
  784 000b 01       		.uleb128 0x1
- 785 000c 90020000 		.4byte	.LASF54
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 37
+ 785 000c DF020000 		.4byte	.LASF54
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 37
 
 
  786 0010 0C       		.byte	0xc
- 787 0011 E3010000 		.4byte	.LASF55
- 788 0015 DB030000 		.4byte	.LASF56
+ 787 0011 32020000 		.4byte	.LASF55
+ 788 0015 10000000 		.4byte	.LASF56
  789 0019 00000000 		.4byte	.Ldebug_ranges0+0
  790 001d 00000000 		.4byte	0
  791 0021 00000000 		.4byte	.Ldebug_line0
  792 0025 02       		.uleb128 0x2
  793 0026 01       		.byte	0x1
  794 0027 06       		.byte	0x6
- 795 0028 A2030000 		.4byte	.LASF0
+ 795 0028 F1030000 		.4byte	.LASF0
  796 002c 02       		.uleb128 0x2
  797 002d 01       		.byte	0x1
  798 002e 08       		.byte	0x8
- 799 002f 40020000 		.4byte	.LASF1
+ 799 002f 8F020000 		.4byte	.LASF1
  800 0033 02       		.uleb128 0x2
  801 0034 02       		.byte	0x2
  802 0035 05       		.byte	0x5
- 803 0036 72030000 		.4byte	.LASF2
+ 803 0036 C1030000 		.4byte	.LASF2
  804 003a 02       		.uleb128 0x2
  805 003b 02       		.byte	0x2
  806 003c 07       		.byte	0x7
- 807 003d 66000000 		.4byte	.LASF3
+ 807 003d B5000000 		.4byte	.LASF3
  808 0041 02       		.uleb128 0x2
  809 0042 04       		.byte	0x4
  810 0043 05       		.byte	0x5
- 811 0044 83030000 		.4byte	.LASF4
+ 811 0044 D2030000 		.4byte	.LASF4
  812 0048 02       		.uleb128 0x2
  813 0049 04       		.byte	0x4
  814 004a 07       		.byte	0x7
- 815 004b 58010000 		.4byte	.LASF5
+ 815 004b A7010000 		.4byte	.LASF5
  816 004f 02       		.uleb128 0x2
  817 0050 08       		.byte	0x8
  818 0051 05       		.byte	0x5
- 819 0052 3B030000 		.4byte	.LASF6
+ 819 0052 8A030000 		.4byte	.LASF6
  820 0056 02       		.uleb128 0x2
  821 0057 08       		.byte	0x8
  822 0058 07       		.byte	0x7
- 823 0059 E9000000 		.4byte	.LASF7
+ 823 0059 38010000 		.4byte	.LASF7
  824 005d 03       		.uleb128 0x3
  825 005e 04       		.byte	0x4
  826 005f 05       		.byte	0x5
@@ -2206,29 +2206,29 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  828 0064 02       		.uleb128 0x2
  829 0065 04       		.byte	0x4
  830 0066 07       		.byte	0x7
- 831 0067 4E020000 		.4byte	.LASF8
+ 831 0067 9D020000 		.4byte	.LASF8
  832 006b 04       		.uleb128 0x4
- 833 006c 6A010000 		.4byte	.LASF12
+ 833 006c B9010000 		.4byte	.LASF12
  834 0070 02       		.byte	0x2
  835 0071 E901     		.2byte	0x1e9
  836 0073 2C000000 		.4byte	0x2c
  837 0077 02       		.uleb128 0x2
  838 0078 04       		.byte	0x4
  839 0079 04       		.byte	0x4
- 840 007a CC000000 		.4byte	.LASF9
+ 840 007a 1B010000 		.4byte	.LASF9
  841 007e 02       		.uleb128 0x2
  842 007f 08       		.byte	0x8
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 38
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 38
 
 
  843 0080 04       		.byte	0x4
- 844 0081 BD010000 		.4byte	.LASF10
+ 844 0081 0C020000 		.4byte	.LASF10
  845 0085 02       		.uleb128 0x2
  846 0086 01       		.byte	0x1
  847 0087 08       		.byte	0x8
- 848 0088 49030000 		.4byte	.LASF11
+ 848 0088 98030000 		.4byte	.LASF11
  849 008c 04       		.uleb128 0x4
- 850 008d 40010000 		.4byte	.LASF13
+ 850 008d 8F010000 		.4byte	.LASF13
  851 0091 02       		.byte	0x2
  852 0092 9302     		.2byte	0x293
  853 0094 98000000 		.4byte	0x98
@@ -2237,13 +2237,13 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  856 009d 02       		.uleb128 0x2
  857 009e 08       		.byte	0x8
  858 009f 04       		.byte	0x4
- 859 00a0 96030000 		.4byte	.LASF14
+ 859 00a0 E5030000 		.4byte	.LASF14
  860 00a4 02       		.uleb128 0x2
  861 00a5 04       		.byte	0x4
  862 00a6 07       		.byte	0x7
- 863 00a7 1E030000 		.4byte	.LASF15
+ 863 00a7 6D030000 		.4byte	.LASF15
  864 00ab 06       		.uleb128 0x6
- 865 00ac CD030000 		.4byte	.LASF16
+ 865 00ac 1C040000 		.4byte	.LASF16
  866 00b0 01       		.byte	0x1
  867 00b1 8E       		.byte	0x8e
  868 00b2 00000000 		.4byte	.LFB1
@@ -2252,7 +2252,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  871 00bb 9C       		.byte	0x9c
  872 00bc E2000000 		.4byte	0xe2
  873 00c0 07       		.uleb128 0x7
- 874 00c1 82010000 		.4byte	.LASF18
+ 874 00c1 D1010000 		.4byte	.LASF18
  875 00c5 01       		.byte	0x1
  876 00c6 90       		.byte	0x90
  877 00c7 6B000000 		.4byte	0x6b
@@ -2265,7 +2265,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  884 00dd 88040000 		.4byte	0x488
  885 00e1 00       		.byte	0
  886 00e2 06       		.uleb128 0x6
- 887 00e3 C1030000 		.4byte	.LASF17
+ 887 00e3 10040000 		.4byte	.LASF17
  888 00e7 01       		.byte	0x1
  889 00e8 D8       		.byte	0xd8
  890 00e9 00000000 		.4byte	.LFB3
@@ -2274,11 +2274,11 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  893 00f2 9C       		.byte	0x9c
  894 00f3 19010000 		.4byte	0x119
  895 00f7 07       		.uleb128 0x7
- 896 00f8 82010000 		.4byte	.LASF18
+ 896 00f8 D1010000 		.4byte	.LASF18
  897 00fc 01       		.byte	0x1
  898 00fd DA       		.byte	0xda
  899 00fe 6B000000 		.4byte	0x6b
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 39
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 39
 
 
  900 0102 13000000 		.4byte	.LLST1
@@ -2290,7 +2290,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  906 0114 88040000 		.4byte	0x488
  907 0118 00       		.byte	0
  908 0119 09       		.uleb128 0x9
- 909 011a AE030000 		.4byte	.LASF19
+ 909 011a FD030000 		.4byte	.LASF19
  910 011e 01       		.byte	0x1
  911 011f FD       		.byte	0xfd
  912 0120 00000000 		.4byte	.LFB4
@@ -2298,7 +2298,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  914 0128 01       		.uleb128 0x1
  915 0129 9C       		.byte	0x9c
  916 012a 0A       		.uleb128 0xa
- 917 012b 93010000 		.4byte	.LASF20
+ 917 012b E2010000 		.4byte	.LASF20
  918 012f 01       		.byte	0x1
  919 0130 1601     		.2byte	0x116
  920 0132 00000000 		.4byte	.LFB5
@@ -2306,7 +2306,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  922 013a 01       		.uleb128 0x1
  923 013b 9C       		.byte	0x9c
  924 013c 0A       		.uleb128 0xa
- 925 013d 15020000 		.4byte	.LASF21
+ 925 013d 64020000 		.4byte	.LASF21
  926 0141 01       		.byte	0x1
  927 0142 2F01     		.2byte	0x12f
  928 0144 00000000 		.4byte	.LFB6
@@ -2314,7 +2314,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  930 014c 01       		.uleb128 0x1
  931 014d 9C       		.byte	0x9c
  932 014e 0A       		.uleb128 0xa
- 933 014f 52000000 		.4byte	.LASF22
+ 933 014f A1000000 		.4byte	.LASF22
  934 0153 01       		.byte	0x1
  935 0154 4801     		.2byte	0x148
  936 0156 00000000 		.4byte	.LFB7
@@ -2322,7 +2322,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  938 015e 01       		.uleb128 0x1
  939 015f 9C       		.byte	0x9c
  940 0160 0B       		.uleb128 0xb
- 941 0161 79000000 		.4byte	.LASF23
+ 941 0161 C8000000 		.4byte	.LASF23
  942 0165 01       		.byte	0x1
  943 0166 6201     		.2byte	0x162
  944 0168 00000000 		.4byte	.LFB8
@@ -2331,18 +2331,18 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  947 0171 9C       		.byte	0x9c
  948 0172 85010000 		.4byte	0x185
  949 0176 0C       		.uleb128 0xc
- 950 0177 93000000 		.4byte	.LASF25
+ 950 0177 E2000000 		.4byte	.LASF25
  951 017b 01       		.byte	0x1
  952 017c 6201     		.2byte	0x162
  953 017e 6B000000 		.4byte	0x6b
  954 0182 01       		.uleb128 0x1
  955 0183 50       		.byte	0x50
  956 0184 00       		.byte	0
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 40
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 40
 
 
  957 0185 0B       		.uleb128 0xb
- 958 0186 9A000000 		.4byte	.LASF24
+ 958 0186 E9000000 		.4byte	.LASF24
  959 018a 01       		.byte	0x1
  960 018b 7A01     		.2byte	0x17a
  961 018d 00000000 		.4byte	.LFB9
@@ -2351,7 +2351,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  964 0196 9C       		.byte	0x9c
  965 0197 AA010000 		.4byte	0x1aa
  966 019b 0C       		.uleb128 0xc
- 967 019c 93000000 		.4byte	.LASF25
+ 967 019c E2000000 		.4byte	.LASF25
  968 01a0 01       		.byte	0x1
  969 01a1 7A01     		.2byte	0x17a
  970 01a3 6B000000 		.4byte	0x6b
@@ -2359,7 +2359,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  972 01a8 50       		.byte	0x50
  973 01a9 00       		.byte	0
  974 01aa 0D       		.uleb128 0xd
- 975 01ab 3E000000 		.4byte	.LASF27
+ 975 01ab 8D000000 		.4byte	.LASF27
  976 01af 01       		.byte	0x1
  977 01b0 9C01     		.2byte	0x19c
  978 01b2 6B000000 		.4byte	0x6b
@@ -2369,7 +2369,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  982 01bf 9C       		.byte	0x9c
  983 01c0 D3010000 		.4byte	0x1d3
  984 01c4 0E       		.uleb128 0xe
- 985 01c5 8C030000 		.4byte	.LASF26
+ 985 01c5 DB030000 		.4byte	.LASF26
  986 01c9 01       		.byte	0x1
  987 01ca 9E01     		.2byte	0x19e
  988 01cc 6B000000 		.4byte	0x6b
@@ -2377,7 +2377,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  990 01d1 50       		.byte	0x50
  991 01d2 00       		.byte	0
  992 01d3 0D       		.uleb128 0xd
- 993 01d4 27030000 		.4byte	.LASF28
+ 993 01d4 76030000 		.4byte	.LASF28
  994 01d8 01       		.byte	0x1
  995 01d9 D101     		.2byte	0x1d1
  996 01db 6B000000 		.4byte	0x6b
@@ -2387,7 +2387,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  1000 01e8 9C       		.byte	0x9c
  1001 01e9 FC010000 		.4byte	0x1fc
  1002 01ed 0E       		.uleb128 0xe
- 1003 01ee 8C030000 		.4byte	.LASF26
+ 1003 01ee DB030000 		.4byte	.LASF26
  1004 01f2 01       		.byte	0x1
  1005 01f3 D301     		.2byte	0x1d3
  1006 01f5 6B000000 		.4byte	0x6b
@@ -2395,10 +2395,10 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  1008 01fa 50       		.byte	0x50
  1009 01fb 00       		.byte	0
  1010 01fc 0B       		.uleb128 0xb
- 1011 01fd 45010000 		.4byte	.LASF29
+ 1011 01fd 94010000 		.4byte	.LASF29
  1012 0201 01       		.byte	0x1
  1013 0202 0C02     		.2byte	0x20c
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 41
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 41
 
 
  1014 0204 00000000 		.4byte	.LFB12
@@ -2407,7 +2407,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  1017 020d 9C       		.byte	0x9c
  1018 020e 21020000 		.4byte	0x221
  1019 0212 0C       		.uleb128 0xc
- 1020 0213 37000000 		.4byte	.LASF30
+ 1020 0213 86000000 		.4byte	.LASF30
  1021 0217 01       		.byte	0x1
  1022 0218 0C02     		.2byte	0x20c
  1023 021a 6B000000 		.4byte	0x6b
@@ -2415,7 +2415,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  1025 021f 50       		.byte	0x50
  1026 0220 00       		.byte	0
  1027 0221 0D       		.uleb128 0xd
- 1028 0222 70010000 		.4byte	.LASF31
+ 1028 0222 BF010000 		.4byte	.LASF31
  1029 0226 01       		.byte	0x1
  1030 0227 9502     		.2byte	0x295
  1031 0229 6B000000 		.4byte	0x6b
@@ -2425,7 +2425,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  1035 0236 9C       		.byte	0x9c
  1036 0237 4A020000 		.4byte	0x24a
  1037 023b 0E       		.uleb128 0xe
- 1038 023c C5000000 		.4byte	.LASF32
+ 1038 023c 14010000 		.4byte	.LASF32
  1039 0240 01       		.byte	0x1
  1040 0241 9702     		.2byte	0x297
  1041 0243 6B000000 		.4byte	0x6b
@@ -2433,7 +2433,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  1043 0248 50       		.byte	0x50
  1044 0249 00       		.byte	0
  1045 024a 0D       		.uleb128 0xd
- 1046 024b A6010000 		.4byte	.LASF33
+ 1046 024b F5010000 		.4byte	.LASF33
  1047 024f 01       		.byte	0x1
  1048 0250 D702     		.2byte	0x2d7
  1049 0252 6B000000 		.4byte	0x6b
@@ -2443,7 +2443,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  1053 025f 9C       		.byte	0x9c
  1054 0260 73020000 		.4byte	0x273
  1055 0264 0E       		.uleb128 0xe
- 1056 0265 18010000 		.4byte	.LASF34
+ 1056 0265 67010000 		.4byte	.LASF34
  1057 0269 01       		.byte	0x1
  1058 026a D902     		.2byte	0x2d9
  1059 026c 6B000000 		.4byte	0x6b
@@ -2451,27 +2451,27 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  1061 0271 50       		.byte	0x50
  1062 0272 00       		.byte	0
  1063 0273 0D       		.uleb128 0xd
- 1064 0274 D2000000 		.4byte	.LASF35
+ 1064 0274 21010000 		.4byte	.LASF35
  1065 0278 01       		.byte	0x1
  1066 0279 1803     		.2byte	0x318
  1067 027b 6B000000 		.4byte	0x6b
  1068 027f 00000000 		.4byte	.LFB15
  1069 0283 24000000 		.4byte	.LFE15-.LFB15
  1070 0287 01       		.uleb128 0x1
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 42
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 42
 
 
  1071 0288 9C       		.byte	0x9c
  1072 0289 9E020000 		.4byte	0x29e
  1073 028d 0F       		.uleb128 0xf
- 1074 028e 18010000 		.4byte	.LASF34
+ 1074 028e 67010000 		.4byte	.LASF34
  1075 0292 01       		.byte	0x1
  1076 0293 1A03     		.2byte	0x31a
  1077 0295 6B000000 		.4byte	0x6b
  1078 0299 26000000 		.4byte	.LLST2
  1079 029d 00       		.byte	0
  1080 029e 0A       		.uleb128 0xa
- 1081 029f 4E030000 		.4byte	.LASF36
+ 1081 029f 9D030000 		.4byte	.LASF36
  1082 02a3 01       		.byte	0x1
  1083 02a4 6A03     		.2byte	0x36a
  1084 02a6 00000000 		.4byte	.LFB16
@@ -2479,7 +2479,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  1086 02ae 01       		.uleb128 0x1
  1087 02af 9C       		.byte	0x9c
  1088 02b0 0B       		.uleb128 0xb
- 1089 02b1 10000000 		.4byte	.LASF37
+ 1089 02b1 5F000000 		.4byte	.LASF37
  1090 02b5 01       		.byte	0x1
  1091 02b6 A303     		.2byte	0x3a3
  1092 02b8 00000000 		.4byte	.LFB17
@@ -2488,7 +2488,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  1095 02c1 9C       		.byte	0x9c
  1096 02c2 E9020000 		.4byte	0x2e9
  1097 02c6 0F       		.uleb128 0xf
- 1098 02c7 82010000 		.4byte	.LASF18
+ 1098 02c7 D1010000 		.4byte	.LASF18
  1099 02cb 01       		.byte	0x1
  1100 02cc A503     		.2byte	0x3a5
  1101 02ce 6B000000 		.4byte	0x6b
@@ -2510,22 +2510,22 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  1117 02fa 9C       		.byte	0x9c
  1118 02fb 39030000 		.4byte	0x339
  1119 02ff 10       		.uleb128 0x10
- 1120 0300 7C030000 		.4byte	.LASF39
+ 1120 0300 CB030000 		.4byte	.LASF39
  1121 0304 01       		.byte	0x1
  1122 0305 1704     		.2byte	0x417
  1123 0307 39030000 		.4byte	0x339
  1124 030b 57000000 		.4byte	.LLST4
  1125 030f 10       		.uleb128 0x10
- 1126 0310 7D020000 		.4byte	.LASF40
+ 1126 0310 CC020000 		.4byte	.LASF40
  1127 0314 01       		.byte	0x1
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 43
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 43
 
 
  1128 0315 1704     		.2byte	0x417
  1129 0317 6B000000 		.4byte	0x6b
  1130 031b 75000000 		.4byte	.LLST5
  1131 031f 0F       		.uleb128 0xf
- 1132 0320 87020000 		.4byte	.LASF41
+ 1132 0320 D6020000 		.4byte	.LASF41
  1133 0324 01       		.byte	0x1
  1134 0325 1A04     		.2byte	0x41a
  1135 0327 6B000000 		.4byte	0x6b
@@ -2540,7 +2540,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  1144 033f 12       		.uleb128 0x12
  1145 0340 6B000000 		.4byte	0x6b
  1146 0344 0B       		.uleb128 0xb
- 1147 0345 1D010000 		.4byte	.LASF42
+ 1147 0345 6C010000 		.4byte	.LASF42
  1148 0349 01       		.byte	0x1
  1149 034a 3704     		.2byte	0x437
  1150 034c 00000000 		.4byte	.LFB19
@@ -2549,7 +2549,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  1153 0355 9C       		.byte	0x9c
  1154 0356 7D030000 		.4byte	0x37d
  1155 035a 0F       		.uleb128 0xf
- 1156 035b 82010000 		.4byte	.LASF18
+ 1156 035b D1010000 		.4byte	.LASF18
  1157 035f 01       		.byte	0x1
  1158 0360 3904     		.2byte	0x439
  1159 0362 6B000000 		.4byte	0x6b
@@ -2562,7 +2562,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  1166 0378 88040000 		.4byte	0x488
  1167 037c 00       		.byte	0
  1168 037d 06       		.uleb128 0x6
- 1169 037e 71020000 		.4byte	.LASF43
+ 1169 037e C0020000 		.4byte	.LASF43
  1170 0382 01       		.byte	0x1
  1171 0383 43       		.byte	0x43
  1172 0384 00000000 		.4byte	.LFB0
@@ -2578,13 +2578,13 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  1182 03a0 AA010000 		.4byte	0x1aa
  1183 03a4 08       		.uleb128 0x8
  1184 03a5 14000000 		.4byte	.LVL27
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 44
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 44
 
 
  1185 03a9 D3010000 		.4byte	0x1d3
  1186 03ad 00       		.byte	0
  1187 03ae 06       		.uleb128 0x6
- 1188 03af D6010000 		.4byte	.LASF44
+ 1188 03af 25020000 		.4byte	.LASF44
  1189 03b3 01       		.byte	0x1
  1190 03b4 BB       		.byte	0xbb
  1191 03b5 00000000 		.4byte	.LFB2
@@ -2600,7 +2600,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  1201 03d1 AB000000 		.4byte	0xab
  1202 03d5 00       		.byte	0
  1203 03d6 0A       		.uleb128 0xa
- 1204 03d7 B4000000 		.4byte	.LASF45
+ 1204 03d7 03010000 		.4byte	.LASF45
  1205 03db 01       		.byte	0x1
  1206 03dc 6C04     		.2byte	0x46c
  1207 03de 00000000 		.4byte	.LFB20
@@ -2608,7 +2608,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  1209 03e6 01       		.uleb128 0x1
  1210 03e7 9C       		.byte	0x9c
  1211 03e8 0A       		.uleb128 0xa
- 1212 03e9 25000000 		.4byte	.LASF46
+ 1212 03e9 74000000 		.4byte	.LASF46
  1213 03ed 01       		.byte	0x1
  1214 03ee 8904     		.2byte	0x489
  1215 03f0 00000000 		.4byte	.LFB21
@@ -2616,7 +2616,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  1217 03f8 01       		.uleb128 0x1
  1218 03f9 9C       		.byte	0x9c
  1219 03fa 0B       		.uleb128 0xb
- 1220 03fb 00010000 		.4byte	.LASF47
+ 1220 03fb 4F010000 		.4byte	.LASF47
  1221 03ff 01       		.byte	0x1
  1222 0400 A704     		.2byte	0x4a7
  1223 0402 00000000 		.4byte	.LFB22
@@ -2625,7 +2625,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  1226 040b 9C       		.byte	0x9c
  1227 040c 1F040000 		.4byte	0x41f
  1228 0410 0C       		.uleb128 0xc
- 1229 0411 93000000 		.4byte	.LASF25
+ 1229 0411 E2000000 		.4byte	.LASF25
  1230 0415 01       		.byte	0x1
  1231 0416 A704     		.2byte	0x4a7
  1232 0418 6B000000 		.4byte	0x6b
@@ -2633,12 +2633,12 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  1234 041d 50       		.byte	0x50
  1235 041e 00       		.byte	0
  1236 041f 0D       		.uleb128 0xd
- 1237 0420 2E010000 		.4byte	.LASF48
+ 1237 0420 7D010000 		.4byte	.LASF48
  1238 0424 01       		.byte	0x1
  1239 0425 CA04     		.2byte	0x4ca
  1240 0427 6B000000 		.4byte	0x6b
  1241 042b 00000000 		.4byte	.LFB23
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 45
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 45
 
 
  1242 042f 14000000 		.4byte	.LFE23-.LFB23
@@ -2646,14 +2646,14 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  1244 0434 9C       		.byte	0x9c
  1245 0435 4A040000 		.4byte	0x44a
  1246 0439 0F       		.uleb128 0xf
- 1247 043a 8C030000 		.4byte	.LASF26
+ 1247 043a DB030000 		.4byte	.LASF26
  1248 043e 01       		.byte	0x1
  1249 043f CC04     		.2byte	0x4cc
  1250 0441 6B000000 		.4byte	0x6b
  1251 0445 DB000000 		.4byte	.LLST8
  1252 0449 00       		.byte	0
  1253 044a 13       		.uleb128 0x13
- 1254 044b 63030000 		.4byte	.LASF49
+ 1254 044b B2030000 		.4byte	.LASF49
  1255 044f 01       		.byte	0x1
  1256 0450 26       		.byte	0x26
  1257 0451 6B000000 		.4byte	0x6b
@@ -2661,7 +2661,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  1259 0456 03       		.byte	0x3
  1260 0457 00000000 		.4byte	SPIS_2_initVar
  1261 045b 13       		.uleb128 0x13
- 1262 045c 03020000 		.4byte	.LASF50
+ 1262 045c 52020000 		.4byte	.LASF50
  1263 0460 01       		.byte	0x1
  1264 0461 28       		.byte	0x28
  1265 0462 98000000 		.4byte	0x98
@@ -2669,7 +2669,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  1267 0467 03       		.byte	0x3
  1268 0468 00000000 		.4byte	SPIS_2_swStatusTx
  1269 046c 13       		.uleb128 0x13
- 1270 046d C4010000 		.4byte	.LASF51
+ 1270 046d 13020000 		.4byte	.LASF51
  1271 0471 01       		.byte	0x1
  1272 0472 29       		.byte	0x29
  1273 0473 98000000 		.4byte	0x98
@@ -2677,13 +2677,13 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  1275 0478 03       		.byte	0x3
  1276 0479 00000000 		.4byte	SPIS_2_swStatusRx
  1277 047d 14       		.uleb128 0x14
- 1278 047e 29020000 		.4byte	.LASF52
- 1279 0482 29020000 		.4byte	.LASF52
+ 1278 047e 78020000 		.4byte	.LASF52
+ 1279 0482 78020000 		.4byte	.LASF52
  1280 0486 03       		.byte	0x3
  1281 0487 7D       		.byte	0x7d
  1282 0488 14       		.uleb128 0x14
- 1283 0489 5B020000 		.4byte	.LASF53
- 1284 048d 5B020000 		.4byte	.LASF53
+ 1283 0489 AA020000 		.4byte	.LASF53
+ 1284 048d AA020000 		.4byte	.LASF53
  1285 0491 03       		.byte	0x3
  1286 0492 7E       		.byte	0x7e
  1287 0493 00       		.byte	0
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  1296 0006 0B       		.uleb128 0xb
  1297 0007 03       		.uleb128 0x3
  1298 0008 0E       		.uleb128 0xe
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 46
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 46
 
 
  1299 0009 1B       		.uleb128 0x1b
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  1353 003f 01       		.byte	0x1
  1354 0040 3F       		.uleb128 0x3f
  1355 0041 19       		.uleb128 0x19
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 47
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 47
 
 
  1356 0042 03       		.uleb128 0x3
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  1410 007b 0B       		.uleb128 0xb
  1411 007c 27       		.uleb128 0x27
  1412 007d 19       		.uleb128 0x19
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 48
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 48
 
 
  1413 007e 11       		.uleb128 0x11
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  1467 00b7 01       		.uleb128 0x1
  1468 00b8 13       		.uleb128 0x13
  1469 00b9 00       		.byte	0
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 49
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 49
 
 
  1470 00ba 00       		.byte	0
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  1524 00f1 02       		.uleb128 0x2
  1525 00f2 18       		.uleb128 0x18
  1526 00f3 00       		.byte	0
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 50
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 50
 
 
  1527 00f4 00       		.byte	0
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  1581 012a 3B       		.uleb128 0x3b
  1582 012b 0B       		.uleb128 0xb
  1583 012c 49       		.uleb128 0x49
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 51
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 51
 
 
  1584 012d 13       		.uleb128 0x13
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  1638 0048 1B000000 		.4byte	.LVL14-1
  1639 004c 0100     		.2byte	0x1
  1640 004e 50       		.byte	0x50
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 52
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 52
 
 
  1641 004f 00000000 		.4byte	0
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  1695 00e3 0600     		.2byte	0x6
  1696 00e5 70       		.byte	0x70
  1697 00e6 00       		.sleb128 0
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 53
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 53
 
 
  1698 00e7 73       		.byte	0x73
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  1752 00b0 00000000 		.4byte	.LFB20
  1753 00b4 02000000 		.4byte	.LFE20-.LFB20
  1754 00b8 00000000 		.4byte	.LFB21
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 54
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 54
 
 
  1755 00bc 02000000 		.4byte	.LFE21-.LFB21
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  1809 00b4 10000000 		.4byte	.LFE22
  1810 00b8 00000000 		.4byte	.LFB23
  1811 00bc 14000000 		.4byte	.LFE23
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 55
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 55
 
 
  1812 00c0 00000000 		.4byte	0
@@ -3255,314 +3255,314 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 1
  1818      5F325F50 
  1818      75744172 
  1818      72617900 
- 1819              	.LASF37:
- 1820 0010 53504953 		.ascii	"SPIS_2_ClearTxBuffer\000"
- 1820      5F325F43 
- 1820      6C656172 
- 1820      54784275 
- 1820      66666572 
- 1821              	.LASF46:
- 1822 0025 53504953 		.ascii	"SPIS_2_DisableInt\000"
- 1822      5F325F44 
- 1822      69736162 
- 1822      6C65496E 
- 1822      7400
- 1823              	.LASF30:
- 1824 0037 74784461 		.ascii	"txData\000"
- 1824      746100
- 1825              	.LASF27:
- 1826 003e 53504953 		.ascii	"SPIS_2_ReadTxStatus\000"
- 1826      5F325F52 
- 1826      65616454 
- 1826      78537461 
- 1826      74757300 
- 1827              	.LASF22:
- 1828 0052 53504953 		.ascii	"SPIS_2_DisableRxInt\000"
- 1828      5F325F44 
- 1828      69736162 
- 1828      6C655278 
- 1828      496E7400 
- 1829              	.LASF3:
- 1830 0066 73686F72 		.ascii	"short unsigned int\000"
- 1830      7420756E 
- 1830      7369676E 
- 1830      65642069 
- 1830      6E7400
- 1831              	.LASF23:
- 1832 0079 53504953 		.ascii	"SPIS_2_SetTxInterruptMode\000"
- 1832      5F325F53 
- 1832      65745478 
- 1832      496E7465 
- 1832      72727570 
- 1833              	.LASF25:
- 1834 0093 696E7453 		.ascii	"intSrc\000"
- 1834      726300
- 1835              	.LASF24:
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 56
+ 1819              	.LASF56:
+ 1820 0010 433A5C55 		.ascii	"C:\\Users\\raduf\\OneDrive\\Desktop\\SemesterProjek"
+ 1820      73657273 
+ 1820      5C726164 
+ 1820      75665C4F 
+ 1820      6E654472 
+ 1821 003e 745C422D 		.ascii	"t\\B-CAC\\SPI_Slave\\Design01.cydsn\000"
+ 1821      4341435C 
+ 1821      5350495F 
+ 1821      536C6176 
+ 1821      655C4465 
+ 1822              	.LASF37:
+ 1823 005f 53504953 		.ascii	"SPIS_2_ClearTxBuffer\000"
+ 1823      5F325F43 
+ 1823      6C656172 
+ 1823      54784275 
+ 1823      66666572 
+ 1824              	.LASF46:
+ 1825 0074 53504953 		.ascii	"SPIS_2_DisableInt\000"
+ 1825      5F325F44 
+ 1825      69736162 
+ 1825      6C65496E 
+ 1825      7400
+ 1826              	.LASF30:
+ 1827 0086 74784461 		.ascii	"txData\000"
+ 1827      746100
+ 1828              	.LASF27:
+ 1829 008d 53504953 		.ascii	"SPIS_2_ReadTxStatus\000"
+ 1829      5F325F52 
+ 1829      65616454 
+ 1829      78537461 
+ 1829      74757300 
+ 1830              	.LASF22:
+ 1831 00a1 53504953 		.ascii	"SPIS_2_DisableRxInt\000"
+ 1831      5F325F44 
+ 1831      69736162 
+ 1831      6C655278 
+ 1831      496E7400 
+ 1832              	.LASF3:
+ 1833 00b5 73686F72 		.ascii	"short unsigned int\000"
+ 1833      7420756E 
+ 1833      7369676E 
+ 1833      65642069 
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 56
 
 
- 1836 009a 53504953 		.ascii	"SPIS_2_SetRxInterruptMode\000"
- 1836      5F325F53 
- 1836      65745278 
- 1836      496E7465 
- 1836      72727570 
- 1837              	.LASF45:
- 1838 00b4 53504953 		.ascii	"SPIS_2_EnableInt\000"
- 1838      5F325F45 
- 1838      6E61626C 
- 1838      65496E74 
- 1838      00
- 1839              	.LASF32:
- 1840 00c5 72784461 		.ascii	"rxData\000"
- 1840      746100
- 1841              	.LASF9:
- 1842 00cc 666C6F61 		.ascii	"float\000"
- 1842      7400
- 1843              	.LASF35:
- 1844 00d2 53504953 		.ascii	"SPIS_2_GetTxBufferSize\000"
- 1844      5F325F47 
- 1844      65745478 
- 1844      42756666 
- 1844      65725369 
- 1845              	.LASF7:
- 1846 00e9 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1846      206C6F6E 
- 1846      6720756E 
- 1846      7369676E 
- 1846      65642069 
- 1847              	.LASF47:
- 1848 0100 53504953 		.ascii	"SPIS_2_SetInterruptMode\000"
- 1848      5F325F53 
- 1848      6574496E 
- 1848      74657272 
- 1848      7570744D 
- 1849              	.LASF34:
- 1850 0118 73697A65 		.ascii	"size\000"
- 1850      00
- 1851              	.LASF42:
- 1852 011d 53504953 		.ascii	"SPIS_2_ClearFIFO\000"
- 1852      5F325F43 
- 1852      6C656172 
- 1852      4649464F 
- 1852      00
- 1853              	.LASF48:
- 1854 012e 53504953 		.ascii	"SPIS_2_ReadStatus\000"
- 1854      5F325F52 
- 1854      65616453 
- 1854      74617475 
- 1854      7300
- 1855              	.LASF13:
- 1856 0140 72656738 		.ascii	"reg8\000"
- 1856      00
- 1857              	.LASF29:
- 1858 0145 53504953 		.ascii	"SPIS_2_WriteTxData\000"
- 1858      5F325F57 
- 1858      72697465 
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 57
+ 1833      6E7400
+ 1834              	.LASF23:
+ 1835 00c8 53504953 		.ascii	"SPIS_2_SetTxInterruptMode\000"
+ 1835      5F325F53 
+ 1835      65745478 
+ 1835      496E7465 
+ 1835      72727570 
+ 1836              	.LASF25:
+ 1837 00e2 696E7453 		.ascii	"intSrc\000"
+ 1837      726300
+ 1838              	.LASF24:
+ 1839 00e9 53504953 		.ascii	"SPIS_2_SetRxInterruptMode\000"
+ 1839      5F325F53 
+ 1839      65745278 
+ 1839      496E7465 
+ 1839      72727570 
+ 1840              	.LASF45:
+ 1841 0103 53504953 		.ascii	"SPIS_2_EnableInt\000"
+ 1841      5F325F45 
+ 1841      6E61626C 
+ 1841      65496E74 
+ 1841      00
+ 1842              	.LASF32:
+ 1843 0114 72784461 		.ascii	"rxData\000"
+ 1843      746100
+ 1844              	.LASF9:
+ 1845 011b 666C6F61 		.ascii	"float\000"
+ 1845      7400
+ 1846              	.LASF35:
+ 1847 0121 53504953 		.ascii	"SPIS_2_GetTxBufferSize\000"
+ 1847      5F325F47 
+ 1847      65745478 
+ 1847      42756666 
+ 1847      65725369 
+ 1848              	.LASF7:
+ 1849 0138 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1849      206C6F6E 
+ 1849      6720756E 
+ 1849      7369676E 
+ 1849      65642069 
+ 1850              	.LASF47:
+ 1851 014f 53504953 		.ascii	"SPIS_2_SetInterruptMode\000"
+ 1851      5F325F53 
+ 1851      6574496E 
+ 1851      74657272 
+ 1851      7570744D 
+ 1852              	.LASF34:
+ 1853 0167 73697A65 		.ascii	"size\000"
+ 1853      00
+ 1854              	.LASF42:
+ 1855 016c 53504953 		.ascii	"SPIS_2_ClearFIFO\000"
+ 1855      5F325F43 
+ 1855      6C656172 
+ 1855      4649464F 
+ 1855      00
+ 1856              	.LASF48:
+ 1857 017d 53504953 		.ascii	"SPIS_2_ReadStatus\000"
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 57
 
 
- 1858      54784461 
- 1858      746100
- 1859              	.LASF5:
- 1860 0158 6C6F6E67 		.ascii	"long unsigned int\000"
- 1860      20756E73 
- 1860      69676E65 
- 1860      6420696E 
- 1860      7400
- 1861              	.LASF12:
- 1862 016a 75696E74 		.ascii	"uint8\000"
- 1862      3800
- 1863              	.LASF31:
- 1864 0170 53504953 		.ascii	"SPIS_2_ReadRxData\000"
- 1864      5F325F52 
- 1864      65616452 
- 1864      78446174 
- 1864      6100
- 1865              	.LASF18:
- 1866 0182 656E6162 		.ascii	"enableInterrupts\000"
- 1866      6C65496E 
- 1866      74657272 
- 1866      75707473 
- 1866      00
- 1867              	.LASF20:
- 1868 0193 53504953 		.ascii	"SPIS_2_EnableRxInt\000"
- 1868      5F325F45 
- 1868      6E61626C 
- 1868      65527849 
- 1868      6E7400
- 1869              	.LASF33:
- 1870 01a6 53504953 		.ascii	"SPIS_2_GetRxBufferSize\000"
- 1870      5F325F47 
- 1870      65745278 
- 1870      42756666 
- 1870      65725369 
- 1871              	.LASF10:
- 1872 01bd 646F7562 		.ascii	"double\000"
- 1872      6C6500
- 1873              	.LASF51:
- 1874 01c4 53504953 		.ascii	"SPIS_2_swStatusRx\000"
- 1874      5F325F73 
- 1874      77537461 
- 1874      74757352 
- 1874      7800
- 1875              	.LASF44:
- 1876 01d6 53504953 		.ascii	"SPIS_2_Start\000"
- 1876      5F325F53 
- 1876      74617274 
- 1876      00
- 1877              	.LASF55:
- 1878 01e3 47656E65 		.ascii	"Generated_Source\\PSoC5\\SPIS_2.c\000"
- 1878      72617465 
- 1878      645F536F 
- 1878      75726365 
- 1878      5C50536F 
- 1879              	.LASF50:
- 1880 0203 53504953 		.ascii	"SPIS_2_swStatusTx\000"
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 58
+ 1857      5F325F52 
+ 1857      65616453 
+ 1857      74617475 
+ 1857      7300
+ 1858              	.LASF13:
+ 1859 018f 72656738 		.ascii	"reg8\000"
+ 1859      00
+ 1860              	.LASF29:
+ 1861 0194 53504953 		.ascii	"SPIS_2_WriteTxData\000"
+ 1861      5F325F57 
+ 1861      72697465 
+ 1861      54784461 
+ 1861      746100
+ 1862              	.LASF5:
+ 1863 01a7 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1863      20756E73 
+ 1863      69676E65 
+ 1863      6420696E 
+ 1863      7400
+ 1864              	.LASF12:
+ 1865 01b9 75696E74 		.ascii	"uint8\000"
+ 1865      3800
+ 1866              	.LASF31:
+ 1867 01bf 53504953 		.ascii	"SPIS_2_ReadRxData\000"
+ 1867      5F325F52 
+ 1867      65616452 
+ 1867      78446174 
+ 1867      6100
+ 1868              	.LASF18:
+ 1869 01d1 656E6162 		.ascii	"enableInterrupts\000"
+ 1869      6C65496E 
+ 1869      74657272 
+ 1869      75707473 
+ 1869      00
+ 1870              	.LASF20:
+ 1871 01e2 53504953 		.ascii	"SPIS_2_EnableRxInt\000"
+ 1871      5F325F45 
+ 1871      6E61626C 
+ 1871      65527849 
+ 1871      6E7400
+ 1872              	.LASF33:
+ 1873 01f5 53504953 		.ascii	"SPIS_2_GetRxBufferSize\000"
+ 1873      5F325F47 
+ 1873      65745278 
+ 1873      42756666 
+ 1873      65725369 
+ 1874              	.LASF10:
+ 1875 020c 646F7562 		.ascii	"double\000"
+ 1875      6C6500
+ 1876              	.LASF51:
+ 1877 0213 53504953 		.ascii	"SPIS_2_swStatusRx\000"
+ 1877      5F325F73 
+ 1877      77537461 
+ 1877      74757352 
+ 1877      7800
+ 1878              	.LASF44:
+ 1879 0225 53504953 		.ascii	"SPIS_2_Start\000"
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 58
 
 
- 1880      5F325F73 
- 1880      77537461 
- 1880      74757354 
- 1880      7800
- 1881              	.LASF21:
- 1882 0215 53504953 		.ascii	"SPIS_2_DisableTxInt\000"
- 1882      5F325F44 
- 1882      69736162 
- 1882      6C655478 
- 1882      496E7400 
- 1883              	.LASF52:
- 1884 0229 4379456E 		.ascii	"CyEnterCriticalSection\000"
- 1884      74657243 
- 1884      72697469 
- 1884      63616C53 
- 1884      65637469 
- 1885              	.LASF1:
- 1886 0240 756E7369 		.ascii	"unsigned char\000"
- 1886      676E6564 
- 1886      20636861 
- 1886      7200
- 1887              	.LASF8:
- 1888 024e 756E7369 		.ascii	"unsigned int\000"
- 1888      676E6564 
- 1888      20696E74 
- 1888      00
- 1889              	.LASF53:
- 1890 025b 43794578 		.ascii	"CyExitCriticalSection\000"
- 1890      69744372 
- 1890      69746963 
- 1890      616C5365 
- 1890      6374696F 
- 1891              	.LASF43:
- 1892 0271 53504953 		.ascii	"SPIS_2_Init\000"
- 1892      5F325F49 
- 1892      6E697400 
- 1893              	.LASF40:
- 1894 027d 62797465 		.ascii	"byteCount\000"
- 1894      436F756E 
- 1894      7400
- 1895              	.LASF41:
- 1896 0287 62756649 		.ascii	"bufIndex\000"
- 1896      6E646578 
- 1896      00
- 1897              	.LASF54:
- 1898 0290 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 1898      43313120 
- 1898      352E342E 
- 1898      31203230 
- 1898      31363036 
- 1899 02c3 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 1899      20726576 
- 1899      6973696F 
- 1899      6E203233 
- 1899      37373135 
- 1900 02f6 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 1900      66756E63 
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 59
+ 1879      5F325F53 
+ 1879      74617274 
+ 1879      00
+ 1880              	.LASF55:
+ 1881 0232 47656E65 		.ascii	"Generated_Source\\PSoC5\\SPIS_2.c\000"
+ 1881      72617465 
+ 1881      645F536F 
+ 1881      75726365 
+ 1881      5C50536F 
+ 1882              	.LASF50:
+ 1883 0252 53504953 		.ascii	"SPIS_2_swStatusTx\000"
+ 1883      5F325F73 
+ 1883      77537461 
+ 1883      74757354 
+ 1883      7800
+ 1884              	.LASF21:
+ 1885 0264 53504953 		.ascii	"SPIS_2_DisableTxInt\000"
+ 1885      5F325F44 
+ 1885      69736162 
+ 1885      6C655478 
+ 1885      496E7400 
+ 1886              	.LASF52:
+ 1887 0278 4379456E 		.ascii	"CyEnterCriticalSection\000"
+ 1887      74657243 
+ 1887      72697469 
+ 1887      63616C53 
+ 1887      65637469 
+ 1888              	.LASF1:
+ 1889 028f 756E7369 		.ascii	"unsigned char\000"
+ 1889      676E6564 
+ 1889      20636861 
+ 1889      7200
+ 1890              	.LASF8:
+ 1891 029d 756E7369 		.ascii	"unsigned int\000"
+ 1891      676E6564 
+ 1891      20696E74 
+ 1891      00
+ 1892              	.LASF53:
+ 1893 02aa 43794578 		.ascii	"CyExitCriticalSection\000"
+ 1893      69744372 
+ 1893      69746963 
+ 1893      616C5365 
+ 1893      6374696F 
+ 1894              	.LASF43:
+ 1895 02c0 53504953 		.ascii	"SPIS_2_Init\000"
+ 1895      5F325F49 
+ 1895      6E697400 
+ 1896              	.LASF40:
+ 1897 02cc 62797465 		.ascii	"byteCount\000"
+ 1897      436F756E 
+ 1897      7400
+ 1898              	.LASF41:
+ 1899 02d6 62756649 		.ascii	"bufIndex\000"
+ 1899      6E646578 
+ 1899      00
+ 1900              	.LASF54:
+ 1901 02df 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 59
 
 
- 1900      74696F6E 
- 1900      2D736563 
- 1900      74696F6E 
- 1901              	.LASF15:
- 1902 031e 73697A65 		.ascii	"sizetype\000"
- 1902      74797065 
- 1902      00
- 1903              	.LASF28:
- 1904 0327 53504953 		.ascii	"SPIS_2_ReadRxStatus\000"
- 1904      5F325F52 
- 1904      65616452 
- 1904      78537461 
- 1904      74757300 
- 1905              	.LASF6:
- 1906 033b 6C6F6E67 		.ascii	"long long int\000"
- 1906      206C6F6E 
- 1906      6720696E 
- 1906      7400
- 1907              	.LASF11:
- 1908 0349 63686172 		.ascii	"char\000"
- 1908      00
- 1909              	.LASF36:
- 1910 034e 53504953 		.ascii	"SPIS_2_ClearRxBuffer\000"
- 1910      5F325F43 
- 1910      6C656172 
- 1910      52784275 
- 1910      66666572 
- 1911              	.LASF49:
- 1912 0363 53504953 		.ascii	"SPIS_2_initVar\000"
- 1912      5F325F69 
- 1912      6E697456 
- 1912      617200
- 1913              	.LASF2:
- 1914 0372 73686F72 		.ascii	"short int\000"
- 1914      7420696E 
- 1914      7400
- 1915              	.LASF39:
- 1916 037c 62756666 		.ascii	"buffer\000"
- 1916      657200
- 1917              	.LASF4:
- 1918 0383 6C6F6E67 		.ascii	"long int\000"
- 1918      20696E74 
- 1918      00
- 1919              	.LASF26:
- 1920 038c 746D7053 		.ascii	"tmpStatus\000"
- 1920      74617475 
- 1920      7300
- 1921              	.LASF14:
- 1922 0396 6C6F6E67 		.ascii	"long double\000"
- 1922      20646F75 
- 1922      626C6500 
- 1923              	.LASF0:
- 1924 03a2 7369676E 		.ascii	"signed char\000"
- 1924      65642063 
- 1924      68617200 
- 1925              	.LASF19:
- 1926 03ae 53504953 		.ascii	"SPIS_2_EnableTxInt\000"
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccrBYxlz.s 			page 60
+ 1901      43313120 
+ 1901      352E342E 
+ 1901      31203230 
+ 1901      31363036 
+ 1902 0312 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1902      20726576 
+ 1902      6973696F 
+ 1902      6E203233 
+ 1902      37373135 
+ 1903 0345 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1903      66756E63 
+ 1903      74696F6E 
+ 1903      2D736563 
+ 1903      74696F6E 
+ 1904              	.LASF15:
+ 1905 036d 73697A65 		.ascii	"sizetype\000"
+ 1905      74797065 
+ 1905      00
+ 1906              	.LASF28:
+ 1907 0376 53504953 		.ascii	"SPIS_2_ReadRxStatus\000"
+ 1907      5F325F52 
+ 1907      65616452 
+ 1907      78537461 
+ 1907      74757300 
+ 1908              	.LASF6:
+ 1909 038a 6C6F6E67 		.ascii	"long long int\000"
+ 1909      206C6F6E 
+ 1909      6720696E 
+ 1909      7400
+ 1910              	.LASF11:
+ 1911 0398 63686172 		.ascii	"char\000"
+ 1911      00
+ 1912              	.LASF36:
+ 1913 039d 53504953 		.ascii	"SPIS_2_ClearRxBuffer\000"
+ 1913      5F325F43 
+ 1913      6C656172 
+ 1913      52784275 
+ 1913      66666572 
+ 1914              	.LASF49:
+ 1915 03b2 53504953 		.ascii	"SPIS_2_initVar\000"
+ 1915      5F325F69 
+ 1915      6E697456 
+ 1915      617200
+ 1916              	.LASF2:
+ 1917 03c1 73686F72 		.ascii	"short int\000"
+ 1917      7420696E 
+ 1917      7400
+ 1918              	.LASF39:
+ 1919 03cb 62756666 		.ascii	"buffer\000"
+ 1919      657200
+ 1920              	.LASF4:
+ 1921 03d2 6C6F6E67 		.ascii	"long int\000"
+ 1921      20696E74 
+ 1921      00
+ 1922              	.LASF26:
+ 1923 03db 746D7053 		.ascii	"tmpStatus\000"
+ 1923      74617475 
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccQEjSXv.s 			page 60
 
 
- 1926      5F325F45 
- 1926      6E61626C 
- 1926      65547849 
- 1926      6E7400
- 1927              	.LASF17:
- 1928 03c1 53504953 		.ascii	"SPIS_2_Stop\000"
- 1928      5F325F53 
- 1928      746F7000 
- 1929              	.LASF16:
- 1930 03cd 53504953 		.ascii	"SPIS_2_Enable\000"
- 1930      5F325F45 
- 1930      6E61626C 
- 1930      6500
- 1931              	.LASF56:
- 1932 03db 433A5C55 		.ascii	"C:\\Users\\ZakiN\\OneDrive\\Skrivebord\\projekt3\\B"
- 1932      73657273 
- 1932      5C5A616B 
- 1932      694E5C4F 
- 1932      6E654472 
- 1933 0408 2D434143 		.ascii	"-CAC\\SPI_Slave\\Design01.cydsn\000"
- 1933      5C535049 
- 1933      5F536C61 
- 1933      76655C44 
- 1933      65736967 
+ 1923      7300
+ 1924              	.LASF14:
+ 1925 03e5 6C6F6E67 		.ascii	"long double\000"
+ 1925      20646F75 
+ 1925      626C6500 
+ 1926              	.LASF0:
+ 1927 03f1 7369676E 		.ascii	"signed char\000"
+ 1927      65642063 
+ 1927      68617200 
+ 1928              	.LASF19:
+ 1929 03fd 53504953 		.ascii	"SPIS_2_EnableTxInt\000"
+ 1929      5F325F45 
+ 1929      6E61626C 
+ 1929      65547849 
+ 1929      6E7400
+ 1930              	.LASF17:
+ 1931 0410 53504953 		.ascii	"SPIS_2_Stop\000"
+ 1931      5F325F53 
+ 1931      746F7000 
+ 1932              	.LASF16:
+ 1933 041c 53504953 		.ascii	"SPIS_2_Enable\000"
+ 1933      5F325F45 
+ 1933      6E61626C 
+ 1933      6500
  1934              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

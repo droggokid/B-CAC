@@ -1,42 +1,36 @@
-/* ========================================
- *
- * Copyright YOUR COMPANY, THE YEAR
- * All Rights Reserved
- * UNPUBLISHED, LICENSED SOFTWARE.
- *
- * CONFIDENTIAL AND PROPRIETARY INFORMATION
- * WHICH IS THE PROPERTY OF your company.
- *
- * ========================================
-*/
 #include "project.h"
 #include "spi_Slave.h"
 
 CY_ISR(SPI_RX_ISR)
 {
-    //definere status
+    // Define status
     uint8_t status;
     
-    //lægger commando ind i status
+    // Get the command from SPI
     status = modtagetSPi();
     
-    //håndtering af status
-    //if(status==0b10000000)
-     LED_1_Write(1);
-    //else
-     //LED_1_Write(0);
-    
-    //læser om knappen er tændt eller slukket
-    //slukket
-    if(Button_1_Read())
-    status &=0b11111110;
-    //tændt
+    // Handle the status
+    // If anything is received, turn off the LED
+    if(status != 0)
+    {
+        LED_1_Write(1); // Turn on the LED
+    }
     else
-    status |=0b00000001;
-    
-    
-    //sender status tilbage
-    sendSPi(status);
+    {
+        // Read the button status
+        // If the button is off, clear the least significant bit
+        if(Button_1_Read())
+            status &= 0b11111110;
+        // If the button is on, set the least significant bit
+        else
+            status |= 0b00000001;
+        
+        // Send back the status
+        sendSPi(status);
+        
+        // Turn off the LED
+        LED_1_Write(0);
+    }
 }
 
 int main(void)
@@ -44,13 +38,13 @@ int main(void)
     CyGlobalIntEnable; /* Enable global interrupts. */
     SPI_RX_ISR_StartEx(SPI_RX_ISR);
 
-    //initialisereSPI
-    InitializeSPI();
+    // Initialize SPI
+    InitializeSPI(); // Make sure this function is correctly configuring the SPI module
 
-    /* Place your initialization/startup code here (e.g. MyInst_Start()) */
+    /* Place your initialization/startup code here (e.g., MyInst_Start()) */
     for(;;)
     {
-        LED_1_Write(0);
+        // Your main loop code here
     }
 }
 

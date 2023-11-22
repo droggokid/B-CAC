@@ -509,10 +509,10 @@ END GROUP
  *(.text .text.* .gnu.linkonce.t.*)
  .text          0x00000028       0x5c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
  .text.SPI_RX_ISR
-                0x00000084       0x28 .\CortexM3\ARM_GCC_541\Debug\main.o
+                0x00000084       0x30 .\CortexM3\ARM_GCC_541\Debug\main.o
                 0x00000084                SPI_RX_ISR
- .text.main     0x000000ac       0x1c .\CortexM3\ARM_GCC_541\Debug\main.o
-                0x000000ac                main
+ .text.main     0x000000b4       0x14 .\CortexM3\ARM_GCC_541\Debug\main.o
+                0x000000b4                main
  .text.InitializeSPI
                 0x000000c8        0x8 .\CortexM3\ARM_GCC_541\Debug\spi_Slave.o
                 0x000000c8                InitializeSPI
@@ -851,7 +851,7 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x4080
+.debug_info     0x00000000     0x4084
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x1aa .\CortexM3\ARM_GCC_541\Debug\main.o
  .debug_info    0x000001aa      0x1a5 .\CortexM3\ARM_GCC_541\Debug\spi_Slave.o
@@ -864,9 +864,9 @@ END GROUP
  .debug_info    0x000027e2      0xa2a .\CortexM3\ARM_GCC_541\Debug\Design01.a(cyPm.o)
  .debug_info    0x0000320c      0x11f .\CortexM3\ARM_GCC_541\Debug\Design01.a(LED_1.o)
  .debug_info    0x0000332b      0x11f .\CortexM3\ARM_GCC_541\Debug\Design01.a(Button_1.o)
- .debug_info    0x0000344a       0x99 .\CortexM3\ARM_GCC_541\Debug\Design01.a(CyBootAsmGnu.o)
- .debug_info    0x000034e3      0x64d .\CortexM3\ARM_GCC_541\Debug\Design01.a(CyFlash.o)
- .debug_info    0x00003b30      0x550 .\CortexM3\ARM_GCC_541\Debug\Design01.a(CySpc.o)
+ .debug_info    0x0000344a       0x9d .\CortexM3\ARM_GCC_541\Debug\Design01.a(CyBootAsmGnu.o)
+ .debug_info    0x000034e7      0x64d .\CortexM3\ARM_GCC_541\Debug\Design01.a(CyFlash.o)
+ .debug_info    0x00003b34      0x550 .\CortexM3\ARM_GCC_541\Debug\Design01.a(CySpc.o)
 
 .debug_abbrev   0x00000000     0x112d
  *(.debug_abbrev)
@@ -885,22 +885,22 @@ END GROUP
  .debug_abbrev  0x00000df2      0x1a7 .\CortexM3\ARM_GCC_541\Debug\Design01.a(CyFlash.o)
  .debug_abbrev  0x00000f99      0x194 .\CortexM3\ARM_GCC_541\Debug\Design01.a(CySpc.o)
 
-.debug_line     0x00000000     0x1d87
+.debug_line     0x00000000     0x1d82
  *(.debug_line)
- .debug_line    0x00000000      0x1ad .\CortexM3\ARM_GCC_541\Debug\main.o
- .debug_line    0x000001ad      0x19f .\CortexM3\ARM_GCC_541\Debug\spi_Slave.o
- .debug_line    0x0000034c      0x1d7 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
- .debug_line    0x00000523      0x141 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
- .debug_line    0x00000664      0x234 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
- .debug_line    0x00000898      0x137 .\CortexM3\ARM_GCC_541\Debug\Design01.a(SPI_RX_ISR.o)
- .debug_line    0x000009cf      0x234 .\CortexM3\ARM_GCC_541\Debug\Design01.a(SPIS_2.o)
- .debug_line    0x00000c03      0x816 .\CortexM3\ARM_GCC_541\Debug\Design01.a(CyLib.o)
- .debug_line    0x00001419      0x367 .\CortexM3\ARM_GCC_541\Debug\Design01.a(cyPm.o)
- .debug_line    0x00001780       0x92 .\CortexM3\ARM_GCC_541\Debug\Design01.a(LED_1.o)
- .debug_line    0x00001812       0x95 .\CortexM3\ARM_GCC_541\Debug\Design01.a(Button_1.o)
- .debug_line    0x000018a7       0x66 .\CortexM3\ARM_GCC_541\Debug\Design01.a(CyBootAsmGnu.o)
- .debug_line    0x0000190d      0x21a .\CortexM3\ARM_GCC_541\Debug\Design01.a(CyFlash.o)
- .debug_line    0x00001b27      0x260 .\CortexM3\ARM_GCC_541\Debug\Design01.a(CySpc.o)
+ .debug_line    0x00000000      0x1a8 .\CortexM3\ARM_GCC_541\Debug\main.o
+ .debug_line    0x000001a8      0x19f .\CortexM3\ARM_GCC_541\Debug\spi_Slave.o
+ .debug_line    0x00000347      0x1d7 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_line    0x0000051e      0x141 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .debug_line    0x0000065f      0x234 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_line    0x00000893      0x137 .\CortexM3\ARM_GCC_541\Debug\Design01.a(SPI_RX_ISR.o)
+ .debug_line    0x000009ca      0x234 .\CortexM3\ARM_GCC_541\Debug\Design01.a(SPIS_2.o)
+ .debug_line    0x00000bfe      0x816 .\CortexM3\ARM_GCC_541\Debug\Design01.a(CyLib.o)
+ .debug_line    0x00001414      0x367 .\CortexM3\ARM_GCC_541\Debug\Design01.a(cyPm.o)
+ .debug_line    0x0000177b       0x92 .\CortexM3\ARM_GCC_541\Debug\Design01.a(LED_1.o)
+ .debug_line    0x0000180d       0x95 .\CortexM3\ARM_GCC_541\Debug\Design01.a(Button_1.o)
+ .debug_line    0x000018a2       0x66 .\CortexM3\ARM_GCC_541\Debug\Design01.a(CyBootAsmGnu.o)
+ .debug_line    0x00001908      0x21a .\CortexM3\ARM_GCC_541\Debug\Design01.a(CyFlash.o)
+ .debug_line    0x00001b22      0x260 .\CortexM3\ARM_GCC_541\Debug\Design01.a(CySpc.o)
 
 .debug_frame    0x00000000     0x12d4
  *(.debug_frame)
@@ -922,34 +922,34 @@ END GROUP
  .debug_frame   0x0000128c       0x28 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy-stub.o)
  .debug_frame   0x000012b4       0x20 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
 
-.debug_str      0x00000000     0x1767
+.debug_str      0x00000000     0x176b
  *(.debug_str)
- .debug_str     0x00000000      0x1cb .\CortexM3\ARM_GCC_541\Debug\main.o
-                                0x222 (size before relaxing)
- .debug_str     0x000001cb       0x7c .\CortexM3\ARM_GCC_541\Debug\spi_Slave.o
-                                0x258 (size before relaxing)
- .debug_str     0x00000247      0x181 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
-                                0x318 (size before relaxing)
- .debug_str     0x000003c8       0x75 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
-                                0x1ed (size before relaxing)
- .debug_str     0x0000043d      0x144 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
-                                0x313 (size before relaxing)
- .debug_str     0x00000581      0x131 .\CortexM3\ARM_GCC_541\Debug\Design01.a(SPI_RX_ISR.o)
-                                0x2f5 (size before relaxing)
- .debug_str     0x000006b2      0x235 .\CortexM3\ARM_GCC_541\Debug\Design01.a(SPIS_2.o)
-                                0x426 (size before relaxing)
- .debug_str     0x000008e7      0x805 .\CortexM3\ARM_GCC_541\Debug\Design01.a(CyLib.o)
-                                0xa50 (size before relaxing)
- .debug_str     0x000010ec      0x365 .\CortexM3\ARM_GCC_541\Debug\Design01.a(cyPm.o)
-                                0x73c (size before relaxing)
- .debug_str     0x00001451       0x5a .\CortexM3\ARM_GCC_541\Debug\Design01.a(LED_1.o)
-                                0x1eb (size before relaxing)
- .debug_str     0x000014ab       0x5c .\CortexM3\ARM_GCC_541\Debug\Design01.a(Button_1.o)
-                                0x1fa (size before relaxing)
- .debug_str     0x00001507      0x1b4 .\CortexM3\ARM_GCC_541\Debug\Design01.a(CyFlash.o)
-                                0x3c9 (size before relaxing)
- .debug_str     0x000016bb       0xac .\CortexM3\ARM_GCC_541\Debug\Design01.a(CySpc.o)
-                                0x341 (size before relaxing)
+ .debug_str     0x00000000      0x1cf .\CortexM3\ARM_GCC_541\Debug\main.o
+                                0x226 (size before relaxing)
+ .debug_str     0x000001cf       0x7c .\CortexM3\ARM_GCC_541\Debug\spi_Slave.o
+                                0x25c (size before relaxing)
+ .debug_str     0x0000024b      0x181 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+                                0x31c (size before relaxing)
+ .debug_str     0x000003cc       0x75 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+                                0x1f1 (size before relaxing)
+ .debug_str     0x00000441      0x144 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+                                0x317 (size before relaxing)
+ .debug_str     0x00000585      0x131 .\CortexM3\ARM_GCC_541\Debug\Design01.a(SPI_RX_ISR.o)
+                                0x2f9 (size before relaxing)
+ .debug_str     0x000006b6      0x235 .\CortexM3\ARM_GCC_541\Debug\Design01.a(SPIS_2.o)
+                                0x42a (size before relaxing)
+ .debug_str     0x000008eb      0x805 .\CortexM3\ARM_GCC_541\Debug\Design01.a(CyLib.o)
+                                0xa54 (size before relaxing)
+ .debug_str     0x000010f0      0x365 .\CortexM3\ARM_GCC_541\Debug\Design01.a(cyPm.o)
+                                0x740 (size before relaxing)
+ .debug_str     0x00001455       0x5a .\CortexM3\ARM_GCC_541\Debug\Design01.a(LED_1.o)
+                                0x1ef (size before relaxing)
+ .debug_str     0x000014af       0x5c .\CortexM3\ARM_GCC_541\Debug\Design01.a(Button_1.o)
+                                0x1fe (size before relaxing)
+ .debug_str     0x0000150b      0x1b4 .\CortexM3\ARM_GCC_541\Debug\Design01.a(CyFlash.o)
+                                0x3cd (size before relaxing)
+ .debug_str     0x000016bf       0xac .\CortexM3\ARM_GCC_541\Debug\Design01.a(CySpc.o)
+                                0x345 (size before relaxing)
 
 .debug_loc      0x00000000     0x1be9
  *(.debug_loc)
@@ -1071,4 +1071,4 @@ END GROUP
 
 /DISCARD/
  *(.note.GNU-stack)
-OUTPUT(C:\Users\ZakiN\OneDrive\Skrivebord\projekt3\B-CAC\SPI_Slave\Design01.cydsn\CortexM3\ARM_GCC_541\Debug\Design01.elf elf32-littlearm)
+OUTPUT(C:\Users\raduf\OneDrive\Desktop\SemesterProjekt\B-CAC\SPI_Slave\Design01.cydsn\CortexM3\ARM_GCC_541\Debug\Design01.elf elf32-littlearm)

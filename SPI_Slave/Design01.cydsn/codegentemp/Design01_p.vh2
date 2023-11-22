@@ -1,5 +1,5 @@
 -- Project:   Design01
--- Generated: 11/15/2023 10:50:16
+-- Generated: 11/21/2023 13:45:55
 -- PSoC Creator  4.4
 
 ENTITY Design01 IS
@@ -821,7 +821,7 @@ BEGIN
             drive_mode => "110",
             ibuf_enabled => "1",
             id => "e851a3b9-efb8-48be-bbb8-b303b216c393",
-            init_dr_st => "0",
+            init_dr_st => "1",
             input_buffer_sel => "00",
             input_clk_en => 0,
             input_sync => "1",

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 1
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccv5oMWP.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 1
   55 001a 01       		.byte	1
   56 001b 40       		.byte	64
   57 001c 1E       		.byte	30
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 2
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccv5oMWP.s 			page 2
 
 
   58 001d 0D       		.byte	13
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 1
  112 0053 08       		.byte	8
  113 0054 B5       		.byte	-75
  114 0055 01       		.byte	1
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 3
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccv5oMWP.s 			page 3
 
 
  115 0056 0C       		.byte	12
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 1
  169 008c BF       		.byte	-65
  170 008d 05       		.byte	5
  171 008e C0       		.byte	-64
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 4
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccv5oMWP.s 			page 4
 
 
  172 008f 02       		.byte	2
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 1
  226 00c5 01       		.byte	1
  227 00c6 EA       		.byte	-22
  228 00c7 C0       		.byte	-64
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 5
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccv5oMWP.s 			page 5
 
 
  229 00c8 EB       		.byte	-21
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 1
  283 00fe 60       		.byte	96
  284 00ff 85       		.byte	-123
  285 0100 62       		.byte	98
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 6
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccv5oMWP.s 			page 6
 
 
  286 0101 04       		.byte	4
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 1
  340 0137 60       		.byte	96
  341 0138 CC       		.byte	-52
  342 0139 90       		.byte	-112
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 7
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccv5oMWP.s 			page 7
 
 
  343 013a CE       		.byte	-50
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 1
  397 0170 9E       		.byte	-98
  398 0171 01       		.byte	1
  399 0172 A6       		.byte	-90
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 8
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccv5oMWP.s 			page 8
 
 
  400 0173 07       		.byte	7
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 1
  454 01a9 08       		.byte	8
  455 01aa 5A       		.byte	90
  456 01ab 60       		.byte	96
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 9
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccv5oMWP.s 			page 9
 
 
  457 01ac 5D       		.byte	93
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 1
  511 01e2 E2       		.byte	-30
  512 01e3 02       		.byte	2
  513 01e4 EA       		.byte	-22
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 10
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccv5oMWP.s 			page 10
 
 
  514 01e5 04       		.byte	4
@@ -588,7 +588,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 1
  558 0211 00       		.byte	0
  559 0212 00       		.byte	0
  560 0213 00       		.byte	0
- 561 0214 04       		.byte	4
+ 561 0214 06       		.byte	6
  562 0215 00       		.byte	0
  563 0216 01       		.byte	1
  564 0217 06       		.byte	6
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 1
  568 021b 00       		.byte	0
  569 021c 00       		.byte	0
  570 021d 00       		.byte	0
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 11
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccv5oMWP.s 			page 11
 
 
  571 021e 00       		.byte	0
@@ -658,20 +658,20 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 1
  621 0000 31010000 		.4byte	0x131
  622 0004 0400     		.2byte	0x4
  623 0006 00000000 		.4byte	.Ldebug_abbrev0
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 12
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccv5oMWP.s 			page 12
 
 
  624 000a 04       		.byte	0x4
  625 000b 01       		.uleb128 0x1
  626 000c 24000000 		.4byte	.LASF17
  627 0010 0C       		.byte	0xc
- 628 0011 C9010000 		.4byte	.LASF18
- 629 0015 06010000 		.4byte	.LASF19
+ 628 0011 CD010000 		.4byte	.LASF18
+ 629 0015 D7000000 		.4byte	.LASF19
  630 0019 00000000 		.4byte	.Ldebug_line0
  631 001d 02       		.uleb128 0x2
  632 001e 01       		.byte	0x1
  633 001f 06       		.byte	0x6
- 634 0020 BD010000 		.4byte	.LASF0
+ 634 0020 C1010000 		.4byte	.LASF0
  635 0024 03       		.uleb128 0x3
  636 0025 00000000 		.4byte	.LASF9
  637 0029 01       		.byte	0x1
@@ -684,7 +684,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 1
  644 0036 02       		.uleb128 0x2
  645 0037 02       		.byte	0x2
  646 0038 05       		.byte	0x5
- 647 0039 AA010000 		.4byte	.LASF2
+ 647 0039 AE010000 		.4byte	.LASF2
  648 003d 02       		.uleb128 0x2
  649 003e 02       		.byte	0x2
  650 003f 07       		.byte	0x7
@@ -692,7 +692,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 1
  652 0044 02       		.uleb128 0x2
  653 0045 04       		.byte	0x4
  654 0046 05       		.byte	0x5
- 655 0047 B4010000 		.4byte	.LASF4
+ 655 0047 B8010000 		.4byte	.LASF4
  656 004b 02       		.uleb128 0x2
  657 004c 04       		.byte	0x4
  658 004d 07       		.byte	0x7
@@ -700,11 +700,11 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 1
  660 0052 02       		.uleb128 0x2
  661 0053 08       		.byte	0x8
  662 0054 05       		.byte	0x5
- 663 0055 9C010000 		.4byte	.LASF6
+ 663 0055 A0010000 		.4byte	.LASF6
  664 0059 02       		.uleb128 0x2
  665 005a 08       		.byte	0x8
  666 005b 07       		.byte	0x7
- 667 005c 51010000 		.4byte	.LASF7
+ 667 005c 55010000 		.4byte	.LASF7
  668 0060 04       		.uleb128 0x4
  669 0061 04       		.byte	0x4
  670 0062 05       		.byte	0x5
@@ -712,13 +712,13 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 1
  672 0067 02       		.uleb128 0x2
  673 0068 04       		.byte	0x4
  674 0069 07       		.byte	0x7
- 675 006a F9000000 		.4byte	.LASF8
+ 675 006a 48010000 		.4byte	.LASF8
  676 006e 03       		.uleb128 0x3
- 677 006f 68010000 		.4byte	.LASF10
+ 677 006f 6C010000 		.4byte	.LASF10
  678 0073 02       		.byte	0x2
  679 0074 18       		.byte	0x18
  680 0075 24000000 		.4byte	0x24
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 13
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccv5oMWP.s 			page 13
 
 
  681 0079 05       		.uleb128 0x5
@@ -731,11 +731,11 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 1
  688 008a 02       		.uleb128 0x2
  689 008b 04       		.byte	0x4
  690 008c 07       		.byte	0x7
- 691 008d 93010000 		.4byte	.LASF11
+ 691 008d 97010000 		.4byte	.LASF11
  692 0091 07       		.uleb128 0x7
  693 0092 6E000000 		.4byte	0x6e
  694 0096 08       		.uleb128 0x8
- 695 0097 E7000000 		.4byte	.LASF12
+ 695 0097 36010000 		.4byte	.LASF12
  696 009b 03       		.byte	0x3
  697 009c 1F       		.byte	0x1f
  698 009d A7000000 		.4byte	0xa7
@@ -752,7 +752,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 1
  709 00ba 03       		.byte	0x3
  710 00bb 00       		.byte	0
  711 00bc 08       		.uleb128 0x8
- 712 00bd D7000000 		.4byte	.LASF13
+ 712 00bd 26010000 		.4byte	.LASF13
  713 00c1 03       		.byte	0x3
  714 00c2 70       		.byte	0x70
  715 00c3 CD000000 		.4byte	0xcd
@@ -762,7 +762,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 1
  719 00cd 07       		.uleb128 0x7
  720 00ce AC000000 		.4byte	0xac
  721 00d2 08       		.uleb128 0x8
- 722 00d3 85010000 		.4byte	.LASF14
+ 722 00d3 89010000 		.4byte	.LASF14
  723 00d7 03       		.byte	0x3
  724 00d8 7E       		.byte	0x7e
  725 00d9 E3000000 		.4byte	0xe3
@@ -778,11 +778,11 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 1
  735 00f2 8A000000 		.4byte	0x8a
  736 00f6 FF       		.byte	0xff
  737 00f7 00       		.byte	0
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 14
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccv5oMWP.s 			page 14
 
 
  738 00f8 08       		.uleb128 0x8
- 739 00f9 70010000 		.4byte	.LASF15
+ 739 00f9 74010000 		.4byte	.LASF15
  740 00fd 03       		.byte	0x3
  741 00fe 8C       		.byte	0x8c
  742 00ff 09010000 		.4byte	0x109
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 1
  792 0018 00       		.byte	0
  793 0019 00       		.byte	0
  794 001a 03       		.uleb128 0x3
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 15
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccv5oMWP.s 			page 15
 
 
  795 001b 16       		.uleb128 0x16
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 1
  849 0051 0B       		.uleb128 0xb
  850 0052 3B       		.uleb128 0x3b
  851 0053 0B       		.uleb128 0xb
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 16
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccv5oMWP.s 			page 16
 
 
  852 0054 49       		.uleb128 0x49
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 1
  891 0057 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
  891      20726576 
  891      6973696F 
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 17
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccv5oMWP.s 			page 17
 
 
  891      6E203233 
@@ -980,45 +980,45 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 1
  896      7369676E 
  896      65642069 
  896      6E7400
- 897              	.LASF13:
- 898 00d7 63795F6D 		.ascii	"cy_meta_custnvl\000"
- 898      6574615F 
- 898      63757374 
- 898      6E766C00 
- 899              	.LASF12:
- 900 00e7 63795F6D 		.ascii	"cy_meta_configecc\000"
- 900      6574615F 
- 900      636F6E66 
- 900      69676563 
- 900      6300
- 901              	.LASF8:
- 902 00f9 756E7369 		.ascii	"unsigned int\000"
- 902      676E6564 
- 902      20696E74 
- 902      00
- 903              	.LASF19:
- 904 0106 433A5C55 		.ascii	"C:\\Users\\ZakiN\\OneDrive\\Skrivebord\\projekt3\\B"
- 904      73657273 
- 904      5C5A616B 
- 904      694E5C4F 
- 904      6E654472 
- 905 0133 2D434143 		.ascii	"-CAC\\SPI_Slave\\Design01.cydsn\000"
- 905      5C535049 
- 905      5F536C61 
- 905      76655C44 
- 905      65736967 
+ 897              	.LASF19:
+ 898 00d7 433A5C55 		.ascii	"C:\\Users\\raduf\\OneDrive\\Desktop\\SemesterProjek"
+ 898      73657273 
+ 898      5C726164 
+ 898      75665C4F 
+ 898      6E654472 
+ 899 0105 745C422D 		.ascii	"t\\B-CAC\\SPI_Slave\\Design01.cydsn\000"
+ 899      4341435C 
+ 899      5350495F 
+ 899      536C6176 
+ 899      655C4465 
+ 900              	.LASF13:
+ 901 0126 63795F6D 		.ascii	"cy_meta_custnvl\000"
+ 901      6574615F 
+ 901      63757374 
+ 901      6E766C00 
+ 902              	.LASF12:
+ 903 0136 63795F6D 		.ascii	"cy_meta_configecc\000"
+ 903      6574615F 
+ 903      636F6E66 
+ 903      69676563 
+ 903      6300
+ 904              	.LASF8:
+ 905 0148 756E7369 		.ascii	"unsigned int\000"
+ 905      676E6564 
+ 905      20696E74 
+ 905      00
  906              	.LASF7:
- 907 0151 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 907 0155 6C6F6E67 		.ascii	"long long unsigned int\000"
  907      206C6F6E 
  907      6720756E 
  907      7369676E 
  907      65642069 
  908              	.LASF10:
- 909 0168 75696E74 		.ascii	"uint8_t\000"
+ 909 016c 75696E74 		.ascii	"uint8_t\000"
  909      385F7400 
  910              	.LASF15:
- 911 0170 63795F6D 		.ascii	"cy_meta_flashprotect\000"
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 18
+ 911 0174 63795F6D 		.ascii	"cy_meta_flashprotect\000"
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccv5oMWP.s 			page 18
 
 
  911      6574615F 
@@ -1026,33 +1026,33 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccskrgYq.s 			page 1
  911      6870726F 
  911      74656374 
  912              	.LASF14:
- 913 0185 63795F6D 		.ascii	"cy_meta_wonvl\000"
+ 913 0189 63795F6D 		.ascii	"cy_meta_wonvl\000"
  913      6574615F 
  913      776F6E76 
  913      6C00
  914              	.LASF11:
- 915 0193 73697A65 		.ascii	"sizetype\000"
+ 915 0197 73697A65 		.ascii	"sizetype\000"
  915      74797065 
  915      00
  916              	.LASF6:
- 917 019c 6C6F6E67 		.ascii	"long long int\000"
+ 917 01a0 6C6F6E67 		.ascii	"long long int\000"
  917      206C6F6E 
  917      6720696E 
  917      7400
  918              	.LASF2:
- 919 01aa 73686F72 		.ascii	"short int\000"
+ 919 01ae 73686F72 		.ascii	"short int\000"
  919      7420696E 
  919      7400
  920              	.LASF4:
- 921 01b4 6C6F6E67 		.ascii	"long int\000"
+ 921 01b8 6C6F6E67 		.ascii	"long int\000"
  921      20696E74 
  921      00
  922              	.LASF0:
- 923 01bd 7369676E 		.ascii	"signed char\000"
+ 923 01c1 7369676E 		.ascii	"signed char\000"
  923      65642063 
  923      68617200 
  924              	.LASF18:
- 925 01c9 47656E65 		.ascii	"Generated_Source\\PSoC5\\cymetadata.c\000"
+ 925 01cd 47656E65 		.ascii	"Generated_Source\\PSoC5\\cymetadata.c\000"
  925      72617465 
  925      645F536F 
  925      75726365 
