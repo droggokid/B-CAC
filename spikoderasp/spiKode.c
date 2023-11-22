@@ -1,270 +1,342 @@
-#include <linux/gpio.h>
-#include <linux/fs.h>
-#include <linux/cdev.h>
-#include <linux/device.h>
-#include <linux/uaccess.h>
-#include <linux/module.h>
-#include <linux/platform_device.h>
-#include <linux/of_gpio.h>
+#include <linux/cdev.h>   // cdev_add, cdev_init
+#include <linux/uaccess.h>  // copy_to_user
+#include <linux/module.h> // module_init, GPL
+#include <linux/spi/spi.h> // spi_sync,
 
-const int first_minor = 0;
-const int max_devices = 255;
+#define MAXLEN 32
+#define MODULE_DEBUG 1   // Enable/Disable Debug messages
+
+/* Char Driver Globals */
+static struct spi_driver spi_drv_spi_driver;
+struct file_operations spi_drv_fops;
+static struct class* spi_drv_class;
 static dev_t devno;
-static struct cdev led3_cdev;
-struct file_operations led3_fops;
-static struct device *mygpio_device;
+static struct cdev spi_drv_cdev;
 
-static struct class *led3_class;
-
-struct gpio_dev {
-    int gpio;
-    int flag;
+/* Definition of SPI devices */
+struct mcp3202dev {
+    struct spi_device* spi; // Pointer to SPI device
+    int channel;            // channel, ex. adc ch 0
 };
+/* Array of SPI devices */
+/* Minor used to index array */
+struct mcp3202dev spi_devs[2];
+const int spi_devs_len = 2;  // Max nbr of devices
+static int spi_devs_cnt = 0; // Nbr devices present
 
-static struct gpio_dev gpio_devs[255];
-int gpios_len;
+/* Macro to handle Errors */
+#define ERRGOTO(label, ...)                     \
+  {                                             \
+    printk (__VA_ARGS__);                       \
+    goto label;                                 \
+  } while(0)
 
-static int plat_drv_probe(struct platform_device *pdev)
-{
-    printk ("Hello form probe");
-    int err;
-    enum of_gpio_flags flag;
-    
+/**********************************************************
+ * CHARACTER DRIVER METHODS
+ **********************************************************/
 
-    if ((gpios_len = of_gpio_count(pdev->dev.of_node))<0) {
-        dev_err(&pdev->dev, "Failed to read of_gpio_count\n");
-        return -EINVAL;
-    }
-
-    for (int i = 0; i < gpios_len; i++) {
-        gpio_devs[i].gpio = of_get_gpio_flags(pdev->dev.of_node, i, &flag);
-        if (gpio_devs[i].gpio < 0) {
-            pr_err("Failed to get GPIO number\n");
-            return gpio_devs[i].gpio;
-        }
-
-        gpio_devs[i].flag = (int)flag;
-
-        err = gpio_request(gpio_devs[i].gpio, "led gpio");
-
-        if (err < 0) {
-            pr_err("Failed to get GPIO flags\n");
-            return err;
-        }
-        if (gpio_devs[i].flag == 0) {
-            pr_info("saetter gpio %d som input\n", gpio_devs[i].gpio);
-            gpio_direction_input(gpio_devs[i].gpio);
-        } else {
-            pr_info("saetter gpio %d som output\n", gpio_devs[i].gpio);
-            gpio_direction_output(gpio_devs[i].gpio, 0);
-        }
-
-        if (err < 0) {
-            pr_err("Failed to set GPIO direction\n");
-            gpio_free(gpio_devs[i].gpio);
-            return err;
-        }
-
-        mygpio_device = device_create(led3_class, NULL, 
-        MKDEV(MAJOR(devno), i), NULL, "mygpio%d", gpio_devs[i].gpio);
-        if (IS_ERR(mygpio_device)) {
-            dev_err(&pdev->dev, "Failed to create device: %d\n", i);
-            err = PTR_ERR(mygpio_device);
-            gpio_free(gpio_devs[i].gpio);
-            return err;
-        }
-        
-    }
-    return 0;
-}
-
-
-// modificeres i opgave a del2 exercise 6
-static int my_plat_drv_remove(struct platform_device *pdev)
-{
-    int i;
-
-    printk("Hello from remove\n");
-
-    for (i = 0; i < gpios_len; i++) {
-        // Destroy device
-        device_destroy(led3_class, MKDEV(MAJOR(devno), i));
-        // Free GPIO
-        gpio_free(gpio_devs[i].gpio);
-    }
-    
-    return 0;
-}
-
-//tilføjelse opgave b exercise 6
-static const struct of_device_id my_led_platform_device_match[] = {
-    { .compatible = "ase, plat_drv", },
-    {},
-};
-//tilføjelse opgave b exercise 6
-static struct platform_driver my_led_platform_driver = {
-    .probe = plat_drv_probe,
-    .remove = my_plat_drv_remove,
-    .driver = {
-    .name = "plat_drv_NEW",
-    .of_match_table = my_led_platform_device_match,
-    .owner = THIS_MODULE,
-    },
-};
-
-
-int my_plat_drv_open(struct inode *inode, struct file *filep)
-{
-    int major, minor;
-    major = MAJOR(inode->i_rdev);
-    minor = MINOR(inode->i_rdev);
-    printk("Opening my_plat_drv Device [major], [minor]: %i, %i\n", major, minor);
-    return 0;
-}
-
- int my_plat_drv_release(struct inode *inode, struct file *filep)
-{
-    int minor, major;
-
-    major = MAJOR(inode->i_rdev);
-    minor = MINOR(inode->i_rdev);
-    printk("Closing/Releasing my_plat_drv Device [major], [minor]: %i, %i\n", major, minor);
-
-    return 0;
-}
-
-ssize_t my_plat_drv_read(struct file *filep, char __user *buf, size_t count, loff_t *f_pos)
-{
-    //tilføjes i opgave b del2 exercise 6
-    int minor = iminor(filep->f_inode);
-
-    if (minor >= gpios_len) {
-        pr_err("Invalid minor number\n");
-        return -EINVAL;
-    }
-
-    char status[64]; // Buffer til at gemme statusinformationen
-    int led_status;
-
-    //modificeres i opgave b del2 exercise 6
-    // læser statusen for den bestemte GPIO/led
-    led_status = gpio_get_value(gpio_devs[minor].gpio);
-
-
-    // Konverter statusen til en streng
-    if(gpio_devs[minor].flag==0)
-    {
-    snprintf(status, sizeof(status), "knappen med gpio.no %d er %s \n",
-     gpio_devs[minor].gpio, led_status ? "ikke trykket" : "trykket");
-    }
-    else
-    {
-    snprintf(status, sizeof(status), "led med gpio.no %d er %s \n", 
-    gpio_devs[minor].gpio, led_status ? "tændt" : "slukket");
-    }
-    // Beregn længden af den data, der skal kopieres til brugerområdet
-    size_t len = strlen(status);
-
-    // Kopier statusstrengen fra kernelområdet til brugerområdet
-    ssize_t retval = copy_to_user(buf, status, len);
-
-    if (retval == 0) {
-        // Læsningen var vellykket
-        *f_pos += len;
-        return len;
-    } else {
-        // Der opstod en fejl ved kopiering til brugerområdet
-        return -EFAULT;
-    } 
- }
-
- ssize_t my_plat_drv_write(struct file *filep, const char __user *ubuf, size_t count, loff_t *f_pos)
-{
-    //tilføjes i opgave b del2 exercise 6
-    int minor = iminor(filep->f_inode);
-    pr_info("in write\n");
-    if (minor >= gpios_len) {
-        pr_err("Invalid minor number\n");
-        return -EINVAL;
-    }
-
-    char buf[32]; // Buffer til at gemme dataen fra brugerområdet
-    int led_state=1;
-
-    
-    // Læs data fra brugerområdet til kernel bufferen
-    if (copy_from_user(buf, ubuf, min(count, sizeof(buf))) != 0) {
-        return -EFAULT; // Der opstod en fejl ved kopiering
-    }
-
-    //modificeres i opgave b del2 exercise 6
-    // Konverter dataen til en intern repræsentation
-    if (sscanf(buf, "%d", &led_state) != 1) {
-        pr_err("Error in message\n");
-        return -EINVAL; // Ugyldig data blev modtaget
-    }
-
-    pr_info("writing %d to %d\n", led_state, gpio_devs[minor].gpio);
-    // Styr LEDer baseret på den konverterede værdi
-    gpio_set_value(gpio_devs[minor].gpio, led_state);
-   
-    return count; // Returnér antallet af bytes, der blev skrevet
-}
-
- struct file_operations led3_fops = {
-    .owner = THIS_MODULE,
-    .open = my_plat_drv_open,
-    .release = my_plat_drv_release,
-    .read = my_plat_drv_read,
-    .write = my_plat_drv_write
-};
-
-
-
-
- static int my_plat_drv_init(void)
+ /*
+  * Character Driver Module Init Method
+  */
+static int __init spi_drv_init(void)
 {
     int err = 0;
 
-    err = alloc_chrdev_region(&devno, first_minor, max_devices, "led3-driver");
-    if (MAJOR(devno) <= 0) {
-        pr_err("Failed to register chardev\n");
-        return err;
-    }
+    printk("spi_drv driver initializing\n");
 
-    pr_info("led3-driver got Major %i\n", MAJOR(devno));
+    /* Allocate major number and register fops*/
+    err = alloc_chrdev_region(&devno, 0, 255, "spi_drv driver");
+    if (MAJOR(devno) <= 0)
+        ERRGOTO(err_no_cleanup, "Failed to register chardev\n");
+    printk(KERN_ALERT "Assigned major no: %i\n", MAJOR(devno));
 
-    led3_class = class_create(THIS_MODULE, "led3-class");
-    if (IS_ERR(led3_class))
-        pr_err("Failed to create class");
+    cdev_init(&spi_drv_cdev, &spi_drv_fops);
+    err = cdev_add(&spi_drv_cdev, devno, 255);
+    if (err)
+        ERRGOTO(err_cleanup_chrdev, "Failed to create class");
 
-    cdev_init(&led3_cdev, &led3_fops);
+    /* Polulate sysfs entries */
+    spi_drv_class = class_create(THIS_MODULE, "spi_drv_class");
+    if (IS_ERR(spi_drv_class))
+        ERRGOTO(err_cleanup_cdev, "Failed to create class");
 
-    err = cdev_add(&led3_cdev, devno, max_devices);
-    if (err) {
-        pr_err("Failed to add cdev\n");
-        return err;
-    }
+    /* Register SPI Driver */
+    /* THIS WILL INVOKE PROBE, IF DEVICE IS PRESENT!!! */
+    err = spi_register_driver(&spi_drv_spi_driver);
+    if (err)
+        ERRGOTO(err_cleanup_class, "Failed SPI Registration\n");
 
-    platform_driver_register(&my_led_platform_driver);
+    /* Success */
+    return 0;
 
+    /* Errors during Initialization */
+err_cleanup_class:
+    class_destroy(spi_drv_class);
+
+err_cleanup_cdev:
+    cdev_del(&spi_drv_cdev);
+
+err_cleanup_chrdev:
+    unregister_chrdev_region(devno, 255);
+
+err_no_cleanup:
     return err;
 }
-// modificeres i opgave a del2 exercise 6
-static void my_plat_drv_exit(void)
+
+/*
+ * Character Driver Module Exit Method
+ */
+static void __exit spi_drv_exit(void)
 {
-    platform_driver_unregister(&my_led_platform_driver);
+    printk("spi_drv driver Exit\n");
 
-    cdev_del(&led3_cdev);
-
-    class_destroy(led3_class);
-
-    unregister_chrdev_region(devno, max_devices);
-
+    spi_unregister_driver(&spi_drv_spi_driver);
+    class_destroy(spi_drv_class);
+    cdev_del(&spi_drv_cdev);
+    unregister_chrdev_region(devno, 255);
 }
 
-module_init(my_plat_drv_init);
-module_exit(my_plat_drv_exit);
+/*
+ * Character Driver Write File Operations Method
+ */
+ssize_t spi_drv_write(struct file* filep, const char __user* ubuf,
+    size_t count, loff_t* f_pos)
+{
+    int minor, len, value;
+    char kbuf[MAXLEN];
 
-MODULE_AUTHOR("Jesper Myllerup");
+    minor = iminor(filep->f_inode);
+
+    printk(KERN_ALERT "Writing to spi_drv [Minor] %i \n", minor);
+
+    /* Limit copy length to MAXLEN allocated andCopy from user */
+    len = count < MAXLEN ? count : MAXLEN;
+    if (copy_from_user(kbuf, ubuf, len))
+        return -EFAULT;
+
+    /* Pad null termination to string */
+    kbuf[len] = '\0';
+
+    if (MODULE_DEBUG)
+        printk("string from user: %s\n", kbuf);
+
+    /* Convert sting to int */
+    sscanf(kbuf, "%i", &value);
+    if (MODULE_DEBUG)
+        printk("value %i\n", value);
+
+    /*
+      Do something with value ....
+    */
+
+    /* Legacy file ptr f_pos. Used to support
+     * random access but in char drv we dont!
+     * Move it the length actually  written
+     * for compability */
+    *f_pos += len;
+
+    /* return length actually written */
+    return len;
+}
+
+/*
+ * Character Driver Read File Operations Method
+ */
+ssize_t spi_drv_read(struct file* filep, char __user* ubuf,
+    size_t count, loff_t* f_pos)
+{
+    int err;
+    int minor, len;
+    struct spi_transfer t[3];
+    struct spi_message m;
+    char resultBuf[MAXLEN];
+    uint8_t resultBuff[2];
+    s16 result = 1234;
+
+    minor = iminor(filep->f_inode);
+
+    /* Initialize SPI message and transfers */
+    memset(t, 0, sizeof(t));
+    spi_message_init(&m);
+    m.spi = spi_devs[minor].spi;
+
+    //uin8_t writebuf[2]
+
+    //writebuf
+    /* Set up the SPI transfer for sending the command */
+
+
+    /* Set up the SPI transfer for receiving data with the first command_byte */
+    uint8_t command_byte[3];
+    command_byte[0] = 0b00000001;
+    t[0].tx_buf = &command_byte[0];
+    t[0].rx_buf = NULL;
+    t[0].len = 1;
+    spi_message_add_tail(&t[0], &m);
+
+    /* Set up the SPI transfer for receiving data with the second command_byte based on the minor value */
+    if (minor == 1)
+        command_byte[1] = 0b10100000 | 0b01000000;
+    else
+        command_byte[1] = 0b10100000;
+
+    t[1].tx_buf = &command_byte[1];
+    t[1].rx_buf = &resultBuff[0];
+    t[1].len = 1;
+    spi_message_add_tail(&t[1], &m);
+
+    /* Set up the SPI transfer for receiving data with the third command_byte */
+    command_byte[2] = 0b00000000;
+    t[2].tx_buf = &command_byte[2];
+    t[2].rx_buf = &resultBuff[1];
+    t[2].len = 1;
+    spi_message_add_tail(&t[2], &m);
+
+    err = spi_sync(spi_devs[minor].spi, &m);
+
+    result = resultBuff[0];
+    result = result << 8;
+    result = result | resultBuff[1];
+
+    result = (3300 * result) / (4096);
+    if (err)
+        printk(KERN_ALERT "FAILED spi_sync\n");
+
+
+    if (MODULE_DEBUG)
+        printk(KERN_ALERT "%s-%i read: %i\n",
+            spi_devs[minor].spi->modalias, spi_devs[minor].channel, result);
+
+    /* Convert integer to string limited to "count" size. Returns
+     * length excluding NULL termination */
+    len = snprintf(resultBuf, count, "%d\n", result);
+
+    /* Append Length of NULL termination */
+    len++;
+
+    /* Copy data to user space */
+    if (copy_to_user(ubuf, resultBuf, len))
+        return -EFAULT;
+
+    /* Move fileptr */
+    *f_pos += len;
+
+    return len;
+}
+
+
+/*
+ * Character Driver File Operations Structure
+ */
+struct file_operations spi_drv_fops =
+{
+  .owner = THIS_MODULE,
+  .write = spi_drv_write,
+  .read = spi_drv_read,
+};
+
+/**********************************************************
+ * LINUX DEVICE MODEL METHODS (spi)
+ **********************************************************/
+
+ /*
+  * spi_drv Probe
+  * Called when a device with the name "spi_drv" is
+  * registered.
+  */
+static int spi_drv_probe(struct spi_device* sdev)
+{
+    int err = 0;
+    struct device* spi_drv_device;
+
+    printk(KERN_DEBUG "New SPI device: %s using chip select: %i\n",
+        sdev->modalias, sdev->chip_select);
+
+    /* Check we are not creating more
+       devices than we have space for */
+    if (spi_devs_cnt > spi_devs_len) {
+        printk(KERN_ERR "Too many SPI devices for driver\n");
+        return -ENODEV;
+    }
+
+    /* Configure bits_per_word, always 8-bit for RPI!!! */
+    sdev->bits_per_word = 8;
+    spi_setup(sdev);
+
+    /* Create devices, populate sysfs and
+       active udev to create devices in /dev */
+
+       /* We map spi_devs index to minor number here */
+    for (int i = 0; i < 2; i++) {
+        spi_drv_device = device_create(spi_drv_class, NULL,
+            MKDEV(MAJOR(devno), spi_devs_cnt),
+            NULL, "spi_drv%d", spi_devs_cnt);
+        if (IS_ERR(spi_drv_device))
+            printk(KERN_ALERT "FAILED TO CREATE DEVICE\n");
+        else
+            printk(KERN_ALERT "Using spi_devs%i on major:%i, minor:%i\n",
+                spi_devs_cnt, MAJOR(devno), spi_devs_cnt);
+
+        /* Update local array of SPI devices */
+        spi_devs[spi_devs_cnt].spi = sdev;
+        spi_devs[spi_devs_cnt].channel = i; // channel address
+        ++spi_devs_cnt;
+    }
+    return err;
+}
+
+/*
+ * spi_drv Remove
+ * Called when the device is removed
+ * Can deallocate data if needed
+ */
+static int spi_drv_remove(struct spi_device* sdev)
+{
+    int its_minor = 0;
+
+    printk(KERN_ALERT "Removing spi device\n");
+
+    /* Destroy devices created in probe() */
+    for (int i = 0; i < spi_devs_len; i++) {
+        device_destroy(spi_drv_class, MKDEV(MAJOR(devno), its_minor));
+        ++its_minor;
+    }
+
+    return 0;
+}
+
+/*
+ * spi Driver Struct
+ * Holds function pointers to probe/release
+ * methods and the name under which it is registered
+ */
+static const struct of_device_id of_spi_drv_spi_device_match[] = {
+  {.compatible = "ase, spi_drv", }, {},
+};
+
+static struct spi_driver spi_drv_spi_driver = {
+  .probe = spi_drv_probe,
+  .remove = spi_drv_remove,
+  .driver = {
+    .name = "spi_drv",
+    .bus = &spi_bus_type,
+    .of_match_table = of_spi_drv_spi_device_match,
+    .owner = THIS_MODULE,
+  },
+};
+
+/**********************************************************
+ * GENERIC LINUX DEVICE DRIVER STUFF
+ **********************************************************/
+
+ /*
+  * Assignment of module init/exit methods
+  */
+module_init(spi_drv_init);
+module_exit(spi_drv_exit);
+
+/*
+ * Assignment of author and license
+ */
+MODULE_AUTHOR("Peter Hoegh Mikkelsen <phm@ase.au.dk>");
 MODULE_LICENSE("GPL");
