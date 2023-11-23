@@ -25,7 +25,7 @@ function GameMenu(props) {
             setCount((count) => count + 1);
             if (gameRunning)
             {
-                setGameRunning(server.getGameRunning());
+                // setGameRunning(server.getGameRunning());
                 setTimerSec(timerSec + 1);
             }
         }, 1000);
