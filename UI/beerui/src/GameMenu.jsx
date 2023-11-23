@@ -81,7 +81,7 @@ function GameMenu(props) {
                     show={startBtnShow}
                     onclick={startGame}
                 />
-                <Text label={JSON.stringify(timerSec)} show={timerShow} color="#000000" fontFamily="Arial" fontSize="100px" />
+                <Text label={`${Math.floor(timerSec / 60)}:${timerSec % 60}`} show={timerShow} color="#000000" fontFamily="Arial" fontSize="100px" />
             </div>
         </div>
     );
