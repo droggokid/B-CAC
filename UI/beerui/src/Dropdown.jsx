@@ -27,8 +27,8 @@ function Dropdown(props)
     return (
         <div className='dropdown'>
             <select style={dropdownStyle} onChange={callback} disabled={disable}>
-                {options.map((opt) => (
-                    <option value={opt}>{opt}</option>
+                {options.map((opt, index) => (
+                    <option key={index} value={opt}>{opt}</option>
                 ))}
             </select>
             <img src={chev} alt="chevron-down" style={imgStyle} />
