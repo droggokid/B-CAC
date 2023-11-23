@@ -2,10 +2,20 @@
 import React from 'react';
 import TextBorder from './TextBorder';
 import TextBox from './TextBox';
+import { data } from "./Data";
 
 const InitialsBox = ({ label, onLabelChange }) => {
   const handleTextBoxChange = (newValue) => {
     onLabelChange(newValue);
+    
+    if (label.includes("1"))
+    {
+      data.players[0].initials = newValue;
+    }
+    else if (label.includes("2"))
+    {
+      data.players[1].initials = newValue;
+    }
   };
 
   return (

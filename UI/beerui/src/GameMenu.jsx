@@ -1,19 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Text from './Text';
 import PlayerStat from './PlayerStat';
 import Dropdown from './Dropdown';
 import StartBtn from './StartBtn';
+import { server } from "./Server";
+import { data } from "./Data";
 
 function GameMenu(props) {
     const [startBtnActive, setStartBtnActive] = useState(false);
     const [startBtnShow, setStartBtnShow] = useState(true);
     const [timerShow, setTimerShow] = useState(false);
-    const [p1Initials, setP1Initials] = useState("XXX"); // Brug setP1Initials til at ændre værdier
-    const [p2Initials, setP2Initials] = useState("XXX");
+    const [p1Initials, setP1Initials] = useState(data.players[0].initials); // Brug setP1Initials til at ændre værdier
+    const [p2Initials, setP2Initials] = useState(data.players[1].initials);
     const [p1Time, setP1Time] = useState("00:00.00");
     const [p2Time, setP2Time] = useState("00:00.00");
-    const [timerTime, setTimerTime] = useState("00:00");
+    const [timerSec, setTimerSec] = useState(0);
     const [dropdownDisabled, setDropdownDisabled] = useState(false);
+    const [drinkType, setDrinkType] = useState("Vælg");
+    const [gameRunning, setGameRunning] = useState(false);
+    const [count, setCount] = useState(0);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setCount((count) => count + 1);
+            if (gameRunning)
+            {
+                setGameRunning(server.getGameRunning());
+                setTimerSec(timerSec + 1);
+            }
+        }, 1000);
+    });
 
     const gameMenuStyle = {
         display: "grid",
@@ -33,6 +49,7 @@ function GameMenu(props) {
         else
         {
             setStartBtnActive(true);
+            setDrinkType(event.target.value);
         }
     }
 
@@ -44,6 +61,9 @@ function GameMenu(props) {
         setStartBtnShow(false);
         setTimerShow(true);
         setDropdownDisabled(true);
+        setGameRunning(true);
+
+        server.postStartGame(p1Initials, p2Initials, drinkType);
     }
 
     return (
@@ -61,7 +81,7 @@ function GameMenu(props) {
                     show={startBtnShow}
                     onclick={startGame}
                 />
-                <Text label={timerTime} show={timerShow} color="#000000" fontFamily="Arial" fontSize="100px" />
+                <Text label={JSON.stringify(timerSec)} show={timerShow} color="#000000" fontFamily="Arial" fontSize="100px" />
             </div>
         </div>
     );

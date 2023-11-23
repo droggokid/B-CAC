@@ -1,4 +1,5 @@
 import React from 'react';
+import {server} from "./Server";
 
 function Leaderboard(props) {
     const leaderboardStyle = {
@@ -29,6 +30,9 @@ function Leaderboard(props) {
         textAlign: 'left',
         paddingLeft: '10px', // Add left padding for better alignment
     };
+
+    // TODO: Format this fucker
+    let data = server.getLeaderboard();
 
     return (
         <div style={leaderboardStyle}>

@@ -4,7 +4,8 @@ import InitialsBox from "./InitialsBox";
 import Leaderboard from "./Leaderboard";
 import yourImage from "./b-cac_logo.png";
 import "./mainMenu.css";
-import axios from 'axios';
+import { server } from "./Server";
+import { data } from "./Data";
 
 function MainMenu({onComponentChange}) {
     const [playerLabel, setPlayerLabel] = useState("Enter Player 1 initials: ");
@@ -66,10 +67,8 @@ function MainMenu({onComponentChange}) {
             </div>
 
             <Button label="POST (test)" onClick={() => {
-                axios.post('/author', {
-                    initials: 'ABC',
-                    score: 123
-                });
+                // server.postInitials('{"1": "abc", "2": "def"}');
+                server.getTime();
             }} />
 
             {renderActiveComponent()} 
