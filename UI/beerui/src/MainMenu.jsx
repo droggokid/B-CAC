@@ -66,10 +66,10 @@ function MainMenu({onComponentChange}) {
                 <Button label="Leaderboard" onClick={handleOnClickLeaderboard}/>
             </div>
 
-            <Button label="POST (test)" onClick={() => {
+            {/* <Button label="POST (test)" onClick={() => {
                 // server.postInitials('{"1": "abc", "2": "def"}');
                 server.getTime();
-            }} />
+            }} /> */}
 
             {renderActiveComponent()} 
         </div>

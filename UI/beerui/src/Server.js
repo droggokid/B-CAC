@@ -15,7 +15,7 @@ class Server
     getGameRunning()
     {
         // Return boolean if the game is running
-        return this.get("gameRunning") == "true" ? true : false;
+        return this.get("gameRunning") === "true" ? true : false;
     }
 
     getLeaderboard()
