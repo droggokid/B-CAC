@@ -1,3 +1,7 @@
+// Compile and run:
+// g++ -o server server.cpp -lwebsockets
+// ./ server
+
 #include <iostream>
 #include <boost/beast/core.hpp>
 #include <boost/beast/http.hpp>
@@ -18,7 +22,8 @@ int main()
 
     cout << "Started server" << endl;
 
-    try {
+    try
+    {
         net::io_context ioc;
         tcp::acceptor acceptor(ioc, {tcp::v4(), 8080});
         tcp::socket socket(ioc);
@@ -41,12 +46,15 @@ int main()
         response.set(http::field::access_control_expose_headers, "Authorization");
         response.set(http::field::access_control_max_age, "3600"); // 1 hour
 
-        if (request.method() == http::verb::options) {
+        if (request.method() == http::verb::options)
+        {
             // Respond to OPTIONS requests immediately
             response.set(http::field::allow, "GET, POST, OPTIONS");
             http::write(socket, response);
             return EXIT_SUCCESS;
-        } else if (request.method() == http::verb::post) {
+        }
+        else if (request.method() == http::verb::post)
+        {
             // Handle POST request
             // Assuming the body is in the form of JSON
             std::string body = request.body();
@@ -55,24 +63,27 @@ int main()
             // Process the body as needed
 
             // Continue with the response
-        } else if (request.method() == http::verb::get) {
-          boost::beast::string_view target = request.target();
+        }
+        else if (request.method() == http::verb::get)
+        {
+            boost::beast::string_view target = request.target();
 
-          cout << "Received GET target: " << target << endl;
+            cout << "Received GET target: " << target << endl;
 
-          if (target == "/time")
-          {
-            cout << "yeah time" << endl;
-            response.body() = "11:30";
-          }
+            if (target == "/time")
+            {
+                cout << "yeah time" << endl;
+                response.body() = "11:30";
+            }
         }
 
         // For other HTTP methods (GET, POST, etc.), continue processing the request
         response.keep_alive(request.keep_alive());
         response.prepare_payload();
         http::write(socket, response);
-
-    } catch (const std::exception& e) {
+    }
+    catch (const std::exception &e)
+    {
         cout << "not good" << endl;
         std::cerr << "Error: " << e.what() << std::endl;
         return EXIT_FAILURE;
