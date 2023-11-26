@@ -2,6 +2,7 @@
 #include <boost/beast/core.hpp>
 #include <boost/beast/http.hpp>
 #include <boost/asio.hpp>
+#include "writeToFile.hpp"
 
 namespace beast = boost::beast;
 namespace http = beast::http;
@@ -9,7 +10,12 @@ namespace net = boost::asio;
 using tcp = boost::asio::ip::tcp;
 using namespace std;
 
-int main() {
+int fileDescriptor;
+
+int main() 
+{
+    fileDescriptor = openFile("/skriv/sti/her");
+
     cout << "Started server" << endl;
 
     try {
