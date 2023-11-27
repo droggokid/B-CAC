@@ -161,7 +161,7 @@ ssize_t spi_drv_read(struct file *filep, char __user *ubuf,
     m.spi = spi_devs[minor].spi;
 
     /* Set up the SPI transfer for sending the command to the PSoC */
-    uint8_t command_byte = 0xBB; // Example command
+    uint8_t command_byte = 0xAA; // Example command
 
     t[0].tx_buf = &command_byte;
     t[0].rx_buf = resultBuff; // Use minor to index the result buffer based on the current slave
