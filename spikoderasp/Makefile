@@ -12,12 +12,12 @@ CCPREFIX = arm-poky-linux-gnueabi-
 # kernel Makefile or not.
 ifeq ($(KERNELRELEASE),)
 
-    # The current directory is passed to sub-makes as argument
+# The current directory is passed to sub-makes as argument
     PWD := $(shell pwd)
 
 modules:
 	$(MAKE) ARCH=arm CROSS_COMPILE=${CCPREFIX} -C ${KERNELDIR} M=$(PWD)
-  # Rename .dtb to .dtbo, required by dtoverlay
+# Rename .dtb to .dtbo, required by dtoverlay
 	mv $(DTB_FILE) $(DTBO_FILE)
 
 modules_install: modules
@@ -29,14 +29,14 @@ clean:
 .PHONY: default clean
 
 else
-    # called from kernel build system: just declare what our modules are
-    # Ignore C90 decl after statement warning
-    ccflags-y := -DDEBUG -g -std=gnu99 -Wno-declaration-after-statement
-    # Device Tree Blobs to build
-    always := $(DTB_FILE)
-    # Kernel Object target file(s)
-    obj-m += $(KMODULE).o
-    # If object must be linked from multiple parts
-    #xxxxmod-objs := part1.o part2.o
+# called from kernel build system: just declare what our modules are
+# Ignore C90 decl after statement warning
+	ccflags-y := -DDEBUG -g -std=gnu99 -Wno-declaration-after-statement
+# Device Tree Blobs to build
+	always := $(DTB_FILE)
+# Kernel Object target file(s)
+	obj-m += $(KMODULE).o
+# If object must be linked from multiple parts
+#xxxxmod-objs := part1.o part2.o
 
 endif

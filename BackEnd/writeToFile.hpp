@@ -2,10 +2,11 @@
 #include <fcntl.h>
 #include <unistd.h>
 
-const char *deviceNode = "/dev/my_device"; // Replace with the actual device node
+using namespace std;
 
+//const char *deviceNode = "/dev/my_device"; // Replace with the actual device node
 
-int openFile()
+int openFile(char *deviceNode)
 {
     // Step 4: Open the Device Node
     int fileDescriptor = open(deviceNode, O_WRONLY);

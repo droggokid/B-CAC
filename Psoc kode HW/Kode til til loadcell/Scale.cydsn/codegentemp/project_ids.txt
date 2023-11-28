@@ -1,0 +1,6 @@
+C:\Users\magnu\OneDrive - Aarhus universitet\Projekt3 bilag\Scale.cywrk.Archive02\Kode til til loadcell\Scale.cydsn\Scale.cyprj|1b68d57d-430f-4dc5-b212-d04f2d34b3c3
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|a4efa237-da45-4987-9acd-f6b312fdba79
+C:\Users\magnu\OneDrive\Dokumenter\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|f68b41b4-cc7d-4faf-a7f5-94acfa6cebe7
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|305a706b-bb96-4d48-be9f-66ea518d91f7
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|7c2f4579-ac6d-4fb5-bbb8-484187afce91
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|b57dae93-5c62-48e7-a171-63a241a5c26a

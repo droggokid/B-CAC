@@ -1,6 +1,6 @@
 -- Project:   DC-Motor-PWM
--- Generated: 11/18/2023 15:54:09
--- PSoC Creator  4.2
+-- Generated: 11/27/2023 13:47:07
+-- PSoC Creator  4.4
 
 ENTITY \DC-Motor-PWM\ IS
     PORT(
@@ -30,16 +30,11 @@ ARCHITECTURE __DEFAULT__ OF \DC-Motor-PWM\ IS
     SIGNAL ClockBlock_XTAL : bit;
     SIGNAL ClockBlock_XTAL_32KHZ : bit;
     SIGNAL Net_14 : bit;
-    SIGNAL Net_172 : bit;
-    SIGNAL Net_180 : bit;
-    ATTRIBUTE global_signal OF Net_180 : SIGNAL IS true;
-    SIGNAL Net_180_local : bit;
-    SIGNAL Net_184 : bit;
+    SIGNAL Net_188 : bit;
+    ATTRIBUTE udbclken_assigned OF Net_188 : SIGNAL IS "True";
+    ATTRIBUTE global_signal OF Net_188 : SIGNAL IS true;
+    SIGNAL Net_188_local : bit;
     SIGNAL Net_2 : bit;
-    SIGNAL Net_255 : bit;
-    ATTRIBUTE udbclken_assigned OF Net_255 : SIGNAL IS "True";
-    ATTRIBUTE global_signal OF Net_255 : SIGNAL IS true;
-    SIGNAL Net_255_local : bit;
     SIGNAL Net_7 : bit;
     SIGNAL Rx_1(0)__PA : bit;
     SIGNAL Tx_1(0)__PA : bit;
@@ -52,6 +47,8 @@ ARCHITECTURE __DEFAULT__ OF \DC-Motor-PWM\ IS
     SIGNAL \Timer_1:TimerUDB:control_6\ : bit;
     SIGNAL \Timer_1:TimerUDB:control_7\ : bit;
     SIGNAL \Timer_1:TimerUDB:per_zero\ : bit;
+    SIGNAL \Timer_1:TimerUDB:sT32:timerdp:u1.ce0__sig\ : bit;
+    SIGNAL \Timer_1:TimerUDB:sT32:timerdp:u2.ce0__sig\ : bit;
     SIGNAL \Timer_1:TimerUDB:status_2\ : bit;
     SIGNAL \Timer_1:TimerUDB:status_3\ : bit;
     SIGNAL \Timer_1:TimerUDB:status_tc\ : bit;
@@ -105,19 +102,43 @@ ARCHITECTURE __DEFAULT__ OF \DC-Motor-PWM\ IS
     ATTRIBUTE POWER OF one : SIGNAL IS true;
     SIGNAL zero : bit;
     ATTRIBUTE GROUND OF zero : SIGNAL IS true;
-    SIGNAL \Timer_1:TimerUDB:sT16:timerdp:u0.ce0__sig\ : bit;
-    SIGNAL \Timer_1:TimerUDB:sT16:timerdp:u0.cl0__sig\ : bit;
-    SIGNAL \Timer_1:TimerUDB:sT16:timerdp:u0.z0__sig\ : bit;
-    SIGNAL \Timer_1:TimerUDB:sT16:timerdp:u0.ff0__sig\ : bit;
-    SIGNAL \Timer_1:TimerUDB:sT16:timerdp:u0.ce1__sig\ : bit;
-    SIGNAL \Timer_1:TimerUDB:sT16:timerdp:u0.cl1__sig\ : bit;
-    SIGNAL \Timer_1:TimerUDB:sT16:timerdp:u0.z1__sig\ : bit;
-    SIGNAL \Timer_1:TimerUDB:sT16:timerdp:u0.ff1__sig\ : bit;
-    SIGNAL \Timer_1:TimerUDB:sT16:timerdp:u0.co_msb__sig\ : bit;
-    SIGNAL \Timer_1:TimerUDB:sT16:timerdp:u0.sol_msb__sig\ : bit;
-    SIGNAL \Timer_1:TimerUDB:sT16:timerdp:u0.cfbo__sig\ : bit;
-    SIGNAL \Timer_1:TimerUDB:sT16:timerdp:u1.sor__sig\ : bit;
-    SIGNAL \Timer_1:TimerUDB:sT16:timerdp:u1.cmsbo__sig\ : bit;
+    SIGNAL \Timer_1:TimerUDB:sT32:timerdp:u0.ce0__sig\ : bit;
+    SIGNAL \Timer_1:TimerUDB:sT32:timerdp:u0.cl0__sig\ : bit;
+    SIGNAL \Timer_1:TimerUDB:sT32:timerdp:u0.z0__sig\ : bit;
+    SIGNAL \Timer_1:TimerUDB:sT32:timerdp:u0.ff0__sig\ : bit;
+    SIGNAL \Timer_1:TimerUDB:sT32:timerdp:u0.ce1__sig\ : bit;
+    SIGNAL \Timer_1:TimerUDB:sT32:timerdp:u0.cl1__sig\ : bit;
+    SIGNAL \Timer_1:TimerUDB:sT32:timerdp:u0.z1__sig\ : bit;
+    SIGNAL \Timer_1:TimerUDB:sT32:timerdp:u0.ff1__sig\ : bit;
+    SIGNAL \Timer_1:TimerUDB:sT32:timerdp:u0.co_msb__sig\ : bit;
+    SIGNAL \Timer_1:TimerUDB:sT32:timerdp:u0.sol_msb__sig\ : bit;
+    SIGNAL \Timer_1:TimerUDB:sT32:timerdp:u0.cfbo__sig\ : bit;
+    SIGNAL \Timer_1:TimerUDB:sT32:timerdp:u1.sor__sig\ : bit;
+    SIGNAL \Timer_1:TimerUDB:sT32:timerdp:u1.cmsbo__sig\ : bit;
+    SIGNAL \Timer_1:TimerUDB:sT32:timerdp:u1.cl0__sig\ : bit;
+    SIGNAL \Timer_1:TimerUDB:sT32:timerdp:u1.z0__sig\ : bit;
+    SIGNAL \Timer_1:TimerUDB:sT32:timerdp:u1.ff0__sig\ : bit;
+    SIGNAL \Timer_1:TimerUDB:sT32:timerdp:u1.ce1__sig\ : bit;
+    SIGNAL \Timer_1:TimerUDB:sT32:timerdp:u1.cl1__sig\ : bit;
+    SIGNAL \Timer_1:TimerUDB:sT32:timerdp:u1.z1__sig\ : bit;
+    SIGNAL \Timer_1:TimerUDB:sT32:timerdp:u1.ff1__sig\ : bit;
+    SIGNAL \Timer_1:TimerUDB:sT32:timerdp:u1.co_msb__sig\ : bit;
+    SIGNAL \Timer_1:TimerUDB:sT32:timerdp:u1.sol_msb__sig\ : bit;
+    SIGNAL \Timer_1:TimerUDB:sT32:timerdp:u1.cfbo__sig\ : bit;
+    SIGNAL \Timer_1:TimerUDB:sT32:timerdp:u2.sor__sig\ : bit;
+    SIGNAL \Timer_1:TimerUDB:sT32:timerdp:u2.cmsbo__sig\ : bit;
+    SIGNAL \Timer_1:TimerUDB:sT32:timerdp:u2.cl0__sig\ : bit;
+    SIGNAL \Timer_1:TimerUDB:sT32:timerdp:u2.z0__sig\ : bit;
+    SIGNAL \Timer_1:TimerUDB:sT32:timerdp:u2.ff0__sig\ : bit;
+    SIGNAL \Timer_1:TimerUDB:sT32:timerdp:u2.ce1__sig\ : bit;
+    SIGNAL \Timer_1:TimerUDB:sT32:timerdp:u2.cl1__sig\ : bit;
+    SIGNAL \Timer_1:TimerUDB:sT32:timerdp:u2.z1__sig\ : bit;
+    SIGNAL \Timer_1:TimerUDB:sT32:timerdp:u2.ff1__sig\ : bit;
+    SIGNAL \Timer_1:TimerUDB:sT32:timerdp:u2.co_msb__sig\ : bit;
+    SIGNAL \Timer_1:TimerUDB:sT32:timerdp:u2.sol_msb__sig\ : bit;
+    SIGNAL \Timer_1:TimerUDB:sT32:timerdp:u2.cfbo__sig\ : bit;
+    SIGNAL \Timer_1:TimerUDB:sT32:timerdp:u3.sor__sig\ : bit;
+    SIGNAL \Timer_1:TimerUDB:sT32:timerdp:u3.cmsbo__sig\ : bit;
     ATTRIBUTE lib_model OF Rx_1(0) : LABEL IS "iocell1";
     ATTRIBUTE Location OF Rx_1(0) : LABEL IS "P12[6]";
     ATTRIBUTE lib_model OF Tx_1(0) : LABEL IS "iocell2";
@@ -138,8 +159,10 @@ ARCHITECTURE __DEFAULT__ OF \DC-Motor-PWM\ IS
     ATTRIBUTE lib_model OF \UART_1:BUART:sRX:RxSts\ : LABEL IS "statusicell2";
     ATTRIBUTE lib_model OF \Timer_1:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "controlcell1";
     ATTRIBUTE lib_model OF \Timer_1:TimerUDB:rstSts:stsreg\ : LABEL IS "statusicell3";
-    ATTRIBUTE lib_model OF \Timer_1:TimerUDB:sT16:timerdp:u0\ : LABEL IS "datapathcell4";
-    ATTRIBUTE lib_model OF \Timer_1:TimerUDB:sT16:timerdp:u1\ : LABEL IS "datapathcell5";
+    ATTRIBUTE lib_model OF \Timer_1:TimerUDB:sT32:timerdp:u0\ : LABEL IS "datapathcell4";
+    ATTRIBUTE lib_model OF \Timer_1:TimerUDB:sT32:timerdp:u1\ : LABEL IS "datapathcell5";
+    ATTRIBUTE lib_model OF \Timer_1:TimerUDB:sT32:timerdp:u2\ : LABEL IS "datapathcell6";
+    ATTRIBUTE lib_model OF \Timer_1:TimerUDB:sT32:timerdp:u3\ : LABEL IS "datapathcell7";
     ATTRIBUTE lib_model OF \UART_1:BUART:txn\ : LABEL IS "macrocell10";
     ATTRIBUTE lib_model OF \UART_1:BUART:tx_state_1\ : LABEL IS "macrocell11";
     ATTRIBUTE lib_model OF \UART_1:BUART:tx_state_0\ : LABEL IS "macrocell12";
@@ -480,18 +503,6 @@ ARCHITECTURE __DEFAULT__ OF \DC-Motor-PWM\ IS
     ATTRIBUTE udb_clk OF statusicell : COMPONENT IS "clock";
     ATTRIBUTE udb_clken OF statusicell : COMPONENT IS "clk_en";
     ATTRIBUTE udb_reset OF statusicell : COMPONENT IS "reset";
-    COMPONENT synccell
-        PORT (
-            in : IN std_ulogic;
-            clock : IN std_ulogic;
-            out : OUT std_ulogic;
-            clk_en : IN std_ulogic;
-            clock_n : IN std_ulogic;
-            extclk : IN std_ulogic;
-            extclk_n : IN std_ulogic);
-    END COMPONENT;
-    ATTRIBUTE udb_clk OF synccell : COMPONENT IS "clock,clock_n,extclk,extclk_n";
-    ATTRIBUTE udb_clken OF synccell : COMPONENT IS "clk_en";
 BEGIN
 
     ClockBlock:clockblockcell
@@ -509,12 +520,10 @@ BEGIN
             clk_bus => ClockBlock_BUS_CLK_local,
             dsi_clkin_div => open,
             dsi_glb_div => open,
-            dclk_glb_0 => \UART_1:Net_9\,
-            dclk_0 => \UART_1:Net_9_local\,
-            dclk_glb_1 => Net_255,
-            dclk_1 => Net_255_local,
-            dclk_glb_2 => Net_180,
-            dclk_2 => Net_180_local);
+            dclk_glb_0 => Net_188,
+            dclk_0 => Net_188_local,
+            dclk_glb_1 => \UART_1:Net_9\,
+            dclk_1 => \UART_1:Net_9_local\);
 
     Rx_1:logicalport
         GENERIC MAP(
@@ -986,7 +995,7 @@ BEGIN
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            clock => Net_255,
+            clock => Net_188,
             control_7 => \Timer_1:TimerUDB:control_7\,
             control_6 => \Timer_1:TimerUDB:control_6\,
             control_5 => \Timer_1:TimerUDB:control_5\,
@@ -1005,17 +1014,16 @@ BEGIN
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            clock => Net_255,
+            clock => Net_188,
             status_6 => open,
             status_5 => open,
             status_4 => open,
             status_3 => \Timer_1:TimerUDB:status_3\,
             status_2 => \Timer_1:TimerUDB:status_2\,
             status_1 => open,
-            status_0 => \Timer_1:TimerUDB:status_tc\,
-            interrupt => Net_172);
+            status_0 => \Timer_1:TimerUDB:status_tc\);
 
-    \Timer_1:TimerUDB:sT16:timerdp:u0\:datapathcell
+    \Timer_1:TimerUDB:sT32:timerdp:u0\:datapathcell
         GENERIC MAP(
             a0_init => "00000000",
             a1_init => "00000000",
@@ -1043,25 +1051,25 @@ BEGIN
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            clock => Net_255,
+            clock => Net_188,
             cs_addr_1 => \Timer_1:TimerUDB:control_7\,
             cs_addr_0 => \Timer_1:TimerUDB:per_zero\,
             busclk => ClockBlock_BUS_CLK,
-            ce0 => \Timer_1:TimerUDB:sT16:timerdp:u0.ce0__sig\,
-            cl0 => \Timer_1:TimerUDB:sT16:timerdp:u0.cl0__sig\,
-            z0 => \Timer_1:TimerUDB:sT16:timerdp:u0.z0__sig\,
-            ff0 => \Timer_1:TimerUDB:sT16:timerdp:u0.ff0__sig\,
-            ce1 => \Timer_1:TimerUDB:sT16:timerdp:u0.ce1__sig\,
-            cl1 => \Timer_1:TimerUDB:sT16:timerdp:u0.cl1__sig\,
-            z1 => \Timer_1:TimerUDB:sT16:timerdp:u0.z1__sig\,
-            ff1 => \Timer_1:TimerUDB:sT16:timerdp:u0.ff1__sig\,
-            co_msb => \Timer_1:TimerUDB:sT16:timerdp:u0.co_msb__sig\,
-            sol_msb => \Timer_1:TimerUDB:sT16:timerdp:u0.sol_msb__sig\,
-            cfbo => \Timer_1:TimerUDB:sT16:timerdp:u0.cfbo__sig\,
-            sil => \Timer_1:TimerUDB:sT16:timerdp:u1.sor__sig\,
-            cmsbi => \Timer_1:TimerUDB:sT16:timerdp:u1.cmsbo__sig\);
+            ce0 => \Timer_1:TimerUDB:sT32:timerdp:u0.ce0__sig\,
+            cl0 => \Timer_1:TimerUDB:sT32:timerdp:u0.cl0__sig\,
+            z0 => \Timer_1:TimerUDB:sT32:timerdp:u0.z0__sig\,
+            ff0 => \Timer_1:TimerUDB:sT32:timerdp:u0.ff0__sig\,
+            ce1 => \Timer_1:TimerUDB:sT32:timerdp:u0.ce1__sig\,
+            cl1 => \Timer_1:TimerUDB:sT32:timerdp:u0.cl1__sig\,
+            z1 => \Timer_1:TimerUDB:sT32:timerdp:u0.z1__sig\,
+            ff1 => \Timer_1:TimerUDB:sT32:timerdp:u0.ff1__sig\,
+            co_msb => \Timer_1:TimerUDB:sT32:timerdp:u0.co_msb__sig\,
+            sol_msb => \Timer_1:TimerUDB:sT32:timerdp:u0.sol_msb__sig\,
+            cfbo => \Timer_1:TimerUDB:sT32:timerdp:u0.cfbo__sig\,
+            sil => \Timer_1:TimerUDB:sT32:timerdp:u1.sor__sig\,
+            cmsbi => \Timer_1:TimerUDB:sT32:timerdp:u1.cmsbo__sig\);
 
-    \Timer_1:TimerUDB:sT16:timerdp:u1\:datapathcell
+    \Timer_1:TimerUDB:sT32:timerdp:u1\:datapathcell
         GENERIC MAP(
             a0_init => "00000000",
             a1_init => "00000000",
@@ -1089,43 +1097,144 @@ BEGIN
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            clock => Net_255,
+            clock => Net_188,
+            cs_addr_1 => \Timer_1:TimerUDB:control_7\,
+            cs_addr_0 => \Timer_1:TimerUDB:per_zero\,
+            busclk => ClockBlock_BUS_CLK,
+            ce0i => \Timer_1:TimerUDB:sT32:timerdp:u0.ce0__sig\,
+            cl0i => \Timer_1:TimerUDB:sT32:timerdp:u0.cl0__sig\,
+            z0i => \Timer_1:TimerUDB:sT32:timerdp:u0.z0__sig\,
+            ff0i => \Timer_1:TimerUDB:sT32:timerdp:u0.ff0__sig\,
+            ce1i => \Timer_1:TimerUDB:sT32:timerdp:u0.ce1__sig\,
+            cl1i => \Timer_1:TimerUDB:sT32:timerdp:u0.cl1__sig\,
+            z1i => \Timer_1:TimerUDB:sT32:timerdp:u0.z1__sig\,
+            ff1i => \Timer_1:TimerUDB:sT32:timerdp:u0.ff1__sig\,
+            ci => \Timer_1:TimerUDB:sT32:timerdp:u0.co_msb__sig\,
+            sir => \Timer_1:TimerUDB:sT32:timerdp:u0.sol_msb__sig\,
+            cfbi => \Timer_1:TimerUDB:sT32:timerdp:u0.cfbo__sig\,
+            sor => \Timer_1:TimerUDB:sT32:timerdp:u1.sor__sig\,
+            cmsbo => \Timer_1:TimerUDB:sT32:timerdp:u1.cmsbo__sig\,
+            ce0 => \Timer_1:TimerUDB:sT32:timerdp:u1.ce0__sig\,
+            cl0 => \Timer_1:TimerUDB:sT32:timerdp:u1.cl0__sig\,
+            z0 => \Timer_1:TimerUDB:sT32:timerdp:u1.z0__sig\,
+            ff0 => \Timer_1:TimerUDB:sT32:timerdp:u1.ff0__sig\,
+            ce1 => \Timer_1:TimerUDB:sT32:timerdp:u1.ce1__sig\,
+            cl1 => \Timer_1:TimerUDB:sT32:timerdp:u1.cl1__sig\,
+            z1 => \Timer_1:TimerUDB:sT32:timerdp:u1.z1__sig\,
+            ff1 => \Timer_1:TimerUDB:sT32:timerdp:u1.ff1__sig\,
+            co_msb => \Timer_1:TimerUDB:sT32:timerdp:u1.co_msb__sig\,
+            sol_msb => \Timer_1:TimerUDB:sT32:timerdp:u1.sol_msb__sig\,
+            cfbo => \Timer_1:TimerUDB:sT32:timerdp:u1.cfbo__sig\,
+            sil => \Timer_1:TimerUDB:sT32:timerdp:u2.sor__sig\,
+            cmsbi => \Timer_1:TimerUDB:sT32:timerdp:u2.cmsbo__sig\);
+
+    \Timer_1:TimerUDB:sT32:timerdp:u2\:datapathcell
+        GENERIC MAP(
+            a0_init => "00000000",
+            a1_init => "00000000",
+            ce0_sync => 1,
+            ce1_sync => 1,
+            cl0_sync => 1,
+            cl1_sync => 1,
+            cmsb_sync => 1,
+            co_msb_sync => 1,
+            cy_dpconfig => "0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111100000110000000000000001000000110000000000011000",
+            d0_init => "00000000",
+            d1_init => "00000000",
+            f0_blk_sync => 1,
+            f0_bus_sync => 1,
+            f1_blk_sync => 1,
+            f1_bus_sync => 1,
+            ff0_sync => 1,
+            ff1_sync => 1,
+            ov_msb_sync => 1,
+            so_sync => 1,
+            z0_sync => 1,
+            z1_sync => 1,
+            uses_p_in => '0',
+            uses_p_out => '0',
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_188,
+            cs_addr_1 => \Timer_1:TimerUDB:control_7\,
+            cs_addr_0 => \Timer_1:TimerUDB:per_zero\,
+            busclk => ClockBlock_BUS_CLK,
+            ce0i => \Timer_1:TimerUDB:sT32:timerdp:u1.ce0__sig\,
+            cl0i => \Timer_1:TimerUDB:sT32:timerdp:u1.cl0__sig\,
+            z0i => \Timer_1:TimerUDB:sT32:timerdp:u1.z0__sig\,
+            ff0i => \Timer_1:TimerUDB:sT32:timerdp:u1.ff0__sig\,
+            ce1i => \Timer_1:TimerUDB:sT32:timerdp:u1.ce1__sig\,
+            cl1i => \Timer_1:TimerUDB:sT32:timerdp:u1.cl1__sig\,
+            z1i => \Timer_1:TimerUDB:sT32:timerdp:u1.z1__sig\,
+            ff1i => \Timer_1:TimerUDB:sT32:timerdp:u1.ff1__sig\,
+            ci => \Timer_1:TimerUDB:sT32:timerdp:u1.co_msb__sig\,
+            sir => \Timer_1:TimerUDB:sT32:timerdp:u1.sol_msb__sig\,
+            cfbi => \Timer_1:TimerUDB:sT32:timerdp:u1.cfbo__sig\,
+            sor => \Timer_1:TimerUDB:sT32:timerdp:u2.sor__sig\,
+            cmsbo => \Timer_1:TimerUDB:sT32:timerdp:u2.cmsbo__sig\,
+            ce0 => \Timer_1:TimerUDB:sT32:timerdp:u2.ce0__sig\,
+            cl0 => \Timer_1:TimerUDB:sT32:timerdp:u2.cl0__sig\,
+            z0 => \Timer_1:TimerUDB:sT32:timerdp:u2.z0__sig\,
+            ff0 => \Timer_1:TimerUDB:sT32:timerdp:u2.ff0__sig\,
+            ce1 => \Timer_1:TimerUDB:sT32:timerdp:u2.ce1__sig\,
+            cl1 => \Timer_1:TimerUDB:sT32:timerdp:u2.cl1__sig\,
+            z1 => \Timer_1:TimerUDB:sT32:timerdp:u2.z1__sig\,
+            ff1 => \Timer_1:TimerUDB:sT32:timerdp:u2.ff1__sig\,
+            co_msb => \Timer_1:TimerUDB:sT32:timerdp:u2.co_msb__sig\,
+            sol_msb => \Timer_1:TimerUDB:sT32:timerdp:u2.sol_msb__sig\,
+            cfbo => \Timer_1:TimerUDB:sT32:timerdp:u2.cfbo__sig\,
+            sil => \Timer_1:TimerUDB:sT32:timerdp:u3.sor__sig\,
+            cmsbi => \Timer_1:TimerUDB:sT32:timerdp:u3.cmsbo__sig\);
+
+    \Timer_1:TimerUDB:sT32:timerdp:u3\:datapathcell
+        GENERIC MAP(
+            a0_init => "00000000",
+            a1_init => "00000000",
+            ce0_sync => 1,
+            ce1_sync => 1,
+            cl0_sync => 1,
+            cl1_sync => 1,
+            cmsb_sync => 1,
+            co_msb_sync => 1,
+            cy_dpconfig => "0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111100000110000000000000001000000110000000000011000",
+            d0_init => "00000000",
+            d1_init => "00000000",
+            f0_blk_sync => 1,
+            f0_bus_sync => 1,
+            f1_blk_sync => 1,
+            f1_bus_sync => 1,
+            ff0_sync => 1,
+            ff1_sync => 1,
+            ov_msb_sync => 1,
+            so_sync => 1,
+            z0_sync => 1,
+            z1_sync => 1,
+            uses_p_in => '0',
+            uses_p_out => '0',
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_188,
             cs_addr_1 => \Timer_1:TimerUDB:control_7\,
             cs_addr_0 => \Timer_1:TimerUDB:per_zero\,
             z0_comb => \Timer_1:TimerUDB:per_zero\,
             f0_bus_stat_comb => \Timer_1:TimerUDB:status_3\,
             f0_blk_stat_comb => \Timer_1:TimerUDB:status_2\,
             busclk => ClockBlock_BUS_CLK,
-            ce0i => \Timer_1:TimerUDB:sT16:timerdp:u0.ce0__sig\,
-            cl0i => \Timer_1:TimerUDB:sT16:timerdp:u0.cl0__sig\,
-            z0i => \Timer_1:TimerUDB:sT16:timerdp:u0.z0__sig\,
-            ff0i => \Timer_1:TimerUDB:sT16:timerdp:u0.ff0__sig\,
-            ce1i => \Timer_1:TimerUDB:sT16:timerdp:u0.ce1__sig\,
-            cl1i => \Timer_1:TimerUDB:sT16:timerdp:u0.cl1__sig\,
-            z1i => \Timer_1:TimerUDB:sT16:timerdp:u0.z1__sig\,
-            ff1i => \Timer_1:TimerUDB:sT16:timerdp:u0.ff1__sig\,
-            ci => \Timer_1:TimerUDB:sT16:timerdp:u0.co_msb__sig\,
-            sir => \Timer_1:TimerUDB:sT16:timerdp:u0.sol_msb__sig\,
-            cfbi => \Timer_1:TimerUDB:sT16:timerdp:u0.cfbo__sig\,
-            sor => \Timer_1:TimerUDB:sT16:timerdp:u1.sor__sig\,
-            cmsbo => \Timer_1:TimerUDB:sT16:timerdp:u1.cmsbo__sig\);
-
-    \Sync_1:genblk1[0]:INST\:synccell
-        GENERIC MAP(
-            clk_inv => '0',
-            clken_mode => 1)
-        PORT MAP(
-            clock => Net_255,
-            in => Net_180_local,
-            out => Net_184);
-
-    TimerISR:interrupt
-        GENERIC MAP(
-            int_type => "00",
-            is_nmi => 0)
-        PORT MAP(
-            interrupt => Net_172,
-            clock => ClockBlock_BUS_CLK);
+            ce0i => \Timer_1:TimerUDB:sT32:timerdp:u2.ce0__sig\,
+            cl0i => \Timer_1:TimerUDB:sT32:timerdp:u2.cl0__sig\,
+            z0i => \Timer_1:TimerUDB:sT32:timerdp:u2.z0__sig\,
+            ff0i => \Timer_1:TimerUDB:sT32:timerdp:u2.ff0__sig\,
+            ce1i => \Timer_1:TimerUDB:sT32:timerdp:u2.ce1__sig\,
+            cl1i => \Timer_1:TimerUDB:sT32:timerdp:u2.cl1__sig\,
+            z1i => \Timer_1:TimerUDB:sT32:timerdp:u2.z1__sig\,
+            ff1i => \Timer_1:TimerUDB:sT32:timerdp:u2.ff1__sig\,
+            ci => \Timer_1:TimerUDB:sT32:timerdp:u2.co_msb__sig\,
+            sir => \Timer_1:TimerUDB:sT32:timerdp:u2.sol_msb__sig\,
+            cfbi => \Timer_1:TimerUDB:sT32:timerdp:u2.cfbo__sig\,
+            sor => \Timer_1:TimerUDB:sT32:timerdp:u3.sor__sig\,
+            cmsbo => \Timer_1:TimerUDB:sT32:timerdp:u3.cmsbo__sig\);
 
     \UART_1:BUART:txn\:macrocell
         GENERIC MAP(
