@@ -1,0 +1,1897 @@
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cczxtBVg.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"Loadcell.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.initLoadcell,"ax",%progbits
+  20              		.align	2
+  21              		.global	initLoadcell
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	initLoadcell, %function
+  25              	initLoadcell:
+  26              	.LFB64:
+  27              		.file 1 "Loadcell.c"
+   1:Loadcell.c    **** /* ========================================
+   2:Loadcell.c    ****  *
+   3:Loadcell.c    ****  * Copyright YOUR COMPANY, THE YEAR
+   4:Loadcell.c    ****  * All Rights Reserved
+   5:Loadcell.c    ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:Loadcell.c    ****  *
+   7:Loadcell.c    ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:Loadcell.c    ****  * WHICH IS THE PROPERTY OF your company.
+   9:Loadcell.c    ****  *
+  10:Loadcell.c    ****  * ========================================
+  11:Loadcell.c    **** */
+  12:Loadcell.c    **** #include "project.h"
+  13:Loadcell.c    **** #include "Loadcell.h"
+  14:Loadcell.c    **** #include <stdio.h>
+  15:Loadcell.c    **** 
+  16:Loadcell.c    **** 
+  17:Loadcell.c    **** float zeroDriftOffset=0;
+  18:Loadcell.c    **** 
+  19:Loadcell.c    **** 
+  20:Loadcell.c    **** 
+  21:Loadcell.c    **** 
+  22:Loadcell.c    **** 
+  23:Loadcell.c    **** void initLoadcell(void)
+  24:Loadcell.c    **** {
+  28              		.loc 1 24 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 08B5     		push	{r3, lr}
+  33              		.cfi_def_cfa_offset 8
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cczxtBVg.s 			page 2
+
+
+  34              		.cfi_offset 3, -8
+  35              		.cfi_offset 14, -4
+  25:Loadcell.c    ****     ADC_SAR_1_Start();
+  36              		.loc 1 25 0
+  37 0002 FFF7FEFF 		bl	ADC_SAR_1_Start
+  38              	.LVL0:
+  26:Loadcell.c    ****     ADC_SAR_1_StartConvert();
+  39              		.loc 1 26 0
+  40 0006 FFF7FEFF 		bl	ADC_SAR_1_StartConvert
+  41              	.LVL1:
+  42 000a 08BD     		pop	{r3, pc}
+  43              		.cfi_endproc
+  44              	.LFE64:
+  45              		.size	initLoadcell, .-initLoadcell
+  46              		.global	__aeabi_i2f
+  47              		.global	__aeabi_fadd
+  48              		.global	__aeabi_fdiv
+  49              		.global	__aeabi_fsub
+  50              		.section	.text.offset_Zerodrift_calibrate,"ax",%progbits
+  51              		.align	2
+  52              		.global	offset_Zerodrift_calibrate
+  53              		.thumb
+  54              		.thumb_func
+  55              		.type	offset_Zerodrift_calibrate, %function
+  56              	offset_Zerodrift_calibrate:
+  57              	.LFB65:
+  27:Loadcell.c    **** }
+  28:Loadcell.c    **** 
+  29:Loadcell.c    **** 
+  30:Loadcell.c    **** 
+  31:Loadcell.c    **** void offset_Zerodrift_calibrate(uint8_t repeats, float startoffset, float factor,uint8_t preload)
+  32:Loadcell.c    **** {
+  58              		.loc 1 32 0
+  59              		.cfi_startproc
+  60              		@ args = 0, pretend = 0, frame = 8
+  61              		@ frame_needed = 1, uses_anonymous_args = 0
+  62              	.LVL2:
+  63 0000 2DE9F04F 		push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
+  64              		.cfi_def_cfa_offset 36
+  65              		.cfi_offset 4, -36
+  66              		.cfi_offset 5, -32
+  67              		.cfi_offset 6, -28
+  68              		.cfi_offset 7, -24
+  69              		.cfi_offset 8, -20
+  70              		.cfi_offset 9, -16
+  71              		.cfi_offset 10, -12
+  72              		.cfi_offset 11, -8
+  73              		.cfi_offset 14, -4
+  74 0004 83B0     		sub	sp, sp, #12
+  75              		.cfi_def_cfa_offset 48
+  76 0006 00AF     		add	r7, sp, #0
+  77              		.cfi_def_cfa_register 7
+  78 0008 0646     		mov	r6, r0
+  79 000a 8A46     		mov	r10, r1
+  80 000c 9146     		mov	r9, r2
+  81 000e 7B60     		str	r3, [r7, #4]
+  33:Loadcell.c    ****    float result_array[repeats];
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cczxtBVg.s 			page 3
+
+
+  82              		.loc 1 33 0
+  83 0010 0546     		mov	r5, r0
+  84              	.LVL3:
+  85 0012 8300     		lsls	r3, r0, #2
+  86              	.LVL4:
+  87 0014 0A33     		adds	r3, r3, #10
+  88 0016 23F00703 		bic	r3, r3, #7
+  89 001a ADEB030D 		sub	sp, sp, r3
+  90 001e EB46     		mov	fp, sp
+  91              	.LVL5:
+  34:Loadcell.c    ****     float result_gram;
+  35:Loadcell.c    ****     float result=0;
+  36:Loadcell.c    ****     
+  37:Loadcell.c    ****     int i=0;
+  92              		.loc 1 37 0
+  93 0020 0024     		movs	r4, #0
+  35:Loadcell.c    ****     
+  94              		.loc 1 35 0
+  95 0022 4FF00008 		mov	r8, #0
+  38:Loadcell.c    ****             while(i<repeats)
+  96              		.loc 1 38 0
+  97 0026 0FE0     		b	.L5
+  98              	.LVL6:
+  99              	.L6:
+  39:Loadcell.c    ****             {
+  40:Loadcell.c    ****                 if (ADC_SAR_1_IsEndConversion(ADC_SAR_1_WAIT_FOR_RESULT))
+ 100              		.loc 1 40 0
+ 101 0028 0020     		movs	r0, #0
+ 102 002a FFF7FEFF 		bl	ADC_SAR_1_IsEndConversion
+ 103              	.LVL7:
+ 104 002e 58B1     		cbz	r0, .L5
+  41:Loadcell.c    ****                 {
+  42:Loadcell.c    ****                 result_array[i]=ADC_SAR_1_GetResult16();
+ 105              		.loc 1 42 0
+ 106 0030 FFF7FEFF 		bl	ADC_SAR_1_GetResult16
+ 107              	.LVL8:
+ 108 0034 FFF7FEFF 		bl	__aeabi_i2f
+ 109              	.LVL9:
+ 110 0038 0146     		mov	r1, r0
+ 111 003a 4BF82400 		str	r0, [fp, r4, lsl #2]	@ float
+  43:Loadcell.c    ****                 result+=result_array[i];
+ 112              		.loc 1 43 0
+ 113 003e 4046     		mov	r0, r8
+ 114 0040 FFF7FEFF 		bl	__aeabi_fadd
+ 115              	.LVL10:
+ 116 0044 8046     		mov	r8, r0
+ 117              	.LVL11:
+  44:Loadcell.c    ****                 i++;
+ 118              		.loc 1 44 0
+ 119 0046 0134     		adds	r4, r4, #1
+ 120              	.LVL12:
+ 121              	.L5:
+  38:Loadcell.c    ****             {
+ 122              		.loc 1 38 0
+ 123 0048 AC42     		cmp	r4, r5
+ 124 004a EDDB     		blt	.L6
+  45:Loadcell.c    ****                 }
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cczxtBVg.s 			page 4
+
+
+  46:Loadcell.c    ****             }
+  47:Loadcell.c    ****             
+  48:Loadcell.c    ****     result=result/repeats; 
+ 125              		.loc 1 48 0
+ 126 004c 3046     		mov	r0, r6
+ 127 004e FFF7FEFF 		bl	__aeabi_i2f
+ 128              	.LVL13:
+ 129 0052 0146     		mov	r1, r0
+ 130 0054 4046     		mov	r0, r8
+ 131 0056 FFF7FEFF 		bl	__aeabi_fdiv
+ 132              	.LVL14:
+  49:Loadcell.c    ****     result_gram = (((float)result-startoffset)/factor); // Konvertering til gram
+ 133              		.loc 1 49 0
+ 134 005a 5146     		mov	r1, r10
+ 135 005c FFF7FEFF 		bl	__aeabi_fsub
+ 136              	.LVL15:
+ 137 0060 4946     		mov	r1, r9
+ 138 0062 FFF7FEFF 		bl	__aeabi_fdiv
+ 139              	.LVL16:
+ 140 0066 0446     		mov	r4, r0
+ 141              	.LVL17:
+  50:Loadcell.c    ****     zeroDriftOffset= result_gram-preload;
+ 142              		.loc 1 50 0
+ 143 0068 7868     		ldr	r0, [r7, #4]
+ 144              	.LVL18:
+ 145 006a FFF7FEFF 		bl	__aeabi_i2f
+ 146              	.LVL19:
+ 147 006e 0146     		mov	r1, r0
+ 148 0070 2046     		mov	r0, r4
+ 149 0072 FFF7FEFF 		bl	__aeabi_fsub
+ 150              	.LVL20:
+ 151 0076 034B     		ldr	r3, .L8
+ 152 0078 1860     		str	r0, [r3]	@ float
+  51:Loadcell.c    **** }
+ 153              		.loc 1 51 0
+ 154 007a 0C37     		adds	r7, r7, #12
+ 155              		.cfi_def_cfa_offset 36
+ 156 007c BD46     		mov	sp, r7
+ 157              		.cfi_def_cfa_register 13
+ 158              		@ sp needed
+ 159 007e BDE8F08F 		pop	{r4, r5, r6, r7, r8, r9, r10, fp, pc}
+ 160              	.LVL21:
+ 161              	.L9:
+ 162 0082 00BF     		.align	2
+ 163              	.L8:
+ 164 0084 00000000 		.word	.LANCHOR0
+ 165              		.cfi_endproc
+ 166              	.LFE65:
+ 167              		.size	offset_Zerodrift_calibrate, .-offset_Zerodrift_calibrate
+ 168              		.global	__aeabi_ui2f
+ 169              		.global	__aeabi_fcmplt
+ 170              		.section	.text.wait_for_weight,"ax",%progbits
+ 171              		.align	2
+ 172              		.global	wait_for_weight
+ 173              		.thumb
+ 174              		.thumb_func
+ 175              		.type	wait_for_weight, %function
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cczxtBVg.s 			page 5
+
+
+ 176              	wait_for_weight:
+ 177              	.LFB66:
+  52:Loadcell.c    **** void wait_for_weight(float startoffset, float factor,uint8_t preload)
+  53:Loadcell.c    **** {
+ 178              		.loc 1 53 0
+ 179              		.cfi_startproc
+ 180              		@ args = 0, pretend = 0, frame = 0
+ 181              		@ frame_needed = 0, uses_anonymous_args = 0
+ 182              	.LVL22:
+ 183 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 184              		.cfi_def_cfa_offset 24
+ 185              		.cfi_offset 3, -24
+ 186              		.cfi_offset 4, -20
+ 187              		.cfi_offset 5, -16
+ 188              		.cfi_offset 6, -12
+ 189              		.cfi_offset 7, -8
+ 190              		.cfi_offset 14, -4
+ 191 0002 0746     		mov	r7, r0
+ 192 0004 0E46     		mov	r6, r1
+ 193 0006 1546     		mov	r5, r2
+  54:Loadcell.c    ****     float result_gram;
+  55:Loadcell.c    ****     while(result_gram<50)
+ 194              		.loc 1 55 0
+ 195 0008 1BE0     		b	.L12
+ 196              	.LVL23:
+ 197              	.L13:
+  56:Loadcell.c    ****     {
+  57:Loadcell.c    ****     if (ADC_SAR_1_IsEndConversion(ADC_SAR_1_WAIT_FOR_RESULT))
+ 198              		.loc 1 57 0
+ 199 000a 0020     		movs	r0, #0
+ 200 000c FFF7FEFF 		bl	ADC_SAR_1_IsEndConversion
+ 201              	.LVL24:
+ 202 0010 B8B1     		cbz	r0, .L12
+ 203              	.LBB2:
+  58:Loadcell.c    ****         {
+  59:Loadcell.c    ****             uint16_t result = ADC_SAR_1_GetResult16(); // << NOTE! This is NOT a voltage or a weigh
+ 204              		.loc 1 59 0
+ 205 0012 FFF7FEFF 		bl	ADC_SAR_1_GetResult16
+ 206              	.LVL25:
+  60:Loadcell.c    ****             result_gram = (((float)result-startoffset)/factor); // Konvertering til gram
+ 207              		.loc 1 60 0
+ 208 0016 80B2     		uxth	r0, r0
+ 209 0018 FFF7FEFF 		bl	__aeabi_ui2f
+ 210              	.LVL26:
+ 211 001c 3946     		mov	r1, r7
+ 212 001e FFF7FEFF 		bl	__aeabi_fsub
+ 213              	.LVL27:
+ 214 0022 3146     		mov	r1, r6
+ 215 0024 FFF7FEFF 		bl	__aeabi_fdiv
+ 216              	.LVL28:
+  61:Loadcell.c    ****             result_gram -=zeroDriftOffset;
+ 217              		.loc 1 61 0
+ 218 0028 094B     		ldr	r3, .L15
+ 219 002a 1968     		ldr	r1, [r3]	@ float
+ 220 002c FFF7FEFF 		bl	__aeabi_fsub
+ 221              	.LVL29:
+ 222 0030 0446     		mov	r4, r0
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cczxtBVg.s 			page 6
+
+
+ 223              	.LVL30:
+  62:Loadcell.c    ****             result_gram -=preload;
+ 224              		.loc 1 62 0
+ 225 0032 2846     		mov	r0, r5
+ 226              	.LVL31:
+ 227 0034 FFF7FEFF 		bl	__aeabi_i2f
+ 228              	.LVL32:
+ 229 0038 0146     		mov	r1, r0
+ 230 003a 2046     		mov	r0, r4
+ 231 003c FFF7FEFF 		bl	__aeabi_fsub
+ 232              	.LVL33:
+ 233 0040 0446     		mov	r4, r0
+ 234              	.LVL34:
+ 235              	.L12:
+ 236              	.LBE2:
+  55:Loadcell.c    ****     {
+ 237              		.loc 1 55 0
+ 238 0042 0449     		ldr	r1, .L15+4
+ 239 0044 2046     		mov	r0, r4
+ 240 0046 FFF7FEFF 		bl	__aeabi_fcmplt
+ 241              	.LVL35:
+ 242 004a 0028     		cmp	r0, #0
+ 243 004c DDD1     		bne	.L13
+  63:Loadcell.c    ****         }
+  64:Loadcell.c    ****     }
+  65:Loadcell.c    **** }
+ 244              		.loc 1 65 0
+ 245 004e F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 246              	.LVL36:
+ 247              	.L16:
+ 248              		.align	2
+ 249              	.L15:
+ 250 0050 00000000 		.word	.LANCHOR0
+ 251 0054 00004842 		.word	1112014848
+ 252              		.cfi_endproc
+ 253              	.LFE66:
+ 254              		.size	wait_for_weight, .-wait_for_weight
+ 255              		.section	.text.readWeight,"ax",%progbits
+ 256              		.align	2
+ 257              		.global	readWeight
+ 258              		.thumb
+ 259              		.thumb_func
+ 260              		.type	readWeight, %function
+ 261              	readWeight:
+ 262              	.LFB67:
+  66:Loadcell.c    **** 
+  67:Loadcell.c    **** float readWeight(uint8_t repeats,float startoffset, float factor,uint8_t preload)
+  68:Loadcell.c    **** {
+ 263              		.loc 1 68 0
+ 264              		.cfi_startproc
+ 265              		@ args = 0, pretend = 0, frame = 8
+ 266              		@ frame_needed = 1, uses_anonymous_args = 0
+ 267              	.LVL37:
+ 268 0000 2DE9F04F 		push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
+ 269              		.cfi_def_cfa_offset 36
+ 270              		.cfi_offset 4, -36
+ 271              		.cfi_offset 5, -32
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cczxtBVg.s 			page 7
+
+
+ 272              		.cfi_offset 6, -28
+ 273              		.cfi_offset 7, -24
+ 274              		.cfi_offset 8, -20
+ 275              		.cfi_offset 9, -16
+ 276              		.cfi_offset 10, -12
+ 277              		.cfi_offset 11, -8
+ 278              		.cfi_offset 14, -4
+ 279 0004 83B0     		sub	sp, sp, #12
+ 280              		.cfi_def_cfa_offset 48
+ 281 0006 00AF     		add	r7, sp, #0
+ 282              		.cfi_def_cfa_register 7
+ 283 0008 0646     		mov	r6, r0
+ 284 000a 8A46     		mov	r10, r1
+ 285 000c 9146     		mov	r9, r2
+ 286 000e 7B60     		str	r3, [r7, #4]
+ 287              	.LVL38:
+  69:Loadcell.c    ****     uint8_t repeating = repeats;
+  70:Loadcell.c    ****     float result_array[repeating];
+ 288              		.loc 1 70 0
+ 289 0010 0546     		mov	r5, r0
+ 290              	.LVL39:
+ 291 0012 8300     		lsls	r3, r0, #2
+ 292              	.LVL40:
+ 293 0014 0A33     		adds	r3, r3, #10
+ 294 0016 23F00703 		bic	r3, r3, #7
+ 295 001a ADEB030D 		sub	sp, sp, r3
+ 296 001e EB46     		mov	fp, sp
+ 297              	.LVL41:
+  71:Loadcell.c    ****     float result_gram;
+  72:Loadcell.c    ****     float result=0;
+  73:Loadcell.c    ****     
+  74:Loadcell.c    ****     int i=0;
+ 298              		.loc 1 74 0
+ 299 0020 0024     		movs	r4, #0
+  72:Loadcell.c    ****     
+ 300              		.loc 1 72 0
+ 301 0022 4FF00008 		mov	r8, #0
+  75:Loadcell.c    ****             while(i<repeating)
+ 302              		.loc 1 75 0
+ 303 0026 0FE0     		b	.L19
+ 304              	.LVL42:
+ 305              	.L20:
+  76:Loadcell.c    ****             {
+  77:Loadcell.c    ****                 if (ADC_SAR_1_IsEndConversion(ADC_SAR_1_WAIT_FOR_RESULT))
+ 306              		.loc 1 77 0
+ 307 0028 0020     		movs	r0, #0
+ 308 002a FFF7FEFF 		bl	ADC_SAR_1_IsEndConversion
+ 309              	.LVL43:
+ 310 002e 58B1     		cbz	r0, .L19
+  78:Loadcell.c    ****                 {
+  79:Loadcell.c    ****                 result_array[i]=ADC_SAR_1_GetResult16();
+ 311              		.loc 1 79 0
+ 312 0030 FFF7FEFF 		bl	ADC_SAR_1_GetResult16
+ 313              	.LVL44:
+ 314 0034 FFF7FEFF 		bl	__aeabi_i2f
+ 315              	.LVL45:
+ 316 0038 0146     		mov	r1, r0
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cczxtBVg.s 			page 8
+
+
+ 317 003a 4BF82400 		str	r0, [fp, r4, lsl #2]	@ float
+  80:Loadcell.c    ****                 result+=result_array[i];
+ 318              		.loc 1 80 0
+ 319 003e 4046     		mov	r0, r8
+ 320 0040 FFF7FEFF 		bl	__aeabi_fadd
+ 321              	.LVL46:
+ 322 0044 8046     		mov	r8, r0
+ 323              	.LVL47:
+  81:Loadcell.c    ****                 i++;
+ 324              		.loc 1 81 0
+ 325 0046 0134     		adds	r4, r4, #1
+ 326              	.LVL48:
+ 327              	.L19:
+  75:Loadcell.c    ****             {
+ 328              		.loc 1 75 0
+ 329 0048 AC42     		cmp	r4, r5
+ 330 004a EDDB     		blt	.L20
+  82:Loadcell.c    ****                 }
+  83:Loadcell.c    ****                 
+  84:Loadcell.c    ****             }
+  85:Loadcell.c    ****             
+  86:Loadcell.c    ****             result=result/repeating; 
+ 331              		.loc 1 86 0
+ 332 004c 3046     		mov	r0, r6
+ 333 004e FFF7FEFF 		bl	__aeabi_i2f
+ 334              	.LVL49:
+ 335 0052 0146     		mov	r1, r0
+ 336 0054 4046     		mov	r0, r8
+ 337 0056 FFF7FEFF 		bl	__aeabi_fdiv
+ 338              	.LVL50:
+  87:Loadcell.c    ****             result_gram = (((float)result-startoffset)/factor); // Konvertering til gram
+ 339              		.loc 1 87 0
+ 340 005a 5146     		mov	r1, r10
+ 341 005c FFF7FEFF 		bl	__aeabi_fsub
+ 342              	.LVL51:
+ 343 0060 4946     		mov	r1, r9
+ 344 0062 FFF7FEFF 		bl	__aeabi_fdiv
+ 345              	.LVL52:
+  88:Loadcell.c    ****             
+  89:Loadcell.c    ****     return result_gram-zeroDriftOffset-(float)preload;
+ 346              		.loc 1 89 0
+ 347 0066 084B     		ldr	r3, .L22
+ 348 0068 1968     		ldr	r1, [r3]	@ float
+ 349 006a FFF7FEFF 		bl	__aeabi_fsub
+ 350              	.LVL53:
+ 351 006e 0446     		mov	r4, r0
+ 352              	.LVL54:
+ 353 0070 7868     		ldr	r0, [r7, #4]
+ 354 0072 FFF7FEFF 		bl	__aeabi_ui2f
+ 355              	.LVL55:
+ 356 0076 0146     		mov	r1, r0
+ 357 0078 2046     		mov	r0, r4
+ 358 007a FFF7FEFF 		bl	__aeabi_fsub
+ 359              	.LVL56:
+  90:Loadcell.c    **** }
+ 360              		.loc 1 90 0
+ 361 007e 0C37     		adds	r7, r7, #12
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cczxtBVg.s 			page 9
+
+
+ 362              		.cfi_def_cfa_offset 36
+ 363 0080 BD46     		mov	sp, r7
+ 364              		.cfi_def_cfa_register 13
+ 365              		@ sp needed
+ 366 0082 BDE8F08F 		pop	{r4, r5, r6, r7, r8, r9, r10, fp, pc}
+ 367              	.LVL57:
+ 368              	.L23:
+ 369 0086 00BF     		.align	2
+ 370              	.L22:
+ 371 0088 00000000 		.word	.LANCHOR0
+ 372              		.cfi_endproc
+ 373              	.LFE67:
+ 374              		.size	readWeight, .-readWeight
+ 375              		.global	zeroDriftOffset
+ 376              		.bss
+ 377              		.align	2
+ 378              		.set	.LANCHOR0,. + 0
+ 379              		.type	zeroDriftOffset, %object
+ 380              		.size	zeroDriftOffset, 4
+ 381              	zeroDriftOffset:
+ 382 0000 00000000 		.space	4
+ 383              		.text
+ 384              	.Letext0:
+ 385              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 386              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 387              		.file 4 "Generated_Source\\PSoC5/core_cm3.h"
+ 388              		.file 5 "Generated_Source\\PSoC5/ADC_SAR_1.h"
+ 389              		.section	.debug_info,"",%progbits
+ 390              	.Ldebug_info0:
+ 391 0000 6F030000 		.4byte	0x36f
+ 392 0004 0400     		.2byte	0x4
+ 393 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 394 000a 04       		.byte	0x4
+ 395 000b 01       		.uleb128 0x1
+ 396 000c B0000000 		.4byte	.LASF37
+ 397 0010 0C       		.byte	0xc
+ 398 0011 8D020000 		.4byte	.LASF38
+ 399 0015 67010000 		.4byte	.LASF39
+ 400 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 401 001d 00000000 		.4byte	0
+ 402 0021 00000000 		.4byte	.Ldebug_line0
+ 403 0025 02       		.uleb128 0x2
+ 404 0026 04       		.byte	0x4
+ 405 0027 04       		.byte	0x4
+ 406 0028 77000000 		.4byte	.LASF0
+ 407 002c 02       		.uleb128 0x2
+ 408 002d 01       		.byte	0x1
+ 409 002e 06       		.byte	0x6
+ 410 002f C8020000 		.4byte	.LASF1
+ 411 0033 03       		.uleb128 0x3
+ 412 0034 08000000 		.4byte	.LASF4
+ 413 0038 02       		.byte	0x2
+ 414 0039 1D       		.byte	0x1d
+ 415 003a 3E000000 		.4byte	0x3e
+ 416 003e 02       		.uleb128 0x2
+ 417 003f 01       		.byte	0x1
+ 418 0040 08       		.byte	0x8
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cczxtBVg.s 			page 10
+
+
+ 419 0041 E8010000 		.4byte	.LASF2
+ 420 0045 02       		.uleb128 0x2
+ 421 0046 02       		.byte	0x2
+ 422 0047 05       		.byte	0x5
+ 423 0048 98020000 		.4byte	.LASF3
+ 424 004c 03       		.uleb128 0x3
+ 425 004d F6010000 		.4byte	.LASF5
+ 426 0051 02       		.byte	0x2
+ 427 0052 2B       		.byte	0x2b
+ 428 0053 57000000 		.4byte	0x57
+ 429 0057 02       		.uleb128 0x2
+ 430 0058 02       		.byte	0x2
+ 431 0059 07       		.byte	0x7
+ 432 005a 47000000 		.4byte	.LASF6
+ 433 005e 03       		.uleb128 0x3
+ 434 005f 3D000000 		.4byte	.LASF7
+ 435 0063 02       		.byte	0x2
+ 436 0064 3F       		.byte	0x3f
+ 437 0065 69000000 		.4byte	0x69
+ 438 0069 02       		.uleb128 0x2
+ 439 006a 04       		.byte	0x4
+ 440 006b 05       		.byte	0x5
+ 441 006c AB020000 		.4byte	.LASF8
+ 442 0070 02       		.uleb128 0x2
+ 443 0071 04       		.byte	0x4
+ 444 0072 07       		.byte	0x7
+ 445 0073 3E010000 		.4byte	.LASF9
+ 446 0077 02       		.uleb128 0x2
+ 447 0078 08       		.byte	0x8
+ 448 0079 05       		.byte	0x5
+ 449 007a 7A020000 		.4byte	.LASF10
+ 450 007e 02       		.uleb128 0x2
+ 451 007f 08       		.byte	0x8
+ 452 0080 07       		.byte	0x7
+ 453 0081 29020000 		.4byte	.LASF11
+ 454 0085 04       		.uleb128 0x4
+ 455 0086 04       		.byte	0x4
+ 456 0087 05       		.byte	0x5
+ 457 0088 696E7400 		.ascii	"int\000"
+ 458 008c 02       		.uleb128 0x2
+ 459 008d 04       		.byte	0x4
+ 460 008e 07       		.byte	0x7
+ 461 008f 1C020000 		.4byte	.LASF12
+ 462 0093 03       		.uleb128 0x3
+ 463 0094 5A000000 		.4byte	.LASF13
+ 464 0098 03       		.byte	0x3
+ 465 0099 18       		.byte	0x18
+ 466 009a 33000000 		.4byte	0x33
+ 467 009e 03       		.uleb128 0x3
+ 468 009f A2020000 		.4byte	.LASF14
+ 469 00a3 03       		.byte	0x3
+ 470 00a4 24       		.byte	0x24
+ 471 00a5 4C000000 		.4byte	0x4c
+ 472 00a9 03       		.uleb128 0x3
+ 473 00aa 53020000 		.4byte	.LASF15
+ 474 00ae 03       		.byte	0x3
+ 475 00af 2C       		.byte	0x2c
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cczxtBVg.s 			page 11
+
+
+ 476 00b0 5E000000 		.4byte	0x5e
+ 477 00b4 02       		.uleb128 0x2
+ 478 00b5 08       		.byte	0x8
+ 479 00b6 04       		.byte	0x4
+ 480 00b7 01020000 		.4byte	.LASF16
+ 481 00bb 02       		.uleb128 0x2
+ 482 00bc 01       		.byte	0x1
+ 483 00bd 08       		.byte	0x8
+ 484 00be 88020000 		.4byte	.LASF17
+ 485 00c2 02       		.uleb128 0x2
+ 486 00c3 08       		.byte	0x8
+ 487 00c4 04       		.byte	0x4
+ 488 00c5 BC020000 		.4byte	.LASF18
+ 489 00c9 02       		.uleb128 0x2
+ 490 00ca 04       		.byte	0x4
+ 491 00cb 07       		.byte	0x7
+ 492 00cc 5B020000 		.4byte	.LASF19
+ 493 00d0 05       		.uleb128 0x5
+ 494 00d1 0F020000 		.4byte	.LASF20
+ 495 00d5 01       		.byte	0x1
+ 496 00d6 17       		.byte	0x17
+ 497 00d7 00000000 		.4byte	.LFB64
+ 498 00db 0C000000 		.4byte	.LFE64-.LFB64
+ 499 00df 01       		.uleb128 0x1
+ 500 00e0 9C       		.byte	0x9c
+ 501 00e1 F8000000 		.4byte	0xf8
+ 502 00e5 06       		.uleb128 0x6
+ 503 00e6 06000000 		.4byte	.LVL0
+ 504 00ea 46030000 		.4byte	0x346
+ 505 00ee 06       		.uleb128 0x6
+ 506 00ef 0A000000 		.4byte	.LVL1
+ 507 00f3 51030000 		.4byte	0x351
+ 508 00f7 00       		.byte	0
+ 509 00f8 07       		.uleb128 0x7
+ 510 00f9 12000000 		.4byte	.LASF21
+ 511 00fd 01       		.byte	0x1
+ 512 00fe 1F       		.byte	0x1f
+ 513 00ff 00000000 		.4byte	.LFB65
+ 514 0103 88000000 		.4byte	.LFE65-.LFB65
+ 515 0107 01       		.uleb128 0x1
+ 516 0108 9C       		.byte	0x9c
+ 517 0109 A9010000 		.4byte	0x1a9
+ 518 010d 08       		.uleb128 0x8
+ 519 010e B4020000 		.4byte	.LASF22
+ 520 0112 01       		.byte	0x1
+ 521 0113 1F       		.byte	0x1f
+ 522 0114 93000000 		.4byte	0x93
+ 523 0118 00000000 		.4byte	.LLST0
+ 524 011c 08       		.uleb128 0x8
+ 525 011d 40020000 		.4byte	.LASF23
+ 526 0121 01       		.byte	0x1
+ 527 0122 1F       		.byte	0x1f
+ 528 0123 25000000 		.4byte	0x25
+ 529 0127 21000000 		.4byte	.LLST1
+ 530 012b 08       		.uleb128 0x8
+ 531 012c 08020000 		.4byte	.LASF24
+ 532 0130 01       		.byte	0x1
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cczxtBVg.s 			page 12
+
+
+ 533 0131 1F       		.byte	0x1f
+ 534 0132 25000000 		.4byte	0x25
+ 535 0136 4F000000 		.4byte	.LLST2
+ 536 013a 08       		.uleb128 0x8
+ 537 013b 00000000 		.4byte	.LASF25
+ 538 013f 01       		.byte	0x1
+ 539 0140 1F       		.byte	0x1f
+ 540 0141 93000000 		.4byte	0x93
+ 541 0145 7D000000 		.4byte	.LLST3
+ 542 0149 09       		.uleb128 0x9
+ 543 014a BC010000 		.4byte	0x1bc
+ 544 014e 9E000000 		.4byte	.LLST4
+ 545 0152 0A       		.uleb128 0xa
+ 546 0153 A3000000 		.4byte	.LASF26
+ 547 0157 01       		.byte	0x1
+ 548 0158 21       		.byte	0x21
+ 549 0159 A9010000 		.4byte	0x1a9
+ 550 015d C0000000 		.4byte	.LLST5
+ 551 0161 0A       		.uleb128 0xa
+ 552 0162 97000000 		.4byte	.LASF27
+ 553 0166 01       		.byte	0x1
+ 554 0167 22       		.byte	0x22
+ 555 0168 25000000 		.4byte	0x25
+ 556 016c D4000000 		.4byte	.LLST6
+ 557 0170 0A       		.uleb128 0xa
+ 558 0171 4C020000 		.4byte	.LASF28
+ 559 0175 01       		.byte	0x1
+ 560 0176 23       		.byte	0x23
+ 561 0177 25000000 		.4byte	0x25
+ 562 017b F2000000 		.4byte	.LLST7
+ 563 017f 0B       		.uleb128 0xb
+ 564 0180 6900     		.ascii	"i\000"
+ 565 0182 01       		.byte	0x1
+ 566 0183 25       		.byte	0x25
+ 567 0184 85000000 		.4byte	0x85
+ 568 0188 36010000 		.4byte	.LLST8
+ 569 018c 0C       		.uleb128 0xc
+ 570 018d 2E000000 		.4byte	.LVL7
+ 571 0191 5C030000 		.4byte	0x35c
+ 572 0195 9F010000 		.4byte	0x19f
+ 573 0199 0D       		.uleb128 0xd
+ 574 019a 01       		.uleb128 0x1
+ 575 019b 50       		.byte	0x50
+ 576 019c 01       		.uleb128 0x1
+ 577 019d 30       		.byte	0x30
+ 578 019e 00       		.byte	0
+ 579 019f 06       		.uleb128 0x6
+ 580 01a0 34000000 		.4byte	.LVL8
+ 581 01a4 67030000 		.4byte	0x367
+ 582 01a8 00       		.byte	0
+ 583 01a9 0E       		.uleb128 0xe
+ 584 01aa 25000000 		.4byte	0x25
+ 585 01ae BC010000 		.4byte	0x1bc
+ 586 01b2 0F       		.uleb128 0xf
+ 587 01b3 C9000000 		.4byte	0xc9
+ 588 01b7 49010000 		.4byte	0x149
+ 589 01bb 00       		.byte	0
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cczxtBVg.s 			page 13
+
+
+ 590 01bc 10       		.uleb128 0x10
+ 591 01bd C9000000 		.4byte	0xc9
+ 592 01c1 07       		.uleb128 0x7
+ 593 01c2 E4020000 		.4byte	.LASF29
+ 594 01c6 01       		.byte	0x1
+ 595 01c7 34       		.byte	0x34
+ 596 01c8 00000000 		.4byte	.LFB66
+ 597 01cc 58000000 		.4byte	.LFE66-.LFB66
+ 598 01d0 01       		.uleb128 0x1
+ 599 01d1 9C       		.byte	0x9c
+ 600 01d2 48020000 		.4byte	0x248
+ 601 01d6 08       		.uleb128 0x8
+ 602 01d7 40020000 		.4byte	.LASF23
+ 603 01db 01       		.byte	0x1
+ 604 01dc 34       		.byte	0x34
+ 605 01dd 25000000 		.4byte	0x25
+ 606 01e1 55010000 		.4byte	.LLST9
+ 607 01e5 08       		.uleb128 0x8
+ 608 01e6 08020000 		.4byte	.LASF24
+ 609 01ea 01       		.byte	0x1
+ 610 01eb 34       		.byte	0x34
+ 611 01ec 25000000 		.4byte	0x25
+ 612 01f0 83010000 		.4byte	.LLST10
+ 613 01f4 08       		.uleb128 0x8
+ 614 01f5 00000000 		.4byte	.LASF25
+ 615 01f9 01       		.byte	0x1
+ 616 01fa 34       		.byte	0x34
+ 617 01fb 93000000 		.4byte	0x93
+ 618 01ff B1010000 		.4byte	.LLST11
+ 619 0203 0A       		.uleb128 0xa
+ 620 0204 97000000 		.4byte	.LASF27
+ 621 0208 01       		.byte	0x1
+ 622 0209 36       		.byte	0x36
+ 623 020a 25000000 		.4byte	0x25
+ 624 020e D2010000 		.4byte	.LLST12
+ 625 0212 11       		.uleb128 0x11
+ 626 0213 12000000 		.4byte	.LBB2
+ 627 0217 30000000 		.4byte	.LBE2-.LBB2
+ 628 021b 38020000 		.4byte	0x238
+ 629 021f 0A       		.uleb128 0xa
+ 630 0220 4C020000 		.4byte	.LASF28
+ 631 0224 01       		.byte	0x1
+ 632 0225 3B       		.byte	0x3b
+ 633 0226 9E000000 		.4byte	0x9e
+ 634 022a 06020000 		.4byte	.LLST13
+ 635 022e 06       		.uleb128 0x6
+ 636 022f 16000000 		.4byte	.LVL25
+ 637 0233 67030000 		.4byte	0x367
+ 638 0237 00       		.byte	0
+ 639 0238 12       		.uleb128 0x12
+ 640 0239 10000000 		.4byte	.LVL24
+ 641 023d 5C030000 		.4byte	0x35c
+ 642 0241 0D       		.uleb128 0xd
+ 643 0242 01       		.uleb128 0x1
+ 644 0243 50       		.byte	0x50
+ 645 0244 01       		.uleb128 0x1
+ 646 0245 30       		.byte	0x30
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cczxtBVg.s 			page 14
+
+
+ 647 0246 00       		.byte	0
+ 648 0247 00       		.byte	0
+ 649 0248 13       		.uleb128 0x13
+ 650 0249 6C000000 		.4byte	.LASF40
+ 651 024d 01       		.byte	0x1
+ 652 024e 43       		.byte	0x43
+ 653 024f 25000000 		.4byte	0x25
+ 654 0253 00000000 		.4byte	.LFB67
+ 655 0257 8C000000 		.4byte	.LFE67-.LFB67
+ 656 025b 01       		.uleb128 0x1
+ 657 025c 9C       		.byte	0x9c
+ 658 025d 0C030000 		.4byte	0x30c
+ 659 0261 08       		.uleb128 0x8
+ 660 0262 B4020000 		.4byte	.LASF22
+ 661 0266 01       		.byte	0x1
+ 662 0267 43       		.byte	0x43
+ 663 0268 93000000 		.4byte	0x93
+ 664 026c 19020000 		.4byte	.LLST14
+ 665 0270 08       		.uleb128 0x8
+ 666 0271 40020000 		.4byte	.LASF23
+ 667 0275 01       		.byte	0x1
+ 668 0276 43       		.byte	0x43
+ 669 0277 25000000 		.4byte	0x25
+ 670 027b 3A020000 		.4byte	.LLST15
+ 671 027f 08       		.uleb128 0x8
+ 672 0280 08020000 		.4byte	.LASF24
+ 673 0284 01       		.byte	0x1
+ 674 0285 43       		.byte	0x43
+ 675 0286 25000000 		.4byte	0x25
+ 676 028a 68020000 		.4byte	.LLST16
+ 677 028e 08       		.uleb128 0x8
+ 678 028f 00000000 		.4byte	.LASF25
+ 679 0293 01       		.byte	0x1
+ 680 0294 43       		.byte	0x43
+ 681 0295 93000000 		.4byte	0x93
+ 682 0299 96020000 		.4byte	.LLST17
+ 683 029d 0A       		.uleb128 0xa
+ 684 029e 62000000 		.4byte	.LASF30
+ 685 02a2 01       		.byte	0x1
+ 686 02a3 45       		.byte	0x45
+ 687 02a4 93000000 		.4byte	0x93
+ 688 02a8 B7020000 		.4byte	.LLST18
+ 689 02ac 09       		.uleb128 0x9
+ 690 02ad 1F030000 		.4byte	0x31f
+ 691 02b1 D8020000 		.4byte	.LLST19
+ 692 02b5 0A       		.uleb128 0xa
+ 693 02b6 A3000000 		.4byte	.LASF26
+ 694 02ba 01       		.byte	0x1
+ 695 02bb 46       		.byte	0x46
+ 696 02bc 0C030000 		.4byte	0x30c
+ 697 02c0 FA020000 		.4byte	.LLST20
+ 698 02c4 0A       		.uleb128 0xa
+ 699 02c5 97000000 		.4byte	.LASF27
+ 700 02c9 01       		.byte	0x1
+ 701 02ca 47       		.byte	0x47
+ 702 02cb 25000000 		.4byte	0x25
+ 703 02cf 0E030000 		.4byte	.LLST21
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cczxtBVg.s 			page 15
+
+
+ 704 02d3 0A       		.uleb128 0xa
+ 705 02d4 4C020000 		.4byte	.LASF28
+ 706 02d8 01       		.byte	0x1
+ 707 02d9 48       		.byte	0x48
+ 708 02da 25000000 		.4byte	0x25
+ 709 02de 21030000 		.4byte	.LLST22
+ 710 02e2 0B       		.uleb128 0xb
+ 711 02e3 6900     		.ascii	"i\000"
+ 712 02e5 01       		.byte	0x1
+ 713 02e6 4A       		.byte	0x4a
+ 714 02e7 85000000 		.4byte	0x85
+ 715 02eb 65030000 		.4byte	.LLST23
+ 716 02ef 0C       		.uleb128 0xc
+ 717 02f0 2E000000 		.4byte	.LVL43
+ 718 02f4 5C030000 		.4byte	0x35c
+ 719 02f8 02030000 		.4byte	0x302
+ 720 02fc 0D       		.uleb128 0xd
+ 721 02fd 01       		.uleb128 0x1
+ 722 02fe 50       		.byte	0x50
+ 723 02ff 01       		.uleb128 0x1
+ 724 0300 30       		.byte	0x30
+ 725 0301 00       		.byte	0
+ 726 0302 06       		.uleb128 0x6
+ 727 0303 34000000 		.4byte	.LVL44
+ 728 0307 67030000 		.4byte	0x367
+ 729 030b 00       		.byte	0
+ 730 030c 0E       		.uleb128 0xe
+ 731 030d 25000000 		.4byte	0x25
+ 732 0311 1F030000 		.4byte	0x31f
+ 733 0315 0F       		.uleb128 0xf
+ 734 0316 C9000000 		.4byte	0xc9
+ 735 031a AC020000 		.4byte	0x2ac
+ 736 031e 00       		.byte	0
+ 737 031f 10       		.uleb128 0x10
+ 738 0320 C9000000 		.4byte	0xc9
+ 739 0324 14       		.uleb128 0x14
+ 740 0325 DB010000 		.4byte	.LASF31
+ 741 0329 04       		.byte	0x4
+ 742 032a 1207     		.2byte	0x712
+ 743 032c 30030000 		.4byte	0x330
+ 744 0330 15       		.uleb128 0x15
+ 745 0331 A9000000 		.4byte	0xa9
+ 746 0335 16       		.uleb128 0x16
+ 747 0336 2D000000 		.4byte	.LASF32
+ 748 033a 01       		.byte	0x1
+ 749 033b 11       		.byte	0x11
+ 750 033c 25000000 		.4byte	0x25
+ 751 0340 05       		.uleb128 0x5
+ 752 0341 03       		.byte	0x3
+ 753 0342 00000000 		.4byte	zeroDriftOffset
+ 754 0346 17       		.uleb128 0x17
+ 755 0347 D4020000 		.4byte	.LASF33
+ 756 034b D4020000 		.4byte	.LASF33
+ 757 034f 05       		.byte	0x5
+ 758 0350 34       		.byte	0x34
+ 759 0351 17       		.uleb128 0x17
+ 760 0352 50010000 		.4byte	.LASF34
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cczxtBVg.s 			page 16
+
+
+ 761 0356 50010000 		.4byte	.LASF34
+ 762 035a 05       		.byte	0x5
+ 763 035b D1       		.byte	0xd1
+ 764 035c 17       		.uleb128 0x17
+ 765 035d 7D000000 		.4byte	.LASF35
+ 766 0361 7D000000 		.4byte	.LASF35
+ 767 0365 05       		.byte	0x5
+ 768 0366 39       		.byte	0x39
+ 769 0367 17       		.uleb128 0x17
+ 770 0368 64020000 		.4byte	.LASF36
+ 771 036c 64020000 		.4byte	.LASF36
+ 772 0370 05       		.byte	0x5
+ 773 0371 3B       		.byte	0x3b
+ 774 0372 00       		.byte	0
+ 775              		.section	.debug_abbrev,"",%progbits
+ 776              	.Ldebug_abbrev0:
+ 777 0000 01       		.uleb128 0x1
+ 778 0001 11       		.uleb128 0x11
+ 779 0002 01       		.byte	0x1
+ 780 0003 25       		.uleb128 0x25
+ 781 0004 0E       		.uleb128 0xe
+ 782 0005 13       		.uleb128 0x13
+ 783 0006 0B       		.uleb128 0xb
+ 784 0007 03       		.uleb128 0x3
+ 785 0008 0E       		.uleb128 0xe
+ 786 0009 1B       		.uleb128 0x1b
+ 787 000a 0E       		.uleb128 0xe
+ 788 000b 55       		.uleb128 0x55
+ 789 000c 17       		.uleb128 0x17
+ 790 000d 11       		.uleb128 0x11
+ 791 000e 01       		.uleb128 0x1
+ 792 000f 10       		.uleb128 0x10
+ 793 0010 17       		.uleb128 0x17
+ 794 0011 00       		.byte	0
+ 795 0012 00       		.byte	0
+ 796 0013 02       		.uleb128 0x2
+ 797 0014 24       		.uleb128 0x24
+ 798 0015 00       		.byte	0
+ 799 0016 0B       		.uleb128 0xb
+ 800 0017 0B       		.uleb128 0xb
+ 801 0018 3E       		.uleb128 0x3e
+ 802 0019 0B       		.uleb128 0xb
+ 803 001a 03       		.uleb128 0x3
+ 804 001b 0E       		.uleb128 0xe
+ 805 001c 00       		.byte	0
+ 806 001d 00       		.byte	0
+ 807 001e 03       		.uleb128 0x3
+ 808 001f 16       		.uleb128 0x16
+ 809 0020 00       		.byte	0
+ 810 0021 03       		.uleb128 0x3
+ 811 0022 0E       		.uleb128 0xe
+ 812 0023 3A       		.uleb128 0x3a
+ 813 0024 0B       		.uleb128 0xb
+ 814 0025 3B       		.uleb128 0x3b
+ 815 0026 0B       		.uleb128 0xb
+ 816 0027 49       		.uleb128 0x49
+ 817 0028 13       		.uleb128 0x13
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cczxtBVg.s 			page 17
+
+
+ 818 0029 00       		.byte	0
+ 819 002a 00       		.byte	0
+ 820 002b 04       		.uleb128 0x4
+ 821 002c 24       		.uleb128 0x24
+ 822 002d 00       		.byte	0
+ 823 002e 0B       		.uleb128 0xb
+ 824 002f 0B       		.uleb128 0xb
+ 825 0030 3E       		.uleb128 0x3e
+ 826 0031 0B       		.uleb128 0xb
+ 827 0032 03       		.uleb128 0x3
+ 828 0033 08       		.uleb128 0x8
+ 829 0034 00       		.byte	0
+ 830 0035 00       		.byte	0
+ 831 0036 05       		.uleb128 0x5
+ 832 0037 2E       		.uleb128 0x2e
+ 833 0038 01       		.byte	0x1
+ 834 0039 3F       		.uleb128 0x3f
+ 835 003a 19       		.uleb128 0x19
+ 836 003b 03       		.uleb128 0x3
+ 837 003c 0E       		.uleb128 0xe
+ 838 003d 3A       		.uleb128 0x3a
+ 839 003e 0B       		.uleb128 0xb
+ 840 003f 3B       		.uleb128 0x3b
+ 841 0040 0B       		.uleb128 0xb
+ 842 0041 27       		.uleb128 0x27
+ 843 0042 19       		.uleb128 0x19
+ 844 0043 11       		.uleb128 0x11
+ 845 0044 01       		.uleb128 0x1
+ 846 0045 12       		.uleb128 0x12
+ 847 0046 06       		.uleb128 0x6
+ 848 0047 40       		.uleb128 0x40
+ 849 0048 18       		.uleb128 0x18
+ 850 0049 9742     		.uleb128 0x2117
+ 851 004b 19       		.uleb128 0x19
+ 852 004c 01       		.uleb128 0x1
+ 853 004d 13       		.uleb128 0x13
+ 854 004e 00       		.byte	0
+ 855 004f 00       		.byte	0
+ 856 0050 06       		.uleb128 0x6
+ 857 0051 898201   		.uleb128 0x4109
+ 858 0054 00       		.byte	0
+ 859 0055 11       		.uleb128 0x11
+ 860 0056 01       		.uleb128 0x1
+ 861 0057 31       		.uleb128 0x31
+ 862 0058 13       		.uleb128 0x13
+ 863 0059 00       		.byte	0
+ 864 005a 00       		.byte	0
+ 865 005b 07       		.uleb128 0x7
+ 866 005c 2E       		.uleb128 0x2e
+ 867 005d 01       		.byte	0x1
+ 868 005e 3F       		.uleb128 0x3f
+ 869 005f 19       		.uleb128 0x19
+ 870 0060 03       		.uleb128 0x3
+ 871 0061 0E       		.uleb128 0xe
+ 872 0062 3A       		.uleb128 0x3a
+ 873 0063 0B       		.uleb128 0xb
+ 874 0064 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cczxtBVg.s 			page 18
+
+
+ 875 0065 0B       		.uleb128 0xb
+ 876 0066 27       		.uleb128 0x27
+ 877 0067 19       		.uleb128 0x19
+ 878 0068 11       		.uleb128 0x11
+ 879 0069 01       		.uleb128 0x1
+ 880 006a 12       		.uleb128 0x12
+ 881 006b 06       		.uleb128 0x6
+ 882 006c 40       		.uleb128 0x40
+ 883 006d 18       		.uleb128 0x18
+ 884 006e 9642     		.uleb128 0x2116
+ 885 0070 19       		.uleb128 0x19
+ 886 0071 01       		.uleb128 0x1
+ 887 0072 13       		.uleb128 0x13
+ 888 0073 00       		.byte	0
+ 889 0074 00       		.byte	0
+ 890 0075 08       		.uleb128 0x8
+ 891 0076 05       		.uleb128 0x5
+ 892 0077 00       		.byte	0
+ 893 0078 03       		.uleb128 0x3
+ 894 0079 0E       		.uleb128 0xe
+ 895 007a 3A       		.uleb128 0x3a
+ 896 007b 0B       		.uleb128 0xb
+ 897 007c 3B       		.uleb128 0x3b
+ 898 007d 0B       		.uleb128 0xb
+ 899 007e 49       		.uleb128 0x49
+ 900 007f 13       		.uleb128 0x13
+ 901 0080 02       		.uleb128 0x2
+ 902 0081 17       		.uleb128 0x17
+ 903 0082 00       		.byte	0
+ 904 0083 00       		.byte	0
+ 905 0084 09       		.uleb128 0x9
+ 906 0085 34       		.uleb128 0x34
+ 907 0086 00       		.byte	0
+ 908 0087 34       		.uleb128 0x34
+ 909 0088 19       		.uleb128 0x19
+ 910 0089 49       		.uleb128 0x49
+ 911 008a 13       		.uleb128 0x13
+ 912 008b 02       		.uleb128 0x2
+ 913 008c 17       		.uleb128 0x17
+ 914 008d 00       		.byte	0
+ 915 008e 00       		.byte	0
+ 916 008f 0A       		.uleb128 0xa
+ 917 0090 34       		.uleb128 0x34
+ 918 0091 00       		.byte	0
+ 919 0092 03       		.uleb128 0x3
+ 920 0093 0E       		.uleb128 0xe
+ 921 0094 3A       		.uleb128 0x3a
+ 922 0095 0B       		.uleb128 0xb
+ 923 0096 3B       		.uleb128 0x3b
+ 924 0097 0B       		.uleb128 0xb
+ 925 0098 49       		.uleb128 0x49
+ 926 0099 13       		.uleb128 0x13
+ 927 009a 02       		.uleb128 0x2
+ 928 009b 17       		.uleb128 0x17
+ 929 009c 00       		.byte	0
+ 930 009d 00       		.byte	0
+ 931 009e 0B       		.uleb128 0xb
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cczxtBVg.s 			page 19
+
+
+ 932 009f 34       		.uleb128 0x34
+ 933 00a0 00       		.byte	0
+ 934 00a1 03       		.uleb128 0x3
+ 935 00a2 08       		.uleb128 0x8
+ 936 00a3 3A       		.uleb128 0x3a
+ 937 00a4 0B       		.uleb128 0xb
+ 938 00a5 3B       		.uleb128 0x3b
+ 939 00a6 0B       		.uleb128 0xb
+ 940 00a7 49       		.uleb128 0x49
+ 941 00a8 13       		.uleb128 0x13
+ 942 00a9 02       		.uleb128 0x2
+ 943 00aa 17       		.uleb128 0x17
+ 944 00ab 00       		.byte	0
+ 945 00ac 00       		.byte	0
+ 946 00ad 0C       		.uleb128 0xc
+ 947 00ae 898201   		.uleb128 0x4109
+ 948 00b1 01       		.byte	0x1
+ 949 00b2 11       		.uleb128 0x11
+ 950 00b3 01       		.uleb128 0x1
+ 951 00b4 31       		.uleb128 0x31
+ 952 00b5 13       		.uleb128 0x13
+ 953 00b6 01       		.uleb128 0x1
+ 954 00b7 13       		.uleb128 0x13
+ 955 00b8 00       		.byte	0
+ 956 00b9 00       		.byte	0
+ 957 00ba 0D       		.uleb128 0xd
+ 958 00bb 8A8201   		.uleb128 0x410a
+ 959 00be 00       		.byte	0
+ 960 00bf 02       		.uleb128 0x2
+ 961 00c0 18       		.uleb128 0x18
+ 962 00c1 9142     		.uleb128 0x2111
+ 963 00c3 18       		.uleb128 0x18
+ 964 00c4 00       		.byte	0
+ 965 00c5 00       		.byte	0
+ 966 00c6 0E       		.uleb128 0xe
+ 967 00c7 01       		.uleb128 0x1
+ 968 00c8 01       		.byte	0x1
+ 969 00c9 49       		.uleb128 0x49
+ 970 00ca 13       		.uleb128 0x13
+ 971 00cb 01       		.uleb128 0x1
+ 972 00cc 13       		.uleb128 0x13
+ 973 00cd 00       		.byte	0
+ 974 00ce 00       		.byte	0
+ 975 00cf 0F       		.uleb128 0xf
+ 976 00d0 21       		.uleb128 0x21
+ 977 00d1 00       		.byte	0
+ 978 00d2 49       		.uleb128 0x49
+ 979 00d3 13       		.uleb128 0x13
+ 980 00d4 2F       		.uleb128 0x2f
+ 981 00d5 13       		.uleb128 0x13
+ 982 00d6 00       		.byte	0
+ 983 00d7 00       		.byte	0
+ 984 00d8 10       		.uleb128 0x10
+ 985 00d9 26       		.uleb128 0x26
+ 986 00da 00       		.byte	0
+ 987 00db 49       		.uleb128 0x49
+ 988 00dc 13       		.uleb128 0x13
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cczxtBVg.s 			page 20
+
+
+ 989 00dd 00       		.byte	0
+ 990 00de 00       		.byte	0
+ 991 00df 11       		.uleb128 0x11
+ 992 00e0 0B       		.uleb128 0xb
+ 993 00e1 01       		.byte	0x1
+ 994 00e2 11       		.uleb128 0x11
+ 995 00e3 01       		.uleb128 0x1
+ 996 00e4 12       		.uleb128 0x12
+ 997 00e5 06       		.uleb128 0x6
+ 998 00e6 01       		.uleb128 0x1
+ 999 00e7 13       		.uleb128 0x13
+ 1000 00e8 00       		.byte	0
+ 1001 00e9 00       		.byte	0
+ 1002 00ea 12       		.uleb128 0x12
+ 1003 00eb 898201   		.uleb128 0x4109
+ 1004 00ee 01       		.byte	0x1
+ 1005 00ef 11       		.uleb128 0x11
+ 1006 00f0 01       		.uleb128 0x1
+ 1007 00f1 31       		.uleb128 0x31
+ 1008 00f2 13       		.uleb128 0x13
+ 1009 00f3 00       		.byte	0
+ 1010 00f4 00       		.byte	0
+ 1011 00f5 13       		.uleb128 0x13
+ 1012 00f6 2E       		.uleb128 0x2e
+ 1013 00f7 01       		.byte	0x1
+ 1014 00f8 3F       		.uleb128 0x3f
+ 1015 00f9 19       		.uleb128 0x19
+ 1016 00fa 03       		.uleb128 0x3
+ 1017 00fb 0E       		.uleb128 0xe
+ 1018 00fc 3A       		.uleb128 0x3a
+ 1019 00fd 0B       		.uleb128 0xb
+ 1020 00fe 3B       		.uleb128 0x3b
+ 1021 00ff 0B       		.uleb128 0xb
+ 1022 0100 27       		.uleb128 0x27
+ 1023 0101 19       		.uleb128 0x19
+ 1024 0102 49       		.uleb128 0x49
+ 1025 0103 13       		.uleb128 0x13
+ 1026 0104 11       		.uleb128 0x11
+ 1027 0105 01       		.uleb128 0x1
+ 1028 0106 12       		.uleb128 0x12
+ 1029 0107 06       		.uleb128 0x6
+ 1030 0108 40       		.uleb128 0x40
+ 1031 0109 18       		.uleb128 0x18
+ 1032 010a 9642     		.uleb128 0x2116
+ 1033 010c 19       		.uleb128 0x19
+ 1034 010d 01       		.uleb128 0x1
+ 1035 010e 13       		.uleb128 0x13
+ 1036 010f 00       		.byte	0
+ 1037 0110 00       		.byte	0
+ 1038 0111 14       		.uleb128 0x14
+ 1039 0112 34       		.uleb128 0x34
+ 1040 0113 00       		.byte	0
+ 1041 0114 03       		.uleb128 0x3
+ 1042 0115 0E       		.uleb128 0xe
+ 1043 0116 3A       		.uleb128 0x3a
+ 1044 0117 0B       		.uleb128 0xb
+ 1045 0118 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cczxtBVg.s 			page 21
+
+
+ 1046 0119 05       		.uleb128 0x5
+ 1047 011a 49       		.uleb128 0x49
+ 1048 011b 13       		.uleb128 0x13
+ 1049 011c 3F       		.uleb128 0x3f
+ 1050 011d 19       		.uleb128 0x19
+ 1051 011e 3C       		.uleb128 0x3c
+ 1052 011f 19       		.uleb128 0x19
+ 1053 0120 00       		.byte	0
+ 1054 0121 00       		.byte	0
+ 1055 0122 15       		.uleb128 0x15
+ 1056 0123 35       		.uleb128 0x35
+ 1057 0124 00       		.byte	0
+ 1058 0125 49       		.uleb128 0x49
+ 1059 0126 13       		.uleb128 0x13
+ 1060 0127 00       		.byte	0
+ 1061 0128 00       		.byte	0
+ 1062 0129 16       		.uleb128 0x16
+ 1063 012a 34       		.uleb128 0x34
+ 1064 012b 00       		.byte	0
+ 1065 012c 03       		.uleb128 0x3
+ 1066 012d 0E       		.uleb128 0xe
+ 1067 012e 3A       		.uleb128 0x3a
+ 1068 012f 0B       		.uleb128 0xb
+ 1069 0130 3B       		.uleb128 0x3b
+ 1070 0131 0B       		.uleb128 0xb
+ 1071 0132 49       		.uleb128 0x49
+ 1072 0133 13       		.uleb128 0x13
+ 1073 0134 3F       		.uleb128 0x3f
+ 1074 0135 19       		.uleb128 0x19
+ 1075 0136 02       		.uleb128 0x2
+ 1076 0137 18       		.uleb128 0x18
+ 1077 0138 00       		.byte	0
+ 1078 0139 00       		.byte	0
+ 1079 013a 17       		.uleb128 0x17
+ 1080 013b 2E       		.uleb128 0x2e
+ 1081 013c 00       		.byte	0
+ 1082 013d 3F       		.uleb128 0x3f
+ 1083 013e 19       		.uleb128 0x19
+ 1084 013f 3C       		.uleb128 0x3c
+ 1085 0140 19       		.uleb128 0x19
+ 1086 0141 6E       		.uleb128 0x6e
+ 1087 0142 0E       		.uleb128 0xe
+ 1088 0143 03       		.uleb128 0x3
+ 1089 0144 0E       		.uleb128 0xe
+ 1090 0145 3A       		.uleb128 0x3a
+ 1091 0146 0B       		.uleb128 0xb
+ 1092 0147 3B       		.uleb128 0x3b
+ 1093 0148 0B       		.uleb128 0xb
+ 1094 0149 00       		.byte	0
+ 1095 014a 00       		.byte	0
+ 1096 014b 00       		.byte	0
+ 1097              		.section	.debug_loc,"",%progbits
+ 1098              	.Ldebug_loc0:
+ 1099              	.LLST0:
+ 1100 0000 00000000 		.4byte	.LVL2
+ 1101 0004 28000000 		.4byte	.LVL6
+ 1102 0008 0100     		.2byte	0x1
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cczxtBVg.s 			page 22
+
+
+ 1103 000a 50       		.byte	0x50
+ 1104 000b 28000000 		.4byte	.LVL6
+ 1105 000f 88000000 		.4byte	.LFE65
+ 1106 0013 0400     		.2byte	0x4
+ 1107 0015 F3       		.byte	0xf3
+ 1108 0016 01       		.uleb128 0x1
+ 1109 0017 50       		.byte	0x50
+ 1110 0018 9F       		.byte	0x9f
+ 1111 0019 00000000 		.4byte	0
+ 1112 001d 00000000 		.4byte	0
+ 1113              	.LLST1:
+ 1114 0021 00000000 		.4byte	.LVL2
+ 1115 0025 28000000 		.4byte	.LVL6
+ 1116 0029 0100     		.2byte	0x1
+ 1117 002b 51       		.byte	0x51
+ 1118 002c 28000000 		.4byte	.LVL6
+ 1119 0030 82000000 		.4byte	.LVL21
+ 1120 0034 0100     		.2byte	0x1
+ 1121 0036 5A       		.byte	0x5a
+ 1122 0037 82000000 		.4byte	.LVL21
+ 1123 003b 88000000 		.4byte	.LFE65
+ 1124 003f 0600     		.2byte	0x6
+ 1125 0041 F3       		.byte	0xf3
+ 1126 0042 03       		.uleb128 0x3
+ 1127 0043 F5       		.byte	0xf5
+ 1128 0044 01       		.uleb128 0x1
+ 1129 0045 25       		.uleb128 0x25
+ 1130 0046 9F       		.byte	0x9f
+ 1131 0047 00000000 		.4byte	0
+ 1132 004b 00000000 		.4byte	0
+ 1133              	.LLST2:
+ 1134 004f 00000000 		.4byte	.LVL2
+ 1135 0053 28000000 		.4byte	.LVL6
+ 1136 0057 0100     		.2byte	0x1
+ 1137 0059 52       		.byte	0x52
+ 1138 005a 28000000 		.4byte	.LVL6
+ 1139 005e 82000000 		.4byte	.LVL21
+ 1140 0062 0100     		.2byte	0x1
+ 1141 0064 59       		.byte	0x59
+ 1142 0065 82000000 		.4byte	.LVL21
+ 1143 0069 88000000 		.4byte	.LFE65
+ 1144 006d 0600     		.2byte	0x6
+ 1145 006f F3       		.byte	0xf3
+ 1146 0070 03       		.uleb128 0x3
+ 1147 0071 F5       		.byte	0xf5
+ 1148 0072 02       		.uleb128 0x2
+ 1149 0073 25       		.uleb128 0x25
+ 1150 0074 9F       		.byte	0x9f
+ 1151 0075 00000000 		.4byte	0
+ 1152 0079 00000000 		.4byte	0
+ 1153              	.LLST3:
+ 1154 007d 00000000 		.4byte	.LVL2
+ 1155 0081 14000000 		.4byte	.LVL4
+ 1156 0085 0100     		.2byte	0x1
+ 1157 0087 53       		.byte	0x53
+ 1158 0088 14000000 		.4byte	.LVL4
+ 1159 008c 88000000 		.4byte	.LFE65
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cczxtBVg.s 			page 23
+
+
+ 1160 0090 0400     		.2byte	0x4
+ 1161 0092 F3       		.byte	0xf3
+ 1162 0093 01       		.uleb128 0x1
+ 1163 0094 53       		.byte	0x53
+ 1164 0095 9F       		.byte	0x9f
+ 1165 0096 00000000 		.4byte	0
+ 1166 009a 00000000 		.4byte	0
+ 1167              	.LLST4:
+ 1168 009e 12000000 		.4byte	.LVL3
+ 1169 00a2 28000000 		.4byte	.LVL6
+ 1170 00a6 0300     		.2byte	0x3
+ 1171 00a8 70       		.byte	0x70
+ 1172 00a9 7F       		.sleb128 -1
+ 1173 00aa 9F       		.byte	0x9f
+ 1174 00ab 28000000 		.4byte	.LVL6
+ 1175 00af 82000000 		.4byte	.LVL21
+ 1176 00b3 0300     		.2byte	0x3
+ 1177 00b5 75       		.byte	0x75
+ 1178 00b6 7F       		.sleb128 -1
+ 1179 00b7 9F       		.byte	0x9f
+ 1180 00b8 00000000 		.4byte	0
+ 1181 00bc 00000000 		.4byte	0
+ 1182              	.LLST5:
+ 1183 00c0 20000000 		.4byte	.LVL5
+ 1184 00c4 82000000 		.4byte	.LVL21
+ 1185 00c8 0200     		.2byte	0x2
+ 1186 00ca 7B       		.byte	0x7b
+ 1187 00cb 00       		.sleb128 0
+ 1188 00cc 00000000 		.4byte	0
+ 1189 00d0 00000000 		.4byte	0
+ 1190              	.LLST6:
+ 1191 00d4 68000000 		.4byte	.LVL17
+ 1192 00d8 6A000000 		.4byte	.LVL18
+ 1193 00dc 0100     		.2byte	0x1
+ 1194 00de 50       		.byte	0x50
+ 1195 00df 6A000000 		.4byte	.LVL18
+ 1196 00e3 82000000 		.4byte	.LVL21
+ 1197 00e7 0100     		.2byte	0x1
+ 1198 00e9 54       		.byte	0x54
+ 1199 00ea 00000000 		.4byte	0
+ 1200 00ee 00000000 		.4byte	0
+ 1201              	.LLST7:
+ 1202 00f2 20000000 		.4byte	.LVL5
+ 1203 00f6 28000000 		.4byte	.LVL6
+ 1204 00fa 0600     		.2byte	0x6
+ 1205 00fc 9E       		.byte	0x9e
+ 1206 00fd 04       		.uleb128 0x4
+ 1207 00fe 00000000 		.4byte	0
+ 1208 0102 28000000 		.4byte	.LVL6
+ 1209 0106 46000000 		.4byte	.LVL11
+ 1210 010a 0100     		.2byte	0x1
+ 1211 010c 58       		.byte	0x58
+ 1212 010d 46000000 		.4byte	.LVL11
+ 1213 0111 48000000 		.4byte	.LVL12
+ 1214 0115 0100     		.2byte	0x1
+ 1215 0117 50       		.byte	0x50
+ 1216 0118 48000000 		.4byte	.LVL12
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cczxtBVg.s 			page 24
+
+
+ 1217 011c 5A000000 		.4byte	.LVL14
+ 1218 0120 0100     		.2byte	0x1
+ 1219 0122 58       		.byte	0x58
+ 1220 0123 5A000000 		.4byte	.LVL14
+ 1221 0127 5F000000 		.4byte	.LVL15-1
+ 1222 012b 0100     		.2byte	0x1
+ 1223 012d 50       		.byte	0x50
+ 1224 012e 00000000 		.4byte	0
+ 1225 0132 00000000 		.4byte	0
+ 1226              	.LLST8:
+ 1227 0136 20000000 		.4byte	.LVL5
+ 1228 013a 28000000 		.4byte	.LVL6
+ 1229 013e 0200     		.2byte	0x2
+ 1230 0140 30       		.byte	0x30
+ 1231 0141 9F       		.byte	0x9f
+ 1232 0142 28000000 		.4byte	.LVL6
+ 1233 0146 68000000 		.4byte	.LVL17
+ 1234 014a 0100     		.2byte	0x1
+ 1235 014c 54       		.byte	0x54
+ 1236 014d 00000000 		.4byte	0
+ 1237 0151 00000000 		.4byte	0
+ 1238              	.LLST9:
+ 1239 0155 00000000 		.4byte	.LVL22
+ 1240 0159 0A000000 		.4byte	.LVL23
+ 1241 015d 0100     		.2byte	0x1
+ 1242 015f 50       		.byte	0x50
+ 1243 0160 0A000000 		.4byte	.LVL23
+ 1244 0164 50000000 		.4byte	.LVL36
+ 1245 0168 0100     		.2byte	0x1
+ 1246 016a 57       		.byte	0x57
+ 1247 016b 50000000 		.4byte	.LVL36
+ 1248 016f 58000000 		.4byte	.LFE66
+ 1249 0173 0600     		.2byte	0x6
+ 1250 0175 F3       		.byte	0xf3
+ 1251 0176 03       		.uleb128 0x3
+ 1252 0177 F5       		.byte	0xf5
+ 1253 0178 00       		.uleb128 0
+ 1254 0179 25       		.uleb128 0x25
+ 1255 017a 9F       		.byte	0x9f
+ 1256 017b 00000000 		.4byte	0
+ 1257 017f 00000000 		.4byte	0
+ 1258              	.LLST10:
+ 1259 0183 00000000 		.4byte	.LVL22
+ 1260 0187 0A000000 		.4byte	.LVL23
+ 1261 018b 0100     		.2byte	0x1
+ 1262 018d 51       		.byte	0x51
+ 1263 018e 0A000000 		.4byte	.LVL23
+ 1264 0192 50000000 		.4byte	.LVL36
+ 1265 0196 0100     		.2byte	0x1
+ 1266 0198 56       		.byte	0x56
+ 1267 0199 50000000 		.4byte	.LVL36
+ 1268 019d 58000000 		.4byte	.LFE66
+ 1269 01a1 0600     		.2byte	0x6
+ 1270 01a3 F3       		.byte	0xf3
+ 1271 01a4 03       		.uleb128 0x3
+ 1272 01a5 F5       		.byte	0xf5
+ 1273 01a6 01       		.uleb128 0x1
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cczxtBVg.s 			page 25
+
+
+ 1274 01a7 25       		.uleb128 0x25
+ 1275 01a8 9F       		.byte	0x9f
+ 1276 01a9 00000000 		.4byte	0
+ 1277 01ad 00000000 		.4byte	0
+ 1278              	.LLST11:
+ 1279 01b1 00000000 		.4byte	.LVL22
+ 1280 01b5 0A000000 		.4byte	.LVL23
+ 1281 01b9 0100     		.2byte	0x1
+ 1282 01bb 52       		.byte	0x52
+ 1283 01bc 0A000000 		.4byte	.LVL23
+ 1284 01c0 58000000 		.4byte	.LFE66
+ 1285 01c4 0400     		.2byte	0x4
+ 1286 01c6 F3       		.byte	0xf3
+ 1287 01c7 01       		.uleb128 0x1
+ 1288 01c8 52       		.byte	0x52
+ 1289 01c9 9F       		.byte	0x9f
+ 1290 01ca 00000000 		.4byte	0
+ 1291 01ce 00000000 		.4byte	0
+ 1292              	.LLST12:
+ 1293 01d2 0A000000 		.4byte	.LVL23
+ 1294 01d6 28000000 		.4byte	.LVL28
+ 1295 01da 0100     		.2byte	0x1
+ 1296 01dc 54       		.byte	0x54
+ 1297 01dd 28000000 		.4byte	.LVL28
+ 1298 01e1 2F000000 		.4byte	.LVL29-1
+ 1299 01e5 0100     		.2byte	0x1
+ 1300 01e7 50       		.byte	0x50
+ 1301 01e8 32000000 		.4byte	.LVL30
+ 1302 01ec 34000000 		.4byte	.LVL31
+ 1303 01f0 0100     		.2byte	0x1
+ 1304 01f2 50       		.byte	0x50
+ 1305 01f3 34000000 		.4byte	.LVL31
+ 1306 01f7 50000000 		.4byte	.LVL36
+ 1307 01fb 0100     		.2byte	0x1
+ 1308 01fd 54       		.byte	0x54
+ 1309 01fe 00000000 		.4byte	0
+ 1310 0202 00000000 		.4byte	0
+ 1311              	.LLST13:
+ 1312 0206 16000000 		.4byte	.LVL25
+ 1313 020a 1B000000 		.4byte	.LVL26-1
+ 1314 020e 0100     		.2byte	0x1
+ 1315 0210 50       		.byte	0x50
+ 1316 0211 00000000 		.4byte	0
+ 1317 0215 00000000 		.4byte	0
+ 1318              	.LLST14:
+ 1319 0219 00000000 		.4byte	.LVL37
+ 1320 021d 28000000 		.4byte	.LVL42
+ 1321 0221 0100     		.2byte	0x1
+ 1322 0223 50       		.byte	0x50
+ 1323 0224 28000000 		.4byte	.LVL42
+ 1324 0228 8C000000 		.4byte	.LFE67
+ 1325 022c 0400     		.2byte	0x4
+ 1326 022e F3       		.byte	0xf3
+ 1327 022f 01       		.uleb128 0x1
+ 1328 0230 50       		.byte	0x50
+ 1329 0231 9F       		.byte	0x9f
+ 1330 0232 00000000 		.4byte	0
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cczxtBVg.s 			page 26
+
+
+ 1331 0236 00000000 		.4byte	0
+ 1332              	.LLST15:
+ 1333 023a 00000000 		.4byte	.LVL37
+ 1334 023e 28000000 		.4byte	.LVL42
+ 1335 0242 0100     		.2byte	0x1
+ 1336 0244 51       		.byte	0x51
+ 1337 0245 28000000 		.4byte	.LVL42
+ 1338 0249 86000000 		.4byte	.LVL57
+ 1339 024d 0100     		.2byte	0x1
+ 1340 024f 5A       		.byte	0x5a
+ 1341 0250 86000000 		.4byte	.LVL57
+ 1342 0254 8C000000 		.4byte	.LFE67
+ 1343 0258 0600     		.2byte	0x6
+ 1344 025a F3       		.byte	0xf3
+ 1345 025b 03       		.uleb128 0x3
+ 1346 025c F5       		.byte	0xf5
+ 1347 025d 01       		.uleb128 0x1
+ 1348 025e 25       		.uleb128 0x25
+ 1349 025f 9F       		.byte	0x9f
+ 1350 0260 00000000 		.4byte	0
+ 1351 0264 00000000 		.4byte	0
+ 1352              	.LLST16:
+ 1353 0268 00000000 		.4byte	.LVL37
+ 1354 026c 28000000 		.4byte	.LVL42
+ 1355 0270 0100     		.2byte	0x1
+ 1356 0272 52       		.byte	0x52
+ 1357 0273 28000000 		.4byte	.LVL42
+ 1358 0277 86000000 		.4byte	.LVL57
+ 1359 027b 0100     		.2byte	0x1
+ 1360 027d 59       		.byte	0x59
+ 1361 027e 86000000 		.4byte	.LVL57
+ 1362 0282 8C000000 		.4byte	.LFE67
+ 1363 0286 0600     		.2byte	0x6
+ 1364 0288 F3       		.byte	0xf3
+ 1365 0289 03       		.uleb128 0x3
+ 1366 028a F5       		.byte	0xf5
+ 1367 028b 02       		.uleb128 0x2
+ 1368 028c 25       		.uleb128 0x25
+ 1369 028d 9F       		.byte	0x9f
+ 1370 028e 00000000 		.4byte	0
+ 1371 0292 00000000 		.4byte	0
+ 1372              	.LLST17:
+ 1373 0296 00000000 		.4byte	.LVL37
+ 1374 029a 14000000 		.4byte	.LVL40
+ 1375 029e 0100     		.2byte	0x1
+ 1376 02a0 53       		.byte	0x53
+ 1377 02a1 14000000 		.4byte	.LVL40
+ 1378 02a5 8C000000 		.4byte	.LFE67
+ 1379 02a9 0400     		.2byte	0x4
+ 1380 02ab F3       		.byte	0xf3
+ 1381 02ac 01       		.uleb128 0x1
+ 1382 02ad 53       		.byte	0x53
+ 1383 02ae 9F       		.byte	0x9f
+ 1384 02af 00000000 		.4byte	0
+ 1385 02b3 00000000 		.4byte	0
+ 1386              	.LLST18:
+ 1387 02b7 10000000 		.4byte	.LVL38
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cczxtBVg.s 			page 27
+
+
+ 1388 02bb 28000000 		.4byte	.LVL42
+ 1389 02bf 0100     		.2byte	0x1
+ 1390 02c1 50       		.byte	0x50
+ 1391 02c2 28000000 		.4byte	.LVL42
+ 1392 02c6 8C000000 		.4byte	.LFE67
+ 1393 02ca 0400     		.2byte	0x4
+ 1394 02cc F3       		.byte	0xf3
+ 1395 02cd 01       		.uleb128 0x1
+ 1396 02ce 50       		.byte	0x50
+ 1397 02cf 9F       		.byte	0x9f
+ 1398 02d0 00000000 		.4byte	0
+ 1399 02d4 00000000 		.4byte	0
+ 1400              	.LLST19:
+ 1401 02d8 12000000 		.4byte	.LVL39
+ 1402 02dc 28000000 		.4byte	.LVL42
+ 1403 02e0 0300     		.2byte	0x3
+ 1404 02e2 70       		.byte	0x70
+ 1405 02e3 7F       		.sleb128 -1
+ 1406 02e4 9F       		.byte	0x9f
+ 1407 02e5 28000000 		.4byte	.LVL42
+ 1408 02e9 86000000 		.4byte	.LVL57
+ 1409 02ed 0300     		.2byte	0x3
+ 1410 02ef 75       		.byte	0x75
+ 1411 02f0 7F       		.sleb128 -1
+ 1412 02f1 9F       		.byte	0x9f
+ 1413 02f2 00000000 		.4byte	0
+ 1414 02f6 00000000 		.4byte	0
+ 1415              	.LLST20:
+ 1416 02fa 20000000 		.4byte	.LVL41
+ 1417 02fe 86000000 		.4byte	.LVL57
+ 1418 0302 0200     		.2byte	0x2
+ 1419 0304 7B       		.byte	0x7b
+ 1420 0305 00       		.sleb128 0
+ 1421 0306 00000000 		.4byte	0
+ 1422 030a 00000000 		.4byte	0
+ 1423              	.LLST21:
+ 1424 030e 66000000 		.4byte	.LVL52
+ 1425 0312 6D000000 		.4byte	.LVL53-1
+ 1426 0316 0100     		.2byte	0x1
+ 1427 0318 50       		.byte	0x50
+ 1428 0319 00000000 		.4byte	0
+ 1429 031d 00000000 		.4byte	0
+ 1430              	.LLST22:
+ 1431 0321 20000000 		.4byte	.LVL41
+ 1432 0325 28000000 		.4byte	.LVL42
+ 1433 0329 0600     		.2byte	0x6
+ 1434 032b 9E       		.byte	0x9e
+ 1435 032c 04       		.uleb128 0x4
+ 1436 032d 00000000 		.4byte	0
+ 1437 0331 28000000 		.4byte	.LVL42
+ 1438 0335 46000000 		.4byte	.LVL47
+ 1439 0339 0100     		.2byte	0x1
+ 1440 033b 58       		.byte	0x58
+ 1441 033c 46000000 		.4byte	.LVL47
+ 1442 0340 48000000 		.4byte	.LVL48
+ 1443 0344 0100     		.2byte	0x1
+ 1444 0346 50       		.byte	0x50
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cczxtBVg.s 			page 28
+
+
+ 1445 0347 48000000 		.4byte	.LVL48
+ 1446 034b 5A000000 		.4byte	.LVL50
+ 1447 034f 0100     		.2byte	0x1
+ 1448 0351 58       		.byte	0x58
+ 1449 0352 5A000000 		.4byte	.LVL50
+ 1450 0356 5F000000 		.4byte	.LVL51-1
+ 1451 035a 0100     		.2byte	0x1
+ 1452 035c 50       		.byte	0x50
+ 1453 035d 00000000 		.4byte	0
+ 1454 0361 00000000 		.4byte	0
+ 1455              	.LLST23:
+ 1456 0365 20000000 		.4byte	.LVL41
+ 1457 0369 28000000 		.4byte	.LVL42
+ 1458 036d 0200     		.2byte	0x2
+ 1459 036f 30       		.byte	0x30
+ 1460 0370 9F       		.byte	0x9f
+ 1461 0371 28000000 		.4byte	.LVL42
+ 1462 0375 70000000 		.4byte	.LVL54
+ 1463 0379 0100     		.2byte	0x1
+ 1464 037b 54       		.byte	0x54
+ 1465 037c 00000000 		.4byte	0
+ 1466 0380 00000000 		.4byte	0
+ 1467              		.section	.debug_aranges,"",%progbits
+ 1468 0000 34000000 		.4byte	0x34
+ 1469 0004 0200     		.2byte	0x2
+ 1470 0006 00000000 		.4byte	.Ldebug_info0
+ 1471 000a 04       		.byte	0x4
+ 1472 000b 00       		.byte	0
+ 1473 000c 0000     		.2byte	0
+ 1474 000e 0000     		.2byte	0
+ 1475 0010 00000000 		.4byte	.LFB64
+ 1476 0014 0C000000 		.4byte	.LFE64-.LFB64
+ 1477 0018 00000000 		.4byte	.LFB65
+ 1478 001c 88000000 		.4byte	.LFE65-.LFB65
+ 1479 0020 00000000 		.4byte	.LFB66
+ 1480 0024 58000000 		.4byte	.LFE66-.LFB66
+ 1481 0028 00000000 		.4byte	.LFB67
+ 1482 002c 8C000000 		.4byte	.LFE67-.LFB67
+ 1483 0030 00000000 		.4byte	0
+ 1484 0034 00000000 		.4byte	0
+ 1485              		.section	.debug_ranges,"",%progbits
+ 1486              	.Ldebug_ranges0:
+ 1487 0000 00000000 		.4byte	.LFB64
+ 1488 0004 0C000000 		.4byte	.LFE64
+ 1489 0008 00000000 		.4byte	.LFB65
+ 1490 000c 88000000 		.4byte	.LFE65
+ 1491 0010 00000000 		.4byte	.LFB66
+ 1492 0014 58000000 		.4byte	.LFE66
+ 1493 0018 00000000 		.4byte	.LFB67
+ 1494 001c 8C000000 		.4byte	.LFE67
+ 1495 0020 00000000 		.4byte	0
+ 1496 0024 00000000 		.4byte	0
+ 1497              		.section	.debug_line,"",%progbits
+ 1498              	.Ldebug_line0:
+ 1499 0000 C5010000 		.section	.debug_str,"MS",%progbits,1
+ 1499      02005201 
+ 1499      00000201 
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cczxtBVg.s 			page 29
+
+
+ 1499      FB0E0D00 
+ 1499      01010101 
+ 1500              	.LASF25:
+ 1501 0000 7072656C 		.ascii	"preload\000"
+ 1501      6F616400 
+ 1502              	.LASF4:
+ 1503 0008 5F5F7569 		.ascii	"__uint8_t\000"
+ 1503      6E74385F 
+ 1503      7400
+ 1504              	.LASF21:
+ 1505 0012 6F666673 		.ascii	"offset_Zerodrift_calibrate\000"
+ 1505      65745F5A 
+ 1505      65726F64 
+ 1505      72696674 
+ 1505      5F63616C 
+ 1506              	.LASF32:
+ 1507 002d 7A65726F 		.ascii	"zeroDriftOffset\000"
+ 1507      44726966 
+ 1507      744F6666 
+ 1507      73657400 
+ 1508              	.LASF7:
+ 1509 003d 5F5F696E 		.ascii	"__int32_t\000"
+ 1509      7433325F 
+ 1509      7400
+ 1510              	.LASF6:
+ 1511 0047 73686F72 		.ascii	"short unsigned int\000"
+ 1511      7420756E 
+ 1511      7369676E 
+ 1511      65642069 
+ 1511      6E7400
+ 1512              	.LASF13:
+ 1513 005a 75696E74 		.ascii	"uint8_t\000"
+ 1513      385F7400 
+ 1514              	.LASF30:
+ 1515 0062 72657065 		.ascii	"repeating\000"
+ 1515      6174696E 
+ 1515      6700
+ 1516              	.LASF40:
+ 1517 006c 72656164 		.ascii	"readWeight\000"
+ 1517      57656967 
+ 1517      687400
+ 1518              	.LASF0:
+ 1519 0077 666C6F61 		.ascii	"float\000"
+ 1519      7400
+ 1520              	.LASF35:
+ 1521 007d 4144435F 		.ascii	"ADC_SAR_1_IsEndConversion\000"
+ 1521      5341525F 
+ 1521      315F4973 
+ 1521      456E6443 
+ 1521      6F6E7665 
+ 1522              	.LASF27:
+ 1523 0097 72657375 		.ascii	"result_gram\000"
+ 1523      6C745F67 
+ 1523      72616D00 
+ 1524              	.LASF26:
+ 1525 00a3 72657375 		.ascii	"result_array\000"
+ 1525      6C745F61 
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cczxtBVg.s 			page 30
+
+
+ 1525      72726179 
+ 1525      00
+ 1526              	.LASF37:
+ 1527 00b0 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1527      43313120 
+ 1527      352E342E 
+ 1527      31203230 
+ 1527      31363036 
+ 1528 00e3 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1528      20726576 
+ 1528      6973696F 
+ 1528      6E203233 
+ 1528      37373135 
+ 1529 0116 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1529      66756E63 
+ 1529      74696F6E 
+ 1529      2D736563 
+ 1529      74696F6E 
+ 1530              	.LASF9:
+ 1531 013e 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1531      20756E73 
+ 1531      69676E65 
+ 1531      6420696E 
+ 1531      7400
+ 1532              	.LASF34:
+ 1533 0150 4144435F 		.ascii	"ADC_SAR_1_StartConvert\000"
+ 1533      5341525F 
+ 1533      315F5374 
+ 1533      61727443 
+ 1533      6F6E7665 
+ 1534              	.LASF39:
+ 1535 0167 433A5C55 		.ascii	"C:\\Users\\magnu\\OneDrive - Aarhus universitet\\Pr"
+ 1535      73657273 
+ 1535      5C6D6167 
+ 1535      6E755C4F 
+ 1535      6E654472 
+ 1536 0196 6F6A656B 		.ascii	"ojekt3 bilag\\Scale.cywrk.Archive02\\Kode til til l"
+ 1536      74332062 
+ 1536      696C6167 
+ 1536      5C536361 
+ 1536      6C652E63 
+ 1537 01c7 6F616463 		.ascii	"oadcell\\Scale.cydsn\000"
+ 1537      656C6C5C 
+ 1537      5363616C 
+ 1537      652E6379 
+ 1537      64736E00 
+ 1538              	.LASF31:
+ 1539 01db 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1539      52784275 
+ 1539      66666572 
+ 1539      00
+ 1540              	.LASF2:
+ 1541 01e8 756E7369 		.ascii	"unsigned char\000"
+ 1541      676E6564 
+ 1541      20636861 
+ 1541      7200
+ 1542              	.LASF5:
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cczxtBVg.s 			page 31
+
+
+ 1543 01f6 5F5F7569 		.ascii	"__uint16_t\000"
+ 1543      6E743136 
+ 1543      5F7400
+ 1544              	.LASF16:
+ 1545 0201 646F7562 		.ascii	"double\000"
+ 1545      6C6500
+ 1546              	.LASF24:
+ 1547 0208 66616374 		.ascii	"factor\000"
+ 1547      6F7200
+ 1548              	.LASF20:
+ 1549 020f 696E6974 		.ascii	"initLoadcell\000"
+ 1549      4C6F6164 
+ 1549      63656C6C 
+ 1549      00
+ 1550              	.LASF12:
+ 1551 021c 756E7369 		.ascii	"unsigned int\000"
+ 1551      676E6564 
+ 1551      20696E74 
+ 1551      00
+ 1552              	.LASF11:
+ 1553 0229 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1553      206C6F6E 
+ 1553      6720756E 
+ 1553      7369676E 
+ 1553      65642069 
+ 1554              	.LASF23:
+ 1555 0240 73746172 		.ascii	"startoffset\000"
+ 1555      746F6666 
+ 1555      73657400 
+ 1556              	.LASF28:
+ 1557 024c 72657375 		.ascii	"result\000"
+ 1557      6C7400
+ 1558              	.LASF15:
+ 1559 0253 696E7433 		.ascii	"int32_t\000"
+ 1559      325F7400 
+ 1560              	.LASF19:
+ 1561 025b 73697A65 		.ascii	"sizetype\000"
+ 1561      74797065 
+ 1561      00
+ 1562              	.LASF36:
+ 1563 0264 4144435F 		.ascii	"ADC_SAR_1_GetResult16\000"
+ 1563      5341525F 
+ 1563      315F4765 
+ 1563      74526573 
+ 1563      756C7431 
+ 1564              	.LASF10:
+ 1565 027a 6C6F6E67 		.ascii	"long long int\000"
+ 1565      206C6F6E 
+ 1565      6720696E 
+ 1565      7400
+ 1566              	.LASF17:
+ 1567 0288 63686172 		.ascii	"char\000"
+ 1567      00
+ 1568              	.LASF38:
+ 1569 028d 4C6F6164 		.ascii	"Loadcell.c\000"
+ 1569      63656C6C 
+ 1569      2E6300
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cczxtBVg.s 			page 32
+
+
+ 1570              	.LASF3:
+ 1571 0298 73686F72 		.ascii	"short int\000"
+ 1571      7420696E 
+ 1571      7400
+ 1572              	.LASF14:
+ 1573 02a2 75696E74 		.ascii	"uint16_t\000"
+ 1573      31365F74 
+ 1573      00
+ 1574              	.LASF8:
+ 1575 02ab 6C6F6E67 		.ascii	"long int\000"
+ 1575      20696E74 
+ 1575      00
+ 1576              	.LASF22:
+ 1577 02b4 72657065 		.ascii	"repeats\000"
+ 1577      61747300 
+ 1578              	.LASF18:
+ 1579 02bc 6C6F6E67 		.ascii	"long double\000"
+ 1579      20646F75 
+ 1579      626C6500 
+ 1580              	.LASF1:
+ 1581 02c8 7369676E 		.ascii	"signed char\000"
+ 1581      65642063 
+ 1581      68617200 
+ 1582              	.LASF33:
+ 1583 02d4 4144435F 		.ascii	"ADC_SAR_1_Start\000"
+ 1583      5341525F 
+ 1583      315F5374 
+ 1583      61727400 
+ 1584              	.LASF29:
+ 1585 02e4 77616974 		.ascii	"wait_for_weight\000"
+ 1585      5F666F72 
+ 1585      5F776569 
+ 1585      67687400 
+ 1586              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Scale\Scale\TopDesign">
+<ExpandedNodeIds>
+<v>Scale</v>
+<v>Scale\Scale</v>
+<v>Scale\Scale\TopDesign</v>
+<v>Scale\Scale\Scale.cydwr</v>
+<v>Scale\Scale\Scale.cydwr\Pins</v>
+<v>Scale\Scale\Scale.cydwr\Analog</v>
+<v>Scale\Scale\Scale.cydwr\Clocks</v>
+<v>Scale\Scale\Scale.cydwr\Interrupts</v>
+<v>Scale\Scale\Scale.cydwr\DMA</v>
+<v>Scale\Scale\Scale.cydwr\System</v>
+<v>Scale\Scale\Scale.cydwr\Directives</v>
+<v>Scale\Scale\Scale.cydwr\Flash Security</v>
+<v>Scale\Scale\Scale.cydwr\EEPROM</v>
+<v>Scale\Scale\Header Files</v>
+<v>Scale\Scale\Header Files\cyapicallbacks.h</v>
+<v>Scale\Scale\Header Files\Loadcell.h</v>
+<v>Scale\Scale\Header Files\Timer.h</v>
+<v>Scale\Scale\Source Files</v>
+<v>Scale\Scale\Source Files\Loadcell.c</v>
+<v>Scale\Scale\Source Files\main.c</v>
+<v>Scale\Scale\Source Files\Timer.c</v>
+<v>Scale\Scale\Generated_Source</v>
+<v>Scale\Scale\Generated_Source\PSoC5</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Scale</v>
+<v>Scale\Scale</v>
+<v>Scale\Scale\TopDesign</v>
+<v>Scale\Scale\Scale.cydwr</v>
+<v>Scale\Scale\Scale.cydwr\Pins</v>
+<v>Scale\Scale\Scale.cydwr\Analog</v>
+<v>Scale\Scale\Scale.cydwr\Clocks</v>
+<v>Scale\Scale\Scale.cydwr\Interrupts</v>
+<v>Scale\Scale\Scale.cydwr\DMA</v>
+<v>Scale\Scale\Scale.cydwr\System</v>
+<v>Scale\Scale\Scale.cydwr\Directives</v>
+<v>Scale\Scale\Scale.cydwr\Flash Security</v>
+<v>Scale\Scale\Scale.cydwr\EEPROM</v>
+<v>Scale\Scale\Header Files</v>
+<v>Scale\Scale\Header Files\cyapicallbacks.h</v>
+<v>Scale\Scale\Header Files\Loadcell.h</v>
+<v>Scale\Scale\Header Files\Timer.h</v>
+<v>Scale\Scale\Source Files</v>
+<v>Scale\Scale\Source Files\Loadcell.c</v>
+<v>Scale\Scale\Source Files\main.c</v>
+<v>Scale\Scale\Source Files\Timer.c</v>
+<v>Scale\Scale\Generated_Source</v>
+<v>Scale\Scale\Generated_Source\PSoC5</v>
+<v>Scale\Scale\Generated_Source\PSoC5\ADC_SAR_1</v>
+<v>Scale\Scale\Generated_Source\PSoC5\ADC_SAR_1_ExtVref</v>
+<v>Scale\Scale\Generated_Source\PSoC5\ADC_SAR_1_IRQ</v>
+<v>Scale\Scale\Generated_Source\PSoC5\ADC_SAR_1_theACLK</v>
+<v>Scale\Scale\Generated_Source\PSoC5\clock_1</v>
+<v>Scale\Scale\Generated_Source\PSoC5\cy_boot</v>
+<v>Scale\Scale\Generated_Source\PSoC5\Em_EEPROM_Dynamic</v>
+<v>Scale\Scale\Generated_Source\PSoC5\isr_uart_rx</v>
+<v>Scale\Scale\Generated_Source\PSoC5\Pin_ADC_in</v>
+<v>Scale\Scale\Generated_Source\PSoC5\Timer_1</v>
+<v>Scale\Scale\Generated_Source\PSoC5\UART_1</v>
+<v>Scale\Scale\Generated_Source\PSoC5\UART_1_IntClock</v>
+<v>Scale\Scale\Generated_Source\PSoC5\cycodeshareexport.ld</v>
+<v>Scale\Scale\Generated_Source\PSoC5\cycodeshareimport.ld</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Scale</v>
+<v>Scale\Scale</v>
+<v>Scale\Scale\TopDesign</v>
+<v>Scale\Scale\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Scale</v>
+<v>Scale\Scale</v>
+<v>Scale\Scale\TopDesign</v>
+<v>Scale\Scale\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Scale</v>
+<v>Scale\Scale</v>
+<v>Scale\Scale\CortexM3</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_ExtVref.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_INT.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_IRQ.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_PM.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_theACLK.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\clock_1.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_uart_rx.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\Loadcell.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_ADC_in.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_1.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_1_PM.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_BOOT.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_INT.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_IntClock.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_PM.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Scale.elf</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Scale.hex</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Scale.map</v>
+<v>Scale\Scale\Scale.gpdsc</v>
+<v>Scale\Scale\Scale.rpt</v>
+<v>Scale\Scale\Scale_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Scale</v>
+<v>Scale\Scale</v>
+<v>Scale\Scale\CortexM3</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_ExtVref.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_INT.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_IRQ.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_PM.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_theACLK.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\clock_1.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_uart_rx.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\Loadcell.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_ADC_in.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_1.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_1_PM.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_BOOT.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_INT.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_IntClock.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_PM.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Scale.elf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Scale</v>
+<v>Scale\Scale</v>
+<v>Scale\Scale\PSoC 5LP Architecture TRM</v>
+<v>Scale\Scale\CY8C58LP Family Datasheet</v>
+<v>Scale\Scale\System Reference Guides</v>
+<v>Scale\Scale\System Reference Guides\cy_boot_v6_10</v>
+<v>Scale\Scale\ADC_SAR_v3_10.pdf</v>
+<v>Scale\Scale\cy_clock_v2_20.pdf</v>
+<v>Scale\Scale\cy_isr_v1_71.pdf</v>
+<v>Scale\Scale\cy_pins_v2_20</v>
+<v>Scale\Scale\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Scale\Scale\Timer_v2_80.pdf</v>
+<v>Scale\Scale\UART_v2_50.pdf</v>
+<v>Scale\Scale\ZeroTerminal.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Scale</v>
+<v>Scale\Scale</v>
+<v>Scale\Scale\PSoC 5LP Architecture TRM</v>
+<v>Scale\Scale\CY8C58LP Family Datasheet</v>
+<v>Scale\Scale\System Reference Guides</v>
+<v>Scale\Scale\System Reference Guides\cy_boot_v6_10</v>
+<v>Scale\Scale\ADC_SAR_v3_10.pdf</v>
+<v>Scale\Scale\cy_clock_v2_20.pdf</v>
+<v>Scale\Scale\cy_isr_v1_71.pdf</v>
+<v>Scale\Scale\cy_pins_v2_20</v>
+<v>Scale\Scale\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Scale\Scale\Timer_v2_80.pdf</v>
+<v>Scale\Scale\UART_v2_50.pdf</v>
+<v>Scale\Scale\ZeroTerminal.pdf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\Scale.cydsn\Loadcell.c" />
+<name v=".\Scale.cydsn\Loadcell.h" />
+<name v=".\Scale.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Scale.cydsn\main.c" />
+<name v=".\Scale.cydsn\Scale.cydwr" />
+<name v=".\Scale.cydsn\Timer.h" />
+<name v=".\Scale.cydsn\Timer.c" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="995, 535" SelectedTabbedMdiWindow="e4a6829e-7b3b-4a50-9cb6-5c6a17bc5075"><DocumentWindow Key="C:\Users\magnu\OneDrive - Aarhus universitet\Projekt3 bilag\Scale.cywrk.Archive02\Kode til til loadcell\Scale.cydsn\Loadcell.c" Guid="e4a6829e-7b3b-4a50-9cb6-5c6a17bc5075" /><DocumentWindow Key="C:\Users\magnu\OneDrive - Aarhus universitet\Projekt3 bilag\Scale.cywrk.Archive02\Kode til til loadcell\Scale.cydsn\Loadcell.h" Guid="e5635d75-7120-4570-8450-3cea2fa4a87a" /><DocumentWindow Key="C:\Users\magnu\OneDrive - Aarhus universitet\Projekt3 bilag\Scale.cywrk.Archive02\Kode til til loadcell\Scale.cydsn\TopDesign\TopDesign.cysch" Guid="59ba6608-5b38-497f-8952-e3ab3d34ed81" /><DocumentWindow Key="C:\Users\magnu\OneDrive - Aarhus universitet\Projekt3 bilag\Scale.cywrk.Archive02\Kode til til loadcell\Scale.cydsn\main.c" Guid="1b77135d-720d-4088-a729-1773f79a1f36" /><DocumentWindow Key="C:\Users\magnu\OneDrive - Aarhus universitet\Projekt3 bilag\Scale.cywrk.Archive02\Kode til til loadcell\Scale.cydsn\Scale.cydwr" Guid="2a9a6127-6c37-4277-b04d-bec17dcbad89" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="a82d701f-fed1-472e-b6c4-12a5d419f533" /><DocumentWindow Key="C:\Users\magnu\OneDrive - Aarhus universitet\Projekt3 bilag\Scale.cywrk.Archive02\Kode til til loadcell\Scale.cydsn\Timer.h" Guid="260aa3a2-c858-4a3e-acc5-c86f6293a42a" /><DocumentWindow Key="C:\Users\magnu\OneDrive - Aarhus universitet\Projekt3 bilag\Scale.cywrk.Archive02\Kode til til loadcell\Scale.cydsn\Timer.c" Guid="cfb86a83-a754-4fdd-ad26-105f4fea8af1" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>

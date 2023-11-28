@@ -1,0 +1,1631 @@
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccgJTNA0.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"cymetadata.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.global	cy_metadata
+  20              		.global	cy_meta_flashprotect
+  21              		.global	cy_meta_wonvl
+  22              		.global	cy_meta_custnvl
+  23              		.global	cy_meta_configecc
+  24              		.section	.cyconfigecc,"a",%progbits
+  25              		.align	2
+  26              		.type	cy_meta_configecc, %object
+  27              		.size	cy_meta_configecc, 1080
+  28              	cy_meta_configecc:
+  29 0000 04       		.byte	4
+  30 0001 65       		.byte	101
+  31 0002 00       		.byte	0
+  32 0003 40       		.byte	64
+  33 0004 28       		.byte	40
+  34 0005 14       		.byte	20
+  35 0006 01       		.byte	1
+  36 0007 40       		.byte	64
+  37 0008 0A       		.byte	10
+  38 0009 15       		.byte	21
+  39 000a 01       		.byte	1
+  40 000b 40       		.byte	64
+  41 000c 32       		.byte	50
+  42 000d 16       		.byte	22
+  43 000e 01       		.byte	1
+  44 000f 40       		.byte	64
+  45 0010 10       		.byte	16
+  46 0011 17       		.byte	23
+  47 0012 01       		.byte	1
+  48 0013 40       		.byte	64
+  49 0014 73       		.byte	115
+  50 0015 18       		.byte	24
+  51 0016 01       		.byte	1
+  52 0017 40       		.byte	64
+  53 0018 40       		.byte	64
+  54 0019 19       		.byte	25
+  55 001a 01       		.byte	1
+  56 001b 40       		.byte	64
+  57 001c 4F       		.byte	79
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccgJTNA0.s 			page 2
+
+
+  58 001d 1A       		.byte	26
+  59 001e 01       		.byte	1
+  60 001f 40       		.byte	64
+  61 0020 4B       		.byte	75
+  62 0021 1B       		.byte	27
+  63 0022 01       		.byte	1
+  64 0023 40       		.byte	64
+  65 0024 03       		.byte	3
+  66 0025 40       		.byte	64
+  67 0026 01       		.byte	1
+  68 0027 40       		.byte	64
+  69 0028 02       		.byte	2
+  70 0029 41       		.byte	65
+  71 002a 01       		.byte	1
+  72 002b 40       		.byte	64
+  73 002c 02       		.byte	2
+  74 002d 42       		.byte	66
+  75 002e 01       		.byte	1
+  76 002f 40       		.byte	64
+  77 0030 02       		.byte	2
+  78 0031 43       		.byte	67
+  79 0032 01       		.byte	1
+  80 0033 40       		.byte	64
+  81 0034 04       		.byte	4
+  82 0035 48       		.byte	72
+  83 0036 01       		.byte	1
+  84 0037 40       		.byte	64
+  85 0038 02       		.byte	2
+  86 0039 49       		.byte	73
+  87 003a 01       		.byte	1
+  88 003b 40       		.byte	64
+  89 003c 02       		.byte	2
+  90 003d 4C       		.byte	76
+  91 003e 01       		.byte	1
+  92 003f 40       		.byte	64
+  93 0040 08       		.byte	8
+  94 0041 4D       		.byte	77
+  95 0042 01       		.byte	1
+  96 0043 40       		.byte	64
+  97 0044 03       		.byte	3
+  98 0045 50       		.byte	80
+  99 0046 01       		.byte	1
+ 100 0047 40       		.byte	64
+ 101 0048 01       		.byte	1
+ 102 0049 51       		.byte	81
+ 103 004a 01       		.byte	1
+ 104 004b 40       		.byte	64
+ 105 004c 87       		.byte	-121
+ 106 004d 0D       		.byte	13
+ 107 004e 88       		.byte	-120
+ 108 004f 38       		.byte	56
+ 109 0050 89       		.byte	-119
+ 110 0051 0F       		.byte	15
+ 111 0052 8B       		.byte	-117
+ 112 0053 72       		.byte	114
+ 113 0054 40       		.byte	64
+ 114 0055 46       		.byte	70
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccgJTNA0.s 			page 3
+
+
+ 115 0056 49       		.byte	73
+ 116 0057 FF       		.byte	-1
+ 117 0058 4A       		.byte	74
+ 118 0059 FF       		.byte	-1
+ 119 005a 4B       		.byte	75
+ 120 005b FF       		.byte	-1
+ 121 005c 4F       		.byte	79
+ 122 005d 01       		.byte	1
+ 123 005e 50       		.byte	80
+ 124 005f 18       		.byte	24
+ 125 0060 52       		.byte	82
+ 126 0061 80       		.byte	-128
+ 127 0062 5A       		.byte	90
+ 128 0063 04       		.byte	4
+ 129 0064 5B       		.byte	91
+ 130 0065 04       		.byte	4
+ 131 0066 5D       		.byte	93
+ 132 0067 11       		.byte	17
+ 133 0068 5F       		.byte	95
+ 134 0069 01       		.byte	1
+ 135 006a 60       		.byte	96
+ 136 006b 40       		.byte	64
+ 137 006c 62       		.byte	98
+ 138 006d 40       		.byte	64
+ 139 006e 64       		.byte	100
+ 140 006f 40       		.byte	64
+ 141 0070 65       		.byte	101
+ 142 0071 40       		.byte	64
+ 143 0072 66       		.byte	102
+ 144 0073 80       		.byte	-128
+ 145 0074 68       		.byte	104
+ 146 0075 80       		.byte	-128
+ 147 0076 6A       		.byte	106
+ 148 0077 80       		.byte	-128
+ 149 0078 6C       		.byte	108
+ 150 0079 80       		.byte	-128
+ 151 007a 6E       		.byte	110
+ 152 007b 80       		.byte	-128
+ 153 007c C0       		.byte	-64
+ 154 007d 46       		.byte	70
+ 155 007e C9       		.byte	-55
+ 156 007f FF       		.byte	-1
+ 157 0080 CA       		.byte	-54
+ 158 0081 FF       		.byte	-1
+ 159 0082 CB       		.byte	-53
+ 160 0083 FF       		.byte	-1
+ 161 0084 CD       		.byte	-51
+ 162 0085 83       		.byte	-125
+ 163 0086 CE       		.byte	-50
+ 164 0087 03       		.byte	3
+ 165 0088 CF       		.byte	-49
+ 166 0089 01       		.byte	1
+ 167 008a D0       		.byte	-48
+ 168 008b 18       		.byte	24
+ 169 008c DA       		.byte	-38
+ 170 008d 04       		.byte	4
+ 171 008e DD       		.byte	-35
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccgJTNA0.s 			page 4
+
+
+ 172 008f 01       		.byte	1
+ 173 0090 DF       		.byte	-33
+ 174 0091 01       		.byte	1
+ 175 0092 E0       		.byte	-32
+ 176 0093 40       		.byte	64
+ 177 0094 E2       		.byte	-30
+ 178 0095 40       		.byte	64
+ 179 0096 E4       		.byte	-28
+ 180 0097 40       		.byte	64
+ 181 0098 E5       		.byte	-27
+ 182 0099 40       		.byte	64
+ 183 009a E6       		.byte	-26
+ 184 009b 80       		.byte	-128
+ 185 009c E8       		.byte	-24
+ 186 009d 80       		.byte	-128
+ 187 009e EA       		.byte	-22
+ 188 009f 80       		.byte	-128
+ 189 00a0 EC       		.byte	-20
+ 190 00a1 80       		.byte	-128
+ 191 00a2 EE       		.byte	-18
+ 192 00a3 80       		.byte	-128
+ 193 00a4 41       		.byte	65
+ 194 00a5 02       		.byte	2
+ 195 00a6 45       		.byte	69
+ 196 00a7 02       		.byte	2
+ 197 00a8 48       		.byte	72
+ 198 00a9 08       		.byte	8
+ 199 00aa 4C       		.byte	76
+ 200 00ab 08       		.byte	8
+ 201 00ac 71       		.byte	113
+ 202 00ad 02       		.byte	2
+ 203 00ae A0       		.byte	-96
+ 204 00af 08       		.byte	8
+ 205 00b0 A5       		.byte	-91
+ 206 00b1 02       		.byte	2
+ 207 00b2 D0       		.byte	-48
+ 208 00b3 81       		.byte	-127
+ 209 00b4 D2       		.byte	-46
+ 210 00b5 24       		.byte	36
+ 211 00b6 EE       		.byte	-18
+ 212 00b7 08       		.byte	8
+ 213 00b8 40       		.byte	64
+ 214 00b9 46       		.byte	70
+ 215 00ba 49       		.byte	73
+ 216 00bb FF       		.byte	-1
+ 217 00bc 4A       		.byte	74
+ 218 00bd FF       		.byte	-1
+ 219 00be 4B       		.byte	75
+ 220 00bf FF       		.byte	-1
+ 221 00c0 4D       		.byte	77
+ 222 00c1 83       		.byte	-125
+ 223 00c2 4E       		.byte	78
+ 224 00c3 03       		.byte	3
+ 225 00c4 4F       		.byte	79
+ 226 00c5 01       		.byte	1
+ 227 00c6 50       		.byte	80
+ 228 00c7 18       		.byte	24
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccgJTNA0.s 			page 5
+
+
+ 229 00c8 5A       		.byte	90
+ 230 00c9 04       		.byte	4
+ 231 00ca 5D       		.byte	93
+ 232 00cb 01       		.byte	1
+ 233 00cc 5F       		.byte	95
+ 234 00cd 01       		.byte	1
+ 235 00ce 60       		.byte	96
+ 236 00cf 40       		.byte	64
+ 237 00d0 62       		.byte	98
+ 238 00d1 40       		.byte	64
+ 239 00d2 64       		.byte	100
+ 240 00d3 40       		.byte	64
+ 241 00d4 65       		.byte	101
+ 242 00d5 40       		.byte	64
+ 243 00d6 66       		.byte	102
+ 244 00d7 80       		.byte	-128
+ 245 00d8 68       		.byte	104
+ 246 00d9 80       		.byte	-128
+ 247 00da 6A       		.byte	106
+ 248 00db 80       		.byte	-128
+ 249 00dc 6C       		.byte	108
+ 250 00dd 80       		.byte	-128
+ 251 00de 6E       		.byte	110
+ 252 00df 80       		.byte	-128
+ 253 00e0 92       		.byte	-110
+ 254 00e1 01       		.byte	1
+ 255 00e2 AA       		.byte	-86
+ 256 00e3 01       		.byte	1
+ 257 00e4 B6       		.byte	-74
+ 258 00e5 01       		.byte	1
+ 259 00e6 BE       		.byte	-66
+ 260 00e7 40       		.byte	64
+ 261 00e8 C0       		.byte	-64
+ 262 00e9 46       		.byte	70
+ 263 00ea C5       		.byte	-59
+ 264 00eb EC       		.byte	-20
+ 265 00ec C7       		.byte	-57
+ 266 00ed 02       		.byte	2
+ 267 00ee C8       		.byte	-56
+ 268 00ef 13       		.byte	19
+ 269 00f0 C9       		.byte	-55
+ 270 00f1 FF       		.byte	-1
+ 271 00f2 CA       		.byte	-54
+ 272 00f3 FF       		.byte	-1
+ 273 00f4 CB       		.byte	-53
+ 274 00f5 FF       		.byte	-1
+ 275 00f6 CD       		.byte	-51
+ 276 00f7 83       		.byte	-125
+ 277 00f8 CE       		.byte	-50
+ 278 00f9 03       		.byte	3
+ 279 00fa CF       		.byte	-49
+ 280 00fb 01       		.byte	1
+ 281 00fc D0       		.byte	-48
+ 282 00fd 18       		.byte	24
+ 283 00fe D4       		.byte	-44
+ 284 00ff 01       		.byte	1
+ 285 0100 D8       		.byte	-40
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccgJTNA0.s 			page 6
+
+
+ 286 0101 04       		.byte	4
+ 287 0102 DA       		.byte	-38
+ 288 0103 04       		.byte	4
+ 289 0104 DB       		.byte	-37
+ 290 0105 04       		.byte	4
+ 291 0106 DD       		.byte	-35
+ 292 0107 11       		.byte	17
+ 293 0108 DF       		.byte	-33
+ 294 0109 01       		.byte	1
+ 295 010a E0       		.byte	-32
+ 296 010b 40       		.byte	64
+ 297 010c E2       		.byte	-30
+ 298 010d 40       		.byte	64
+ 299 010e E4       		.byte	-28
+ 300 010f 40       		.byte	64
+ 301 0110 E5       		.byte	-27
+ 302 0111 40       		.byte	64
+ 303 0112 E6       		.byte	-26
+ 304 0113 80       		.byte	-128
+ 305 0114 E8       		.byte	-24
+ 306 0115 80       		.byte	-128
+ 307 0116 EA       		.byte	-22
+ 308 0117 80       		.byte	-128
+ 309 0118 EC       		.byte	-20
+ 310 0119 80       		.byte	-128
+ 311 011a EE       		.byte	-18
+ 312 011b 80       		.byte	-128
+ 313 011c 09       		.byte	9
+ 314 011d 02       		.byte	2
+ 315 011e 10       		.byte	16
+ 316 011f 08       		.byte	8
+ 317 0120 19       		.byte	25
+ 318 0121 40       		.byte	64
+ 319 0122 41       		.byte	65
+ 320 0123 02       		.byte	2
+ 321 0124 45       		.byte	69
+ 322 0125 02       		.byte	2
+ 323 0126 48       		.byte	72
+ 324 0127 08       		.byte	8
+ 325 0128 49       		.byte	73
+ 326 0129 05       		.byte	5
+ 327 012a 4C       		.byte	76
+ 328 012b 08       		.byte	8
+ 329 012c 50       		.byte	80
+ 330 012d 08       		.byte	8
+ 331 012e 59       		.byte	89
+ 332 012f 45       		.byte	69
+ 333 0130 C2       		.byte	-62
+ 334 0131 08       		.byte	8
+ 335 0132 C4       		.byte	-60
+ 336 0133 02       		.byte	2
+ 337 0134 D0       		.byte	-48
+ 338 0135 81       		.byte	-127
+ 339 0136 D2       		.byte	-46
+ 340 0137 24       		.byte	36
+ 341 0138 D6       		.byte	-42
+ 342 0139 0B       		.byte	11
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccgJTNA0.s 			page 7
+
+
+ 343 013a E2       		.byte	-30
+ 344 013b 08       		.byte	8
+ 345 013c 03       		.byte	3
+ 346 013d 01       		.byte	1
+ 347 013e 06       		.byte	6
+ 348 013f 08       		.byte	8
+ 349 0140 0E       		.byte	14
+ 350 0141 40       		.byte	64
+ 351 0142 0F       		.byte	15
+ 352 0143 01       		.byte	1
+ 353 0144 11       		.byte	17
+ 354 0145 10       		.byte	16
+ 355 0146 13       		.byte	19
+ 356 0147 0C       		.byte	12
+ 357 0148 14       		.byte	20
+ 358 0149 0C       		.byte	12
+ 359 014a 16       		.byte	22
+ 360 014b 13       		.byte	19
+ 361 014c 1A       		.byte	26
+ 362 014d 40       		.byte	64
+ 363 014e 1B       		.byte	27
+ 364 014f 02       		.byte	2
+ 365 0150 1C       		.byte	28
+ 366 0151 11       		.byte	17
+ 367 0152 1E       		.byte	30
+ 368 0153 0E       		.byte	14
+ 369 0154 24       		.byte	36
+ 370 0155 11       		.byte	17
+ 371 0156 25       		.byte	37
+ 372 0157 18       		.byte	24
+ 373 0158 26       		.byte	38
+ 374 0159 06       		.byte	6
+ 375 015a 28       		.byte	40
+ 376 015b 20       		.byte	32
+ 377 015c 29       		.byte	41
+ 378 015d 18       		.byte	24
+ 379 015e 2A       		.byte	42
+ 380 015f 03       		.byte	3
+ 381 0160 2D       		.byte	45
+ 382 0161 08       		.byte	8
+ 383 0162 2E       		.byte	46
+ 384 0163 0C       		.byte	12
+ 385 0164 2F       		.byte	47
+ 386 0165 14       		.byte	20
+ 387 0166 31       		.byte	49
+ 388 0167 06       		.byte	6
+ 389 0168 32       		.byte	50
+ 390 0169 0F       		.byte	15
+ 391 016a 33       		.byte	51
+ 392 016b 01       		.byte	1
+ 393 016c 34       		.byte	52
+ 394 016d 40       		.byte	64
+ 395 016e 36       		.byte	54
+ 396 016f 30       		.byte	48
+ 397 0170 37       		.byte	55
+ 398 0171 18       		.byte	24
+ 399 0172 38       		.byte	56
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccgJTNA0.s 			page 8
+
+
+ 400 0173 80       		.byte	-128
+ 401 0174 3A       		.byte	58
+ 402 0175 08       		.byte	8
+ 403 0176 3B       		.byte	59
+ 404 0177 20       		.byte	32
+ 405 0178 3E       		.byte	62
+ 406 0179 10       		.byte	16
+ 407 017a 3F       		.byte	63
+ 408 017b 05       		.byte	5
+ 409 017c 40       		.byte	64
+ 410 017d 64       		.byte	100
+ 411 017e 41       		.byte	65
+ 412 017f 02       		.byte	2
+ 413 0180 42       		.byte	66
+ 414 0181 05       		.byte	5
+ 415 0182 44       		.byte	68
+ 416 0183 01       		.byte	1
+ 417 0184 45       		.byte	69
+ 418 0185 0C       		.byte	12
+ 419 0186 46       		.byte	70
+ 420 0187 0E       		.byte	14
+ 421 0188 48       		.byte	72
+ 422 0189 05       		.byte	5
+ 423 018a 49       		.byte	73
+ 424 018b FF       		.byte	-1
+ 425 018c 4A       		.byte	74
+ 426 018d FF       		.byte	-1
+ 427 018e 4B       		.byte	75
+ 428 018f FF       		.byte	-1
+ 429 0190 4C       		.byte	76
+ 430 0191 62       		.byte	98
+ 431 0192 4D       		.byte	77
+ 432 0193 A0       		.byte	-96
+ 433 0194 4E       		.byte	78
+ 434 0195 F0       		.byte	-16
+ 435 0196 4F       		.byte	79
+ 436 0197 41       		.byte	65
+ 437 0198 50       		.byte	80
+ 438 0199 0C       		.byte	12
+ 439 019a 54       		.byte	84
+ 440 019b 18       		.byte	24
+ 441 019c 56       		.byte	86
+ 442 019d 04       		.byte	4
+ 443 019e 58       		.byte	88
+ 444 019f 04       		.byte	4
+ 445 01a0 59       		.byte	89
+ 446 01a1 04       		.byte	4
+ 447 01a2 5A       		.byte	90
+ 448 01a3 04       		.byte	4
+ 449 01a4 5B       		.byte	91
+ 450 01a5 04       		.byte	4
+ 451 01a6 5F       		.byte	95
+ 452 01a7 01       		.byte	1
+ 453 01a8 66       		.byte	102
+ 454 01a9 40       		.byte	64
+ 455 01aa 67       		.byte	103
+ 456 01ab 02       		.byte	2
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccgJTNA0.s 			page 9
+
+
+ 457 01ac 69       		.byte	105
+ 458 01ad 10       		.byte	16
+ 459 01ae 6A       		.byte	106
+ 460 01af 30       		.byte	48
+ 461 01b0 6B       		.byte	107
+ 462 01b1 10       		.byte	16
+ 463 01b2 6D       		.byte	109
+ 464 01b3 10       		.byte	16
+ 465 01b4 6E       		.byte	110
+ 466 01b5 10       		.byte	16
+ 467 01b6 6F       		.byte	111
+ 468 01b7 12       		.byte	18
+ 469 01b8 84       		.byte	-124
+ 470 01b9 10       		.byte	16
+ 471 01ba 85       		.byte	-123
+ 472 01bb 2A       		.byte	42
+ 473 01bc 86       		.byte	-122
+ 474 01bd AC       		.byte	-84
+ 475 01be 87       		.byte	-121
+ 476 01bf 44       		.byte	68
+ 477 01c0 89       		.byte	-119
+ 478 01c1 03       		.byte	3
+ 479 01c2 8B       		.byte	-117
+ 480 01c3 44       		.byte	68
+ 481 01c4 8C       		.byte	-116
+ 482 01c5 0C       		.byte	12
+ 483 01c6 8D       		.byte	-115
+ 484 01c7 73       		.byte	115
+ 485 01c8 8E       		.byte	-114
+ 486 01c9 71       		.byte	113
+ 487 01ca 8F       		.byte	-113
+ 488 01cb 04       		.byte	4
+ 489 01cc 94       		.byte	-108
+ 490 01cd DC       		.byte	-36
+ 491 01ce 96       		.byte	-106
+ 492 01cf 22       		.byte	34
+ 493 01d0 99       		.byte	-103
+ 494 01d1 73       		.byte	115
+ 495 01d2 9A       		.byte	-102
+ 496 01d3 20       		.byte	32
+ 497 01d4 9B       		.byte	-101
+ 498 01d5 0C       		.byte	12
+ 499 01d6 9E       		.byte	-98
+ 500 01d7 03       		.byte	3
+ 501 01d8 A3       		.byte	-93
+ 502 01d9 08       		.byte	8
+ 503 01da A4       		.byte	-92
+ 504 01db 10       		.byte	16
+ 505 01dc A6       		.byte	-90
+ 506 01dd 40       		.byte	64
+ 507 01de A7       		.byte	-89
+ 508 01df 55       		.byte	85
+ 509 01e0 A8       		.byte	-88
+ 510 01e1 14       		.byte	20
+ 511 01e2 AC       		.byte	-84
+ 512 01e3 09       		.byte	9
+ 513 01e4 AE       		.byte	-82
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccgJTNA0.s 			page 10
+
+
+ 514 01e5 D0       		.byte	-48
+ 515 01e6 B0       		.byte	-80
+ 516 01e7 E0       		.byte	-32
+ 517 01e8 B3       		.byte	-77
+ 518 01e9 30       		.byte	48
+ 519 01ea B5       		.byte	-75
+ 520 01eb 0F       		.byte	15
+ 521 01ec B6       		.byte	-74
+ 522 01ed 1F       		.byte	31
+ 523 01ee B7       		.byte	-73
+ 524 01ef 40       		.byte	64
+ 525 01f0 B9       		.byte	-71
+ 526 01f1 08       		.byte	8
+ 527 01f2 BA       		.byte	-70
+ 528 01f3 02       		.byte	2
+ 529 01f4 BB       		.byte	-69
+ 530 01f5 20       		.byte	32
+ 531 01f6 BF       		.byte	-65
+ 532 01f7 44       		.byte	68
+ 533 01f8 C0       		.byte	-64
+ 534 01f9 63       		.byte	99
+ 535 01fa C1       		.byte	-63
+ 536 01fb 05       		.byte	5
+ 537 01fc C5       		.byte	-59
+ 538 01fd 0E       		.byte	14
+ 539 01fe C6       		.byte	-58
+ 540 01ff C0       		.byte	-64
+ 541 0200 C7       		.byte	-57
+ 542 0201 0B       		.byte	11
+ 543 0202 C8       		.byte	-56
+ 544 0203 19       		.byte	25
+ 545 0204 C9       		.byte	-55
+ 546 0205 FF       		.byte	-1
+ 547 0206 CA       		.byte	-54
+ 548 0207 FF       		.byte	-1
+ 549 0208 CB       		.byte	-53
+ 550 0209 FF       		.byte	-1
+ 551 020a CE       		.byte	-50
+ 552 020b F0       		.byte	-16
+ 553 020c CF       		.byte	-49
+ 554 020d 44       		.byte	68
+ 555 020e D0       		.byte	-48
+ 556 020f 0C       		.byte	12
+ 557 0210 D4       		.byte	-44
+ 558 0211 01       		.byte	1
+ 559 0212 D8       		.byte	-40
+ 560 0213 04       		.byte	4
+ 561 0214 D9       		.byte	-39
+ 562 0215 04       		.byte	4
+ 563 0216 DA       		.byte	-38
+ 564 0217 04       		.byte	4
+ 565 0218 DB       		.byte	-37
+ 566 0219 04       		.byte	4
+ 567 021a DF       		.byte	-33
+ 568 021b 01       		.byte	1
+ 569 021c E6       		.byte	-26
+ 570 021d C0       		.byte	-64
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccgJTNA0.s 			page 11
+
+
+ 571 021e EA       		.byte	-22
+ 572 021f 40       		.byte	64
+ 573 0220 EB       		.byte	-21
+ 574 0221 02       		.byte	2
+ 575 0222 00       		.byte	0
+ 576 0223 48       		.byte	72
+ 577 0224 04       		.byte	4
+ 578 0225 20       		.byte	32
+ 579 0226 05       		.byte	5
+ 580 0227 10       		.byte	16
+ 581 0228 06       		.byte	6
+ 582 0229 10       		.byte	16
+ 583 022a 07       		.byte	7
+ 584 022b 02       		.byte	2
+ 585 022c 08       		.byte	8
+ 586 022d 20       		.byte	32
+ 587 022e 0A       		.byte	10
+ 588 022f 11       		.byte	17
+ 589 0230 0B       		.byte	11
+ 590 0231 01       		.byte	1
+ 591 0232 0E       		.byte	14
+ 592 0233 10       		.byte	16
+ 593 0234 0F       		.byte	15
+ 594 0235 0A       		.byte	10
+ 595 0236 10       		.byte	16
+ 596 0237 08       		.byte	8
+ 597 0238 12       		.byte	18
+ 598 0239 11       		.byte	17
+ 599 023a 16       		.byte	22
+ 600 023b 05       		.byte	5
+ 601 023c 17       		.byte	23
+ 602 023d 08       		.byte	8
+ 603 023e 18       		.byte	24
+ 604 023f 40       		.byte	64
+ 605 0240 1A       		.byte	26
+ 606 0241 01       		.byte	1
+ 607 0242 1B       		.byte	27
+ 608 0243 01       		.byte	1
+ 609 0244 1E       		.byte	30
+ 610 0245 14       		.byte	20
+ 611 0246 1F       		.byte	31
+ 612 0247 84       		.byte	-124
+ 613 0248 20       		.byte	32
+ 614 0249 08       		.byte	8
+ 615 024a 22       		.byte	34
+ 616 024b 58       		.byte	88
+ 617 024c 23       		.byte	35
+ 618 024d 08       		.byte	8
+ 619 024e 25       		.byte	37
+ 620 024f 14       		.byte	20
+ 621 0250 27       		.byte	39
+ 622 0251 45       		.byte	69
+ 623 0252 28       		.byte	40
+ 624 0253 20       		.byte	32
+ 625 0254 29       		.byte	41
+ 626 0255 04       		.byte	4
+ 627 0256 2A       		.byte	42
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccgJTNA0.s 			page 12
+
+
+ 628 0257 05       		.byte	5
+ 629 0258 2B       		.byte	43
+ 630 0259 80       		.byte	-128
+ 631 025a 2D       		.byte	45
+ 632 025b 80       		.byte	-128
+ 633 025c 2F       		.byte	47
+ 634 025d 28       		.byte	40
+ 635 025e 32       		.byte	50
+ 636 025f 10       		.byte	16
+ 637 0260 35       		.byte	53
+ 638 0261 20       		.byte	32
+ 639 0262 37       		.byte	55
+ 640 0263 01       		.byte	1
+ 641 0264 38       		.byte	56
+ 642 0265 60       		.byte	96
+ 643 0266 3B       		.byte	59
+ 644 0267 48       		.byte	72
+ 645 0268 3D       		.byte	61
+ 646 0269 82       		.byte	-126
+ 647 026a 40       		.byte	64
+ 648 026b 20       		.byte	32
+ 649 026c 45       		.byte	69
+ 650 026d 10       		.byte	16
+ 651 026e 46       		.byte	70
+ 652 026f 40       		.byte	64
+ 653 0270 47       		.byte	71
+ 654 0271 40       		.byte	64
+ 655 0272 48       		.byte	72
+ 656 0273 04       		.byte	4
+ 657 0274 4B       		.byte	75
+ 658 0275 44       		.byte	68
+ 659 0276 4C       		.byte	76
+ 660 0277 01       		.byte	1
+ 661 0278 4E       		.byte	78
+ 662 0279 04       		.byte	4
+ 663 027a 4F       		.byte	79
+ 664 027b 08       		.byte	8
+ 665 027c 50       		.byte	80
+ 666 027d 18       		.byte	24
+ 667 027e 55       		.byte	85
+ 668 027f 40       		.byte	64
+ 669 0280 58       		.byte	88
+ 670 0281 01       		.byte	1
+ 671 0282 59       		.byte	89
+ 672 0283 18       		.byte	24
+ 673 0284 5A       		.byte	90
+ 674 0285 80       		.byte	-128
+ 675 0286 5E       		.byte	94
+ 676 0287 02       		.byte	2
+ 677 0288 66       		.byte	102
+ 678 0289 A0       		.byte	-96
+ 679 028a 67       		.byte	103
+ 680 028b 80       		.byte	-128
+ 681 028c 87       		.byte	-121
+ 682 028d 40       		.byte	64
+ 683 028e C0       		.byte	-64
+ 684 028f A5       		.byte	-91
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccgJTNA0.s 			page 13
+
+
+ 685 0290 C2       		.byte	-62
+ 686 0291 E7       		.byte	-25
+ 687 0292 C4       		.byte	-60
+ 688 0293 E7       		.byte	-25
+ 689 0294 CA       		.byte	-54
+ 690 0295 73       		.byte	115
+ 691 0296 CC       		.byte	-52
+ 692 0297 A4       		.byte	-92
+ 693 0298 CE       		.byte	-50
+ 694 0299 9E       		.byte	-98
+ 695 029a D0       		.byte	-48
+ 696 029b B2       		.byte	-78
+ 697 029c D2       		.byte	-46
+ 698 029d 3C       		.byte	60
+ 699 029e D6       		.byte	-42
+ 700 029f 8F       		.byte	-113
+ 701 02a0 D8       		.byte	-40
+ 702 02a1 B0       		.byte	-80
+ 703 02a2 04       		.byte	4
+ 704 02a3 02       		.byte	2
+ 705 02a4 06       		.byte	6
+ 706 02a5 0C       		.byte	12
+ 707 02a6 0C       		.byte	12
+ 708 02a7 04       		.byte	4
+ 709 02a8 0E       		.byte	14
+ 710 02a9 02       		.byte	2
+ 711 02aa 10       		.byte	16
+ 712 02ab 01       		.byte	1
+ 713 02ac 18       		.byte	24
+ 714 02ad 10       		.byte	16
+ 715 02ae 1C       		.byte	28
+ 716 02af 08       		.byte	8
+ 717 02b0 1E       		.byte	30
+ 718 02b1 02       		.byte	2
+ 719 02b2 20       		.byte	32
+ 720 02b3 20       		.byte	32
+ 721 02b4 24       		.byte	36
+ 722 02b5 0F       		.byte	15
+ 723 02b6 28       		.byte	40
+ 724 02b7 0F       		.byte	15
+ 725 02b8 30       		.byte	48
+ 726 02b9 01       		.byte	1
+ 727 02ba 32       		.byte	50
+ 728 02bb 10       		.byte	16
+ 729 02bc 34       		.byte	52
+ 730 02bd 0E       		.byte	14
+ 731 02be 36       		.byte	54
+ 732 02bf 20       		.byte	32
+ 733 02c0 3E       		.byte	62
+ 734 02c1 44       		.byte	68
+ 735 02c2 40       		.byte	64
+ 736 02c3 06       		.byte	6
+ 737 02c4 46       		.byte	70
+ 738 02c5 40       		.byte	64
+ 739 02c6 49       		.byte	73
+ 740 02c7 FF       		.byte	-1
+ 741 02c8 4A       		.byte	74
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccgJTNA0.s 			page 14
+
+
+ 742 02c9 07       		.byte	7
+ 743 02ca 4B       		.byte	75
+ 744 02cb FF       		.byte	-1
+ 745 02cc 4C       		.byte	76
+ 746 02cd 40       		.byte	64
+ 747 02ce 4D       		.byte	77
+ 748 02cf 20       		.byte	32
+ 749 02d0 4E       		.byte	78
+ 750 02d1 F0       		.byte	-16
+ 751 02d2 4F       		.byte	79
+ 752 02d3 05       		.byte	5
+ 753 02d4 50       		.byte	80
+ 754 02d5 08       		.byte	8
+ 755 02d6 58       		.byte	88
+ 756 02d7 04       		.byte	4
+ 757 02d8 5A       		.byte	90
+ 758 02d9 04       		.byte	4
+ 759 02da 5F       		.byte	95
+ 760 02db 01       		.byte	1
+ 761 02dc 60       		.byte	96
+ 762 02dd 40       		.byte	64
+ 763 02de 61       		.byte	97
+ 764 02df A8       		.byte	-88
+ 765 02e0 62       		.byte	98
+ 766 02e1 40       		.byte	64
+ 767 02e2 63       		.byte	99
+ 768 02e3 20       		.byte	32
+ 769 02e4 80       		.byte	-128
+ 770 02e5 1F       		.byte	31
+ 771 02e6 82       		.byte	-126
+ 772 02e7 E0       		.byte	-32
+ 773 02e8 84       		.byte	-124
+ 774 02e9 0C       		.byte	12
+ 775 02ea 85       		.byte	-123
+ 776 02eb 08       		.byte	8
+ 777 02ec 88       		.byte	-120
+ 778 02ed 04       		.byte	4
+ 779 02ee 89       		.byte	-119
+ 780 02ef 18       		.byte	24
+ 781 02f0 8C       		.byte	-116
+ 782 02f1 41       		.byte	65
+ 783 02f2 8F       		.byte	-113
+ 784 02f3 23       		.byte	35
+ 785 02f4 91       		.byte	-111
+ 786 02f5 1C       		.byte	28
+ 787 02f6 92       		.byte	-110
+ 788 02f7 E3       		.byte	-29
+ 789 02f8 93       		.byte	-109
+ 790 02f9 A1       		.byte	-95
+ 791 02fa 94       		.byte	-108
+ 792 02fb C3       		.byte	-61
+ 793 02fc 95       		.byte	-107
+ 794 02fd BF       		.byte	-65
+ 795 02fe 98       		.byte	-104
+ 796 02ff F3       		.byte	-13
+ 797 0300 9A       		.byte	-102
+ 798 0301 0C       		.byte	12
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccgJTNA0.s 			page 15
+
+
+ 799 0302 9B       		.byte	-101
+ 800 0303 04       		.byte	4
+ 801 0304 9C       		.byte	-100
+ 802 0305 08       		.byte	8
+ 803 0306 A0       		.byte	-96
+ 804 0307 82       		.byte	-126
+ 805 0308 A1       		.byte	-95
+ 806 0309 10       		.byte	16
+ 807 030a A4       		.byte	-92
+ 808 030b FF       		.byte	-1
+ 809 030c A5       		.byte	-91
+ 810 030d A7       		.byte	-89
+ 811 030e A7       		.byte	-89
+ 812 030f 18       		.byte	24
+ 813 0310 A8       		.byte	-88
+ 814 0311 1C       		.byte	28
+ 815 0312 A9       		.byte	-87
+ 816 0313 3C       		.byte	60
+ 817 0314 AA       		.byte	-86
+ 818 0315 E3       		.byte	-29
+ 819 0316 AB       		.byte	-85
+ 820 0317 82       		.byte	-126
+ 821 0318 AD       		.byte	-83
+ 822 0319 04       		.byte	4
+ 823 031a AF       		.byte	-81
+ 824 031b 40       		.byte	64
+ 825 031c B0       		.byte	-80
+ 826 031d 2C       		.byte	44
+ 827 031e B1       		.byte	-79
+ 828 031f 80       		.byte	-128
+ 829 0320 B2       		.byte	-78
+ 830 0321 10       		.byte	16
+ 831 0322 B3       		.byte	-77
+ 832 0323 1F       		.byte	31
+ 833 0324 B4       		.byte	-76
+ 834 0325 0F       		.byte	15
+ 835 0326 B5       		.byte	-75
+ 836 0327 40       		.byte	64
+ 837 0328 B6       		.byte	-74
+ 838 0329 C0       		.byte	-64
+ 839 032a B7       		.byte	-73
+ 840 032b 38       		.byte	56
+ 841 032c B9       		.byte	-71
+ 842 032d 02       		.byte	2
+ 843 032e BA       		.byte	-70
+ 844 032f 22       		.byte	34
+ 845 0330 BB       		.byte	-69
+ 846 0331 08       		.byte	8
+ 847 0332 BE       		.byte	-66
+ 848 0333 04       		.byte	4
+ 849 0334 D6       		.byte	-42
+ 850 0335 02       		.byte	2
+ 851 0336 D7       		.byte	-41
+ 852 0337 11       		.byte	17
+ 853 0338 D8       		.byte	-40
+ 854 0339 04       		.byte	4
+ 855 033a D9       		.byte	-39
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccgJTNA0.s 			page 16
+
+
+ 856 033b 04       		.byte	4
+ 857 033c DB       		.byte	-37
+ 858 033d 04       		.byte	4
+ 859 033e DF       		.byte	-33
+ 860 033f 01       		.byte	1
+ 861 0340 00       		.byte	0
+ 862 0341 04       		.byte	4
+ 863 0342 01       		.byte	1
+ 864 0343 80       		.byte	-128
+ 865 0344 05       		.byte	5
+ 866 0345 81       		.byte	-127
+ 867 0346 07       		.byte	7
+ 868 0347 28       		.byte	40
+ 869 0348 08       		.byte	8
+ 870 0349 80       		.byte	-128
+ 871 034a 0A       		.byte	10
+ 872 034b 40       		.byte	64
+ 873 034c 0B       		.byte	11
+ 874 034d 04       		.byte	4
+ 875 034e 0C       		.byte	12
+ 876 034f 81       		.byte	-127
+ 877 0350 0E       		.byte	14
+ 878 0351 04       		.byte	4
+ 879 0352 0F       		.byte	15
+ 880 0353 20       		.byte	32
+ 881 0354 10       		.byte	16
+ 882 0355 28       		.byte	40
+ 883 0356 13       		.byte	19
+ 884 0357 01       		.byte	1
+ 885 0358 14       		.byte	20
+ 886 0359 80       		.byte	-128
+ 887 035a 15       		.byte	21
+ 888 035b 10       		.byte	16
+ 889 035c 17       		.byte	23
+ 890 035d 15       		.byte	21
+ 891 035e 18       		.byte	24
+ 892 035f 44       		.byte	68
+ 893 0360 19       		.byte	25
+ 894 0361 28       		.byte	40
+ 895 0362 1A       		.byte	26
+ 896 0363 02       		.byte	2
+ 897 0364 1B       		.byte	27
+ 898 0365 12       		.byte	18
+ 899 0366 1D       		.byte	29
+ 900 0367 01       		.byte	1
+ 901 0368 1E       		.byte	30
+ 902 0369 26       		.byte	38
+ 903 036a 24       		.byte	36
+ 904 036b 02       		.byte	2
+ 905 036c 25       		.byte	37
+ 906 036d 01       		.byte	1
+ 907 036e 26       		.byte	38
+ 908 036f 20       		.byte	32
+ 909 0370 27       		.byte	39
+ 910 0371 12       		.byte	18
+ 911 0372 28       		.byte	40
+ 912 0373 01       		.byte	1
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccgJTNA0.s 			page 17
+
+
+ 913 0374 2A       		.byte	42
+ 914 0375 40       		.byte	64
+ 915 0376 2B       		.byte	43
+ 916 0377 02       		.byte	2
+ 917 0378 2C       		.byte	44
+ 918 0379 80       		.byte	-128
+ 919 037a 2D       		.byte	45
+ 920 037b 90       		.byte	-112
+ 921 037c 2E       		.byte	46
+ 922 037d 04       		.byte	4
+ 923 037e 35       		.byte	53
+ 924 037f 01       		.byte	1
+ 925 0380 36       		.byte	54
+ 926 0381 20       		.byte	32
+ 927 0382 37       		.byte	55
+ 928 0383 04       		.byte	4
+ 929 0384 3C       		.byte	60
+ 930 0385 40       		.byte	64
+ 931 0386 3E       		.byte	62
+ 932 0387 28       		.byte	40
+ 933 0388 49       		.byte	73
+ 934 0389 04       		.byte	4
+ 935 038a 4A       		.byte	74
+ 936 038b 08       		.byte	8
+ 937 038c 52       		.byte	82
+ 938 038d 10       		.byte	16
+ 939 038e 5A       		.byte	90
+ 940 038f 0C       		.byte	12
+ 941 0390 5E       		.byte	94
+ 942 0391 20       		.byte	32
+ 943 0392 6C       		.byte	108
+ 944 0393 28       		.byte	40
+ 945 0394 6E       		.byte	110
+ 946 0395 40       		.byte	64
+ 947 0396 6F       		.byte	111
+ 948 0397 28       		.byte	40
+ 949 0398 74       		.byte	116
+ 950 0399 80       		.byte	-128
+ 951 039a 76       		.byte	118
+ 952 039b 28       		.byte	40
+ 953 039c 77       		.byte	119
+ 954 039d 28       		.byte	40
+ 955 039e 86       		.byte	-122
+ 956 039f 01       		.byte	1
+ 957 03a0 89       		.byte	-119
+ 958 03a1 80       		.byte	-128
+ 959 03a2 93       		.byte	-109
+ 960 03a3 05       		.byte	5
+ 961 03a4 94       		.byte	-108
+ 962 03a5 02       		.byte	2
+ 963 03a6 96       		.byte	-106
+ 964 03a7 08       		.byte	8
+ 965 03a8 9B       		.byte	-101
+ 966 03a9 05       		.byte	5
+ 967 03aa 9D       		.byte	-99
+ 968 03ab AC       		.byte	-84
+ 969 03ac 9E       		.byte	-98
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccgJTNA0.s 			page 18
+
+
+ 970 03ad 50       		.byte	80
+ 971 03ae 9F       		.byte	-97
+ 972 03af 02       		.byte	2
+ 973 03b0 A2       		.byte	-94
+ 974 03b1 08       		.byte	8
+ 975 03b2 A5       		.byte	-91
+ 976 03b3 01       		.byte	1
+ 977 03b4 A6       		.byte	-90
+ 978 03b5 01       		.byte	1
+ 979 03b6 A7       		.byte	-89
+ 980 03b7 28       		.byte	40
+ 981 03b8 AC       		.byte	-84
+ 982 03b9 01       		.byte	1
+ 983 03ba AF       		.byte	-81
+ 984 03bb 04       		.byte	4
+ 985 03bc B2       		.byte	-78
+ 986 03bd 84       		.byte	-124
+ 987 03be B5       		.byte	-75
+ 988 03bf 04       		.byte	4
+ 989 03c0 B6       		.byte	-74
+ 990 03c1 20       		.byte	32
+ 991 03c2 C0       		.byte	-64
+ 992 03c3 F5       		.byte	-11
+ 993 03c4 C2       		.byte	-62
+ 994 03c5 FB       		.byte	-5
+ 995 03c6 C4       		.byte	-60
+ 996 03c7 7E       		.byte	126
+ 997 03c8 CA       		.byte	-54
+ 998 03c9 F0       		.byte	-16
+ 999 03ca CC       		.byte	-52
+ 1000 03cb E0       		.byte	-32
+ 1001 03cc CE       		.byte	-50
+ 1002 03cd 70       		.byte	112
+ 1003 03ce D2       		.byte	-46
+ 1004 03cf 04       		.byte	4
+ 1005 03d0 D6       		.byte	-42
+ 1006 03d1 20       		.byte	32
+ 1007 03d2 E4       		.byte	-28
+ 1008 03d3 02       		.byte	2
+ 1009 03d4 EE       		.byte	-18
+ 1010 03d5 08       		.byte	8
+ 1011 03d6 33       		.byte	51
+ 1012 03d7 20       		.byte	32
+ 1013 03d8 35       		.byte	53
+ 1014 03d9 80       		.byte	-128
+ 1015 03da CC       		.byte	-52
+ 1016 03db 30       		.byte	48
+ 1017 03dc 9D       		.byte	-99
+ 1018 03dd 80       		.byte	-128
+ 1019 03de A7       		.byte	-89
+ 1020 03df 20       		.byte	32
+ 1021 03e0 9D       		.byte	-99
+ 1022 03e1 80       		.byte	-128
+ 1023 03e2 A7       		.byte	-89
+ 1024 03e3 20       		.byte	32
+ 1025 03e4 9D       		.byte	-99
+ 1026 03e5 80       		.byte	-128
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccgJTNA0.s 			page 19
+
+
+ 1027 03e6 A7       		.byte	-89
+ 1028 03e7 20       		.byte	32
+ 1029 03e8 85       		.byte	-123
+ 1030 03e9 80       		.byte	-128
+ 1031 03ea 9D       		.byte	-99
+ 1032 03eb 80       		.byte	-128
+ 1033 03ec A7       		.byte	-89
+ 1034 03ed 20       		.byte	32
+ 1035 03ee E2       		.byte	-30
+ 1036 03ef 10       		.byte	16
+ 1037 03f0 AF       		.byte	-81
+ 1038 03f1 20       		.byte	32
+ 1039 03f2 EE       		.byte	-18
+ 1040 03f3 10       		.byte	16
+ 1041 03f4 1F       		.byte	31
+ 1042 03f5 80       		.byte	-128
+ 1043 03f6 C6       		.byte	-58
+ 1044 03f7 01       		.byte	1
+ 1045 03f8 11       		.byte	17
+ 1046 03f9 01       		.byte	1
+ 1047 03fa 74       		.byte	116
+ 1048 03fb 04       		.byte	4
+ 1049 03fc 84       		.byte	-124
+ 1050 03fd 04       		.byte	4
+ 1051 03fe 89       		.byte	-119
+ 1052 03ff 01       		.byte	1
+ 1053 0400 AF       		.byte	-81
+ 1054 0401 80       		.byte	-128
+ 1055 0402 C4       		.byte	-60
+ 1056 0403 08       		.byte	8
+ 1057 0404 DE       		.byte	-34
+ 1058 0405 04       		.byte	4
+ 1059 0406 E6       		.byte	-26
+ 1060 0407 01       		.byte	1
+ 1061 0408 10       		.byte	16
+ 1062 0409 03       		.byte	3
+ 1063 040a 1A       		.byte	26
+ 1064 040b 02       		.byte	2
+ 1065 040c 1C       		.byte	28
+ 1066 040d 01       		.byte	1
+ 1067 040e 00       		.byte	0
+ 1068 040f 0F       		.byte	15
+ 1069 0410 80       		.byte	-128
+ 1070 0411 80       		.byte	-128
+ 1071 0412 00       		.byte	0
+ 1072 0413 00       		.byte	0
+ 1073 0414 40       		.byte	64
+ 1074 0415 00       		.byte	0
+ 1075 0416 00       		.byte	0
+ 1076 0417 00       		.byte	0
+ 1077 0418 00       		.byte	0
+ 1078 0419 00       		.byte	0
+ 1079 041a 00       		.byte	0
+ 1080 041b 00       		.byte	0
+ 1081 041c 00       		.byte	0
+ 1082 041d 00       		.byte	0
+ 1083 041e 05       		.byte	5
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccgJTNA0.s 			page 20
+
+
+ 1084 041f 00       		.byte	0
+ 1085 0420 80       		.byte	-128
+ 1086 0421 00       		.byte	0
+ 1087 0422 40       		.byte	64
+ 1088 0423 80       		.byte	-128
+ 1089 0424 80       		.byte	-128
+ 1090 0425 00       		.byte	0
+ 1091 0426 80       		.byte	-128
+ 1092 0427 00       		.byte	0
+ 1093 0428 00       		.byte	0
+ 1094 0429 00       		.byte	0
+ 1095 042a 00       		.byte	0
+ 1096 042b 00       		.byte	0
+ 1097 042c 00       		.byte	0
+ 1098 042d 0B       		.byte	11
+ 1099 042e 0B       		.byte	11
+ 1100 042f 00       		.byte	0
+ 1101 0430 00       		.byte	0
+ 1102 0431 00       		.byte	0
+ 1103 0432 00       		.byte	0
+ 1104 0433 00       		.byte	0
+ 1105 0434 0C       		.byte	12
+ 1106 0435 00       		.byte	0
+ 1107 0436 18       		.byte	24
+ 1108 0437 01       		.byte	1
+ 1109              		.section	.cywolatch,"a",%progbits
+ 1110              		.align	2
+ 1111              		.type	cy_meta_wonvl, %object
+ 1112              		.size	cy_meta_wonvl, 4
+ 1113              	cy_meta_wonvl:
+ 1114 0000 BC       		.byte	-68
+ 1115 0001 90       		.byte	-112
+ 1116 0002 AC       		.byte	-84
+ 1117 0003 AF       		.byte	-81
+ 1118              		.section	.cycustnvl,"a",%progbits
+ 1119              		.align	2
+ 1120              		.type	cy_meta_custnvl, %object
+ 1121              		.size	cy_meta_custnvl, 4
+ 1122              	cy_meta_custnvl:
+ 1123 0000 00       		.byte	0
+ 1124 0001 00       		.byte	0
+ 1125 0002 40       		.byte	64
+ 1126 0003 05       		.byte	5
+ 1127              		.section	.cymeta,"a",%progbits
+ 1128              		.align	2
+ 1129              		.type	cy_metadata, %object
+ 1130              		.size	cy_metadata, 12
+ 1131              	cy_metadata:
+ 1132 0000 00       		.byte	0
+ 1133 0001 01       		.byte	1
+ 1134 0002 2E       		.byte	46
+ 1135 0003 16       		.byte	22
+ 1136 0004 10       		.byte	16
+ 1137 0005 69       		.byte	105
+ 1138 0006 00       		.byte	0
+ 1139 0007 01       		.byte	1
+ 1140 0008 00       		.byte	0
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccgJTNA0.s 			page 21
+
+
+ 1141 0009 00       		.byte	0
+ 1142 000a 00       		.byte	0
+ 1143 000b 00       		.byte	0
+ 1144              		.section	.cyflashprotect,"a",%progbits
+ 1145              		.align	2
+ 1146              		.type	cy_meta_flashprotect, %object
+ 1147              		.size	cy_meta_flashprotect, 256
+ 1148              	cy_meta_flashprotect:
+ 1149 0000 00000000 		.space	256
+ 1149      00000000 
+ 1149      00000000 
+ 1149      00000000 
+ 1149      00000000 
+ 1150              		.text
+ 1151              	.Letext0:
+ 1152              		.file 1 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 1153              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 1154              		.file 3 "Generated_Source\\PSoC5\\cymetadata.c"
+ 1155              		.section	.debug_info,"",%progbits
+ 1156              	.Ldebug_info0:
+ 1157 0000 31010000 		.4byte	0x131
+ 1158 0004 0400     		.2byte	0x4
+ 1159 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 1160 000a 04       		.byte	0x4
+ 1161 000b 01       		.uleb128 0x1
+ 1162 000c 24000000 		.4byte	.LASF17
+ 1163 0010 0C       		.byte	0xc
+ 1164 0011 F2010000 		.4byte	.LASF18
+ 1165 0015 D7000000 		.4byte	.LASF19
+ 1166 0019 00000000 		.4byte	.Ldebug_line0
+ 1167 001d 02       		.uleb128 0x2
+ 1168 001e 01       		.byte	0x1
+ 1169 001f 06       		.byte	0x6
+ 1170 0020 E6010000 		.4byte	.LASF0
+ 1171 0024 03       		.uleb128 0x3
+ 1172 0025 00000000 		.4byte	.LASF9
+ 1173 0029 01       		.byte	0x1
+ 1174 002a 1D       		.byte	0x1d
+ 1175 002b 2F000000 		.4byte	0x2f
+ 1176 002f 02       		.uleb128 0x2
+ 1177 0030 01       		.byte	0x1
+ 1178 0031 08       		.byte	0x8
+ 1179 0032 16000000 		.4byte	.LASF1
+ 1180 0036 02       		.uleb128 0x2
+ 1181 0037 02       		.byte	0x2
+ 1182 0038 05       		.byte	0x5
+ 1183 0039 D3010000 		.4byte	.LASF2
+ 1184 003d 02       		.uleb128 0x2
+ 1185 003e 02       		.byte	0x2
+ 1186 003f 07       		.byte	0x7
+ 1187 0040 C4000000 		.4byte	.LASF3
+ 1188 0044 02       		.uleb128 0x2
+ 1189 0045 04       		.byte	0x4
+ 1190 0046 05       		.byte	0x5
+ 1191 0047 DD010000 		.4byte	.LASF4
+ 1192 004b 02       		.uleb128 0x2
+ 1193 004c 04       		.byte	0x4
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccgJTNA0.s 			page 22
+
+
+ 1194 004d 07       		.byte	0x7
+ 1195 004e B2000000 		.4byte	.LASF5
+ 1196 0052 02       		.uleb128 0x2
+ 1197 0053 08       		.byte	0x8
+ 1198 0054 05       		.byte	0x5
+ 1199 0055 C5010000 		.4byte	.LASF6
+ 1200 0059 02       		.uleb128 0x2
+ 1201 005a 08       		.byte	0x8
+ 1202 005b 07       		.byte	0x7
+ 1203 005c 7A010000 		.4byte	.LASF7
+ 1204 0060 04       		.uleb128 0x4
+ 1205 0061 04       		.byte	0x4
+ 1206 0062 05       		.byte	0x5
+ 1207 0063 696E7400 		.ascii	"int\000"
+ 1208 0067 02       		.uleb128 0x2
+ 1209 0068 04       		.byte	0x4
+ 1210 0069 07       		.byte	0x7
+ 1211 006a 6D010000 		.4byte	.LASF8
+ 1212 006e 03       		.uleb128 0x3
+ 1213 006f 91010000 		.4byte	.LASF10
+ 1214 0073 02       		.byte	0x2
+ 1215 0074 18       		.byte	0x18
+ 1216 0075 24000000 		.4byte	0x24
+ 1217 0079 05       		.uleb128 0x5
+ 1218 007a 91000000 		.4byte	0x91
+ 1219 007e 8A000000 		.4byte	0x8a
+ 1220 0082 06       		.uleb128 0x6
+ 1221 0083 8A000000 		.4byte	0x8a
+ 1222 0087 3704     		.2byte	0x437
+ 1223 0089 00       		.byte	0
+ 1224 008a 02       		.uleb128 0x2
+ 1225 008b 04       		.byte	0x4
+ 1226 008c 07       		.byte	0x7
+ 1227 008d BC010000 		.4byte	.LASF11
+ 1228 0091 07       		.uleb128 0x7
+ 1229 0092 6E000000 		.4byte	0x6e
+ 1230 0096 08       		.uleb128 0x8
+ 1231 0097 5B010000 		.4byte	.LASF12
+ 1232 009b 03       		.byte	0x3
+ 1233 009c 1F       		.byte	0x1f
+ 1234 009d A7000000 		.4byte	0xa7
+ 1235 00a1 05       		.uleb128 0x5
+ 1236 00a2 03       		.byte	0x3
+ 1237 00a3 00000000 		.4byte	cy_meta_configecc
+ 1238 00a7 07       		.uleb128 0x7
+ 1239 00a8 79000000 		.4byte	0x79
+ 1240 00ac 05       		.uleb128 0x5
+ 1241 00ad 91000000 		.4byte	0x91
+ 1242 00b1 BC000000 		.4byte	0xbc
+ 1243 00b5 09       		.uleb128 0x9
+ 1244 00b6 8A000000 		.4byte	0x8a
+ 1245 00ba 03       		.byte	0x3
+ 1246 00bb 00       		.byte	0
+ 1247 00bc 08       		.uleb128 0x8
+ 1248 00bd 4B010000 		.4byte	.LASF13
+ 1249 00c1 03       		.byte	0x3
+ 1250 00c2 B3       		.byte	0xb3
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccgJTNA0.s 			page 23
+
+
+ 1251 00c3 CD000000 		.4byte	0xcd
+ 1252 00c7 05       		.uleb128 0x5
+ 1253 00c8 03       		.byte	0x3
+ 1254 00c9 00000000 		.4byte	cy_meta_custnvl
+ 1255 00cd 07       		.uleb128 0x7
+ 1256 00ce AC000000 		.4byte	0xac
+ 1257 00d2 08       		.uleb128 0x8
+ 1258 00d3 AE010000 		.4byte	.LASF14
+ 1259 00d7 03       		.byte	0x3
+ 1260 00d8 C1       		.byte	0xc1
+ 1261 00d9 E3000000 		.4byte	0xe3
+ 1262 00dd 05       		.uleb128 0x5
+ 1263 00de 03       		.byte	0x3
+ 1264 00df 00000000 		.4byte	cy_meta_wonvl
+ 1265 00e3 07       		.uleb128 0x7
+ 1266 00e4 AC000000 		.4byte	0xac
+ 1267 00e8 05       		.uleb128 0x5
+ 1268 00e9 91000000 		.4byte	0x91
+ 1269 00ed F8000000 		.4byte	0xf8
+ 1270 00f1 09       		.uleb128 0x9
+ 1271 00f2 8A000000 		.4byte	0x8a
+ 1272 00f6 FF       		.byte	0xff
+ 1273 00f7 00       		.byte	0
+ 1274 00f8 08       		.uleb128 0x8
+ 1275 00f9 99010000 		.4byte	.LASF15
+ 1276 00fd 03       		.byte	0x3
+ 1277 00fe CF       		.byte	0xcf
+ 1278 00ff 09010000 		.4byte	0x109
+ 1279 0103 05       		.uleb128 0x5
+ 1280 0104 03       		.byte	0x3
+ 1281 0105 00000000 		.4byte	cy_meta_flashprotect
+ 1282 0109 07       		.uleb128 0x7
+ 1283 010a E8000000 		.4byte	0xe8
+ 1284 010e 05       		.uleb128 0x5
+ 1285 010f 91000000 		.4byte	0x91
+ 1286 0113 1E010000 		.4byte	0x11e
+ 1287 0117 09       		.uleb128 0x9
+ 1288 0118 8A000000 		.4byte	0x8a
+ 1289 011c 0B       		.byte	0xb
+ 1290 011d 00       		.byte	0
+ 1291 011e 08       		.uleb128 0x8
+ 1292 011f 0A000000 		.4byte	.LASF16
+ 1293 0123 03       		.byte	0x3
+ 1294 0124 FC       		.byte	0xfc
+ 1295 0125 2F010000 		.4byte	0x12f
+ 1296 0129 05       		.uleb128 0x5
+ 1297 012a 03       		.byte	0x3
+ 1298 012b 00000000 		.4byte	cy_metadata
+ 1299 012f 07       		.uleb128 0x7
+ 1300 0130 0E010000 		.4byte	0x10e
+ 1301 0134 00       		.byte	0
+ 1302              		.section	.debug_abbrev,"",%progbits
+ 1303              	.Ldebug_abbrev0:
+ 1304 0000 01       		.uleb128 0x1
+ 1305 0001 11       		.uleb128 0x11
+ 1306 0002 01       		.byte	0x1
+ 1307 0003 25       		.uleb128 0x25
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccgJTNA0.s 			page 24
+
+
+ 1308 0004 0E       		.uleb128 0xe
+ 1309 0005 13       		.uleb128 0x13
+ 1310 0006 0B       		.uleb128 0xb
+ 1311 0007 03       		.uleb128 0x3
+ 1312 0008 0E       		.uleb128 0xe
+ 1313 0009 1B       		.uleb128 0x1b
+ 1314 000a 0E       		.uleb128 0xe
+ 1315 000b 10       		.uleb128 0x10
+ 1316 000c 17       		.uleb128 0x17
+ 1317 000d 00       		.byte	0
+ 1318 000e 00       		.byte	0
+ 1319 000f 02       		.uleb128 0x2
+ 1320 0010 24       		.uleb128 0x24
+ 1321 0011 00       		.byte	0
+ 1322 0012 0B       		.uleb128 0xb
+ 1323 0013 0B       		.uleb128 0xb
+ 1324 0014 3E       		.uleb128 0x3e
+ 1325 0015 0B       		.uleb128 0xb
+ 1326 0016 03       		.uleb128 0x3
+ 1327 0017 0E       		.uleb128 0xe
+ 1328 0018 00       		.byte	0
+ 1329 0019 00       		.byte	0
+ 1330 001a 03       		.uleb128 0x3
+ 1331 001b 16       		.uleb128 0x16
+ 1332 001c 00       		.byte	0
+ 1333 001d 03       		.uleb128 0x3
+ 1334 001e 0E       		.uleb128 0xe
+ 1335 001f 3A       		.uleb128 0x3a
+ 1336 0020 0B       		.uleb128 0xb
+ 1337 0021 3B       		.uleb128 0x3b
+ 1338 0022 0B       		.uleb128 0xb
+ 1339 0023 49       		.uleb128 0x49
+ 1340 0024 13       		.uleb128 0x13
+ 1341 0025 00       		.byte	0
+ 1342 0026 00       		.byte	0
+ 1343 0027 04       		.uleb128 0x4
+ 1344 0028 24       		.uleb128 0x24
+ 1345 0029 00       		.byte	0
+ 1346 002a 0B       		.uleb128 0xb
+ 1347 002b 0B       		.uleb128 0xb
+ 1348 002c 3E       		.uleb128 0x3e
+ 1349 002d 0B       		.uleb128 0xb
+ 1350 002e 03       		.uleb128 0x3
+ 1351 002f 08       		.uleb128 0x8
+ 1352 0030 00       		.byte	0
+ 1353 0031 00       		.byte	0
+ 1354 0032 05       		.uleb128 0x5
+ 1355 0033 01       		.uleb128 0x1
+ 1356 0034 01       		.byte	0x1
+ 1357 0035 49       		.uleb128 0x49
+ 1358 0036 13       		.uleb128 0x13
+ 1359 0037 01       		.uleb128 0x1
+ 1360 0038 13       		.uleb128 0x13
+ 1361 0039 00       		.byte	0
+ 1362 003a 00       		.byte	0
+ 1363 003b 06       		.uleb128 0x6
+ 1364 003c 21       		.uleb128 0x21
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccgJTNA0.s 			page 25
+
+
+ 1365 003d 00       		.byte	0
+ 1366 003e 49       		.uleb128 0x49
+ 1367 003f 13       		.uleb128 0x13
+ 1368 0040 2F       		.uleb128 0x2f
+ 1369 0041 05       		.uleb128 0x5
+ 1370 0042 00       		.byte	0
+ 1371 0043 00       		.byte	0
+ 1372 0044 07       		.uleb128 0x7
+ 1373 0045 26       		.uleb128 0x26
+ 1374 0046 00       		.byte	0
+ 1375 0047 49       		.uleb128 0x49
+ 1376 0048 13       		.uleb128 0x13
+ 1377 0049 00       		.byte	0
+ 1378 004a 00       		.byte	0
+ 1379 004b 08       		.uleb128 0x8
+ 1380 004c 34       		.uleb128 0x34
+ 1381 004d 00       		.byte	0
+ 1382 004e 03       		.uleb128 0x3
+ 1383 004f 0E       		.uleb128 0xe
+ 1384 0050 3A       		.uleb128 0x3a
+ 1385 0051 0B       		.uleb128 0xb
+ 1386 0052 3B       		.uleb128 0x3b
+ 1387 0053 0B       		.uleb128 0xb
+ 1388 0054 49       		.uleb128 0x49
+ 1389 0055 13       		.uleb128 0x13
+ 1390 0056 3F       		.uleb128 0x3f
+ 1391 0057 19       		.uleb128 0x19
+ 1392 0058 02       		.uleb128 0x2
+ 1393 0059 18       		.uleb128 0x18
+ 1394 005a 00       		.byte	0
+ 1395 005b 00       		.byte	0
+ 1396 005c 09       		.uleb128 0x9
+ 1397 005d 21       		.uleb128 0x21
+ 1398 005e 00       		.byte	0
+ 1399 005f 49       		.uleb128 0x49
+ 1400 0060 13       		.uleb128 0x13
+ 1401 0061 2F       		.uleb128 0x2f
+ 1402 0062 0B       		.uleb128 0xb
+ 1403 0063 00       		.byte	0
+ 1404 0064 00       		.byte	0
+ 1405 0065 00       		.byte	0
+ 1406              		.section	.debug_aranges,"",%progbits
+ 1407 0000 14000000 		.4byte	0x14
+ 1408 0004 0200     		.2byte	0x2
+ 1409 0006 00000000 		.4byte	.Ldebug_info0
+ 1410 000a 04       		.byte	0x4
+ 1411 000b 00       		.byte	0
+ 1412 000c 0000     		.2byte	0
+ 1413 000e 0000     		.2byte	0
+ 1414 0010 00000000 		.4byte	0
+ 1415 0014 00000000 		.4byte	0
+ 1416              		.section	.debug_line,"",%progbits
+ 1417              	.Ldebug_line0:
+ 1418 0000 3D010000 		.section	.debug_str,"MS",%progbits,1
+ 1418      02003701 
+ 1418      00000201 
+ 1418      FB0E0D00 
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccgJTNA0.s 			page 26
+
+
+ 1418      01010101 
+ 1419              	.LASF9:
+ 1420 0000 5F5F7569 		.ascii	"__uint8_t\000"
+ 1420      6E74385F 
+ 1420      7400
+ 1421              	.LASF16:
+ 1422 000a 63795F6D 		.ascii	"cy_metadata\000"
+ 1422      65746164 
+ 1422      61746100 
+ 1423              	.LASF1:
+ 1424 0016 756E7369 		.ascii	"unsigned char\000"
+ 1424      676E6564 
+ 1424      20636861 
+ 1424      7200
+ 1425              	.LASF17:
+ 1426 0024 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1426      43313120 
+ 1426      352E342E 
+ 1426      31203230 
+ 1426      31363036 
+ 1427 0057 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1427      20726576 
+ 1427      6973696F 
+ 1427      6E203233 
+ 1427      37373135 
+ 1428 008a 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1428      66756E63 
+ 1428      74696F6E 
+ 1428      2D736563 
+ 1428      74696F6E 
+ 1429              	.LASF5:
+ 1430 00b2 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1430      20756E73 
+ 1430      69676E65 
+ 1430      6420696E 
+ 1430      7400
+ 1431              	.LASF3:
+ 1432 00c4 73686F72 		.ascii	"short unsigned int\000"
+ 1432      7420756E 
+ 1432      7369676E 
+ 1432      65642069 
+ 1432      6E7400
+ 1433              	.LASF19:
+ 1434 00d7 433A5C55 		.ascii	"C:\\Users\\magnu\\OneDrive - Aarhus universitet\\Pr"
+ 1434      73657273 
+ 1434      5C6D6167 
+ 1434      6E755C4F 
+ 1434      6E654472 
+ 1435 0106 6F6A656B 		.ascii	"ojekt3 bilag\\Scale.cywrk.Archive02\\Kode til til l"
+ 1435      74332062 
+ 1435      696C6167 
+ 1435      5C536361 
+ 1435      6C652E63 
+ 1436 0137 6F616463 		.ascii	"oadcell\\Scale.cydsn\000"
+ 1436      656C6C5C 
+ 1436      5363616C 
+ 1436      652E6379 
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccgJTNA0.s 			page 27
+
+
+ 1436      64736E00 
+ 1437              	.LASF13:
+ 1438 014b 63795F6D 		.ascii	"cy_meta_custnvl\000"
+ 1438      6574615F 
+ 1438      63757374 
+ 1438      6E766C00 
+ 1439              	.LASF12:
+ 1440 015b 63795F6D 		.ascii	"cy_meta_configecc\000"
+ 1440      6574615F 
+ 1440      636F6E66 
+ 1440      69676563 
+ 1440      6300
+ 1441              	.LASF8:
+ 1442 016d 756E7369 		.ascii	"unsigned int\000"
+ 1442      676E6564 
+ 1442      20696E74 
+ 1442      00
+ 1443              	.LASF7:
+ 1444 017a 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1444      206C6F6E 
+ 1444      6720756E 
+ 1444      7369676E 
+ 1444      65642069 
+ 1445              	.LASF10:
+ 1446 0191 75696E74 		.ascii	"uint8_t\000"
+ 1446      385F7400 
+ 1447              	.LASF15:
+ 1448 0199 63795F6D 		.ascii	"cy_meta_flashprotect\000"
+ 1448      6574615F 
+ 1448      666C6173 
+ 1448      6870726F 
+ 1448      74656374 
+ 1449              	.LASF14:
+ 1450 01ae 63795F6D 		.ascii	"cy_meta_wonvl\000"
+ 1450      6574615F 
+ 1450      776F6E76 
+ 1450      6C00
+ 1451              	.LASF11:
+ 1452 01bc 73697A65 		.ascii	"sizetype\000"
+ 1452      74797065 
+ 1452      00
+ 1453              	.LASF6:
+ 1454 01c5 6C6F6E67 		.ascii	"long long int\000"
+ 1454      206C6F6E 
+ 1454      6720696E 
+ 1454      7400
+ 1455              	.LASF2:
+ 1456 01d3 73686F72 		.ascii	"short int\000"
+ 1456      7420696E 
+ 1456      7400
+ 1457              	.LASF4:
+ 1458 01dd 6C6F6E67 		.ascii	"long int\000"
+ 1458      20696E74 
+ 1458      00
+ 1459              	.LASF0:
+ 1460 01e6 7369676E 		.ascii	"signed char\000"
+ 1460      65642063 
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccgJTNA0.s 			page 28
+
+
+ 1460      68617200 
+ 1461              	.LASF18:
+ 1462 01f2 47656E65 		.ascii	"Generated_Source\\PSoC5\\cymetadata.c\000"
+ 1462      72617465 
+ 1462      645F536F 
+ 1462      75726365 
+ 1462      5C50536F 
+ 1463              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
