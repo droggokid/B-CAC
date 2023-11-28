@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 1
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccm0djeX.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 1
   28:Generated_Source\PSoC5/Timer_1_PM.c **** * Summary:
   29:Generated_Source\PSoC5/Timer_1_PM.c **** *     Save the current user configuration
   30:Generated_Source\PSoC5/Timer_1_PM.c **** *
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 2
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccm0djeX.s 			page 2
 
 
   31:Generated_Source\PSoC5/Timer_1_PM.c **** * Parameters:
@@ -89,12 +89,12 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 1
   37 0002 FFF7FEFF 		bl	Timer_1_ReadCounter
   38              	.LVL0:
   39 0006 044C     		ldr	r4, .L3
-  40 0008 6080     		strh	r0, [r4, #2]	@ movhi
+  40 0008 6060     		str	r0, [r4, #4]
   47:Generated_Source\PSoC5/Timer_1_PM.c ****         Timer_1_backup.InterruptMaskValue = Timer_1_STATUS_MASK;
   41              		.loc 1 47 0
   42 000a 044B     		ldr	r3, .L3+4
   43 000c 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
-  44 000e 2371     		strb	r3, [r4, #4]
+  44 000e 2372     		strb	r3, [r4, #8]
   48:Generated_Source\PSoC5/Timer_1_PM.c ****         #if (Timer_1_UsingHWCaptureCounter)
   49:Generated_Source\PSoC5/Timer_1_PM.c ****             Timer_1_backup.TimerCaptureCounter = Timer_1_ReadCaptureCount();
   50:Generated_Source\PSoC5/Timer_1_PM.c ****         #endif /* Back Up capture counter register  */
@@ -104,13 +104,13 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 1
   45              		.loc 1 53 0
   46 0010 FFF7FEFF 		bl	Timer_1_ReadControlRegister
   47              	.LVL1:
-  48 0014 6071     		strb	r0, [r4, #5]
+  48 0014 6072     		strb	r0, [r4, #9]
   49 0016 10BD     		pop	{r4, pc}
   50              	.L4:
   51              		.align	2
   52              	.L3:
   53 0018 00000000 		.word	.LANCHOR0
-  54 001c 8B640040 		.word	1073767563
+  54 001c 87650040 		.word	1073767815
   55              		.cfi_endproc
   56              	.LFE0:
   57              		.size	Timer_1_SaveConfig, .-Timer_1_SaveConfig
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 1
   59              		.align	2
   60              		.global	Timer_1_RestoreConfig
   61              		.thumb
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 3
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccm0djeX.s 			page 3
 
 
   62              		.thumb_func
@@ -163,12 +163,12 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 1
   81:Generated_Source\PSoC5/Timer_1_PM.c ****         Timer_1_WriteCounter(Timer_1_backup.TimerUdb);
   74              		.loc 1 81 0
   75 0002 054C     		ldr	r4, .L7
-  76 0004 6088     		ldrh	r0, [r4, #2]
+  76 0004 6068     		ldr	r0, [r4, #4]
   77 0006 FFF7FEFF 		bl	Timer_1_WriteCounter
   78              	.LVL2:
   82:Generated_Source\PSoC5/Timer_1_PM.c ****         Timer_1_STATUS_MASK =Timer_1_backup.InterruptMaskValue;
   79              		.loc 1 82 0
-  80 000a 2279     		ldrb	r2, [r4, #4]	@ zero_extendqisi2
+  80 000a 227A     		ldrb	r2, [r4, #8]	@ zero_extendqisi2
   81 000c 034B     		ldr	r3, .L7+4
   82 000e 1A70     		strb	r2, [r3]
   83:Generated_Source\PSoC5/Timer_1_PM.c ****         #if (Timer_1_UsingHWCaptureCounter)
@@ -178,10 +178,10 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 1
   87:Generated_Source\PSoC5/Timer_1_PM.c ****         #if(!Timer_1_UDB_CONTROL_REG_REMOVED)
   88:Generated_Source\PSoC5/Timer_1_PM.c ****             Timer_1_WriteControlRegister(Timer_1_backup.TimerControlRegister);
   83              		.loc 1 88 0
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 4
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccm0djeX.s 			page 4
 
 
-  84 0010 6079     		ldrb	r0, [r4, #5]	@ zero_extendqisi2
+  84 0010 607A     		ldrb	r0, [r4, #9]	@ zero_extendqisi2
   85 0012 FFF7FEFF 		bl	Timer_1_WriteControlRegister
   86              	.LVL3:
   87 0016 10BD     		pop	{r4, pc}
@@ -189,7 +189,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 1
   89              		.align	2
   90              	.L7:
   91 0018 00000000 		.word	.LANCHOR0
-  92 001c 8B640040 		.word	1073767563
+  92 001c 87650040 		.word	1073767815
   93              		.cfi_endproc
   94              	.LFE1:
   95              		.size	Timer_1_RestoreConfig, .-Timer_1_RestoreConfig
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 1
  115:Generated_Source\PSoC5/Timer_1_PM.c ****         /* Save Counter's enable state */
  116:Generated_Source\PSoC5/Timer_1_PM.c ****         if(Timer_1_CTRL_ENABLE == (Timer_1_CONTROL & Timer_1_CTRL_ENABLE))
  112              		.loc 1 116 0
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 5
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccm0djeX.s 			page 5
 
 
  113 0002 084B     		ldr	r3, .L13
@@ -278,7 +278,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 1
  135              	.L14:
  136              		.align	2
  137              	.L13:
- 138 0024 7B640040 		.word	1073767547
+ 138 0024 75650040 		.word	1073767797
  139 0028 00000000 		.word	.LANCHOR0
  140              		.cfi_endproc
  141              	.LFE2:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 1
  133:Generated_Source\PSoC5/Timer_1_PM.c **** * Function Name: Timer_1_Wakeup
  134:Generated_Source\PSoC5/Timer_1_PM.c **** ********************************************************************************
  135:Generated_Source\PSoC5/Timer_1_PM.c **** *
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 6
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccm0djeX.s 			page 6
 
 
  136:Generated_Source\PSoC5/Timer_1_PM.c **** * Summary:
@@ -354,13 +354,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 1
  180              		.align	2
  181              		.set	.LANCHOR0,. + 0
  182              		.type	Timer_1_backup, %object
- 183              		.size	Timer_1_backup, 6
+ 183              		.size	Timer_1_backup, 12
  184              	Timer_1_backup:
- 185 0000 00000000 		.space	6
- 185      0000
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 7
+ 185 0000 00000000 		.space	12
+ 185      00000000 
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccm0djeX.s 			page 7
 
 
+ 185      00000000 
  186              		.text
  187              	.Letext0:
  188              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
@@ -375,14 +376,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 1
  197 000c 8D000000 		.4byte	.LASF32
  198 0010 0C       		.byte	0xc
  199 0011 5B000000 		.4byte	.LASF33
- 200 0015 07020000 		.4byte	.LASF34
+ 200 0015 71020000 		.4byte	.LASF34
  201 0019 00000000 		.4byte	.Ldebug_ranges0+0
  202 001d 00000000 		.4byte	0
  203 0021 00000000 		.4byte	.Ldebug_line0
  204 0025 02       		.uleb128 0x2
  205 0026 01       		.byte	0x1
  206 0027 06       		.byte	0x6
- 207 0028 91020000 		.4byte	.LASF0
+ 207 0028 58020000 		.4byte	.LASF0
  208 002c 02       		.uleb128 0x2
  209 002d 01       		.byte	0x1
  210 002e 08       		.byte	0x8
@@ -390,7 +391,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 1
  212 0033 02       		.uleb128 0x2
  213 0034 02       		.byte	0x2
  214 0035 05       		.byte	0x5
- 215 0036 63020000 		.4byte	.LASF2
+ 215 0036 2A020000 		.4byte	.LASF2
  216 003a 02       		.uleb128 0x2
  217 003b 02       		.byte	0x2
  218 003c 07       		.byte	0x7
@@ -398,7 +399,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 1
  220 0041 02       		.uleb128 0x2
  221 0042 04       		.byte	0x4
  222 0043 05       		.byte	0x5
- 223 0044 6D020000 		.4byte	.LASF4
+ 223 0044 34020000 		.4byte	.LASF4
  224 0048 02       		.uleb128 0x2
  225 0049 04       		.byte	0x4
  226 004a 07       		.byte	0x7
@@ -417,21 +418,21 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 1
  239 0060 696E7400 		.ascii	"int\000"
  240 0064 02       		.uleb128 0x2
  241 0065 04       		.byte	0x4
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccm0djeX.s 			page 8
+
+
  242 0066 07       		.byte	0x7
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 8
-
-
  243 0067 9C010000 		.4byte	.LASF8
  244 006b 04       		.uleb128 0x4
  245 006c 40010000 		.4byte	.LASF9
  246 0070 02       		.byte	0x2
- 247 0071 E701     		.2byte	0x1e7
+ 247 0071 E901     		.2byte	0x1e9
  248 0073 2C000000 		.4byte	0x2c
  249 0077 04       		.uleb128 0x4
- 250 0078 5C010000 		.4byte	.LASF10
+ 250 0078 79010000 		.4byte	.LASF10
  251 007c 02       		.byte	0x2
- 252 007d E801     		.2byte	0x1e8
- 253 007f 3A000000 		.4byte	0x3a
+ 252 007d EB01     		.2byte	0x1eb
+ 253 007f 48000000 		.4byte	0x48
  254 0083 02       		.uleb128 0x2
  255 0084 04       		.byte	0x4
  256 0085 04       		.byte	0x4
@@ -447,20 +448,20 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 1
  266 0098 04       		.uleb128 0x4
  267 0099 1B010000 		.4byte	.LASF14
  268 009d 02       		.byte	0x2
- 269 009e 9102     		.2byte	0x291
+ 269 009e 9302     		.2byte	0x293
  270 00a0 A4000000 		.4byte	0xa4
  271 00a4 05       		.uleb128 0x5
  272 00a5 6B000000 		.4byte	0x6b
  273 00a9 02       		.uleb128 0x2
  274 00aa 08       		.byte	0x8
  275 00ab 04       		.byte	0x4
- 276 00ac 85020000 		.4byte	.LASF15
+ 276 00ac 4C020000 		.4byte	.LASF15
  277 00b0 02       		.uleb128 0x2
  278 00b1 04       		.byte	0x4
  279 00b2 07       		.byte	0x7
  280 00b3 EB010000 		.4byte	.LASF16
  281 00b7 06       		.uleb128 0x6
- 282 00b8 06       		.byte	0x6
+ 282 00b8 0C       		.byte	0xc
  283 00b9 03       		.byte	0x3
  284 00ba 43       		.byte	0x43
  285 00bb F0000000 		.4byte	0xf0
@@ -475,22 +476,22 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 1
  294 00d0 03       		.byte	0x3
  295 00d1 48       		.byte	0x48
  296 00d2 77000000 		.4byte	0x77
- 297 00d6 02       		.byte	0x2
+ 297 00d6 04       		.byte	0x4
  298 00d7 07       		.uleb128 0x7
- 299 00d8 AA020000 		.4byte	.LASF19
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 9
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccm0djeX.s 			page 9
 
 
+ 299 00d8 BA020000 		.4byte	.LASF19
  300 00dc 03       		.byte	0x3
  301 00dd 49       		.byte	0x49
  302 00de 6B000000 		.4byte	0x6b
- 303 00e2 04       		.byte	0x4
+ 303 00e2 08       		.byte	0x8
  304 00e3 07       		.uleb128 0x7
- 305 00e4 BD020000 		.4byte	.LASF20
+ 305 00e4 CD020000 		.4byte	.LASF20
  306 00e8 03       		.byte	0x3
  307 00e9 4F       		.byte	0x4f
  308 00ea 6B000000 		.4byte	0x6b
- 309 00ee 05       		.byte	0x5
+ 309 00ee 09       		.byte	0x9
  310 00ef 00       		.byte	0
  311 00f0 08       		.uleb128 0x8
  312 00f1 11000000 		.4byte	.LASF21
@@ -537,10 +538,10 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 1
  353 0156 2C000000 		.4byte	.LFE2-.LFB2
  354 015a 01       		.uleb128 0x1
  355 015b 9C       		.byte	0x9c
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccm0djeX.s 			page 10
+
+
  356 015c 73010000 		.4byte	0x173
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 10
-
-
  357 0160 0A       		.uleb128 0xa
  358 0161 1E000000 		.4byte	.LVL4
  359 0165 D8010000 		.4byte	0x1d8
@@ -549,7 +550,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 1
  362 016e FB000000 		.4byte	0xfb
  363 0172 00       		.byte	0
  364 0173 09       		.uleb128 0x9
- 365 0174 76020000 		.4byte	.LASF25
+ 365 0174 3D020000 		.4byte	.LASF25
  366 0178 01       		.byte	0x1
  367 0179 96       		.byte	0x96
  368 017a 00000000 		.4byte	.LFB3
@@ -565,7 +566,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 1
  378 0196 E3010000 		.4byte	0x1e3
  379 019a 00       		.byte	0
  380 019b 0B       		.uleb128 0xb
- 381 019c 54020000 		.4byte	.LASF35
+ 381 019c 1B020000 		.4byte	.LASF35
  382 01a0 01       		.byte	0x1
  383 01a1 15       		.byte	0x15
  384 01a2 F0000000 		.4byte	0xf0
@@ -573,8 +574,8 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 1
  386 01a7 03       		.byte	0x3
  387 01a8 00000000 		.4byte	Timer_1_backup
  388 01ac 0C       		.uleb128 0xc
- 389 01ad 40020000 		.4byte	.LASF26
- 390 01b1 40020000 		.4byte	.LASF26
+ 389 01ad 07020000 		.4byte	.LASF26
+ 390 01b1 07020000 		.4byte	.LASF26
  391 01b5 03       		.byte	0x3
  392 01b6 69       		.byte	0x69
  393 01b7 0C       		.uleb128 0xc
@@ -588,19 +589,19 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 1
  401 01cb 03       		.byte	0x3
  402 01cc 6A       		.byte	0x6a
  403 01cd 0C       		.uleb128 0xc
- 404 01ce 63010000 		.4byte	.LASF29
- 405 01d2 63010000 		.4byte	.LASF29
+ 404 01ce 5C010000 		.4byte	.LASF29
+ 405 01d2 5C010000 		.4byte	.LASF29
  406 01d6 03       		.byte	0x3
  407 01d7 64       		.byte	0x64
  408 01d8 0C       		.uleb128 0xc
- 409 01d9 9D020000 		.4byte	.LASF30
- 410 01dd 9D020000 		.4byte	.LASF30
+ 409 01d9 64020000 		.4byte	.LASF30
+ 410 01dd 64020000 		.4byte	.LASF30
  411 01e1 03       		.byte	0x3
  412 01e2 5B       		.byte	0x5b
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccm0djeX.s 			page 11
+
+
  413 01e3 0C       		.uleb128 0xc
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 11
-
-
  414 01e4 46010000 		.4byte	.LASF31
  415 01e8 46010000 		.4byte	.LASF31
  416 01ec 03       		.byte	0x3
@@ -657,10 +658,10 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 1
  467 002e 3A       		.uleb128 0x3a
  468 002f 0B       		.uleb128 0xb
  469 0030 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccm0djeX.s 			page 12
+
+
  470 0031 05       		.uleb128 0x5
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 12
-
-
  471 0032 49       		.uleb128 0x49
  472 0033 13       		.uleb128 0x13
  473 0034 00       		.byte	0
@@ -717,10 +718,10 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 1
  524 0067 2E       		.uleb128 0x2e
  525 0068 01       		.byte	0x1
  526 0069 3F       		.uleb128 0x3f
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccm0djeX.s 			page 13
+
+
  527 006a 19       		.uleb128 0x19
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 13
-
-
  528 006b 03       		.uleb128 0x3
  529 006c 0E       		.uleb128 0xe
  530 006d 3A       		.uleb128 0x3a
@@ -777,10 +778,10 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 1
  581 00a3 03       		.uleb128 0x3
  582 00a4 0E       		.uleb128 0xe
  583 00a5 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccm0djeX.s 			page 14
+
+
  584 00a6 0B       		.uleb128 0xb
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 14
-
-
  585 00a7 3B       		.uleb128 0x3b
  586 00a8 0B       		.uleb128 0xb
  587 00a9 00       		.byte	0
@@ -837,10 +838,10 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 1
  626      72756374 
  627              	.LASF3:
  628 0026 73686F72 		.ascii	"short unsigned int\000"
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccm0djeX.s 			page 15
+
+
  628      7420756E 
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 15
-
-
  628      7369676E 
  628      65642069 
  628      6E7400
@@ -897,10 +898,10 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 1
  648 0132 54696D65 		.ascii	"Timer_1_Sleep\000"
  648      725F315F 
  648      536C6565 
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccm0djeX.s 			page 16
+
+
  648      7000
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 16
-
-
  649              	.LASF9:
  650 0140 75696E74 		.ascii	"uint8\000"
  650      3800
@@ -912,15 +913,15 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 1
  653              	.LASF12:
  654 0155 646F7562 		.ascii	"double\000"
  654      6C6500
- 655              	.LASF10:
- 656 015c 75696E74 		.ascii	"uint16\000"
- 656      313600
- 657              	.LASF29:
- 658 0163 54696D65 		.ascii	"Timer_1_WriteControlRegister\000"
- 658      725F315F 
- 658      57726974 
- 658      65436F6E 
- 658      74726F6C 
+ 655              	.LASF29:
+ 656 015c 54696D65 		.ascii	"Timer_1_WriteControlRegister\000"
+ 656      725F315F 
+ 656      57726974 
+ 656      65436F6E 
+ 656      74726F6C 
+ 657              	.LASF10:
+ 658 0179 75696E74 		.ascii	"uint32\000"
+ 658      333200
  659              	.LASF27:
  660 0180 54696D65 		.ascii	"Timer_1_ReadControlRegister\000"
  660      725F315F 
@@ -957,71 +958,73 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 1
  671              	.LASF6:
  672 01f4 6C6F6E67 		.ascii	"long long int\000"
  672      206C6F6E 
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccm0djeX.s 			page 17
+
+
  672      6720696E 
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 17
-
-
  672      7400
  673              	.LASF13:
  674 0202 63686172 		.ascii	"char\000"
  674      00
- 675              	.LASF34:
- 676 0207 433A5C55 		.ascii	"C:\\Users\\jespe\\Downloads\\DC-Motor-PWM\\DC-Motor"
- 676      73657273 
- 676      5C6A6573 
- 676      70655C44 
- 676      6F776E6C 
- 677 0235 2D50574D 		.ascii	"-PWM.cydsn\000"
- 677      2E637964 
- 677      736E00
- 678              	.LASF26:
- 679 0240 54696D65 		.ascii	"Timer_1_ReadCounter\000"
- 679      725F315F 
- 679      52656164 
- 679      436F756E 
- 679      74657200 
- 680              	.LASF35:
- 681 0254 54696D65 		.ascii	"Timer_1_backup\000"
- 681      725F315F 
- 681      6261636B 
- 681      757000
- 682              	.LASF2:
- 683 0263 73686F72 		.ascii	"short int\000"
- 683      7420696E 
- 683      7400
- 684              	.LASF4:
- 685 026d 6C6F6E67 		.ascii	"long int\000"
- 685      20696E74 
- 685      00
- 686              	.LASF25:
- 687 0276 54696D65 		.ascii	"Timer_1_Wakeup\000"
- 687      725F315F 
- 687      57616B65 
- 687      757000
- 688              	.LASF15:
- 689 0285 6C6F6E67 		.ascii	"long double\000"
- 689      20646F75 
- 689      626C6500 
- 690              	.LASF0:
- 691 0291 7369676E 		.ascii	"signed char\000"
- 691      65642063 
- 691      68617200 
- 692              	.LASF30:
- 693 029d 54696D65 		.ascii	"Timer_1_Stop\000"
- 693      725F315F 
- 693      53746F70 
- 693      00
+ 675              	.LASF26:
+ 676 0207 54696D65 		.ascii	"Timer_1_ReadCounter\000"
+ 676      725F315F 
+ 676      52656164 
+ 676      436F756E 
+ 676      74657200 
+ 677              	.LASF35:
+ 678 021b 54696D65 		.ascii	"Timer_1_backup\000"
+ 678      725F315F 
+ 678      6261636B 
+ 678      757000
+ 679              	.LASF2:
+ 680 022a 73686F72 		.ascii	"short int\000"
+ 680      7420696E 
+ 680      7400
+ 681              	.LASF4:
+ 682 0234 6C6F6E67 		.ascii	"long int\000"
+ 682      20696E74 
+ 682      00
+ 683              	.LASF25:
+ 684 023d 54696D65 		.ascii	"Timer_1_Wakeup\000"
+ 684      725F315F 
+ 684      57616B65 
+ 684      757000
+ 685              	.LASF15:
+ 686 024c 6C6F6E67 		.ascii	"long double\000"
+ 686      20646F75 
+ 686      626C6500 
+ 687              	.LASF0:
+ 688 0258 7369676E 		.ascii	"signed char\000"
+ 688      65642063 
+ 688      68617200 
+ 689              	.LASF30:
+ 690 0264 54696D65 		.ascii	"Timer_1_Stop\000"
+ 690      725F315F 
+ 690      53746F70 
+ 690      00
+ 691              	.LASF34:
+ 692 0271 433A5C55 		.ascii	"C:\\Users\\magnu\\OneDrive\\Dokumenter\\GitHub\\B-C"
+ 692      73657273 
+ 692      5C6D6167 
+ 692      6E755C4F 
+ 692      6E654472 
+ 693 029e 41435C74 		.ascii	"AC\\timer\\DC-Motor-PWM.cydsn\000"
+ 693      696D6572 
+ 693      5C44432D 
+ 693      4D6F746F 
+ 693      722D5057 
  694              	.LASF19:
- 695 02aa 496E7465 		.ascii	"InterruptMaskValue\000"
+ 695 02ba 496E7465 		.ascii	"InterruptMaskValue\000"
  695      72727570 
  695      744D6173 
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccm0djeX.s 			page 18
+
+
  695      6B56616C 
  695      756500
  696              	.LASF20:
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccinh02w.s 			page 18
-
-
- 697 02bd 54696D65 		.ascii	"TimerControlRegister\000"
+ 697 02cd 54696D65 		.ascii	"TimerControlRegister\000"
  697      72436F6E 
  697      74726F6C 
  697      52656769 

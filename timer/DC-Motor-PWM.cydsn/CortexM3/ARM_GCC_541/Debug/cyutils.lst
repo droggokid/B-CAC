@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccLBdM1Q.s 			page 1
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cc4hsX5V.s 			page 1
 
 
    1              		.syntax unified
@@ -30,7 +30,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccLBdM1Q.s 			page 1
   27              		.file 1 "Generated_Source\\PSoC5\\cyutils.c"
    1:Generated_Source\PSoC5/cyutils.c **** /***************************************************************************//**
    2:Generated_Source\PSoC5/cyutils.c **** * \file cyutils.c
-   3:Generated_Source\PSoC5/cyutils.c **** * \version 5.82
+   3:Generated_Source\PSoC5/cyutils.c **** * \version 6.10
    4:Generated_Source\PSoC5/cyutils.c **** *
    5:Generated_Source\PSoC5/cyutils.c **** * \brief Provides a function to handle 24-bit value writes.
    6:Generated_Source\PSoC5/cyutils.c **** *
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccLBdM1Q.s 			page 1
   28:Generated_Source\PSoC5/cyutils.c ****     * Reentrant:
   29:Generated_Source\PSoC5/cyutils.c ****     *  No
   30:Generated_Source\PSoC5/cyutils.c ****     *
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccLBdM1Q.s 			page 2
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cc4hsX5V.s 			page 2
 
 
   31:Generated_Source\PSoC5/cyutils.c ****     ***************************************************************************/
@@ -104,25 +104,25 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccLBdM1Q.s 			page 1
   58 000c 2A000000 		.4byte	.LASF16
   59 0010 0C       		.byte	0xc
   60 0011 DD000000 		.4byte	.LASF17
-  61 0015 4B010000 		.4byte	.LASF18
+  61 0015 70010000 		.4byte	.LASF18
   62 0019 00000000 		.4byte	.Ldebug_ranges0+0
   63 001d 00000000 		.4byte	0
   64 0021 00000000 		.4byte	.Ldebug_line0
   65 0025 02       		.uleb128 0x2
   66 0026 01       		.byte	0x1
   67 0027 06       		.byte	0x6
-  68 0028 9D010000 		.4byte	.LASF0
+  68 0028 64010000 		.4byte	.LASF0
   69 002c 02       		.uleb128 0x2
   70 002d 01       		.byte	0x1
   71 002e 08       		.byte	0x8
   72 002f 1C000000 		.4byte	.LASF1
   73 0033 02       		.uleb128 0x2
   74 0034 02       		.byte	0x2
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccLBdM1Q.s 			page 3
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cc4hsX5V.s 			page 3
 
 
   75 0035 05       		.byte	0x5
-  76 0036 84010000 		.4byte	.LASF2
+  76 0036 4B010000 		.4byte	.LASF2
   77 003a 02       		.uleb128 0x2
   78 003b 02       		.byte	0x2
   79 003c 07       		.byte	0x7
@@ -130,7 +130,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccLBdM1Q.s 			page 1
   81 0041 02       		.uleb128 0x2
   82 0042 04       		.byte	0x4
   83 0043 05       		.byte	0x5
-  84 0044 94010000 		.4byte	.LASF4
+  84 0044 5B010000 		.4byte	.LASF4
   85 0048 02       		.uleb128 0x2
   86 0049 04       		.byte	0x4
   87 004a 07       		.byte	0x7
@@ -152,14 +152,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccLBdM1Q.s 			page 1
  103 0066 07       		.byte	0x7
  104 0067 0C010000 		.4byte	.LASF8
  105 006b 04       		.uleb128 0x4
- 106 006c 8E010000 		.4byte	.LASF9
+ 106 006c 55010000 		.4byte	.LASF9
  107 0070 02       		.byte	0x2
- 108 0071 E701     		.2byte	0x1e7
+ 108 0071 E901     		.2byte	0x1e9
  109 0073 2C000000 		.4byte	0x2c
  110 0077 04       		.uleb128 0x4
  111 0078 05010000 		.4byte	.LASF10
  112 007c 02       		.byte	0x2
- 113 007d E901     		.2byte	0x1e9
+ 113 007d EB01     		.2byte	0x1eb
  114 007f 48000000 		.4byte	0x48
  115 0083 02       		.uleb128 0x2
  116 0084 04       		.byte	0x4
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccLBdM1Q.s 			page 1
  129 009d 05       		.uleb128 0x5
  130 009e 77000000 		.4byte	0x77
  131 00a2 06       		.uleb128 0x6
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccLBdM1Q.s 			page 4
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cc4hsX5V.s 			page 4
 
 
  132 00a3 06000000 		.4byte	.LASF19
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccLBdM1Q.s 			page 1
  186 0010 17       		.uleb128 0x17
  187 0011 00       		.byte	0
  188 0012 00       		.byte	0
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccLBdM1Q.s 			page 5
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cc4hsX5V.s 			page 5
 
 
  189 0013 02       		.uleb128 0x2
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccLBdM1Q.s 			page 1
  243 0049 19       		.uleb128 0x19
  244 004a 11       		.uleb128 0x11
  245 004b 01       		.uleb128 0x1
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccLBdM1Q.s 			page 6
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cc4hsX5V.s 			page 6
 
 
  246 004c 12       		.uleb128 0x12
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccLBdM1Q.s 			page 1
  300 0083 00       		.byte	0
  301 0084 0A       		.uleb128 0xa
  302 0085 0F       		.uleb128 0xf
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccLBdM1Q.s 			page 7
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cc4hsX5V.s 			page 7
 
 
  303 0086 00       		.byte	0
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccLBdM1Q.s 			page 1
  351      74526567 
  351      323400
  352              	.LASF14:
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccLBdM1Q.s 			page 8
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cc4hsX5V.s 			page 8
 
 
  353 0011 61646472 		.ascii	"addr\000"
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccLBdM1Q.s 			page 1
  373      00
  374              	.LASF7:
  375 0119 6C6F6E67 		.ascii	"long long unsigned int\000"
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccLBdM1Q.s 			page 9
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cc4hsX5V.s 			page 9
 
 
  375      206C6F6E 
@@ -496,28 +496,30 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccLBdM1Q.s 			page 1
  380              	.LASF13:
  381 0146 63686172 		.ascii	"char\000"
  381      00
- 382              	.LASF18:
- 383 014b 433A5C55 		.ascii	"C:\\Users\\jespe\\Downloads\\DC-Motor-PWM\\DC-Motor"
- 383      73657273 
- 383      5C6A6573 
- 383      70655C44 
- 383      6F776E6C 
- 384 0179 2D50574D 		.ascii	"-PWM.cydsn\000"
- 384      2E637964 
- 384      736E00
- 385              	.LASF2:
- 386 0184 73686F72 		.ascii	"short int\000"
- 386      7420696E 
- 386      7400
- 387              	.LASF9:
- 388 018e 75696E74 		.ascii	"uint8\000"
- 388      3800
- 389              	.LASF4:
- 390 0194 6C6F6E67 		.ascii	"long int\000"
- 390      20696E74 
- 390      00
- 391              	.LASF0:
- 392 019d 7369676E 		.ascii	"signed char\000"
- 392      65642063 
- 392      68617200 
+ 382              	.LASF2:
+ 383 014b 73686F72 		.ascii	"short int\000"
+ 383      7420696E 
+ 383      7400
+ 384              	.LASF9:
+ 385 0155 75696E74 		.ascii	"uint8\000"
+ 385      3800
+ 386              	.LASF4:
+ 387 015b 6C6F6E67 		.ascii	"long int\000"
+ 387      20696E74 
+ 387      00
+ 388              	.LASF0:
+ 389 0164 7369676E 		.ascii	"signed char\000"
+ 389      65642063 
+ 389      68617200 
+ 390              	.LASF18:
+ 391 0170 433A5C55 		.ascii	"C:\\Users\\magnu\\OneDrive\\Dokumenter\\GitHub\\B-C"
+ 391      73657273 
+ 391      5C6D6167 
+ 391      6E755C4F 
+ 391      6E654472 
+ 392 019d 41435C74 		.ascii	"AC\\timer\\DC-Motor-PWM.cydsn\000"
+ 392      696D6572 
+ 392      5C44432D 
+ 392      4D6F746F 
+ 392      722D5057 
  393              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
