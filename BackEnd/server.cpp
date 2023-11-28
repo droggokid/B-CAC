@@ -3,15 +3,18 @@
 // ./ server
 
 #include <iostream>
-#include <boost/beast/core.hpp>
-#include <boost/beast/http.hpp>
-#include <boost/asio.hpp>
-#include "writeToFile.hpp"
+#include <string>
+// #include <boost/beast/core.hpp>
+// #include <boost/beast/http.hpp>
+//#include <boost/asio.hpp>
 
-namespace beast = boost::beast;
-namespace http = beast::http;
-namespace net = boost::asio;
-using tcp = boost::asio::ip::tcp;
+//#include "beast/include/boost/beast.hpp"
+#include "writeToFile.hpp"
+//make comment
+// namespace beast = boost::beast;
+// namespace http = beast::http;
+// namespace net = boost::asio;
+// using tcp = boost::asio::ip::tcp;
 using namespace std;
 
 int fileDescriptor;
@@ -21,8 +24,9 @@ int main()
     string readData;
 
     fileDescriptor = openFile("/home/root/testRead.txt");
+    writeFile(fileDescriptor, "din tekst fil er grim");
+    fileDescriptor = openFile("/home/root/testRead.txt");
     readFile(fileDescriptor, readData);
-    // writeFile(fileDescriptor, "din tekst fil er grim");
 
     cout << readData << endl;
     
