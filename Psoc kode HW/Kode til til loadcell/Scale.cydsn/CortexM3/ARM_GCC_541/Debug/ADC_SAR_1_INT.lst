@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccTgpc20.s 			page 1
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cc3sri5x.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccTgpc20.s 			page 1
   28:Generated_Source\PSoC5/ADC_SAR_1_INT.c **** 
   29:Generated_Source\PSoC5/ADC_SAR_1_INT.c **** /* `#END`  */
   30:Generated_Source\PSoC5/ADC_SAR_1_INT.c **** 
-ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccTgpc20.s 			page 2
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cc3sri5x.s 			page 2
 
 
   31:Generated_Source\PSoC5/ADC_SAR_1_INT.c **** #if(ADC_SAR_1_IRQ_REMOVE == 0u)
@@ -103,26 +103,26 @@ ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccTgpc20.s 			page 1
   45 000b 01       		.uleb128 0x1
   46 000c 14000000 		.4byte	.LASF12
   47 0010 0C       		.byte	0xc
-  48 0011 79010000 		.4byte	.LASF13
-  49 0015 C7000000 		.4byte	.LASF14
+  48 0011 64010000 		.4byte	.LASF13
+  49 0015 F2000000 		.4byte	.LASF14
   50 0019 00000000 		.4byte	.Ldebug_ranges0+0
   51 001d 00000000 		.4byte	0
   52 0021 00000000 		.4byte	.Ldebug_line0
   53 0025 02       		.uleb128 0x2
   54 0026 01       		.byte	0x1
   55 0027 06       		.byte	0x6
-  56 0028 B3010000 		.4byte	.LASF0
+  56 0028 9E010000 		.4byte	.LASF0
   57 002c 02       		.uleb128 0x2
   58 002d 01       		.byte	0x1
   59 002e 08       		.byte	0x8
   60 002f 06000000 		.4byte	.LASF1
   61 0033 02       		.uleb128 0x2
   62 0034 02       		.byte	0x2
-ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccTgpc20.s 			page 3
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cc3sri5x.s 			page 3
 
 
   63 0035 05       		.byte	0x5
-  64 0036 A0010000 		.4byte	.LASF2
+  64 0036 8B010000 		.4byte	.LASF2
   65 003a 02       		.uleb128 0x2
   66 003b 02       		.byte	0x2
   67 003c 07       		.byte	0x7
@@ -130,7 +130,7 @@ ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccTgpc20.s 			page 1
   69 0041 02       		.uleb128 0x2
   70 0042 04       		.byte	0x4
   71 0043 05       		.byte	0x5
-  72 0044 AA010000 		.4byte	.LASF4
+  72 0044 95010000 		.4byte	.LASF4
   73 0048 02       		.uleb128 0x2
   74 0049 04       		.byte	0x4
   75 004a 07       		.byte	0x7
@@ -138,11 +138,11 @@ ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccTgpc20.s 			page 1
   77 004f 02       		.uleb128 0x2
   78 0050 08       		.byte	0x8
   79 0051 05       		.byte	0x5
-  80 0052 66010000 		.4byte	.LASF6
+  80 0052 51010000 		.4byte	.LASF6
   81 0056 02       		.uleb128 0x2
   82 0057 08       		.byte	0x8
   83 0058 07       		.byte	0x7
-  84 0059 4F010000 		.4byte	.LASF7
+  84 0059 DB000000 		.4byte	.LASF7
   85 005d 03       		.uleb128 0x3
   86 005e 04       		.byte	0x4
   87 005f 05       		.byte	0x5
@@ -150,7 +150,7 @@ ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccTgpc20.s 			page 1
   89 0064 02       		.uleb128 0x2
   90 0065 04       		.byte	0x4
   91 0066 07       		.byte	0x7
-  92 0067 42010000 		.4byte	.LASF8
+  92 0067 CE000000 		.4byte	.LASF8
   93 006b 02       		.uleb128 0x2
   94 006c 04       		.byte	0x4
   95 006d 04       		.byte	0x4
@@ -158,13 +158,13 @@ ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccTgpc20.s 			page 1
   97 0072 02       		.uleb128 0x2
   98 0073 08       		.byte	0x8
   99 0074 04       		.byte	0x4
- 100 0075 3B010000 		.4byte	.LASF10
+ 100 0075 C7000000 		.4byte	.LASF10
  101 0079 02       		.uleb128 0x2
  102 007a 01       		.byte	0x1
  103 007b 08       		.byte	0x8
- 104 007c 74010000 		.4byte	.LASF11
+ 104 007c 5F010000 		.4byte	.LASF11
  105 0080 04       		.uleb128 0x4
- 106 0081 BF010000 		.4byte	.LASF15
+ 106 0081 AA010000 		.4byte	.LASF15
  107 0085 01       		.byte	0x1
  108 0086 33       		.byte	0x33
  109 0087 00000000 		.4byte	.LFB0
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccTgpc20.s 			page 1
  117 0001 11       		.uleb128 0x11
  118 0002 01       		.byte	0x1
  119 0003 25       		.uleb128 0x25
-ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccTgpc20.s 			page 4
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cc3sri5x.s 			page 4
 
 
  120 0004 0E       		.uleb128 0xe
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccTgpc20.s 			page 1
  174 003a 40       		.uleb128 0x40
  175 003b 18       		.uleb128 0x18
  176 003c 9742     		.uleb128 0x2117
-ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccTgpc20.s 			page 5
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cc3sri5x.s 			page 5
 
 
  177 003e 19       		.uleb128 0x19
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccTgpc20.s 			page 1
  211 00a2 6C6F6E67 		.ascii	"long unsigned int\000"
  211      20756E73 
  211      69676E65 
-ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccTgpc20.s 			page 6
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cc3sri5x.s 			page 6
 
 
  211      6420696E 
@@ -309,67 +309,63 @@ ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccTgpc20.s 			page 1
  213      7369676E 
  213      65642069 
  213      6E7400
- 214              	.LASF14:
- 215 00c7 433A5C55 		.ascii	"C:\\Users\\magnu\\OneDrive - Aarhus universitet\\Pr"
- 215      73657273 
- 215      5C6D6167 
- 215      6E755C4F 
- 215      6E654472 
- 216 00f6 6F6A656B 		.ascii	"ojekt3 bilag\\Scale.cywrk.Archive02\\Kode til til l"
- 216      74332062 
- 216      696C6167 
- 216      5C536361 
- 216      6C652E63 
- 217 0127 6F616463 		.ascii	"oadcell\\Scale.cydsn\000"
- 217      656C6C5C 
- 217      5363616C 
- 217      652E6379 
- 217      64736E00 
- 218              	.LASF10:
- 219 013b 646F7562 		.ascii	"double\000"
- 219      6C6500
- 220              	.LASF8:
- 221 0142 756E7369 		.ascii	"unsigned int\000"
- 221      676E6564 
- 221      20696E74 
- 221      00
- 222              	.LASF7:
- 223 014f 6C6F6E67 		.ascii	"long long unsigned int\000"
- 223      206C6F6E 
- 223      6720756E 
- 223      7369676E 
- 223      65642069 
+ 214              	.LASF10:
+ 215 00c7 646F7562 		.ascii	"double\000"
+ 215      6C6500
+ 216              	.LASF8:
+ 217 00ce 756E7369 		.ascii	"unsigned int\000"
+ 217      676E6564 
+ 217      20696E74 
+ 217      00
+ 218              	.LASF7:
+ 219 00db 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 219      206C6F6E 
+ 219      6720756E 
+ 219      7369676E 
+ 219      65642069 
+ 220              	.LASF14:
+ 221 00f2 433A5C55 		.ascii	"C:\\Users\\magnu\\OneDrive\\Dokumenter\\GitHub\\B-C"
+ 221      73657273 
+ 221      5C6D6167 
+ 221      6E755C4F 
+ 221      6E654472 
+ 222 011f 41435C50 		.ascii	"AC\\Psoc kode HW\\Kode til til loadcell\\Scale.cyds"
+ 222      736F6320 
+ 222      6B6F6465 
+ 222      2048575C 
+ 222      4B6F6465 
+ 223 014f 6E00     		.ascii	"n\000"
  224              	.LASF6:
- 225 0166 6C6F6E67 		.ascii	"long long int\000"
+ 225 0151 6C6F6E67 		.ascii	"long long int\000"
  225      206C6F6E 
  225      6720696E 
  225      7400
  226              	.LASF11:
- 227 0174 63686172 		.ascii	"char\000"
+ 227 015f 63686172 		.ascii	"char\000"
  227      00
  228              	.LASF13:
- 229 0179 47656E65 		.ascii	"Generated_Source\\PSoC5\\ADC_SAR_1_INT.c\000"
+ 229 0164 47656E65 		.ascii	"Generated_Source\\PSoC5\\ADC_SAR_1_INT.c\000"
  229      72617465 
  229      645F536F 
  229      75726365 
  229      5C50536F 
  230              	.LASF2:
- 231 01a0 73686F72 		.ascii	"short int\000"
+ 231 018b 73686F72 		.ascii	"short int\000"
  231      7420696E 
  231      7400
  232              	.LASF4:
-ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccTgpc20.s 			page 7
-
-
- 233 01aa 6C6F6E67 		.ascii	"long int\000"
+ 233 0195 6C6F6E67 		.ascii	"long int\000"
  233      20696E74 
  233      00
  234              	.LASF0:
- 235 01b3 7369676E 		.ascii	"signed char\000"
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cc3sri5x.s 			page 7
+
+
+ 235 019e 7369676E 		.ascii	"signed char\000"
  235      65642063 
  235      68617200 
  236              	.LASF15:
- 237 01bf 4144435F 		.ascii	"ADC_SAR_1_ISR\000"
+ 237 01aa 4144435F 		.ascii	"ADC_SAR_1_ISR\000"
  237      5341525F 
  237      315F4953 
  237      5200

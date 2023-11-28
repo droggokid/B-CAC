@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccrupt0D.s 			page 1
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccAGApQW.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccrupt0D.s 			page 1
   28:Generated_Source\PSoC5/Timer_1_PM.c **** * Summary:
   29:Generated_Source\PSoC5/Timer_1_PM.c **** *     Save the current user configuration
   30:Generated_Source\PSoC5/Timer_1_PM.c **** *
-ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccrupt0D.s 			page 2
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccAGApQW.s 			page 2
 
 
   31:Generated_Source\PSoC5/Timer_1_PM.c **** * Parameters:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccrupt0D.s 			page 1
   59              		.align	2
   60              		.global	Timer_1_RestoreConfig
   61              		.thumb
-ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccrupt0D.s 			page 3
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccAGApQW.s 			page 3
 
 
   62              		.thumb_func
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccrupt0D.s 			page 1
   87:Generated_Source\PSoC5/Timer_1_PM.c ****         #if(!Timer_1_UDB_CONTROL_REG_REMOVED)
   88:Generated_Source\PSoC5/Timer_1_PM.c ****             Timer_1_WriteControlRegister(Timer_1_backup.TimerControlRegister);
   83              		.loc 1 88 0
-ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccrupt0D.s 			page 4
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccAGApQW.s 			page 4
 
 
   84 0010 607A     		ldrb	r0, [r4, #9]	@ zero_extendqisi2
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccrupt0D.s 			page 1
  115:Generated_Source\PSoC5/Timer_1_PM.c ****         /* Save Counter's enable state */
  116:Generated_Source\PSoC5/Timer_1_PM.c ****         if(Timer_1_CTRL_ENABLE == (Timer_1_CONTROL & Timer_1_CTRL_ENABLE))
  112              		.loc 1 116 0
-ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccrupt0D.s 			page 5
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccAGApQW.s 			page 5
 
 
  113 0002 084B     		ldr	r3, .L13
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccrupt0D.s 			page 1
  133:Generated_Source\PSoC5/Timer_1_PM.c **** * Function Name: Timer_1_Wakeup
  134:Generated_Source\PSoC5/Timer_1_PM.c **** ********************************************************************************
  135:Generated_Source\PSoC5/Timer_1_PM.c **** *
-ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccrupt0D.s 			page 6
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccAGApQW.s 			page 6
 
 
  136:Generated_Source\PSoC5/Timer_1_PM.c **** * Summary:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccrupt0D.s 			page 1
  184              	Timer_1_backup:
  185 0000 00000000 		.space	12
  185      00000000 
-ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccrupt0D.s 			page 7
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccAGApQW.s 			page 7
 
 
  185      00000000 
@@ -376,14 +376,14 @@ ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccrupt0D.s 			page 1
  197 000c 8D000000 		.4byte	.LASF32
  198 0010 0C       		.byte	0xc
  199 0011 5B000000 		.4byte	.LASF33
- 200 0015 46010000 		.4byte	.LASF34
+ 200 0015 D5010000 		.4byte	.LASF34
  201 0019 00000000 		.4byte	.Ldebug_ranges0+0
  202 001d 00000000 		.4byte	0
  203 0021 00000000 		.4byte	.Ldebug_line0
  204 0025 02       		.uleb128 0x2
  205 0026 01       		.byte	0x1
  206 0027 06       		.byte	0x6
- 207 0028 CC020000 		.4byte	.LASF0
+ 207 0028 B7020000 		.4byte	.LASF0
  208 002c 02       		.uleb128 0x2
  209 002d 01       		.byte	0x1
  210 002e 08       		.byte	0x8
@@ -391,7 +391,7 @@ ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccrupt0D.s 			page 1
  212 0033 02       		.uleb128 0x2
  213 0034 02       		.byte	0x2
  214 0035 05       		.byte	0x5
- 215 0036 9E020000 		.4byte	.LASF2
+ 215 0036 89020000 		.4byte	.LASF2
  216 003a 02       		.uleb128 0x2
  217 003b 02       		.byte	0x2
  218 003c 07       		.byte	0x7
@@ -399,7 +399,7 @@ ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccrupt0D.s 			page 1
  220 0041 02       		.uleb128 0x2
  221 0042 04       		.byte	0x4
  222 0043 05       		.byte	0x5
- 223 0044 A8020000 		.4byte	.LASF4
+ 223 0044 93020000 		.4byte	.LASF4
  224 0048 02       		.uleb128 0x2
  225 0049 04       		.byte	0x4
  226 004a 07       		.byte	0x7
@@ -407,29 +407,29 @@ ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccrupt0D.s 			page 1
  228 004f 02       		.uleb128 0x2
  229 0050 08       		.byte	0x8
  230 0051 05       		.byte	0x5
- 231 0052 68020000 		.4byte	.LASF6
+ 231 0052 53020000 		.4byte	.LASF6
  232 0056 02       		.uleb128 0x2
  233 0057 08       		.byte	0x8
  234 0058 07       		.byte	0x7
- 235 0059 1D020000 		.4byte	.LASF7
+ 235 0059 A9010000 		.4byte	.LASF7
  236 005d 03       		.uleb128 0x3
  237 005e 04       		.byte	0x4
  238 005f 05       		.byte	0x5
  239 0060 696E7400 		.ascii	"int\000"
  240 0064 02       		.uleb128 0x2
  241 0065 04       		.byte	0x4
-ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccrupt0D.s 			page 8
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccAGApQW.s 			page 8
 
 
  242 0066 07       		.byte	0x7
- 243 0067 10020000 		.4byte	.LASF8
+ 243 0067 9C010000 		.4byte	.LASF8
  244 006b 04       		.uleb128 0x4
  245 006c 40010000 		.4byte	.LASF9
  246 0070 02       		.byte	0x2
  247 0071 E901     		.2byte	0x1e9
  248 0073 2C000000 		.4byte	0x2c
  249 0077 04       		.uleb128 0x4
- 250 0078 ED010000 		.4byte	.LASF10
+ 250 0078 79010000 		.4byte	.LASF10
  251 007c 02       		.byte	0x2
  252 007d EB01     		.2byte	0x1eb
  253 007f 48000000 		.4byte	0x48
@@ -440,11 +440,11 @@ ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccrupt0D.s 			page 1
  258 008a 02       		.uleb128 0x2
  259 008b 08       		.byte	0x8
  260 008c 04       		.byte	0x4
- 261 008d C9010000 		.4byte	.LASF12
+ 261 008d 55010000 		.4byte	.LASF12
  262 0091 02       		.uleb128 0x2
  263 0092 01       		.byte	0x1
  264 0093 08       		.byte	0x8
- 265 0094 76020000 		.4byte	.LASF13
+ 265 0094 61020000 		.4byte	.LASF13
  266 0098 04       		.uleb128 0x4
  267 0099 1B010000 		.4byte	.LASF14
  268 009d 02       		.byte	0x2
@@ -455,11 +455,11 @@ ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccrupt0D.s 			page 1
  273 00a9 02       		.uleb128 0x2
  274 00aa 08       		.byte	0x8
  275 00ab 04       		.byte	0x4
- 276 00ac C0020000 		.4byte	.LASF15
+ 276 00ac AB020000 		.4byte	.LASF15
  277 00b0 02       		.uleb128 0x2
  278 00b1 04       		.byte	0x4
  279 00b2 07       		.byte	0x7
- 280 00b3 5F020000 		.4byte	.LASF16
+ 280 00b3 4A020000 		.4byte	.LASF16
  281 00b7 06       		.uleb128 0x6
  282 00b8 0C       		.byte	0xc
  283 00b9 03       		.byte	0x3
@@ -478,16 +478,16 @@ ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccrupt0D.s 			page 1
  296 00d2 77000000 		.4byte	0x77
  297 00d6 04       		.byte	0x4
  298 00d7 07       		.uleb128 0x7
-ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccrupt0D.s 			page 9
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccAGApQW.s 			page 9
 
 
- 299 00d8 E5020000 		.4byte	.LASF19
+ 299 00d8 D0020000 		.4byte	.LASF19
  300 00dc 03       		.byte	0x3
  301 00dd 49       		.byte	0x49
  302 00de 6B000000 		.4byte	0x6b
  303 00e2 08       		.byte	0x8
  304 00e3 07       		.uleb128 0x7
- 305 00e4 F8020000 		.4byte	.LASF20
+ 305 00e4 E3020000 		.4byte	.LASF20
  306 00e8 03       		.byte	0x3
  307 00e9 4F       		.byte	0x4f
  308 00ea 6B000000 		.4byte	0x6b
@@ -515,7 +515,7 @@ ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccrupt0D.s 			page 1
  330 011e B7010000 		.4byte	0x1b7
  331 0122 00       		.byte	0
  332 0123 09       		.uleb128 0x9
- 333 0124 49020000 		.4byte	.LASF23
+ 333 0124 34020000 		.4byte	.LASF23
  334 0128 01       		.byte	0x1
  335 0129 4D       		.byte	0x4d
  336 012a 00000000 		.4byte	.LFB1
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccrupt0D.s 			page 1
  353 0156 2C000000 		.4byte	.LFE2-.LFB2
  354 015a 01       		.uleb128 0x1
  355 015b 9C       		.byte	0x9c
-ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccrupt0D.s 			page 10
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccAGApQW.s 			page 10
 
 
  356 015c 73010000 		.4byte	0x173
@@ -550,7 +550,7 @@ ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccrupt0D.s 			page 1
  362 016e FB000000 		.4byte	0xfb
  363 0172 00       		.byte	0
  364 0173 09       		.uleb128 0x9
- 365 0174 B1020000 		.4byte	.LASF25
+ 365 0174 9C020000 		.4byte	.LASF25
  366 0178 01       		.byte	0x1
  367 0179 96       		.byte	0x96
  368 017a 00000000 		.4byte	.LFB3
@@ -566,7 +566,7 @@ ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccrupt0D.s 			page 1
  378 0196 E3010000 		.4byte	0x1e3
  379 019a 00       		.byte	0
  380 019b 0B       		.uleb128 0xb
- 381 019c 8F020000 		.4byte	.LASF35
+ 381 019c 7A020000 		.4byte	.LASF35
  382 01a0 01       		.byte	0x1
  383 01a1 15       		.byte	0x15
  384 01a2 F0000000 		.4byte	0xf0
@@ -574,36 +574,36 @@ ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccrupt0D.s 			page 1
  386 01a7 03       		.byte	0x3
  387 01a8 00000000 		.4byte	Timer_1_backup
  388 01ac 0C       		.uleb128 0xc
- 389 01ad 7B020000 		.4byte	.LASF26
- 390 01b1 7B020000 		.4byte	.LASF26
+ 389 01ad 66020000 		.4byte	.LASF26
+ 390 01b1 66020000 		.4byte	.LASF26
  391 01b5 03       		.byte	0x3
  392 01b6 69       		.byte	0x69
  393 01b7 0C       		.uleb128 0xc
- 394 01b8 F4010000 		.4byte	.LASF27
- 395 01bc F4010000 		.4byte	.LASF27
+ 394 01b8 80010000 		.4byte	.LASF27
+ 395 01bc 80010000 		.4byte	.LASF27
  396 01c0 03       		.byte	0x3
  397 01c1 63       		.byte	0x63
  398 01c2 0C       		.uleb128 0xc
- 399 01c3 34020000 		.4byte	.LASF28
- 400 01c7 34020000 		.4byte	.LASF28
+ 399 01c3 C0010000 		.4byte	.LASF28
+ 400 01c7 C0010000 		.4byte	.LASF28
  401 01cb 03       		.byte	0x3
  402 01cc 6A       		.byte	0x6a
  403 01cd 0C       		.uleb128 0xc
- 404 01ce D0010000 		.4byte	.LASF29
- 405 01d2 D0010000 		.4byte	.LASF29
+ 404 01ce 5C010000 		.4byte	.LASF29
+ 405 01d2 5C010000 		.4byte	.LASF29
  406 01d6 03       		.byte	0x3
  407 01d7 64       		.byte	0x64
  408 01d8 0C       		.uleb128 0xc
- 409 01d9 D8020000 		.4byte	.LASF30
- 410 01dd D8020000 		.4byte	.LASF30
+ 409 01d9 C3020000 		.4byte	.LASF30
+ 410 01dd C3020000 		.4byte	.LASF30
  411 01e1 03       		.byte	0x3
  412 01e2 5B       		.byte	0x5b
-ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccrupt0D.s 			page 11
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccAGApQW.s 			page 11
 
 
  413 01e3 0C       		.uleb128 0xc
- 414 01e4 BA010000 		.4byte	.LASF31
- 415 01e8 BA010000 		.4byte	.LASF31
+ 414 01e4 46010000 		.4byte	.LASF31
+ 415 01e8 46010000 		.4byte	.LASF31
  416 01ec 03       		.byte	0x3
  417 01ed 8B       		.byte	0x8b
  418 01ee 00       		.byte	0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccrupt0D.s 			page 1
  467 002e 3A       		.uleb128 0x3a
  468 002f 0B       		.uleb128 0xb
  469 0030 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccrupt0D.s 			page 12
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccAGApQW.s 			page 12
 
 
  470 0031 05       		.uleb128 0x5
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccrupt0D.s 			page 1
  524 0067 2E       		.uleb128 0x2e
  525 0068 01       		.byte	0x1
  526 0069 3F       		.uleb128 0x3f
-ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccrupt0D.s 			page 13
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccAGApQW.s 			page 13
 
 
  527 006a 19       		.uleb128 0x19
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccrupt0D.s 			page 1
  581 00a3 03       		.uleb128 0x3
  582 00a4 0E       		.uleb128 0xe
  583 00a5 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccrupt0D.s 			page 14
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccAGApQW.s 			page 14
 
 
  584 00a6 0B       		.uleb128 0xb
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccrupt0D.s 			page 1
  626      72756374 
  627              	.LASF3:
  628 0026 73686F72 		.ascii	"short unsigned int\000"
-ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccrupt0D.s 			page 15
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccAGApQW.s 			page 15
 
 
  628      7420756E 
@@ -898,138 +898,134 @@ ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccrupt0D.s 			page 1
  648 0132 54696D65 		.ascii	"Timer_1_Sleep\000"
  648      725F315F 
  648      536C6565 
-ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccrupt0D.s 			page 16
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccAGApQW.s 			page 16
 
 
  648      7000
  649              	.LASF9:
  650 0140 75696E74 		.ascii	"uint8\000"
  650      3800
- 651              	.LASF34:
- 652 0146 433A5C55 		.ascii	"C:\\Users\\magnu\\OneDrive - Aarhus universitet\\Pr"
- 652      73657273 
- 652      5C6D6167 
- 652      6E755C4F 
- 652      6E654472 
- 653 0175 6F6A656B 		.ascii	"ojekt3 bilag\\Scale.cywrk.Archive02\\Kode til til l"
- 653      74332062 
- 653      696C6167 
- 653      5C536361 
- 653      6C652E63 
- 654 01a6 6F616463 		.ascii	"oadcell\\Scale.cydsn\000"
- 654      656C6C5C 
- 654      5363616C 
- 654      652E6379 
- 654      64736E00 
- 655              	.LASF31:
- 656 01ba 54696D65 		.ascii	"Timer_1_Enable\000"
+ 651              	.LASF31:
+ 652 0146 54696D65 		.ascii	"Timer_1_Enable\000"
+ 652      725F315F 
+ 652      456E6162 
+ 652      6C6500
+ 653              	.LASF12:
+ 654 0155 646F7562 		.ascii	"double\000"
+ 654      6C6500
+ 655              	.LASF29:
+ 656 015c 54696D65 		.ascii	"Timer_1_WriteControlRegister\000"
  656      725F315F 
- 656      456E6162 
- 656      6C6500
- 657              	.LASF12:
- 658 01c9 646F7562 		.ascii	"double\000"
- 658      6C6500
- 659              	.LASF29:
- 660 01d0 54696D65 		.ascii	"Timer_1_WriteControlRegister\000"
+ 656      57726974 
+ 656      65436F6E 
+ 656      74726F6C 
+ 657              	.LASF10:
+ 658 0179 75696E74 		.ascii	"uint32\000"
+ 658      333200
+ 659              	.LASF27:
+ 660 0180 54696D65 		.ascii	"Timer_1_ReadControlRegister\000"
  660      725F315F 
- 660      57726974 
- 660      65436F6E 
- 660      74726F6C 
- 661              	.LASF10:
- 662 01ed 75696E74 		.ascii	"uint32\000"
- 662      333200
- 663              	.LASF27:
- 664 01f4 54696D65 		.ascii	"Timer_1_ReadControlRegister\000"
- 664      725F315F 
- 664      52656164 
- 664      436F6E74 
- 664      726F6C52 
- 665              	.LASF8:
- 666 0210 756E7369 		.ascii	"unsigned int\000"
- 666      676E6564 
- 666      20696E74 
- 666      00
- 667              	.LASF7:
- 668 021d 6C6F6E67 		.ascii	"long long unsigned int\000"
- 668      206C6F6E 
- 668      6720756E 
- 668      7369676E 
- 668      65642069 
- 669              	.LASF28:
- 670 0234 54696D65 		.ascii	"Timer_1_WriteCounter\000"
- 670      725F315F 
-ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccrupt0D.s 			page 17
-
-
- 670      57726974 
- 670      65436F75 
- 670      6E746572 
+ 660      52656164 
+ 660      436F6E74 
+ 660      726F6C52 
+ 661              	.LASF8:
+ 662 019c 756E7369 		.ascii	"unsigned int\000"
+ 662      676E6564 
+ 662      20696E74 
+ 662      00
+ 663              	.LASF7:
+ 664 01a9 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 664      206C6F6E 
+ 664      6720756E 
+ 664      7369676E 
+ 664      65642069 
+ 665              	.LASF28:
+ 666 01c0 54696D65 		.ascii	"Timer_1_WriteCounter\000"
+ 666      725F315F 
+ 666      57726974 
+ 666      65436F75 
+ 666      6E746572 
+ 667              	.LASF34:
+ 668 01d5 433A5C55 		.ascii	"C:\\Users\\magnu\\OneDrive\\Dokumenter\\GitHub\\B-C"
+ 668      73657273 
+ 668      5C6D6167 
+ 668      6E755C4F 
+ 668      6E654472 
+ 669 0202 41435C50 		.ascii	"AC\\Psoc kode HW\\Kode til til loadcell\\Scale.cyds"
+ 669      736F6320 
+ 669      6B6F6465 
+ 669      2048575C 
+ 669      4B6F6465 
+ 670 0232 6E00     		.ascii	"n\000"
  671              	.LASF23:
- 672 0249 54696D65 		.ascii	"Timer_1_RestoreConfig\000"
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccAGApQW.s 			page 17
+
+
+ 672 0234 54696D65 		.ascii	"Timer_1_RestoreConfig\000"
  672      725F315F 
  672      52657374 
  672      6F726543 
  672      6F6E6669 
  673              	.LASF16:
- 674 025f 73697A65 		.ascii	"sizetype\000"
+ 674 024a 73697A65 		.ascii	"sizetype\000"
  674      74797065 
  674      00
  675              	.LASF6:
- 676 0268 6C6F6E67 		.ascii	"long long int\000"
+ 676 0253 6C6F6E67 		.ascii	"long long int\000"
  676      206C6F6E 
  676      6720696E 
  676      7400
  677              	.LASF13:
- 678 0276 63686172 		.ascii	"char\000"
+ 678 0261 63686172 		.ascii	"char\000"
  678      00
  679              	.LASF26:
- 680 027b 54696D65 		.ascii	"Timer_1_ReadCounter\000"
+ 680 0266 54696D65 		.ascii	"Timer_1_ReadCounter\000"
  680      725F315F 
  680      52656164 
  680      436F756E 
  680      74657200 
  681              	.LASF35:
- 682 028f 54696D65 		.ascii	"Timer_1_backup\000"
+ 682 027a 54696D65 		.ascii	"Timer_1_backup\000"
  682      725F315F 
  682      6261636B 
  682      757000
  683              	.LASF2:
- 684 029e 73686F72 		.ascii	"short int\000"
+ 684 0289 73686F72 		.ascii	"short int\000"
  684      7420696E 
  684      7400
  685              	.LASF4:
- 686 02a8 6C6F6E67 		.ascii	"long int\000"
+ 686 0293 6C6F6E67 		.ascii	"long int\000"
  686      20696E74 
  686      00
  687              	.LASF25:
- 688 02b1 54696D65 		.ascii	"Timer_1_Wakeup\000"
+ 688 029c 54696D65 		.ascii	"Timer_1_Wakeup\000"
  688      725F315F 
  688      57616B65 
  688      757000
  689              	.LASF15:
- 690 02c0 6C6F6E67 		.ascii	"long double\000"
+ 690 02ab 6C6F6E67 		.ascii	"long double\000"
  690      20646F75 
  690      626C6500 
  691              	.LASF0:
- 692 02cc 7369676E 		.ascii	"signed char\000"
+ 692 02b7 7369676E 		.ascii	"signed char\000"
  692      65642063 
  692      68617200 
  693              	.LASF30:
- 694 02d8 54696D65 		.ascii	"Timer_1_Stop\000"
+ 694 02c3 54696D65 		.ascii	"Timer_1_Stop\000"
  694      725F315F 
  694      53746F70 
-ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccrupt0D.s 			page 18
-
-
  694      00
  695              	.LASF19:
- 696 02e5 496E7465 		.ascii	"InterruptMaskValue\000"
+ 696 02d0 496E7465 		.ascii	"InterruptMaskValue\000"
  696      72727570 
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\ccAGApQW.s 			page 18
+
+
  696      744D6173 
  696      6B56616C 
  696      756500
  697              	.LASF20:
- 698 02f8 54696D65 		.ascii	"TimerControlRegister\000"
+ 698 02e3 54696D65 		.ascii	"TimerControlRegister\000"
  698      72436F6E 
  698      74726F6C 
  698      52656769 
