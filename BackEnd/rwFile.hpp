@@ -1,3 +1,5 @@
+#pragma once
+
 #include <iostream>
 #include <fcntl.h>
 #include <unistd.h>
@@ -17,7 +19,7 @@ int openFile(char *deviceNode)
     }
 
     return fileDescriptor;
-}
+};
 
 int writeFile(int fileDescriptor, const char* data)
 {
@@ -33,11 +35,8 @@ int writeFile(int fileDescriptor, const char* data)
 
     std::cout << "Data written to device: " << dataWrite << std::endl;
 
-    // Step 6: Close the Device Node
-    close(fileDescriptor);
-
     return bytesWritten;
-}
+};
 
 int readFile(int fileDescriptor, string& recievedDataBuffer)
 {
@@ -58,8 +57,12 @@ int readFile(int fileDescriptor, string& recievedDataBuffer)
 
     recievedDataBuffer = buffer;
 
-    // Step 6: Close the Device Node
+    return bytesRead;
+};
+
+int closeFile(int fileDescriptor)
+{
     close(fileDescriptor);
 
-    return bytesRead;
+    return 1;
 };

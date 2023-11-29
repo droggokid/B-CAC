@@ -1,8 +1,7 @@
 # Makefile for compiling and transferring the code to Raspberry Pi Zero
 
-CXX = arm-linux-gnueabihf-g++
-#CXX = arm-rpizw-g++
-CXXFLAGS =
+CXX = arm-rpizw-g++
+CXXFLAGS = -pthread
 
 # Adjust the following variables based on your Raspberry Pi's IP address and login credentials
 RPI_USER = root
@@ -13,7 +12,7 @@ RPI_PATH =
 EXECUTABLE = backend
 
 # Source files
-SRCS = server.cpp
+SRCS = main.cpp
 
 all: $(EXECUTABLE)
 

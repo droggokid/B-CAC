@@ -13,8 +13,9 @@ function TextBorder(props) {
     background: background || '#000',
     boxShadow: boxShadow || '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
     display: 'flex',
-    justifyContent: 'space-between', // Center text on the left and textbox on the right
+    justifyContent: 'flex-start', // Center text on the left and textbox on the right
     alignItems: 'center',
+    alignContent: "space-between",
     position: 'relative',
     padding: '0 20px', // Add padding to create space between text and textbox
   };

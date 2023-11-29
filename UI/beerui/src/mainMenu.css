@@ -59,3 +59,18 @@ body {
 }
 
   
+.vertcontainer{
+  position: absolute;
+  top: 0;
+  margin: 20px;
+  display:flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.container{
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  column-gap: 300px;
+}
