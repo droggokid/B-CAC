@@ -53,6 +53,9 @@ body {
   margin: 30px; 
 }
 
-
+.activeCont {
+  display: flex;
+  flex-direction: column;
+}
 
   

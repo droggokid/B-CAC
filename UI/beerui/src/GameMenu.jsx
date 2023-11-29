@@ -2,13 +2,15 @@ import React, { useState, useEffect } from 'react';
 import Text from './Text';
 import PlayerStat from './PlayerStat';
 import Dropdown from './Dropdown';
-import StartBtn from './StartBtn';
+import ActiveBtn from './ActiveBtn';
 import { server } from "./Server";
 import { data } from "./Data";
 
 function GameMenu(props) {
     const [startBtnActive, setStartBtnActive] = useState(false);
     const [startBtnShow, setStartBtnShow] = useState(true);
+    const [checkBtnActive, setCheckBtnActive] = useState(false);
+    const [checkBtnShow, setCheckBtnShow] = useState(true);
     const [timerShow, setTimerShow] = useState(false);
     const [p1Initials, setP1Initials] = useState(data.players[0].initials); // Brug setP1Initials til at ændre værdier
     const [p2Initials, setP2Initials] = useState(data.players[1].initials);
@@ -75,7 +77,15 @@ function GameMenu(props) {
                 <Dropdown options={["Vælg", "Bajer", "Mokai"]} callback={dropdownCb} disable={dropdownDisabled} fontSize="30px" />
             </div>
             <div className="activeCont">
-                <StartBtn
+                <ActiveBtn
+                    label="Godkend"
+                    height={100}
+                    active={checkBtnActive}
+                    show={checkBtnShow}
+                    onclick={startGame}
+                />
+                <ActiveBtn
+                    label="Start"
                     height={100}
                     active={startBtnActive}
                     show={startBtnShow}
