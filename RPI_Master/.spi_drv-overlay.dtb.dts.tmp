@@ -1,0 +1,42 @@
+# 0 "/home/stud/Desktop/Semesterprojekt/B-CAC/RPI_Master/spi_drv-overlay.dts"
+# 0 "<built-in>"
+# 0 "<command-line>"
+# 1 "/home/stud/Desktop/Semesterprojekt/B-CAC/RPI_Master/spi_drv-overlay.dts"
+/dts-v1/;
+/plugin/;
+
+/ {
+    compatible = "brcm,bcm2835", "brcm,bcm2708";
+
+
+    fragment@0 {
+        target = <&spi0>;
+        __overlay__ {
+            status = "okay";
+            spidev@0{
+                status = "disabled";
+            };
+        };
+    };
+
+    fragment@1 {
+        target = <&spi0>;
+        __overlay__ {
+
+            #address-cells = <1>;
+            #size-cells = <0>;
+
+            spi_drv@0 {
+                compatible = "ase, spi_drv";
+                reg = <0>;
+                spi-max-frequency = <1000000>;
+            };
+
+            spi_drv@1 {
+                compatible = "ase, spi_drv";
+                reg = <1>;
+                spi-max-frequency = <1000000>;
+            };
+        };
+    };
+};

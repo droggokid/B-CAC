@@ -1,0 +1,1 @@
+cmd_/home/stud/Desktop/Semesterprojekt/B-CAC/RPI_Master/spi_drv.ko := arm-poky-linux-gnueabi-ld -r -EL --build-id  -T ./scripts/module-common.lds -T ./arch/arm/kernel/module.lds -o /home/stud/Desktop/Semesterprojekt/B-CAC/RPI_Master/spi_drv.ko /home/stud/Desktop/Semesterprojekt/B-CAC/RPI_Master/spi_drv.o /home/stud/Desktop/Semesterprojekt/B-CAC/RPI_Master/spi_drv.mod.o;  true
