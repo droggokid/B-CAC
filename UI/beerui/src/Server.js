@@ -25,9 +25,14 @@ class Server
         return this.get("leaderboard");
     }
 
+    postTare()
+    {
+        this.post(`{"cmd": "tare", "data": {}}`);
+    }
+
     postStartGame(p1Initals, p2Initials, drinkType)
     {
-        this.post(`{"p1": "${p1Initals}", "p2": "${p2Initials}", "drinkType": "${drinkType}"}`);
+        this.post(`{"cmd": "startGame", "data": {"p1": "${p1Initals}", "p2": "${p2Initials}", "drinkType": "${drinkType}"}}`);
     }
 
     get(data)

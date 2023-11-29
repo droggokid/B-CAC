@@ -5,11 +5,13 @@
 #include <boost/beast/core.hpp>
 #include <boost/beast/http.hpp>
 #include <boost/asio.hpp>
+#include "json/single_include/nlohmann/json.hpp"
 
 namespace beast = boost::beast;
 namespace http = beast::http;
 namespace net = boost::asio;
 using tcp = boost::asio::ip::tcp;
+using json = nlohmann::json;
 using namespace std;
 
 class Server
@@ -59,9 +61,18 @@ public:
                 std::string body = request.body();
                 cout << "Received POST body: " << body << endl;
 
-                // Process the body as needed
+                json bodyJson = json::parse(body);
+                string cmd = bodyJson["cmd"];
+                json data = bodyJson["data"];
 
-                // Continue with the response
+                if (cmd == "tare")
+                {
+                    cout << data << endl;
+                }
+                else if (cmd == "startGame")
+                {
+                    cout << data << endl;
+                }
             }
             else if (request.method() == http::verb::get)
             {
@@ -71,8 +82,19 @@ public:
 
                 if (target == "/time")
                 {
-                    cout << "yeah time" << endl;
                     response.body() = "11:30";
+                }
+                else if (target == "/gameRunning")
+                {
+                    response.body() = "true";
+                }
+                else if (target == "/leaderboard")
+                {
+                    response.body() = "[{'initials': 'XXX', 'time': '01:04.30'}, {'initials': 'XXX', 'time': '01:04.30'}]";
+                }
+                else 
+                {
+                    cout << "target not specified" << endl;
                 }
             }
 

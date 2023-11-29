@@ -103,6 +103,7 @@ function GameMenu(props) {
         setDropdownDisabled(true);
 
         // Afvent tare godkendt fra psoc, aktiver derefter start-knap
+        server.postTare();
 
         setTimeout(() => {
             setStartBtnActive(true);
