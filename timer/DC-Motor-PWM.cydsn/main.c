@@ -19,25 +19,14 @@ void handleByteReceived(uint8_t byteReceived);
 void stopTidsTagning();
 void startTidsTagning();
 
-CY_ISR(InterruptHandler)
-{
-    /* Read Status register in order to clear the sticky Terminal Count (TC) bit
-     * in the status register. Note that the function is not called, but rather
-     * the status is read directly.
-     */
-    Timer_1_STATUS;
 
-    /* Increment the Counter to indicate the keep track of the number of
-     * interrupts received */
-    InterruptCnt++;
-}
 
 int main(void)
 {
     CyGlobalIntEnable; /* Enable global interrupts. */
 
     UART_1_Start();
-    TimerISR_StartEx(InterruptHandler);
+    
 
     /* Start the components */
     Timer_1_Start();
@@ -48,13 +37,6 @@ int main(void)
 
     for(;;)
     {
-        
-        
-        
-
-       
-        
-        
         
         //startTidsTagning();
         start_counter = Timer_1_ReadCounter();
@@ -67,7 +49,7 @@ int main(void)
         time_interval_ticks = start_counter - stop_counter;
 
         // Konverter tidsintervallet til tid i millisekunder
-        time_interval_ms = time_interval_ticks * tick_period_ms;
+        time_interval_ms = time_interval_ticks/1000;
         
         sprintf(outputBuffer, "Counter: %lu\r\n",time_interval_ms);
         
@@ -87,7 +69,7 @@ int main(void)
         time_interval_ticks = start_counter - stop_counter;
 
         // Konverter tidsintervallet til tid i millisekunder
-        time_interval_ms = time_interval_ticks * tick_period_ms;
+        time_interval_ms = time_interval_ticks/1000;
         
         sprintf(outputBuffer, "Counter: %lu\r\n",time_interval_ms);
         
@@ -97,16 +79,19 @@ int main(void)
         //startTidsTagning();
         
         start_counter = Timer_1_ReadCounter();
-        CyDelay(3000);
+        CyDelay(60002);
 
         // Slut tidspunkt
         //stop_counter = Timer_1_ReadCounter();
+
+         // Slut tidspunkt
+        stop_counter = Timer_1_ReadCounter();
 
         // Beregn tidsintervallet i ticks
         time_interval_ticks = start_counter - stop_counter;
 
         // Konverter tidsintervallet til tid i millisekunder
-        time_interval_ms = time_interval_ticks * tick_period_ms;
+        time_interval_ms = time_interval_ticks/1000;
         
         sprintf(outputBuffer, "Counter: %lu\r\n",time_interval_ms);
         

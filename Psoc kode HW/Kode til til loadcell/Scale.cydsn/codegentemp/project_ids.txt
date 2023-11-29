@@ -1,0 +1,6 @@
+C:\Users\magnu\OneDrive\Dokumenter\GitHub\B-CAC\Psoc kode HW\Kode til til loadcell\Scale.cydsn\Scale.cyprj|52c83bc4-bbca-446e-97a2-efa7cdb13e0d
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|5f79f5b0-f09d-412b-a7bc-131dd6a7b4e0
+C:\Users\magnu\OneDrive\Dokumenter\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|19da5467-6024-4141-b2cc-0d80b6b0f17c
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|0385ad55-c72c-43f0-92e1-69268b7c6fbf
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|404d8f7b-9278-4c7d-8ba8-f8605fe1f46f
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|891aa120-eca2-43a4-a329-ebb767b8bf87

@@ -1,0 +1,861 @@
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cc1ZAiFj.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"Timer.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.startTidsTagning,"ax",%progbits
+  20              		.align	2
+  21              		.global	startTidsTagning
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	startTidsTagning, %function
+  25              	startTidsTagning:
+  26              	.LFB64:
+  27              		.file 1 "Timer.c"
+   1:Timer.c       **** /* ========================================
+   2:Timer.c       ****  *
+   3:Timer.c       ****  * Copyright YOUR COMPANY, THE YEAR
+   4:Timer.c       ****  * All Rights Reserved
+   5:Timer.c       ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:Timer.c       ****  *
+   7:Timer.c       ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:Timer.c       ****  * WHICH IS THE PROPERTY OF your company.
+   9:Timer.c       ****  *
+  10:Timer.c       ****  * ========================================
+  11:Timer.c       **** */
+  12:Timer.c       **** #include "project.h"
+  13:Timer.c       **** #include "Timer.h"
+  14:Timer.c       **** #include <stdio.h>
+  15:Timer.c       **** 
+  16:Timer.c       **** volatile uint16 startCount = 0;
+  17:Timer.c       **** volatile uint16 stopCount = 0;
+  18:Timer.c       **** uint32 counter=0;
+  19:Timer.c       **** 
+  20:Timer.c       **** const uint32 tick_period_ms = 10;
+  21:Timer.c       **** uint32 start_counter = 0;
+  22:Timer.c       **** uint32 stop_counter=0;
+  23:Timer.c       **** uint32 time_interval_ticks = 0;
+  24:Timer.c       **** uint32 time_interval_ms=0;
+  25:Timer.c       **** 
+  26:Timer.c       **** 
+  27:Timer.c       **** 
+  28:Timer.c       **** void startTidsTagning()
+  29:Timer.c       **** {
+  28              		.loc 1 29 0
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cc1ZAiFj.s 			page 2
+
+
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 08B5     		push	{r3, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 3, -8
+  35              		.cfi_offset 14, -4
+  30:Timer.c       ****     
+  31:Timer.c       ****     Timer_1_Start();
+  36              		.loc 1 31 0
+  37 0002 FFF7FEFF 		bl	Timer_1_Start
+  38              	.LVL0:
+  32:Timer.c       ****     start_counter = Timer_1_ReadCounter();
+  39              		.loc 1 32 0
+  40 0006 FFF7FEFF 		bl	Timer_1_ReadCounter
+  41              	.LVL1:
+  42 000a 014B     		ldr	r3, .L3
+  43 000c 1860     		str	r0, [r3]
+  44 000e 08BD     		pop	{r3, pc}
+  45              	.L4:
+  46              		.align	2
+  47              	.L3:
+  48 0010 00000000 		.word	.LANCHOR0
+  49              		.cfi_endproc
+  50              	.LFE64:
+  51              		.size	startTidsTagning, .-startTidsTagning
+  52              		.section	.text.stopTidsTagning,"ax",%progbits
+  53              		.align	2
+  54              		.global	stopTidsTagning
+  55              		.thumb
+  56              		.thumb_func
+  57              		.type	stopTidsTagning, %function
+  58              	stopTidsTagning:
+  59              	.LFB65:
+  33:Timer.c       **** }
+  34:Timer.c       **** uint32 stopTidsTagning()
+  35:Timer.c       **** {
+  60              		.loc 1 35 0
+  61              		.cfi_startproc
+  62              		@ args = 0, pretend = 0, frame = 0
+  63              		@ frame_needed = 0, uses_anonymous_args = 0
+  64 0000 10B5     		push	{r4, lr}
+  65              		.cfi_def_cfa_offset 8
+  66              		.cfi_offset 4, -8
+  67              		.cfi_offset 14, -4
+  36:Timer.c       ****     
+  37:Timer.c       ****     stop_counter = Timer_1_ReadCounter();
+  68              		.loc 1 37 0
+  69 0002 FFF7FEFF 		bl	Timer_1_ReadCounter
+  70              	.LVL2:
+  71 0006 074C     		ldr	r4, .L7
+  72 0008 6060     		str	r0, [r4, #4]
+  38:Timer.c       **** 
+  39:Timer.c       ****     // Beregn tidsintervallet i ticks
+  40:Timer.c       ****     time_interval_ticks = start_counter - stop_counter;
+  73              		.loc 1 40 0
+  74 000a 2368     		ldr	r3, [r4]
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cc1ZAiFj.s 			page 3
+
+
+  75 000c 181A     		subs	r0, r3, r0
+  76 000e A060     		str	r0, [r4, #8]
+  41:Timer.c       **** 
+  42:Timer.c       ****     // Konverter tidsintervallet til tid i millisekunder
+  43:Timer.c       ****     time_interval_ms = time_interval_ticks/100;
+  77              		.loc 1 43 0
+  78 0010 054B     		ldr	r3, .L7+4
+  79 0012 A3FB0030 		umull	r3, r0, r3, r0
+  80 0016 4009     		lsrs	r0, r0, #5
+  81 0018 E060     		str	r0, [r4, #12]
+  44:Timer.c       ****         
+  45:Timer.c       **** 
+  46:Timer.c       ****     Timer_1_Stop();
+  82              		.loc 1 46 0
+  83 001a FFF7FEFF 		bl	Timer_1_Stop
+  84              	.LVL3:
+  47:Timer.c       ****     
+  48:Timer.c       ****     return time_interval_ms;
+  49:Timer.c       **** }
+  85              		.loc 1 49 0
+  86 001e E068     		ldr	r0, [r4, #12]
+  87 0020 10BD     		pop	{r4, pc}
+  88              	.L8:
+  89 0022 00BF     		.align	2
+  90              	.L7:
+  91 0024 00000000 		.word	.LANCHOR0
+  92 0028 1F85EB51 		.word	1374389535
+  93              		.cfi_endproc
+  94              	.LFE65:
+  95              		.size	stopTidsTagning, .-stopTidsTagning
+  96              		.global	time_interval_ms
+  97              		.global	time_interval_ticks
+  98              		.global	stop_counter
+  99              		.global	start_counter
+ 100              		.global	tick_period_ms
+ 101              		.global	counter
+ 102              		.global	stopCount
+ 103              		.global	startCount
+ 104              		.section	.rodata
+ 105              		.align	2
+ 106              		.type	tick_period_ms, %object
+ 107              		.size	tick_period_ms, 4
+ 108              	tick_period_ms:
+ 109 0000 0A000000 		.word	10
+ 110              		.bss
+ 111              		.align	2
+ 112              		.set	.LANCHOR0,. + 0
+ 113              		.type	start_counter, %object
+ 114              		.size	start_counter, 4
+ 115              	start_counter:
+ 116 0000 00000000 		.space	4
+ 117              		.type	stop_counter, %object
+ 118              		.size	stop_counter, 4
+ 119              	stop_counter:
+ 120 0004 00000000 		.space	4
+ 121              		.type	time_interval_ticks, %object
+ 122              		.size	time_interval_ticks, 4
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cc1ZAiFj.s 			page 4
+
+
+ 123              	time_interval_ticks:
+ 124 0008 00000000 		.space	4
+ 125              		.type	time_interval_ms, %object
+ 126              		.size	time_interval_ms, 4
+ 127              	time_interval_ms:
+ 128 000c 00000000 		.space	4
+ 129              		.type	counter, %object
+ 130              		.size	counter, 4
+ 131              	counter:
+ 132 0010 00000000 		.space	4
+ 133              		.type	stopCount, %object
+ 134              		.size	stopCount, 2
+ 135              	stopCount:
+ 136 0014 0000     		.space	2
+ 137              		.type	startCount, %object
+ 138              		.size	startCount, 2
+ 139              	startCount:
+ 140 0016 0000     		.space	2
+ 141              		.text
+ 142              	.Letext0:
+ 143              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 144              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 145              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 146              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
+ 147              		.file 6 "Generated_Source\\PSoC5/Timer_1.h"
+ 148              		.section	.debug_info,"",%progbits
+ 149              	.Ldebug_info0:
+ 150 0000 D1010000 		.4byte	0x1d1
+ 151 0004 0400     		.2byte	0x4
+ 152 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 153 000a 04       		.byte	0x4
+ 154 000b 01       		.uleb128 0x1
+ 155 000c 69000000 		.4byte	.LASF30
+ 156 0010 0C       		.byte	0xc
+ 157 0011 3D010000 		.4byte	.LASF31
+ 158 0015 9B010000 		.4byte	.LASF32
+ 159 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 160 001d 00000000 		.4byte	0
+ 161 0021 00000000 		.4byte	.Ldebug_line0
+ 162 0025 02       		.uleb128 0x2
+ 163 0026 01       		.byte	0x1
+ 164 0027 06       		.byte	0x6
+ 165 0028 70020000 		.4byte	.LASF0
+ 166 002c 02       		.uleb128 0x2
+ 167 002d 01       		.byte	0x1
+ 168 002e 08       		.byte	0x8
+ 169 002f 5B000000 		.4byte	.LASF1
+ 170 0033 02       		.uleb128 0x2
+ 171 0034 02       		.byte	0x2
+ 172 0035 05       		.byte	0x5
+ 173 0036 40020000 		.4byte	.LASF2
+ 174 003a 02       		.uleb128 0x2
+ 175 003b 02       		.byte	0x2
+ 176 003c 07       		.byte	0x7
+ 177 003d 1D010000 		.4byte	.LASF3
+ 178 0041 03       		.uleb128 0x3
+ 179 0042 29000000 		.4byte	.LASF9
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cc1ZAiFj.s 			page 5
+
+
+ 180 0046 02       		.byte	0x2
+ 181 0047 3F       		.byte	0x3f
+ 182 0048 4C000000 		.4byte	0x4c
+ 183 004c 02       		.uleb128 0x2
+ 184 004d 04       		.byte	0x4
+ 185 004e 05       		.byte	0x5
+ 186 004f 5B020000 		.4byte	.LASF4
+ 187 0053 02       		.uleb128 0x2
+ 188 0054 04       		.byte	0x4
+ 189 0055 07       		.byte	0x7
+ 190 0056 0B010000 		.4byte	.LASF5
+ 191 005a 02       		.uleb128 0x2
+ 192 005b 08       		.byte	0x8
+ 193 005c 05       		.byte	0x5
+ 194 005d 0B020000 		.4byte	.LASF6
+ 195 0061 02       		.uleb128 0x2
+ 196 0062 08       		.byte	0x8
+ 197 0063 07       		.byte	0x7
+ 198 0064 84010000 		.4byte	.LASF7
+ 199 0068 04       		.uleb128 0x4
+ 200 0069 04       		.byte	0x4
+ 201 006a 05       		.byte	0x5
+ 202 006b 696E7400 		.ascii	"int\000"
+ 203 006f 02       		.uleb128 0x2
+ 204 0070 04       		.byte	0x4
+ 205 0071 07       		.byte	0x7
+ 206 0072 77010000 		.4byte	.LASF8
+ 207 0076 03       		.uleb128 0x3
+ 208 0077 FA010000 		.4byte	.LASF10
+ 209 007b 03       		.byte	0x3
+ 210 007c 2C       		.byte	0x2c
+ 211 007d 41000000 		.4byte	0x41
+ 212 0081 05       		.uleb128 0x5
+ 213 0082 69010000 		.4byte	.LASF11
+ 214 0086 04       		.byte	0x4
+ 215 0087 EA01     		.2byte	0x1ea
+ 216 0089 3A000000 		.4byte	0x3a
+ 217 008d 05       		.uleb128 0x5
+ 218 008e 70010000 		.4byte	.LASF12
+ 219 0092 04       		.byte	0x4
+ 220 0093 EB01     		.2byte	0x1eb
+ 221 0095 53000000 		.4byte	0x53
+ 222 0099 02       		.uleb128 0x2
+ 223 009a 04       		.byte	0x4
+ 224 009b 04       		.byte	0x4
+ 225 009c 4D000000 		.4byte	.LASF13
+ 226 00a0 02       		.uleb128 0x2
+ 227 00a1 08       		.byte	0x8
+ 228 00a2 04       		.byte	0x4
+ 229 00a3 45010000 		.4byte	.LASF14
+ 230 00a7 02       		.uleb128 0x2
+ 231 00a8 01       		.byte	0x1
+ 232 00a9 08       		.byte	0x8
+ 233 00aa 19020000 		.4byte	.LASF15
+ 234 00ae 06       		.uleb128 0x6
+ 235 00af 81000000 		.4byte	0x81
+ 236 00b3 02       		.uleb128 0x2
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cc1ZAiFj.s 			page 6
+
+
+ 237 00b4 08       		.byte	0x8
+ 238 00b5 04       		.byte	0x4
+ 239 00b6 64020000 		.4byte	.LASF16
+ 240 00ba 02       		.uleb128 0x2
+ 241 00bb 04       		.byte	0x4
+ 242 00bc 07       		.byte	0x7
+ 243 00bd 02020000 		.4byte	.LASF17
+ 244 00c1 07       		.uleb128 0x7
+ 245 00c2 4A020000 		.4byte	.LASF33
+ 246 00c6 01       		.byte	0x1
+ 247 00c7 1C       		.byte	0x1c
+ 248 00c8 00000000 		.4byte	.LFB64
+ 249 00cc 14000000 		.4byte	.LFE64-.LFB64
+ 250 00d0 01       		.uleb128 0x1
+ 251 00d1 9C       		.byte	0x9c
+ 252 00d2 E9000000 		.4byte	0xe9
+ 253 00d6 08       		.uleb128 0x8
+ 254 00d7 06000000 		.4byte	.LVL0
+ 255 00db B3010000 		.4byte	0x1b3
+ 256 00df 08       		.uleb128 0x8
+ 257 00e0 0A000000 		.4byte	.LVL1
+ 258 00e4 BE010000 		.4byte	0x1be
+ 259 00e8 00       		.byte	0
+ 260 00e9 09       		.uleb128 0x9
+ 261 00ea 59010000 		.4byte	.LASF34
+ 262 00ee 01       		.byte	0x1
+ 263 00ef 22       		.byte	0x22
+ 264 00f0 8D000000 		.4byte	0x8d
+ 265 00f4 00000000 		.4byte	.LFB65
+ 266 00f8 2C000000 		.4byte	.LFE65-.LFB65
+ 267 00fc 01       		.uleb128 0x1
+ 268 00fd 9C       		.byte	0x9c
+ 269 00fe 15010000 		.4byte	0x115
+ 270 0102 08       		.uleb128 0x8
+ 271 0103 06000000 		.4byte	.LVL2
+ 272 0107 BE010000 		.4byte	0x1be
+ 273 010b 08       		.uleb128 0x8
+ 274 010c 1E000000 		.4byte	.LVL3
+ 275 0110 C9010000 		.4byte	0x1c9
+ 276 0114 00       		.byte	0
+ 277 0115 0A       		.uleb128 0xa
+ 278 0116 30010000 		.4byte	.LASF18
+ 279 011a 05       		.byte	0x5
+ 280 011b 1207     		.2byte	0x712
+ 281 011d 21010000 		.4byte	0x121
+ 282 0121 06       		.uleb128 0x6
+ 283 0122 76000000 		.4byte	0x76
+ 284 0126 0B       		.uleb128 0xb
+ 285 0127 42000000 		.4byte	.LASF19
+ 286 012b 01       		.byte	0x1
+ 287 012c 10       		.byte	0x10
+ 288 012d AE000000 		.4byte	0xae
+ 289 0131 05       		.uleb128 0x5
+ 290 0132 03       		.byte	0x3
+ 291 0133 00000000 		.4byte	startCount
+ 292 0137 0B       		.uleb128 0xb
+ 293 0138 00000000 		.4byte	.LASF20
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cc1ZAiFj.s 			page 7
+
+
+ 294 013c 01       		.byte	0x1
+ 295 013d 11       		.byte	0x11
+ 296 013e AE000000 		.4byte	0xae
+ 297 0142 05       		.uleb128 0x5
+ 298 0143 03       		.byte	0x3
+ 299 0144 00000000 		.4byte	stopCount
+ 300 0148 0B       		.uleb128 0xb
+ 301 0149 53000000 		.4byte	.LASF21
+ 302 014d 01       		.byte	0x1
+ 303 014e 12       		.byte	0x12
+ 304 014f 8D000000 		.4byte	0x8d
+ 305 0153 05       		.uleb128 0x5
+ 306 0154 03       		.byte	0x3
+ 307 0155 00000000 		.4byte	counter
+ 308 0159 0B       		.uleb128 0xb
+ 309 015a 33000000 		.4byte	.LASF22
+ 310 015e 01       		.byte	0x1
+ 311 015f 14       		.byte	0x14
+ 312 0160 6A010000 		.4byte	0x16a
+ 313 0164 05       		.uleb128 0x5
+ 314 0165 03       		.byte	0x3
+ 315 0166 00000000 		.4byte	tick_period_ms
+ 316 016a 0C       		.uleb128 0xc
+ 317 016b 8D000000 		.4byte	0x8d
+ 318 016f 0B       		.uleb128 0xb
+ 319 0170 32020000 		.4byte	.LASF23
+ 320 0174 01       		.byte	0x1
+ 321 0175 15       		.byte	0x15
+ 322 0176 8D000000 		.4byte	0x8d
+ 323 017a 05       		.uleb128 0x5
+ 324 017b 03       		.byte	0x3
+ 325 017c 00000000 		.4byte	start_counter
+ 326 0180 0B       		.uleb128 0xb
+ 327 0181 4C010000 		.4byte	.LASF24
+ 328 0185 01       		.byte	0x1
+ 329 0186 16       		.byte	0x16
+ 330 0187 8D000000 		.4byte	0x8d
+ 331 018b 05       		.uleb128 0x5
+ 332 018c 03       		.byte	0x3
+ 333 018d 00000000 		.4byte	stop_counter
+ 334 0191 0B       		.uleb128 0xb
+ 335 0192 F7000000 		.4byte	.LASF25
+ 336 0196 01       		.byte	0x1
+ 337 0197 17       		.byte	0x17
+ 338 0198 8D000000 		.4byte	0x8d
+ 339 019c 05       		.uleb128 0x5
+ 340 019d 03       		.byte	0x3
+ 341 019e 00000000 		.4byte	time_interval_ticks
+ 342 01a2 0B       		.uleb128 0xb
+ 343 01a3 18000000 		.4byte	.LASF26
+ 344 01a7 01       		.byte	0x1
+ 345 01a8 18       		.byte	0x18
+ 346 01a9 8D000000 		.4byte	0x8d
+ 347 01ad 05       		.uleb128 0x5
+ 348 01ae 03       		.byte	0x3
+ 349 01af 00000000 		.4byte	time_interval_ms
+ 350 01b3 0D       		.uleb128 0xd
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cc1ZAiFj.s 			page 8
+
+
+ 351 01b4 0A000000 		.4byte	.LASF27
+ 352 01b8 0A000000 		.4byte	.LASF27
+ 353 01bc 06       		.byte	0x6
+ 354 01bd 5A       		.byte	0x5a
+ 355 01be 0D       		.uleb128 0xd
+ 356 01bf 1E020000 		.4byte	.LASF28
+ 357 01c3 1E020000 		.4byte	.LASF28
+ 358 01c7 06       		.byte	0x6
+ 359 01c8 69       		.byte	0x69
+ 360 01c9 0D       		.uleb128 0xd
+ 361 01ca 7C020000 		.4byte	.LASF29
+ 362 01ce 7C020000 		.4byte	.LASF29
+ 363 01d2 06       		.byte	0x6
+ 364 01d3 5B       		.byte	0x5b
+ 365 01d4 00       		.byte	0
+ 366              		.section	.debug_abbrev,"",%progbits
+ 367              	.Ldebug_abbrev0:
+ 368 0000 01       		.uleb128 0x1
+ 369 0001 11       		.uleb128 0x11
+ 370 0002 01       		.byte	0x1
+ 371 0003 25       		.uleb128 0x25
+ 372 0004 0E       		.uleb128 0xe
+ 373 0005 13       		.uleb128 0x13
+ 374 0006 0B       		.uleb128 0xb
+ 375 0007 03       		.uleb128 0x3
+ 376 0008 0E       		.uleb128 0xe
+ 377 0009 1B       		.uleb128 0x1b
+ 378 000a 0E       		.uleb128 0xe
+ 379 000b 55       		.uleb128 0x55
+ 380 000c 17       		.uleb128 0x17
+ 381 000d 11       		.uleb128 0x11
+ 382 000e 01       		.uleb128 0x1
+ 383 000f 10       		.uleb128 0x10
+ 384 0010 17       		.uleb128 0x17
+ 385 0011 00       		.byte	0
+ 386 0012 00       		.byte	0
+ 387 0013 02       		.uleb128 0x2
+ 388 0014 24       		.uleb128 0x24
+ 389 0015 00       		.byte	0
+ 390 0016 0B       		.uleb128 0xb
+ 391 0017 0B       		.uleb128 0xb
+ 392 0018 3E       		.uleb128 0x3e
+ 393 0019 0B       		.uleb128 0xb
+ 394 001a 03       		.uleb128 0x3
+ 395 001b 0E       		.uleb128 0xe
+ 396 001c 00       		.byte	0
+ 397 001d 00       		.byte	0
+ 398 001e 03       		.uleb128 0x3
+ 399 001f 16       		.uleb128 0x16
+ 400 0020 00       		.byte	0
+ 401 0021 03       		.uleb128 0x3
+ 402 0022 0E       		.uleb128 0xe
+ 403 0023 3A       		.uleb128 0x3a
+ 404 0024 0B       		.uleb128 0xb
+ 405 0025 3B       		.uleb128 0x3b
+ 406 0026 0B       		.uleb128 0xb
+ 407 0027 49       		.uleb128 0x49
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cc1ZAiFj.s 			page 9
+
+
+ 408 0028 13       		.uleb128 0x13
+ 409 0029 00       		.byte	0
+ 410 002a 00       		.byte	0
+ 411 002b 04       		.uleb128 0x4
+ 412 002c 24       		.uleb128 0x24
+ 413 002d 00       		.byte	0
+ 414 002e 0B       		.uleb128 0xb
+ 415 002f 0B       		.uleb128 0xb
+ 416 0030 3E       		.uleb128 0x3e
+ 417 0031 0B       		.uleb128 0xb
+ 418 0032 03       		.uleb128 0x3
+ 419 0033 08       		.uleb128 0x8
+ 420 0034 00       		.byte	0
+ 421 0035 00       		.byte	0
+ 422 0036 05       		.uleb128 0x5
+ 423 0037 16       		.uleb128 0x16
+ 424 0038 00       		.byte	0
+ 425 0039 03       		.uleb128 0x3
+ 426 003a 0E       		.uleb128 0xe
+ 427 003b 3A       		.uleb128 0x3a
+ 428 003c 0B       		.uleb128 0xb
+ 429 003d 3B       		.uleb128 0x3b
+ 430 003e 05       		.uleb128 0x5
+ 431 003f 49       		.uleb128 0x49
+ 432 0040 13       		.uleb128 0x13
+ 433 0041 00       		.byte	0
+ 434 0042 00       		.byte	0
+ 435 0043 06       		.uleb128 0x6
+ 436 0044 35       		.uleb128 0x35
+ 437 0045 00       		.byte	0
+ 438 0046 49       		.uleb128 0x49
+ 439 0047 13       		.uleb128 0x13
+ 440 0048 00       		.byte	0
+ 441 0049 00       		.byte	0
+ 442 004a 07       		.uleb128 0x7
+ 443 004b 2E       		.uleb128 0x2e
+ 444 004c 01       		.byte	0x1
+ 445 004d 3F       		.uleb128 0x3f
+ 446 004e 19       		.uleb128 0x19
+ 447 004f 03       		.uleb128 0x3
+ 448 0050 0E       		.uleb128 0xe
+ 449 0051 3A       		.uleb128 0x3a
+ 450 0052 0B       		.uleb128 0xb
+ 451 0053 3B       		.uleb128 0x3b
+ 452 0054 0B       		.uleb128 0xb
+ 453 0055 27       		.uleb128 0x27
+ 454 0056 19       		.uleb128 0x19
+ 455 0057 11       		.uleb128 0x11
+ 456 0058 01       		.uleb128 0x1
+ 457 0059 12       		.uleb128 0x12
+ 458 005a 06       		.uleb128 0x6
+ 459 005b 40       		.uleb128 0x40
+ 460 005c 18       		.uleb128 0x18
+ 461 005d 9742     		.uleb128 0x2117
+ 462 005f 19       		.uleb128 0x19
+ 463 0060 01       		.uleb128 0x1
+ 464 0061 13       		.uleb128 0x13
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cc1ZAiFj.s 			page 10
+
+
+ 465 0062 00       		.byte	0
+ 466 0063 00       		.byte	0
+ 467 0064 08       		.uleb128 0x8
+ 468 0065 898201   		.uleb128 0x4109
+ 469 0068 00       		.byte	0
+ 470 0069 11       		.uleb128 0x11
+ 471 006a 01       		.uleb128 0x1
+ 472 006b 31       		.uleb128 0x31
+ 473 006c 13       		.uleb128 0x13
+ 474 006d 00       		.byte	0
+ 475 006e 00       		.byte	0
+ 476 006f 09       		.uleb128 0x9
+ 477 0070 2E       		.uleb128 0x2e
+ 478 0071 01       		.byte	0x1
+ 479 0072 3F       		.uleb128 0x3f
+ 480 0073 19       		.uleb128 0x19
+ 481 0074 03       		.uleb128 0x3
+ 482 0075 0E       		.uleb128 0xe
+ 483 0076 3A       		.uleb128 0x3a
+ 484 0077 0B       		.uleb128 0xb
+ 485 0078 3B       		.uleb128 0x3b
+ 486 0079 0B       		.uleb128 0xb
+ 487 007a 27       		.uleb128 0x27
+ 488 007b 19       		.uleb128 0x19
+ 489 007c 49       		.uleb128 0x49
+ 490 007d 13       		.uleb128 0x13
+ 491 007e 11       		.uleb128 0x11
+ 492 007f 01       		.uleb128 0x1
+ 493 0080 12       		.uleb128 0x12
+ 494 0081 06       		.uleb128 0x6
+ 495 0082 40       		.uleb128 0x40
+ 496 0083 18       		.uleb128 0x18
+ 497 0084 9742     		.uleb128 0x2117
+ 498 0086 19       		.uleb128 0x19
+ 499 0087 01       		.uleb128 0x1
+ 500 0088 13       		.uleb128 0x13
+ 501 0089 00       		.byte	0
+ 502 008a 00       		.byte	0
+ 503 008b 0A       		.uleb128 0xa
+ 504 008c 34       		.uleb128 0x34
+ 505 008d 00       		.byte	0
+ 506 008e 03       		.uleb128 0x3
+ 507 008f 0E       		.uleb128 0xe
+ 508 0090 3A       		.uleb128 0x3a
+ 509 0091 0B       		.uleb128 0xb
+ 510 0092 3B       		.uleb128 0x3b
+ 511 0093 05       		.uleb128 0x5
+ 512 0094 49       		.uleb128 0x49
+ 513 0095 13       		.uleb128 0x13
+ 514 0096 3F       		.uleb128 0x3f
+ 515 0097 19       		.uleb128 0x19
+ 516 0098 3C       		.uleb128 0x3c
+ 517 0099 19       		.uleb128 0x19
+ 518 009a 00       		.byte	0
+ 519 009b 00       		.byte	0
+ 520 009c 0B       		.uleb128 0xb
+ 521 009d 34       		.uleb128 0x34
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cc1ZAiFj.s 			page 11
+
+
+ 522 009e 00       		.byte	0
+ 523 009f 03       		.uleb128 0x3
+ 524 00a0 0E       		.uleb128 0xe
+ 525 00a1 3A       		.uleb128 0x3a
+ 526 00a2 0B       		.uleb128 0xb
+ 527 00a3 3B       		.uleb128 0x3b
+ 528 00a4 0B       		.uleb128 0xb
+ 529 00a5 49       		.uleb128 0x49
+ 530 00a6 13       		.uleb128 0x13
+ 531 00a7 3F       		.uleb128 0x3f
+ 532 00a8 19       		.uleb128 0x19
+ 533 00a9 02       		.uleb128 0x2
+ 534 00aa 18       		.uleb128 0x18
+ 535 00ab 00       		.byte	0
+ 536 00ac 00       		.byte	0
+ 537 00ad 0C       		.uleb128 0xc
+ 538 00ae 26       		.uleb128 0x26
+ 539 00af 00       		.byte	0
+ 540 00b0 49       		.uleb128 0x49
+ 541 00b1 13       		.uleb128 0x13
+ 542 00b2 00       		.byte	0
+ 543 00b3 00       		.byte	0
+ 544 00b4 0D       		.uleb128 0xd
+ 545 00b5 2E       		.uleb128 0x2e
+ 546 00b6 00       		.byte	0
+ 547 00b7 3F       		.uleb128 0x3f
+ 548 00b8 19       		.uleb128 0x19
+ 549 00b9 3C       		.uleb128 0x3c
+ 550 00ba 19       		.uleb128 0x19
+ 551 00bb 6E       		.uleb128 0x6e
+ 552 00bc 0E       		.uleb128 0xe
+ 553 00bd 03       		.uleb128 0x3
+ 554 00be 0E       		.uleb128 0xe
+ 555 00bf 3A       		.uleb128 0x3a
+ 556 00c0 0B       		.uleb128 0xb
+ 557 00c1 3B       		.uleb128 0x3b
+ 558 00c2 0B       		.uleb128 0xb
+ 559 00c3 00       		.byte	0
+ 560 00c4 00       		.byte	0
+ 561 00c5 00       		.byte	0
+ 562              		.section	.debug_aranges,"",%progbits
+ 563 0000 24000000 		.4byte	0x24
+ 564 0004 0200     		.2byte	0x2
+ 565 0006 00000000 		.4byte	.Ldebug_info0
+ 566 000a 04       		.byte	0x4
+ 567 000b 00       		.byte	0
+ 568 000c 0000     		.2byte	0
+ 569 000e 0000     		.2byte	0
+ 570 0010 00000000 		.4byte	.LFB64
+ 571 0014 14000000 		.4byte	.LFE64-.LFB64
+ 572 0018 00000000 		.4byte	.LFB65
+ 573 001c 2C000000 		.4byte	.LFE65-.LFB65
+ 574 0020 00000000 		.4byte	0
+ 575 0024 00000000 		.4byte	0
+ 576              		.section	.debug_ranges,"",%progbits
+ 577              	.Ldebug_ranges0:
+ 578 0000 00000000 		.4byte	.LFB64
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cc1ZAiFj.s 			page 12
+
+
+ 579 0004 14000000 		.4byte	.LFE64
+ 580 0008 00000000 		.4byte	.LFB65
+ 581 000c 2C000000 		.4byte	.LFE65
+ 582 0010 00000000 		.4byte	0
+ 583 0014 00000000 		.4byte	0
+ 584              		.section	.debug_line,"",%progbits
+ 585              	.Ldebug_line0:
+ 586 0000 85010000 		.section	.debug_str,"MS",%progbits,1
+ 586      02005A01 
+ 586      00000201 
+ 586      FB0E0D00 
+ 586      01010101 
+ 587              	.LASF20:
+ 588 0000 73746F70 		.ascii	"stopCount\000"
+ 588      436F756E 
+ 588      7400
+ 589              	.LASF27:
+ 590 000a 54696D65 		.ascii	"Timer_1_Start\000"
+ 590      725F315F 
+ 590      53746172 
+ 590      7400
+ 591              	.LASF26:
+ 592 0018 74696D65 		.ascii	"time_interval_ms\000"
+ 592      5F696E74 
+ 592      65727661 
+ 592      6C5F6D73 
+ 592      00
+ 593              	.LASF9:
+ 594 0029 5F5F696E 		.ascii	"__int32_t\000"
+ 594      7433325F 
+ 594      7400
+ 595              	.LASF22:
+ 596 0033 7469636B 		.ascii	"tick_period_ms\000"
+ 596      5F706572 
+ 596      696F645F 
+ 596      6D7300
+ 597              	.LASF19:
+ 598 0042 73746172 		.ascii	"startCount\000"
+ 598      74436F75 
+ 598      6E7400
+ 599              	.LASF13:
+ 600 004d 666C6F61 		.ascii	"float\000"
+ 600      7400
+ 601              	.LASF21:
+ 602 0053 636F756E 		.ascii	"counter\000"
+ 602      74657200 
+ 603              	.LASF1:
+ 604 005b 756E7369 		.ascii	"unsigned char\000"
+ 604      676E6564 
+ 604      20636861 
+ 604      7200
+ 605              	.LASF30:
+ 606 0069 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 606      43313120 
+ 606      352E342E 
+ 606      31203230 
+ 606      31363036 
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cc1ZAiFj.s 			page 13
+
+
+ 607 009c 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 607      20726576 
+ 607      6973696F 
+ 607      6E203233 
+ 607      37373135 
+ 608 00cf 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 608      66756E63 
+ 608      74696F6E 
+ 608      2D736563 
+ 608      74696F6E 
+ 609              	.LASF25:
+ 610 00f7 74696D65 		.ascii	"time_interval_ticks\000"
+ 610      5F696E74 
+ 610      65727661 
+ 610      6C5F7469 
+ 610      636B7300 
+ 611              	.LASF5:
+ 612 010b 6C6F6E67 		.ascii	"long unsigned int\000"
+ 612      20756E73 
+ 612      69676E65 
+ 612      6420696E 
+ 612      7400
+ 613              	.LASF3:
+ 614 011d 73686F72 		.ascii	"short unsigned int\000"
+ 614      7420756E 
+ 614      7369676E 
+ 614      65642069 
+ 614      6E7400
+ 615              	.LASF18:
+ 616 0130 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 616      52784275 
+ 616      66666572 
+ 616      00
+ 617              	.LASF31:
+ 618 013d 54696D65 		.ascii	"Timer.c\000"
+ 618      722E6300 
+ 619              	.LASF14:
+ 620 0145 646F7562 		.ascii	"double\000"
+ 620      6C6500
+ 621              	.LASF24:
+ 622 014c 73746F70 		.ascii	"stop_counter\000"
+ 622      5F636F75 
+ 622      6E746572 
+ 622      00
+ 623              	.LASF34:
+ 624 0159 73746F70 		.ascii	"stopTidsTagning\000"
+ 624      54696473 
+ 624      5461676E 
+ 624      696E6700 
+ 625              	.LASF11:
+ 626 0169 75696E74 		.ascii	"uint16\000"
+ 626      313600
+ 627              	.LASF12:
+ 628 0170 75696E74 		.ascii	"uint32\000"
+ 628      333200
+ 629              	.LASF8:
+ 630 0177 756E7369 		.ascii	"unsigned int\000"
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cc1ZAiFj.s 			page 14
+
+
+ 630      676E6564 
+ 630      20696E74 
+ 630      00
+ 631              	.LASF7:
+ 632 0184 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 632      206C6F6E 
+ 632      6720756E 
+ 632      7369676E 
+ 632      65642069 
+ 633              	.LASF32:
+ 634 019b 433A5C55 		.ascii	"C:\\Users\\magnu\\OneDrive\\Dokumenter\\GitHub\\B-C"
+ 634      73657273 
+ 634      5C6D6167 
+ 634      6E755C4F 
+ 634      6E654472 
+ 635 01c8 41435C50 		.ascii	"AC\\Psoc kode HW\\Kode til til loadcell\\Scale.cyds"
+ 635      736F6320 
+ 635      6B6F6465 
+ 635      2048575C 
+ 635      4B6F6465 
+ 636 01f8 6E00     		.ascii	"n\000"
+ 637              	.LASF10:
+ 638 01fa 696E7433 		.ascii	"int32_t\000"
+ 638      325F7400 
+ 639              	.LASF17:
+ 640 0202 73697A65 		.ascii	"sizetype\000"
+ 640      74797065 
+ 640      00
+ 641              	.LASF6:
+ 642 020b 6C6F6E67 		.ascii	"long long int\000"
+ 642      206C6F6E 
+ 642      6720696E 
+ 642      7400
+ 643              	.LASF15:
+ 644 0219 63686172 		.ascii	"char\000"
+ 644      00
+ 645              	.LASF28:
+ 646 021e 54696D65 		.ascii	"Timer_1_ReadCounter\000"
+ 646      725F315F 
+ 646      52656164 
+ 646      436F756E 
+ 646      74657200 
+ 647              	.LASF23:
+ 648 0232 73746172 		.ascii	"start_counter\000"
+ 648      745F636F 
+ 648      756E7465 
+ 648      7200
+ 649              	.LASF2:
+ 650 0240 73686F72 		.ascii	"short int\000"
+ 650      7420696E 
+ 650      7400
+ 651              	.LASF33:
+ 652 024a 73746172 		.ascii	"startTidsTagning\000"
+ 652      74546964 
+ 652      73546167 
+ 652      6E696E67 
+ 652      00
+ARM GAS  C:\Users\magnu\AppData\Local\Temp\cc1ZAiFj.s 			page 15
+
+
+ 653              	.LASF4:
+ 654 025b 6C6F6E67 		.ascii	"long int\000"
+ 654      20696E74 
+ 654      00
+ 655              	.LASF16:
+ 656 0264 6C6F6E67 		.ascii	"long double\000"
+ 656      20646F75 
+ 656      626C6500 
+ 657              	.LASF0:
+ 658 0270 7369676E 		.ascii	"signed char\000"
+ 658      65642063 
+ 658      68617200 
+ 659              	.LASF29:
+ 660 027c 54696D65 		.ascii	"Timer_1_Stop\000"
+ 660      725F315F 
+ 660      53746F70 
+ 660      00
+ 661              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
