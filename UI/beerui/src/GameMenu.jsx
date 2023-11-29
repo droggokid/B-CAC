@@ -49,7 +49,7 @@ function GameMenu(props) {
                 switch (gameRunningResp)
                 {
                     default:
-                        console.warn("Connection to server lost");
+                        console.warn("Connection to server lost"); 
                     case true:
                         setTimerSec(timerSec + 1);
                         break;
