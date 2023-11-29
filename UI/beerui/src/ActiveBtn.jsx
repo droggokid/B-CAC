@@ -3,14 +3,14 @@ import Text from './Text';
 
 function ActiveBtn(props)
 {
-    const { label, active, onclick, show, height } = props;
+    const { label, active, onclick, show, height, color, fontColor } = props;
 
     const activeBtnStyle = {
         display: show ? "inline-block" : "none",
         border: "none",
-        backgroundColor: active ? "#9DFF7B" : "#505050",
+        backgroundColor: active ? (color || "#9DFF7B") : "#505050",
         fontSize: `${height * 0.4}px`,
-        color: active ? "black" : '#F0F0F0',
+        color: active ? (fontColor || "black") : '#F0F0F0',
         borderRadius: "23px",
         paddingLeft: `${height * 0.3}px`,
         paddingRight: `${height * 0.3}px`,
@@ -21,7 +21,7 @@ function ActiveBtn(props)
     
     return (
         <button id="abtn" style={activeBtnStyle} onClick={active ? onclick : null}>
-            <Text label={label} />
+            <Text color={activeBtnStyle.color} fontFamily="arial" label={label} />
         </button>
     );
 }
