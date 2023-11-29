@@ -1,5 +1,7 @@
 import React from 'react';
 import {server} from "./Server";
+import TextBorder from "./TextBorder";
+import Text from "./Text";
 
 function Leaderboard(props) {
     const leaderboardStyle = {
@@ -35,15 +37,35 @@ function Leaderboard(props) {
     let data = server.getLeaderboard();
 
     return (
-        <div style={leaderboardStyle}>
-            <div style={boxStyle}>
+        <div style={leaderboardStyle} >
+           <div class="vertcontainer">
+            <TextBorder>
+                <div class="container">
+                    <Text label="Navn 1:" />
+                    <Text label="00:00:00" />
+                </div>
+            </TextBorder>
+            <TextBorder>
+                <div class="container">
+                    <Text label="Navn 2:" />
+                    <Text label="00:00:00" />
+                </div>
+            </TextBorder>
+            <TextBorder>
+                <div class="container">
+                    <Text label="Navn 3:" />
+                    <Text label="00:00:00" />
+                </div>
+            </TextBorder>
+            </div>
+            {/* <div style={boxStyle}>
                 <div style={textStyle}>Name 1</div>
                 <div style={textStyle}>00:00:00</div>
                 <div style={textStyle}>Name 2</div>
                 <div style={textStyle}>00:00:00</div>
                 <div style={textStyle}>Name 3</div>
                 <div style={textStyle}>00:00:00</div>
-            </div>
+            </div> */}
         </div>
     );
 }
