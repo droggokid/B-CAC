@@ -1,8 +1,7 @@
 # Makefile for compiling and transferring the code to Raspberry Pi Zero
 
-CXX = arm-linux-gnueabihf-g++
-#CXX = arm-rpizw-g++
-CXXFLAGS =
+CXX = arm-rpizw-g++
+CXXFLAGS = -I/home/stud/bin/arm-rpizw-g++
 
 # Adjust the following variables based on your Raspberry Pi's IP address and login credentials
 RPI_USER = root
