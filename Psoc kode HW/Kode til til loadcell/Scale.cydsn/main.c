@@ -12,6 +12,8 @@
 #include "project.h"
 #include "Loadcell.h"
 #include "Timer.h"
+#include "FlagMotor.h"
+#include "led.h"
 #include <stdio.h>
 
 CY_ISR_PROTO(ISR_UART_rx_handler);
@@ -28,8 +30,6 @@ int main(void)
     
     isr_uart_rx_StartEx(ISR_UART_rx_handler);
     UART_1_Start();
-    
-    initTimer();
     initLoadcell();
     UART_1_PutString("Scale application started\r\n");
     
@@ -38,10 +38,15 @@ int main(void)
     float factor = 4.672;
     int preload=0;
     uint16_t Result_gram;
-    uint16_t gameReady=0;
-    uint16_t timestop=0;
-    uint16_t dnf=0;
+    uint8_t gameReady=0;
+    uint8_t timestop=0;
+    uint8_t dnf=0;
+    char mode='h';
     uint32_t tid=0;
+    
+    homeStepper(mode);
+    stopFlagMotor();
+    
     
 
     //float zerodriftOffset = readWeight( repeats,startoffset,  factor, preload);
@@ -78,8 +83,9 @@ int main(void)
     float zerodriftOffset = readWeight( repeats,startoffset,  factor, preload);
     snprintf(uartBuffer,sizeof(uartBuffer),"Read value (g) %f\r\n ", zerodriftOffset);
     UART_1_PutString(uartBuffer);
-    
     }
+    homeStepper(mode);
+    stopFlagMotor();
     UCstate=0;
     }
     
@@ -101,6 +107,7 @@ int main(void)
     gameReady=1;
     else
     gameReady=0;
+    
     {
     snprintf(uartBuffer,sizeof(uartBuffer),"gameReady (g) %d\r\n ", gameReady);
     UART_1_PutString(uartBuffer);
@@ -165,6 +172,14 @@ int main(void)
     UCstate=0;
     }
     
+    //modtager win signal fra RPI
+    if(UCstate==4)
+    {
+    
+    stepperdriver_rotateTo(90, mode);
+    stopFlagMotor();
+    UCstate=0;
+    }
     }
     
 }
@@ -190,7 +205,7 @@ void handleByteReceived(uint8_t byteReceived)
         break;
         case '4' :
         {
-            UCstate=2;
+            UCstate=4;
         }
         break;
         default :

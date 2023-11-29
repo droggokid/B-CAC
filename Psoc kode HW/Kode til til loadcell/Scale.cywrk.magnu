@@ -30,9 +30,13 @@
 <v>Scale\Scale\Scale.cydwr\EEPROM</v>
 <v>Scale\Scale\Header Files</v>
 <v>Scale\Scale\Header Files\cyapicallbacks.h</v>
+<v>Scale\Scale\Header Files\FlagMotor.h</v>
+<v>Scale\Scale\Header Files\led.h</v>
 <v>Scale\Scale\Header Files\Loadcell.h</v>
 <v>Scale\Scale\Header Files\Timer.h</v>
 <v>Scale\Scale\Source Files</v>
+<v>Scale\Scale\Source Files\FlagMotor.c</v>
+<v>Scale\Scale\Source Files\led.c</v>
 <v>Scale\Scale\Source Files\Loadcell.c</v>
 <v>Scale\Scale\Source Files\main.c</v>
 <v>Scale\Scale\Source Files\Timer.c</v>
@@ -55,28 +59,28 @@
 <v>Scale\Scale\Scale.cydwr\EEPROM</v>
 <v>Scale\Scale\Header Files</v>
 <v>Scale\Scale\Header Files\cyapicallbacks.h</v>
+<v>Scale\Scale\Header Files\FlagMotor.h</v>
+<v>Scale\Scale\Header Files\led.h</v>
 <v>Scale\Scale\Header Files\Loadcell.h</v>
 <v>Scale\Scale\Header Files\Timer.h</v>
 <v>Scale\Scale\Source Files</v>
+<v>Scale\Scale\Source Files\FlagMotor.c</v>
+<v>Scale\Scale\Source Files\led.c</v>
 <v>Scale\Scale\Source Files\Loadcell.c</v>
 <v>Scale\Scale\Source Files\main.c</v>
 <v>Scale\Scale\Source Files\Timer.c</v>
 <v>Scale\Scale\Generated_Source</v>
 <v>Scale\Scale\Generated_Source\PSoC5</v>
+<v>Scale\Scale\Generated_Source\PSoC5\A1</v>
+<v>Scale\Scale\Generated_Source\PSoC5\A2</v>
 <v>Scale\Scale\Generated_Source\PSoC5\ADC_SAR_1</v>
 <v>Scale\Scale\Generated_Source\PSoC5\ADC_SAR_1_ExtVref</v>
 <v>Scale\Scale\Generated_Source\PSoC5\ADC_SAR_1_IRQ</v>
 <v>Scale\Scale\Generated_Source\PSoC5\ADC_SAR_1_theACLK</v>
+<v>Scale\Scale\Generated_Source\PSoC5\B1</v>
+<v>Scale\Scale\Generated_Source\PSoC5\B2</v>
 <v>Scale\Scale\Generated_Source\PSoC5\clock_1</v>
 <v>Scale\Scale\Generated_Source\PSoC5\cy_boot</v>
-<v>Scale\Scale\Generated_Source\PSoC5\Em_EEPROM_Dynamic</v>
-<v>Scale\Scale\Generated_Source\PSoC5\isr_uart_rx</v>
-<v>Scale\Scale\Generated_Source\PSoC5\Pin_ADC_in</v>
-<v>Scale\Scale\Generated_Source\PSoC5\Timer_1</v>
-<v>Scale\Scale\Generated_Source\PSoC5\UART_1</v>
-<v>Scale\Scale\Generated_Source\PSoC5\UART_1_IntClock</v>
-<v>Scale\Scale\Generated_Source\PSoC5\cycodeshareexport.ld</v>
-<v>Scale\Scale\Generated_Source\PSoC5\cycodeshareimport.ld</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -101,12 +105,16 @@
 <v>Scale\Scale\CortexM3\ARM_GCC_541</v>
 <v>Scale\Scale\CortexM3\ARM_GCC_541\Debug</v>
 <v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\A1.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\A2.lst</v>
 <v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1.lst</v>
 <v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_ExtVref.lst</v>
 <v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_INT.lst</v>
 <v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_IRQ.lst</v>
 <v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_PM.lst</v>
 <v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_theACLK.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\B1.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\B2.lst</v>
 <v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\clock_1.lst</v>
 <v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
 <v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
@@ -119,6 +127,7 @@
 <v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
 <v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
 <v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\FlagMotor.lst</v>
 <v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_uart_rx.lst</v>
 <v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\Loadcell.lst</v>
 <v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
@@ -145,12 +154,16 @@
 <v>Scale\Scale\CortexM3\ARM_GCC_541</v>
 <v>Scale\Scale\CortexM3\ARM_GCC_541\Debug</v>
 <v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\A1.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\A2.lst</v>
 <v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1.lst</v>
 <v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_ExtVref.lst</v>
 <v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_INT.lst</v>
 <v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_IRQ.lst</v>
 <v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_PM.lst</v>
 <v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_theACLK.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\B1.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\B2.lst</v>
 <v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\clock_1.lst</v>
 <v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
 <v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
@@ -163,6 +176,7 @@
 <v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
 <v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
 <v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\FlagMotor.lst</v>
 <v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_uart_rx.lst</v>
 <v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\Loadcell.lst</v>
 <v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
@@ -171,11 +185,6 @@
 <v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_1.lst</v>
 <v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_1_PM.lst</v>
 <v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1.lst</v>
-<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_BOOT.lst</v>
-<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_INT.lst</v>
-<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_IntClock.lst</v>
-<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_PM.lst</v>
-<v>Scale\Scale\CortexM3\ARM_GCC_541\Debug\Scale.elf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -196,6 +205,7 @@
 <v>Scale\Scale\cy_isr_v1_71.pdf</v>
 <v>Scale\Scale\cy_pins_v2_20</v>
 <v>Scale\Scale\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Scale\Scale\PWM_v3_30.pdf</v>
 <v>Scale\Scale\Timer_v2_80.pdf</v>
 <v>Scale\Scale\UART_v2_50.pdf</v>
 <v>Scale\Scale\ZeroTerminal.pdf</v>
@@ -212,6 +222,7 @@
 <v>Scale\Scale\cy_isr_v1_71.pdf</v>
 <v>Scale\Scale\cy_pins_v2_20</v>
 <v>Scale\Scale\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Scale\Scale\PWM_v3_30.pdf</v>
 <v>Scale\Scale\Timer_v2_80.pdf</v>
 <v>Scale\Scale\UART_v2_50.pdf</v>
 <v>Scale\Scale\ZeroTerminal.pdf</v>
