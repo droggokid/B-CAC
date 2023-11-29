@@ -1,12 +1,13 @@
 # Makefile for compiling and transferring the code to Raspberry Pi Zero
 
-CXX = g++
-CXXFLAGS = -Wall -Wextra
+CXX = arm-linux-gnueabihf-g++
+#CXX = arm-rpizw-g++
+CXXFLAGS =
 
 # Adjust the following variables based on your Raspberry Pi's IP address and login credentials
 RPI_USER = root
-RPI_HOST = 10.9.8.2  # Replace with your Raspberry Pi's IP address
-RPI_PATH = /home/root
+RPI_HOST = 10.9.8.2# Replace with your Raspberry Pi's IP address
+RPI_PATH =
 
 # The name of the executable file
 EXECUTABLE = backend
