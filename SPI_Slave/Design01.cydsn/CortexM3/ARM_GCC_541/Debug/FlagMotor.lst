@@ -1,0 +1,4098 @@
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"FlagMotor.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.coilA1,"ax",%progbits
+  20              		.align	2
+  21              		.global	coilA1
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	coilA1, %function
+  25              	coilA1:
+  26              	.LFB63:
+  27              		.file 1 "FlagMotor.c"
+   1:FlagMotor.c   **** /* ========================================
+   2:FlagMotor.c   ****  *
+   3:FlagMotor.c   ****  * Copyright YOUR COMPANY, THE YEAR
+   4:FlagMotor.c   ****  * All Rights Reserved
+   5:FlagMotor.c   ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:FlagMotor.c   ****  *
+   7:FlagMotor.c   ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:FlagMotor.c   ****  * WHICH IS THE PROPERTY OF your company.
+   9:FlagMotor.c   ****  *
+  10:FlagMotor.c   ****  * ========================================
+  11:FlagMotor.c   **** */
+  12:FlagMotor.c   **** /* ========================================
+  13:FlagMotor.c   ****  *
+  14:FlagMotor.c   ****  * Copyright YOUR COMPANY, THE YEAR
+  15:FlagMotor.c   ****  * All Rights Reserved
+  16:FlagMotor.c   ****  * UNPUBLISHED, LICENSED SOFTWARE.
+  17:FlagMotor.c   ****  *
+  18:FlagMotor.c   ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+  19:FlagMotor.c   ****  * WHICH IS THE PROPERTY OF your company.
+  20:FlagMotor.c   ****  *
+  21:FlagMotor.c   ****  * ========================================
+  22:FlagMotor.c   **** */
+  23:FlagMotor.c   **** 
+  24:FlagMotor.c   **** #include "FlagMotor.h"
+  25:FlagMotor.c   **** #define CLOSED_ANGLE 0
+  26:FlagMotor.c   **** #define STEPS_PER_DEGREE_half 0.267 // Assuming a standard 200 steps per revolution stepper motor
+  27:FlagMotor.c   **** #define STEPS_PER_DEGREE_other 0.133
+  28:FlagMotor.c   **** 
+  29:FlagMotor.c   **** static char stepcount=0;
+  30:FlagMotor.c   **** int currentPosition = CLOSED_ANGLE;
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 2
+
+
+  31:FlagMotor.c   **** 
+  32:FlagMotor.c   **** 
+  33:FlagMotor.c   **** 
+  34:FlagMotor.c   **** void coilA1(void)
+  35:FlagMotor.c   **** {
+  28              		.loc 1 35 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 08B5     		push	{r3, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 3, -8
+  35              		.cfi_offset 14, -4
+  36:FlagMotor.c   ****     A2_Write(0);
+  36              		.loc 1 36 0
+  37 0002 0020     		movs	r0, #0
+  38 0004 FFF7FEFF 		bl	A2_Write
+  39              	.LVL0:
+  37:FlagMotor.c   ****     B1_Write(0);
+  40              		.loc 1 37 0
+  41 0008 0020     		movs	r0, #0
+  42 000a FFF7FEFF 		bl	B1_Write
+  43              	.LVL1:
+  38:FlagMotor.c   ****     B2_Write(0);
+  44              		.loc 1 38 0
+  45 000e 0020     		movs	r0, #0
+  46 0010 FFF7FEFF 		bl	B2_Write
+  47              	.LVL2:
+  39:FlagMotor.c   ****     A1_Write(1);
+  48              		.loc 1 39 0
+  49 0014 0120     		movs	r0, #1
+  50 0016 FFF7FEFF 		bl	A1_Write
+  51              	.LVL3:
+  52 001a 08BD     		pop	{r3, pc}
+  53              		.cfi_endproc
+  54              	.LFE63:
+  55              		.size	coilA1, .-coilA1
+  56              		.section	.text.coilA2,"ax",%progbits
+  57              		.align	2
+  58              		.global	coilA2
+  59              		.thumb
+  60              		.thumb_func
+  61              		.type	coilA2, %function
+  62              	coilA2:
+  63              	.LFB64:
+  40:FlagMotor.c   **** }
+  41:FlagMotor.c   **** void coilA2(void)
+  42:FlagMotor.c   **** {
+  64              		.loc 1 42 0
+  65              		.cfi_startproc
+  66              		@ args = 0, pretend = 0, frame = 0
+  67              		@ frame_needed = 0, uses_anonymous_args = 0
+  68 0000 08B5     		push	{r3, lr}
+  69              		.cfi_def_cfa_offset 8
+  70              		.cfi_offset 3, -8
+  71              		.cfi_offset 14, -4
+  43:FlagMotor.c   ****     B1_Write(0);
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 3
+
+
+  72              		.loc 1 43 0
+  73 0002 0020     		movs	r0, #0
+  74 0004 FFF7FEFF 		bl	B1_Write
+  75              	.LVL4:
+  44:FlagMotor.c   ****     B2_Write(0);
+  76              		.loc 1 44 0
+  77 0008 0020     		movs	r0, #0
+  78 000a FFF7FEFF 		bl	B2_Write
+  79              	.LVL5:
+  45:FlagMotor.c   ****     A1_Write(0);
+  80              		.loc 1 45 0
+  81 000e 0020     		movs	r0, #0
+  82 0010 FFF7FEFF 		bl	A1_Write
+  83              	.LVL6:
+  46:FlagMotor.c   ****     A2_Write(1);
+  84              		.loc 1 46 0
+  85 0014 0120     		movs	r0, #1
+  86 0016 FFF7FEFF 		bl	A2_Write
+  87              	.LVL7:
+  88 001a 08BD     		pop	{r3, pc}
+  89              		.cfi_endproc
+  90              	.LFE64:
+  91              		.size	coilA2, .-coilA2
+  92              		.section	.text.coilB1,"ax",%progbits
+  93              		.align	2
+  94              		.global	coilB1
+  95              		.thumb
+  96              		.thumb_func
+  97              		.type	coilB1, %function
+  98              	coilB1:
+  99              	.LFB65:
+  47:FlagMotor.c   **** }
+  48:FlagMotor.c   **** void coilB1(void)
+  49:FlagMotor.c   **** {
+ 100              		.loc 1 49 0
+ 101              		.cfi_startproc
+ 102              		@ args = 0, pretend = 0, frame = 0
+ 103              		@ frame_needed = 0, uses_anonymous_args = 0
+ 104 0000 08B5     		push	{r3, lr}
+ 105              		.cfi_def_cfa_offset 8
+ 106              		.cfi_offset 3, -8
+ 107              		.cfi_offset 14, -4
+  50:FlagMotor.c   ****     A2_Write(0);
+ 108              		.loc 1 50 0
+ 109 0002 0020     		movs	r0, #0
+ 110 0004 FFF7FEFF 		bl	A2_Write
+ 111              	.LVL8:
+  51:FlagMotor.c   ****     B2_Write(0);
+ 112              		.loc 1 51 0
+ 113 0008 0020     		movs	r0, #0
+ 114 000a FFF7FEFF 		bl	B2_Write
+ 115              	.LVL9:
+  52:FlagMotor.c   ****     A1_Write(0);
+ 116              		.loc 1 52 0
+ 117 000e 0020     		movs	r0, #0
+ 118 0010 FFF7FEFF 		bl	A1_Write
+ 119              	.LVL10:
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 4
+
+
+  53:FlagMotor.c   ****     B1_Write(1);
+ 120              		.loc 1 53 0
+ 121 0014 0120     		movs	r0, #1
+ 122 0016 FFF7FEFF 		bl	B1_Write
+ 123              	.LVL11:
+ 124 001a 08BD     		pop	{r3, pc}
+ 125              		.cfi_endproc
+ 126              	.LFE65:
+ 127              		.size	coilB1, .-coilB1
+ 128              		.section	.text.coilB2,"ax",%progbits
+ 129              		.align	2
+ 130              		.global	coilB2
+ 131              		.thumb
+ 132              		.thumb_func
+ 133              		.type	coilB2, %function
+ 134              	coilB2:
+ 135              	.LFB66:
+  54:FlagMotor.c   **** }
+  55:FlagMotor.c   **** void coilB2(void)
+  56:FlagMotor.c   **** {
+ 136              		.loc 1 56 0
+ 137              		.cfi_startproc
+ 138              		@ args = 0, pretend = 0, frame = 0
+ 139              		@ frame_needed = 0, uses_anonymous_args = 0
+ 140 0000 08B5     		push	{r3, lr}
+ 141              		.cfi_def_cfa_offset 8
+ 142              		.cfi_offset 3, -8
+ 143              		.cfi_offset 14, -4
+  57:FlagMotor.c   ****     A2_Write(0);
+ 144              		.loc 1 57 0
+ 145 0002 0020     		movs	r0, #0
+ 146 0004 FFF7FEFF 		bl	A2_Write
+ 147              	.LVL12:
+  58:FlagMotor.c   ****     B1_Write(0);
+ 148              		.loc 1 58 0
+ 149 0008 0020     		movs	r0, #0
+ 150 000a FFF7FEFF 		bl	B1_Write
+ 151              	.LVL13:
+  59:FlagMotor.c   ****     A1_Write(0);
+ 152              		.loc 1 59 0
+ 153 000e 0020     		movs	r0, #0
+ 154 0010 FFF7FEFF 		bl	A1_Write
+ 155              	.LVL14:
+  60:FlagMotor.c   ****     B2_Write(1);
+ 156              		.loc 1 60 0
+ 157 0014 0120     		movs	r0, #1
+ 158 0016 FFF7FEFF 		bl	B2_Write
+ 159              	.LVL15:
+ 160 001a 08BD     		pop	{r3, pc}
+ 161              		.cfi_endproc
+ 162              	.LFE66:
+ 163              		.size	coilB2, .-coilB2
+ 164              		.section	.text.coilA1A2,"ax",%progbits
+ 165              		.align	2
+ 166              		.global	coilA1A2
+ 167              		.thumb
+ 168              		.thumb_func
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 5
+
+
+ 169              		.type	coilA1A2, %function
+ 170              	coilA1A2:
+ 171              	.LFB67:
+  61:FlagMotor.c   **** }
+  62:FlagMotor.c   **** void coilA1A2(void)
+  63:FlagMotor.c   **** {
+ 172              		.loc 1 63 0
+ 173              		.cfi_startproc
+ 174              		@ args = 0, pretend = 0, frame = 0
+ 175              		@ frame_needed = 0, uses_anonymous_args = 0
+ 176 0000 08B5     		push	{r3, lr}
+ 177              		.cfi_def_cfa_offset 8
+ 178              		.cfi_offset 3, -8
+ 179              		.cfi_offset 14, -4
+  64:FlagMotor.c   ****     B1_Write(0);
+ 180              		.loc 1 64 0
+ 181 0002 0020     		movs	r0, #0
+ 182 0004 FFF7FEFF 		bl	B1_Write
+ 183              	.LVL16:
+  65:FlagMotor.c   ****     B2_Write(0);
+ 184              		.loc 1 65 0
+ 185 0008 0020     		movs	r0, #0
+ 186 000a FFF7FEFF 		bl	B2_Write
+ 187              	.LVL17:
+  66:FlagMotor.c   ****     A1_Write(1);
+ 188              		.loc 1 66 0
+ 189 000e 0120     		movs	r0, #1
+ 190 0010 FFF7FEFF 		bl	A1_Write
+ 191              	.LVL18:
+  67:FlagMotor.c   ****     A2_Write(1);
+ 192              		.loc 1 67 0
+ 193 0014 0120     		movs	r0, #1
+ 194 0016 FFF7FEFF 		bl	A2_Write
+ 195              	.LVL19:
+ 196 001a 08BD     		pop	{r3, pc}
+ 197              		.cfi_endproc
+ 198              	.LFE67:
+ 199              		.size	coilA1A2, .-coilA1A2
+ 200              		.section	.text.coilA2B1,"ax",%progbits
+ 201              		.align	2
+ 202              		.global	coilA2B1
+ 203              		.thumb
+ 204              		.thumb_func
+ 205              		.type	coilA2B1, %function
+ 206              	coilA2B1:
+ 207              	.LFB68:
+  68:FlagMotor.c   **** }
+  69:FlagMotor.c   **** void coilA2B1(void)
+  70:FlagMotor.c   **** {
+ 208              		.loc 1 70 0
+ 209              		.cfi_startproc
+ 210              		@ args = 0, pretend = 0, frame = 0
+ 211              		@ frame_needed = 0, uses_anonymous_args = 0
+ 212 0000 08B5     		push	{r3, lr}
+ 213              		.cfi_def_cfa_offset 8
+ 214              		.cfi_offset 3, -8
+ 215              		.cfi_offset 14, -4
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 6
+
+
+  71:FlagMotor.c   ****     A1_Write(0);
+ 216              		.loc 1 71 0
+ 217 0002 0020     		movs	r0, #0
+ 218 0004 FFF7FEFF 		bl	A1_Write
+ 219              	.LVL20:
+  72:FlagMotor.c   ****     B2_Write(0);
+ 220              		.loc 1 72 0
+ 221 0008 0020     		movs	r0, #0
+ 222 000a FFF7FEFF 		bl	B2_Write
+ 223              	.LVL21:
+  73:FlagMotor.c   ****     B1_Write(1);
+ 224              		.loc 1 73 0
+ 225 000e 0120     		movs	r0, #1
+ 226 0010 FFF7FEFF 		bl	B1_Write
+ 227              	.LVL22:
+  74:FlagMotor.c   ****     A2_Write(1);
+ 228              		.loc 1 74 0
+ 229 0014 0120     		movs	r0, #1
+ 230 0016 FFF7FEFF 		bl	A2_Write
+ 231              	.LVL23:
+ 232 001a 08BD     		pop	{r3, pc}
+ 233              		.cfi_endproc
+ 234              	.LFE68:
+ 235              		.size	coilA2B1, .-coilA2B1
+ 236              		.section	.text.coilB1B2,"ax",%progbits
+ 237              		.align	2
+ 238              		.global	coilB1B2
+ 239              		.thumb
+ 240              		.thumb_func
+ 241              		.type	coilB1B2, %function
+ 242              	coilB1B2:
+ 243              	.LFB69:
+  75:FlagMotor.c   **** }
+  76:FlagMotor.c   **** void coilB1B2(void)
+  77:FlagMotor.c   **** {
+ 244              		.loc 1 77 0
+ 245              		.cfi_startproc
+ 246              		@ args = 0, pretend = 0, frame = 0
+ 247              		@ frame_needed = 0, uses_anonymous_args = 0
+ 248 0000 08B5     		push	{r3, lr}
+ 249              		.cfi_def_cfa_offset 8
+ 250              		.cfi_offset 3, -8
+ 251              		.cfi_offset 14, -4
+  78:FlagMotor.c   ****     A2_Write(0);
+ 252              		.loc 1 78 0
+ 253 0002 0020     		movs	r0, #0
+ 254 0004 FFF7FEFF 		bl	A2_Write
+ 255              	.LVL24:
+  79:FlagMotor.c   ****     A1_Write(0);
+ 256              		.loc 1 79 0
+ 257 0008 0020     		movs	r0, #0
+ 258 000a FFF7FEFF 		bl	A1_Write
+ 259              	.LVL25:
+  80:FlagMotor.c   ****     B2_Write(1);
+ 260              		.loc 1 80 0
+ 261 000e 0120     		movs	r0, #1
+ 262 0010 FFF7FEFF 		bl	B2_Write
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 7
+
+
+ 263              	.LVL26:
+  81:FlagMotor.c   ****     B1_Write(1);
+ 264              		.loc 1 81 0
+ 265 0014 0120     		movs	r0, #1
+ 266 0016 FFF7FEFF 		bl	B1_Write
+ 267              	.LVL27:
+ 268 001a 08BD     		pop	{r3, pc}
+ 269              		.cfi_endproc
+ 270              	.LFE69:
+ 271              		.size	coilB1B2, .-coilB1B2
+ 272              		.section	.text.coilB2A1,"ax",%progbits
+ 273              		.align	2
+ 274              		.global	coilB2A1
+ 275              		.thumb
+ 276              		.thumb_func
+ 277              		.type	coilB2A1, %function
+ 278              	coilB2A1:
+ 279              	.LFB70:
+  82:FlagMotor.c   **** }
+  83:FlagMotor.c   **** void coilB2A1(void)
+  84:FlagMotor.c   **** {
+ 280              		.loc 1 84 0
+ 281              		.cfi_startproc
+ 282              		@ args = 0, pretend = 0, frame = 0
+ 283              		@ frame_needed = 0, uses_anonymous_args = 0
+ 284 0000 08B5     		push	{r3, lr}
+ 285              		.cfi_def_cfa_offset 8
+ 286              		.cfi_offset 3, -8
+ 287              		.cfi_offset 14, -4
+  85:FlagMotor.c   ****     B1_Write(0);
+ 288              		.loc 1 85 0
+ 289 0002 0020     		movs	r0, #0
+ 290 0004 FFF7FEFF 		bl	B1_Write
+ 291              	.LVL28:
+  86:FlagMotor.c   ****     A2_Write(0);
+ 292              		.loc 1 86 0
+ 293 0008 0020     		movs	r0, #0
+ 294 000a FFF7FEFF 		bl	A2_Write
+ 295              	.LVL29:
+  87:FlagMotor.c   ****     A1_Write(1);
+ 296              		.loc 1 87 0
+ 297 000e 0120     		movs	r0, #1
+ 298 0010 FFF7FEFF 		bl	A1_Write
+ 299              	.LVL30:
+  88:FlagMotor.c   ****     B2_Write(1);
+ 300              		.loc 1 88 0
+ 301 0014 0120     		movs	r0, #1
+ 302 0016 FFF7FEFF 		bl	B2_Write
+ 303              	.LVL31:
+ 304 001a 08BD     		pop	{r3, pc}
+ 305              		.cfi_endproc
+ 306              	.LFE70:
+ 307              		.size	coilB2A1, .-coilB2A1
+ 308              		.section	.text.stopFlagMotor,"ax",%progbits
+ 309              		.align	2
+ 310              		.global	stopFlagMotor
+ 311              		.thumb
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 8
+
+
+ 312              		.thumb_func
+ 313              		.type	stopFlagMotor, %function
+ 314              	stopFlagMotor:
+ 315              	.LFB71:
+  89:FlagMotor.c   **** }
+  90:FlagMotor.c   **** void stopFlagMotor(void)
+  91:FlagMotor.c   **** {
+ 316              		.loc 1 91 0
+ 317              		.cfi_startproc
+ 318              		@ args = 0, pretend = 0, frame = 0
+ 319              		@ frame_needed = 0, uses_anonymous_args = 0
+ 320 0000 08B5     		push	{r3, lr}
+ 321              		.cfi_def_cfa_offset 8
+ 322              		.cfi_offset 3, -8
+ 323              		.cfi_offset 14, -4
+  92:FlagMotor.c   ****     B1_Write(0);
+ 324              		.loc 1 92 0
+ 325 0002 0020     		movs	r0, #0
+ 326 0004 FFF7FEFF 		bl	B1_Write
+ 327              	.LVL32:
+  93:FlagMotor.c   ****     B2_Write(0);
+ 328              		.loc 1 93 0
+ 329 0008 0020     		movs	r0, #0
+ 330 000a FFF7FEFF 		bl	B2_Write
+ 331              	.LVL33:
+  94:FlagMotor.c   ****     A1_Write(0);
+ 332              		.loc 1 94 0
+ 333 000e 0020     		movs	r0, #0
+ 334 0010 FFF7FEFF 		bl	A1_Write
+ 335              	.LVL34:
+  95:FlagMotor.c   ****     A2_Write(0);
+ 336              		.loc 1 95 0
+ 337 0014 0020     		movs	r0, #0
+ 338 0016 FFF7FEFF 		bl	A2_Write
+ 339              	.LVL35:
+ 340 001a 08BD     		pop	{r3, pc}
+ 341              		.cfi_endproc
+ 342              	.LFE71:
+ 343              		.size	stopFlagMotor, .-stopFlagMotor
+ 344              		.section	.text.takestep,"ax",%progbits
+ 345              		.align	2
+ 346              		.global	takestep
+ 347              		.thumb
+ 348              		.thumb_func
+ 349              		.type	takestep, %function
+ 350              	takestep:
+ 351              	.LFB72:
+  96:FlagMotor.c   **** }
+  97:FlagMotor.c   **** 
+  98:FlagMotor.c   **** 
+  99:FlagMotor.c   **** void takestep(char step_mode, char frem)
+ 100:FlagMotor.c   **** {
+ 352              		.loc 1 100 0
+ 353              		.cfi_startproc
+ 354              		@ args = 0, pretend = 0, frame = 0
+ 355              		@ frame_needed = 0, uses_anonymous_args = 0
+ 356              	.LVL36:
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 9
+
+
+ 357 0000 08B5     		push	{r3, lr}
+ 358              		.cfi_def_cfa_offset 8
+ 359              		.cfi_offset 3, -8
+ 360              		.cfi_offset 14, -4
+ 101:FlagMotor.c   **** 	
+ 102:FlagMotor.c   **** 	 switch(step_mode)
+ 361              		.loc 1 102 0
+ 362 0002 6828     		cmp	r0, #104
+ 363 0004 79D0     		beq	.L21
+ 364 0006 7728     		cmp	r0, #119
+ 365 0008 03D0     		beq	.L22
+ 366 000a 6628     		cmp	r0, #102
+ 367 000c 40F0FD80 		bne	.L19
+ 368 0010 39E0     		b	.L23
+ 369              	.L22:
+ 103:FlagMotor.c   **** 	 {
+ 104:FlagMotor.c   **** 		 case 'w':
+ 105:FlagMotor.c   **** 		 {
+ 106:FlagMotor.c   **** 			 switch(stepcount)
+ 370              		.loc 1 106 0
+ 371 0012 7E4B     		ldr	r3, .L68
+ 372 0014 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 373 0016 072B     		cmp	r3, #7
+ 374 0018 00F2F780 		bhi	.L19
+ 375 001c DFE803F0 		tbb	[pc, r3]
+ 376              	.L25:
+ 377 0020 04       		.byte	(.L24-.L25)/2
+ 378 0021 04       		.byte	(.L24-.L25)/2
+ 379 0022 10       		.byte	(.L26-.L25)/2
+ 380 0023 10       		.byte	(.L26-.L25)/2
+ 381 0024 1C       		.byte	(.L27-.L25)/2
+ 382 0025 1C       		.byte	(.L27-.L25)/2
+ 383 0026 28       		.byte	(.L28-.L25)/2
+ 384 0027 28       		.byte	(.L28-.L25)/2
+ 385              		.p2align 1
+ 386              	.L24:
+ 107:FlagMotor.c   **** 			 {
+ 108:FlagMotor.c   **** 				 case 0:
+ 109:FlagMotor.c   **** 				 case 1:
+ 110:FlagMotor.c   **** 				 {
+ 111:FlagMotor.c   **** 					 
+ 112:FlagMotor.c   **** 					 
+ 113:FlagMotor.c   **** 					 if(frem==1)
+ 387              		.loc 1 113 0
+ 388 0028 0129     		cmp	r1, #1
+ 389 002a 02D1     		bne	.L29
+ 114:FlagMotor.c   **** 						coilA1();
+ 390              		.loc 1 114 0
+ 391 002c FFF7FEFF 		bl	coilA1
+ 392              	.LVL37:
+ 393 0030 01E0     		b	.L30
+ 394              	.LVL38:
+ 395              	.L29:
+ 115:FlagMotor.c   **** 					 else
+ 116:FlagMotor.c   **** 						coilB2();
+ 396              		.loc 1 116 0
+ 397 0032 FFF7FEFF 		bl	coilB2
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 10
+
+
+ 398              	.LVL39:
+ 399              	.L30:
+ 117:FlagMotor.c   ****                         
+ 118:FlagMotor.c   ****                         stepcount+=2;
+ 400              		.loc 1 118 0
+ 401 0036 754A     		ldr	r2, .L68
+ 402 0038 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 403 003a 0233     		adds	r3, r3, #2
+ 404 003c 1370     		strb	r3, [r2]
+ 119:FlagMotor.c   **** 					 
+ 120:FlagMotor.c   **** 				 }
+ 121:FlagMotor.c   **** 				 break;
+ 405              		.loc 1 121 0
+ 406 003e 08BD     		pop	{r3, pc}
+ 407              	.LVL40:
+ 408              	.L26:
+ 122:FlagMotor.c   **** 				 case 2:
+ 123:FlagMotor.c   **** 				 case 3:
+ 124:FlagMotor.c   **** 				 {
+ 125:FlagMotor.c   **** 					 
+ 126:FlagMotor.c   **** 					 if(frem==1)
+ 409              		.loc 1 126 0
+ 410 0040 0129     		cmp	r1, #1
+ 411 0042 02D1     		bne	.L31
+ 127:FlagMotor.c   ****                         coilA2();
+ 412              		.loc 1 127 0
+ 413 0044 FFF7FEFF 		bl	coilA2
+ 414              	.LVL41:
+ 415 0048 01E0     		b	.L32
+ 416              	.LVL42:
+ 417              	.L31:
+ 128:FlagMotor.c   **** 						
+ 129:FlagMotor.c   **** 					 else
+ 130:FlagMotor.c   ****                         coilB1();
+ 418              		.loc 1 130 0
+ 419 004a FFF7FEFF 		bl	coilB1
+ 420              	.LVL43:
+ 421              	.L32:
+ 131:FlagMotor.c   **** 						
+ 132:FlagMotor.c   ****                         stepcount+=2;
+ 422              		.loc 1 132 0
+ 423 004e 6F4A     		ldr	r2, .L68
+ 424 0050 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 425 0052 0233     		adds	r3, r3, #2
+ 426 0054 1370     		strb	r3, [r2]
+ 133:FlagMotor.c   **** 				 }
+ 134:FlagMotor.c   **** 				 break;
+ 427              		.loc 1 134 0
+ 428 0056 08BD     		pop	{r3, pc}
+ 429              	.LVL44:
+ 430              	.L27:
+ 135:FlagMotor.c   **** 				 case 4:
+ 136:FlagMotor.c   **** 				 case 5:
+ 137:FlagMotor.c   **** 				 {
+ 138:FlagMotor.c   **** 					 
+ 139:FlagMotor.c   **** 					 if(frem==1)
+ 431              		.loc 1 139 0
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 11
+
+
+ 432 0058 0129     		cmp	r1, #1
+ 433 005a 02D1     		bne	.L33
+ 140:FlagMotor.c   ****                         coilB1();
+ 434              		.loc 1 140 0
+ 435 005c FFF7FEFF 		bl	coilB1
+ 436              	.LVL45:
+ 437 0060 01E0     		b	.L34
+ 438              	.LVL46:
+ 439              	.L33:
+ 141:FlagMotor.c   **** 					else
+ 142:FlagMotor.c   **** 						coilA2();
+ 440              		.loc 1 142 0
+ 441 0062 FFF7FEFF 		bl	coilA2
+ 442              	.LVL47:
+ 443              	.L34:
+ 143:FlagMotor.c   ****                         
+ 144:FlagMotor.c   ****                         stepcount+=2;
+ 444              		.loc 1 144 0
+ 445 0066 694A     		ldr	r2, .L68
+ 446 0068 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 447 006a 0233     		adds	r3, r3, #2
+ 448 006c 1370     		strb	r3, [r2]
+ 145:FlagMotor.c   **** 					 
+ 146:FlagMotor.c   **** 				 }
+ 147:FlagMotor.c   **** 				 break;
+ 449              		.loc 1 147 0
+ 450 006e 08BD     		pop	{r3, pc}
+ 451              	.LVL48:
+ 452              	.L28:
+ 148:FlagMotor.c   **** 				 case 6:
+ 149:FlagMotor.c   **** 				 case 7:
+ 150:FlagMotor.c   **** 				 {
+ 151:FlagMotor.c   **** 					 
+ 152:FlagMotor.c   **** 					 if(frem==1)
+ 453              		.loc 1 152 0
+ 454 0070 0129     		cmp	r1, #1
+ 455 0072 02D1     		bne	.L35
+ 153:FlagMotor.c   ****                         coilB2();
+ 456              		.loc 1 153 0
+ 457 0074 FFF7FEFF 		bl	coilB2
+ 458              	.LVL49:
+ 459 0078 01E0     		b	.L36
+ 460              	.LVL50:
+ 461              	.L35:
+ 154:FlagMotor.c   **** 						
+ 155:FlagMotor.c   **** 					 else
+ 156:FlagMotor.c   **** 						coilA1();
+ 462              		.loc 1 156 0
+ 463 007a FFF7FEFF 		bl	coilA1
+ 464              	.LVL51:
+ 465              	.L36:
+ 157:FlagMotor.c   ****                         stepcount=0;
+ 466              		.loc 1 157 0
+ 467 007e 0022     		movs	r2, #0
+ 468 0080 624B     		ldr	r3, .L68
+ 469 0082 1A70     		strb	r2, [r3]
+ 158:FlagMotor.c   ****                         
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 12
+
+
+ 159:FlagMotor.c   ****                 }
+ 160:FlagMotor.c   **** 				 break;
+ 470              		.loc 1 160 0
+ 471 0084 08BD     		pop	{r3, pc}
+ 472              	.LVL52:
+ 473              	.L23:
+ 161:FlagMotor.c   **** 				 
+ 162:FlagMotor.c   **** 				 
+ 163:FlagMotor.c   **** 			 }
+ 164:FlagMotor.c   **** 		 }
+ 165:FlagMotor.c   **** 		 break;
+ 166:FlagMotor.c   **** 		 case 'f' :
+ 167:FlagMotor.c   **** 		 {
+ 168:FlagMotor.c   **** 			 switch(stepcount)
+ 474              		.loc 1 168 0
+ 475 0086 614B     		ldr	r3, .L68
+ 476 0088 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 477 008a 072B     		cmp	r3, #7
+ 478 008c 00F2BD80 		bhi	.L19
+ 479 0090 DFE803F0 		tbb	[pc, r3]
+ 480              	.L38:
+ 481 0094 04       		.byte	(.L37-.L38)/2
+ 482 0095 04       		.byte	(.L37-.L38)/2
+ 483 0096 10       		.byte	(.L39-.L38)/2
+ 484 0097 10       		.byte	(.L39-.L38)/2
+ 485 0098 1C       		.byte	(.L40-.L38)/2
+ 486 0099 1C       		.byte	(.L40-.L38)/2
+ 487 009a 28       		.byte	(.L41-.L38)/2
+ 488 009b 28       		.byte	(.L41-.L38)/2
+ 489              		.p2align 1
+ 490              	.L37:
+ 169:FlagMotor.c   **** 			 {
+ 170:FlagMotor.c   **** 				 case 0:
+ 171:FlagMotor.c   **** 				 case 1:
+ 172:FlagMotor.c   **** 				 {
+ 173:FlagMotor.c   **** 					 
+ 174:FlagMotor.c   **** 					 
+ 175:FlagMotor.c   **** 					 if(frem==1)
+ 491              		.loc 1 175 0
+ 492 009c 0129     		cmp	r1, #1
+ 493 009e 02D1     		bne	.L42
+ 176:FlagMotor.c   ****                         coilA1A2();
+ 494              		.loc 1 176 0
+ 495 00a0 FFF7FEFF 		bl	coilA1A2
+ 496              	.LVL53:
+ 497 00a4 01E0     		b	.L43
+ 498              	.LVL54:
+ 499              	.L42:
+ 177:FlagMotor.c   **** 					 else
+ 178:FlagMotor.c   **** 						coilB2A1();
+ 500              		.loc 1 178 0
+ 501 00a6 FFF7FEFF 		bl	coilB2A1
+ 502              	.LVL55:
+ 503              	.L43:
+ 179:FlagMotor.c   ****                         
+ 180:FlagMotor.c   ****                         stepcount+=2;
+ 504              		.loc 1 180 0
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 13
+
+
+ 505 00aa 584A     		ldr	r2, .L68
+ 506 00ac 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 507 00ae 0233     		adds	r3, r3, #2
+ 508 00b0 1370     		strb	r3, [r2]
+ 181:FlagMotor.c   **** 					 
+ 182:FlagMotor.c   **** 				 }
+ 183:FlagMotor.c   **** 				 break;
+ 509              		.loc 1 183 0
+ 510 00b2 08BD     		pop	{r3, pc}
+ 511              	.LVL56:
+ 512              	.L39:
+ 184:FlagMotor.c   **** 				 case 2:
+ 185:FlagMotor.c   **** 				 case 3:
+ 186:FlagMotor.c   **** 				 {
+ 187:FlagMotor.c   **** 					 
+ 188:FlagMotor.c   **** 					 if(frem==1)
+ 513              		.loc 1 188 0
+ 514 00b4 0129     		cmp	r1, #1
+ 515 00b6 02D1     		bne	.L44
+ 189:FlagMotor.c   **** 						coilA2B1();
+ 516              		.loc 1 189 0
+ 517 00b8 FFF7FEFF 		bl	coilA2B1
+ 518              	.LVL57:
+ 519 00bc 01E0     		b	.L45
+ 520              	.LVL58:
+ 521              	.L44:
+ 190:FlagMotor.c   **** 					 else
+ 191:FlagMotor.c   **** 						coilB1B2();
+ 522              		.loc 1 191 0
+ 523 00be FFF7FEFF 		bl	coilB1B2
+ 524              	.LVL59:
+ 525              	.L45:
+ 192:FlagMotor.c   ****                         
+ 193:FlagMotor.c   ****                     stepcount+=2;
+ 526              		.loc 1 193 0
+ 527 00c2 524A     		ldr	r2, .L68
+ 528 00c4 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 529 00c6 0233     		adds	r3, r3, #2
+ 530 00c8 1370     		strb	r3, [r2]
+ 194:FlagMotor.c   **** 				 }
+ 195:FlagMotor.c   **** 				 break;
+ 531              		.loc 1 195 0
+ 532 00ca 08BD     		pop	{r3, pc}
+ 533              	.LVL60:
+ 534              	.L40:
+ 196:FlagMotor.c   **** 				 case 4:
+ 197:FlagMotor.c   **** 				 case 5:
+ 198:FlagMotor.c   **** 				 {
+ 199:FlagMotor.c   **** 					 
+ 200:FlagMotor.c   **** 					 if(frem==1)
+ 535              		.loc 1 200 0
+ 536 00cc 0129     		cmp	r1, #1
+ 537 00ce 02D1     		bne	.L46
+ 201:FlagMotor.c   **** 						coilB1B2();
+ 538              		.loc 1 201 0
+ 539 00d0 FFF7FEFF 		bl	coilB1B2
+ 540              	.LVL61:
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 14
+
+
+ 541 00d4 01E0     		b	.L47
+ 542              	.LVL62:
+ 543              	.L46:
+ 202:FlagMotor.c   **** 					 else
+ 203:FlagMotor.c   **** 						coilA2B1();
+ 544              		.loc 1 203 0
+ 545 00d6 FFF7FEFF 		bl	coilA2B1
+ 546              	.LVL63:
+ 547              	.L47:
+ 204:FlagMotor.c   **** 					 
+ 205:FlagMotor.c   ****                     stepcount+=2;
+ 548              		.loc 1 205 0
+ 549 00da 4C4A     		ldr	r2, .L68
+ 550 00dc 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 551 00de 0233     		adds	r3, r3, #2
+ 552 00e0 1370     		strb	r3, [r2]
+ 206:FlagMotor.c   **** 				 }
+ 207:FlagMotor.c   **** 				 break;
+ 553              		.loc 1 207 0
+ 554 00e2 08BD     		pop	{r3, pc}
+ 555              	.LVL64:
+ 556              	.L41:
+ 208:FlagMotor.c   **** 				 case 6:
+ 209:FlagMotor.c   **** 				 case 7:
+ 210:FlagMotor.c   **** 				 {
+ 211:FlagMotor.c   **** 					 
+ 212:FlagMotor.c   **** 					 if(frem==1)
+ 557              		.loc 1 212 0
+ 558 00e4 0129     		cmp	r1, #1
+ 559 00e6 02D1     		bne	.L48
+ 213:FlagMotor.c   **** 						coilB2A1();
+ 560              		.loc 1 213 0
+ 561 00e8 FFF7FEFF 		bl	coilB2A1
+ 562              	.LVL65:
+ 563 00ec 01E0     		b	.L49
+ 564              	.LVL66:
+ 565              	.L48:
+ 214:FlagMotor.c   **** 					 else
+ 215:FlagMotor.c   **** 					    coilA1A2();
+ 566              		.loc 1 215 0
+ 567 00ee FFF7FEFF 		bl	coilA1A2
+ 568              	.LVL67:
+ 569              	.L49:
+ 216:FlagMotor.c   **** 				 }
+ 217:FlagMotor.c   ****                 
+ 218:FlagMotor.c   ****                 stepcount=0;
+ 570              		.loc 1 218 0
+ 571 00f2 0022     		movs	r2, #0
+ 572 00f4 454B     		ldr	r3, .L68
+ 573 00f6 1A70     		strb	r2, [r3]
+ 219:FlagMotor.c   **** 				 break;
+ 574              		.loc 1 219 0
+ 575 00f8 08BD     		pop	{r3, pc}
+ 576              	.LVL68:
+ 577              	.L21:
+ 220:FlagMotor.c   **** 				 
+ 221:FlagMotor.c   **** 				 
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 15
+
+
+ 222:FlagMotor.c   **** 			 }
+ 223:FlagMotor.c   **** 		 }
+ 224:FlagMotor.c   **** 		 break;
+ 225:FlagMotor.c   **** 		 case 'h' :
+ 226:FlagMotor.c   **** 		 {
+ 227:FlagMotor.c   **** 			 switch(stepcount)
+ 578              		.loc 1 227 0
+ 579 00fa 444B     		ldr	r3, .L68
+ 580 00fc 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 581 00fe 072B     		cmp	r3, #7
+ 582 0100 00F28380 		bhi	.L19
+ 583 0104 DFE803F0 		tbb	[pc, r3]
+ 584              	.L51:
+ 585 0108 04       		.byte	(.L50-.L51)/2
+ 586 0109 14       		.byte	(.L52-.L51)/2
+ 587 010a 24       		.byte	(.L53-.L51)/2
+ 588 010b 34       		.byte	(.L54-.L51)/2
+ 589 010c 44       		.byte	(.L55-.L51)/2
+ 590 010d 54       		.byte	(.L56-.L51)/2
+ 591 010e 64       		.byte	(.L57-.L51)/2
+ 592 010f 74       		.byte	(.L58-.L51)/2
+ 593              		.p2align 1
+ 594              	.L50:
+ 228:FlagMotor.c   **** 			 {
+ 229:FlagMotor.c   **** 				 case 0:
+ 230:FlagMotor.c   **** 				 {
+ 231:FlagMotor.c   **** 					 
+ 232:FlagMotor.c   **** 					 
+ 233:FlagMotor.c   **** 					 if(frem==1)
+ 595              		.loc 1 233 0
+ 596 0110 0129     		cmp	r1, #1
+ 597 0112 06D1     		bne	.L59
+ 234:FlagMotor.c   ****                     {coilA1();
+ 598              		.loc 1 234 0
+ 599 0114 FFF7FEFF 		bl	coilA1
+ 600              	.LVL69:
+ 235:FlagMotor.c   ****                     stepcount++;}
+ 601              		.loc 1 235 0
+ 602 0118 3C4A     		ldr	r2, .L68
+ 603 011a 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 604 011c 0133     		adds	r3, r3, #1
+ 605 011e 1370     		strb	r3, [r2]
+ 606 0120 08BD     		pop	{r3, pc}
+ 607              	.LVL70:
+ 608              	.L59:
+ 236:FlagMotor.c   **** 					 else
+ 237:FlagMotor.c   ****                     {coilB2A1();
+ 609              		.loc 1 237 0
+ 610 0122 FFF7FEFF 		bl	coilB2A1
+ 611              	.LVL71:
+ 238:FlagMotor.c   ****                     stepcount++;}
+ 612              		.loc 1 238 0
+ 613 0126 394A     		ldr	r2, .L68
+ 614 0128 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 615 012a 0133     		adds	r3, r3, #1
+ 616 012c 1370     		strb	r3, [r2]
+ 617 012e 08BD     		pop	{r3, pc}
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 16
+
+
+ 618              	.LVL72:
+ 619              	.L52:
+ 239:FlagMotor.c   ****                     
+ 240:FlagMotor.c   **** 					 
+ 241:FlagMotor.c   **** 				 }
+ 242:FlagMotor.c   **** 				 break;
+ 243:FlagMotor.c   **** 				 case 1:
+ 244:FlagMotor.c   **** 				 {
+ 245:FlagMotor.c   **** 					 
+ 246:FlagMotor.c   **** 					 
+ 247:FlagMotor.c   **** 					 if(frem==1)
+ 620              		.loc 1 247 0
+ 621 0130 0129     		cmp	r1, #1
+ 622 0132 06D1     		bne	.L60
+ 248:FlagMotor.c   ****                     {coilA1A2();
+ 623              		.loc 1 248 0
+ 624 0134 FFF7FEFF 		bl	coilA1A2
+ 625              	.LVL73:
+ 249:FlagMotor.c   ****                     stepcount++;}
+ 626              		.loc 1 249 0
+ 627 0138 344A     		ldr	r2, .L68
+ 628 013a 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 629 013c 0133     		adds	r3, r3, #1
+ 630 013e 1370     		strb	r3, [r2]
+ 631 0140 08BD     		pop	{r3, pc}
+ 632              	.LVL74:
+ 633              	.L60:
+ 250:FlagMotor.c   **** 					 else
+ 251:FlagMotor.c   ****                     {coilB2();
+ 634              		.loc 1 251 0
+ 635 0142 FFF7FEFF 		bl	coilB2
+ 636              	.LVL75:
+ 252:FlagMotor.c   ****                     stepcount++;}
+ 637              		.loc 1 252 0
+ 638 0146 314A     		ldr	r2, .L68
+ 639 0148 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 640 014a 0133     		adds	r3, r3, #1
+ 641 014c 1370     		strb	r3, [r2]
+ 642 014e 08BD     		pop	{r3, pc}
+ 643              	.LVL76:
+ 644              	.L53:
+ 253:FlagMotor.c   **** 					 
+ 254:FlagMotor.c   ****                     
+ 255:FlagMotor.c   **** 				 }
+ 256:FlagMotor.c   **** 				 break;
+ 257:FlagMotor.c   **** 				 case 2:
+ 258:FlagMotor.c   **** 				 {
+ 259:FlagMotor.c   **** 					 
+ 260:FlagMotor.c   **** 					 if(frem==1)
+ 645              		.loc 1 260 0
+ 646 0150 0129     		cmp	r1, #1
+ 647 0152 06D1     		bne	.L61
+ 261:FlagMotor.c   ****                     {coilA2();
+ 648              		.loc 1 261 0
+ 649 0154 FFF7FEFF 		bl	coilA2
+ 650              	.LVL77:
+ 262:FlagMotor.c   ****                     stepcount++;}
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 17
+
+
+ 651              		.loc 1 262 0
+ 652 0158 2C4A     		ldr	r2, .L68
+ 653 015a 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 654 015c 0133     		adds	r3, r3, #1
+ 655 015e 1370     		strb	r3, [r2]
+ 656 0160 08BD     		pop	{r3, pc}
+ 657              	.LVL78:
+ 658              	.L61:
+ 263:FlagMotor.c   **** 					 else
+ 264:FlagMotor.c   ****                     {coilB1B2();
+ 659              		.loc 1 264 0
+ 660 0162 FFF7FEFF 		bl	coilB1B2
+ 661              	.LVL79:
+ 265:FlagMotor.c   ****                     stepcount++;}
+ 662              		.loc 1 265 0
+ 663 0166 294A     		ldr	r2, .L68
+ 664 0168 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 665 016a 0133     		adds	r3, r3, #1
+ 666 016c 1370     		strb	r3, [r2]
+ 667 016e 08BD     		pop	{r3, pc}
+ 668              	.LVL80:
+ 669              	.L54:
+ 266:FlagMotor.c   ****                         
+ 267:FlagMotor.c   ****                      
+ 268:FlagMotor.c   **** 				 }
+ 269:FlagMotor.c   **** 				 break;
+ 270:FlagMotor.c   **** 				 case 3:
+ 271:FlagMotor.c   **** 				 {
+ 272:FlagMotor.c   **** 					 
+ 273:FlagMotor.c   **** 					 if(frem==1)
+ 670              		.loc 1 273 0
+ 671 0170 0129     		cmp	r1, #1
+ 672 0172 06D1     		bne	.L62
+ 274:FlagMotor.c   ****                     {coilA2B1();
+ 673              		.loc 1 274 0
+ 674 0174 FFF7FEFF 		bl	coilA2B1
+ 675              	.LVL81:
+ 275:FlagMotor.c   ****                     stepcount++;}
+ 676              		.loc 1 275 0
+ 677 0178 244A     		ldr	r2, .L68
+ 678 017a 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 679 017c 0133     		adds	r3, r3, #1
+ 680 017e 1370     		strb	r3, [r2]
+ 681 0180 08BD     		pop	{r3, pc}
+ 682              	.LVL82:
+ 683              	.L62:
+ 276:FlagMotor.c   **** 					 else
+ 277:FlagMotor.c   ****                     {coilB1();
+ 684              		.loc 1 277 0
+ 685 0182 FFF7FEFF 		bl	coilB1
+ 686              	.LVL83:
+ 278:FlagMotor.c   ****                     stepcount++;}
+ 687              		.loc 1 278 0
+ 688 0186 214A     		ldr	r2, .L68
+ 689 0188 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 690 018a 0133     		adds	r3, r3, #1
+ 691 018c 1370     		strb	r3, [r2]
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 18
+
+
+ 692 018e 08BD     		pop	{r3, pc}
+ 693              	.LVL84:
+ 694              	.L55:
+ 279:FlagMotor.c   ****                         
+ 280:FlagMotor.c   ****                     
+ 281:FlagMotor.c   **** 				 }
+ 282:FlagMotor.c   **** 				 break;
+ 283:FlagMotor.c   **** 				 case 4:
+ 284:FlagMotor.c   **** 				 {
+ 285:FlagMotor.c   **** 					 
+ 286:FlagMotor.c   **** 					 if(frem==1)
+ 695              		.loc 1 286 0
+ 696 0190 0129     		cmp	r1, #1
+ 697 0192 06D1     		bne	.L63
+ 287:FlagMotor.c   ****                     {coilB1();
+ 698              		.loc 1 287 0
+ 699 0194 FFF7FEFF 		bl	coilB1
+ 700              	.LVL85:
+ 288:FlagMotor.c   ****                     stepcount++;}
+ 701              		.loc 1 288 0
+ 702 0198 1C4A     		ldr	r2, .L68
+ 703 019a 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 704 019c 0133     		adds	r3, r3, #1
+ 705 019e 1370     		strb	r3, [r2]
+ 706 01a0 08BD     		pop	{r3, pc}
+ 707              	.LVL86:
+ 708              	.L63:
+ 289:FlagMotor.c   **** 					 else
+ 290:FlagMotor.c   ****                     {coilA2B1();
+ 709              		.loc 1 290 0
+ 710 01a2 FFF7FEFF 		bl	coilA2B1
+ 711              	.LVL87:
+ 291:FlagMotor.c   ****                     stepcount++;}
+ 712              		.loc 1 291 0
+ 713 01a6 194A     		ldr	r2, .L68
+ 714 01a8 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 715 01aa 0133     		adds	r3, r3, #1
+ 716 01ac 1370     		strb	r3, [r2]
+ 717 01ae 08BD     		pop	{r3, pc}
+ 718              	.LVL88:
+ 719              	.L56:
+ 292:FlagMotor.c   ****                     
+ 293:FlagMotor.c   **** 					 
+ 294:FlagMotor.c   **** 				 }
+ 295:FlagMotor.c   **** 				 break;
+ 296:FlagMotor.c   **** 				 case 5:
+ 297:FlagMotor.c   **** 				 {
+ 298:FlagMotor.c   **** 					 
+ 299:FlagMotor.c   **** 					 if(frem==1)
+ 720              		.loc 1 299 0
+ 721 01b0 0129     		cmp	r1, #1
+ 722 01b2 06D1     		bne	.L64
+ 300:FlagMotor.c   ****                     {coilB1B2();
+ 723              		.loc 1 300 0
+ 724 01b4 FFF7FEFF 		bl	coilB1B2
+ 725              	.LVL89:
+ 301:FlagMotor.c   ****                     stepcount++;}
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 19
+
+
+ 726              		.loc 1 301 0
+ 727 01b8 144A     		ldr	r2, .L68
+ 728 01ba 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 729 01bc 0133     		adds	r3, r3, #1
+ 730 01be 1370     		strb	r3, [r2]
+ 731 01c0 08BD     		pop	{r3, pc}
+ 732              	.LVL90:
+ 733              	.L64:
+ 302:FlagMotor.c   **** 					 else
+ 303:FlagMotor.c   ****                     {coilA2();
+ 734              		.loc 1 303 0
+ 735 01c2 FFF7FEFF 		bl	coilA2
+ 736              	.LVL91:
+ 304:FlagMotor.c   ****                     stepcount++;}
+ 737              		.loc 1 304 0
+ 738 01c6 114A     		ldr	r2, .L68
+ 739 01c8 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 740 01ca 0133     		adds	r3, r3, #1
+ 741 01cc 1370     		strb	r3, [r2]
+ 742 01ce 08BD     		pop	{r3, pc}
+ 743              	.LVL92:
+ 744              	.L57:
+ 305:FlagMotor.c   ****                     
+ 306:FlagMotor.c   **** 				 }
+ 307:FlagMotor.c   **** 				 break;
+ 308:FlagMotor.c   **** 				 case 6:
+ 309:FlagMotor.c   **** 				 {
+ 310:FlagMotor.c   **** 					 
+ 311:FlagMotor.c   **** 					 if(frem==1)
+ 745              		.loc 1 311 0
+ 746 01d0 0129     		cmp	r1, #1
+ 747 01d2 06D1     		bne	.L65
+ 312:FlagMotor.c   ****                     {coilB2();
+ 748              		.loc 1 312 0
+ 749 01d4 FFF7FEFF 		bl	coilB2
+ 750              	.LVL93:
+ 313:FlagMotor.c   ****                     stepcount++;}
+ 751              		.loc 1 313 0
+ 752 01d8 0C4A     		ldr	r2, .L68
+ 753 01da 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 754 01dc 0133     		adds	r3, r3, #1
+ 755 01de 1370     		strb	r3, [r2]
+ 756 01e0 08BD     		pop	{r3, pc}
+ 757              	.LVL94:
+ 758              	.L65:
+ 314:FlagMotor.c   **** 					 else
+ 315:FlagMotor.c   ****                     {coilA1A2();
+ 759              		.loc 1 315 0
+ 760 01e2 FFF7FEFF 		bl	coilA1A2
+ 761              	.LVL95:
+ 316:FlagMotor.c   ****                     stepcount++;}
+ 762              		.loc 1 316 0
+ 763 01e6 094A     		ldr	r2, .L68
+ 764 01e8 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 765 01ea 0133     		adds	r3, r3, #1
+ 766 01ec 1370     		strb	r3, [r2]
+ 767 01ee 08BD     		pop	{r3, pc}
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 20
+
+
+ 768              	.LVL96:
+ 769              	.L58:
+ 317:FlagMotor.c   ****                         
+ 318:FlagMotor.c   ****                     
+ 319:FlagMotor.c   **** 				 }
+ 320:FlagMotor.c   **** 				 break;
+ 321:FlagMotor.c   **** 				 case 7:
+ 322:FlagMotor.c   **** 				 {
+ 323:FlagMotor.c   **** 					 
+ 324:FlagMotor.c   **** 					 if(frem==1)
+ 770              		.loc 1 324 0
+ 771 01f0 0129     		cmp	r1, #1
+ 772 01f2 05D1     		bne	.L66
+ 325:FlagMotor.c   ****                     {coilB2A1();
+ 773              		.loc 1 325 0
+ 774 01f4 FFF7FEFF 		bl	coilB2A1
+ 775              	.LVL97:
+ 326:FlagMotor.c   ****                     stepcount=0;}
+ 776              		.loc 1 326 0
+ 777 01f8 0022     		movs	r2, #0
+ 778 01fa 044B     		ldr	r3, .L68
+ 779 01fc 1A70     		strb	r2, [r3]
+ 780 01fe 08BD     		pop	{r3, pc}
+ 781              	.LVL98:
+ 782              	.L66:
+ 327:FlagMotor.c   **** 					 else
+ 328:FlagMotor.c   ****                     {coilA1();
+ 783              		.loc 1 328 0
+ 784 0200 FFF7FEFF 		bl	coilA1
+ 785              	.LVL99:
+ 329:FlagMotor.c   ****                     stepcount=0;}
+ 786              		.loc 1 329 0
+ 787 0204 0022     		movs	r2, #0
+ 788 0206 014B     		ldr	r3, .L68
+ 789 0208 1A70     		strb	r2, [r3]
+ 790              	.L19:
+ 791 020a 08BD     		pop	{r3, pc}
+ 792              	.L69:
+ 793              		.align	2
+ 794              	.L68:
+ 795 020c 00000000 		.word	.LANCHOR0
+ 796              		.cfi_endproc
+ 797              	.LFE72:
+ 798              		.size	takestep, .-takestep
+ 799              		.section	.text.numberOfSteps,"ax",%progbits
+ 800              		.align	2
+ 801              		.global	numberOfSteps
+ 802              		.thumb
+ 803              		.thumb_func
+ 804              		.type	numberOfSteps, %function
+ 805              	numberOfSteps:
+ 806              	.LFB73:
+ 330:FlagMotor.c   ****                    
+ 331:FlagMotor.c   **** 				 }
+ 332:FlagMotor.c   **** 				 break;
+ 333:FlagMotor.c   **** 				 
+ 334:FlagMotor.c   **** 				 
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 21
+
+
+ 335:FlagMotor.c   **** 			 }
+ 336:FlagMotor.c   **** 		 }
+ 337:FlagMotor.c   **** 		 break;
+ 338:FlagMotor.c   **** 		 default :
+ 339:FlagMotor.c   **** 		 {
+ 340:FlagMotor.c   **** 			 // nothing
+ 341:FlagMotor.c   **** 		 }
+ 342:FlagMotor.c   **** 		 break;
+ 343:FlagMotor.c   **** 	 }
+ 344:FlagMotor.c   **** }
+ 345:FlagMotor.c   **** 
+ 346:FlagMotor.c   **** void numberOfSteps(int steps, char mode)
+ 347:FlagMotor.c   **** {
+ 807              		.loc 1 347 0
+ 808              		.cfi_startproc
+ 809              		@ args = 0, pretend = 0, frame = 0
+ 810              		@ frame_needed = 0, uses_anonymous_args = 0
+ 811              	.LVL100:
+ 812 0000 70B5     		push	{r4, r5, r6, lr}
+ 813              		.cfi_def_cfa_offset 16
+ 814              		.cfi_offset 4, -16
+ 815              		.cfi_offset 5, -12
+ 816              		.cfi_offset 6, -8
+ 817              		.cfi_offset 14, -4
+ 818 0002 0E46     		mov	r6, r1
+ 819              	.LVL101:
+ 348:FlagMotor.c   **** 	char step_mode = mode;
+ 349:FlagMotor.c   **** 	if(steps<0)
+ 820              		.loc 1 349 0
+ 821 0004 051E     		subs	r5, r0, #0
+ 822 0006 0CDA     		bge	.L72
+ 823 0008 08E0     		b	.L76
+ 824              	.LVL102:
+ 825              	.L73:
+ 826              	.LBB2:
+ 350:FlagMotor.c   **** 	for(int i=0; i>steps; i--)// tager antal steps
+ 351:FlagMotor.c   **** 	{
+ 352:FlagMotor.c   **** 		
+ 353:FlagMotor.c   **** 			takestep(step_mode, 0);
+ 827              		.loc 1 353 0 discriminator 3
+ 828 000a 0021     		movs	r1, #0
+ 829 000c 3046     		mov	r0, r6
+ 830 000e FFF7FEFF 		bl	takestep
+ 831              	.LVL103:
+ 354:FlagMotor.c   **** 		
+ 355:FlagMotor.c   **** 		
+ 356:FlagMotor.c   **** 			 CyDelay(5);
+ 832              		.loc 1 356 0 discriminator 3
+ 833 0012 0520     		movs	r0, #5
+ 834 0014 FFF7FEFF 		bl	CyDelay
+ 835              	.LVL104:
+ 350:FlagMotor.c   **** 	for(int i=0; i>steps; i--)// tager antal steps
+ 836              		.loc 1 350 0 discriminator 3
+ 837 0018 013C     		subs	r4, r4, #1
+ 838              	.LVL105:
+ 839 001a 00E0     		b	.L71
+ 840              	.LVL106:
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 22
+
+
+ 841              	.L76:
+ 842              	.LBE2:
+ 843 001c 0024     		movs	r4, #0
+ 844              	.LVL107:
+ 845              	.L71:
+ 846              	.LBB3:
+ 350:FlagMotor.c   **** 	for(int i=0; i>steps; i--)// tager antal steps
+ 847              		.loc 1 350 0 is_stmt 0 discriminator 1
+ 848 001e AC42     		cmp	r4, r5
+ 849 0020 F3DC     		bgt	.L73
+ 850              	.LVL108:
+ 851              	.L72:
+ 852              	.LBE3:
+ 853 0022 0024     		movs	r4, #0
+ 854 0024 07E0     		b	.L74
+ 855              	.LVL109:
+ 856              	.L75:
+ 857              	.LBB4:
+ 357:FlagMotor.c   **** 		
+ 358:FlagMotor.c   **** 	}
+ 359:FlagMotor.c   **** 	
+ 360:FlagMotor.c   **** 	 for(int i=0; i<steps; i++)// tager antal steps
+ 361:FlagMotor.c   **** 	 {
+ 362:FlagMotor.c   **** 		 
+ 363:FlagMotor.c   **** 		 {takestep(step_mode, 1);}
+ 858              		.loc 1 363 0 is_stmt 1 discriminator 3
+ 859 0026 0121     		movs	r1, #1
+ 860 0028 3046     		mov	r0, r6
+ 861 002a FFF7FEFF 		bl	takestep
+ 862              	.LVL110:
+ 364:FlagMotor.c   **** 		 
+ 365:FlagMotor.c   **** 		  CyDelay(5);
+ 863              		.loc 1 365 0 discriminator 3
+ 864 002e 0520     		movs	r0, #5
+ 865 0030 FFF7FEFF 		bl	CyDelay
+ 866              	.LVL111:
+ 360:FlagMotor.c   **** 	 {
+ 867              		.loc 1 360 0 discriminator 3
+ 868 0034 0134     		adds	r4, r4, #1
+ 869              	.LVL112:
+ 870              	.L74:
+ 360:FlagMotor.c   **** 	 {
+ 871              		.loc 1 360 0 is_stmt 0 discriminator 1
+ 872 0036 AC42     		cmp	r4, r5
+ 873 0038 F5DB     		blt	.L75
+ 874              	.LBE4:
+ 366:FlagMotor.c   **** 		 
+ 367:FlagMotor.c   **** 	 }
+ 368:FlagMotor.c   **** 	 
+ 369:FlagMotor.c   **** }
+ 875              		.loc 1 369 0 is_stmt 1
+ 876 003a 70BD     		pop	{r4, r5, r6, pc}
+ 877              		.cfi_endproc
+ 878              	.LFE73:
+ 879              		.size	numberOfSteps, .-numberOfSteps
+ 880              		.global	__aeabi_i2d
+ 881              		.global	__aeabi_dmul
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 23
+
+
+ 882              		.global	__aeabi_d2iz
+ 883              		.section	.text.stepperdriver_rotateTo,"ax",%progbits
+ 884              		.align	2
+ 885              		.global	stepperdriver_rotateTo
+ 886              		.thumb
+ 887              		.thumb_func
+ 888              		.type	stepperdriver_rotateTo, %function
+ 889              	stepperdriver_rotateTo:
+ 890              	.LFB75:
+ 370:FlagMotor.c   **** 
+ 371:FlagMotor.c   **** 
+ 372:FlagMotor.c   **** 
+ 373:FlagMotor.c   **** void homeStepper(char mode){
+ 374:FlagMotor.c   ****      if(mode == 'h')
+ 375:FlagMotor.c   ****     numberOfSteps(-96, mode);
+ 376:FlagMotor.c   ****     else
+ 377:FlagMotor.c   ****     numberOfSteps(-48, mode);
+ 378:FlagMotor.c   ****     currentPosition=0;
+ 379:FlagMotor.c   ****     stepperdriver_rotateTo(0, mode);
+ 380:FlagMotor.c   ****     
+ 381:FlagMotor.c   **** }
+ 382:FlagMotor.c   **** 
+ 383:FlagMotor.c   **** 
+ 384:FlagMotor.c   **** void stepperdriver_rotateTo(int targetDegrees, char mode) {
+ 891              		.loc 1 384 0
+ 892              		.cfi_startproc
+ 893              		@ args = 0, pretend = 0, frame = 0
+ 894              		@ frame_needed = 0, uses_anonymous_args = 0
+ 895              	.LVL113:
+ 896 0000 38B5     		push	{r3, r4, r5, lr}
+ 897              		.cfi_def_cfa_offset 16
+ 898              		.cfi_offset 3, -16
+ 899              		.cfi_offset 4, -12
+ 900              		.cfi_offset 5, -8
+ 901              		.cfi_offset 14, -4
+ 902 0002 0446     		mov	r4, r0
+ 903 0004 0D46     		mov	r5, r1
+ 385:FlagMotor.c   **** 	
+ 386:FlagMotor.c   **** 	
+ 387:FlagMotor.c   ****     if(mode == 'h')
+ 904              		.loc 1 387 0
+ 905 0006 6829     		cmp	r1, #104
+ 906 0008 13D1     		bne	.L79
+ 388:FlagMotor.c   ****     {
+ 389:FlagMotor.c   ****     	if(targetDegrees!=currentPosition)
+ 907              		.loc 1 389 0
+ 908 000a 194B     		ldr	r3, .L82+16
+ 909 000c 5868     		ldr	r0, [r3, #4]
+ 910              	.LVL114:
+ 911 000e A042     		cmp	r0, r4
+ 912 0010 22D0     		beq	.L78
+ 913              	.LBB5:
+ 390:FlagMotor.c   **** 		{
+ 391:FlagMotor.c   **** 			int stepsToTake = (targetDegrees - currentPosition) * STEPS_PER_DEGREE_half;
+ 914              		.loc 1 391 0
+ 915 0012 201A     		subs	r0, r4, r0
+ 916 0014 FFF7FEFF 		bl	__aeabi_i2d
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 24
+
+
+ 917              	.LVL115:
+ 918 0018 11A3     		adr	r3, .L82
+ 919 001a D3E90023 		ldrd	r2, [r3]
+ 920 001e FFF7FEFF 		bl	__aeabi_dmul
+ 921              	.LVL116:
+ 922 0022 FFF7FEFF 		bl	__aeabi_d2iz
+ 923              	.LVL117:
+ 392:FlagMotor.c   **** 
+ 393:FlagMotor.c   **** 			currentPosition = targetDegrees;
+ 924              		.loc 1 393 0
+ 925 0026 124B     		ldr	r3, .L82+16
+ 926 0028 5C60     		str	r4, [r3, #4]
+ 394:FlagMotor.c   **** 
+ 395:FlagMotor.c   **** 			numberOfSteps(stepsToTake, mode);
+ 927              		.loc 1 395 0
+ 928 002a 2946     		mov	r1, r5
+ 929 002c FFF7FEFF 		bl	numberOfSteps
+ 930              	.LVL118:
+ 931 0030 38BD     		pop	{r3, r4, r5, pc}
+ 932              	.LVL119:
+ 933              	.L79:
+ 934              	.LBE5:
+ 396:FlagMotor.c   **** 		}
+ 397:FlagMotor.c   ****         }
+ 398:FlagMotor.c   ****     else
+ 399:FlagMotor.c   ****         {
+ 400:FlagMotor.c   **** 		if(targetDegrees!=currentPosition)
+ 935              		.loc 1 400 0
+ 936 0032 0F4B     		ldr	r3, .L82+16
+ 937 0034 5868     		ldr	r0, [r3, #4]
+ 938              	.LVL120:
+ 939 0036 8442     		cmp	r4, r0
+ 940 0038 0ED0     		beq	.L78
+ 941              	.LBB6:
+ 401:FlagMotor.c   **** 		{
+ 402:FlagMotor.c   **** 			int stepsToTake = (targetDegrees - currentPosition) * STEPS_PER_DEGREE_other;
+ 942              		.loc 1 402 0
+ 943 003a 201A     		subs	r0, r4, r0
+ 944 003c FFF7FEFF 		bl	__aeabi_i2d
+ 945              	.LVL121:
+ 946 0040 09A3     		adr	r3, .L82+8
+ 947 0042 D3E90023 		ldrd	r2, [r3]
+ 948 0046 FFF7FEFF 		bl	__aeabi_dmul
+ 949              	.LVL122:
+ 950 004a FFF7FEFF 		bl	__aeabi_d2iz
+ 951              	.LVL123:
+ 403:FlagMotor.c   **** 
+ 404:FlagMotor.c   **** 			currentPosition = targetDegrees;
+ 952              		.loc 1 404 0
+ 953 004e 084B     		ldr	r3, .L82+16
+ 954 0050 5C60     		str	r4, [r3, #4]
+ 405:FlagMotor.c   **** 
+ 406:FlagMotor.c   **** 			numberOfSteps(stepsToTake, mode);
+ 955              		.loc 1 406 0
+ 956 0052 2946     		mov	r1, r5
+ 957 0054 FFF7FEFF 		bl	numberOfSteps
+ 958              	.LVL124:
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 25
+
+
+ 959              	.L78:
+ 960 0058 38BD     		pop	{r3, r4, r5, pc}
+ 961              	.LVL125:
+ 962              	.L83:
+ 963 005a 00BFAFF3 		.align	3
+ 963      0080
+ 964              	.L82:
+ 965 0060 4A0C022B 		.word	721554506
+ 966 0064 8716D13F 		.word	1070667399
+ 967 0068 A01A2FDD 		.word	-584115552
+ 968 006c 2406C13F 		.word	1069614628
+ 969 0070 00000000 		.word	.LANCHOR0
+ 970              	.LBE6:
+ 971              		.cfi_endproc
+ 972              	.LFE75:
+ 973              		.size	stepperdriver_rotateTo, .-stepperdriver_rotateTo
+ 974              		.section	.text.homeStepper,"ax",%progbits
+ 975              		.align	2
+ 976              		.global	homeStepper
+ 977              		.thumb
+ 978              		.thumb_func
+ 979              		.type	homeStepper, %function
+ 980              	homeStepper:
+ 981              	.LFB74:
+ 373:FlagMotor.c   ****      if(mode == 'h')
+ 982              		.loc 1 373 0
+ 983              		.cfi_startproc
+ 984              		@ args = 0, pretend = 0, frame = 0
+ 985              		@ frame_needed = 0, uses_anonymous_args = 0
+ 986              	.LVL126:
+ 987 0000 10B5     		push	{r4, lr}
+ 988              		.cfi_def_cfa_offset 8
+ 989              		.cfi_offset 4, -8
+ 990              		.cfi_offset 14, -4
+ 991 0002 0446     		mov	r4, r0
+ 374:FlagMotor.c   ****     numberOfSteps(-96, mode);
+ 992              		.loc 1 374 0
+ 993 0004 6828     		cmp	r0, #104
+ 994 0006 05D1     		bne	.L85
+ 375:FlagMotor.c   ****     else
+ 995              		.loc 1 375 0
+ 996 0008 0146     		mov	r1, r0
+ 997 000a 6FF05F00 		mvn	r0, #95
+ 998              	.LVL127:
+ 999 000e FFF7FEFF 		bl	numberOfSteps
+ 1000              	.LVL128:
+ 1001 0012 04E0     		b	.L86
+ 1002              	.LVL129:
+ 1003              	.L85:
+ 377:FlagMotor.c   ****     currentPosition=0;
+ 1004              		.loc 1 377 0
+ 1005 0014 0146     		mov	r1, r0
+ 1006 0016 6FF02F00 		mvn	r0, #47
+ 1007              	.LVL130:
+ 1008 001a FFF7FEFF 		bl	numberOfSteps
+ 1009              	.LVL131:
+ 1010              	.L86:
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 26
+
+
+ 378:FlagMotor.c   ****     stepperdriver_rotateTo(0, mode);
+ 1011              		.loc 1 378 0
+ 1012 001e 0020     		movs	r0, #0
+ 1013 0020 024B     		ldr	r3, .L88
+ 1014 0022 5860     		str	r0, [r3, #4]
+ 379:FlagMotor.c   ****     
+ 1015              		.loc 1 379 0
+ 1016 0024 2146     		mov	r1, r4
+ 1017 0026 FFF7FEFF 		bl	stepperdriver_rotateTo
+ 1018              	.LVL132:
+ 1019 002a 10BD     		pop	{r4, pc}
+ 1020              	.L89:
+ 1021              		.align	2
+ 1022              	.L88:
+ 1023 002c 00000000 		.word	.LANCHOR0
+ 1024              		.cfi_endproc
+ 1025              	.LFE74:
+ 1026              		.size	homeStepper, .-homeStepper
+ 1027              		.global	currentPosition
+ 1028              		.bss
+ 1029              		.align	2
+ 1030              		.set	.LANCHOR0,. + 0
+ 1031              		.type	stepcount, %object
+ 1032              		.size	stepcount, 1
+ 1033              	stepcount:
+ 1034 0000 00       		.space	1
+ 1035 0001 000000   		.space	3
+ 1036              		.type	currentPosition, %object
+ 1037              		.size	currentPosition, 4
+ 1038              	currentPosition:
+ 1039 0004 00000000 		.space	4
+ 1040              		.text
+ 1041              	.Letext0:
+ 1042              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 1043              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 1044              		.file 4 "Generated_Source\\PSoC5/core_cm3.h"
+ 1045              		.file 5 "Generated_Source\\PSoC5/A2.h"
+ 1046              		.file 6 "Generated_Source\\PSoC5/B1.h"
+ 1047              		.file 7 "Generated_Source\\PSoC5/B2.h"
+ 1048              		.file 8 "Generated_Source\\PSoC5/A1.h"
+ 1049              		.file 9 "Generated_Source\\PSoC5/CyLib.h"
+ 1050              		.section	.debug_info,"",%progbits
+ 1051              	.Ldebug_info0:
+ 1052 0000 6F070000 		.4byte	0x76f
+ 1053 0004 0400     		.2byte	0x4
+ 1054 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 1055 000a 04       		.byte	0x4
+ 1056 000b 01       		.uleb128 0x1
+ 1057 000c A9010000 		.4byte	.LASF43
+ 1058 0010 0C       		.byte	0xc
+ 1059 0011 21000000 		.4byte	.LASF44
+ 1060 0015 05010000 		.4byte	.LASF45
+ 1061 0019 18000000 		.4byte	.Ldebug_ranges0+0x18
+ 1062 001d 00000000 		.4byte	0
+ 1063 0021 00000000 		.4byte	.Ldebug_line0
+ 1064 0025 02       		.uleb128 0x2
+ 1065 0026 01       		.byte	0x1
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 27
+
+
+ 1066 0027 06       		.byte	0x6
+ 1067 0028 80020000 		.4byte	.LASF0
+ 1068 002c 02       		.uleb128 0x2
+ 1069 002d 01       		.byte	0x1
+ 1070 002e 08       		.byte	0x8
+ 1071 002f 90000000 		.4byte	.LASF1
+ 1072 0033 02       		.uleb128 0x2
+ 1073 0034 02       		.byte	0x2
+ 1074 0035 05       		.byte	0x5
+ 1075 0036 60020000 		.4byte	.LASF2
+ 1076 003a 02       		.uleb128 0x2
+ 1077 003b 02       		.byte	0x2
+ 1078 003c 07       		.byte	0x7
+ 1079 003d B0000000 		.4byte	.LASF3
+ 1080 0041 03       		.uleb128 0x3
+ 1081 0042 3D000000 		.4byte	.LASF9
+ 1082 0046 02       		.byte	0x2
+ 1083 0047 3F       		.byte	0x3f
+ 1084 0048 4C000000 		.4byte	0x4c
+ 1085 004c 02       		.uleb128 0x2
+ 1086 004d 04       		.byte	0x4
+ 1087 004e 05       		.byte	0x5
+ 1088 004f 47000000 		.4byte	.LASF4
+ 1089 0053 02       		.uleb128 0x2
+ 1090 0054 04       		.byte	0x4
+ 1091 0055 07       		.byte	0x7
+ 1092 0056 5C010000 		.4byte	.LASF5
+ 1093 005a 02       		.uleb128 0x2
+ 1094 005b 08       		.byte	0x8
+ 1095 005c 05       		.byte	0x5
+ 1096 005d 48020000 		.4byte	.LASF6
+ 1097 0061 02       		.uleb128 0x2
+ 1098 0062 08       		.byte	0x8
+ 1099 0063 07       		.byte	0x7
+ 1100 0064 84010000 		.4byte	.LASF7
+ 1101 0068 04       		.uleb128 0x4
+ 1102 0069 04       		.byte	0x4
+ 1103 006a 05       		.byte	0x5
+ 1104 006b 696E7400 		.ascii	"int\000"
+ 1105 006f 02       		.uleb128 0x2
+ 1106 0070 04       		.byte	0x4
+ 1107 0071 07       		.byte	0x7
+ 1108 0072 6E010000 		.4byte	.LASF8
+ 1109 0076 03       		.uleb128 0x3
+ 1110 0077 37020000 		.4byte	.LASF10
+ 1111 007b 03       		.byte	0x3
+ 1112 007c 2C       		.byte	0x2c
+ 1113 007d 41000000 		.4byte	0x41
+ 1114 0081 02       		.uleb128 0x2
+ 1115 0082 04       		.byte	0x4
+ 1116 0083 04       		.byte	0x4
+ 1117 0084 7A000000 		.4byte	.LASF11
+ 1118 0088 02       		.uleb128 0x2
+ 1119 0089 08       		.byte	0x8
+ 1120 008a 04       		.byte	0x4
+ 1121 008b 73000000 		.4byte	.LASF12
+ 1122 008f 02       		.uleb128 0x2
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 28
+
+
+ 1123 0090 01       		.byte	0x1
+ 1124 0091 08       		.byte	0x8
+ 1125 0092 56020000 		.4byte	.LASF13
+ 1126 0096 02       		.uleb128 0x2
+ 1127 0097 08       		.byte	0x8
+ 1128 0098 04       		.byte	0x4
+ 1129 0099 74020000 		.4byte	.LASF14
+ 1130 009d 02       		.uleb128 0x2
+ 1131 009e 04       		.byte	0x4
+ 1132 009f 07       		.byte	0x7
+ 1133 00a0 3F020000 		.4byte	.LASF15
+ 1134 00a4 05       		.uleb128 0x5
+ 1135 00a5 8C020000 		.4byte	.LASF16
+ 1136 00a9 01       		.byte	0x1
+ 1137 00aa 22       		.byte	0x22
+ 1138 00ab 00000000 		.4byte	.LFB63
+ 1139 00af 1C000000 		.4byte	.LFE63-.LFB63
+ 1140 00b3 01       		.uleb128 0x1
+ 1141 00b4 9C       		.byte	0x9c
+ 1142 00b5 02010000 		.4byte	0x102
+ 1143 00b9 06       		.uleb128 0x6
+ 1144 00ba 08000000 		.4byte	.LVL0
+ 1145 00be 3B070000 		.4byte	0x73b
+ 1146 00c2 CC000000 		.4byte	0xcc
+ 1147 00c6 07       		.uleb128 0x7
+ 1148 00c7 01       		.uleb128 0x1
+ 1149 00c8 50       		.byte	0x50
+ 1150 00c9 01       		.uleb128 0x1
+ 1151 00ca 30       		.byte	0x30
+ 1152 00cb 00       		.byte	0
+ 1153 00cc 06       		.uleb128 0x6
+ 1154 00cd 0E000000 		.4byte	.LVL1
+ 1155 00d1 46070000 		.4byte	0x746
+ 1156 00d5 DF000000 		.4byte	0xdf
+ 1157 00d9 07       		.uleb128 0x7
+ 1158 00da 01       		.uleb128 0x1
+ 1159 00db 50       		.byte	0x50
+ 1160 00dc 01       		.uleb128 0x1
+ 1161 00dd 30       		.byte	0x30
+ 1162 00de 00       		.byte	0
+ 1163 00df 06       		.uleb128 0x6
+ 1164 00e0 14000000 		.4byte	.LVL2
+ 1165 00e4 51070000 		.4byte	0x751
+ 1166 00e8 F2000000 		.4byte	0xf2
+ 1167 00ec 07       		.uleb128 0x7
+ 1168 00ed 01       		.uleb128 0x1
+ 1169 00ee 50       		.byte	0x50
+ 1170 00ef 01       		.uleb128 0x1
+ 1171 00f0 30       		.byte	0x30
+ 1172 00f1 00       		.byte	0
+ 1173 00f2 08       		.uleb128 0x8
+ 1174 00f3 1A000000 		.4byte	.LVL3
+ 1175 00f7 5C070000 		.4byte	0x75c
+ 1176 00fb 07       		.uleb128 0x7
+ 1177 00fc 01       		.uleb128 0x1
+ 1178 00fd 50       		.byte	0x50
+ 1179 00fe 01       		.uleb128 0x1
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 29
+
+
+ 1180 00ff 31       		.byte	0x31
+ 1181 0100 00       		.byte	0
+ 1182 0101 00       		.byte	0
+ 1183 0102 05       		.uleb128 0x5
+ 1184 0103 93020000 		.4byte	.LASF17
+ 1185 0107 01       		.byte	0x1
+ 1186 0108 29       		.byte	0x29
+ 1187 0109 00000000 		.4byte	.LFB64
+ 1188 010d 1C000000 		.4byte	.LFE64-.LFB64
+ 1189 0111 01       		.uleb128 0x1
+ 1190 0112 9C       		.byte	0x9c
+ 1191 0113 60010000 		.4byte	0x160
+ 1192 0117 06       		.uleb128 0x6
+ 1193 0118 08000000 		.4byte	.LVL4
+ 1194 011c 46070000 		.4byte	0x746
+ 1195 0120 2A010000 		.4byte	0x12a
+ 1196 0124 07       		.uleb128 0x7
+ 1197 0125 01       		.uleb128 0x1
+ 1198 0126 50       		.byte	0x50
+ 1199 0127 01       		.uleb128 0x1
+ 1200 0128 30       		.byte	0x30
+ 1201 0129 00       		.byte	0
+ 1202 012a 06       		.uleb128 0x6
+ 1203 012b 0E000000 		.4byte	.LVL5
+ 1204 012f 51070000 		.4byte	0x751
+ 1205 0133 3D010000 		.4byte	0x13d
+ 1206 0137 07       		.uleb128 0x7
+ 1207 0138 01       		.uleb128 0x1
+ 1208 0139 50       		.byte	0x50
+ 1209 013a 01       		.uleb128 0x1
+ 1210 013b 30       		.byte	0x30
+ 1211 013c 00       		.byte	0
+ 1212 013d 06       		.uleb128 0x6
+ 1213 013e 14000000 		.4byte	.LVL6
+ 1214 0142 5C070000 		.4byte	0x75c
+ 1215 0146 50010000 		.4byte	0x150
+ 1216 014a 07       		.uleb128 0x7
+ 1217 014b 01       		.uleb128 0x1
+ 1218 014c 50       		.byte	0x50
+ 1219 014d 01       		.uleb128 0x1
+ 1220 014e 30       		.byte	0x30
+ 1221 014f 00       		.byte	0
+ 1222 0150 08       		.uleb128 0x8
+ 1223 0151 1A000000 		.4byte	.LVL7
+ 1224 0155 3B070000 		.4byte	0x73b
+ 1225 0159 07       		.uleb128 0x7
+ 1226 015a 01       		.uleb128 0x1
+ 1227 015b 50       		.byte	0x50
+ 1228 015c 01       		.uleb128 0x1
+ 1229 015d 31       		.byte	0x31
+ 1230 015e 00       		.byte	0
+ 1231 015f 00       		.byte	0
+ 1232 0160 05       		.uleb128 0x5
+ 1233 0161 D8000000 		.4byte	.LASF18
+ 1234 0165 01       		.byte	0x1
+ 1235 0166 30       		.byte	0x30
+ 1236 0167 00000000 		.4byte	.LFB65
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 30
+
+
+ 1237 016b 1C000000 		.4byte	.LFE65-.LFB65
+ 1238 016f 01       		.uleb128 0x1
+ 1239 0170 9C       		.byte	0x9c
+ 1240 0171 BE010000 		.4byte	0x1be
+ 1241 0175 06       		.uleb128 0x6
+ 1242 0176 08000000 		.4byte	.LVL8
+ 1243 017a 3B070000 		.4byte	0x73b
+ 1244 017e 88010000 		.4byte	0x188
+ 1245 0182 07       		.uleb128 0x7
+ 1246 0183 01       		.uleb128 0x1
+ 1247 0184 50       		.byte	0x50
+ 1248 0185 01       		.uleb128 0x1
+ 1249 0186 30       		.byte	0x30
+ 1250 0187 00       		.byte	0
+ 1251 0188 06       		.uleb128 0x6
+ 1252 0189 0E000000 		.4byte	.LVL9
+ 1253 018d 51070000 		.4byte	0x751
+ 1254 0191 9B010000 		.4byte	0x19b
+ 1255 0195 07       		.uleb128 0x7
+ 1256 0196 01       		.uleb128 0x1
+ 1257 0197 50       		.byte	0x50
+ 1258 0198 01       		.uleb128 0x1
+ 1259 0199 30       		.byte	0x30
+ 1260 019a 00       		.byte	0
+ 1261 019b 06       		.uleb128 0x6
+ 1262 019c 14000000 		.4byte	.LVL10
+ 1263 01a0 5C070000 		.4byte	0x75c
+ 1264 01a4 AE010000 		.4byte	0x1ae
+ 1265 01a8 07       		.uleb128 0x7
+ 1266 01a9 01       		.uleb128 0x1
+ 1267 01aa 50       		.byte	0x50
+ 1268 01ab 01       		.uleb128 0x1
+ 1269 01ac 30       		.byte	0x30
+ 1270 01ad 00       		.byte	0
+ 1271 01ae 08       		.uleb128 0x8
+ 1272 01af 1A000000 		.4byte	.LVL11
+ 1273 01b3 46070000 		.4byte	0x746
+ 1274 01b7 07       		.uleb128 0x7
+ 1275 01b8 01       		.uleb128 0x1
+ 1276 01b9 50       		.byte	0x50
+ 1277 01ba 01       		.uleb128 0x1
+ 1278 01bb 31       		.byte	0x31
+ 1279 01bc 00       		.byte	0
+ 1280 01bd 00       		.byte	0
+ 1281 01be 05       		.uleb128 0x5
+ 1282 01bf 80000000 		.4byte	.LASF19
+ 1283 01c3 01       		.byte	0x1
+ 1284 01c4 37       		.byte	0x37
+ 1285 01c5 00000000 		.4byte	.LFB66
+ 1286 01c9 1C000000 		.4byte	.LFE66-.LFB66
+ 1287 01cd 01       		.uleb128 0x1
+ 1288 01ce 9C       		.byte	0x9c
+ 1289 01cf 1C020000 		.4byte	0x21c
+ 1290 01d3 06       		.uleb128 0x6
+ 1291 01d4 08000000 		.4byte	.LVL12
+ 1292 01d8 3B070000 		.4byte	0x73b
+ 1293 01dc E6010000 		.4byte	0x1e6
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 31
+
+
+ 1294 01e0 07       		.uleb128 0x7
+ 1295 01e1 01       		.uleb128 0x1
+ 1296 01e2 50       		.byte	0x50
+ 1297 01e3 01       		.uleb128 0x1
+ 1298 01e4 30       		.byte	0x30
+ 1299 01e5 00       		.byte	0
+ 1300 01e6 06       		.uleb128 0x6
+ 1301 01e7 0E000000 		.4byte	.LVL13
+ 1302 01eb 46070000 		.4byte	0x746
+ 1303 01ef F9010000 		.4byte	0x1f9
+ 1304 01f3 07       		.uleb128 0x7
+ 1305 01f4 01       		.uleb128 0x1
+ 1306 01f5 50       		.byte	0x50
+ 1307 01f6 01       		.uleb128 0x1
+ 1308 01f7 30       		.byte	0x30
+ 1309 01f8 00       		.byte	0
+ 1310 01f9 06       		.uleb128 0x6
+ 1311 01fa 14000000 		.4byte	.LVL14
+ 1312 01fe 5C070000 		.4byte	0x75c
+ 1313 0202 0C020000 		.4byte	0x20c
+ 1314 0206 07       		.uleb128 0x7
+ 1315 0207 01       		.uleb128 0x1
+ 1316 0208 50       		.byte	0x50
+ 1317 0209 01       		.uleb128 0x1
+ 1318 020a 30       		.byte	0x30
+ 1319 020b 00       		.byte	0
+ 1320 020c 08       		.uleb128 0x8
+ 1321 020d 1A000000 		.4byte	.LVL15
+ 1322 0211 51070000 		.4byte	0x751
+ 1323 0215 07       		.uleb128 0x7
+ 1324 0216 01       		.uleb128 0x1
+ 1325 0217 50       		.byte	0x50
+ 1326 0218 01       		.uleb128 0x1
+ 1327 0219 31       		.byte	0x31
+ 1328 021a 00       		.byte	0
+ 1329 021b 00       		.byte	0
+ 1330 021c 05       		.uleb128 0x5
+ 1331 021d 9B010000 		.4byte	.LASF20
+ 1332 0221 01       		.byte	0x1
+ 1333 0222 3E       		.byte	0x3e
+ 1334 0223 00000000 		.4byte	.LFB67
+ 1335 0227 1C000000 		.4byte	.LFE67-.LFB67
+ 1336 022b 01       		.uleb128 0x1
+ 1337 022c 9C       		.byte	0x9c
+ 1338 022d 7A020000 		.4byte	0x27a
+ 1339 0231 06       		.uleb128 0x6
+ 1340 0232 08000000 		.4byte	.LVL16
+ 1341 0236 46070000 		.4byte	0x746
+ 1342 023a 44020000 		.4byte	0x244
+ 1343 023e 07       		.uleb128 0x7
+ 1344 023f 01       		.uleb128 0x1
+ 1345 0240 50       		.byte	0x50
+ 1346 0241 01       		.uleb128 0x1
+ 1347 0242 30       		.byte	0x30
+ 1348 0243 00       		.byte	0
+ 1349 0244 06       		.uleb128 0x6
+ 1350 0245 0E000000 		.4byte	.LVL17
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 32
+
+
+ 1351 0249 51070000 		.4byte	0x751
+ 1352 024d 57020000 		.4byte	0x257
+ 1353 0251 07       		.uleb128 0x7
+ 1354 0252 01       		.uleb128 0x1
+ 1355 0253 50       		.byte	0x50
+ 1356 0254 01       		.uleb128 0x1
+ 1357 0255 30       		.byte	0x30
+ 1358 0256 00       		.byte	0
+ 1359 0257 06       		.uleb128 0x6
+ 1360 0258 14000000 		.4byte	.LVL18
+ 1361 025c 5C070000 		.4byte	0x75c
+ 1362 0260 6A020000 		.4byte	0x26a
+ 1363 0264 07       		.uleb128 0x7
+ 1364 0265 01       		.uleb128 0x1
+ 1365 0266 50       		.byte	0x50
+ 1366 0267 01       		.uleb128 0x1
+ 1367 0268 31       		.byte	0x31
+ 1368 0269 00       		.byte	0
+ 1369 026a 08       		.uleb128 0x8
+ 1370 026b 1A000000 		.4byte	.LVL19
+ 1371 026f 3B070000 		.4byte	0x73b
+ 1372 0273 07       		.uleb128 0x7
+ 1373 0274 01       		.uleb128 0x1
+ 1374 0275 50       		.byte	0x50
+ 1375 0276 01       		.uleb128 0x1
+ 1376 0277 31       		.byte	0x31
+ 1377 0278 00       		.byte	0
+ 1378 0279 00       		.byte	0
+ 1379 027a 05       		.uleb128 0x5
+ 1380 027b E5000000 		.4byte	.LASF21
+ 1381 027f 01       		.byte	0x1
+ 1382 0280 45       		.byte	0x45
+ 1383 0281 00000000 		.4byte	.LFB68
+ 1384 0285 1C000000 		.4byte	.LFE68-.LFB68
+ 1385 0289 01       		.uleb128 0x1
+ 1386 028a 9C       		.byte	0x9c
+ 1387 028b D8020000 		.4byte	0x2d8
+ 1388 028f 06       		.uleb128 0x6
+ 1389 0290 08000000 		.4byte	.LVL20
+ 1390 0294 5C070000 		.4byte	0x75c
+ 1391 0298 A2020000 		.4byte	0x2a2
+ 1392 029c 07       		.uleb128 0x7
+ 1393 029d 01       		.uleb128 0x1
+ 1394 029e 50       		.byte	0x50
+ 1395 029f 01       		.uleb128 0x1
+ 1396 02a0 30       		.byte	0x30
+ 1397 02a1 00       		.byte	0
+ 1398 02a2 06       		.uleb128 0x6
+ 1399 02a3 0E000000 		.4byte	.LVL21
+ 1400 02a7 51070000 		.4byte	0x751
+ 1401 02ab B5020000 		.4byte	0x2b5
+ 1402 02af 07       		.uleb128 0x7
+ 1403 02b0 01       		.uleb128 0x1
+ 1404 02b1 50       		.byte	0x50
+ 1405 02b2 01       		.uleb128 0x1
+ 1406 02b3 30       		.byte	0x30
+ 1407 02b4 00       		.byte	0
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 33
+
+
+ 1408 02b5 06       		.uleb128 0x6
+ 1409 02b6 14000000 		.4byte	.LVL22
+ 1410 02ba 46070000 		.4byte	0x746
+ 1411 02be C8020000 		.4byte	0x2c8
+ 1412 02c2 07       		.uleb128 0x7
+ 1413 02c3 01       		.uleb128 0x1
+ 1414 02c4 50       		.byte	0x50
+ 1415 02c5 01       		.uleb128 0x1
+ 1416 02c6 31       		.byte	0x31
+ 1417 02c7 00       		.byte	0
+ 1418 02c8 08       		.uleb128 0x8
+ 1419 02c9 1A000000 		.4byte	.LVL23
+ 1420 02cd 3B070000 		.4byte	0x73b
+ 1421 02d1 07       		.uleb128 0x7
+ 1422 02d2 01       		.uleb128 0x1
+ 1423 02d3 50       		.byte	0x50
+ 1424 02d4 01       		.uleb128 0x1
+ 1425 02d5 31       		.byte	0x31
+ 1426 02d6 00       		.byte	0
+ 1427 02d7 00       		.byte	0
+ 1428 02d8 05       		.uleb128 0x5
+ 1429 02d9 A7000000 		.4byte	.LASF22
+ 1430 02dd 01       		.byte	0x1
+ 1431 02de 4C       		.byte	0x4c
+ 1432 02df 00000000 		.4byte	.LFB69
+ 1433 02e3 1C000000 		.4byte	.LFE69-.LFB69
+ 1434 02e7 01       		.uleb128 0x1
+ 1435 02e8 9C       		.byte	0x9c
+ 1436 02e9 36030000 		.4byte	0x336
+ 1437 02ed 06       		.uleb128 0x6
+ 1438 02ee 08000000 		.4byte	.LVL24
+ 1439 02f2 3B070000 		.4byte	0x73b
+ 1440 02f6 00030000 		.4byte	0x300
+ 1441 02fa 07       		.uleb128 0x7
+ 1442 02fb 01       		.uleb128 0x1
+ 1443 02fc 50       		.byte	0x50
+ 1444 02fd 01       		.uleb128 0x1
+ 1445 02fe 30       		.byte	0x30
+ 1446 02ff 00       		.byte	0
+ 1447 0300 06       		.uleb128 0x6
+ 1448 0301 0E000000 		.4byte	.LVL25
+ 1449 0305 5C070000 		.4byte	0x75c
+ 1450 0309 13030000 		.4byte	0x313
+ 1451 030d 07       		.uleb128 0x7
+ 1452 030e 01       		.uleb128 0x1
+ 1453 030f 50       		.byte	0x50
+ 1454 0310 01       		.uleb128 0x1
+ 1455 0311 30       		.byte	0x30
+ 1456 0312 00       		.byte	0
+ 1457 0313 06       		.uleb128 0x6
+ 1458 0314 14000000 		.4byte	.LVL26
+ 1459 0318 51070000 		.4byte	0x751
+ 1460 031c 26030000 		.4byte	0x326
+ 1461 0320 07       		.uleb128 0x7
+ 1462 0321 01       		.uleb128 0x1
+ 1463 0322 50       		.byte	0x50
+ 1464 0323 01       		.uleb128 0x1
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 34
+
+
+ 1465 0324 31       		.byte	0x31
+ 1466 0325 00       		.byte	0
+ 1467 0326 08       		.uleb128 0x8
+ 1468 0327 1A000000 		.4byte	.LVL27
+ 1469 032b 46070000 		.4byte	0x746
+ 1470 032f 07       		.uleb128 0x7
+ 1471 0330 01       		.uleb128 0x1
+ 1472 0331 50       		.byte	0x50
+ 1473 0332 01       		.uleb128 0x1
+ 1474 0333 31       		.byte	0x31
+ 1475 0334 00       		.byte	0
+ 1476 0335 00       		.byte	0
+ 1477 0336 05       		.uleb128 0x5
+ 1478 0337 6A000000 		.4byte	.LASF23
+ 1479 033b 01       		.byte	0x1
+ 1480 033c 53       		.byte	0x53
+ 1481 033d 00000000 		.4byte	.LFB70
+ 1482 0341 1C000000 		.4byte	.LFE70-.LFB70
+ 1483 0345 01       		.uleb128 0x1
+ 1484 0346 9C       		.byte	0x9c
+ 1485 0347 94030000 		.4byte	0x394
+ 1486 034b 06       		.uleb128 0x6
+ 1487 034c 08000000 		.4byte	.LVL28
+ 1488 0350 46070000 		.4byte	0x746
+ 1489 0354 5E030000 		.4byte	0x35e
+ 1490 0358 07       		.uleb128 0x7
+ 1491 0359 01       		.uleb128 0x1
+ 1492 035a 50       		.byte	0x50
+ 1493 035b 01       		.uleb128 0x1
+ 1494 035c 30       		.byte	0x30
+ 1495 035d 00       		.byte	0
+ 1496 035e 06       		.uleb128 0x6
+ 1497 035f 0E000000 		.4byte	.LVL29
+ 1498 0363 3B070000 		.4byte	0x73b
+ 1499 0367 71030000 		.4byte	0x371
+ 1500 036b 07       		.uleb128 0x7
+ 1501 036c 01       		.uleb128 0x1
+ 1502 036d 50       		.byte	0x50
+ 1503 036e 01       		.uleb128 0x1
+ 1504 036f 30       		.byte	0x30
+ 1505 0370 00       		.byte	0
+ 1506 0371 06       		.uleb128 0x6
+ 1507 0372 14000000 		.4byte	.LVL30
+ 1508 0376 5C070000 		.4byte	0x75c
+ 1509 037a 84030000 		.4byte	0x384
+ 1510 037e 07       		.uleb128 0x7
+ 1511 037f 01       		.uleb128 0x1
+ 1512 0380 50       		.byte	0x50
+ 1513 0381 01       		.uleb128 0x1
+ 1514 0382 31       		.byte	0x31
+ 1515 0383 00       		.byte	0
+ 1516 0384 08       		.uleb128 0x8
+ 1517 0385 1A000000 		.4byte	.LVL31
+ 1518 0389 51070000 		.4byte	0x751
+ 1519 038d 07       		.uleb128 0x7
+ 1520 038e 01       		.uleb128 0x1
+ 1521 038f 50       		.byte	0x50
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 35
+
+
+ 1522 0390 01       		.uleb128 0x1
+ 1523 0391 31       		.byte	0x31
+ 1524 0392 00       		.byte	0
+ 1525 0393 00       		.byte	0
+ 1526 0394 05       		.uleb128 0x5
+ 1527 0395 50000000 		.4byte	.LASF24
+ 1528 0399 01       		.byte	0x1
+ 1529 039a 5A       		.byte	0x5a
+ 1530 039b 00000000 		.4byte	.LFB71
+ 1531 039f 1C000000 		.4byte	.LFE71-.LFB71
+ 1532 03a3 01       		.uleb128 0x1
+ 1533 03a4 9C       		.byte	0x9c
+ 1534 03a5 F2030000 		.4byte	0x3f2
+ 1535 03a9 06       		.uleb128 0x6
+ 1536 03aa 08000000 		.4byte	.LVL32
+ 1537 03ae 46070000 		.4byte	0x746
+ 1538 03b2 BC030000 		.4byte	0x3bc
+ 1539 03b6 07       		.uleb128 0x7
+ 1540 03b7 01       		.uleb128 0x1
+ 1541 03b8 50       		.byte	0x50
+ 1542 03b9 01       		.uleb128 0x1
+ 1543 03ba 30       		.byte	0x30
+ 1544 03bb 00       		.byte	0
+ 1545 03bc 06       		.uleb128 0x6
+ 1546 03bd 0E000000 		.4byte	.LVL33
+ 1547 03c1 51070000 		.4byte	0x751
+ 1548 03c5 CF030000 		.4byte	0x3cf
+ 1549 03c9 07       		.uleb128 0x7
+ 1550 03ca 01       		.uleb128 0x1
+ 1551 03cb 50       		.byte	0x50
+ 1552 03cc 01       		.uleb128 0x1
+ 1553 03cd 30       		.byte	0x30
+ 1554 03ce 00       		.byte	0
+ 1555 03cf 06       		.uleb128 0x6
+ 1556 03d0 14000000 		.4byte	.LVL34
+ 1557 03d4 5C070000 		.4byte	0x75c
+ 1558 03d8 E2030000 		.4byte	0x3e2
+ 1559 03dc 07       		.uleb128 0x7
+ 1560 03dd 01       		.uleb128 0x1
+ 1561 03de 50       		.byte	0x50
+ 1562 03df 01       		.uleb128 0x1
+ 1563 03e0 30       		.byte	0x30
+ 1564 03e1 00       		.byte	0
+ 1565 03e2 08       		.uleb128 0x8
+ 1566 03e3 1A000000 		.4byte	.LVL35
+ 1567 03e7 3B070000 		.4byte	0x73b
+ 1568 03eb 07       		.uleb128 0x7
+ 1569 03ec 01       		.uleb128 0x1
+ 1570 03ed 50       		.byte	0x50
+ 1571 03ee 01       		.uleb128 0x1
+ 1572 03ef 30       		.byte	0x30
+ 1573 03f0 00       		.byte	0
+ 1574 03f1 00       		.byte	0
+ 1575 03f2 05       		.uleb128 0x5
+ 1576 03f3 87000000 		.4byte	.LASF25
+ 1577 03f7 01       		.byte	0x1
+ 1578 03f8 63       		.byte	0x63
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 36
+
+
+ 1579 03f9 00000000 		.4byte	.LFB72
+ 1580 03fd 10020000 		.4byte	.LFE72-.LFB72
+ 1581 0401 01       		.uleb128 0x1
+ 1582 0402 9C       		.byte	0x9c
+ 1583 0403 46050000 		.4byte	0x546
+ 1584 0407 09       		.uleb128 0x9
+ 1585 0408 00000000 		.4byte	.LASF26
+ 1586 040c 01       		.byte	0x1
+ 1587 040d 63       		.byte	0x63
+ 1588 040e 8F000000 		.4byte	0x8f
+ 1589 0412 00000000 		.4byte	.LLST0
+ 1590 0416 09       		.uleb128 0x9
+ 1591 0417 5B020000 		.4byte	.LASF27
+ 1592 041b 01       		.byte	0x1
+ 1593 041c 63       		.byte	0x63
+ 1594 041d 8F000000 		.4byte	0x8f
+ 1595 0421 28030000 		.4byte	.LLST1
+ 1596 0425 0A       		.uleb128 0xa
+ 1597 0426 30000000 		.4byte	.LVL37
+ 1598 042a A4000000 		.4byte	0xa4
+ 1599 042e 0A       		.uleb128 0xa
+ 1600 042f 36000000 		.4byte	.LVL39
+ 1601 0433 BE010000 		.4byte	0x1be
+ 1602 0437 0A       		.uleb128 0xa
+ 1603 0438 48000000 		.4byte	.LVL41
+ 1604 043c 02010000 		.4byte	0x102
+ 1605 0440 0A       		.uleb128 0xa
+ 1606 0441 4E000000 		.4byte	.LVL43
+ 1607 0445 60010000 		.4byte	0x160
+ 1608 0449 0A       		.uleb128 0xa
+ 1609 044a 60000000 		.4byte	.LVL45
+ 1610 044e 60010000 		.4byte	0x160
+ 1611 0452 0A       		.uleb128 0xa
+ 1612 0453 66000000 		.4byte	.LVL47
+ 1613 0457 02010000 		.4byte	0x102
+ 1614 045b 0A       		.uleb128 0xa
+ 1615 045c 78000000 		.4byte	.LVL49
+ 1616 0460 BE010000 		.4byte	0x1be
+ 1617 0464 0A       		.uleb128 0xa
+ 1618 0465 7E000000 		.4byte	.LVL51
+ 1619 0469 A4000000 		.4byte	0xa4
+ 1620 046d 0A       		.uleb128 0xa
+ 1621 046e A4000000 		.4byte	.LVL53
+ 1622 0472 1C020000 		.4byte	0x21c
+ 1623 0476 0A       		.uleb128 0xa
+ 1624 0477 AA000000 		.4byte	.LVL55
+ 1625 047b 36030000 		.4byte	0x336
+ 1626 047f 0A       		.uleb128 0xa
+ 1627 0480 BC000000 		.4byte	.LVL57
+ 1628 0484 7A020000 		.4byte	0x27a
+ 1629 0488 0A       		.uleb128 0xa
+ 1630 0489 C2000000 		.4byte	.LVL59
+ 1631 048d D8020000 		.4byte	0x2d8
+ 1632 0491 0A       		.uleb128 0xa
+ 1633 0492 D4000000 		.4byte	.LVL61
+ 1634 0496 D8020000 		.4byte	0x2d8
+ 1635 049a 0A       		.uleb128 0xa
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 37
+
+
+ 1636 049b DA000000 		.4byte	.LVL63
+ 1637 049f 7A020000 		.4byte	0x27a
+ 1638 04a3 0A       		.uleb128 0xa
+ 1639 04a4 EC000000 		.4byte	.LVL65
+ 1640 04a8 36030000 		.4byte	0x336
+ 1641 04ac 0A       		.uleb128 0xa
+ 1642 04ad F2000000 		.4byte	.LVL67
+ 1643 04b1 1C020000 		.4byte	0x21c
+ 1644 04b5 0A       		.uleb128 0xa
+ 1645 04b6 18010000 		.4byte	.LVL69
+ 1646 04ba A4000000 		.4byte	0xa4
+ 1647 04be 0A       		.uleb128 0xa
+ 1648 04bf 26010000 		.4byte	.LVL71
+ 1649 04c3 36030000 		.4byte	0x336
+ 1650 04c7 0A       		.uleb128 0xa
+ 1651 04c8 38010000 		.4byte	.LVL73
+ 1652 04cc 1C020000 		.4byte	0x21c
+ 1653 04d0 0A       		.uleb128 0xa
+ 1654 04d1 46010000 		.4byte	.LVL75
+ 1655 04d5 BE010000 		.4byte	0x1be
+ 1656 04d9 0A       		.uleb128 0xa
+ 1657 04da 58010000 		.4byte	.LVL77
+ 1658 04de 02010000 		.4byte	0x102
+ 1659 04e2 0A       		.uleb128 0xa
+ 1660 04e3 66010000 		.4byte	.LVL79
+ 1661 04e7 D8020000 		.4byte	0x2d8
+ 1662 04eb 0A       		.uleb128 0xa
+ 1663 04ec 78010000 		.4byte	.LVL81
+ 1664 04f0 7A020000 		.4byte	0x27a
+ 1665 04f4 0A       		.uleb128 0xa
+ 1666 04f5 86010000 		.4byte	.LVL83
+ 1667 04f9 60010000 		.4byte	0x160
+ 1668 04fd 0A       		.uleb128 0xa
+ 1669 04fe 98010000 		.4byte	.LVL85
+ 1670 0502 60010000 		.4byte	0x160
+ 1671 0506 0A       		.uleb128 0xa
+ 1672 0507 A6010000 		.4byte	.LVL87
+ 1673 050b 7A020000 		.4byte	0x27a
+ 1674 050f 0A       		.uleb128 0xa
+ 1675 0510 B8010000 		.4byte	.LVL89
+ 1676 0514 D8020000 		.4byte	0x2d8
+ 1677 0518 0A       		.uleb128 0xa
+ 1678 0519 C6010000 		.4byte	.LVL91
+ 1679 051d 02010000 		.4byte	0x102
+ 1680 0521 0A       		.uleb128 0xa
+ 1681 0522 D8010000 		.4byte	.LVL93
+ 1682 0526 BE010000 		.4byte	0x1be
+ 1683 052a 0A       		.uleb128 0xa
+ 1684 052b E6010000 		.4byte	.LVL95
+ 1685 052f 1C020000 		.4byte	0x21c
+ 1686 0533 0A       		.uleb128 0xa
+ 1687 0534 F8010000 		.4byte	.LVL97
+ 1688 0538 36030000 		.4byte	0x336
+ 1689 053c 0A       		.uleb128 0xa
+ 1690 053d 04020000 		.4byte	.LVL99
+ 1691 0541 A4000000 		.4byte	0xa4
+ 1692 0545 00       		.byte	0
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 38
+
+
+ 1693 0546 0B       		.uleb128 0xb
+ 1694 0547 4E010000 		.4byte	.LASF28
+ 1695 054b 01       		.byte	0x1
+ 1696 054c 5A01     		.2byte	0x15a
+ 1697 054e 00000000 		.4byte	.LFB73
+ 1698 0552 3C000000 		.4byte	.LFE73-.LFB73
+ 1699 0556 01       		.uleb128 0x1
+ 1700 0557 9C       		.byte	0x9c
+ 1701 0558 09060000 		.4byte	0x609
+ 1702 055c 0C       		.uleb128 0xc
+ 1703 055d DF000000 		.4byte	.LASF29
+ 1704 0561 01       		.byte	0x1
+ 1705 0562 5A01     		.2byte	0x15a
+ 1706 0564 68000000 		.4byte	0x68
+ 1707 0568 50060000 		.4byte	.LLST2
+ 1708 056c 0C       		.uleb128 0xc
+ 1709 056d A4010000 		.4byte	.LASF30
+ 1710 0571 01       		.byte	0x1
+ 1711 0572 5A01     		.2byte	0x15a
+ 1712 0574 8F000000 		.4byte	0x8f
+ 1713 0578 84060000 		.4byte	.LLST3
+ 1714 057c 0D       		.uleb128 0xd
+ 1715 057d 00000000 		.4byte	.LASF26
+ 1716 0581 01       		.byte	0x1
+ 1717 0582 5C01     		.2byte	0x15c
+ 1718 0584 8F000000 		.4byte	0x8f
+ 1719 0588 01       		.uleb128 0x1
+ 1720 0589 56       		.byte	0x56
+ 1721 058a 0E       		.uleb128 0xe
+ 1722 058b 00000000 		.4byte	.Ldebug_ranges0+0
+ 1723 058f CA050000 		.4byte	0x5ca
+ 1724 0593 0F       		.uleb128 0xf
+ 1725 0594 6900     		.ascii	"i\000"
+ 1726 0596 01       		.byte	0x1
+ 1727 0597 5E01     		.2byte	0x15e
+ 1728 0599 68000000 		.4byte	0x68
+ 1729 059d BE060000 		.4byte	.LLST4
+ 1730 05a1 06       		.uleb128 0x6
+ 1731 05a2 12000000 		.4byte	.LVL103
+ 1732 05a6 F2030000 		.4byte	0x3f2
+ 1733 05aa BA050000 		.4byte	0x5ba
+ 1734 05ae 07       		.uleb128 0x7
+ 1735 05af 01       		.uleb128 0x1
+ 1736 05b0 50       		.byte	0x50
+ 1737 05b1 02       		.uleb128 0x2
+ 1738 05b2 76       		.byte	0x76
+ 1739 05b3 00       		.sleb128 0
+ 1740 05b4 07       		.uleb128 0x7
+ 1741 05b5 01       		.uleb128 0x1
+ 1742 05b6 51       		.byte	0x51
+ 1743 05b7 01       		.uleb128 0x1
+ 1744 05b8 30       		.byte	0x30
+ 1745 05b9 00       		.byte	0
+ 1746 05ba 08       		.uleb128 0x8
+ 1747 05bb 18000000 		.4byte	.LVL104
+ 1748 05bf 67070000 		.4byte	0x767
+ 1749 05c3 07       		.uleb128 0x7
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 39
+
+
+ 1750 05c4 01       		.uleb128 0x1
+ 1751 05c5 50       		.byte	0x50
+ 1752 05c6 01       		.uleb128 0x1
+ 1753 05c7 35       		.byte	0x35
+ 1754 05c8 00       		.byte	0
+ 1755 05c9 00       		.byte	0
+ 1756 05ca 10       		.uleb128 0x10
+ 1757 05cb 26000000 		.4byte	.LBB4
+ 1758 05cf 14000000 		.4byte	.LBE4-.LBB4
+ 1759 05d3 11       		.uleb128 0x11
+ 1760 05d4 6900     		.ascii	"i\000"
+ 1761 05d6 01       		.byte	0x1
+ 1762 05d7 6801     		.2byte	0x168
+ 1763 05d9 68000000 		.4byte	0x68
+ 1764 05dd 01       		.uleb128 0x1
+ 1765 05de 54       		.byte	0x54
+ 1766 05df 06       		.uleb128 0x6
+ 1767 05e0 2E000000 		.4byte	.LVL110
+ 1768 05e4 F2030000 		.4byte	0x3f2
+ 1769 05e8 F8050000 		.4byte	0x5f8
+ 1770 05ec 07       		.uleb128 0x7
+ 1771 05ed 01       		.uleb128 0x1
+ 1772 05ee 50       		.byte	0x50
+ 1773 05ef 02       		.uleb128 0x2
+ 1774 05f0 76       		.byte	0x76
+ 1775 05f1 00       		.sleb128 0
+ 1776 05f2 07       		.uleb128 0x7
+ 1777 05f3 01       		.uleb128 0x1
+ 1778 05f4 51       		.byte	0x51
+ 1779 05f5 01       		.uleb128 0x1
+ 1780 05f6 31       		.byte	0x31
+ 1781 05f7 00       		.byte	0
+ 1782 05f8 08       		.uleb128 0x8
+ 1783 05f9 34000000 		.4byte	.LVL111
+ 1784 05fd 67070000 		.4byte	0x767
+ 1785 0601 07       		.uleb128 0x7
+ 1786 0602 01       		.uleb128 0x1
+ 1787 0603 50       		.byte	0x50
+ 1788 0604 01       		.uleb128 0x1
+ 1789 0605 35       		.byte	0x35
+ 1790 0606 00       		.byte	0
+ 1791 0607 00       		.byte	0
+ 1792 0608 00       		.byte	0
+ 1793 0609 12       		.uleb128 0x12
+ 1794 060a 0A000000 		.4byte	.LASF31
+ 1795 060e 01       		.byte	0x1
+ 1796 060f 8001     		.2byte	0x180
+ 1797 0611 00000000 		.4byte	.LFB75
+ 1798 0615 74000000 		.4byte	.LFE75-.LFB75
+ 1799 0619 01       		.uleb128 0x1
+ 1800 061a 9C       		.byte	0x9c
+ 1801 061b 98060000 		.4byte	0x698
+ 1802 061f 0C       		.uleb128 0xc
+ 1803 0620 F7000000 		.4byte	.LASF32
+ 1804 0624 01       		.byte	0x1
+ 1805 0625 8001     		.2byte	0x180
+ 1806 0627 68000000 		.4byte	0x68
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 40
+
+
+ 1807 062b DC060000 		.4byte	.LLST5
+ 1808 062f 0C       		.uleb128 0xc
+ 1809 0630 A4010000 		.4byte	.LASF30
+ 1810 0634 01       		.byte	0x1
+ 1811 0635 8001     		.2byte	0x180
+ 1812 0637 8F000000 		.4byte	0x8f
+ 1813 063b 1E070000 		.4byte	.LLST6
+ 1814 063f 13       		.uleb128 0x13
+ 1815 0640 12000000 		.4byte	.LBB5
+ 1816 0644 20000000 		.4byte	.LBE5-.LBB5
+ 1817 0648 6D060000 		.4byte	0x66d
+ 1818 064c 14       		.uleb128 0x14
+ 1819 064d 5E000000 		.4byte	.LASF33
+ 1820 0651 01       		.byte	0x1
+ 1821 0652 8701     		.2byte	0x187
+ 1822 0654 68000000 		.4byte	0x68
+ 1823 0658 58070000 		.4byte	.LLST7
+ 1824 065c 08       		.uleb128 0x8
+ 1825 065d 30000000 		.4byte	.LVL118
+ 1826 0661 46050000 		.4byte	0x546
+ 1827 0665 07       		.uleb128 0x7
+ 1828 0666 01       		.uleb128 0x1
+ 1829 0667 51       		.byte	0x51
+ 1830 0668 02       		.uleb128 0x2
+ 1831 0669 75       		.byte	0x75
+ 1832 066a 00       		.sleb128 0
+ 1833 066b 00       		.byte	0
+ 1834 066c 00       		.byte	0
+ 1835 066d 10       		.uleb128 0x10
+ 1836 066e 3A000000 		.4byte	.LBB6
+ 1837 0672 3A000000 		.4byte	.LBE6-.LBB6
+ 1838 0676 14       		.uleb128 0x14
+ 1839 0677 5E000000 		.4byte	.LASF33
+ 1840 067b 01       		.byte	0x1
+ 1841 067c 9201     		.2byte	0x192
+ 1842 067e 68000000 		.4byte	0x68
+ 1843 0682 6B070000 		.4byte	.LLST8
+ 1844 0686 08       		.uleb128 0x8
+ 1845 0687 58000000 		.4byte	.LVL124
+ 1846 068b 46050000 		.4byte	0x546
+ 1847 068f 07       		.uleb128 0x7
+ 1848 0690 01       		.uleb128 0x1
+ 1849 0691 51       		.byte	0x51
+ 1850 0692 02       		.uleb128 0x2
+ 1851 0693 75       		.byte	0x75
+ 1852 0694 00       		.sleb128 0
+ 1853 0695 00       		.byte	0
+ 1854 0696 00       		.byte	0
+ 1855 0697 00       		.byte	0
+ 1856 0698 0B       		.uleb128 0xb
+ 1857 0699 CC000000 		.4byte	.LASF34
+ 1858 069d 01       		.byte	0x1
+ 1859 069e 7501     		.2byte	0x175
+ 1860 06a0 00000000 		.4byte	.LFB74
+ 1861 06a4 30000000 		.4byte	.LFE74-.LFB74
+ 1862 06a8 01       		.uleb128 0x1
+ 1863 06a9 9C       		.byte	0x9c
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 41
+
+
+ 1864 06aa 08070000 		.4byte	0x708
+ 1865 06ae 0C       		.uleb128 0xc
+ 1866 06af A4010000 		.4byte	.LASF30
+ 1867 06b3 01       		.byte	0x1
+ 1868 06b4 7501     		.2byte	0x175
+ 1869 06b6 8F000000 		.4byte	0x8f
+ 1870 06ba 7E070000 		.4byte	.LLST9
+ 1871 06be 06       		.uleb128 0x6
+ 1872 06bf 12000000 		.4byte	.LVL128
+ 1873 06c3 46050000 		.4byte	0x546
+ 1874 06c7 D8060000 		.4byte	0x6d8
+ 1875 06cb 07       		.uleb128 0x7
+ 1876 06cc 01       		.uleb128 0x1
+ 1877 06cd 50       		.byte	0x50
+ 1878 06ce 02       		.uleb128 0x2
+ 1879 06cf 09       		.byte	0x9
+ 1880 06d0 A0       		.byte	0xa0
+ 1881 06d1 07       		.uleb128 0x7
+ 1882 06d2 01       		.uleb128 0x1
+ 1883 06d3 51       		.byte	0x51
+ 1884 06d4 02       		.uleb128 0x2
+ 1885 06d5 74       		.byte	0x74
+ 1886 06d6 00       		.sleb128 0
+ 1887 06d7 00       		.byte	0
+ 1888 06d8 06       		.uleb128 0x6
+ 1889 06d9 1E000000 		.4byte	.LVL131
+ 1890 06dd 46050000 		.4byte	0x546
+ 1891 06e1 F2060000 		.4byte	0x6f2
+ 1892 06e5 07       		.uleb128 0x7
+ 1893 06e6 01       		.uleb128 0x1
+ 1894 06e7 50       		.byte	0x50
+ 1895 06e8 02       		.uleb128 0x2
+ 1896 06e9 09       		.byte	0x9
+ 1897 06ea D0       		.byte	0xd0
+ 1898 06eb 07       		.uleb128 0x7
+ 1899 06ec 01       		.uleb128 0x1
+ 1900 06ed 51       		.byte	0x51
+ 1901 06ee 02       		.uleb128 0x2
+ 1902 06ef 74       		.byte	0x74
+ 1903 06f0 00       		.sleb128 0
+ 1904 06f1 00       		.byte	0
+ 1905 06f2 08       		.uleb128 0x8
+ 1906 06f3 2A000000 		.4byte	.LVL132
+ 1907 06f7 09060000 		.4byte	0x609
+ 1908 06fb 07       		.uleb128 0x7
+ 1909 06fc 01       		.uleb128 0x1
+ 1910 06fd 50       		.byte	0x50
+ 1911 06fe 01       		.uleb128 0x1
+ 1912 06ff 30       		.byte	0x30
+ 1913 0700 07       		.uleb128 0x7
+ 1914 0701 01       		.uleb128 0x1
+ 1915 0702 51       		.byte	0x51
+ 1916 0703 02       		.uleb128 0x2
+ 1917 0704 74       		.byte	0x74
+ 1918 0705 00       		.sleb128 0
+ 1919 0706 00       		.byte	0
+ 1920 0707 00       		.byte	0
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 42
+
+
+ 1921 0708 15       		.uleb128 0x15
+ 1922 0709 6A020000 		.4byte	.LASF35
+ 1923 070d 01       		.byte	0x1
+ 1924 070e 1D       		.byte	0x1d
+ 1925 070f 8F000000 		.4byte	0x8f
+ 1926 0713 05       		.uleb128 0x5
+ 1927 0714 03       		.byte	0x3
+ 1928 0715 00000000 		.4byte	stepcount
+ 1929 0719 16       		.uleb128 0x16
+ 1930 071a 41010000 		.4byte	.LASF36
+ 1931 071e 04       		.byte	0x4
+ 1932 071f 1207     		.2byte	0x712
+ 1933 0721 25070000 		.4byte	0x725
+ 1934 0725 17       		.uleb128 0x17
+ 1935 0726 76000000 		.4byte	0x76
+ 1936 072a 18       		.uleb128 0x18
+ 1937 072b 2D000000 		.4byte	.LASF37
+ 1938 072f 01       		.byte	0x1
+ 1939 0730 1E       		.byte	0x1e
+ 1940 0731 68000000 		.4byte	0x68
+ 1941 0735 05       		.uleb128 0x5
+ 1942 0736 03       		.byte	0x3
+ 1943 0737 00000000 		.4byte	currentPosition
+ 1944 073b 19       		.uleb128 0x19
+ 1945 073c 7B010000 		.4byte	.LASF38
+ 1946 0740 7B010000 		.4byte	.LASF38
+ 1947 0744 05       		.byte	0x5
+ 1948 0745 26       		.byte	0x26
+ 1949 0746 19       		.uleb128 0x19
+ 1950 0747 9E000000 		.4byte	.LASF39
+ 1951 074b 9E000000 		.4byte	.LASF39
+ 1952 074f 06       		.byte	0x6
+ 1953 0750 26       		.byte	0x26
+ 1954 0751 19       		.uleb128 0x19
+ 1955 0752 C3000000 		.4byte	.LASF40
+ 1956 0756 C3000000 		.4byte	.LASF40
+ 1957 075a 07       		.byte	0x7
+ 1958 075b 26       		.byte	0x26
+ 1959 075c 19       		.uleb128 0x19
+ 1960 075d EE000000 		.4byte	.LASF41
+ 1961 0761 EE000000 		.4byte	.LASF41
+ 1962 0765 08       		.byte	0x8
+ 1963 0766 26       		.byte	0x26
+ 1964 0767 19       		.uleb128 0x19
+ 1965 0768 9A020000 		.4byte	.LASF42
+ 1966 076c 9A020000 		.4byte	.LASF42
+ 1967 0770 09       		.byte	0x9
+ 1968 0771 76       		.byte	0x76
+ 1969 0772 00       		.byte	0
+ 1970              		.section	.debug_abbrev,"",%progbits
+ 1971              	.Ldebug_abbrev0:
+ 1972 0000 01       		.uleb128 0x1
+ 1973 0001 11       		.uleb128 0x11
+ 1974 0002 01       		.byte	0x1
+ 1975 0003 25       		.uleb128 0x25
+ 1976 0004 0E       		.uleb128 0xe
+ 1977 0005 13       		.uleb128 0x13
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 43
+
+
+ 1978 0006 0B       		.uleb128 0xb
+ 1979 0007 03       		.uleb128 0x3
+ 1980 0008 0E       		.uleb128 0xe
+ 1981 0009 1B       		.uleb128 0x1b
+ 1982 000a 0E       		.uleb128 0xe
+ 1983 000b 55       		.uleb128 0x55
+ 1984 000c 17       		.uleb128 0x17
+ 1985 000d 11       		.uleb128 0x11
+ 1986 000e 01       		.uleb128 0x1
+ 1987 000f 10       		.uleb128 0x10
+ 1988 0010 17       		.uleb128 0x17
+ 1989 0011 00       		.byte	0
+ 1990 0012 00       		.byte	0
+ 1991 0013 02       		.uleb128 0x2
+ 1992 0014 24       		.uleb128 0x24
+ 1993 0015 00       		.byte	0
+ 1994 0016 0B       		.uleb128 0xb
+ 1995 0017 0B       		.uleb128 0xb
+ 1996 0018 3E       		.uleb128 0x3e
+ 1997 0019 0B       		.uleb128 0xb
+ 1998 001a 03       		.uleb128 0x3
+ 1999 001b 0E       		.uleb128 0xe
+ 2000 001c 00       		.byte	0
+ 2001 001d 00       		.byte	0
+ 2002 001e 03       		.uleb128 0x3
+ 2003 001f 16       		.uleb128 0x16
+ 2004 0020 00       		.byte	0
+ 2005 0021 03       		.uleb128 0x3
+ 2006 0022 0E       		.uleb128 0xe
+ 2007 0023 3A       		.uleb128 0x3a
+ 2008 0024 0B       		.uleb128 0xb
+ 2009 0025 3B       		.uleb128 0x3b
+ 2010 0026 0B       		.uleb128 0xb
+ 2011 0027 49       		.uleb128 0x49
+ 2012 0028 13       		.uleb128 0x13
+ 2013 0029 00       		.byte	0
+ 2014 002a 00       		.byte	0
+ 2015 002b 04       		.uleb128 0x4
+ 2016 002c 24       		.uleb128 0x24
+ 2017 002d 00       		.byte	0
+ 2018 002e 0B       		.uleb128 0xb
+ 2019 002f 0B       		.uleb128 0xb
+ 2020 0030 3E       		.uleb128 0x3e
+ 2021 0031 0B       		.uleb128 0xb
+ 2022 0032 03       		.uleb128 0x3
+ 2023 0033 08       		.uleb128 0x8
+ 2024 0034 00       		.byte	0
+ 2025 0035 00       		.byte	0
+ 2026 0036 05       		.uleb128 0x5
+ 2027 0037 2E       		.uleb128 0x2e
+ 2028 0038 01       		.byte	0x1
+ 2029 0039 3F       		.uleb128 0x3f
+ 2030 003a 19       		.uleb128 0x19
+ 2031 003b 03       		.uleb128 0x3
+ 2032 003c 0E       		.uleb128 0xe
+ 2033 003d 3A       		.uleb128 0x3a
+ 2034 003e 0B       		.uleb128 0xb
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 44
+
+
+ 2035 003f 3B       		.uleb128 0x3b
+ 2036 0040 0B       		.uleb128 0xb
+ 2037 0041 27       		.uleb128 0x27
+ 2038 0042 19       		.uleb128 0x19
+ 2039 0043 11       		.uleb128 0x11
+ 2040 0044 01       		.uleb128 0x1
+ 2041 0045 12       		.uleb128 0x12
+ 2042 0046 06       		.uleb128 0x6
+ 2043 0047 40       		.uleb128 0x40
+ 2044 0048 18       		.uleb128 0x18
+ 2045 0049 9742     		.uleb128 0x2117
+ 2046 004b 19       		.uleb128 0x19
+ 2047 004c 01       		.uleb128 0x1
+ 2048 004d 13       		.uleb128 0x13
+ 2049 004e 00       		.byte	0
+ 2050 004f 00       		.byte	0
+ 2051 0050 06       		.uleb128 0x6
+ 2052 0051 898201   		.uleb128 0x4109
+ 2053 0054 01       		.byte	0x1
+ 2054 0055 11       		.uleb128 0x11
+ 2055 0056 01       		.uleb128 0x1
+ 2056 0057 31       		.uleb128 0x31
+ 2057 0058 13       		.uleb128 0x13
+ 2058 0059 01       		.uleb128 0x1
+ 2059 005a 13       		.uleb128 0x13
+ 2060 005b 00       		.byte	0
+ 2061 005c 00       		.byte	0
+ 2062 005d 07       		.uleb128 0x7
+ 2063 005e 8A8201   		.uleb128 0x410a
+ 2064 0061 00       		.byte	0
+ 2065 0062 02       		.uleb128 0x2
+ 2066 0063 18       		.uleb128 0x18
+ 2067 0064 9142     		.uleb128 0x2111
+ 2068 0066 18       		.uleb128 0x18
+ 2069 0067 00       		.byte	0
+ 2070 0068 00       		.byte	0
+ 2071 0069 08       		.uleb128 0x8
+ 2072 006a 898201   		.uleb128 0x4109
+ 2073 006d 01       		.byte	0x1
+ 2074 006e 11       		.uleb128 0x11
+ 2075 006f 01       		.uleb128 0x1
+ 2076 0070 31       		.uleb128 0x31
+ 2077 0071 13       		.uleb128 0x13
+ 2078 0072 00       		.byte	0
+ 2079 0073 00       		.byte	0
+ 2080 0074 09       		.uleb128 0x9
+ 2081 0075 05       		.uleb128 0x5
+ 2082 0076 00       		.byte	0
+ 2083 0077 03       		.uleb128 0x3
+ 2084 0078 0E       		.uleb128 0xe
+ 2085 0079 3A       		.uleb128 0x3a
+ 2086 007a 0B       		.uleb128 0xb
+ 2087 007b 3B       		.uleb128 0x3b
+ 2088 007c 0B       		.uleb128 0xb
+ 2089 007d 49       		.uleb128 0x49
+ 2090 007e 13       		.uleb128 0x13
+ 2091 007f 02       		.uleb128 0x2
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 45
+
+
+ 2092 0080 17       		.uleb128 0x17
+ 2093 0081 00       		.byte	0
+ 2094 0082 00       		.byte	0
+ 2095 0083 0A       		.uleb128 0xa
+ 2096 0084 898201   		.uleb128 0x4109
+ 2097 0087 00       		.byte	0
+ 2098 0088 11       		.uleb128 0x11
+ 2099 0089 01       		.uleb128 0x1
+ 2100 008a 31       		.uleb128 0x31
+ 2101 008b 13       		.uleb128 0x13
+ 2102 008c 00       		.byte	0
+ 2103 008d 00       		.byte	0
+ 2104 008e 0B       		.uleb128 0xb
+ 2105 008f 2E       		.uleb128 0x2e
+ 2106 0090 01       		.byte	0x1
+ 2107 0091 3F       		.uleb128 0x3f
+ 2108 0092 19       		.uleb128 0x19
+ 2109 0093 03       		.uleb128 0x3
+ 2110 0094 0E       		.uleb128 0xe
+ 2111 0095 3A       		.uleb128 0x3a
+ 2112 0096 0B       		.uleb128 0xb
+ 2113 0097 3B       		.uleb128 0x3b
+ 2114 0098 05       		.uleb128 0x5
+ 2115 0099 27       		.uleb128 0x27
+ 2116 009a 19       		.uleb128 0x19
+ 2117 009b 11       		.uleb128 0x11
+ 2118 009c 01       		.uleb128 0x1
+ 2119 009d 12       		.uleb128 0x12
+ 2120 009e 06       		.uleb128 0x6
+ 2121 009f 40       		.uleb128 0x40
+ 2122 00a0 18       		.uleb128 0x18
+ 2123 00a1 9742     		.uleb128 0x2117
+ 2124 00a3 19       		.uleb128 0x19
+ 2125 00a4 01       		.uleb128 0x1
+ 2126 00a5 13       		.uleb128 0x13
+ 2127 00a6 00       		.byte	0
+ 2128 00a7 00       		.byte	0
+ 2129 00a8 0C       		.uleb128 0xc
+ 2130 00a9 05       		.uleb128 0x5
+ 2131 00aa 00       		.byte	0
+ 2132 00ab 03       		.uleb128 0x3
+ 2133 00ac 0E       		.uleb128 0xe
+ 2134 00ad 3A       		.uleb128 0x3a
+ 2135 00ae 0B       		.uleb128 0xb
+ 2136 00af 3B       		.uleb128 0x3b
+ 2137 00b0 05       		.uleb128 0x5
+ 2138 00b1 49       		.uleb128 0x49
+ 2139 00b2 13       		.uleb128 0x13
+ 2140 00b3 02       		.uleb128 0x2
+ 2141 00b4 17       		.uleb128 0x17
+ 2142 00b5 00       		.byte	0
+ 2143 00b6 00       		.byte	0
+ 2144 00b7 0D       		.uleb128 0xd
+ 2145 00b8 34       		.uleb128 0x34
+ 2146 00b9 00       		.byte	0
+ 2147 00ba 03       		.uleb128 0x3
+ 2148 00bb 0E       		.uleb128 0xe
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 46
+
+
+ 2149 00bc 3A       		.uleb128 0x3a
+ 2150 00bd 0B       		.uleb128 0xb
+ 2151 00be 3B       		.uleb128 0x3b
+ 2152 00bf 05       		.uleb128 0x5
+ 2153 00c0 49       		.uleb128 0x49
+ 2154 00c1 13       		.uleb128 0x13
+ 2155 00c2 02       		.uleb128 0x2
+ 2156 00c3 18       		.uleb128 0x18
+ 2157 00c4 00       		.byte	0
+ 2158 00c5 00       		.byte	0
+ 2159 00c6 0E       		.uleb128 0xe
+ 2160 00c7 0B       		.uleb128 0xb
+ 2161 00c8 01       		.byte	0x1
+ 2162 00c9 55       		.uleb128 0x55
+ 2163 00ca 17       		.uleb128 0x17
+ 2164 00cb 01       		.uleb128 0x1
+ 2165 00cc 13       		.uleb128 0x13
+ 2166 00cd 00       		.byte	0
+ 2167 00ce 00       		.byte	0
+ 2168 00cf 0F       		.uleb128 0xf
+ 2169 00d0 34       		.uleb128 0x34
+ 2170 00d1 00       		.byte	0
+ 2171 00d2 03       		.uleb128 0x3
+ 2172 00d3 08       		.uleb128 0x8
+ 2173 00d4 3A       		.uleb128 0x3a
+ 2174 00d5 0B       		.uleb128 0xb
+ 2175 00d6 3B       		.uleb128 0x3b
+ 2176 00d7 05       		.uleb128 0x5
+ 2177 00d8 49       		.uleb128 0x49
+ 2178 00d9 13       		.uleb128 0x13
+ 2179 00da 02       		.uleb128 0x2
+ 2180 00db 17       		.uleb128 0x17
+ 2181 00dc 00       		.byte	0
+ 2182 00dd 00       		.byte	0
+ 2183 00de 10       		.uleb128 0x10
+ 2184 00df 0B       		.uleb128 0xb
+ 2185 00e0 01       		.byte	0x1
+ 2186 00e1 11       		.uleb128 0x11
+ 2187 00e2 01       		.uleb128 0x1
+ 2188 00e3 12       		.uleb128 0x12
+ 2189 00e4 06       		.uleb128 0x6
+ 2190 00e5 00       		.byte	0
+ 2191 00e6 00       		.byte	0
+ 2192 00e7 11       		.uleb128 0x11
+ 2193 00e8 34       		.uleb128 0x34
+ 2194 00e9 00       		.byte	0
+ 2195 00ea 03       		.uleb128 0x3
+ 2196 00eb 08       		.uleb128 0x8
+ 2197 00ec 3A       		.uleb128 0x3a
+ 2198 00ed 0B       		.uleb128 0xb
+ 2199 00ee 3B       		.uleb128 0x3b
+ 2200 00ef 05       		.uleb128 0x5
+ 2201 00f0 49       		.uleb128 0x49
+ 2202 00f1 13       		.uleb128 0x13
+ 2203 00f2 02       		.uleb128 0x2
+ 2204 00f3 18       		.uleb128 0x18
+ 2205 00f4 00       		.byte	0
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 47
+
+
+ 2206 00f5 00       		.byte	0
+ 2207 00f6 12       		.uleb128 0x12
+ 2208 00f7 2E       		.uleb128 0x2e
+ 2209 00f8 01       		.byte	0x1
+ 2210 00f9 3F       		.uleb128 0x3f
+ 2211 00fa 19       		.uleb128 0x19
+ 2212 00fb 03       		.uleb128 0x3
+ 2213 00fc 0E       		.uleb128 0xe
+ 2214 00fd 3A       		.uleb128 0x3a
+ 2215 00fe 0B       		.uleb128 0xb
+ 2216 00ff 3B       		.uleb128 0x3b
+ 2217 0100 05       		.uleb128 0x5
+ 2218 0101 27       		.uleb128 0x27
+ 2219 0102 19       		.uleb128 0x19
+ 2220 0103 11       		.uleb128 0x11
+ 2221 0104 01       		.uleb128 0x1
+ 2222 0105 12       		.uleb128 0x12
+ 2223 0106 06       		.uleb128 0x6
+ 2224 0107 40       		.uleb128 0x40
+ 2225 0108 18       		.uleb128 0x18
+ 2226 0109 9642     		.uleb128 0x2116
+ 2227 010b 19       		.uleb128 0x19
+ 2228 010c 01       		.uleb128 0x1
+ 2229 010d 13       		.uleb128 0x13
+ 2230 010e 00       		.byte	0
+ 2231 010f 00       		.byte	0
+ 2232 0110 13       		.uleb128 0x13
+ 2233 0111 0B       		.uleb128 0xb
+ 2234 0112 01       		.byte	0x1
+ 2235 0113 11       		.uleb128 0x11
+ 2236 0114 01       		.uleb128 0x1
+ 2237 0115 12       		.uleb128 0x12
+ 2238 0116 06       		.uleb128 0x6
+ 2239 0117 01       		.uleb128 0x1
+ 2240 0118 13       		.uleb128 0x13
+ 2241 0119 00       		.byte	0
+ 2242 011a 00       		.byte	0
+ 2243 011b 14       		.uleb128 0x14
+ 2244 011c 34       		.uleb128 0x34
+ 2245 011d 00       		.byte	0
+ 2246 011e 03       		.uleb128 0x3
+ 2247 011f 0E       		.uleb128 0xe
+ 2248 0120 3A       		.uleb128 0x3a
+ 2249 0121 0B       		.uleb128 0xb
+ 2250 0122 3B       		.uleb128 0x3b
+ 2251 0123 05       		.uleb128 0x5
+ 2252 0124 49       		.uleb128 0x49
+ 2253 0125 13       		.uleb128 0x13
+ 2254 0126 02       		.uleb128 0x2
+ 2255 0127 17       		.uleb128 0x17
+ 2256 0128 00       		.byte	0
+ 2257 0129 00       		.byte	0
+ 2258 012a 15       		.uleb128 0x15
+ 2259 012b 34       		.uleb128 0x34
+ 2260 012c 00       		.byte	0
+ 2261 012d 03       		.uleb128 0x3
+ 2262 012e 0E       		.uleb128 0xe
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 48
+
+
+ 2263 012f 3A       		.uleb128 0x3a
+ 2264 0130 0B       		.uleb128 0xb
+ 2265 0131 3B       		.uleb128 0x3b
+ 2266 0132 0B       		.uleb128 0xb
+ 2267 0133 49       		.uleb128 0x49
+ 2268 0134 13       		.uleb128 0x13
+ 2269 0135 02       		.uleb128 0x2
+ 2270 0136 18       		.uleb128 0x18
+ 2271 0137 00       		.byte	0
+ 2272 0138 00       		.byte	0
+ 2273 0139 16       		.uleb128 0x16
+ 2274 013a 34       		.uleb128 0x34
+ 2275 013b 00       		.byte	0
+ 2276 013c 03       		.uleb128 0x3
+ 2277 013d 0E       		.uleb128 0xe
+ 2278 013e 3A       		.uleb128 0x3a
+ 2279 013f 0B       		.uleb128 0xb
+ 2280 0140 3B       		.uleb128 0x3b
+ 2281 0141 05       		.uleb128 0x5
+ 2282 0142 49       		.uleb128 0x49
+ 2283 0143 13       		.uleb128 0x13
+ 2284 0144 3F       		.uleb128 0x3f
+ 2285 0145 19       		.uleb128 0x19
+ 2286 0146 3C       		.uleb128 0x3c
+ 2287 0147 19       		.uleb128 0x19
+ 2288 0148 00       		.byte	0
+ 2289 0149 00       		.byte	0
+ 2290 014a 17       		.uleb128 0x17
+ 2291 014b 35       		.uleb128 0x35
+ 2292 014c 00       		.byte	0
+ 2293 014d 49       		.uleb128 0x49
+ 2294 014e 13       		.uleb128 0x13
+ 2295 014f 00       		.byte	0
+ 2296 0150 00       		.byte	0
+ 2297 0151 18       		.uleb128 0x18
+ 2298 0152 34       		.uleb128 0x34
+ 2299 0153 00       		.byte	0
+ 2300 0154 03       		.uleb128 0x3
+ 2301 0155 0E       		.uleb128 0xe
+ 2302 0156 3A       		.uleb128 0x3a
+ 2303 0157 0B       		.uleb128 0xb
+ 2304 0158 3B       		.uleb128 0x3b
+ 2305 0159 0B       		.uleb128 0xb
+ 2306 015a 49       		.uleb128 0x49
+ 2307 015b 13       		.uleb128 0x13
+ 2308 015c 3F       		.uleb128 0x3f
+ 2309 015d 19       		.uleb128 0x19
+ 2310 015e 02       		.uleb128 0x2
+ 2311 015f 18       		.uleb128 0x18
+ 2312 0160 00       		.byte	0
+ 2313 0161 00       		.byte	0
+ 2314 0162 19       		.uleb128 0x19
+ 2315 0163 2E       		.uleb128 0x2e
+ 2316 0164 00       		.byte	0
+ 2317 0165 3F       		.uleb128 0x3f
+ 2318 0166 19       		.uleb128 0x19
+ 2319 0167 3C       		.uleb128 0x3c
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 49
+
+
+ 2320 0168 19       		.uleb128 0x19
+ 2321 0169 6E       		.uleb128 0x6e
+ 2322 016a 0E       		.uleb128 0xe
+ 2323 016b 03       		.uleb128 0x3
+ 2324 016c 0E       		.uleb128 0xe
+ 2325 016d 3A       		.uleb128 0x3a
+ 2326 016e 0B       		.uleb128 0xb
+ 2327 016f 3B       		.uleb128 0x3b
+ 2328 0170 0B       		.uleb128 0xb
+ 2329 0171 00       		.byte	0
+ 2330 0172 00       		.byte	0
+ 2331 0173 00       		.byte	0
+ 2332              		.section	.debug_loc,"",%progbits
+ 2333              	.Ldebug_loc0:
+ 2334              	.LLST0:
+ 2335 0000 00000000 		.4byte	.LVL36
+ 2336 0004 2F000000 		.4byte	.LVL37-1
+ 2337 0008 0100     		.2byte	0x1
+ 2338 000a 50       		.byte	0x50
+ 2339 000b 2F000000 		.4byte	.LVL37-1
+ 2340 000f 32000000 		.4byte	.LVL38
+ 2341 0013 0400     		.2byte	0x4
+ 2342 0015 F3       		.byte	0xf3
+ 2343 0016 01       		.uleb128 0x1
+ 2344 0017 50       		.byte	0x50
+ 2345 0018 9F       		.byte	0x9f
+ 2346 0019 32000000 		.4byte	.LVL38
+ 2347 001d 35000000 		.4byte	.LVL39-1
+ 2348 0021 0100     		.2byte	0x1
+ 2349 0023 50       		.byte	0x50
+ 2350 0024 35000000 		.4byte	.LVL39-1
+ 2351 0028 40000000 		.4byte	.LVL40
+ 2352 002c 0400     		.2byte	0x4
+ 2353 002e F3       		.byte	0xf3
+ 2354 002f 01       		.uleb128 0x1
+ 2355 0030 50       		.byte	0x50
+ 2356 0031 9F       		.byte	0x9f
+ 2357 0032 40000000 		.4byte	.LVL40
+ 2358 0036 47000000 		.4byte	.LVL41-1
+ 2359 003a 0100     		.2byte	0x1
+ 2360 003c 50       		.byte	0x50
+ 2361 003d 47000000 		.4byte	.LVL41-1
+ 2362 0041 4A000000 		.4byte	.LVL42
+ 2363 0045 0400     		.2byte	0x4
+ 2364 0047 F3       		.byte	0xf3
+ 2365 0048 01       		.uleb128 0x1
+ 2366 0049 50       		.byte	0x50
+ 2367 004a 9F       		.byte	0x9f
+ 2368 004b 4A000000 		.4byte	.LVL42
+ 2369 004f 4D000000 		.4byte	.LVL43-1
+ 2370 0053 0100     		.2byte	0x1
+ 2371 0055 50       		.byte	0x50
+ 2372 0056 4D000000 		.4byte	.LVL43-1
+ 2373 005a 58000000 		.4byte	.LVL44
+ 2374 005e 0400     		.2byte	0x4
+ 2375 0060 F3       		.byte	0xf3
+ 2376 0061 01       		.uleb128 0x1
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 50
+
+
+ 2377 0062 50       		.byte	0x50
+ 2378 0063 9F       		.byte	0x9f
+ 2379 0064 58000000 		.4byte	.LVL44
+ 2380 0068 5F000000 		.4byte	.LVL45-1
+ 2381 006c 0100     		.2byte	0x1
+ 2382 006e 50       		.byte	0x50
+ 2383 006f 5F000000 		.4byte	.LVL45-1
+ 2384 0073 62000000 		.4byte	.LVL46
+ 2385 0077 0400     		.2byte	0x4
+ 2386 0079 F3       		.byte	0xf3
+ 2387 007a 01       		.uleb128 0x1
+ 2388 007b 50       		.byte	0x50
+ 2389 007c 9F       		.byte	0x9f
+ 2390 007d 62000000 		.4byte	.LVL46
+ 2391 0081 65000000 		.4byte	.LVL47-1
+ 2392 0085 0100     		.2byte	0x1
+ 2393 0087 50       		.byte	0x50
+ 2394 0088 65000000 		.4byte	.LVL47-1
+ 2395 008c 70000000 		.4byte	.LVL48
+ 2396 0090 0400     		.2byte	0x4
+ 2397 0092 F3       		.byte	0xf3
+ 2398 0093 01       		.uleb128 0x1
+ 2399 0094 50       		.byte	0x50
+ 2400 0095 9F       		.byte	0x9f
+ 2401 0096 70000000 		.4byte	.LVL48
+ 2402 009a 77000000 		.4byte	.LVL49-1
+ 2403 009e 0100     		.2byte	0x1
+ 2404 00a0 50       		.byte	0x50
+ 2405 00a1 77000000 		.4byte	.LVL49-1
+ 2406 00a5 7A000000 		.4byte	.LVL50
+ 2407 00a9 0400     		.2byte	0x4
+ 2408 00ab F3       		.byte	0xf3
+ 2409 00ac 01       		.uleb128 0x1
+ 2410 00ad 50       		.byte	0x50
+ 2411 00ae 9F       		.byte	0x9f
+ 2412 00af 7A000000 		.4byte	.LVL50
+ 2413 00b3 7D000000 		.4byte	.LVL51-1
+ 2414 00b7 0100     		.2byte	0x1
+ 2415 00b9 50       		.byte	0x50
+ 2416 00ba 7D000000 		.4byte	.LVL51-1
+ 2417 00be 86000000 		.4byte	.LVL52
+ 2418 00c2 0400     		.2byte	0x4
+ 2419 00c4 F3       		.byte	0xf3
+ 2420 00c5 01       		.uleb128 0x1
+ 2421 00c6 50       		.byte	0x50
+ 2422 00c7 9F       		.byte	0x9f
+ 2423 00c8 86000000 		.4byte	.LVL52
+ 2424 00cc A3000000 		.4byte	.LVL53-1
+ 2425 00d0 0100     		.2byte	0x1
+ 2426 00d2 50       		.byte	0x50
+ 2427 00d3 A3000000 		.4byte	.LVL53-1
+ 2428 00d7 A6000000 		.4byte	.LVL54
+ 2429 00db 0400     		.2byte	0x4
+ 2430 00dd F3       		.byte	0xf3
+ 2431 00de 01       		.uleb128 0x1
+ 2432 00df 50       		.byte	0x50
+ 2433 00e0 9F       		.byte	0x9f
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 51
+
+
+ 2434 00e1 A6000000 		.4byte	.LVL54
+ 2435 00e5 A9000000 		.4byte	.LVL55-1
+ 2436 00e9 0100     		.2byte	0x1
+ 2437 00eb 50       		.byte	0x50
+ 2438 00ec A9000000 		.4byte	.LVL55-1
+ 2439 00f0 B4000000 		.4byte	.LVL56
+ 2440 00f4 0400     		.2byte	0x4
+ 2441 00f6 F3       		.byte	0xf3
+ 2442 00f7 01       		.uleb128 0x1
+ 2443 00f8 50       		.byte	0x50
+ 2444 00f9 9F       		.byte	0x9f
+ 2445 00fa B4000000 		.4byte	.LVL56
+ 2446 00fe BB000000 		.4byte	.LVL57-1
+ 2447 0102 0100     		.2byte	0x1
+ 2448 0104 50       		.byte	0x50
+ 2449 0105 BB000000 		.4byte	.LVL57-1
+ 2450 0109 BE000000 		.4byte	.LVL58
+ 2451 010d 0400     		.2byte	0x4
+ 2452 010f F3       		.byte	0xf3
+ 2453 0110 01       		.uleb128 0x1
+ 2454 0111 50       		.byte	0x50
+ 2455 0112 9F       		.byte	0x9f
+ 2456 0113 BE000000 		.4byte	.LVL58
+ 2457 0117 C1000000 		.4byte	.LVL59-1
+ 2458 011b 0100     		.2byte	0x1
+ 2459 011d 50       		.byte	0x50
+ 2460 011e C1000000 		.4byte	.LVL59-1
+ 2461 0122 CC000000 		.4byte	.LVL60
+ 2462 0126 0400     		.2byte	0x4
+ 2463 0128 F3       		.byte	0xf3
+ 2464 0129 01       		.uleb128 0x1
+ 2465 012a 50       		.byte	0x50
+ 2466 012b 9F       		.byte	0x9f
+ 2467 012c CC000000 		.4byte	.LVL60
+ 2468 0130 D3000000 		.4byte	.LVL61-1
+ 2469 0134 0100     		.2byte	0x1
+ 2470 0136 50       		.byte	0x50
+ 2471 0137 D3000000 		.4byte	.LVL61-1
+ 2472 013b D6000000 		.4byte	.LVL62
+ 2473 013f 0400     		.2byte	0x4
+ 2474 0141 F3       		.byte	0xf3
+ 2475 0142 01       		.uleb128 0x1
+ 2476 0143 50       		.byte	0x50
+ 2477 0144 9F       		.byte	0x9f
+ 2478 0145 D6000000 		.4byte	.LVL62
+ 2479 0149 D9000000 		.4byte	.LVL63-1
+ 2480 014d 0100     		.2byte	0x1
+ 2481 014f 50       		.byte	0x50
+ 2482 0150 D9000000 		.4byte	.LVL63-1
+ 2483 0154 E4000000 		.4byte	.LVL64
+ 2484 0158 0400     		.2byte	0x4
+ 2485 015a F3       		.byte	0xf3
+ 2486 015b 01       		.uleb128 0x1
+ 2487 015c 50       		.byte	0x50
+ 2488 015d 9F       		.byte	0x9f
+ 2489 015e E4000000 		.4byte	.LVL64
+ 2490 0162 EB000000 		.4byte	.LVL65-1
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 52
+
+
+ 2491 0166 0100     		.2byte	0x1
+ 2492 0168 50       		.byte	0x50
+ 2493 0169 EB000000 		.4byte	.LVL65-1
+ 2494 016d EE000000 		.4byte	.LVL66
+ 2495 0171 0400     		.2byte	0x4
+ 2496 0173 F3       		.byte	0xf3
+ 2497 0174 01       		.uleb128 0x1
+ 2498 0175 50       		.byte	0x50
+ 2499 0176 9F       		.byte	0x9f
+ 2500 0177 EE000000 		.4byte	.LVL66
+ 2501 017b F1000000 		.4byte	.LVL67-1
+ 2502 017f 0100     		.2byte	0x1
+ 2503 0181 50       		.byte	0x50
+ 2504 0182 F1000000 		.4byte	.LVL67-1
+ 2505 0186 FA000000 		.4byte	.LVL68
+ 2506 018a 0400     		.2byte	0x4
+ 2507 018c F3       		.byte	0xf3
+ 2508 018d 01       		.uleb128 0x1
+ 2509 018e 50       		.byte	0x50
+ 2510 018f 9F       		.byte	0x9f
+ 2511 0190 FA000000 		.4byte	.LVL68
+ 2512 0194 17010000 		.4byte	.LVL69-1
+ 2513 0198 0100     		.2byte	0x1
+ 2514 019a 50       		.byte	0x50
+ 2515 019b 17010000 		.4byte	.LVL69-1
+ 2516 019f 22010000 		.4byte	.LVL70
+ 2517 01a3 0400     		.2byte	0x4
+ 2518 01a5 F3       		.byte	0xf3
+ 2519 01a6 01       		.uleb128 0x1
+ 2520 01a7 50       		.byte	0x50
+ 2521 01a8 9F       		.byte	0x9f
+ 2522 01a9 22010000 		.4byte	.LVL70
+ 2523 01ad 25010000 		.4byte	.LVL71-1
+ 2524 01b1 0100     		.2byte	0x1
+ 2525 01b3 50       		.byte	0x50
+ 2526 01b4 25010000 		.4byte	.LVL71-1
+ 2527 01b8 30010000 		.4byte	.LVL72
+ 2528 01bc 0400     		.2byte	0x4
+ 2529 01be F3       		.byte	0xf3
+ 2530 01bf 01       		.uleb128 0x1
+ 2531 01c0 50       		.byte	0x50
+ 2532 01c1 9F       		.byte	0x9f
+ 2533 01c2 30010000 		.4byte	.LVL72
+ 2534 01c6 37010000 		.4byte	.LVL73-1
+ 2535 01ca 0100     		.2byte	0x1
+ 2536 01cc 50       		.byte	0x50
+ 2537 01cd 37010000 		.4byte	.LVL73-1
+ 2538 01d1 42010000 		.4byte	.LVL74
+ 2539 01d5 0400     		.2byte	0x4
+ 2540 01d7 F3       		.byte	0xf3
+ 2541 01d8 01       		.uleb128 0x1
+ 2542 01d9 50       		.byte	0x50
+ 2543 01da 9F       		.byte	0x9f
+ 2544 01db 42010000 		.4byte	.LVL74
+ 2545 01df 45010000 		.4byte	.LVL75-1
+ 2546 01e3 0100     		.2byte	0x1
+ 2547 01e5 50       		.byte	0x50
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 53
+
+
+ 2548 01e6 45010000 		.4byte	.LVL75-1
+ 2549 01ea 50010000 		.4byte	.LVL76
+ 2550 01ee 0400     		.2byte	0x4
+ 2551 01f0 F3       		.byte	0xf3
+ 2552 01f1 01       		.uleb128 0x1
+ 2553 01f2 50       		.byte	0x50
+ 2554 01f3 9F       		.byte	0x9f
+ 2555 01f4 50010000 		.4byte	.LVL76
+ 2556 01f8 57010000 		.4byte	.LVL77-1
+ 2557 01fc 0100     		.2byte	0x1
+ 2558 01fe 50       		.byte	0x50
+ 2559 01ff 57010000 		.4byte	.LVL77-1
+ 2560 0203 62010000 		.4byte	.LVL78
+ 2561 0207 0400     		.2byte	0x4
+ 2562 0209 F3       		.byte	0xf3
+ 2563 020a 01       		.uleb128 0x1
+ 2564 020b 50       		.byte	0x50
+ 2565 020c 9F       		.byte	0x9f
+ 2566 020d 62010000 		.4byte	.LVL78
+ 2567 0211 65010000 		.4byte	.LVL79-1
+ 2568 0215 0100     		.2byte	0x1
+ 2569 0217 50       		.byte	0x50
+ 2570 0218 65010000 		.4byte	.LVL79-1
+ 2571 021c 70010000 		.4byte	.LVL80
+ 2572 0220 0400     		.2byte	0x4
+ 2573 0222 F3       		.byte	0xf3
+ 2574 0223 01       		.uleb128 0x1
+ 2575 0224 50       		.byte	0x50
+ 2576 0225 9F       		.byte	0x9f
+ 2577 0226 70010000 		.4byte	.LVL80
+ 2578 022a 77010000 		.4byte	.LVL81-1
+ 2579 022e 0100     		.2byte	0x1
+ 2580 0230 50       		.byte	0x50
+ 2581 0231 77010000 		.4byte	.LVL81-1
+ 2582 0235 82010000 		.4byte	.LVL82
+ 2583 0239 0400     		.2byte	0x4
+ 2584 023b F3       		.byte	0xf3
+ 2585 023c 01       		.uleb128 0x1
+ 2586 023d 50       		.byte	0x50
+ 2587 023e 9F       		.byte	0x9f
+ 2588 023f 82010000 		.4byte	.LVL82
+ 2589 0243 85010000 		.4byte	.LVL83-1
+ 2590 0247 0100     		.2byte	0x1
+ 2591 0249 50       		.byte	0x50
+ 2592 024a 85010000 		.4byte	.LVL83-1
+ 2593 024e 90010000 		.4byte	.LVL84
+ 2594 0252 0400     		.2byte	0x4
+ 2595 0254 F3       		.byte	0xf3
+ 2596 0255 01       		.uleb128 0x1
+ 2597 0256 50       		.byte	0x50
+ 2598 0257 9F       		.byte	0x9f
+ 2599 0258 90010000 		.4byte	.LVL84
+ 2600 025c 97010000 		.4byte	.LVL85-1
+ 2601 0260 0100     		.2byte	0x1
+ 2602 0262 50       		.byte	0x50
+ 2603 0263 97010000 		.4byte	.LVL85-1
+ 2604 0267 A2010000 		.4byte	.LVL86
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 54
+
+
+ 2605 026b 0400     		.2byte	0x4
+ 2606 026d F3       		.byte	0xf3
+ 2607 026e 01       		.uleb128 0x1
+ 2608 026f 50       		.byte	0x50
+ 2609 0270 9F       		.byte	0x9f
+ 2610 0271 A2010000 		.4byte	.LVL86
+ 2611 0275 A5010000 		.4byte	.LVL87-1
+ 2612 0279 0100     		.2byte	0x1
+ 2613 027b 50       		.byte	0x50
+ 2614 027c A5010000 		.4byte	.LVL87-1
+ 2615 0280 B0010000 		.4byte	.LVL88
+ 2616 0284 0400     		.2byte	0x4
+ 2617 0286 F3       		.byte	0xf3
+ 2618 0287 01       		.uleb128 0x1
+ 2619 0288 50       		.byte	0x50
+ 2620 0289 9F       		.byte	0x9f
+ 2621 028a B0010000 		.4byte	.LVL88
+ 2622 028e B7010000 		.4byte	.LVL89-1
+ 2623 0292 0100     		.2byte	0x1
+ 2624 0294 50       		.byte	0x50
+ 2625 0295 B7010000 		.4byte	.LVL89-1
+ 2626 0299 C2010000 		.4byte	.LVL90
+ 2627 029d 0400     		.2byte	0x4
+ 2628 029f F3       		.byte	0xf3
+ 2629 02a0 01       		.uleb128 0x1
+ 2630 02a1 50       		.byte	0x50
+ 2631 02a2 9F       		.byte	0x9f
+ 2632 02a3 C2010000 		.4byte	.LVL90
+ 2633 02a7 C5010000 		.4byte	.LVL91-1
+ 2634 02ab 0100     		.2byte	0x1
+ 2635 02ad 50       		.byte	0x50
+ 2636 02ae C5010000 		.4byte	.LVL91-1
+ 2637 02b2 D0010000 		.4byte	.LVL92
+ 2638 02b6 0400     		.2byte	0x4
+ 2639 02b8 F3       		.byte	0xf3
+ 2640 02b9 01       		.uleb128 0x1
+ 2641 02ba 50       		.byte	0x50
+ 2642 02bb 9F       		.byte	0x9f
+ 2643 02bc D0010000 		.4byte	.LVL92
+ 2644 02c0 D7010000 		.4byte	.LVL93-1
+ 2645 02c4 0100     		.2byte	0x1
+ 2646 02c6 50       		.byte	0x50
+ 2647 02c7 D7010000 		.4byte	.LVL93-1
+ 2648 02cb E2010000 		.4byte	.LVL94
+ 2649 02cf 0400     		.2byte	0x4
+ 2650 02d1 F3       		.byte	0xf3
+ 2651 02d2 01       		.uleb128 0x1
+ 2652 02d3 50       		.byte	0x50
+ 2653 02d4 9F       		.byte	0x9f
+ 2654 02d5 E2010000 		.4byte	.LVL94
+ 2655 02d9 E5010000 		.4byte	.LVL95-1
+ 2656 02dd 0100     		.2byte	0x1
+ 2657 02df 50       		.byte	0x50
+ 2658 02e0 E5010000 		.4byte	.LVL95-1
+ 2659 02e4 F0010000 		.4byte	.LVL96
+ 2660 02e8 0400     		.2byte	0x4
+ 2661 02ea F3       		.byte	0xf3
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 55
+
+
+ 2662 02eb 01       		.uleb128 0x1
+ 2663 02ec 50       		.byte	0x50
+ 2664 02ed 9F       		.byte	0x9f
+ 2665 02ee F0010000 		.4byte	.LVL96
+ 2666 02f2 F7010000 		.4byte	.LVL97-1
+ 2667 02f6 0100     		.2byte	0x1
+ 2668 02f8 50       		.byte	0x50
+ 2669 02f9 F7010000 		.4byte	.LVL97-1
+ 2670 02fd 00020000 		.4byte	.LVL98
+ 2671 0301 0400     		.2byte	0x4
+ 2672 0303 F3       		.byte	0xf3
+ 2673 0304 01       		.uleb128 0x1
+ 2674 0305 50       		.byte	0x50
+ 2675 0306 9F       		.byte	0x9f
+ 2676 0307 00020000 		.4byte	.LVL98
+ 2677 030b 03020000 		.4byte	.LVL99-1
+ 2678 030f 0100     		.2byte	0x1
+ 2679 0311 50       		.byte	0x50
+ 2680 0312 03020000 		.4byte	.LVL99-1
+ 2681 0316 10020000 		.4byte	.LFE72
+ 2682 031a 0400     		.2byte	0x4
+ 2683 031c F3       		.byte	0xf3
+ 2684 031d 01       		.uleb128 0x1
+ 2685 031e 50       		.byte	0x50
+ 2686 031f 9F       		.byte	0x9f
+ 2687 0320 00000000 		.4byte	0
+ 2688 0324 00000000 		.4byte	0
+ 2689              	.LLST1:
+ 2690 0328 00000000 		.4byte	.LVL36
+ 2691 032c 2F000000 		.4byte	.LVL37-1
+ 2692 0330 0100     		.2byte	0x1
+ 2693 0332 51       		.byte	0x51
+ 2694 0333 2F000000 		.4byte	.LVL37-1
+ 2695 0337 32000000 		.4byte	.LVL38
+ 2696 033b 0400     		.2byte	0x4
+ 2697 033d F3       		.byte	0xf3
+ 2698 033e 01       		.uleb128 0x1
+ 2699 033f 51       		.byte	0x51
+ 2700 0340 9F       		.byte	0x9f
+ 2701 0341 32000000 		.4byte	.LVL38
+ 2702 0345 35000000 		.4byte	.LVL39-1
+ 2703 0349 0100     		.2byte	0x1
+ 2704 034b 51       		.byte	0x51
+ 2705 034c 35000000 		.4byte	.LVL39-1
+ 2706 0350 40000000 		.4byte	.LVL40
+ 2707 0354 0400     		.2byte	0x4
+ 2708 0356 F3       		.byte	0xf3
+ 2709 0357 01       		.uleb128 0x1
+ 2710 0358 51       		.byte	0x51
+ 2711 0359 9F       		.byte	0x9f
+ 2712 035a 40000000 		.4byte	.LVL40
+ 2713 035e 47000000 		.4byte	.LVL41-1
+ 2714 0362 0100     		.2byte	0x1
+ 2715 0364 51       		.byte	0x51
+ 2716 0365 47000000 		.4byte	.LVL41-1
+ 2717 0369 4A000000 		.4byte	.LVL42
+ 2718 036d 0400     		.2byte	0x4
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 56
+
+
+ 2719 036f F3       		.byte	0xf3
+ 2720 0370 01       		.uleb128 0x1
+ 2721 0371 51       		.byte	0x51
+ 2722 0372 9F       		.byte	0x9f
+ 2723 0373 4A000000 		.4byte	.LVL42
+ 2724 0377 4D000000 		.4byte	.LVL43-1
+ 2725 037b 0100     		.2byte	0x1
+ 2726 037d 51       		.byte	0x51
+ 2727 037e 4D000000 		.4byte	.LVL43-1
+ 2728 0382 58000000 		.4byte	.LVL44
+ 2729 0386 0400     		.2byte	0x4
+ 2730 0388 F3       		.byte	0xf3
+ 2731 0389 01       		.uleb128 0x1
+ 2732 038a 51       		.byte	0x51
+ 2733 038b 9F       		.byte	0x9f
+ 2734 038c 58000000 		.4byte	.LVL44
+ 2735 0390 5F000000 		.4byte	.LVL45-1
+ 2736 0394 0100     		.2byte	0x1
+ 2737 0396 51       		.byte	0x51
+ 2738 0397 5F000000 		.4byte	.LVL45-1
+ 2739 039b 62000000 		.4byte	.LVL46
+ 2740 039f 0400     		.2byte	0x4
+ 2741 03a1 F3       		.byte	0xf3
+ 2742 03a2 01       		.uleb128 0x1
+ 2743 03a3 51       		.byte	0x51
+ 2744 03a4 9F       		.byte	0x9f
+ 2745 03a5 62000000 		.4byte	.LVL46
+ 2746 03a9 65000000 		.4byte	.LVL47-1
+ 2747 03ad 0100     		.2byte	0x1
+ 2748 03af 51       		.byte	0x51
+ 2749 03b0 65000000 		.4byte	.LVL47-1
+ 2750 03b4 70000000 		.4byte	.LVL48
+ 2751 03b8 0400     		.2byte	0x4
+ 2752 03ba F3       		.byte	0xf3
+ 2753 03bb 01       		.uleb128 0x1
+ 2754 03bc 51       		.byte	0x51
+ 2755 03bd 9F       		.byte	0x9f
+ 2756 03be 70000000 		.4byte	.LVL48
+ 2757 03c2 77000000 		.4byte	.LVL49-1
+ 2758 03c6 0100     		.2byte	0x1
+ 2759 03c8 51       		.byte	0x51
+ 2760 03c9 77000000 		.4byte	.LVL49-1
+ 2761 03cd 7A000000 		.4byte	.LVL50
+ 2762 03d1 0400     		.2byte	0x4
+ 2763 03d3 F3       		.byte	0xf3
+ 2764 03d4 01       		.uleb128 0x1
+ 2765 03d5 51       		.byte	0x51
+ 2766 03d6 9F       		.byte	0x9f
+ 2767 03d7 7A000000 		.4byte	.LVL50
+ 2768 03db 7D000000 		.4byte	.LVL51-1
+ 2769 03df 0100     		.2byte	0x1
+ 2770 03e1 51       		.byte	0x51
+ 2771 03e2 7D000000 		.4byte	.LVL51-1
+ 2772 03e6 86000000 		.4byte	.LVL52
+ 2773 03ea 0400     		.2byte	0x4
+ 2774 03ec F3       		.byte	0xf3
+ 2775 03ed 01       		.uleb128 0x1
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 57
+
+
+ 2776 03ee 51       		.byte	0x51
+ 2777 03ef 9F       		.byte	0x9f
+ 2778 03f0 86000000 		.4byte	.LVL52
+ 2779 03f4 A3000000 		.4byte	.LVL53-1
+ 2780 03f8 0100     		.2byte	0x1
+ 2781 03fa 51       		.byte	0x51
+ 2782 03fb A3000000 		.4byte	.LVL53-1
+ 2783 03ff A6000000 		.4byte	.LVL54
+ 2784 0403 0400     		.2byte	0x4
+ 2785 0405 F3       		.byte	0xf3
+ 2786 0406 01       		.uleb128 0x1
+ 2787 0407 51       		.byte	0x51
+ 2788 0408 9F       		.byte	0x9f
+ 2789 0409 A6000000 		.4byte	.LVL54
+ 2790 040d A9000000 		.4byte	.LVL55-1
+ 2791 0411 0100     		.2byte	0x1
+ 2792 0413 51       		.byte	0x51
+ 2793 0414 A9000000 		.4byte	.LVL55-1
+ 2794 0418 B4000000 		.4byte	.LVL56
+ 2795 041c 0400     		.2byte	0x4
+ 2796 041e F3       		.byte	0xf3
+ 2797 041f 01       		.uleb128 0x1
+ 2798 0420 51       		.byte	0x51
+ 2799 0421 9F       		.byte	0x9f
+ 2800 0422 B4000000 		.4byte	.LVL56
+ 2801 0426 BB000000 		.4byte	.LVL57-1
+ 2802 042a 0100     		.2byte	0x1
+ 2803 042c 51       		.byte	0x51
+ 2804 042d BB000000 		.4byte	.LVL57-1
+ 2805 0431 BE000000 		.4byte	.LVL58
+ 2806 0435 0400     		.2byte	0x4
+ 2807 0437 F3       		.byte	0xf3
+ 2808 0438 01       		.uleb128 0x1
+ 2809 0439 51       		.byte	0x51
+ 2810 043a 9F       		.byte	0x9f
+ 2811 043b BE000000 		.4byte	.LVL58
+ 2812 043f C1000000 		.4byte	.LVL59-1
+ 2813 0443 0100     		.2byte	0x1
+ 2814 0445 51       		.byte	0x51
+ 2815 0446 C1000000 		.4byte	.LVL59-1
+ 2816 044a CC000000 		.4byte	.LVL60
+ 2817 044e 0400     		.2byte	0x4
+ 2818 0450 F3       		.byte	0xf3
+ 2819 0451 01       		.uleb128 0x1
+ 2820 0452 51       		.byte	0x51
+ 2821 0453 9F       		.byte	0x9f
+ 2822 0454 CC000000 		.4byte	.LVL60
+ 2823 0458 D3000000 		.4byte	.LVL61-1
+ 2824 045c 0100     		.2byte	0x1
+ 2825 045e 51       		.byte	0x51
+ 2826 045f D3000000 		.4byte	.LVL61-1
+ 2827 0463 D6000000 		.4byte	.LVL62
+ 2828 0467 0400     		.2byte	0x4
+ 2829 0469 F3       		.byte	0xf3
+ 2830 046a 01       		.uleb128 0x1
+ 2831 046b 51       		.byte	0x51
+ 2832 046c 9F       		.byte	0x9f
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 58
+
+
+ 2833 046d D6000000 		.4byte	.LVL62
+ 2834 0471 D9000000 		.4byte	.LVL63-1
+ 2835 0475 0100     		.2byte	0x1
+ 2836 0477 51       		.byte	0x51
+ 2837 0478 D9000000 		.4byte	.LVL63-1
+ 2838 047c E4000000 		.4byte	.LVL64
+ 2839 0480 0400     		.2byte	0x4
+ 2840 0482 F3       		.byte	0xf3
+ 2841 0483 01       		.uleb128 0x1
+ 2842 0484 51       		.byte	0x51
+ 2843 0485 9F       		.byte	0x9f
+ 2844 0486 E4000000 		.4byte	.LVL64
+ 2845 048a EB000000 		.4byte	.LVL65-1
+ 2846 048e 0100     		.2byte	0x1
+ 2847 0490 51       		.byte	0x51
+ 2848 0491 EB000000 		.4byte	.LVL65-1
+ 2849 0495 EE000000 		.4byte	.LVL66
+ 2850 0499 0400     		.2byte	0x4
+ 2851 049b F3       		.byte	0xf3
+ 2852 049c 01       		.uleb128 0x1
+ 2853 049d 51       		.byte	0x51
+ 2854 049e 9F       		.byte	0x9f
+ 2855 049f EE000000 		.4byte	.LVL66
+ 2856 04a3 F1000000 		.4byte	.LVL67-1
+ 2857 04a7 0100     		.2byte	0x1
+ 2858 04a9 51       		.byte	0x51
+ 2859 04aa F1000000 		.4byte	.LVL67-1
+ 2860 04ae FA000000 		.4byte	.LVL68
+ 2861 04b2 0400     		.2byte	0x4
+ 2862 04b4 F3       		.byte	0xf3
+ 2863 04b5 01       		.uleb128 0x1
+ 2864 04b6 51       		.byte	0x51
+ 2865 04b7 9F       		.byte	0x9f
+ 2866 04b8 FA000000 		.4byte	.LVL68
+ 2867 04bc 17010000 		.4byte	.LVL69-1
+ 2868 04c0 0100     		.2byte	0x1
+ 2869 04c2 51       		.byte	0x51
+ 2870 04c3 17010000 		.4byte	.LVL69-1
+ 2871 04c7 22010000 		.4byte	.LVL70
+ 2872 04cb 0400     		.2byte	0x4
+ 2873 04cd F3       		.byte	0xf3
+ 2874 04ce 01       		.uleb128 0x1
+ 2875 04cf 51       		.byte	0x51
+ 2876 04d0 9F       		.byte	0x9f
+ 2877 04d1 22010000 		.4byte	.LVL70
+ 2878 04d5 25010000 		.4byte	.LVL71-1
+ 2879 04d9 0100     		.2byte	0x1
+ 2880 04db 51       		.byte	0x51
+ 2881 04dc 25010000 		.4byte	.LVL71-1
+ 2882 04e0 30010000 		.4byte	.LVL72
+ 2883 04e4 0400     		.2byte	0x4
+ 2884 04e6 F3       		.byte	0xf3
+ 2885 04e7 01       		.uleb128 0x1
+ 2886 04e8 51       		.byte	0x51
+ 2887 04e9 9F       		.byte	0x9f
+ 2888 04ea 30010000 		.4byte	.LVL72
+ 2889 04ee 37010000 		.4byte	.LVL73-1
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 59
+
+
+ 2890 04f2 0100     		.2byte	0x1
+ 2891 04f4 51       		.byte	0x51
+ 2892 04f5 37010000 		.4byte	.LVL73-1
+ 2893 04f9 42010000 		.4byte	.LVL74
+ 2894 04fd 0400     		.2byte	0x4
+ 2895 04ff F3       		.byte	0xf3
+ 2896 0500 01       		.uleb128 0x1
+ 2897 0501 51       		.byte	0x51
+ 2898 0502 9F       		.byte	0x9f
+ 2899 0503 42010000 		.4byte	.LVL74
+ 2900 0507 45010000 		.4byte	.LVL75-1
+ 2901 050b 0100     		.2byte	0x1
+ 2902 050d 51       		.byte	0x51
+ 2903 050e 45010000 		.4byte	.LVL75-1
+ 2904 0512 50010000 		.4byte	.LVL76
+ 2905 0516 0400     		.2byte	0x4
+ 2906 0518 F3       		.byte	0xf3
+ 2907 0519 01       		.uleb128 0x1
+ 2908 051a 51       		.byte	0x51
+ 2909 051b 9F       		.byte	0x9f
+ 2910 051c 50010000 		.4byte	.LVL76
+ 2911 0520 57010000 		.4byte	.LVL77-1
+ 2912 0524 0100     		.2byte	0x1
+ 2913 0526 51       		.byte	0x51
+ 2914 0527 57010000 		.4byte	.LVL77-1
+ 2915 052b 62010000 		.4byte	.LVL78
+ 2916 052f 0400     		.2byte	0x4
+ 2917 0531 F3       		.byte	0xf3
+ 2918 0532 01       		.uleb128 0x1
+ 2919 0533 51       		.byte	0x51
+ 2920 0534 9F       		.byte	0x9f
+ 2921 0535 62010000 		.4byte	.LVL78
+ 2922 0539 65010000 		.4byte	.LVL79-1
+ 2923 053d 0100     		.2byte	0x1
+ 2924 053f 51       		.byte	0x51
+ 2925 0540 65010000 		.4byte	.LVL79-1
+ 2926 0544 70010000 		.4byte	.LVL80
+ 2927 0548 0400     		.2byte	0x4
+ 2928 054a F3       		.byte	0xf3
+ 2929 054b 01       		.uleb128 0x1
+ 2930 054c 51       		.byte	0x51
+ 2931 054d 9F       		.byte	0x9f
+ 2932 054e 70010000 		.4byte	.LVL80
+ 2933 0552 77010000 		.4byte	.LVL81-1
+ 2934 0556 0100     		.2byte	0x1
+ 2935 0558 51       		.byte	0x51
+ 2936 0559 77010000 		.4byte	.LVL81-1
+ 2937 055d 82010000 		.4byte	.LVL82
+ 2938 0561 0400     		.2byte	0x4
+ 2939 0563 F3       		.byte	0xf3
+ 2940 0564 01       		.uleb128 0x1
+ 2941 0565 51       		.byte	0x51
+ 2942 0566 9F       		.byte	0x9f
+ 2943 0567 82010000 		.4byte	.LVL82
+ 2944 056b 85010000 		.4byte	.LVL83-1
+ 2945 056f 0100     		.2byte	0x1
+ 2946 0571 51       		.byte	0x51
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 60
+
+
+ 2947 0572 85010000 		.4byte	.LVL83-1
+ 2948 0576 90010000 		.4byte	.LVL84
+ 2949 057a 0400     		.2byte	0x4
+ 2950 057c F3       		.byte	0xf3
+ 2951 057d 01       		.uleb128 0x1
+ 2952 057e 51       		.byte	0x51
+ 2953 057f 9F       		.byte	0x9f
+ 2954 0580 90010000 		.4byte	.LVL84
+ 2955 0584 97010000 		.4byte	.LVL85-1
+ 2956 0588 0100     		.2byte	0x1
+ 2957 058a 51       		.byte	0x51
+ 2958 058b 97010000 		.4byte	.LVL85-1
+ 2959 058f A2010000 		.4byte	.LVL86
+ 2960 0593 0400     		.2byte	0x4
+ 2961 0595 F3       		.byte	0xf3
+ 2962 0596 01       		.uleb128 0x1
+ 2963 0597 51       		.byte	0x51
+ 2964 0598 9F       		.byte	0x9f
+ 2965 0599 A2010000 		.4byte	.LVL86
+ 2966 059d A5010000 		.4byte	.LVL87-1
+ 2967 05a1 0100     		.2byte	0x1
+ 2968 05a3 51       		.byte	0x51
+ 2969 05a4 A5010000 		.4byte	.LVL87-1
+ 2970 05a8 B0010000 		.4byte	.LVL88
+ 2971 05ac 0400     		.2byte	0x4
+ 2972 05ae F3       		.byte	0xf3
+ 2973 05af 01       		.uleb128 0x1
+ 2974 05b0 51       		.byte	0x51
+ 2975 05b1 9F       		.byte	0x9f
+ 2976 05b2 B0010000 		.4byte	.LVL88
+ 2977 05b6 B7010000 		.4byte	.LVL89-1
+ 2978 05ba 0100     		.2byte	0x1
+ 2979 05bc 51       		.byte	0x51
+ 2980 05bd B7010000 		.4byte	.LVL89-1
+ 2981 05c1 C2010000 		.4byte	.LVL90
+ 2982 05c5 0400     		.2byte	0x4
+ 2983 05c7 F3       		.byte	0xf3
+ 2984 05c8 01       		.uleb128 0x1
+ 2985 05c9 51       		.byte	0x51
+ 2986 05ca 9F       		.byte	0x9f
+ 2987 05cb C2010000 		.4byte	.LVL90
+ 2988 05cf C5010000 		.4byte	.LVL91-1
+ 2989 05d3 0100     		.2byte	0x1
+ 2990 05d5 51       		.byte	0x51
+ 2991 05d6 C5010000 		.4byte	.LVL91-1
+ 2992 05da D0010000 		.4byte	.LVL92
+ 2993 05de 0400     		.2byte	0x4
+ 2994 05e0 F3       		.byte	0xf3
+ 2995 05e1 01       		.uleb128 0x1
+ 2996 05e2 51       		.byte	0x51
+ 2997 05e3 9F       		.byte	0x9f
+ 2998 05e4 D0010000 		.4byte	.LVL92
+ 2999 05e8 D7010000 		.4byte	.LVL93-1
+ 3000 05ec 0100     		.2byte	0x1
+ 3001 05ee 51       		.byte	0x51
+ 3002 05ef D7010000 		.4byte	.LVL93-1
+ 3003 05f3 E2010000 		.4byte	.LVL94
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 61
+
+
+ 3004 05f7 0400     		.2byte	0x4
+ 3005 05f9 F3       		.byte	0xf3
+ 3006 05fa 01       		.uleb128 0x1
+ 3007 05fb 51       		.byte	0x51
+ 3008 05fc 9F       		.byte	0x9f
+ 3009 05fd E2010000 		.4byte	.LVL94
+ 3010 0601 E5010000 		.4byte	.LVL95-1
+ 3011 0605 0100     		.2byte	0x1
+ 3012 0607 51       		.byte	0x51
+ 3013 0608 E5010000 		.4byte	.LVL95-1
+ 3014 060c F0010000 		.4byte	.LVL96
+ 3015 0610 0400     		.2byte	0x4
+ 3016 0612 F3       		.byte	0xf3
+ 3017 0613 01       		.uleb128 0x1
+ 3018 0614 51       		.byte	0x51
+ 3019 0615 9F       		.byte	0x9f
+ 3020 0616 F0010000 		.4byte	.LVL96
+ 3021 061a F7010000 		.4byte	.LVL97-1
+ 3022 061e 0100     		.2byte	0x1
+ 3023 0620 51       		.byte	0x51
+ 3024 0621 F7010000 		.4byte	.LVL97-1
+ 3025 0625 00020000 		.4byte	.LVL98
+ 3026 0629 0400     		.2byte	0x4
+ 3027 062b F3       		.byte	0xf3
+ 3028 062c 01       		.uleb128 0x1
+ 3029 062d 51       		.byte	0x51
+ 3030 062e 9F       		.byte	0x9f
+ 3031 062f 00020000 		.4byte	.LVL98
+ 3032 0633 03020000 		.4byte	.LVL99-1
+ 3033 0637 0100     		.2byte	0x1
+ 3034 0639 51       		.byte	0x51
+ 3035 063a 03020000 		.4byte	.LVL99-1
+ 3036 063e 10020000 		.4byte	.LFE72
+ 3037 0642 0400     		.2byte	0x4
+ 3038 0644 F3       		.byte	0xf3
+ 3039 0645 01       		.uleb128 0x1
+ 3040 0646 51       		.byte	0x51
+ 3041 0647 9F       		.byte	0x9f
+ 3042 0648 00000000 		.4byte	0
+ 3043 064c 00000000 		.4byte	0
+ 3044              	.LLST2:
+ 3045 0650 00000000 		.4byte	.LVL100
+ 3046 0654 0A000000 		.4byte	.LVL102
+ 3047 0658 0100     		.2byte	0x1
+ 3048 065a 50       		.byte	0x50
+ 3049 065b 0A000000 		.4byte	.LVL102
+ 3050 065f 1C000000 		.4byte	.LVL106
+ 3051 0663 0100     		.2byte	0x1
+ 3052 0665 55       		.byte	0x55
+ 3053 0666 1C000000 		.4byte	.LVL106
+ 3054 066a 1E000000 		.4byte	.LVL107
+ 3055 066e 0100     		.2byte	0x1
+ 3056 0670 50       		.byte	0x50
+ 3057 0671 1E000000 		.4byte	.LVL107
+ 3058 0675 3C000000 		.4byte	.LFE73
+ 3059 0679 0100     		.2byte	0x1
+ 3060 067b 55       		.byte	0x55
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 62
+
+
+ 3061 067c 00000000 		.4byte	0
+ 3062 0680 00000000 		.4byte	0
+ 3063              	.LLST3:
+ 3064 0684 00000000 		.4byte	.LVL100
+ 3065 0688 0A000000 		.4byte	.LVL102
+ 3066 068c 0100     		.2byte	0x1
+ 3067 068e 51       		.byte	0x51
+ 3068 068f 0A000000 		.4byte	.LVL102
+ 3069 0693 1C000000 		.4byte	.LVL106
+ 3070 0697 0400     		.2byte	0x4
+ 3071 0699 F3       		.byte	0xf3
+ 3072 069a 01       		.uleb128 0x1
+ 3073 069b 51       		.byte	0x51
+ 3074 069c 9F       		.byte	0x9f
+ 3075 069d 1C000000 		.4byte	.LVL106
+ 3076 06a1 1E000000 		.4byte	.LVL107
+ 3077 06a5 0100     		.2byte	0x1
+ 3078 06a7 51       		.byte	0x51
+ 3079 06a8 1E000000 		.4byte	.LVL107
+ 3080 06ac 3C000000 		.4byte	.LFE73
+ 3081 06b0 0400     		.2byte	0x4
+ 3082 06b2 F3       		.byte	0xf3
+ 3083 06b3 01       		.uleb128 0x1
+ 3084 06b4 51       		.byte	0x51
+ 3085 06b5 9F       		.byte	0x9f
+ 3086 06b6 00000000 		.4byte	0
+ 3087 06ba 00000000 		.4byte	0
+ 3088              	.LLST4:
+ 3089 06be 0A000000 		.4byte	.LVL102
+ 3090 06c2 1C000000 		.4byte	.LVL106
+ 3091 06c6 0100     		.2byte	0x1
+ 3092 06c8 54       		.byte	0x54
+ 3093 06c9 1E000000 		.4byte	.LVL107
+ 3094 06cd 22000000 		.4byte	.LVL108
+ 3095 06d1 0100     		.2byte	0x1
+ 3096 06d3 54       		.byte	0x54
+ 3097 06d4 00000000 		.4byte	0
+ 3098 06d8 00000000 		.4byte	0
+ 3099              	.LLST5:
+ 3100 06dc 00000000 		.4byte	.LVL113
+ 3101 06e0 0E000000 		.4byte	.LVL114
+ 3102 06e4 0100     		.2byte	0x1
+ 3103 06e6 50       		.byte	0x50
+ 3104 06e7 0E000000 		.4byte	.LVL114
+ 3105 06eb 32000000 		.4byte	.LVL119
+ 3106 06ef 0100     		.2byte	0x1
+ 3107 06f1 54       		.byte	0x54
+ 3108 06f2 32000000 		.4byte	.LVL119
+ 3109 06f6 36000000 		.4byte	.LVL120
+ 3110 06fa 0100     		.2byte	0x1
+ 3111 06fc 50       		.byte	0x50
+ 3112 06fd 36000000 		.4byte	.LVL120
+ 3113 0701 5A000000 		.4byte	.LVL125
+ 3114 0705 0100     		.2byte	0x1
+ 3115 0707 54       		.byte	0x54
+ 3116 0708 5A000000 		.4byte	.LVL125
+ 3117 070c 74000000 		.4byte	.LFE75
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 63
+
+
+ 3118 0710 0400     		.2byte	0x4
+ 3119 0712 F3       		.byte	0xf3
+ 3120 0713 01       		.uleb128 0x1
+ 3121 0714 50       		.byte	0x50
+ 3122 0715 9F       		.byte	0x9f
+ 3123 0716 00000000 		.4byte	0
+ 3124 071a 00000000 		.4byte	0
+ 3125              	.LLST6:
+ 3126 071e 00000000 		.4byte	.LVL113
+ 3127 0722 17000000 		.4byte	.LVL115-1
+ 3128 0726 0100     		.2byte	0x1
+ 3129 0728 51       		.byte	0x51
+ 3130 0729 17000000 		.4byte	.LVL115-1
+ 3131 072d 32000000 		.4byte	.LVL119
+ 3132 0731 0400     		.2byte	0x4
+ 3133 0733 F3       		.byte	0xf3
+ 3134 0734 01       		.uleb128 0x1
+ 3135 0735 51       		.byte	0x51
+ 3136 0736 9F       		.byte	0x9f
+ 3137 0737 32000000 		.4byte	.LVL119
+ 3138 073b 3F000000 		.4byte	.LVL121-1
+ 3139 073f 0100     		.2byte	0x1
+ 3140 0741 51       		.byte	0x51
+ 3141 0742 3F000000 		.4byte	.LVL121-1
+ 3142 0746 74000000 		.4byte	.LFE75
+ 3143 074a 0400     		.2byte	0x4
+ 3144 074c F3       		.byte	0xf3
+ 3145 074d 01       		.uleb128 0x1
+ 3146 074e 51       		.byte	0x51
+ 3147 074f 9F       		.byte	0x9f
+ 3148 0750 00000000 		.4byte	0
+ 3149 0754 00000000 		.4byte	0
+ 3150              	.LLST7:
+ 3151 0758 26000000 		.4byte	.LVL117
+ 3152 075c 2F000000 		.4byte	.LVL118-1
+ 3153 0760 0100     		.2byte	0x1
+ 3154 0762 50       		.byte	0x50
+ 3155 0763 00000000 		.4byte	0
+ 3156 0767 00000000 		.4byte	0
+ 3157              	.LLST8:
+ 3158 076b 4E000000 		.4byte	.LVL123
+ 3159 076f 57000000 		.4byte	.LVL124-1
+ 3160 0773 0100     		.2byte	0x1
+ 3161 0775 50       		.byte	0x50
+ 3162 0776 00000000 		.4byte	0
+ 3163 077a 00000000 		.4byte	0
+ 3164              	.LLST9:
+ 3165 077e 00000000 		.4byte	.LVL126
+ 3166 0782 0E000000 		.4byte	.LVL127
+ 3167 0786 0100     		.2byte	0x1
+ 3168 0788 50       		.byte	0x50
+ 3169 0789 0E000000 		.4byte	.LVL127
+ 3170 078d 14000000 		.4byte	.LVL129
+ 3171 0791 0400     		.2byte	0x4
+ 3172 0793 F3       		.byte	0xf3
+ 3173 0794 01       		.uleb128 0x1
+ 3174 0795 50       		.byte	0x50
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 64
+
+
+ 3175 0796 9F       		.byte	0x9f
+ 3176 0797 14000000 		.4byte	.LVL129
+ 3177 079b 1A000000 		.4byte	.LVL130
+ 3178 079f 0100     		.2byte	0x1
+ 3179 07a1 50       		.byte	0x50
+ 3180 07a2 1A000000 		.4byte	.LVL130
+ 3181 07a6 30000000 		.4byte	.LFE74
+ 3182 07aa 0400     		.2byte	0x4
+ 3183 07ac F3       		.byte	0xf3
+ 3184 07ad 01       		.uleb128 0x1
+ 3185 07ae 50       		.byte	0x50
+ 3186 07af 9F       		.byte	0x9f
+ 3187 07b0 00000000 		.4byte	0
+ 3188 07b4 00000000 		.4byte	0
+ 3189              		.section	.debug_aranges,"",%progbits
+ 3190 0000 7C000000 		.4byte	0x7c
+ 3191 0004 0200     		.2byte	0x2
+ 3192 0006 00000000 		.4byte	.Ldebug_info0
+ 3193 000a 04       		.byte	0x4
+ 3194 000b 00       		.byte	0
+ 3195 000c 0000     		.2byte	0
+ 3196 000e 0000     		.2byte	0
+ 3197 0010 00000000 		.4byte	.LFB63
+ 3198 0014 1C000000 		.4byte	.LFE63-.LFB63
+ 3199 0018 00000000 		.4byte	.LFB64
+ 3200 001c 1C000000 		.4byte	.LFE64-.LFB64
+ 3201 0020 00000000 		.4byte	.LFB65
+ 3202 0024 1C000000 		.4byte	.LFE65-.LFB65
+ 3203 0028 00000000 		.4byte	.LFB66
+ 3204 002c 1C000000 		.4byte	.LFE66-.LFB66
+ 3205 0030 00000000 		.4byte	.LFB67
+ 3206 0034 1C000000 		.4byte	.LFE67-.LFB67
+ 3207 0038 00000000 		.4byte	.LFB68
+ 3208 003c 1C000000 		.4byte	.LFE68-.LFB68
+ 3209 0040 00000000 		.4byte	.LFB69
+ 3210 0044 1C000000 		.4byte	.LFE69-.LFB69
+ 3211 0048 00000000 		.4byte	.LFB70
+ 3212 004c 1C000000 		.4byte	.LFE70-.LFB70
+ 3213 0050 00000000 		.4byte	.LFB71
+ 3214 0054 1C000000 		.4byte	.LFE71-.LFB71
+ 3215 0058 00000000 		.4byte	.LFB72
+ 3216 005c 10020000 		.4byte	.LFE72-.LFB72
+ 3217 0060 00000000 		.4byte	.LFB73
+ 3218 0064 3C000000 		.4byte	.LFE73-.LFB73
+ 3219 0068 00000000 		.4byte	.LFB75
+ 3220 006c 74000000 		.4byte	.LFE75-.LFB75
+ 3221 0070 00000000 		.4byte	.LFB74
+ 3222 0074 30000000 		.4byte	.LFE74-.LFB74
+ 3223 0078 00000000 		.4byte	0
+ 3224 007c 00000000 		.4byte	0
+ 3225              		.section	.debug_ranges,"",%progbits
+ 3226              	.Ldebug_ranges0:
+ 3227 0000 0A000000 		.4byte	.LBB2
+ 3228 0004 1C000000 		.4byte	.LBE2
+ 3229 0008 1E000000 		.4byte	.LBB3
+ 3230 000c 22000000 		.4byte	.LBE3
+ 3231 0010 00000000 		.4byte	0
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 65
+
+
+ 3232 0014 00000000 		.4byte	0
+ 3233 0018 00000000 		.4byte	.LFB63
+ 3234 001c 1C000000 		.4byte	.LFE63
+ 3235 0020 00000000 		.4byte	.LFB64
+ 3236 0024 1C000000 		.4byte	.LFE64
+ 3237 0028 00000000 		.4byte	.LFB65
+ 3238 002c 1C000000 		.4byte	.LFE65
+ 3239 0030 00000000 		.4byte	.LFB66
+ 3240 0034 1C000000 		.4byte	.LFE66
+ 3241 0038 00000000 		.4byte	.LFB67
+ 3242 003c 1C000000 		.4byte	.LFE67
+ 3243 0040 00000000 		.4byte	.LFB68
+ 3244 0044 1C000000 		.4byte	.LFE68
+ 3245 0048 00000000 		.4byte	.LFB69
+ 3246 004c 1C000000 		.4byte	.LFE69
+ 3247 0050 00000000 		.4byte	.LFB70
+ 3248 0054 1C000000 		.4byte	.LFE70
+ 3249 0058 00000000 		.4byte	.LFB71
+ 3250 005c 1C000000 		.4byte	.LFE71
+ 3251 0060 00000000 		.4byte	.LFB72
+ 3252 0064 10020000 		.4byte	.LFE72
+ 3253 0068 00000000 		.4byte	.LFB73
+ 3254 006c 3C000000 		.4byte	.LFE73
+ 3255 0070 00000000 		.4byte	.LFB75
+ 3256 0074 74000000 		.4byte	.LFE75
+ 3257 0078 00000000 		.4byte	.LFB74
+ 3258 007c 30000000 		.4byte	.LFE74
+ 3259 0080 00000000 		.4byte	0
+ 3260 0084 00000000 		.4byte	0
+ 3261              		.section	.debug_line,"",%progbits
+ 3262              	.Ldebug_line0:
+ 3263 0000 FB020000 		.section	.debug_str,"MS",%progbits,1
+ 3263      02006F01 
+ 3263      00000201 
+ 3263      FB0E0D00 
+ 3263      01010101 
+ 3264              	.LASF26:
+ 3265 0000 73746570 		.ascii	"step_mode\000"
+ 3265      5F6D6F64 
+ 3265      6500
+ 3266              	.LASF31:
+ 3267 000a 73746570 		.ascii	"stepperdriver_rotateTo\000"
+ 3267      70657264 
+ 3267      72697665 
+ 3267      725F726F 
+ 3267      74617465 
+ 3268              	.LASF44:
+ 3269 0021 466C6167 		.ascii	"FlagMotor.c\000"
+ 3269      4D6F746F 
+ 3269      722E6300 
+ 3270              	.LASF37:
+ 3271 002d 63757272 		.ascii	"currentPosition\000"
+ 3271      656E7450 
+ 3271      6F736974 
+ 3271      696F6E00 
+ 3272              	.LASF9:
+ 3273 003d 5F5F696E 		.ascii	"__int32_t\000"
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 66
+
+
+ 3273      7433325F 
+ 3273      7400
+ 3274              	.LASF4:
+ 3275 0047 6C6F6E67 		.ascii	"long int\000"
+ 3275      20696E74 
+ 3275      00
+ 3276              	.LASF24:
+ 3277 0050 73746F70 		.ascii	"stopFlagMotor\000"
+ 3277      466C6167 
+ 3277      4D6F746F 
+ 3277      7200
+ 3278              	.LASF33:
+ 3279 005e 73746570 		.ascii	"stepsToTake\000"
+ 3279      73546F54 
+ 3279      616B6500 
+ 3280              	.LASF23:
+ 3281 006a 636F696C 		.ascii	"coilB2A1\000"
+ 3281      42324131 
+ 3281      00
+ 3282              	.LASF12:
+ 3283 0073 646F7562 		.ascii	"double\000"
+ 3283      6C6500
+ 3284              	.LASF11:
+ 3285 007a 666C6F61 		.ascii	"float\000"
+ 3285      7400
+ 3286              	.LASF19:
+ 3287 0080 636F696C 		.ascii	"coilB2\000"
+ 3287      423200
+ 3288              	.LASF25:
+ 3289 0087 74616B65 		.ascii	"takestep\000"
+ 3289      73746570 
+ 3289      00
+ 3290              	.LASF1:
+ 3291 0090 756E7369 		.ascii	"unsigned char\000"
+ 3291      676E6564 
+ 3291      20636861 
+ 3291      7200
+ 3292              	.LASF39:
+ 3293 009e 42315F57 		.ascii	"B1_Write\000"
+ 3293      72697465 
+ 3293      00
+ 3294              	.LASF22:
+ 3295 00a7 636F696C 		.ascii	"coilB1B2\000"
+ 3295      42314232 
+ 3295      00
+ 3296              	.LASF3:
+ 3297 00b0 73686F72 		.ascii	"short unsigned int\000"
+ 3297      7420756E 
+ 3297      7369676E 
+ 3297      65642069 
+ 3297      6E7400
+ 3298              	.LASF40:
+ 3299 00c3 42325F57 		.ascii	"B2_Write\000"
+ 3299      72697465 
+ 3299      00
+ 3300              	.LASF34:
+ 3301 00cc 686F6D65 		.ascii	"homeStepper\000"
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 67
+
+
+ 3301      53746570 
+ 3301      70657200 
+ 3302              	.LASF18:
+ 3303 00d8 636F696C 		.ascii	"coilB1\000"
+ 3303      423100
+ 3304              	.LASF29:
+ 3305 00df 73746570 		.ascii	"steps\000"
+ 3305      7300
+ 3306              	.LASF21:
+ 3307 00e5 636F696C 		.ascii	"coilA2B1\000"
+ 3307      41324231 
+ 3307      00
+ 3308              	.LASF41:
+ 3309 00ee 41315F57 		.ascii	"A1_Write\000"
+ 3309      72697465 
+ 3309      00
+ 3310              	.LASF32:
+ 3311 00f7 74617267 		.ascii	"targetDegrees\000"
+ 3311      65744465 
+ 3311      67726565 
+ 3311      7300
+ 3312              	.LASF45:
+ 3313 0105 433A5C55 		.ascii	"C:\\Users\\ZakiN\\OneDrive\\Skrivebord\\SPI_Slave\\"
+ 3313      73657273 
+ 3313      5C5A616B 
+ 3313      694E5C4F 
+ 3313      6E654472 
+ 3314 0132 44657369 		.ascii	"Design01.cydsn\000"
+ 3314      676E3031 
+ 3314      2E637964 
+ 3314      736E00
+ 3315              	.LASF36:
+ 3316 0141 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 3316      52784275 
+ 3316      66666572 
+ 3316      00
+ 3317              	.LASF28:
+ 3318 014e 6E756D62 		.ascii	"numberOfSteps\000"
+ 3318      65724F66 
+ 3318      53746570 
+ 3318      7300
+ 3319              	.LASF5:
+ 3320 015c 6C6F6E67 		.ascii	"long unsigned int\000"
+ 3320      20756E73 
+ 3320      69676E65 
+ 3320      6420696E 
+ 3320      7400
+ 3321              	.LASF8:
+ 3322 016e 756E7369 		.ascii	"unsigned int\000"
+ 3322      676E6564 
+ 3322      20696E74 
+ 3322      00
+ 3323              	.LASF38:
+ 3324 017b 41325F57 		.ascii	"A2_Write\000"
+ 3324      72697465 
+ 3324      00
+ 3325              	.LASF7:
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 68
+
+
+ 3326 0184 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 3326      206C6F6E 
+ 3326      6720756E 
+ 3326      7369676E 
+ 3326      65642069 
+ 3327              	.LASF20:
+ 3328 019b 636F696C 		.ascii	"coilA1A2\000"
+ 3328      41314132 
+ 3328      00
+ 3329              	.LASF30:
+ 3330 01a4 6D6F6465 		.ascii	"mode\000"
+ 3330      00
+ 3331              	.LASF43:
+ 3332 01a9 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 3332      43313120 
+ 3332      352E342E 
+ 3332      31203230 
+ 3332      31363036 
+ 3333 01dc 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 3333      20726576 
+ 3333      6973696F 
+ 3333      6E203233 
+ 3333      37373135 
+ 3334 020f 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 3334      66756E63 
+ 3334      74696F6E 
+ 3334      2D736563 
+ 3334      74696F6E 
+ 3335              	.LASF10:
+ 3336 0237 696E7433 		.ascii	"int32_t\000"
+ 3336      325F7400 
+ 3337              	.LASF15:
+ 3338 023f 73697A65 		.ascii	"sizetype\000"
+ 3338      74797065 
+ 3338      00
+ 3339              	.LASF6:
+ 3340 0248 6C6F6E67 		.ascii	"long long int\000"
+ 3340      206C6F6E 
+ 3340      6720696E 
+ 3340      7400
+ 3341              	.LASF13:
+ 3342 0256 63686172 		.ascii	"char\000"
+ 3342      00
+ 3343              	.LASF27:
+ 3344 025b 6672656D 		.ascii	"frem\000"
+ 3344      00
+ 3345              	.LASF2:
+ 3346 0260 73686F72 		.ascii	"short int\000"
+ 3346      7420696E 
+ 3346      7400
+ 3347              	.LASF35:
+ 3348 026a 73746570 		.ascii	"stepcount\000"
+ 3348      636F756E 
+ 3348      7400
+ 3349              	.LASF14:
+ 3350 0274 6C6F6E67 		.ascii	"long double\000"
+ 3350      20646F75 
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccvGwgDg.s 			page 69
+
+
+ 3350      626C6500 
+ 3351              	.LASF0:
+ 3352 0280 7369676E 		.ascii	"signed char\000"
+ 3352      65642063 
+ 3352      68617200 
+ 3353              	.LASF16:
+ 3354 028c 636F696C 		.ascii	"coilA1\000"
+ 3354      413100
+ 3355              	.LASF17:
+ 3356 0293 636F696C 		.ascii	"coilA2\000"
+ 3356      413200
+ 3357              	.LASF42:
+ 3358 029a 43794465 		.ascii	"CyDelay\000"
+ 3358      6C617900 
+ 3359              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

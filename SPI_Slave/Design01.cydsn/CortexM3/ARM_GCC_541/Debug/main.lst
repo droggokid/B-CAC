@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccbzwNna.s 			page 1
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccTmQpS6.s 			page 1
 
 
    1              		.syntax unified
@@ -19,826 +19,1870 @@ ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccbzwNna.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text.SPI_RX_ISR,"ax",%progbits
-  20              		.align	2
-  21              		.global	SPI_RX_ISR
-  22              		.thumb
-  23              		.thumb_func
-  24              		.type	SPI_RX_ISR, %function
-  25              	SPI_RX_ISR:
-  26              	.LFB63:
-  27              		.file 1 "main.c"
+  19              		.global	__aeabi_f2uiz
+  20              		.section	.text.main,"ax",%progbits
+  21              		.align	2
+  22              		.global	main
+  23              		.thumb
+  24              		.thumb_func
+  25              		.type	main, %function
+  26              	main:
+  27              	.LFB64:
+  28              		.file 1 "main.c"
    1:main.c        **** #include "project.h"
-   2:main.c        **** #include "spi_Slave.h"
-   3:main.c        **** 
-   4:main.c        **** CY_ISR(SPI_RX_ISR)
-   5:main.c        **** {
-  28              		.loc 1 5 0
-  29              		.cfi_startproc
-  30              		@ args = 0, pretend = 0, frame = 0
-  31              		@ frame_needed = 0, uses_anonymous_args = 0
-  32 0000 10B5     		push	{r4, lr}
-  33              		.cfi_def_cfa_offset 8
-  34              		.cfi_offset 4, -8
-  35              		.cfi_offset 14, -4
-   6:main.c        ****     // Define status
-   7:main.c        ****     uint8_t status;
+   2:main.c        **** 
+   3:main.c        **** #include "Loadcell.h"
+   4:main.c        **** #include "Timer.h"
+   5:main.c        **** #include "FlagMotor.h"
+   6:main.c        **** #include "led.h"
+   7:main.c        **** #include "spi_Slave.h"
    8:main.c        **** 
-   9:main.c        ****     // Get the command from SPI
-  10:main.c        ****     status = modtagetSPi();
-  36              		.loc 1 10 0
-  37 0002 FFF7FEFF 		bl	modtagetSPi
-  38              	.LVL0:
+   9:main.c        **** #include <stdio.h>
+  10:main.c        **** 
   11:main.c        **** 
-  12:main.c        ****     // Handle the status
-  13:main.c        ****     // If anything is received, turn off the LED
-  14:main.c        ****     if(status != 0)
-  39              		.loc 1 14 0
-  40 0006 18B1     		cbz	r0, .L2
-  15:main.c        ****     {
-  16:main.c        ****         LED_1_Write(0); // Turn off the LED
-  41              		.loc 1 16 0
-ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccbzwNna.s 			page 2
+  12:main.c        **** CY_ISR_PROTO(ISR_SPI_rx_handler);
+  13:main.c        **** void handleByteReceived(uint8_t byteReceived);
+  14:main.c        **** int UCstate=0;
+  15:main.c        **** 
+  16:main.c        **** int main(void)
+  17:main.c        **** {
+  29              		.loc 1 17 0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33 0000 38B5     		push	{r3, r4, r5, lr}
+  34              		.cfi_def_cfa_offset 16
+  35              		.cfi_offset 3, -16
+  36              		.cfi_offset 4, -12
+  37              		.cfi_offset 5, -8
+  38              		.cfi_offset 14, -4
+  18:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
+  39              		.loc 1 18 0
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccTmQpS6.s 			page 2
 
 
-  42 0008 0020     		movs	r0, #0
-  43              	.LVL1:
-  44 000a FFF7FEFF 		bl	LED_1_Write
-  45              	.LVL2:
-  46 000e 10BD     		pop	{r4, pc}
-  47              	.LVL3:
-  48              	.L2:
-  49 0010 0446     		mov	r4, r0
-  17:main.c        ****     }
-  18:main.c        ****     else
-  19:main.c        ****     {
-  20:main.c        ****         // Read the button status
-  21:main.c        ****         // If the button is off, clear the least significant bit
-  22:main.c        ****         if(Button_1_Read())
+  40              		.syntax unified
+  41              	@ 18 "main.c" 1
+  42 0002 62B6     		CPSIE   i
+  43              	@ 0 "" 2
+  19:main.c        ****     SPI_RX_ISR_StartEx(ISR_SPI_rx_handler);
+  44              		.loc 1 19 0
+  45              		.thumb
+  46              		.syntax unified
+  47 0004 3E48     		ldr	r0, .L10
+  48 0006 FFF7FEFF 		bl	SPI_RX_ISR_StartEx
+  49              	.LVL0:
+  20:main.c        **** 
+  21:main.c        ****     // Initialize SPI
+  22:main.c        ****     InitializeSPI(); // Make sure this function is correctly configuring the SPI module
   50              		.loc 1 22 0
-  51 0012 FFF7FEFF 		bl	Button_1_Read
-  52              	.LVL4:
-  53 0016 10B1     		cbz	r0, .L4
-  23:main.c        ****             status &= 0b11111110;
-  54              		.loc 1 23 0
-  55 0018 04F0FE00 		and	r0, r4, #254
-  56              	.LVL5:
-  57 001c 02E0     		b	.L5
-  58              	.LVL6:
-  59              	.L4:
-  24:main.c        ****         // If the button is on, set the least significant bit
-  25:main.c        ****         else
-  26:main.c        ****             status |= 0b00000001;
-  60              		.loc 1 26 0
-  61 001e 44F00104 		orr	r4, r4, #1
-  62 0022 E0B2     		uxtb	r0, r4
-  63              	.LVL7:
-  64              	.L5:
-  27:main.c        **** 
-  28:main.c        ****         // Send back the status
-  29:main.c        ****         sendSPi(status);
-  65              		.loc 1 29 0
-  66 0024 FFF7FEFF 		bl	sendSPi
-  67              	.LVL8:
-  30:main.c        **** 
-  31:main.c        ****         // Turn on the LED
-  32:main.c        ****         LED_1_Write(1);
-  68              		.loc 1 32 0
-  69 0028 0120     		movs	r0, #1
-  70 002a FFF7FEFF 		bl	LED_1_Write
-  71              	.LVL9:
-  72 002e 10BD     		pop	{r4, pc}
-  73              		.cfi_endproc
-  74              	.LFE63:
-  75              		.size	SPI_RX_ISR, .-SPI_RX_ISR
-  76              		.section	.text.main,"ax",%progbits
-  77              		.align	2
-  78              		.global	main
-  79              		.thumb
-  80              		.thumb_func
-  81              		.type	main, %function
-  82              	main:
-ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccbzwNna.s 			page 3
+  51 000a FFF7FEFF 		bl	InitializeSPI
+  52              	.LVL1:
+  23:main.c        ****     
+  24:main.c        ****     
+  25:main.c        ****     //Initiering
+  26:main.c        ****     initLoadcell();
+  53              		.loc 1 26 0
+  54 000e FFF7FEFF 		bl	initLoadcell
+  55              	.LVL2:
+  27:main.c        ****     
+  28:main.c        ****     //Variable definationer
+  29:main.c        ****     int repeats = 50;
+  30:main.c        ****     float startoffset = 164.5;
+  31:main.c        ****     float factor = 4.672;
+  32:main.c        ****     int preload=0;
+  33:main.c        ****     uint16_t Result_gram;
+  34:main.c        ****     uint8_t gameReady=0;
+  35:main.c        ****     uint8_t timestop=0;
+  36:main.c        ****     uint8_t dnf=0;
+  37:main.c        ****     char mode='h';
+  38:main.c        ****     uint32_t tid=0;
+  39:main.c        ****     
+  40:main.c        ****     homeStepper(mode);
+  56              		.loc 1 40 0
+  57 0012 6820     		movs	r0, #104
+  58 0014 FFF7FEFF 		bl	homeStepper
+  59              	.LVL3:
+  41:main.c        ****     stopFlagMotor();
+  60              		.loc 1 41 0
+  61 0018 FFF7FEFF 		bl	stopFlagMotor
+  62              	.LVL4:
+  63              	.L7:
+  42:main.c        ****    
+  43:main.c        ****     for(;;)
+  44:main.c        ****     {
+  45:main.c        ****            //UC1 Game preperation
+  46:main.c        ****     //Øl fjernet
+  47:main.c        ****     if(UCstate==1)
+  64              		.loc 1 47 0
+  65 001c 394B     		ldr	r3, .L10+4
+  66 001e 1B68     		ldr	r3, [r3]
+  67 0020 012B     		cmp	r3, #1
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccTmQpS6.s 			page 3
 
 
-  83              	.LFB64:
-  33:main.c        ****     }
-  34:main.c        **** }
-  35:main.c        **** 
-  36:main.c        **** int main(void)
-  37:main.c        **** {
-  84              		.loc 1 37 0
-  85              		.cfi_startproc
-  86              		@ Volatile: function does not return.
-  87              		@ args = 0, pretend = 0, frame = 0
-  88              		@ frame_needed = 0, uses_anonymous_args = 0
-  89 0000 08B5     		push	{r3, lr}
-  90              		.cfi_def_cfa_offset 8
-  91              		.cfi_offset 3, -8
-  92              		.cfi_offset 14, -4
-  38:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
-  93              		.loc 1 38 0
-  94              		.syntax unified
-  95              	@ 38 "main.c" 1
-  96 0002 62B6     		CPSIE   i
-  97              	@ 0 "" 2
-  39:main.c        ****     SPI_RX_ISR_StartEx(SPI_RX_ISR);
-  98              		.loc 1 39 0
-  99              		.thumb
- 100              		.syntax unified
- 101 0004 0448     		ldr	r0, .L10
- 102 0006 FFF7FEFF 		bl	SPI_RX_ISR_StartEx
- 103              	.LVL10:
-  40:main.c        **** 
-  41:main.c        ****     // Initialize SPI
-  42:main.c        ****     InitializeSPI(); // Make sure this function is correctly configuring the SPI module
- 104              		.loc 1 42 0
- 105 000a FFF7FEFF 		bl	InitializeSPI
- 106              	.LVL11:
- 107              	.L8:
-  43:main.c        **** 
-  44:main.c        ****     /* Place your initialization/startup code here (e.g., MyInst_Start()) */
-  45:main.c        ****     for(;;)
-  46:main.c        ****     {
-  47:main.c        ****         // Your main loop code here
-  48:main.c        ****         CyDelay(10);  // Add a delay to allow time for processing
- 108              		.loc 1 48 0 discriminator 1
- 109 000e 0A20     		movs	r0, #10
- 110 0010 FFF7FEFF 		bl	CyDelay
- 111              	.LVL12:
- 112 0014 FBE7     		b	.L8
- 113              	.L11:
- 114 0016 00BF     		.align	2
- 115              	.L10:
- 116 0018 00000000 		.word	SPI_RX_ISR
- 117              		.cfi_endproc
- 118              	.LFE64:
- 119              		.size	main, .-main
- 120              		.text
- 121              	.Letext0:
- 122              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
- 123              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
-ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccbzwNna.s 			page 4
+  68 0022 15D1     		bne	.L2
+  48:main.c        ****     {
+  49:main.c        ****     offset_Zerodrift_calibrate( repeats,  startoffset,  factor, preload);
+  69              		.loc 1 49 0
+  70 0024 384D     		ldr	r5, .L10+8
+  71 0026 394C     		ldr	r4, .L10+12
+  72 0028 0023     		movs	r3, #0
+  73 002a 2A46     		mov	r2, r5
+  74 002c 2146     		mov	r1, r4
+  75 002e 3220     		movs	r0, #50
+  76 0030 FFF7FEFF 		bl	offset_Zerodrift_calibrate
+  77              	.LVL5:
+  78              	.LBB2:
+  50:main.c        ****     {
+  51:main.c        ****     float zerodriftOffset = readWeight( repeats,startoffset,  factor, preload);
+  79              		.loc 1 51 0
+  80 0034 0023     		movs	r3, #0
+  81 0036 2A46     		mov	r2, r5
+  82 0038 2146     		mov	r1, r4
+  83 003a 3220     		movs	r0, #50
+  84 003c FFF7FEFF 		bl	readWeight
+  85              	.LVL6:
+  86              	.LBE2:
+  52:main.c        ****     //snprintf(uartBuffer,sizeof(uartBuffer),"Read value (g) %f\r\n ", zerodriftOffset);
+  53:main.c        ****     //UART_1_PutString(uartBuffer);
+  54:main.c        ****     }
+  55:main.c        ****     homeStepper(mode);
+  87              		.loc 1 55 0
+  88 0040 6820     		movs	r0, #104
+  89 0042 FFF7FEFF 		bl	homeStepper
+  90              	.LVL7:
+  56:main.c        ****     stopFlagMotor();
+  91              		.loc 1 56 0
+  92 0046 FFF7FEFF 		bl	stopFlagMotor
+  93              	.LVL8:
+  57:main.c        ****     UCstate=0;
+  94              		.loc 1 57 0
+  95 004a 0022     		movs	r2, #0
+  96 004c 2D4B     		ldr	r3, .L10+4
+  97 004e 1A60     		str	r2, [r3]
+  98              	.L2:
+  58:main.c        ****     }
+  59:main.c        ****     
+  60:main.c        ****     
+  61:main.c        ****     
+  62:main.c        ****     //der er sat en genstand på platform
+  63:main.c        ****     if(UCstate==2)
+  99              		.loc 1 63 0
+ 100 0050 2C4B     		ldr	r3, .L10+4
+ 101 0052 1B68     		ldr	r3, [r3]
+ 102 0054 022B     		cmp	r3, #2
+ 103 0056 13D1     		bne	.L3
+  64:main.c        ****     {
+  65:main.c        ****     wait_for_weight(startoffset, factor,preload);//venter på der bliver plasseret en øl
+ 104              		.loc 1 65 0
+ 105 0058 2B4D     		ldr	r5, .L10+8
+ 106 005a 2C4C     		ldr	r4, .L10+12
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccTmQpS6.s 			page 4
 
 
- 124              		.file 4 "spi_Slave.h"
- 125              		.file 5 "Generated_Source\\PSoC5/LED_1.h"
- 126              		.file 6 "Generated_Source\\PSoC5/Button_1.h"
- 127              		.file 7 "Generated_Source\\PSoC5/SPI_RX_ISR.h"
- 128              		.file 8 "Generated_Source\\PSoC5/CyLib.h"
- 129              		.file 9 "Generated_Source\\PSoC5/core_cm3.h"
- 130              		.section	.debug_info,"",%progbits
- 131              	.Ldebug_info0:
- 132 0000 C0010000 		.4byte	0x1c0
- 133 0004 0400     		.2byte	0x4
- 134 0006 00000000 		.4byte	.Ldebug_abbrev0
- 135 000a 04       		.byte	0x4
- 136 000b 01       		.uleb128 0x1
- 137 000c 51000000 		.4byte	.LASF25
- 138 0010 0C       		.byte	0xc
- 139 0011 B7010000 		.4byte	.LASF26
- 140 0015 11010000 		.4byte	.LASF27
- 141 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 142 001d 00000000 		.4byte	0
- 143 0021 00000000 		.4byte	.Ldebug_line0
- 144 0025 02       		.uleb128 0x2
- 145 0026 01       		.byte	0x1
- 146 0027 06       		.byte	0x6
- 147 0028 00020000 		.4byte	.LASF0
- 148 002c 03       		.uleb128 0x3
- 149 002d 00000000 		.4byte	.LASF4
- 150 0031 02       		.byte	0x2
- 151 0032 1D       		.byte	0x1d
- 152 0033 37000000 		.4byte	0x37
- 153 0037 02       		.uleb128 0x2
- 154 0038 01       		.byte	0x1
- 155 0039 08       		.byte	0x8
- 156 003a 43000000 		.4byte	.LASF1
- 157 003e 02       		.uleb128 0x2
- 158 003f 02       		.byte	0x2
- 159 0040 05       		.byte	0x5
- 160 0041 D6010000 		.4byte	.LASF2
- 161 0045 02       		.uleb128 0x2
- 162 0046 02       		.byte	0x2
- 163 0047 07       		.byte	0x7
- 164 0048 F1000000 		.4byte	.LASF3
- 165 004c 03       		.uleb128 0x3
- 166 004d 12000000 		.4byte	.LASF5
- 167 0051 02       		.byte	0x2
- 168 0052 3F       		.byte	0x3f
- 169 0053 57000000 		.4byte	0x57
- 170 0057 02       		.uleb128 0x2
- 171 0058 04       		.byte	0x4
- 172 0059 05       		.byte	0x5
- 173 005a E0010000 		.4byte	.LASF6
- 174 005e 02       		.uleb128 0x2
- 175 005f 04       		.byte	0x4
- 176 0060 07       		.byte	0x7
- 177 0061 DF000000 		.4byte	.LASF7
- 178 0065 02       		.uleb128 0x2
- 179 0066 08       		.byte	0x8
- 180 0067 05       		.byte	0x5
-ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccbzwNna.s 			page 5
+ 107 005c 0022     		movs	r2, #0
+ 108 005e 2946     		mov	r1, r5
+ 109 0060 2046     		mov	r0, r4
+ 110 0062 FFF7FEFF 		bl	wait_for_weight
+ 111              	.LVL9:
+  66:main.c        ****     CyDelay(3000); //delay så flasken flader til ro
+ 112              		.loc 1 66 0
+ 113 0066 40F6B830 		movw	r0, #3000
+ 114 006a FFF7FEFF 		bl	CyDelay
+ 115              	.LVL10:
+  67:main.c        ****     Result_gram = readWeight( repeats,startoffset, factor, preload);
+ 116              		.loc 1 67 0
+ 117 006e 0023     		movs	r3, #0
+ 118 0070 2A46     		mov	r2, r5
+ 119 0072 2146     		mov	r1, r4
+ 120 0074 3220     		movs	r0, #50
+ 121 0076 FFF7FEFF 		bl	readWeight
+ 122              	.LVL11:
+  68:main.c        ****     {
+  69:main.c        ****     
+  70:main.c        ****     //snprintf(uartBuffer,sizeof(uartBuffer),"Read value (g) %d\r\n ", Result_gram);
+  71:main.c        ****     //UART_1_PutString(uartBuffer);
+  72:main.c        ****     
+  73:main.c        ****     }
+  74:main.c        ****     if(Result_gram>650)
+  75:main.c        ****     gameReady=1;
+  76:main.c        ****     else
+  77:main.c        ****     gameReady=0;
+  78:main.c        ****     
+  79:main.c        ****     {
+  80:main.c        ****     //snprintf(uartBuffer,sizeof(uartBuffer),"gameReady (g) %d\r\n ", gameReady);
+  81:main.c        ****     //UART_1_PutString(uartBuffer);
+  82:main.c        ****     }
+  83:main.c        ****     UCstate=0;
+ 123              		.loc 1 83 0
+ 124 007a 0022     		movs	r2, #0
+ 125 007c 214B     		ldr	r3, .L10+4
+ 126 007e 1A60     		str	r2, [r3]
+ 127              	.L3:
+  84:main.c        ****     }
+  85:main.c        ****      
+  86:main.c        ****     //send signal til RPI, Hvis GameReady er 1 så er øllen godkendt
+  87:main.c        ****     
+  88:main.c        ****     
+  89:main.c        ****     
+  90:main.c        ****     //UC2 play game
+  91:main.c        ****     
+  92:main.c        ****     //Dermodtages GO signal
+  93:main.c        ****     
+  94:main.c        ****     if(UCstate==3)
+ 128              		.loc 1 94 0
+ 129 0080 204B     		ldr	r3, .L10+4
+ 130 0082 1B68     		ldr	r3, [r3]
+ 131 0084 032B     		cmp	r3, #3
+ 132 0086 2CD1     		bne	.L4
+ 133              	.LBB3:
+  95:main.c        ****     {
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccTmQpS6.s 			page 5
 
 
- 181 0068 A9010000 		.4byte	.LASF8
- 182 006c 02       		.uleb128 0x2
- 183 006d 08       		.byte	0x8
- 184 006e 07       		.byte	0x7
- 185 006f 79010000 		.4byte	.LASF9
- 186 0073 04       		.uleb128 0x4
- 187 0074 04       		.byte	0x4
- 188 0075 05       		.byte	0x5
- 189 0076 696E7400 		.ascii	"int\000"
- 190 007a 02       		.uleb128 0x2
- 191 007b 04       		.byte	0x4
- 192 007c 07       		.byte	0x7
- 193 007d 6C010000 		.4byte	.LASF10
- 194 0081 03       		.uleb128 0x3
- 195 0082 90010000 		.4byte	.LASF11
- 196 0086 03       		.byte	0x3
- 197 0087 18       		.byte	0x18
- 198 0088 2C000000 		.4byte	0x2c
- 199 008c 03       		.uleb128 0x3
- 200 008d 98010000 		.4byte	.LASF12
- 201 0091 03       		.byte	0x3
- 202 0092 2C       		.byte	0x2c
- 203 0093 4C000000 		.4byte	0x4c
- 204 0097 02       		.uleb128 0x2
- 205 0098 04       		.byte	0x4
- 206 0099 04       		.byte	0x4
- 207 009a 3D000000 		.4byte	.LASF13
- 208 009e 02       		.uleb128 0x2
- 209 009f 08       		.byte	0x8
- 210 00a0 04       		.byte	0x4
- 211 00a1 60010000 		.4byte	.LASF14
- 212 00a5 02       		.uleb128 0x2
- 213 00a6 01       		.byte	0x1
- 214 00a7 08       		.byte	0x8
- 215 00a8 BE010000 		.4byte	.LASF15
- 216 00ac 02       		.uleb128 0x2
- 217 00ad 08       		.byte	0x8
- 218 00ae 04       		.byte	0x4
- 219 00af E9010000 		.4byte	.LASF16
- 220 00b3 02       		.uleb128 0x2
- 221 00b4 04       		.byte	0x4
- 222 00b5 07       		.byte	0x7
- 223 00b6 A0010000 		.4byte	.LASF17
- 224 00ba 05       		.uleb128 0x5
- 225 00bb F5010000 		.4byte	.LASF28
- 226 00bf 01       		.byte	0x1
- 227 00c0 04       		.byte	0x4
- 228 00c1 00000000 		.4byte	.LFB63
- 229 00c5 30000000 		.4byte	.LFE63-.LFB63
- 230 00c9 01       		.uleb128 0x1
- 231 00ca 9C       		.byte	0x9c
- 232 00cb 1C010000 		.4byte	0x11c
- 233 00cf 06       		.uleb128 0x6
- 234 00d0 2A000000 		.4byte	.LASF29
- 235 00d4 01       		.byte	0x1
- 236 00d5 07       		.byte	0x7
- 237 00d6 81000000 		.4byte	0x81
-ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccbzwNna.s 			page 6
+  96:main.c        ****     Result_gram = readWeight(repeats,startoffset, factor, preload);
+ 134              		.loc 1 96 0
+ 135 0088 0023     		movs	r3, #0
+ 136 008a 1F4A     		ldr	r2, .L10+8
+ 137 008c 1F49     		ldr	r1, .L10+12
+ 138 008e 3220     		movs	r0, #50
+ 139 0090 FFF7FEFF 		bl	readWeight
+ 140              	.LVL12:
+ 141 0094 FFF7FEFF 		bl	__aeabi_f2uiz
+ 142              	.LVL13:
+ 143 0098 84B2     		uxth	r4, r0
+ 144              	.LVL14:
+  97:main.c        ****         {//print
+  98:main.c        ****         //snprintf(uartBuffer,sizeof(uartBuffer),"Read value (g) %d\r\n ", Result_gram);
+  99:main.c        ****         //UART_1_PutString(uartBuffer);
+ 100:main.c        ****         }
+ 101:main.c        ****     if(Result_gram<10)
+ 102:main.c        ****         dnf=1;
+ 103:main.c        ****     else
+ 104:main.c        ****         dnf=0;
+ 105:main.c        ****         {//print
+ 106:main.c        ****         //snprintf(uartBuffer,sizeof(uartBuffer),"Dnf (g) %d\r\n ", dnf);
+ 107:main.c        ****         //UART_1_PutString(uartBuffer);
+ 108:main.c        ****         }
+ 109:main.c        ****     startTidsTagning();//timer startes
+ 145              		.loc 1 109 0
+ 146 009a FFF7FEFF 		bl	startTidsTagning
+ 147              	.LVL15:
+ 110:main.c        ****     
+ 111:main.c        ****     while(Result_gram>10)
+ 148              		.loc 1 111 0
+ 149 009e 08E0     		b	.L5
+ 150              	.L6:
+ 112:main.c        ****     Result_gram = readWeight(repeats,startoffset, factor, preload);
+ 151              		.loc 1 112 0
+ 152 00a0 0023     		movs	r3, #0
+ 153 00a2 194A     		ldr	r2, .L10+8
+ 154 00a4 1949     		ldr	r1, .L10+12
+ 155 00a6 3220     		movs	r0, #50
+ 156 00a8 FFF7FEFF 		bl	readWeight
+ 157              	.LVL16:
+ 158 00ac FFF7FEFF 		bl	__aeabi_f2uiz
+ 159              	.LVL17:
+ 160 00b0 84B2     		uxth	r4, r0
+ 161              	.LVL18:
+ 162              	.L5:
+ 111:main.c        ****     Result_gram = readWeight(repeats,startoffset, factor, preload);
+ 163              		.loc 1 111 0
+ 164 00b2 0A2C     		cmp	r4, #10
+ 165 00b4 F4D8     		bhi	.L6
+ 113:main.c        ****     
+ 114:main.c        ****     
+ 115:main.c        ****     wait_for_weight(startoffset, factor,preload);//venter på der bliver plasseret en øl
+ 166              		.loc 1 115 0
+ 167 00b6 144D     		ldr	r5, .L10+8
+ 168 00b8 144C     		ldr	r4, .L10+12
+ 169              	.LVL19:
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccTmQpS6.s 			page 6
 
 
- 238 00da 00000000 		.4byte	.LLST0
- 239 00de 07       		.uleb128 0x7
- 240 00df 06000000 		.4byte	.LVL0
- 241 00e3 76010000 		.4byte	0x176
- 242 00e7 08       		.uleb128 0x8
- 243 00e8 0E000000 		.4byte	.LVL2
- 244 00ec 81010000 		.4byte	0x181
- 245 00f0 FA000000 		.4byte	0xfa
- 246 00f4 09       		.uleb128 0x9
- 247 00f5 01       		.uleb128 0x1
- 248 00f6 50       		.byte	0x50
- 249 00f7 01       		.uleb128 0x1
- 250 00f8 30       		.byte	0x30
- 251 00f9 00       		.byte	0
- 252 00fa 07       		.uleb128 0x7
- 253 00fb 16000000 		.4byte	.LVL4
- 254 00ff 8C010000 		.4byte	0x18c
- 255 0103 07       		.uleb128 0x7
- 256 0104 28000000 		.4byte	.LVL8
- 257 0108 97010000 		.4byte	0x197
- 258 010c 0A       		.uleb128 0xa
- 259 010d 2E000000 		.4byte	.LVL9
- 260 0111 81010000 		.4byte	0x181
- 261 0115 09       		.uleb128 0x9
- 262 0116 01       		.uleb128 0x1
- 263 0117 50       		.byte	0x50
- 264 0118 01       		.uleb128 0x1
- 265 0119 31       		.byte	0x31
- 266 011a 00       		.byte	0
- 267 011b 00       		.byte	0
- 268 011c 0B       		.uleb128 0xb
- 269 011d 67010000 		.4byte	.LASF30
- 270 0121 01       		.byte	0x1
- 271 0122 24       		.byte	0x24
- 272 0123 73000000 		.4byte	0x73
- 273 0127 00000000 		.4byte	.LFB64
- 274 012b 1C000000 		.4byte	.LFE64-.LFB64
- 275 012f 01       		.uleb128 0x1
- 276 0130 9C       		.byte	0x9c
- 277 0131 65010000 		.4byte	0x165
- 278 0135 08       		.uleb128 0x8
- 279 0136 0A000000 		.4byte	.LVL10
- 280 013a A2010000 		.4byte	0x1a2
- 281 013e 4C010000 		.4byte	0x14c
- 282 0142 09       		.uleb128 0x9
- 283 0143 01       		.uleb128 0x1
- 284 0144 50       		.byte	0x50
- 285 0145 05       		.uleb128 0x5
- 286 0146 03       		.byte	0x3
- 287 0147 00000000 		.4byte	SPI_RX_ISR
- 288 014b 00       		.byte	0
- 289 014c 07       		.uleb128 0x7
- 290 014d 0E000000 		.4byte	.LVL11
- 291 0151 AD010000 		.4byte	0x1ad
- 292 0155 0A       		.uleb128 0xa
- 293 0156 14000000 		.4byte	.LVL12
- 294 015a B8010000 		.4byte	0x1b8
-ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccbzwNna.s 			page 7
+ 170 00ba 0022     		movs	r2, #0
+ 171 00bc 2946     		mov	r1, r5
+ 172 00be 2046     		mov	r0, r4
+ 173 00c0 FFF7FEFF 		bl	wait_for_weight
+ 174              	.LVL20:
+ 116:main.c        ****     timestop=1;
+ 117:main.c        ****     tid = stopTidsTagning(); //tid stoppes
+ 175              		.loc 1 117 0
+ 176 00c4 FFF7FEFF 		bl	stopTidsTagning
+ 177              	.LVL21:
+ 118:main.c        ****     int roundedNum = (tid + 50) / 100 * 100;//rundes af til nærmeste 100 ms
+ 119:main.c        ****         {//print
+ 120:main.c        ****         //snprintf(uartBuffer,sizeof(uartBuffer),"tid (g) %d\r\n ", tid);
+ 121:main.c        ****         //UART_1_PutString(uartBuffer);
+ 122:main.c        ****         //snprintf(uartBuffer,sizeof(uartBuffer),"tid (g) %d\r\n ", roundedNum);
+ 123:main.c        ****         //UART_1_PutString(uartBuffer);
+ 124:main.c        ****         }
+ 125:main.c        ****     //tid sendes
+ 126:main.c        ****     CyDelay(5000);
+ 178              		.loc 1 126 0
+ 179 00c8 41F28830 		movw	r0, #5000
+ 180 00cc FFF7FEFF 		bl	CyDelay
+ 181              	.LVL22:
+ 127:main.c        ****     Result_gram = readWeight(repeats,startoffset, factor, preload);
+ 182              		.loc 1 127 0
+ 183 00d0 0023     		movs	r3, #0
+ 184 00d2 2A46     		mov	r2, r5
+ 185 00d4 2146     		mov	r1, r4
+ 186 00d6 3220     		movs	r0, #50
+ 187 00d8 FFF7FEFF 		bl	readWeight
+ 188              	.LVL23:
+ 128:main.c        ****         {//print
+ 129:main.c        ****         //snprintf(uartBuffer,sizeof(uartBuffer),"Read value (g) %d\r\n ", Result_gram);
+ 130:main.c        ****         //UART_1_PutString(uartBuffer);
+ 131:main.c        ****         }
+ 132:main.c        ****     if(Result_gram>310)
+ 133:main.c        ****         dnf=1;
+ 134:main.c        ****     //dnf value sendes
+ 135:main.c        ****     
+ 136:main.c        ****         {//print
+ 137:main.c        ****         //snprintf(uartBuffer,sizeof(uartBuffer),"Dnf (g) %d\r\n ", dnf);
+ 138:main.c        ****         //UART_1_PutString(uartBuffer);
+ 139:main.c        ****         }
+ 140:main.c        ****     UCstate=0;
+ 189              		.loc 1 140 0
+ 190 00dc 0022     		movs	r2, #0
+ 191 00de 094B     		ldr	r3, .L10+4
+ 192 00e0 1A60     		str	r2, [r3]
+ 193              	.LVL24:
+ 194              	.L4:
+ 195              	.LBE3:
+ 141:main.c        ****     }
+ 142:main.c        ****     
+ 143:main.c        ****     //modtager win signal fra RPI
+ 144:main.c        ****     if(UCstate==4)
+ 196              		.loc 1 144 0
+ 197 00e2 084B     		ldr	r3, .L10+4
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccTmQpS6.s 			page 7
 
 
- 295 015e 09       		.uleb128 0x9
- 296 015f 01       		.uleb128 0x1
- 297 0160 50       		.byte	0x50
- 298 0161 01       		.uleb128 0x1
- 299 0162 3A       		.byte	0x3a
- 300 0163 00       		.byte	0
- 301 0164 00       		.byte	0
- 302 0165 0C       		.uleb128 0xc
- 303 0166 04010000 		.4byte	.LASF31
- 304 016a 09       		.byte	0x9
- 305 016b 1207     		.2byte	0x712
- 306 016d 71010000 		.4byte	0x171
- 307 0171 0D       		.uleb128 0xd
- 308 0172 8C000000 		.4byte	0x8c
- 309 0176 0E       		.uleb128 0xe
- 310 0177 31000000 		.4byte	.LASF18
- 311 017b 31000000 		.4byte	.LASF18
- 312 017f 04       		.byte	0x4
- 313 0180 0F       		.byte	0xf
- 314 0181 0E       		.uleb128 0xe
- 315 0182 0C020000 		.4byte	.LASF19
- 316 0186 0C020000 		.4byte	.LASF19
- 317 018a 05       		.byte	0x5
- 318 018b 26       		.byte	0x26
- 319 018c 0E       		.uleb128 0xe
- 320 018d 18020000 		.4byte	.LASF20
- 321 0191 18020000 		.4byte	.LASF20
- 322 0195 06       		.byte	0x6
- 323 0196 29       		.byte	0x29
- 324 0197 0E       		.uleb128 0xe
- 325 0198 0A000000 		.4byte	.LASF21
- 326 019c 0A000000 		.4byte	.LASF21
- 327 01a0 04       		.byte	0x4
- 328 01a1 10       		.byte	0x10
- 329 01a2 0E       		.uleb128 0xe
- 330 01a3 C3010000 		.4byte	.LASF22
- 331 01a7 C3010000 		.4byte	.LASF22
- 332 01ab 07       		.byte	0x7
- 333 01ac 18       		.byte	0x18
- 334 01ad 0E       		.uleb128 0xe
- 335 01ae 1C000000 		.4byte	.LASF23
- 336 01b2 1C000000 		.4byte	.LASF23
- 337 01b6 04       		.byte	0x4
- 338 01b7 0E       		.byte	0xe
- 339 01b8 0E       		.uleb128 0xe
- 340 01b9 26020000 		.4byte	.LASF24
- 341 01bd 26020000 		.4byte	.LASF24
- 342 01c1 08       		.byte	0x8
- 343 01c2 76       		.byte	0x76
- 344 01c3 00       		.byte	0
- 345              		.section	.debug_abbrev,"",%progbits
- 346              	.Ldebug_abbrev0:
- 347 0000 01       		.uleb128 0x1
- 348 0001 11       		.uleb128 0x11
- 349 0002 01       		.byte	0x1
- 350 0003 25       		.uleb128 0x25
- 351 0004 0E       		.uleb128 0xe
-ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccbzwNna.s 			page 8
+ 198 00e4 1B68     		ldr	r3, [r3]
+ 199 00e6 042B     		cmp	r3, #4
+ 200 00e8 98D1     		bne	.L7
+ 145:main.c        ****     {
+ 146:main.c        ****     
+ 147:main.c        ****     stepperdriver_rotateTo(90, mode);
+ 201              		.loc 1 147 0
+ 202 00ea 6821     		movs	r1, #104
+ 203 00ec 5A20     		movs	r0, #90
+ 204 00ee FFF7FEFF 		bl	stepperdriver_rotateTo
+ 205              	.LVL25:
+ 148:main.c        ****     stopFlagMotor();
+ 206              		.loc 1 148 0
+ 207 00f2 FFF7FEFF 		bl	stopFlagMotor
+ 208              	.LVL26:
+ 149:main.c        ****     UCstate=0;
+ 209              		.loc 1 149 0
+ 210 00f6 0022     		movs	r2, #0
+ 211 00f8 024B     		ldr	r3, .L10+4
+ 212 00fa 1A60     		str	r2, [r3]
+ 213 00fc 8EE7     		b	.L7
+ 214              	.L11:
+ 215 00fe 00BF     		.align	2
+ 216              	.L10:
+ 217 0100 00000000 		.word	ISR_SPI_rx_handler
+ 218 0104 00000000 		.word	.LANCHOR0
+ 219 0108 06819540 		.word	1083539718
+ 220 010c 00802443 		.word	1126465536
+ 221              		.cfi_endproc
+ 222              	.LFE64:
+ 223              		.size	main, .-main
+ 224              		.section	.text.handleByteReceived,"ax",%progbits
+ 225              		.align	2
+ 226              		.global	handleByteReceived
+ 227              		.thumb
+ 228              		.thumb_func
+ 229              		.type	handleByteReceived, %function
+ 230              	handleByteReceived:
+ 231              	.LFB65:
+ 150:main.c        ****     }
+ 151:main.c        ****     }
+ 152:main.c        ****     
+ 153:main.c        **** }
+ 154:main.c        **** 
+ 155:main.c        **** void handleByteReceived(uint8_t byteReceived)
+ 156:main.c        **** {
+ 232              		.loc 1 156 0
+ 233              		.cfi_startproc
+ 234              		@ args = 0, pretend = 0, frame = 0
+ 235              		@ frame_needed = 0, uses_anonymous_args = 0
+ 236              		@ link register save eliminated.
+ 237              	.LVL27:
+ 157:main.c        ****     switch(byteReceived)
+ 238              		.loc 1 157 0
+ 239 0000 BB28     		cmp	r0, #187
+ 240 0002 0CD0     		beq	.L14
+ 241 0004 02D8     		bhi	.L15
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccTmQpS6.s 			page 8
 
 
- 352 0005 13       		.uleb128 0x13
- 353 0006 0B       		.uleb128 0xb
- 354 0007 03       		.uleb128 0x3
- 355 0008 0E       		.uleb128 0xe
- 356 0009 1B       		.uleb128 0x1b
- 357 000a 0E       		.uleb128 0xe
- 358 000b 55       		.uleb128 0x55
- 359 000c 17       		.uleb128 0x17
- 360 000d 11       		.uleb128 0x11
- 361 000e 01       		.uleb128 0x1
- 362 000f 10       		.uleb128 0x10
- 363 0010 17       		.uleb128 0x17
- 364 0011 00       		.byte	0
- 365 0012 00       		.byte	0
- 366 0013 02       		.uleb128 0x2
- 367 0014 24       		.uleb128 0x24
- 368 0015 00       		.byte	0
- 369 0016 0B       		.uleb128 0xb
- 370 0017 0B       		.uleb128 0xb
- 371 0018 3E       		.uleb128 0x3e
- 372 0019 0B       		.uleb128 0xb
- 373 001a 03       		.uleb128 0x3
- 374 001b 0E       		.uleb128 0xe
- 375 001c 00       		.byte	0
- 376 001d 00       		.byte	0
- 377 001e 03       		.uleb128 0x3
- 378 001f 16       		.uleb128 0x16
- 379 0020 00       		.byte	0
- 380 0021 03       		.uleb128 0x3
- 381 0022 0E       		.uleb128 0xe
- 382 0023 3A       		.uleb128 0x3a
- 383 0024 0B       		.uleb128 0xb
- 384 0025 3B       		.uleb128 0x3b
- 385 0026 0B       		.uleb128 0xb
- 386 0027 49       		.uleb128 0x49
- 387 0028 13       		.uleb128 0x13
- 388 0029 00       		.byte	0
- 389 002a 00       		.byte	0
- 390 002b 04       		.uleb128 0x4
- 391 002c 24       		.uleb128 0x24
- 392 002d 00       		.byte	0
- 393 002e 0B       		.uleb128 0xb
- 394 002f 0B       		.uleb128 0xb
- 395 0030 3E       		.uleb128 0x3e
- 396 0031 0B       		.uleb128 0xb
- 397 0032 03       		.uleb128 0x3
- 398 0033 08       		.uleb128 0x8
- 399 0034 00       		.byte	0
- 400 0035 00       		.byte	0
- 401 0036 05       		.uleb128 0x5
- 402 0037 2E       		.uleb128 0x2e
- 403 0038 01       		.byte	0x1
- 404 0039 3F       		.uleb128 0x3f
- 405 003a 19       		.uleb128 0x19
- 406 003b 03       		.uleb128 0x3
- 407 003c 0E       		.uleb128 0xe
- 408 003d 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccbzwNna.s 			page 9
+ 242 0006 AA28     		cmp	r0, #170
+ 243 0008 05D0     		beq	.L16
+ 244 000a 7047     		bx	lr
+ 245              	.L15:
+ 246 000c CC28     		cmp	r0, #204
+ 247 000e 0AD0     		beq	.L17
+ 248 0010 DD28     		cmp	r0, #221
+ 249 0012 0CD0     		beq	.L18
+ 250 0014 7047     		bx	lr
+ 251              	.L16:
+ 158:main.c        ****     {
+ 159:main.c        ****         case 0xAA :
+ 160:main.c        ****         {
+ 161:main.c        ****             //Kalibrering af vægten samt steppermotor
+ 162:main.c        ****             UCstate=1;
+ 252              		.loc 1 162 0
+ 253 0016 0122     		movs	r2, #1
+ 254 0018 074B     		ldr	r3, .L19
+ 255 001a 1A60     		str	r2, [r3]
+ 163:main.c        ****         }
+ 164:main.c        ****         break;
+ 256              		.loc 1 164 0
+ 257 001c 7047     		bx	lr
+ 258              	.L14:
+ 165:main.c        ****         case 0xBB :
+ 166:main.c        ****         {
+ 167:main.c        ****             //Gameready - venter, læser samt tjekker på vægten
+ 168:main.c        ****             UCstate=2;
+ 259              		.loc 1 168 0
+ 260 001e 0222     		movs	r2, #2
+ 261 0020 054B     		ldr	r3, .L19
+ 262 0022 1A60     		str	r2, [r3]
+ 169:main.c        ****         }
+ 170:main.c        ****         break;
+ 263              		.loc 1 170 0
+ 264 0024 7047     		bx	lr
+ 265              	.L17:
+ 171:main.c        ****         case 0xCC :
+ 172:main.c        ****         {
+ 173:main.c        ****             //Loop for aflæsning af vægt - Venter på, at der kommer vægt på vægten / tjekker 
+ 174:main.c        ****             UCstate=3;
+ 266              		.loc 1 174 0
+ 267 0026 0322     		movs	r2, #3
+ 268 0028 034B     		ldr	r3, .L19
+ 269 002a 1A60     		str	r2, [r3]
+ 175:main.c        ****         }
+ 176:main.c        ****         break;
+ 270              		.loc 1 176 0
+ 271 002c 7047     		bx	lr
+ 272              	.L18:
+ 177:main.c        ****         case 0xDD :
+ 178:main.c        ****         {
+ 179:main.c        ****             //Flagmotor
+ 180:main.c        ****             UCstate=4;
+ 273              		.loc 1 180 0
+ 274 002e 0422     		movs	r2, #4
+ 275 0030 014B     		ldr	r3, .L19
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccTmQpS6.s 			page 9
 
 
- 409 003e 0B       		.uleb128 0xb
- 410 003f 3B       		.uleb128 0x3b
- 411 0040 0B       		.uleb128 0xb
- 412 0041 27       		.uleb128 0x27
- 413 0042 19       		.uleb128 0x19
- 414 0043 11       		.uleb128 0x11
- 415 0044 01       		.uleb128 0x1
- 416 0045 12       		.uleb128 0x12
- 417 0046 06       		.uleb128 0x6
- 418 0047 40       		.uleb128 0x40
- 419 0048 18       		.uleb128 0x18
- 420 0049 9742     		.uleb128 0x2117
- 421 004b 19       		.uleb128 0x19
- 422 004c 01       		.uleb128 0x1
- 423 004d 13       		.uleb128 0x13
- 424 004e 00       		.byte	0
- 425 004f 00       		.byte	0
- 426 0050 06       		.uleb128 0x6
- 427 0051 34       		.uleb128 0x34
- 428 0052 00       		.byte	0
- 429 0053 03       		.uleb128 0x3
- 430 0054 0E       		.uleb128 0xe
- 431 0055 3A       		.uleb128 0x3a
- 432 0056 0B       		.uleb128 0xb
- 433 0057 3B       		.uleb128 0x3b
- 434 0058 0B       		.uleb128 0xb
- 435 0059 49       		.uleb128 0x49
- 436 005a 13       		.uleb128 0x13
- 437 005b 02       		.uleb128 0x2
- 438 005c 17       		.uleb128 0x17
- 439 005d 00       		.byte	0
- 440 005e 00       		.byte	0
- 441 005f 07       		.uleb128 0x7
- 442 0060 898201   		.uleb128 0x4109
- 443 0063 00       		.byte	0
- 444 0064 11       		.uleb128 0x11
- 445 0065 01       		.uleb128 0x1
- 446 0066 31       		.uleb128 0x31
- 447 0067 13       		.uleb128 0x13
- 448 0068 00       		.byte	0
- 449 0069 00       		.byte	0
- 450 006a 08       		.uleb128 0x8
- 451 006b 898201   		.uleb128 0x4109
- 452 006e 01       		.byte	0x1
- 453 006f 11       		.uleb128 0x11
- 454 0070 01       		.uleb128 0x1
- 455 0071 31       		.uleb128 0x31
- 456 0072 13       		.uleb128 0x13
- 457 0073 01       		.uleb128 0x1
- 458 0074 13       		.uleb128 0x13
- 459 0075 00       		.byte	0
- 460 0076 00       		.byte	0
- 461 0077 09       		.uleb128 0x9
- 462 0078 8A8201   		.uleb128 0x410a
- 463 007b 00       		.byte	0
- 464 007c 02       		.uleb128 0x2
- 465 007d 18       		.uleb128 0x18
-ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccbzwNna.s 			page 10
+ 276 0032 1A60     		str	r2, [r3]
+ 277 0034 7047     		bx	lr
+ 278              	.L20:
+ 279 0036 00BF     		.align	2
+ 280              	.L19:
+ 281 0038 00000000 		.word	.LANCHOR0
+ 282              		.cfi_endproc
+ 283              	.LFE65:
+ 284              		.size	handleByteReceived, .-handleByteReceived
+ 285              		.section	.text.ISR_SPI_rx_handler,"ax",%progbits
+ 286              		.align	2
+ 287              		.global	ISR_SPI_rx_handler
+ 288              		.thumb
+ 289              		.thumb_func
+ 290              		.type	ISR_SPI_rx_handler, %function
+ 291              	ISR_SPI_rx_handler:
+ 292              	.LFB66:
+ 181:main.c        ****         }
+ 182:main.c        ****         break;
+ 183:main.c        ****         default :
+ 184:main.c        ****         {
+ 185:main.c        ****             // nothing
+ 186:main.c        ****         }
+ 187:main.c        ****         break;
+ 188:main.c        ****     }
+ 189:main.c        **** }
+ 190:main.c        **** 
+ 191:main.c        **** 
+ 192:main.c        **** CY_ISR(ISR_SPI_rx_handler)
+ 193:main.c        **** {
+ 293              		.loc 1 193 0
+ 294              		.cfi_startproc
+ 295              		@ args = 0, pretend = 0, frame = 0
+ 296              		@ frame_needed = 0, uses_anonymous_args = 0
+ 297 0000 08B5     		push	{r3, lr}
+ 298              		.cfi_def_cfa_offset 8
+ 299              		.cfi_offset 3, -8
+ 300              		.cfi_offset 14, -4
+ 194:main.c        ****     uint8_t receivedData = modtagetSPi();
+ 301              		.loc 1 194 0
+ 302 0002 FFF7FEFF 		bl	modtagetSPi
+ 303              	.LVL28:
+ 195:main.c        ****     
+ 196:main.c        ****     //Handling of recieved SPI data
+ 197:main.c        ****     handleByteReceived(receivedData);
+ 304              		.loc 1 197 0
+ 305 0006 FFF7FEFF 		bl	handleByteReceived
+ 306              	.LVL29:
+ 307 000a 08BD     		pop	{r3, pc}
+ 308              		.cfi_endproc
+ 309              	.LFE66:
+ 310              		.size	ISR_SPI_rx_handler, .-ISR_SPI_rx_handler
+ 311              		.global	UCstate
+ 312              		.bss
+ 313              		.align	2
+ 314              		.set	.LANCHOR0,. + 0
+ 315              		.type	UCstate, %object
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccTmQpS6.s 			page 10
 
 
- 466 007e 9142     		.uleb128 0x2111
- 467 0080 18       		.uleb128 0x18
- 468 0081 00       		.byte	0
- 469 0082 00       		.byte	0
- 470 0083 0A       		.uleb128 0xa
- 471 0084 898201   		.uleb128 0x4109
- 472 0087 01       		.byte	0x1
- 473 0088 11       		.uleb128 0x11
- 474 0089 01       		.uleb128 0x1
- 475 008a 31       		.uleb128 0x31
- 476 008b 13       		.uleb128 0x13
- 477 008c 00       		.byte	0
- 478 008d 00       		.byte	0
- 479 008e 0B       		.uleb128 0xb
- 480 008f 2E       		.uleb128 0x2e
- 481 0090 01       		.byte	0x1
- 482 0091 3F       		.uleb128 0x3f
- 483 0092 19       		.uleb128 0x19
- 484 0093 03       		.uleb128 0x3
- 485 0094 0E       		.uleb128 0xe
- 486 0095 3A       		.uleb128 0x3a
- 487 0096 0B       		.uleb128 0xb
- 488 0097 3B       		.uleb128 0x3b
- 489 0098 0B       		.uleb128 0xb
- 490 0099 27       		.uleb128 0x27
- 491 009a 19       		.uleb128 0x19
- 492 009b 49       		.uleb128 0x49
- 493 009c 13       		.uleb128 0x13
- 494 009d 8701     		.uleb128 0x87
- 495 009f 19       		.uleb128 0x19
- 496 00a0 11       		.uleb128 0x11
- 497 00a1 01       		.uleb128 0x1
- 498 00a2 12       		.uleb128 0x12
- 499 00a3 06       		.uleb128 0x6
- 500 00a4 40       		.uleb128 0x40
- 501 00a5 18       		.uleb128 0x18
- 502 00a6 9742     		.uleb128 0x2117
- 503 00a8 19       		.uleb128 0x19
- 504 00a9 01       		.uleb128 0x1
- 505 00aa 13       		.uleb128 0x13
- 506 00ab 00       		.byte	0
- 507 00ac 00       		.byte	0
- 508 00ad 0C       		.uleb128 0xc
- 509 00ae 34       		.uleb128 0x34
- 510 00af 00       		.byte	0
- 511 00b0 03       		.uleb128 0x3
- 512 00b1 0E       		.uleb128 0xe
- 513 00b2 3A       		.uleb128 0x3a
- 514 00b3 0B       		.uleb128 0xb
- 515 00b4 3B       		.uleb128 0x3b
- 516 00b5 05       		.uleb128 0x5
- 517 00b6 49       		.uleb128 0x49
- 518 00b7 13       		.uleb128 0x13
- 519 00b8 3F       		.uleb128 0x3f
- 520 00b9 19       		.uleb128 0x19
- 521 00ba 3C       		.uleb128 0x3c
- 522 00bb 19       		.uleb128 0x19
-ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccbzwNna.s 			page 11
+ 316              		.size	UCstate, 4
+ 317              	UCstate:
+ 318 0000 00000000 		.space	4
+ 319              		.text
+ 320              	.Letext0:
+ 321              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 322              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 323              		.file 4 "Generated_Source\\PSoC5/core_cm3.h"
+ 324              		.file 5 "Loadcell.h"
+ 325              		.file 6 "Timer.h"
+ 326              		.file 7 "Generated_Source\\PSoC5/CyLib.h"
+ 327              		.file 8 "Generated_Source\\PSoC5/SPI_RX_ISR.h"
+ 328              		.file 9 "spi_Slave.h"
+ 329              		.file 10 "FlagMotor.h"
+ 330              		.section	.debug_info,"",%progbits
+ 331              	.Ldebug_info0:
+ 332 0000 8D040000 		.4byte	0x48d
+ 333 0004 0400     		.2byte	0x4
+ 334 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 335 000a 04       		.byte	0x4
+ 336 000b 01       		.uleb128 0x1
+ 337 000c DC000000 		.4byte	.LASF50
+ 338 0010 0C       		.byte	0xc
+ 339 0011 A9020000 		.4byte	.LASF51
+ 340 0015 F3010000 		.4byte	.LASF52
+ 341 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 342 001d 00000000 		.4byte	0
+ 343 0021 00000000 		.4byte	.Ldebug_line0
+ 344 0025 02       		.uleb128 0x2
+ 345 0026 04       		.byte	0x4
+ 346 0027 04       		.byte	0x4
+ 347 0028 A8000000 		.4byte	.LASF0
+ 348 002c 02       		.uleb128 0x2
+ 349 002d 01       		.byte	0x1
+ 350 002e 06       		.byte	0x6
+ 351 002f 2A030000 		.4byte	.LASF1
+ 352 0033 03       		.uleb128 0x3
+ 353 0034 08000000 		.4byte	.LASF4
+ 354 0038 02       		.byte	0x2
+ 355 0039 1D       		.byte	0x1d
+ 356 003a 3E000000 		.4byte	0x3e
+ 357 003e 02       		.uleb128 0x2
+ 358 003f 01       		.byte	0x1
+ 359 0040 08       		.byte	0x8
+ 360 0041 CE000000 		.4byte	.LASF2
+ 361 0045 02       		.uleb128 0x2
+ 362 0046 02       		.byte	0x2
+ 363 0047 05       		.byte	0x5
+ 364 0048 D5010000 		.4byte	.LASF3
+ 365 004c 03       		.uleb128 0x3
+ 366 004d B3010000 		.4byte	.LASF5
+ 367 0051 02       		.byte	0x2
+ 368 0052 2B       		.byte	0x2b
+ 369 0053 57000000 		.4byte	0x57
+ 370 0057 02       		.uleb128 0x2
+ 371 0058 02       		.byte	0x2
+ 372 0059 07       		.byte	0x7
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccTmQpS6.s 			page 11
 
 
- 523 00bc 00       		.byte	0
- 524 00bd 00       		.byte	0
- 525 00be 0D       		.uleb128 0xd
- 526 00bf 35       		.uleb128 0x35
- 527 00c0 00       		.byte	0
- 528 00c1 49       		.uleb128 0x49
- 529 00c2 13       		.uleb128 0x13
- 530 00c3 00       		.byte	0
- 531 00c4 00       		.byte	0
- 532 00c5 0E       		.uleb128 0xe
- 533 00c6 2E       		.uleb128 0x2e
- 534 00c7 00       		.byte	0
- 535 00c8 3F       		.uleb128 0x3f
- 536 00c9 19       		.uleb128 0x19
- 537 00ca 3C       		.uleb128 0x3c
- 538 00cb 19       		.uleb128 0x19
- 539 00cc 6E       		.uleb128 0x6e
- 540 00cd 0E       		.uleb128 0xe
- 541 00ce 03       		.uleb128 0x3
- 542 00cf 0E       		.uleb128 0xe
- 543 00d0 3A       		.uleb128 0x3a
- 544 00d1 0B       		.uleb128 0xb
- 545 00d2 3B       		.uleb128 0x3b
- 546 00d3 0B       		.uleb128 0xb
- 547 00d4 00       		.byte	0
- 548 00d5 00       		.byte	0
- 549 00d6 00       		.byte	0
- 550              		.section	.debug_loc,"",%progbits
- 551              	.Ldebug_loc0:
- 552              	.LLST0:
- 553 0000 06000000 		.4byte	.LVL0
- 554 0004 0A000000 		.4byte	.LVL1
- 555 0008 0100     		.2byte	0x1
- 556 000a 50       		.byte	0x50
- 557 000b 10000000 		.4byte	.LVL3
- 558 000f 15000000 		.4byte	.LVL4-1
- 559 0013 0100     		.2byte	0x1
- 560 0015 50       		.byte	0x50
- 561 0016 1C000000 		.4byte	.LVL5
- 562 001a 1E000000 		.4byte	.LVL6
- 563 001e 0100     		.2byte	0x1
- 564 0020 50       		.byte	0x50
- 565 0021 24000000 		.4byte	.LVL7
- 566 0025 27000000 		.4byte	.LVL8-1
- 567 0029 0100     		.2byte	0x1
- 568 002b 50       		.byte	0x50
- 569 002c 00000000 		.4byte	0
- 570 0030 00000000 		.4byte	0
- 571              		.section	.debug_aranges,"",%progbits
- 572 0000 24000000 		.4byte	0x24
- 573 0004 0200     		.2byte	0x2
- 574 0006 00000000 		.4byte	.Ldebug_info0
- 575 000a 04       		.byte	0x4
- 576 000b 00       		.byte	0
- 577 000c 0000     		.2byte	0
- 578 000e 0000     		.2byte	0
- 579 0010 00000000 		.4byte	.LFB63
-ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccbzwNna.s 			page 12
+ 373 005a 5E000000 		.4byte	.LASF6
+ 374 005e 03       		.uleb128 0x3
+ 375 005f 3A000000 		.4byte	.LASF7
+ 376 0063 02       		.byte	0x2
+ 377 0064 3F       		.byte	0x3f
+ 378 0065 69000000 		.4byte	0x69
+ 379 0069 02       		.uleb128 0x2
+ 380 006a 04       		.byte	0x4
+ 381 006b 05       		.byte	0x5
+ 382 006c 0D030000 		.4byte	.LASF8
+ 383 0070 03       		.uleb128 0x3
+ 384 0071 6A010000 		.4byte	.LASF9
+ 385 0075 02       		.byte	0x2
+ 386 0076 41       		.byte	0x41
+ 387 0077 7B000000 		.4byte	0x7b
+ 388 007b 02       		.uleb128 0x2
+ 389 007c 04       		.byte	0x4
+ 390 007d 07       		.byte	0x7
+ 391 007e 75010000 		.4byte	.LASF10
+ 392 0082 02       		.uleb128 0x2
+ 393 0083 08       		.byte	0x8
+ 394 0084 05       		.byte	0x5
+ 395 0085 9B020000 		.4byte	.LASF11
+ 396 0089 02       		.uleb128 0x2
+ 397 008a 08       		.byte	0x8
+ 398 008b 07       		.byte	0x7
+ 399 008c 41020000 		.4byte	.LASF12
+ 400 0090 04       		.uleb128 0x4
+ 401 0091 04       		.byte	0x4
+ 402 0092 05       		.byte	0x5
+ 403 0093 696E7400 		.ascii	"int\000"
+ 404 0097 02       		.uleb128 0x2
+ 405 0098 04       		.byte	0x4
+ 406 0099 07       		.byte	0x7
+ 407 009a 34020000 		.4byte	.LASF13
+ 408 009e 03       		.uleb128 0x3
+ 409 009f 71000000 		.4byte	.LASF14
+ 410 00a3 03       		.byte	0x3
+ 411 00a4 18       		.byte	0x18
+ 412 00a5 33000000 		.4byte	0x33
+ 413 00a9 03       		.uleb128 0x3
+ 414 00aa E2020000 		.4byte	.LASF15
+ 415 00ae 03       		.byte	0x3
+ 416 00af 24       		.byte	0x24
+ 417 00b0 4C000000 		.4byte	0x4c
+ 418 00b4 03       		.uleb128 0x3
+ 419 00b5 80020000 		.4byte	.LASF16
+ 420 00b9 03       		.byte	0x3
+ 421 00ba 2C       		.byte	0x2c
+ 422 00bb 5E000000 		.4byte	0x5e
+ 423 00bf 03       		.uleb128 0x3
+ 424 00c0 04030000 		.4byte	.LASF17
+ 425 00c4 03       		.byte	0x3
+ 426 00c5 30       		.byte	0x30
+ 427 00c6 70000000 		.4byte	0x70
+ 428 00ca 02       		.uleb128 0x2
+ 429 00cb 08       		.byte	0x8
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccTmQpS6.s 			page 12
 
 
- 580 0014 30000000 		.4byte	.LFE63-.LFB63
- 581 0018 00000000 		.4byte	.LFB64
- 582 001c 1C000000 		.4byte	.LFE64-.LFB64
- 583 0020 00000000 		.4byte	0
- 584 0024 00000000 		.4byte	0
- 585              		.section	.debug_ranges,"",%progbits
- 586              	.Ldebug_ranges0:
- 587 0000 00000000 		.4byte	.LFB63
- 588 0004 30000000 		.4byte	.LFE63
- 589 0008 00000000 		.4byte	.LFB64
- 590 000c 1C000000 		.4byte	.LFE64
- 591 0010 00000000 		.4byte	0
- 592 0014 00000000 		.4byte	0
- 593              		.section	.debug_line,"",%progbits
- 594              	.Ldebug_line0:
- 595 0000 B4010000 		.section	.debug_str,"MS",%progbits,1
- 595      02008201 
- 595      00000201 
- 595      FB0E0D00 
- 595      01010101 
- 596              	.LASF4:
- 597 0000 5F5F7569 		.ascii	"__uint8_t\000"
- 597      6E74385F 
- 597      7400
- 598              	.LASF21:
- 599 000a 73656E64 		.ascii	"sendSPi\000"
- 599      53506900 
- 600              	.LASF5:
- 601 0012 5F5F696E 		.ascii	"__int32_t\000"
- 601      7433325F 
- 601      7400
- 602              	.LASF23:
- 603 001c 496E6974 		.ascii	"InitializeSPI\000"
- 603      69616C69 
- 603      7A655350 
- 603      4900
- 604              	.LASF29:
- 605 002a 73746174 		.ascii	"status\000"
- 605      757300
- 606              	.LASF18:
- 607 0031 6D6F6474 		.ascii	"modtagetSPi\000"
- 607      61676574 
- 607      53506900 
- 608              	.LASF13:
- 609 003d 666C6F61 		.ascii	"float\000"
- 609      7400
- 610              	.LASF1:
- 611 0043 756E7369 		.ascii	"unsigned char\000"
- 611      676E6564 
- 611      20636861 
- 611      7200
- 612              	.LASF25:
- 613 0051 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 613      43313120 
- 613      352E342E 
- 613      31203230 
- 613      31363036 
-ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccbzwNna.s 			page 13
+ 430 00cc 04       		.byte	0x4
+ 431 00cd BE010000 		.4byte	.LASF18
+ 432 00d1 02       		.uleb128 0x2
+ 433 00d2 01       		.byte	0x1
+ 434 00d3 08       		.byte	0x8
+ 435 00d4 B0020000 		.4byte	.LASF19
+ 436 00d8 02       		.uleb128 0x2
+ 437 00d9 08       		.byte	0x8
+ 438 00da 04       		.byte	0x4
+ 439 00db 1E030000 		.4byte	.LASF20
+ 440 00df 02       		.uleb128 0x2
+ 441 00e0 04       		.byte	0x4
+ 442 00e1 07       		.byte	0x7
+ 443 00e2 88020000 		.4byte	.LASF21
+ 444 00e6 05       		.uleb128 0x5
+ 445 00e7 2F020000 		.4byte	.LASF53
+ 446 00eb 01       		.byte	0x1
+ 447 00ec 10       		.byte	0x10
+ 448 00ed 90000000 		.4byte	0x90
+ 449 00f1 00000000 		.4byte	.LFB64
+ 450 00f5 10010000 		.4byte	.LFE64-.LFB64
+ 451 00f9 01       		.uleb128 0x1
+ 452 00fa 9C       		.byte	0x9c
+ 453 00fb 85030000 		.4byte	0x385
+ 454 00ff 06       		.uleb128 0x6
+ 455 0100 16030000 		.4byte	.LASF22
+ 456 0104 01       		.byte	0x1
+ 457 0105 1D       		.byte	0x1d
+ 458 0106 90000000 		.4byte	0x90
+ 459 010a 32       		.byte	0x32
+ 460 010b 07       		.uleb128 0x7
+ 461 010c 58020000 		.4byte	.LASF23
+ 462 0110 01       		.byte	0x1
+ 463 0111 1E       		.byte	0x1e
+ 464 0112 25000000 		.4byte	0x25
+ 465 0116 04       		.byte	0x4
+ 466 0117 00802443 		.4byte	0x43248000
+ 467 011b 07       		.uleb128 0x7
+ 468 011c DF010000 		.4byte	.LASF24
+ 469 0120 01       		.byte	0x1
+ 470 0121 1F       		.byte	0x1f
+ 471 0122 25000000 		.4byte	0x25
+ 472 0126 04       		.byte	0x4
+ 473 0127 06819540 		.4byte	0x40958106
+ 474 012b 06       		.uleb128 0x6
+ 475 012c 00000000 		.4byte	.LASF25
+ 476 0130 01       		.byte	0x1
+ 477 0131 20       		.byte	0x20
+ 478 0132 90000000 		.4byte	0x90
+ 479 0136 00       		.byte	0
+ 480 0137 08       		.uleb128 0x8
+ 481 0138 44000000 		.4byte	.LASF26
+ 482 013c 01       		.byte	0x1
+ 483 013d 21       		.byte	0x21
+ 484 013e A9000000 		.4byte	0xa9
+ 485 0142 00000000 		.4byte	.LLST0
+ 486 0146 06       		.uleb128 0x6
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccTmQpS6.s 			page 13
 
 
- 614 0084 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 614      20726576 
- 614      6973696F 
- 614      6E203233 
- 614      37373135 
- 615 00b7 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 615      66756E63 
- 615      74696F6E 
- 615      2D736563 
- 615      74696F6E 
- 616              	.LASF7:
- 617 00df 6C6F6E67 		.ascii	"long unsigned int\000"
- 617      20756E73 
- 617      69676E65 
- 617      6420696E 
- 617      7400
- 618              	.LASF3:
- 619 00f1 73686F72 		.ascii	"short unsigned int\000"
- 619      7420756E 
- 619      7369676E 
- 619      65642069 
- 619      6E7400
- 620              	.LASF31:
- 621 0104 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 621      52784275 
- 621      66666572 
- 621      00
- 622              	.LASF27:
- 623 0111 433A5C55 		.ascii	"C:\\Users\\raduf\\OneDrive\\Desktop\\SemesterProjek"
- 623      73657273 
- 623      5C726164 
- 623      75665C4F 
- 623      6E654472 
- 624 013f 745C422D 		.ascii	"t\\B-CAC\\SPI_Slave\\Design01.cydsn\000"
- 624      4341435C 
- 624      5350495F 
- 624      536C6176 
- 624      655C4465 
- 625              	.LASF14:
- 626 0160 646F7562 		.ascii	"double\000"
- 626      6C6500
- 627              	.LASF30:
- 628 0167 6D61696E 		.ascii	"main\000"
- 628      00
- 629              	.LASF10:
- 630 016c 756E7369 		.ascii	"unsigned int\000"
- 630      676E6564 
- 630      20696E74 
- 630      00
- 631              	.LASF9:
- 632 0179 6C6F6E67 		.ascii	"long long unsigned int\000"
- 632      206C6F6E 
- 632      6720756E 
- 632      7369676E 
- 632      65642069 
- 633              	.LASF11:
- 634 0190 75696E74 		.ascii	"uint8_t\000"
-ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccbzwNna.s 			page 14
+ 487 0147 91020000 		.4byte	.LASF27
+ 488 014b 01       		.byte	0x1
+ 489 014c 22       		.byte	0x22
+ 490 014d 9E000000 		.4byte	0x9e
+ 491 0151 00       		.byte	0
+ 492 0152 08       		.uleb128 0x8
+ 493 0153 79000000 		.4byte	.LASF28
+ 494 0157 01       		.byte	0x1
+ 495 0158 23       		.byte	0x23
+ 496 0159 9E000000 		.4byte	0x9e
+ 497 015d 13000000 		.4byte	.LLST1
+ 498 0161 09       		.uleb128 0x9
+ 499 0162 646E6600 		.ascii	"dnf\000"
+ 500 0166 01       		.byte	0x1
+ 501 0167 24       		.byte	0x24
+ 502 0168 9E000000 		.4byte	0x9e
+ 503 016c 00       		.byte	0
+ 504 016d 06       		.uleb128 0x6
+ 505 016e 64020000 		.4byte	.LASF29
+ 506 0172 01       		.byte	0x1
+ 507 0173 25       		.byte	0x25
+ 508 0174 D1000000 		.4byte	0xd1
+ 509 0178 68       		.byte	0x68
+ 510 0179 0A       		.uleb128 0xa
+ 511 017a 74696400 		.ascii	"tid\000"
+ 512 017e 01       		.byte	0x1
+ 513 017f 26       		.byte	0x26
+ 514 0180 BF000000 		.4byte	0xbf
+ 515 0184 33000000 		.4byte	.LLST2
+ 516 0188 0B       		.uleb128 0xb
+ 517 0189 34000000 		.4byte	.LBB2
+ 518 018d 0C000000 		.4byte	.LBE2-.LBB2
+ 519 0191 C4010000 		.4byte	0x1c4
+ 520 0195 0C       		.uleb128 0xc
+ 521 0196 8D000000 		.4byte	.LASF30
+ 522 019a 01       		.byte	0x1
+ 523 019b 33       		.byte	0x33
+ 524 019c 25000000 		.4byte	0x25
+ 525 01a0 0D       		.uleb128 0xd
+ 526 01a1 40000000 		.4byte	.LVL6
+ 527 01a5 01040000 		.4byte	0x401
+ 528 01a9 0E       		.uleb128 0xe
+ 529 01aa 01       		.uleb128 0x1
+ 530 01ab 50       		.byte	0x50
+ 531 01ac 02       		.uleb128 0x2
+ 532 01ad 08       		.byte	0x8
+ 533 01ae 32       		.byte	0x32
+ 534 01af 0E       		.uleb128 0xe
+ 535 01b0 01       		.uleb128 0x1
+ 536 01b1 51       		.byte	0x51
+ 537 01b2 03       		.uleb128 0x3
+ 538 01b3 F5       		.byte	0xf5
+ 539 01b4 04       		.uleb128 0x4
+ 540 01b5 25       		.uleb128 0x25
+ 541 01b6 0E       		.uleb128 0xe
+ 542 01b7 01       		.uleb128 0x1
+ 543 01b8 52       		.byte	0x52
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccTmQpS6.s 			page 14
 
 
- 634      385F7400 
- 635              	.LASF12:
- 636 0198 696E7433 		.ascii	"int32_t\000"
- 636      325F7400 
- 637              	.LASF17:
- 638 01a0 73697A65 		.ascii	"sizetype\000"
- 638      74797065 
- 638      00
- 639              	.LASF8:
- 640 01a9 6C6F6E67 		.ascii	"long long int\000"
- 640      206C6F6E 
- 640      6720696E 
- 640      7400
- 641              	.LASF26:
- 642 01b7 6D61696E 		.ascii	"main.c\000"
- 642      2E6300
- 643              	.LASF15:
- 644 01be 63686172 		.ascii	"char\000"
- 644      00
- 645              	.LASF22:
- 646 01c3 5350495F 		.ascii	"SPI_RX_ISR_StartEx\000"
- 646      52585F49 
- 646      53525F53 
- 646      74617274 
- 646      457800
- 647              	.LASF2:
- 648 01d6 73686F72 		.ascii	"short int\000"
- 648      7420696E 
- 648      7400
- 649              	.LASF6:
- 650 01e0 6C6F6E67 		.ascii	"long int\000"
- 650      20696E74 
- 650      00
- 651              	.LASF16:
- 652 01e9 6C6F6E67 		.ascii	"long double\000"
- 652      20646F75 
- 652      626C6500 
- 653              	.LASF28:
- 654 01f5 5350495F 		.ascii	"SPI_RX_ISR\000"
- 654      52585F49 
- 654      535200
- 655              	.LASF0:
- 656 0200 7369676E 		.ascii	"signed char\000"
- 656      65642063 
- 656      68617200 
- 657              	.LASF19:
- 658 020c 4C45445F 		.ascii	"LED_1_Write\000"
- 658      315F5772 
- 658      69746500 
- 659              	.LASF20:
- 660 0218 42757474 		.ascii	"Button_1_Read\000"
- 660      6F6E5F31 
- 660      5F526561 
- 660      6400
- 661              	.LASF24:
- 662 0226 43794465 		.ascii	"CyDelay\000"
- 662      6C617900 
-ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccbzwNna.s 			page 15
+ 544 01b9 03       		.uleb128 0x3
+ 545 01ba F5       		.byte	0xf5
+ 546 01bb 05       		.uleb128 0x5
+ 547 01bc 25       		.uleb128 0x25
+ 548 01bd 0E       		.uleb128 0xe
+ 549 01be 01       		.uleb128 0x1
+ 550 01bf 53       		.byte	0x53
+ 551 01c0 01       		.uleb128 0x1
+ 552 01c1 30       		.byte	0x30
+ 553 01c2 00       		.byte	0
+ 554 01c3 00       		.byte	0
+ 555 01c4 0B       		.uleb128 0xb
+ 556 01c5 88000000 		.4byte	.LBB3
+ 557 01c9 5A000000 		.4byte	.LBE3-.LBB3
+ 558 01cd 7A020000 		.4byte	0x27a
+ 559 01d1 0C       		.uleb128 0xc
+ 560 01d2 9D000000 		.4byte	.LASF31
+ 561 01d6 01       		.byte	0x1
+ 562 01d7 76       		.byte	0x76
+ 563 01d8 90000000 		.4byte	0x90
+ 564 01dc 0F       		.uleb128 0xf
+ 565 01dd 94000000 		.4byte	.LVL12
+ 566 01e1 01040000 		.4byte	0x401
+ 567 01e5 F5010000 		.4byte	0x1f5
+ 568 01e9 0E       		.uleb128 0xe
+ 569 01ea 01       		.uleb128 0x1
+ 570 01eb 50       		.byte	0x50
+ 571 01ec 02       		.uleb128 0x2
+ 572 01ed 08       		.byte	0x8
+ 573 01ee 32       		.byte	0x32
+ 574 01ef 0E       		.uleb128 0xe
+ 575 01f0 01       		.uleb128 0x1
+ 576 01f1 53       		.byte	0x53
+ 577 01f2 01       		.uleb128 0x1
+ 578 01f3 30       		.byte	0x30
+ 579 01f4 00       		.byte	0
+ 580 01f5 10       		.uleb128 0x10
+ 581 01f6 9E000000 		.4byte	.LVL15
+ 582 01fa 0C040000 		.4byte	0x40c
+ 583 01fe 0F       		.uleb128 0xf
+ 584 01ff AC000000 		.4byte	.LVL16
+ 585 0203 01040000 		.4byte	0x401
+ 586 0207 17020000 		.4byte	0x217
+ 587 020b 0E       		.uleb128 0xe
+ 588 020c 01       		.uleb128 0x1
+ 589 020d 50       		.byte	0x50
+ 590 020e 02       		.uleb128 0x2
+ 591 020f 08       		.byte	0x8
+ 592 0210 32       		.byte	0x32
+ 593 0211 0E       		.uleb128 0xe
+ 594 0212 01       		.uleb128 0x1
+ 595 0213 53       		.byte	0x53
+ 596 0214 01       		.uleb128 0x1
+ 597 0215 30       		.byte	0x30
+ 598 0216 00       		.byte	0
+ 599 0217 0F       		.uleb128 0xf
+ 600 0218 C4000000 		.4byte	.LVL20
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccTmQpS6.s 			page 15
 
 
- 663              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 601 021c 17040000 		.4byte	0x417
+ 602 0220 38020000 		.4byte	0x238
+ 603 0224 0E       		.uleb128 0xe
+ 604 0225 01       		.uleb128 0x1
+ 605 0226 50       		.byte	0x50
+ 606 0227 03       		.uleb128 0x3
+ 607 0228 F5       		.byte	0xf5
+ 608 0229 04       		.uleb128 0x4
+ 609 022a 25       		.uleb128 0x25
+ 610 022b 0E       		.uleb128 0xe
+ 611 022c 01       		.uleb128 0x1
+ 612 022d 51       		.byte	0x51
+ 613 022e 03       		.uleb128 0x3
+ 614 022f F5       		.byte	0xf5
+ 615 0230 05       		.uleb128 0x5
+ 616 0231 25       		.uleb128 0x25
+ 617 0232 0E       		.uleb128 0xe
+ 618 0233 01       		.uleb128 0x1
+ 619 0234 52       		.byte	0x52
+ 620 0235 01       		.uleb128 0x1
+ 621 0236 30       		.byte	0x30
+ 622 0237 00       		.byte	0
+ 623 0238 10       		.uleb128 0x10
+ 624 0239 C8000000 		.4byte	.LVL21
+ 625 023d 22040000 		.4byte	0x422
+ 626 0241 0F       		.uleb128 0xf
+ 627 0242 D0000000 		.4byte	.LVL22
+ 628 0246 2D040000 		.4byte	0x42d
+ 629 024a 56020000 		.4byte	0x256
+ 630 024e 0E       		.uleb128 0xe
+ 631 024f 01       		.uleb128 0x1
+ 632 0250 50       		.byte	0x50
+ 633 0251 03       		.uleb128 0x3
+ 634 0252 0A       		.byte	0xa
+ 635 0253 8813     		.2byte	0x1388
+ 636 0255 00       		.byte	0
+ 637 0256 0D       		.uleb128 0xd
+ 638 0257 DC000000 		.4byte	.LVL23
+ 639 025b 01040000 		.4byte	0x401
+ 640 025f 0E       		.uleb128 0xe
+ 641 0260 01       		.uleb128 0x1
+ 642 0261 50       		.byte	0x50
+ 643 0262 02       		.uleb128 0x2
+ 644 0263 08       		.byte	0x8
+ 645 0264 32       		.byte	0x32
+ 646 0265 0E       		.uleb128 0xe
+ 647 0266 01       		.uleb128 0x1
+ 648 0267 51       		.byte	0x51
+ 649 0268 03       		.uleb128 0x3
+ 650 0269 F5       		.byte	0xf5
+ 651 026a 04       		.uleb128 0x4
+ 652 026b 25       		.uleb128 0x25
+ 653 026c 0E       		.uleb128 0xe
+ 654 026d 01       		.uleb128 0x1
+ 655 026e 52       		.byte	0x52
+ 656 026f 03       		.uleb128 0x3
+ 657 0270 F5       		.byte	0xf5
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccTmQpS6.s 			page 16
+
+
+ 658 0271 05       		.uleb128 0x5
+ 659 0272 25       		.uleb128 0x25
+ 660 0273 0E       		.uleb128 0xe
+ 661 0274 01       		.uleb128 0x1
+ 662 0275 53       		.byte	0x53
+ 663 0276 01       		.uleb128 0x1
+ 664 0277 30       		.byte	0x30
+ 665 0278 00       		.byte	0
+ 666 0279 00       		.byte	0
+ 667 027a 0F       		.uleb128 0xf
+ 668 027b 0A000000 		.4byte	.LVL0
+ 669 027f 38040000 		.4byte	0x438
+ 670 0283 91020000 		.4byte	0x291
+ 671 0287 0E       		.uleb128 0xe
+ 672 0288 01       		.uleb128 0x1
+ 673 0289 50       		.byte	0x50
+ 674 028a 05       		.uleb128 0x5
+ 675 028b 03       		.byte	0x3
+ 676 028c 00000000 		.4byte	ISR_SPI_rx_handler
+ 677 0290 00       		.byte	0
+ 678 0291 10       		.uleb128 0x10
+ 679 0292 0E000000 		.4byte	.LVL1
+ 680 0296 43040000 		.4byte	0x443
+ 681 029a 10       		.uleb128 0x10
+ 682 029b 12000000 		.4byte	.LVL2
+ 683 029f 4E040000 		.4byte	0x44e
+ 684 02a3 0F       		.uleb128 0xf
+ 685 02a4 18000000 		.4byte	.LVL3
+ 686 02a8 59040000 		.4byte	0x459
+ 687 02ac B7020000 		.4byte	0x2b7
+ 688 02b0 0E       		.uleb128 0xe
+ 689 02b1 01       		.uleb128 0x1
+ 690 02b2 50       		.byte	0x50
+ 691 02b3 02       		.uleb128 0x2
+ 692 02b4 08       		.byte	0x8
+ 693 02b5 68       		.byte	0x68
+ 694 02b6 00       		.byte	0
+ 695 02b7 10       		.uleb128 0x10
+ 696 02b8 1C000000 		.4byte	.LVL4
+ 697 02bc 64040000 		.4byte	0x464
+ 698 02c0 0F       		.uleb128 0xf
+ 699 02c1 34000000 		.4byte	.LVL5
+ 700 02c5 6F040000 		.4byte	0x46f
+ 701 02c9 E7020000 		.4byte	0x2e7
+ 702 02cd 0E       		.uleb128 0xe
+ 703 02ce 01       		.uleb128 0x1
+ 704 02cf 50       		.byte	0x50
+ 705 02d0 02       		.uleb128 0x2
+ 706 02d1 08       		.byte	0x8
+ 707 02d2 32       		.byte	0x32
+ 708 02d3 0E       		.uleb128 0xe
+ 709 02d4 01       		.uleb128 0x1
+ 710 02d5 51       		.byte	0x51
+ 711 02d6 03       		.uleb128 0x3
+ 712 02d7 F5       		.byte	0xf5
+ 713 02d8 04       		.uleb128 0x4
+ 714 02d9 25       		.uleb128 0x25
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccTmQpS6.s 			page 17
+
+
+ 715 02da 0E       		.uleb128 0xe
+ 716 02db 01       		.uleb128 0x1
+ 717 02dc 52       		.byte	0x52
+ 718 02dd 03       		.uleb128 0x3
+ 719 02de F5       		.byte	0xf5
+ 720 02df 05       		.uleb128 0x5
+ 721 02e0 25       		.uleb128 0x25
+ 722 02e1 0E       		.uleb128 0xe
+ 723 02e2 01       		.uleb128 0x1
+ 724 02e3 53       		.byte	0x53
+ 725 02e4 01       		.uleb128 0x1
+ 726 02e5 30       		.byte	0x30
+ 727 02e6 00       		.byte	0
+ 728 02e7 0F       		.uleb128 0xf
+ 729 02e8 46000000 		.4byte	.LVL7
+ 730 02ec 59040000 		.4byte	0x459
+ 731 02f0 FB020000 		.4byte	0x2fb
+ 732 02f4 0E       		.uleb128 0xe
+ 733 02f5 01       		.uleb128 0x1
+ 734 02f6 50       		.byte	0x50
+ 735 02f7 02       		.uleb128 0x2
+ 736 02f8 08       		.byte	0x8
+ 737 02f9 68       		.byte	0x68
+ 738 02fa 00       		.byte	0
+ 739 02fb 10       		.uleb128 0x10
+ 740 02fc 4A000000 		.4byte	.LVL8
+ 741 0300 64040000 		.4byte	0x464
+ 742 0304 0F       		.uleb128 0xf
+ 743 0305 66000000 		.4byte	.LVL9
+ 744 0309 17040000 		.4byte	0x417
+ 745 030d 25030000 		.4byte	0x325
+ 746 0311 0E       		.uleb128 0xe
+ 747 0312 01       		.uleb128 0x1
+ 748 0313 50       		.byte	0x50
+ 749 0314 03       		.uleb128 0x3
+ 750 0315 F5       		.byte	0xf5
+ 751 0316 04       		.uleb128 0x4
+ 752 0317 25       		.uleb128 0x25
+ 753 0318 0E       		.uleb128 0xe
+ 754 0319 01       		.uleb128 0x1
+ 755 031a 51       		.byte	0x51
+ 756 031b 03       		.uleb128 0x3
+ 757 031c F5       		.byte	0xf5
+ 758 031d 05       		.uleb128 0x5
+ 759 031e 25       		.uleb128 0x25
+ 760 031f 0E       		.uleb128 0xe
+ 761 0320 01       		.uleb128 0x1
+ 762 0321 52       		.byte	0x52
+ 763 0322 01       		.uleb128 0x1
+ 764 0323 30       		.byte	0x30
+ 765 0324 00       		.byte	0
+ 766 0325 0F       		.uleb128 0xf
+ 767 0326 6E000000 		.4byte	.LVL10
+ 768 032a 2D040000 		.4byte	0x42d
+ 769 032e 3A030000 		.4byte	0x33a
+ 770 0332 0E       		.uleb128 0xe
+ 771 0333 01       		.uleb128 0x1
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccTmQpS6.s 			page 18
+
+
+ 772 0334 50       		.byte	0x50
+ 773 0335 03       		.uleb128 0x3
+ 774 0336 0A       		.byte	0xa
+ 775 0337 B80B     		.2byte	0xbb8
+ 776 0339 00       		.byte	0
+ 777 033a 0F       		.uleb128 0xf
+ 778 033b 7A000000 		.4byte	.LVL11
+ 779 033f 01040000 		.4byte	0x401
+ 780 0343 61030000 		.4byte	0x361
+ 781 0347 0E       		.uleb128 0xe
+ 782 0348 01       		.uleb128 0x1
+ 783 0349 50       		.byte	0x50
+ 784 034a 02       		.uleb128 0x2
+ 785 034b 08       		.byte	0x8
+ 786 034c 32       		.byte	0x32
+ 787 034d 0E       		.uleb128 0xe
+ 788 034e 01       		.uleb128 0x1
+ 789 034f 51       		.byte	0x51
+ 790 0350 03       		.uleb128 0x3
+ 791 0351 F5       		.byte	0xf5
+ 792 0352 04       		.uleb128 0x4
+ 793 0353 25       		.uleb128 0x25
+ 794 0354 0E       		.uleb128 0xe
+ 795 0355 01       		.uleb128 0x1
+ 796 0356 52       		.byte	0x52
+ 797 0357 03       		.uleb128 0x3
+ 798 0358 F5       		.byte	0xf5
+ 799 0359 05       		.uleb128 0x5
+ 800 035a 25       		.uleb128 0x25
+ 801 035b 0E       		.uleb128 0xe
+ 802 035c 01       		.uleb128 0x1
+ 803 035d 53       		.byte	0x53
+ 804 035e 01       		.uleb128 0x1
+ 805 035f 30       		.byte	0x30
+ 806 0360 00       		.byte	0
+ 807 0361 0F       		.uleb128 0xf
+ 808 0362 F2000000 		.4byte	.LVL25
+ 809 0366 7A040000 		.4byte	0x47a
+ 810 036a 7B030000 		.4byte	0x37b
+ 811 036e 0E       		.uleb128 0xe
+ 812 036f 01       		.uleb128 0x1
+ 813 0370 50       		.byte	0x50
+ 814 0371 02       		.uleb128 0x2
+ 815 0372 08       		.byte	0x8
+ 816 0373 5A       		.byte	0x5a
+ 817 0374 0E       		.uleb128 0xe
+ 818 0375 01       		.uleb128 0x1
+ 819 0376 51       		.byte	0x51
+ 820 0377 02       		.uleb128 0x2
+ 821 0378 08       		.byte	0x8
+ 822 0379 68       		.byte	0x68
+ 823 037a 00       		.byte	0
+ 824 037b 10       		.uleb128 0x10
+ 825 037c F6000000 		.4byte	.LVL26
+ 826 0380 64040000 		.4byte	0x464
+ 827 0384 00       		.byte	0
+ 828 0385 11       		.uleb128 0x11
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccTmQpS6.s 			page 19
+
+
+ 829 0386 87010000 		.4byte	.LASF32
+ 830 038a 01       		.byte	0x1
+ 831 038b 9B       		.byte	0x9b
+ 832 038c 00000000 		.4byte	.LFB65
+ 833 0390 3C000000 		.4byte	.LFE65-.LFB65
+ 834 0394 01       		.uleb128 0x1
+ 835 0395 9C       		.byte	0x9c
+ 836 0396 A8030000 		.4byte	0x3a8
+ 837 039a 12       		.uleb128 0x12
+ 838 039b AE000000 		.4byte	.LASF54
+ 839 039f 01       		.byte	0x1
+ 840 03a0 9B       		.byte	0x9b
+ 841 03a1 9E000000 		.4byte	0x9e
+ 842 03a5 01       		.uleb128 0x1
+ 843 03a6 50       		.byte	0x50
+ 844 03a7 00       		.byte	0
+ 845 03a8 11       		.uleb128 0x11
+ 846 03a9 BB000000 		.4byte	.LASF33
+ 847 03ad 01       		.byte	0x1
+ 848 03ae C0       		.byte	0xc0
+ 849 03af 00000000 		.4byte	.LFB66
+ 850 03b3 0C000000 		.4byte	.LFE66-.LFB66
+ 851 03b7 01       		.uleb128 0x1
+ 852 03b8 9C       		.byte	0x9c
+ 853 03b9 DF030000 		.4byte	0x3df
+ 854 03bd 08       		.uleb128 0x8
+ 855 03be 2D000000 		.4byte	.LASF34
+ 856 03c2 01       		.byte	0x1
+ 857 03c3 C2       		.byte	0xc2
+ 858 03c4 9E000000 		.4byte	0x9e
+ 859 03c8 47000000 		.4byte	.LLST3
+ 860 03cc 10       		.uleb128 0x10
+ 861 03cd 06000000 		.4byte	.LVL28
+ 862 03d1 85040000 		.4byte	0x485
+ 863 03d5 10       		.uleb128 0x10
+ 864 03d6 0A000000 		.4byte	.LVL29
+ 865 03da 85030000 		.4byte	0x385
+ 866 03de 00       		.byte	0
+ 867 03df 13       		.uleb128 0x13
+ 868 03e0 9A010000 		.4byte	.LASF35
+ 869 03e4 04       		.byte	0x4
+ 870 03e5 1207     		.2byte	0x712
+ 871 03e7 EB030000 		.4byte	0x3eb
+ 872 03eb 14       		.uleb128 0x14
+ 873 03ec B4000000 		.4byte	0xb4
+ 874 03f0 15       		.uleb128 0x15
+ 875 03f1 EB020000 		.4byte	.LASF36
+ 876 03f5 01       		.byte	0x1
+ 877 03f6 0E       		.byte	0xe
+ 878 03f7 90000000 		.4byte	0x90
+ 879 03fb 05       		.uleb128 0x5
+ 880 03fc 03       		.byte	0x3
+ 881 03fd 00000000 		.4byte	UCstate
+ 882 0401 16       		.uleb128 0x16
+ 883 0402 82000000 		.4byte	.LASF37
+ 884 0406 82000000 		.4byte	.LASF37
+ 885 040a 05       		.byte	0x5
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccTmQpS6.s 			page 20
+
+
+ 886 040b 05       		.byte	0x5
+ 887 040c 16       		.uleb128 0x16
+ 888 040d F3020000 		.4byte	.LASF38
+ 889 0411 F3020000 		.4byte	.LASF38
+ 890 0415 06       		.byte	0x6
+ 891 0416 0F       		.byte	0xf
+ 892 0417 16       		.uleb128 0x16
+ 893 0418 3E030000 		.4byte	.LASF39
+ 894 041c 3E030000 		.4byte	.LASF39
+ 895 0420 05       		.byte	0x5
+ 896 0421 04       		.byte	0x4
+ 897 0422 16       		.uleb128 0x16
+ 898 0423 C5010000 		.4byte	.LASF40
+ 899 0427 C5010000 		.4byte	.LASF40
+ 900 042b 06       		.byte	0x6
+ 901 042c 10       		.byte	0x10
+ 902 042d 16       		.uleb128 0x16
+ 903 042e 36030000 		.4byte	.LASF41
+ 904 0432 36030000 		.4byte	.LASF41
+ 905 0436 07       		.byte	0x7
+ 906 0437 76       		.byte	0x76
+ 907 0438 16       		.uleb128 0x16
+ 908 0439 C3020000 		.4byte	.LASF42
+ 909 043d C3020000 		.4byte	.LASF42
+ 910 0441 08       		.byte	0x8
+ 911 0442 18       		.byte	0x18
+ 912 0443 16       		.uleb128 0x16
+ 913 0444 50000000 		.4byte	.LASF43
+ 914 0448 50000000 		.4byte	.LASF43
+ 915 044c 09       		.byte	0x9
+ 916 044d 0E       		.byte	0xe
+ 917 044e 16       		.uleb128 0x16
+ 918 044f E6010000 		.4byte	.LASF44
+ 919 0453 E6010000 		.4byte	.LASF44
+ 920 0457 05       		.byte	0x5
+ 921 0458 06       		.byte	0x6
+ 922 0459 16       		.uleb128 0x16
+ 923 045a A7010000 		.4byte	.LASF45
+ 924 045e A7010000 		.4byte	.LASF45
+ 925 0462 0A       		.byte	0xa
+ 926 0463 38       		.byte	0x38
+ 927 0464 16       		.uleb128 0x16
+ 928 0465 B5020000 		.4byte	.LASF46
+ 929 0469 B5020000 		.4byte	.LASF46
+ 930 046d 0A       		.byte	0xa
+ 931 046e 2C       		.byte	0x2c
+ 932 046f 16       		.uleb128 0x16
+ 933 0470 12000000 		.4byte	.LASF47
+ 934 0474 12000000 		.4byte	.LASF47
+ 935 0478 05       		.byte	0x5
+ 936 0479 03       		.byte	0x3
+ 937 047a 16       		.uleb128 0x16
+ 938 047b 69020000 		.4byte	.LASF48
+ 939 047f 69020000 		.4byte	.LASF48
+ 940 0483 0A       		.byte	0xa
+ 941 0484 3A       		.byte	0x3a
+ 942 0485 16       		.uleb128 0x16
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccTmQpS6.s 			page 21
+
+
+ 943 0486 D6020000 		.4byte	.LASF49
+ 944 048a D6020000 		.4byte	.LASF49
+ 945 048e 09       		.byte	0x9
+ 946 048f 0F       		.byte	0xf
+ 947 0490 00       		.byte	0
+ 948              		.section	.debug_abbrev,"",%progbits
+ 949              	.Ldebug_abbrev0:
+ 950 0000 01       		.uleb128 0x1
+ 951 0001 11       		.uleb128 0x11
+ 952 0002 01       		.byte	0x1
+ 953 0003 25       		.uleb128 0x25
+ 954 0004 0E       		.uleb128 0xe
+ 955 0005 13       		.uleb128 0x13
+ 956 0006 0B       		.uleb128 0xb
+ 957 0007 03       		.uleb128 0x3
+ 958 0008 0E       		.uleb128 0xe
+ 959 0009 1B       		.uleb128 0x1b
+ 960 000a 0E       		.uleb128 0xe
+ 961 000b 55       		.uleb128 0x55
+ 962 000c 17       		.uleb128 0x17
+ 963 000d 11       		.uleb128 0x11
+ 964 000e 01       		.uleb128 0x1
+ 965 000f 10       		.uleb128 0x10
+ 966 0010 17       		.uleb128 0x17
+ 967 0011 00       		.byte	0
+ 968 0012 00       		.byte	0
+ 969 0013 02       		.uleb128 0x2
+ 970 0014 24       		.uleb128 0x24
+ 971 0015 00       		.byte	0
+ 972 0016 0B       		.uleb128 0xb
+ 973 0017 0B       		.uleb128 0xb
+ 974 0018 3E       		.uleb128 0x3e
+ 975 0019 0B       		.uleb128 0xb
+ 976 001a 03       		.uleb128 0x3
+ 977 001b 0E       		.uleb128 0xe
+ 978 001c 00       		.byte	0
+ 979 001d 00       		.byte	0
+ 980 001e 03       		.uleb128 0x3
+ 981 001f 16       		.uleb128 0x16
+ 982 0020 00       		.byte	0
+ 983 0021 03       		.uleb128 0x3
+ 984 0022 0E       		.uleb128 0xe
+ 985 0023 3A       		.uleb128 0x3a
+ 986 0024 0B       		.uleb128 0xb
+ 987 0025 3B       		.uleb128 0x3b
+ 988 0026 0B       		.uleb128 0xb
+ 989 0027 49       		.uleb128 0x49
+ 990 0028 13       		.uleb128 0x13
+ 991 0029 00       		.byte	0
+ 992 002a 00       		.byte	0
+ 993 002b 04       		.uleb128 0x4
+ 994 002c 24       		.uleb128 0x24
+ 995 002d 00       		.byte	0
+ 996 002e 0B       		.uleb128 0xb
+ 997 002f 0B       		.uleb128 0xb
+ 998 0030 3E       		.uleb128 0x3e
+ 999 0031 0B       		.uleb128 0xb
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccTmQpS6.s 			page 22
+
+
+ 1000 0032 03       		.uleb128 0x3
+ 1001 0033 08       		.uleb128 0x8
+ 1002 0034 00       		.byte	0
+ 1003 0035 00       		.byte	0
+ 1004 0036 05       		.uleb128 0x5
+ 1005 0037 2E       		.uleb128 0x2e
+ 1006 0038 01       		.byte	0x1
+ 1007 0039 3F       		.uleb128 0x3f
+ 1008 003a 19       		.uleb128 0x19
+ 1009 003b 03       		.uleb128 0x3
+ 1010 003c 0E       		.uleb128 0xe
+ 1011 003d 3A       		.uleb128 0x3a
+ 1012 003e 0B       		.uleb128 0xb
+ 1013 003f 3B       		.uleb128 0x3b
+ 1014 0040 0B       		.uleb128 0xb
+ 1015 0041 27       		.uleb128 0x27
+ 1016 0042 19       		.uleb128 0x19
+ 1017 0043 49       		.uleb128 0x49
+ 1018 0044 13       		.uleb128 0x13
+ 1019 0045 8701     		.uleb128 0x87
+ 1020 0047 19       		.uleb128 0x19
+ 1021 0048 11       		.uleb128 0x11
+ 1022 0049 01       		.uleb128 0x1
+ 1023 004a 12       		.uleb128 0x12
+ 1024 004b 06       		.uleb128 0x6
+ 1025 004c 40       		.uleb128 0x40
+ 1026 004d 18       		.uleb128 0x18
+ 1027 004e 9642     		.uleb128 0x2116
+ 1028 0050 19       		.uleb128 0x19
+ 1029 0051 01       		.uleb128 0x1
+ 1030 0052 13       		.uleb128 0x13
+ 1031 0053 00       		.byte	0
+ 1032 0054 00       		.byte	0
+ 1033 0055 06       		.uleb128 0x6
+ 1034 0056 34       		.uleb128 0x34
+ 1035 0057 00       		.byte	0
+ 1036 0058 03       		.uleb128 0x3
+ 1037 0059 0E       		.uleb128 0xe
+ 1038 005a 3A       		.uleb128 0x3a
+ 1039 005b 0B       		.uleb128 0xb
+ 1040 005c 3B       		.uleb128 0x3b
+ 1041 005d 0B       		.uleb128 0xb
+ 1042 005e 49       		.uleb128 0x49
+ 1043 005f 13       		.uleb128 0x13
+ 1044 0060 1C       		.uleb128 0x1c
+ 1045 0061 0B       		.uleb128 0xb
+ 1046 0062 00       		.byte	0
+ 1047 0063 00       		.byte	0
+ 1048 0064 07       		.uleb128 0x7
+ 1049 0065 34       		.uleb128 0x34
+ 1050 0066 00       		.byte	0
+ 1051 0067 03       		.uleb128 0x3
+ 1052 0068 0E       		.uleb128 0xe
+ 1053 0069 3A       		.uleb128 0x3a
+ 1054 006a 0B       		.uleb128 0xb
+ 1055 006b 3B       		.uleb128 0x3b
+ 1056 006c 0B       		.uleb128 0xb
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccTmQpS6.s 			page 23
+
+
+ 1057 006d 49       		.uleb128 0x49
+ 1058 006e 13       		.uleb128 0x13
+ 1059 006f 1C       		.uleb128 0x1c
+ 1060 0070 0A       		.uleb128 0xa
+ 1061 0071 00       		.byte	0
+ 1062 0072 00       		.byte	0
+ 1063 0073 08       		.uleb128 0x8
+ 1064 0074 34       		.uleb128 0x34
+ 1065 0075 00       		.byte	0
+ 1066 0076 03       		.uleb128 0x3
+ 1067 0077 0E       		.uleb128 0xe
+ 1068 0078 3A       		.uleb128 0x3a
+ 1069 0079 0B       		.uleb128 0xb
+ 1070 007a 3B       		.uleb128 0x3b
+ 1071 007b 0B       		.uleb128 0xb
+ 1072 007c 49       		.uleb128 0x49
+ 1073 007d 13       		.uleb128 0x13
+ 1074 007e 02       		.uleb128 0x2
+ 1075 007f 17       		.uleb128 0x17
+ 1076 0080 00       		.byte	0
+ 1077 0081 00       		.byte	0
+ 1078 0082 09       		.uleb128 0x9
+ 1079 0083 34       		.uleb128 0x34
+ 1080 0084 00       		.byte	0
+ 1081 0085 03       		.uleb128 0x3
+ 1082 0086 08       		.uleb128 0x8
+ 1083 0087 3A       		.uleb128 0x3a
+ 1084 0088 0B       		.uleb128 0xb
+ 1085 0089 3B       		.uleb128 0x3b
+ 1086 008a 0B       		.uleb128 0xb
+ 1087 008b 49       		.uleb128 0x49
+ 1088 008c 13       		.uleb128 0x13
+ 1089 008d 1C       		.uleb128 0x1c
+ 1090 008e 0B       		.uleb128 0xb
+ 1091 008f 00       		.byte	0
+ 1092 0090 00       		.byte	0
+ 1093 0091 0A       		.uleb128 0xa
+ 1094 0092 34       		.uleb128 0x34
+ 1095 0093 00       		.byte	0
+ 1096 0094 03       		.uleb128 0x3
+ 1097 0095 08       		.uleb128 0x8
+ 1098 0096 3A       		.uleb128 0x3a
+ 1099 0097 0B       		.uleb128 0xb
+ 1100 0098 3B       		.uleb128 0x3b
+ 1101 0099 0B       		.uleb128 0xb
+ 1102 009a 49       		.uleb128 0x49
+ 1103 009b 13       		.uleb128 0x13
+ 1104 009c 02       		.uleb128 0x2
+ 1105 009d 17       		.uleb128 0x17
+ 1106 009e 00       		.byte	0
+ 1107 009f 00       		.byte	0
+ 1108 00a0 0B       		.uleb128 0xb
+ 1109 00a1 0B       		.uleb128 0xb
+ 1110 00a2 01       		.byte	0x1
+ 1111 00a3 11       		.uleb128 0x11
+ 1112 00a4 01       		.uleb128 0x1
+ 1113 00a5 12       		.uleb128 0x12
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccTmQpS6.s 			page 24
+
+
+ 1114 00a6 06       		.uleb128 0x6
+ 1115 00a7 01       		.uleb128 0x1
+ 1116 00a8 13       		.uleb128 0x13
+ 1117 00a9 00       		.byte	0
+ 1118 00aa 00       		.byte	0
+ 1119 00ab 0C       		.uleb128 0xc
+ 1120 00ac 34       		.uleb128 0x34
+ 1121 00ad 00       		.byte	0
+ 1122 00ae 03       		.uleb128 0x3
+ 1123 00af 0E       		.uleb128 0xe
+ 1124 00b0 3A       		.uleb128 0x3a
+ 1125 00b1 0B       		.uleb128 0xb
+ 1126 00b2 3B       		.uleb128 0x3b
+ 1127 00b3 0B       		.uleb128 0xb
+ 1128 00b4 49       		.uleb128 0x49
+ 1129 00b5 13       		.uleb128 0x13
+ 1130 00b6 00       		.byte	0
+ 1131 00b7 00       		.byte	0
+ 1132 00b8 0D       		.uleb128 0xd
+ 1133 00b9 898201   		.uleb128 0x4109
+ 1134 00bc 01       		.byte	0x1
+ 1135 00bd 11       		.uleb128 0x11
+ 1136 00be 01       		.uleb128 0x1
+ 1137 00bf 31       		.uleb128 0x31
+ 1138 00c0 13       		.uleb128 0x13
+ 1139 00c1 00       		.byte	0
+ 1140 00c2 00       		.byte	0
+ 1141 00c3 0E       		.uleb128 0xe
+ 1142 00c4 8A8201   		.uleb128 0x410a
+ 1143 00c7 00       		.byte	0
+ 1144 00c8 02       		.uleb128 0x2
+ 1145 00c9 18       		.uleb128 0x18
+ 1146 00ca 9142     		.uleb128 0x2111
+ 1147 00cc 18       		.uleb128 0x18
+ 1148 00cd 00       		.byte	0
+ 1149 00ce 00       		.byte	0
+ 1150 00cf 0F       		.uleb128 0xf
+ 1151 00d0 898201   		.uleb128 0x4109
+ 1152 00d3 01       		.byte	0x1
+ 1153 00d4 11       		.uleb128 0x11
+ 1154 00d5 01       		.uleb128 0x1
+ 1155 00d6 31       		.uleb128 0x31
+ 1156 00d7 13       		.uleb128 0x13
+ 1157 00d8 01       		.uleb128 0x1
+ 1158 00d9 13       		.uleb128 0x13
+ 1159 00da 00       		.byte	0
+ 1160 00db 00       		.byte	0
+ 1161 00dc 10       		.uleb128 0x10
+ 1162 00dd 898201   		.uleb128 0x4109
+ 1163 00e0 00       		.byte	0
+ 1164 00e1 11       		.uleb128 0x11
+ 1165 00e2 01       		.uleb128 0x1
+ 1166 00e3 31       		.uleb128 0x31
+ 1167 00e4 13       		.uleb128 0x13
+ 1168 00e5 00       		.byte	0
+ 1169 00e6 00       		.byte	0
+ 1170 00e7 11       		.uleb128 0x11
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccTmQpS6.s 			page 25
+
+
+ 1171 00e8 2E       		.uleb128 0x2e
+ 1172 00e9 01       		.byte	0x1
+ 1173 00ea 3F       		.uleb128 0x3f
+ 1174 00eb 19       		.uleb128 0x19
+ 1175 00ec 03       		.uleb128 0x3
+ 1176 00ed 0E       		.uleb128 0xe
+ 1177 00ee 3A       		.uleb128 0x3a
+ 1178 00ef 0B       		.uleb128 0xb
+ 1179 00f0 3B       		.uleb128 0x3b
+ 1180 00f1 0B       		.uleb128 0xb
+ 1181 00f2 27       		.uleb128 0x27
+ 1182 00f3 19       		.uleb128 0x19
+ 1183 00f4 11       		.uleb128 0x11
+ 1184 00f5 01       		.uleb128 0x1
+ 1185 00f6 12       		.uleb128 0x12
+ 1186 00f7 06       		.uleb128 0x6
+ 1187 00f8 40       		.uleb128 0x40
+ 1188 00f9 18       		.uleb128 0x18
+ 1189 00fa 9742     		.uleb128 0x2117
+ 1190 00fc 19       		.uleb128 0x19
+ 1191 00fd 01       		.uleb128 0x1
+ 1192 00fe 13       		.uleb128 0x13
+ 1193 00ff 00       		.byte	0
+ 1194 0100 00       		.byte	0
+ 1195 0101 12       		.uleb128 0x12
+ 1196 0102 05       		.uleb128 0x5
+ 1197 0103 00       		.byte	0
+ 1198 0104 03       		.uleb128 0x3
+ 1199 0105 0E       		.uleb128 0xe
+ 1200 0106 3A       		.uleb128 0x3a
+ 1201 0107 0B       		.uleb128 0xb
+ 1202 0108 3B       		.uleb128 0x3b
+ 1203 0109 0B       		.uleb128 0xb
+ 1204 010a 49       		.uleb128 0x49
+ 1205 010b 13       		.uleb128 0x13
+ 1206 010c 02       		.uleb128 0x2
+ 1207 010d 18       		.uleb128 0x18
+ 1208 010e 00       		.byte	0
+ 1209 010f 00       		.byte	0
+ 1210 0110 13       		.uleb128 0x13
+ 1211 0111 34       		.uleb128 0x34
+ 1212 0112 00       		.byte	0
+ 1213 0113 03       		.uleb128 0x3
+ 1214 0114 0E       		.uleb128 0xe
+ 1215 0115 3A       		.uleb128 0x3a
+ 1216 0116 0B       		.uleb128 0xb
+ 1217 0117 3B       		.uleb128 0x3b
+ 1218 0118 05       		.uleb128 0x5
+ 1219 0119 49       		.uleb128 0x49
+ 1220 011a 13       		.uleb128 0x13
+ 1221 011b 3F       		.uleb128 0x3f
+ 1222 011c 19       		.uleb128 0x19
+ 1223 011d 3C       		.uleb128 0x3c
+ 1224 011e 19       		.uleb128 0x19
+ 1225 011f 00       		.byte	0
+ 1226 0120 00       		.byte	0
+ 1227 0121 14       		.uleb128 0x14
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccTmQpS6.s 			page 26
+
+
+ 1228 0122 35       		.uleb128 0x35
+ 1229 0123 00       		.byte	0
+ 1230 0124 49       		.uleb128 0x49
+ 1231 0125 13       		.uleb128 0x13
+ 1232 0126 00       		.byte	0
+ 1233 0127 00       		.byte	0
+ 1234 0128 15       		.uleb128 0x15
+ 1235 0129 34       		.uleb128 0x34
+ 1236 012a 00       		.byte	0
+ 1237 012b 03       		.uleb128 0x3
+ 1238 012c 0E       		.uleb128 0xe
+ 1239 012d 3A       		.uleb128 0x3a
+ 1240 012e 0B       		.uleb128 0xb
+ 1241 012f 3B       		.uleb128 0x3b
+ 1242 0130 0B       		.uleb128 0xb
+ 1243 0131 49       		.uleb128 0x49
+ 1244 0132 13       		.uleb128 0x13
+ 1245 0133 3F       		.uleb128 0x3f
+ 1246 0134 19       		.uleb128 0x19
+ 1247 0135 02       		.uleb128 0x2
+ 1248 0136 18       		.uleb128 0x18
+ 1249 0137 00       		.byte	0
+ 1250 0138 00       		.byte	0
+ 1251 0139 16       		.uleb128 0x16
+ 1252 013a 2E       		.uleb128 0x2e
+ 1253 013b 00       		.byte	0
+ 1254 013c 3F       		.uleb128 0x3f
+ 1255 013d 19       		.uleb128 0x19
+ 1256 013e 3C       		.uleb128 0x3c
+ 1257 013f 19       		.uleb128 0x19
+ 1258 0140 6E       		.uleb128 0x6e
+ 1259 0141 0E       		.uleb128 0xe
+ 1260 0142 03       		.uleb128 0x3
+ 1261 0143 0E       		.uleb128 0xe
+ 1262 0144 3A       		.uleb128 0x3a
+ 1263 0145 0B       		.uleb128 0xb
+ 1264 0146 3B       		.uleb128 0x3b
+ 1265 0147 0B       		.uleb128 0xb
+ 1266 0148 00       		.byte	0
+ 1267 0149 00       		.byte	0
+ 1268 014a 00       		.byte	0
+ 1269              		.section	.debug_loc,"",%progbits
+ 1270              	.Ldebug_loc0:
+ 1271              	.LLST0:
+ 1272 0000 9A000000 		.4byte	.LVL14
+ 1273 0004 BA000000 		.4byte	.LVL19
+ 1274 0008 0100     		.2byte	0x1
+ 1275 000a 54       		.byte	0x54
+ 1276 000b 00000000 		.4byte	0
+ 1277 000f 00000000 		.4byte	0
+ 1278              	.LLST1:
+ 1279 0013 12000000 		.4byte	.LVL2
+ 1280 0017 1C000000 		.4byte	.LVL4
+ 1281 001b 0200     		.2byte	0x2
+ 1282 001d 30       		.byte	0x30
+ 1283 001e 9F       		.byte	0x9f
+ 1284 001f C4000000 		.4byte	.LVL20
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccTmQpS6.s 			page 27
+
+
+ 1285 0023 E2000000 		.4byte	.LVL24
+ 1286 0027 0200     		.2byte	0x2
+ 1287 0029 31       		.byte	0x31
+ 1288 002a 9F       		.byte	0x9f
+ 1289 002b 00000000 		.4byte	0
+ 1290 002f 00000000 		.4byte	0
+ 1291              	.LLST2:
+ 1292 0033 12000000 		.4byte	.LVL2
+ 1293 0037 1C000000 		.4byte	.LVL4
+ 1294 003b 0200     		.2byte	0x2
+ 1295 003d 30       		.byte	0x30
+ 1296 003e 9F       		.byte	0x9f
+ 1297 003f 00000000 		.4byte	0
+ 1298 0043 00000000 		.4byte	0
+ 1299              	.LLST3:
+ 1300 0047 06000000 		.4byte	.LVL28
+ 1301 004b 09000000 		.4byte	.LVL29-1
+ 1302 004f 0100     		.2byte	0x1
+ 1303 0051 50       		.byte	0x50
+ 1304 0052 00000000 		.4byte	0
+ 1305 0056 00000000 		.4byte	0
+ 1306              		.section	.debug_aranges,"",%progbits
+ 1307 0000 2C000000 		.4byte	0x2c
+ 1308 0004 0200     		.2byte	0x2
+ 1309 0006 00000000 		.4byte	.Ldebug_info0
+ 1310 000a 04       		.byte	0x4
+ 1311 000b 00       		.byte	0
+ 1312 000c 0000     		.2byte	0
+ 1313 000e 0000     		.2byte	0
+ 1314 0010 00000000 		.4byte	.LFB64
+ 1315 0014 10010000 		.4byte	.LFE64-.LFB64
+ 1316 0018 00000000 		.4byte	.LFB65
+ 1317 001c 3C000000 		.4byte	.LFE65-.LFB65
+ 1318 0020 00000000 		.4byte	.LFB66
+ 1319 0024 0C000000 		.4byte	.LFE66-.LFB66
+ 1320 0028 00000000 		.4byte	0
+ 1321 002c 00000000 		.4byte	0
+ 1322              		.section	.debug_ranges,"",%progbits
+ 1323              	.Ldebug_ranges0:
+ 1324 0000 00000000 		.4byte	.LFB64
+ 1325 0004 10010000 		.4byte	.LFE64
+ 1326 0008 00000000 		.4byte	.LFB65
+ 1327 000c 3C000000 		.4byte	.LFE65
+ 1328 0010 00000000 		.4byte	.LFB66
+ 1329 0014 0C000000 		.4byte	.LFE66
+ 1330 0018 00000000 		.4byte	0
+ 1331 001c 00000000 		.4byte	0
+ 1332              		.section	.debug_line,"",%progbits
+ 1333              	.Ldebug_line0:
+ 1334 0000 FC010000 		.section	.debug_str,"MS",%progbits,1
+ 1334      02009101 
+ 1334      00000201 
+ 1334      FB0E0D00 
+ 1334      01010101 
+ 1335              	.LASF25:
+ 1336 0000 7072656C 		.ascii	"preload\000"
+ 1336      6F616400 
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccTmQpS6.s 			page 28
+
+
+ 1337              	.LASF4:
+ 1338 0008 5F5F7569 		.ascii	"__uint8_t\000"
+ 1338      6E74385F 
+ 1338      7400
+ 1339              	.LASF47:
+ 1340 0012 6F666673 		.ascii	"offset_Zerodrift_calibrate\000"
+ 1340      65745F5A 
+ 1340      65726F64 
+ 1340      72696674 
+ 1340      5F63616C 
+ 1341              	.LASF34:
+ 1342 002d 72656365 		.ascii	"receivedData\000"
+ 1342      69766564 
+ 1342      44617461 
+ 1342      00
+ 1343              	.LASF7:
+ 1344 003a 5F5F696E 		.ascii	"__int32_t\000"
+ 1344      7433325F 
+ 1344      7400
+ 1345              	.LASF26:
+ 1346 0044 52657375 		.ascii	"Result_gram\000"
+ 1346      6C745F67 
+ 1346      72616D00 
+ 1347              	.LASF43:
+ 1348 0050 496E6974 		.ascii	"InitializeSPI\000"
+ 1348      69616C69 
+ 1348      7A655350 
+ 1348      4900
+ 1349              	.LASF6:
+ 1350 005e 73686F72 		.ascii	"short unsigned int\000"
+ 1350      7420756E 
+ 1350      7369676E 
+ 1350      65642069 
+ 1350      6E7400
+ 1351              	.LASF14:
+ 1352 0071 75696E74 		.ascii	"uint8_t\000"
+ 1352      385F7400 
+ 1353              	.LASF28:
+ 1354 0079 74696D65 		.ascii	"timestop\000"
+ 1354      73746F70 
+ 1354      00
+ 1355              	.LASF37:
+ 1356 0082 72656164 		.ascii	"readWeight\000"
+ 1356      57656967 
+ 1356      687400
+ 1357              	.LASF30:
+ 1358 008d 7A65726F 		.ascii	"zerodriftOffset\000"
+ 1358      64726966 
+ 1358      744F6666 
+ 1358      73657400 
+ 1359              	.LASF31:
+ 1360 009d 726F756E 		.ascii	"roundedNum\000"
+ 1360      6465644E 
+ 1360      756D00
+ 1361              	.LASF0:
+ 1362 00a8 666C6F61 		.ascii	"float\000"
+ 1362      7400
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccTmQpS6.s 			page 29
+
+
+ 1363              	.LASF54:
+ 1364 00ae 62797465 		.ascii	"byteReceived\000"
+ 1364      52656365 
+ 1364      69766564 
+ 1364      00
+ 1365              	.LASF33:
+ 1366 00bb 4953525F 		.ascii	"ISR_SPI_rx_handler\000"
+ 1366      5350495F 
+ 1366      72785F68 
+ 1366      616E646C 
+ 1366      657200
+ 1367              	.LASF2:
+ 1368 00ce 756E7369 		.ascii	"unsigned char\000"
+ 1368      676E6564 
+ 1368      20636861 
+ 1368      7200
+ 1369              	.LASF50:
+ 1370 00dc 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1370      43313120 
+ 1370      352E342E 
+ 1370      31203230 
+ 1370      31363036 
+ 1371 010f 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1371      20726576 
+ 1371      6973696F 
+ 1371      6E203233 
+ 1371      37373135 
+ 1372 0142 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1372      66756E63 
+ 1372      74696F6E 
+ 1372      2D736563 
+ 1372      74696F6E 
+ 1373              	.LASF9:
+ 1374 016a 5F5F7569 		.ascii	"__uint32_t\000"
+ 1374      6E743332 
+ 1374      5F7400
+ 1375              	.LASF10:
+ 1376 0175 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1376      20756E73 
+ 1376      69676E65 
+ 1376      6420696E 
+ 1376      7400
+ 1377              	.LASF32:
+ 1378 0187 68616E64 		.ascii	"handleByteReceived\000"
+ 1378      6C654279 
+ 1378      74655265 
+ 1378      63656976 
+ 1378      656400
+ 1379              	.LASF35:
+ 1380 019a 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1380      52784275 
+ 1380      66666572 
+ 1380      00
+ 1381              	.LASF45:
+ 1382 01a7 686F6D65 		.ascii	"homeStepper\000"
+ 1382      53746570 
+ 1382      70657200 
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccTmQpS6.s 			page 30
+
+
+ 1383              	.LASF5:
+ 1384 01b3 5F5F7569 		.ascii	"__uint16_t\000"
+ 1384      6E743136 
+ 1384      5F7400
+ 1385              	.LASF18:
+ 1386 01be 646F7562 		.ascii	"double\000"
+ 1386      6C6500
+ 1387              	.LASF40:
+ 1388 01c5 73746F70 		.ascii	"stopTidsTagning\000"
+ 1388      54696473 
+ 1388      5461676E 
+ 1388      696E6700 
+ 1389              	.LASF3:
+ 1390 01d5 73686F72 		.ascii	"short int\000"
+ 1390      7420696E 
+ 1390      7400
+ 1391              	.LASF24:
+ 1392 01df 66616374 		.ascii	"factor\000"
+ 1392      6F7200
+ 1393              	.LASF44:
+ 1394 01e6 696E6974 		.ascii	"initLoadcell\000"
+ 1394      4C6F6164 
+ 1394      63656C6C 
+ 1394      00
+ 1395              	.LASF52:
+ 1396 01f3 433A5C55 		.ascii	"C:\\Users\\ZakiN\\OneDrive\\Skrivebord\\SPI_Slave\\"
+ 1396      73657273 
+ 1396      5C5A616B 
+ 1396      694E5C4F 
+ 1396      6E654472 
+ 1397 0220 44657369 		.ascii	"Design01.cydsn\000"
+ 1397      676E3031 
+ 1397      2E637964 
+ 1397      736E00
+ 1398              	.LASF53:
+ 1399 022f 6D61696E 		.ascii	"main\000"
+ 1399      00
+ 1400              	.LASF13:
+ 1401 0234 756E7369 		.ascii	"unsigned int\000"
+ 1401      676E6564 
+ 1401      20696E74 
+ 1401      00
+ 1402              	.LASF12:
+ 1403 0241 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1403      206C6F6E 
+ 1403      6720756E 
+ 1403      7369676E 
+ 1403      65642069 
+ 1404              	.LASF23:
+ 1405 0258 73746172 		.ascii	"startoffset\000"
+ 1405      746F6666 
+ 1405      73657400 
+ 1406              	.LASF29:
+ 1407 0264 6D6F6465 		.ascii	"mode\000"
+ 1407      00
+ 1408              	.LASF48:
+ 1409 0269 73746570 		.ascii	"stepperdriver_rotateTo\000"
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccTmQpS6.s 			page 31
+
+
+ 1409      70657264 
+ 1409      72697665 
+ 1409      725F726F 
+ 1409      74617465 
+ 1410              	.LASF16:
+ 1411 0280 696E7433 		.ascii	"int32_t\000"
+ 1411      325F7400 
+ 1412              	.LASF21:
+ 1413 0288 73697A65 		.ascii	"sizetype\000"
+ 1413      74797065 
+ 1413      00
+ 1414              	.LASF27:
+ 1415 0291 67616D65 		.ascii	"gameReady\000"
+ 1415      52656164 
+ 1415      7900
+ 1416              	.LASF11:
+ 1417 029b 6C6F6E67 		.ascii	"long long int\000"
+ 1417      206C6F6E 
+ 1417      6720696E 
+ 1417      7400
+ 1418              	.LASF51:
+ 1419 02a9 6D61696E 		.ascii	"main.c\000"
+ 1419      2E6300
+ 1420              	.LASF19:
+ 1421 02b0 63686172 		.ascii	"char\000"
+ 1421      00
+ 1422              	.LASF46:
+ 1423 02b5 73746F70 		.ascii	"stopFlagMotor\000"
+ 1423      466C6167 
+ 1423      4D6F746F 
+ 1423      7200
+ 1424              	.LASF42:
+ 1425 02c3 5350495F 		.ascii	"SPI_RX_ISR_StartEx\000"
+ 1425      52585F49 
+ 1425      53525F53 
+ 1425      74617274 
+ 1425      457800
+ 1426              	.LASF49:
+ 1427 02d6 6D6F6474 		.ascii	"modtagetSPi\000"
+ 1427      61676574 
+ 1427      53506900 
+ 1428              	.LASF15:
+ 1429 02e2 75696E74 		.ascii	"uint16_t\000"
+ 1429      31365F74 
+ 1429      00
+ 1430              	.LASF36:
+ 1431 02eb 55437374 		.ascii	"UCstate\000"
+ 1431      61746500 
+ 1432              	.LASF38:
+ 1433 02f3 73746172 		.ascii	"startTidsTagning\000"
+ 1433      74546964 
+ 1433      73546167 
+ 1433      6E696E67 
+ 1433      00
+ 1434              	.LASF17:
+ 1435 0304 75696E74 		.ascii	"uint32_t\000"
+ 1435      33325F74 
+ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\ccTmQpS6.s 			page 32
+
+
+ 1435      00
+ 1436              	.LASF8:
+ 1437 030d 6C6F6E67 		.ascii	"long int\000"
+ 1437      20696E74 
+ 1437      00
+ 1438              	.LASF22:
+ 1439 0316 72657065 		.ascii	"repeats\000"
+ 1439      61747300 
+ 1440              	.LASF20:
+ 1441 031e 6C6F6E67 		.ascii	"long double\000"
+ 1441      20646F75 
+ 1441      626C6500 
+ 1442              	.LASF1:
+ 1443 032a 7369676E 		.ascii	"signed char\000"
+ 1443      65642063 
+ 1443      68617200 
+ 1444              	.LASF41:
+ 1445 0336 43794465 		.ascii	"CyDelay\000"
+ 1445      6C617900 
+ 1446              	.LASF39:
+ 1447 033e 77616974 		.ascii	"wait_for_weight\000"
+ 1447      5F666F72 
+ 1447      5F776569 
+ 1447      67687400 
+ 1448              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

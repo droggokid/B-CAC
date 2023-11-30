@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="SPI_Slave\Design01\Source Files\spi_Slave.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="SPI_Slave\Design01\Source Files\main.c">
 <ExpandedNodeIds>
 <v>SPI_Slave</v>
 <v>SPI_Slave\Design01</v>
@@ -30,51 +30,49 @@
 <v>SPI_Slave\Design01\Design01.cydwr\EEPROM</v>
 <v>SPI_Slave\Design01\Header Files</v>
 <v>SPI_Slave\Design01\Header Files\cyapicallbacks.h</v>
+<v>SPI_Slave\Design01\Header Files\FlagMotor.h</v>
+<v>SPI_Slave\Design01\Header Files\led.h</v>
+<v>SPI_Slave\Design01\Header Files\Loadcell.h</v>
 <v>SPI_Slave\Design01\Header Files\spi_Slave.h</v>
+<v>SPI_Slave\Design01\Header Files\Timer.h</v>
 <v>SPI_Slave\Design01\Source Files</v>
+<v>SPI_Slave\Design01\Source Files\FlagMotor.c</v>
+<v>SPI_Slave\Design01\Source Files\led.c</v>
+<v>SPI_Slave\Design01\Source Files\Loadcell.c</v>
 <v>SPI_Slave\Design01\Source Files\main.c</v>
 <v>SPI_Slave\Design01\Source Files\spi_Slave.c</v>
-<v>SPI_Slave\Design01\Generated_Source</v>
+<v>SPI_Slave\Design01\Source Files\Timer.c</v>
 <v>SPI_Slave\Design01\Generated_Source\PSoC5</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
+<v>SPI_Slave</v>
+<v>SPI_Slave\Design01</v>
+<v>SPI_Slave\Design01\TopDesign</v>
+<v>SPI_Slave\Design01\Design01.cydwr</v>
+<v>SPI_Slave\Design01\Design01.cydwr\Pins</v>
+<v>SPI_Slave\Design01\Design01.cydwr\Analog</v>
+<v>SPI_Slave\Design01\Design01.cydwr\Clocks</v>
+<v>SPI_Slave\Design01\Design01.cydwr\Interrupts</v>
+<v>SPI_Slave\Design01\Design01.cydwr\DMA</v>
+<v>SPI_Slave\Design01\Design01.cydwr\System</v>
+<v>SPI_Slave\Design01\Design01.cydwr\Directives</v>
+<v>SPI_Slave\Design01\Design01.cydwr\Flash Security</v>
+<v>SPI_Slave\Design01\Design01.cydwr\EEPROM</v>
+<v>SPI_Slave\Design01\Header Files</v>
 <v>SPI_Slave\Design01\Header Files\cyapicallbacks.h</v>
+<v>SPI_Slave\Design01\Header Files\FlagMotor.h</v>
+<v>SPI_Slave\Design01\Header Files\led.h</v>
+<v>SPI_Slave\Design01\Header Files\Loadcell.h</v>
 <v>SPI_Slave\Design01\Header Files\spi_Slave.h</v>
+<v>SPI_Slave\Design01\Header Files\Timer.h</v>
 <v>SPI_Slave\Design01\Source Files</v>
+<v>SPI_Slave\Design01\Source Files\FlagMotor.c</v>
+<v>SPI_Slave\Design01\Source Files\led.c</v>
+<v>SPI_Slave\Design01\Source Files\Loadcell.c</v>
 <v>SPI_Slave\Design01\Source Files\main.c</v>
 <v>SPI_Slave\Design01\Source Files\spi_Slave.c</v>
+<v>SPI_Slave\Design01\Source Files\Timer.c</v>
 <v>SPI_Slave\Design01\Generated_Source</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\Button_1</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\cy_boot</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\Em_EEPROM_Dynamic</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\LED_1</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\MISO_1</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\MOSI_1</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\SCLK_1</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\SPI_RX_ISR</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\SPIS_2</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\SPIS_2_IntClock</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\SS_1</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\cycodeshareexport.ld</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\cycodeshareimport.ld</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\cycodeshareimport.scat</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\cydevice.h</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\cydevice_trm.h</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\cydevicegnu.inc</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\cydevicegnu_trm.inc</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\cydeviceiar.inc</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\cydeviceiar_trm.inc</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\cydevicerv.inc</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\cydevicerv_trm.inc</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\cydisabledsheets.h</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\cyfitter.h</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\cyfitter_cfg.c</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\cyfitter_cfg.h</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\cyfittergnu.inc</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\cyfitteriar.inc</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\cyfitterrv.inc</v>
-<v>SPI_Slave\Design01\Generated_Source\PSoC5\cymetadata.c</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -99,7 +97,17 @@
 <v>SPI_Slave\Design01\CortexM3\ARM_GCC_541</v>
 <v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug</v>
 <v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Button_1.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\A1.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\A2.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_ExtVref.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_INT.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_IRQ.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_PM.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_theACLK.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\B1.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\B2.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\clock_1.lst</v>
 <v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
 <v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
 <v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
@@ -111,10 +119,17 @@
 <v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
 <v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
 <v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\LED_1.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\FlagMotor.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\led.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\ledGreen.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\ledRed.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Loadcell.lst</v>
 <v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
 <v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\MISO_1.lst</v>
 <v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\MOSI_1.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_ADC_in.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_1.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_1_PM.lst</v>
 <v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\SCLK_1.lst</v>
 <v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\SPI_RX_ISR.lst</v>
 <v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\spi_Slave.lst</v>
@@ -124,6 +139,9 @@
 <v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\SPIS_2_IntClock.lst</v>
 <v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\SPIS_2_PM.lst</v>
 <v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\SS_1.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_1.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_1_PM.lst</v>
 <v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Design01.elf</v>
 <v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Design01.hex</v>
 <v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Design01.map</v>
@@ -138,7 +156,17 @@
 <v>SPI_Slave\Design01\CortexM3\ARM_GCC_541</v>
 <v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug</v>
 <v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Button_1.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\A1.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\A2.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_ExtVref.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_INT.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_IRQ.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_PM.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_theACLK.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\B1.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\B2.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\clock_1.lst</v>
 <v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
 <v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
 <v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
@@ -150,25 +178,15 @@
 <v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
 <v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
 <v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\LED_1.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\FlagMotor.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\led.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\ledGreen.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\ledRed.lst</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Loadcell.lst</v>
 <v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
 <v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\MISO_1.lst</v>
 <v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\MOSI_1.lst</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\SCLK_1.lst</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\SPI_RX_ISR.lst</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\spi_Slave.lst</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\SPIS_2.lst</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\SPIS_2_BOOT.lst</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\SPIS_2_INT.lst</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\SPIS_2_IntClock.lst</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\SPIS_2_PM.lst</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\SS_1.lst</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Design01.elf</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Design01.hex</v>
-<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Design01.map</v>
-<v>SPI_Slave\Design01\Design01.gpdsc</v>
-<v>SPI_Slave\Design01\Design01.rpt</v>
-<v>SPI_Slave\Design01\Design01_timing.html</v>
+<v>SPI_Slave\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_ADC_in.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -183,16 +201,6 @@
 <v>SPI_Slave\Design01\PSoC 5LP Architecture TRM</v>
 <v>SPI_Slave\Design01\CY8C58LP Family Datasheet</v>
 <v>SPI_Slave\Design01\System Reference Guides</v>
-<v>SPI_Slave\Design01\System Reference Guides\cy_boot_v6_10</v>
-<v>SPI_Slave\Design01\cy_isr_v1_71.pdf</v>
-<v>SPI_Slave\Design01\cy_pins_v2_20</v>
-<v>SPI_Slave\Design01\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
-<v>SPI_Slave\Design01\Gnd_v1_0</v>
-<v>SPI_Slave\Design01\Gnd_v1_0\Gnd_v1_0.pdf</v>
-<v>SPI_Slave\Design01\LED_v1_0.pdf</v>
-<v>SPI_Slave\Design01\Resistor_v1_0.pdf</v>
-<v>SPI_Slave\Design01\SPI_Slave_v2_70.pdf</v>
-<v>SPI_Slave\Design01\SwitchSPST_v1_0.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>SPI_Slave</v>
@@ -200,16 +208,6 @@
 <v>SPI_Slave\Design01\PSoC 5LP Architecture TRM</v>
 <v>SPI_Slave\Design01\CY8C58LP Family Datasheet</v>
 <v>SPI_Slave\Design01\System Reference Guides</v>
-<v>SPI_Slave\Design01\System Reference Guides\cy_boot_v6_10</v>
-<v>SPI_Slave\Design01\cy_isr_v1_71.pdf</v>
-<v>SPI_Slave\Design01\cy_pins_v2_20</v>
-<v>SPI_Slave\Design01\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
-<v>SPI_Slave\Design01\Gnd_v1_0</v>
-<v>SPI_Slave\Design01\Gnd_v1_0\Gnd_v1_0.pdf</v>
-<v>SPI_Slave\Design01\LED_v1_0.pdf</v>
-<v>SPI_Slave\Design01\Resistor_v1_0.pdf</v>
-<v>SPI_Slave\Design01\SPI_Slave_v2_70.pdf</v>
-<v>SPI_Slave\Design01\SwitchSPST_v1_0.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
@@ -220,9 +218,17 @@
 <Unloaded />
 <OpenDocs>
 <name v=".\Design01.cydsn\main.c" />
-<name v=".\Design01.cydsn\Design01.cydwr" />
-<name v=".\Design01.cydsn\TopDesign\TopDesign.cysch" />
 <name v=".\Design01.cydsn\spi_Slave.c" />
+<name v=".\Design01.cydsn\FlagMotor.c" />
+<name v=".\Design01.cydsn\led.c" />
+<name v=".\Design01.cydsn\Loadcell.c" />
+<name v=".\Design01.cydsn\Timer.c" />
+<name v=".\Design01.cydsn\FlagMotor.h" />
+<name v=".\Design01.cydsn\led.h" />
+<name v=".\Design01.cydsn\Loadcell.h" />
+<name v=".\Design01.cydsn\Timer.h" />
+<name v=".\Design01.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Design01.cydsn\Design01.cydwr" />
 <name v=".\Design01.cydsn\spi_Slave.h" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
@@ -231,7 +237,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="959, 501" SelectedTabbedMdiWindow="c179dfea-040b-40bb-ad09-84d1c12c91c7"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="367692e1-7c28-4469-8d34-663fc6a93fe7" /><DocumentWindow Key="C:\Users\ZakiN\OneDrive\Skrivebord\projekt3\B-CAC\SPI_Slave\Design01.cydsn\main.c" Guid="c179dfea-040b-40bb-ad09-84d1c12c91c7" /><DocumentWindow Key="C:\Users\ZakiN\OneDrive\Skrivebord\projekt3\B-CAC\SPI_Slave\Design01.cydsn\Design01.cydwr" Guid="6db1258d-27fc-4914-9402-8564c5f5bbbb" /><DocumentWindow Key="C:\Users\ZakiN\OneDrive\Skrivebord\projekt3\B-CAC\SPI_Slave\Design01.cydsn\TopDesign\TopDesign.cysch" Guid="5e51b69e-1cad-43e9-9973-9dd0288043a6" /><DocumentWindow Key="C:\Users\ZakiN\OneDrive\Skrivebord\projekt3\B-CAC\SPI_Slave\Design01.cydsn\spi_Slave.c" Guid="0311b5d0-72c7-45ef-9f2b-7fa5dd3f32ef" /><DocumentWindow Key="C:\Users\ZakiN\OneDrive\Skrivebord\projekt3\B-CAC\SPI_Slave\Design01.cydsn\spi_Slave.h" Guid="8eb85bb5-a138-4c32-89a2-d8729852096a" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1174, 648" SelectedTabbedMdiWindow="ef65dd37-8351-4be4-a936-1215e564f996"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="367692e1-7c28-4469-8d34-663fc6a93fe7" /><DocumentWindow Key="C:\Users\ZakiN\OneDrive\Skrivebord\SPI_Slave\Design01.cydsn\main.c" Guid="ef65dd37-8351-4be4-a936-1215e564f996" /><DocumentWindow Key="C:\Users\ZakiN\OneDrive\Skrivebord\SPI_Slave\Design01.cydsn\spi_Slave.c" Guid="31dbc624-9adc-466b-b3bc-28a588000fbc" /><DocumentWindow Key="C:\Users\ZakiN\OneDrive\Skrivebord\SPI_Slave\Design01.cydsn\FlagMotor.c" Guid="7895aa6d-661e-4a96-ab7f-d1b500db317e" /><DocumentWindow Key="C:\Users\ZakiN\OneDrive\Skrivebord\SPI_Slave\Design01.cydsn\led.c" Guid="20175e3d-9c96-4349-a01a-308665c45460" /><DocumentWindow Key="C:\Users\ZakiN\OneDrive\Skrivebord\SPI_Slave\Design01.cydsn\Loadcell.c" Guid="3abcb134-4e96-476b-8b95-6745863ac179" /><DocumentWindow Key="C:\Users\ZakiN\OneDrive\Skrivebord\SPI_Slave\Design01.cydsn\Timer.c" Guid="46801317-838f-4533-a78c-434cd5861b50" /><DocumentWindow Key="C:\Users\ZakiN\OneDrive\Skrivebord\SPI_Slave\Design01.cydsn\FlagMotor.h" Guid="41027d95-f9f7-4ad9-87bb-53bcb5f9c552" /><DocumentWindow Key="C:\Users\ZakiN\OneDrive\Skrivebord\SPI_Slave\Design01.cydsn\led.h" Guid="6174e80a-328a-4714-897b-8eb26b6279a2" /><DocumentWindow Key="C:\Users\ZakiN\OneDrive\Skrivebord\SPI_Slave\Design01.cydsn\Loadcell.h" Guid="6ee17062-e2f7-4059-ae2d-6562415db58b" /><DocumentWindow Key="C:\Users\ZakiN\OneDrive\Skrivebord\SPI_Slave\Design01.cydsn\Timer.h" Guid="103d4637-4264-4915-85c9-c2d0d810ac71" /><DocumentWindow Key="C:\Users\ZakiN\OneDrive\Skrivebord\SPI_Slave\Design01.cydsn\TopDesign\TopDesign.cysch" Guid="f7ce9a1b-54f9-422d-a64f-e4df615d39ff" /><DocumentWindow Key="C:\Users\ZakiN\OneDrive\Skrivebord\SPI_Slave\Design01.cydsn\Design01.cydwr" Guid="92396136-cbf3-4a10-8db1-823ee73a4ce6" /><DocumentWindow Key="C:\Users\ZakiN\OneDrive\Skrivebord\SPI_Slave\Design01.cydsn\spi_Slave.h" Guid="d5eea74e-c618-45f7-866e-8a12ec76191d" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
