@@ -1,5 +1,5 @@
 # Design01
-# 2023-11-22 12:38:49Z
+# 2023-11-30 10:35:23Z
 
 # IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
 dont_use_io iocell 1 0
@@ -11,5 +11,6 @@ set_io "MOSI_1(0)" iocell 1 7
 set_io "SCLK_1(0)" iocell 2 0
 set_io "MISO_1(0)" iocell 1 6
 set_io "SS_1(0)" iocell 15 4
-set_io "LED_1(0)" iocell 2 1
-set_io "Button_1(0)" iocell 2 2
+set_io "\ADC_SAR_1:ExtVref(0)\" iocell 0 2
+set_io "Pin_ADC_in(0)" iocell 15 3
+set_location "\ADC_SAR_1:ADC_SAR\" sarcell -1 -1 1
