@@ -2,7 +2,6 @@
 #include <linux/uaccess.h> // copy_to_user
 #include <linux/module.h>  // module_init, GPL
 #include <linux/spi/spi.h> // spi_sync,
-#include <linux/gpio.h>
 
 #define MAXLEN 32
 #define MODULE_DEBUG 1 // Enable/Disable Debug messages
@@ -13,6 +12,7 @@ struct file_operations spi_drv_fops;
 static struct class *spi_drv_class;
 static dev_t devno;
 static struct cdev spi_drv_cdev;
+uint8_t command_byte = 0x00;
 
 /* Definition of SPI devices */
 struct psoc_spi_dev
@@ -84,8 +84,6 @@ err_no_cleanup:
     return err;
 }
 
-
-
 /*
  * Character Driver Module Exit Method
  */
@@ -128,9 +126,13 @@ ssize_t spi_drv_write(struct file *filep, const char __user *ubuf,
     if (MODULE_DEBUG)
         printk("value %i\n", value);
 
-    /*
-      Do something with value ....
-    */
+    if (sscanf(kbuf, "%i", &value) != 1)
+    {
+        printk(KERN_ALERT "Failed to convert string to integer\n");
+        return -EINVAL; // Return an appropriate error code
+    }
+
+    command_byte = value;
 
     /* Legacy file ptr f_pos. Used to support
      * random access but in char drv we dont!
@@ -151,61 +153,63 @@ ssize_t spi_drv_read(struct file *filep, char __user *ubuf,
     int err;
     int minor, len;
     struct spi_transfer t[1];
-struct spi_message m;
-char resultBuf[MAXLEN];
-uint8_t resultBuff[2];
-s16 result;
+    struct spi_message m;
+    char resultBuf[MAXLEN];
+    uint8_t resultBuff[2];
+    s16 result;
 
-minor = iminor(filep->f_inode);
+    minor = iminor(filep->f_inode);
 
-/* Initialize SPI message and transfers */
-memset(t, 0, sizeof(t));
-spi_message_init(&m);
-m.spi = spi_devs[minor].spi;
+    /* Initialize SPI message and transfers */
+    memset(t, 0, sizeof(t));
+    spi_message_init(&m);
+    m.spi = spi_devs[minor].spi;
 
-/* Set up the SPI transfer for sending the command to the PSoC */
-/* Set up the SPI transfer for sending the command to the PSoC */
-uint8_t command_byte = 0xAA;  // Example command
+    /* Set up the SPI transfer for sending the command to the PSoC */
+    /* Set up the SPI transfer for sending the command to the PSoC */
 
-t[0].tx_buf = &command_byte;
-t[0].rx_buf = &resultBuff[minor];  // Use minor to index the result buffer based on the current slave
-t[0].len = 1;
-t[0].bits_per_word = 8;  // Specify bits_per_word
-//t[0].cs_change = 1;  Set to 1 to release CS between messages
-t[0].delay_usecs = 1000;
-spi_message_add_tail(&t[0], &m);
+    t[0].tx_buf = &command_byte;
+    t[0].rx_buf = &resultBuff[minor]; // Use minor to index the result buffer based on the current slave
+    t[0].len = 1;
+    t[0].bits_per_word = 8; // Specify bits_per_word
+    t[0].delay_usecs = 1000;
+    spi_message_add_tail(&t[0], &m);
 
-err = spi_sync(spi_devs[minor].spi, &m);
+    err = spi_sync(spi_devs[minor].spi, &m);
 
-if (err)
-{
-    printk(KERN_ALERT "FAILED spi_sync: %d\n", err);
-    return err;
+    if (err)
+    {
+        printk(KERN_ALERT "FAILED spi_sync: %d\n", err);
+        return err;
+    }
+
+    result = resultBuff[minor];
+
+    if (MODULE_DEBUG)
+        printk(KERN_ALERT "%s-%i read: %i\n",
+               spi_devs[minor].spi->modalias, spi_devs[minor].channel, result);
+
+    /* Convert integer to string limited to "count" size. Returns
+     * length excluding NULL termination */
+    len = snprintf(resultBuf, count, "%u\n", result);
+    if (len >= count)
+    {
+        printk(KERN_ALERT "User buffer too small to hold the result\n");
+        return -EINVAL; // Return an appropriate error code
+    }
+
+    /* Append Length of NULL termination */
+    len++;
+
+    /* Copy data to user space */
+    if (copy_to_user(ubuf, resultBuf, len))
+        return -EFAULT;
+
+    /* Move fileptr */
+    *f_pos += len;
+
+    return len;
 }
-
-result = resultBuff[minor];
-
-if (MODULE_DEBUG)
-    printk(KERN_ALERT "%s-%i read: %i\n",
-           spi_devs[minor].spi->modalias, spi_devs[minor].channel, result);
-
-/* Convert integer to string limited to "count" size. Returns
- * length excluding NULL termination */
-len = snprintf(resultBuf, count, "%d\n", result);
-
-/* Append Length of NULL termination */
-len++;
-
-/* Copy data to user space */
-if (copy_to_user(ubuf, resultBuf, len))
-    return -EFAULT;
-
-/* Move fileptr */
-*f_pos += len;
-
-return len;
-}
-
 
 /*
  * Character Driver File Operations Structure
@@ -243,22 +247,21 @@ static int spi_drv_probe(struct spi_device *sdev)
     }
 
     /* Configure bits_per_word, always 8-bit for RPI!!! */
-//    gpio_direction_output(sdev->chip_select, 1); // Assuming sdev->chip_select holds the GPIO pin number
+
     sdev->bits_per_word = 8;
     spi_setup(sdev);
-
-//    gpio_set_value(sdev->chip_select, 1);
 
     /* Create devices, populate sysfs and
        active udev to create devices in /dev */
 
     spi_drv_device = device_create(spi_drv_class, NULL,
-                               MKDEV(MAJOR(devno), spi_devs_cnt),
-                               NULL, "spi_drv%d", spi_devs_cnt);
-  if (IS_ERR(spi_drv_device)) {
-    printk(KERN_ALERT "FAILED TO CREATE DEVICE\n");
-    return PTR_ERR(spi_drv_device);
-  }
+                                   MKDEV(MAJOR(devno), spi_devs_cnt),
+                                   NULL, "spi_drv%d", spi_devs_cnt);
+    if (IS_ERR(spi_drv_device))
+    {
+        printk(KERN_ALERT "FAILED TO CREATE DEVICE\n");
+        return PTR_ERR(spi_drv_device);
+    }
 
     /* Update local array of SPI devices */
     spi_devs[spi_devs_cnt].spi = sdev;
@@ -287,7 +290,6 @@ static int spi_drv_remove(struct spi_device *sdev)
 
     return 0;
 }
-
 
 /*
  * spi Driver Struct
