@@ -6,12 +6,22 @@ class Server
         this.xhr = new XMLHttpRequest();
     }
 
-    getTime()
+    // GET methods
+
+    getTareReady()
     {
-        // Returns the exact times of the players
-        return this.get("time");
+        // Return boolean if taring is done
+        //return this.get("tareReady") === "true" ? true : false; // Prod
+        return this.get("tareReady") // Dev
     }
 
+    getGameReady()
+    {
+        // Return boolean if the game is ready to start
+        //return this.get("gameReady") === "true" ? true : false; // Prod
+        return this.get("gameReady") // Dev
+    }
+    
     getGameRunning()
     {
         // Return boolean if the game is running
@@ -19,11 +29,19 @@ class Server
         return this.get("gameRunning") // Dev
     }
 
+    getTime()
+    {
+        // Returns the exact times of the players
+        return this.get("time");
+    }
+    
     getLeaderboard()
     {
         // Returns all the leaderboard data
         return this.get("leaderboard");
     }
+
+    // POST methods
 
     postTare()
     {
@@ -34,6 +52,8 @@ class Server
     {
         this.post(`{"cmd": "startGame", "data": {"p1": "${p1Initals}", "p2": "${p2Initials}", "drinkType": "${drinkType}"}}`);
     }
+
+    // Don't touch or use outside class
 
     get(data)
     {
