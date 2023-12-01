@@ -201,6 +201,16 @@
 <v>SPI_Slave\Design01\PSoC 5LP Architecture TRM</v>
 <v>SPI_Slave\Design01\CY8C58LP Family Datasheet</v>
 <v>SPI_Slave\Design01\System Reference Guides</v>
+<v>SPI_Slave\Design01\System Reference Guides\cy_boot_v6_10</v>
+<v>SPI_Slave\Design01\ADC_SAR_v3_10.pdf</v>
+<v>SPI_Slave\Design01\cy_clock_v2_20.pdf</v>
+<v>SPI_Slave\Design01\cy_isr_v1_71.pdf</v>
+<v>SPI_Slave\Design01\cy_pins_v2_20</v>
+<v>SPI_Slave\Design01\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>SPI_Slave\Design01\PWM_v3_30.pdf</v>
+<v>SPI_Slave\Design01\SPI_Slave_v2_70.pdf</v>
+<v>SPI_Slave\Design01\Timer_v2_80.pdf</v>
+<v>SPI_Slave\Design01\ZeroTerminal.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>SPI_Slave</v>
@@ -208,6 +218,16 @@
 <v>SPI_Slave\Design01\PSoC 5LP Architecture TRM</v>
 <v>SPI_Slave\Design01\CY8C58LP Family Datasheet</v>
 <v>SPI_Slave\Design01\System Reference Guides</v>
+<v>SPI_Slave\Design01\System Reference Guides\cy_boot_v6_10</v>
+<v>SPI_Slave\Design01\ADC_SAR_v3_10.pdf</v>
+<v>SPI_Slave\Design01\cy_clock_v2_20.pdf</v>
+<v>SPI_Slave\Design01\cy_isr_v1_71.pdf</v>
+<v>SPI_Slave\Design01\cy_pins_v2_20</v>
+<v>SPI_Slave\Design01\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>SPI_Slave\Design01\PWM_v3_30.pdf</v>
+<v>SPI_Slave\Design01\SPI_Slave_v2_70.pdf</v>
+<v>SPI_Slave\Design01\Timer_v2_80.pdf</v>
+<v>SPI_Slave\Design01\ZeroTerminal.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
@@ -217,19 +237,11 @@
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs>
-<name v=".\Design01.cydsn\main.c" />
-<name v=".\Design01.cydsn\spi_Slave.c" />
-<name v=".\Design01.cydsn\FlagMotor.c" />
-<name v=".\Design01.cydsn\led.c" />
-<name v=".\Design01.cydsn\Loadcell.c" />
-<name v=".\Design01.cydsn\Timer.c" />
-<name v=".\Design01.cydsn\FlagMotor.h" />
-<name v=".\Design01.cydsn\led.h" />
-<name v=".\Design01.cydsn\Loadcell.h" />
-<name v=".\Design01.cydsn\Timer.h" />
-<name v=".\Design01.cydsn\TopDesign\TopDesign.cysch" />
-<name v=".\Design01.cydsn\Design01.cydwr" />
 <name v=".\Design01.cydsn\spi_Slave.h" />
+<name v=".\Design01.cydsn\main.c" />
+<name v=".\Design01.cydsn\Timer.h" />
+<name v=".\Design01.cydsn\Timer.c" />
+<name v=".\Design01.cydsn\spi_Slave.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -237,7 +249,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1174, 648" SelectedTabbedMdiWindow="ef65dd37-8351-4be4-a936-1215e564f996"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="367692e1-7c28-4469-8d34-663fc6a93fe7" /><DocumentWindow Key="C:\Users\ZakiN\OneDrive\Skrivebord\SPI_Slave\Design01.cydsn\main.c" Guid="ef65dd37-8351-4be4-a936-1215e564f996" /><DocumentWindow Key="C:\Users\ZakiN\OneDrive\Skrivebord\SPI_Slave\Design01.cydsn\spi_Slave.c" Guid="31dbc624-9adc-466b-b3bc-28a588000fbc" /><DocumentWindow Key="C:\Users\ZakiN\OneDrive\Skrivebord\SPI_Slave\Design01.cydsn\FlagMotor.c" Guid="7895aa6d-661e-4a96-ab7f-d1b500db317e" /><DocumentWindow Key="C:\Users\ZakiN\OneDrive\Skrivebord\SPI_Slave\Design01.cydsn\led.c" Guid="20175e3d-9c96-4349-a01a-308665c45460" /><DocumentWindow Key="C:\Users\ZakiN\OneDrive\Skrivebord\SPI_Slave\Design01.cydsn\Loadcell.c" Guid="3abcb134-4e96-476b-8b95-6745863ac179" /><DocumentWindow Key="C:\Users\ZakiN\OneDrive\Skrivebord\SPI_Slave\Design01.cydsn\Timer.c" Guid="46801317-838f-4533-a78c-434cd5861b50" /><DocumentWindow Key="C:\Users\ZakiN\OneDrive\Skrivebord\SPI_Slave\Design01.cydsn\FlagMotor.h" Guid="41027d95-f9f7-4ad9-87bb-53bcb5f9c552" /><DocumentWindow Key="C:\Users\ZakiN\OneDrive\Skrivebord\SPI_Slave\Design01.cydsn\led.h" Guid="6174e80a-328a-4714-897b-8eb26b6279a2" /><DocumentWindow Key="C:\Users\ZakiN\OneDrive\Skrivebord\SPI_Slave\Design01.cydsn\Loadcell.h" Guid="6ee17062-e2f7-4059-ae2d-6562415db58b" /><DocumentWindow Key="C:\Users\ZakiN\OneDrive\Skrivebord\SPI_Slave\Design01.cydsn\Timer.h" Guid="103d4637-4264-4915-85c9-c2d0d810ac71" /><DocumentWindow Key="C:\Users\ZakiN\OneDrive\Skrivebord\SPI_Slave\Design01.cydsn\TopDesign\TopDesign.cysch" Guid="f7ce9a1b-54f9-422d-a64f-e4df615d39ff" /><DocumentWindow Key="C:\Users\ZakiN\OneDrive\Skrivebord\SPI_Slave\Design01.cydsn\Design01.cydwr" Guid="92396136-cbf3-4a10-8db1-823ee73a4ce6" /><DocumentWindow Key="C:\Users\ZakiN\OneDrive\Skrivebord\SPI_Slave\Design01.cydsn\spi_Slave.h" Guid="d5eea74e-c618-45f7-866e-8a12ec76191d" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1174, 468" SelectedTabbedMdiWindow="275e77eb-2241-4a44-9dd5-1b0d82d28417"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="367692e1-7c28-4469-8d34-663fc6a93fe7" /><DocumentWindow Key="C:\Users\ZakiN\OneDrive\Skrivebord\projekt3\B-CAC\SPI_Slave\Design01.cydsn\spi_Slave.h" Guid="b0f7b282-7391-49b6-85a5-0057471f6324" /><DocumentWindow Key="C:\Users\ZakiN\OneDrive\Skrivebord\projekt3\B-CAC\SPI_Slave\Design01.cydsn\main.c" Guid="275e77eb-2241-4a44-9dd5-1b0d82d28417" /><DocumentWindow Key="C:\Users\ZakiN\OneDrive\Skrivebord\projekt3\B-CAC\SPI_Slave\Design01.cydsn\Timer.h" Guid="c6a4c2c7-95b6-488a-8315-f91ec275d876" /><DocumentWindow Key="C:\Users\ZakiN\OneDrive\Skrivebord\projekt3\B-CAC\SPI_Slave\Design01.cydsn\Timer.c" Guid="b9e53996-f17b-4b56-8d58-3271564fbd88" /><DocumentWindow Key="C:\Users\ZakiN\OneDrive\Skrivebord\projekt3\B-CAC\SPI_Slave\Design01.cydsn\spi_Slave.c" Guid="4c84600a-6c79-477d-b159-d68772064457" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

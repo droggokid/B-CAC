@@ -14,3 +14,4 @@
 #include "project.h"
 void startTidsTagning(void);
 uint32 stopTidsTagning(void);
+void sendTimeOverSPI(uint32_t time);

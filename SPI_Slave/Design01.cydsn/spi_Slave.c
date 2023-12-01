@@ -22,8 +22,9 @@ void InitializeSPI(void)
 uint8_t modtagetSPi(void)
 {
     
-    uint8_t receivedData;
+    uint8_t receivedData = 0;
     // Lyt for kommandoer fra masteren via SPI
+    
     while(SPIS_2_GetRxBufferSize() != 0)
     {
         receivedData = SPIS_2_ReadRxData();
