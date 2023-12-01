@@ -84,4 +84,4 @@ class Server
     }
 }
 
-export const server = new Server('http://localhost:8080');
+export const server = new Server('http://192.168.51.214:8080');
