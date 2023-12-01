@@ -11,7 +11,14 @@
 
 CY_ISR_PROTO(ISR_SPI_rx_handler);
 void handleByteReceived(uint8_t byteReceived);
-int UCstate=0;
+static int UCstate=0;
+static uint8_t minutter_ = 0, sekunder_ = 0 , millisekunder_ = 0;
+
+void convert_ms(uint32_t total_ms) {
+    minutter_ = total_ms / (1000 * 60);
+    sekunder_ = (total_ms / 1000) % 60;
+    millisekunder_ = total_ms % 1000;
+}
 
 int main(void)
 {
@@ -117,6 +124,14 @@ int main(void)
     wait_for_weight(startoffset, factor,preload);//venter på der bliver plasseret en øl
     timestop=1;
     tid = stopTidsTagning(); //tid stoppes
+    
+    convert_ms(tid);
+    
+    //Kald funktion her
+    sendSPi(minutter_);
+    sendSPi(sekunder_);
+    sendSPi(millisekunder_);
+    
     int roundedNum = (tid + 50) / 100 * 100;//rundes af til nærmeste 100 ms
         {//print
         //snprintf(uartBuffer,sizeof(uartBuffer),"tid (g) %d\r\n ", tid);
