@@ -1,9 +1,0 @@
-C:\Users\jespe\Downloads\DC-Motor-PWM\DC-Motor-PWM.cydsn\DC-Motor-PWM.cyprj|ab48d7cb-14e8-45b1-90da-4c51c95c1c59
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|65e45e2d-7575-47f2-bb82-bc90b40821c5
-C:\Users\jespe\OneDrive\Dokumenter\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|3e5a8564-a8cc-4e2b-92e9-22e1f33d7449
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|4c82840d-cba3-4e73-a518-ddb4da3dc878
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|e6129eee-a8be-40ff-bae8-762fd7e95094
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|c6cc59d8-d941-4277-8d1c-78b6c4b98f13
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|370bea21-2584-4eab-a7de-54133950c636
-C:\Users\jespe\Downloads\DC-Motor-PWM\SleepTimer_Interrupt_Sleep01.cydsn\SleepTimer_Interrupt_Sleep01.cyprj|85351122-6fda-40b2-9307-bca43d8967ae
-C:\Users\jespe\Downloads\DC-Motor-PWM\Timer01.cydsn\Timer01.cyprj|65428e9e-af76-4c40-b10c-721c666e5a03

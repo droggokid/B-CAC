@@ -1,2 +1,0 @@
-# B-CAC
-Vores semesterprojekt
