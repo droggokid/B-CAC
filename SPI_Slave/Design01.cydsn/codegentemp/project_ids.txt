@@ -1,6 +1,6 @@
-C:\Users\ZakiN\OneDrive\Skrivebord\SPI_Slave\Design01.cydsn\Design01.cyprj|1e46dc89-c234-42fd-b1a8-4c0c071b7e9b
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|ffb35d41-dcc1-4ae4-8525-45ad0543e727
-C:\Users\ZakiN\OneDrive\Dokumenter\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|55460870-2307-46d9-9e80-856482b7afa1
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|f5b4fede-d7a6-4046-89a0-eb2cd7e75f99
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|f444e7ac-c1c7-4b03-a305-45ef7e7709c3
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|9ad837aa-5fce-41c1-aa1f-c76bcd7ad45e
+C:\Users\ZakiN\OneDrive\Skrivebord\projekt3\B-CAC\SPI_Slave\Design01.cydsn\Design01.cyprj|810cbaa6-cd52-4652-b4d6-5800e19f810f
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|6f8307f8-9976-421b-bf88-bf62ece48c78
+C:\Users\ZakiN\OneDrive\Dokumenter\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|b463d0a0-fb5f-47e6-bb7e-4402b2e61a97
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|9308ac5c-3762-45e7-931a-2cbfafcfa13a
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|1eb9b8db-4f5e-442a-8d81-bb5ead5f3f14
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|a00827a0-5a79-4e2c-93e2-53a70d136c47

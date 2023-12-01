@@ -11,6 +11,7 @@
 */
 #include "project.h"
 #include "Timer.h"
+#include "spi_Slave.h"
 #include <stdio.h>
 
 volatile uint16 startCount = 0;
@@ -46,4 +47,23 @@ uint32 stopTidsTagning()
     Timer_1_Stop();
     
     return time_interval_ms;
+}
+
+void sendTimeOverSPI(uint32_t time)
+{
+    // Assuming time is a 32-bit integer
+    uint8_t tx_buf[4];
+    tx_buf[0] = (time >> 24) & 0xFF;
+    tx_buf[1] = (time >> 16) & 0xFF;
+    tx_buf[2] = (time >> 8) & 0xFF;
+    tx_buf[3] = time & 0xFF;
+
+    // Initialize SPI
+    InitializeSPI();
+
+    // Send each byte over SPI
+    for (int i = 0; i < 4; ++i)
+    {
+        sendSPi(tx_buf[i]);
+    }
 }
