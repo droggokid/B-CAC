@@ -1,3 +1,12 @@
+// How 2 host på rpizw med god OS:
+// 1. på en anden maskine kør: npm run build
+// 2. push
+// 3. pull på rpizw
+// 4. på rpizw i build-mappen for ui'en kør: sudo python3 -m http.server 80
+// Hvis der skal skiftes mellem at hoste på gh-pages og lokalt, skal package.json homepage ændres til "."
+// evt. check ip i bunden af denne fil
+// Backenden skal også bygges på en anden maskine, og køres på rpizw med ./backend
+
 class Server
 {
     constructor(url)
