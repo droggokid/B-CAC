@@ -158,9 +158,9 @@ function GameMenu(props) {
             <PlayerStat id="2" initials={p2Initials} time={p2Time} style={rowStyle} />
             <div id="drinkType" style={rowStyle}>
                 <Text label="Drink type" fontSize="30px" fontFamily="Arial" color="black" />
-                <Dropdown options={["Vælg", "Bajer", "Mokai"]} callback={dropdownCb} disable={dropdownDisabled} fontSize="30px" />
+                <Dropdown options={["Vælg", "Bajer"]} callback={dropdownCb} disable={dropdownDisabled} fontSize="30px" />
             </div>
-            <Text label={rmTxtLabel} show={rmTxtShow} color="black" fontFamily="arial" />
+            <Text label={rmTxtLabel} show={rmTxtShow} color="black" fontFamily="arial" fontSize="30px" />
             <div className="activeCont">
                 <ActiveBtn
                     label="Godkend"
@@ -168,6 +168,7 @@ function GameMenu(props) {
                     active={checkBtnActive}
                     show={checkBtnShow}
                     onclick={tare}
+                    width={300}
                 />
                 <ActiveBtn
                     label="Annuller"
@@ -176,6 +177,7 @@ function GameMenu(props) {
                     active={true}
                     show={cancelBtnShow}
                     onclick={cancel}
+                    width={300}
                 />
                 <ActiveBtn
                     label="Start"
@@ -183,8 +185,9 @@ function GameMenu(props) {
                     active={startBtnActive}
                     show={startBtnShow}
                     onclick={startGame}
+                    width={300}
                 />
-                <Text label={`Spillet begynder om ${countDownLabel} sekunder`} show={countDownShow} color="#000000" fontFamily="Arial" fontSize="100px" />
+                <Text label={`Spillet begynder om ${countDownLabel} sekunder`} show={countDownShow} color="#000000" fontFamily="Arial" fontSize="30px" />
                 <Text label={`${Math.floor(timerSec / 60)}:${timerSec % 60}`} show={timerShow} color="#000000" fontFamily="Arial" fontSize="100px" />
                 <Text label={winLabel} show={winShow} color="#000000" fontFamily="Arial" fontSize="100px" />
             </div>

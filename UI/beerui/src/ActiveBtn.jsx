@@ -3,7 +3,7 @@ import Text from './Text';
 
 function ActiveBtn(props)
 {
-    const { label, active, onclick, show, height, color, fontColor } = props;
+    const { label, active, onclick, show, height, width, color, fontColor } = props;
 
     const activeBtnStyle = {
         display: show ? "inline-block" : "none",
@@ -17,6 +17,7 @@ function ActiveBtn(props)
         margin: "20px",
         boxShadow: "0px 10px 15px -3px rgba(0,0,0,0.1)",
         cursor: active ? "pointer" : "not-allowed",
+        width: `${width}px` || "auto",
     };
     
     return (

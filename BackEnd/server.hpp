@@ -82,7 +82,7 @@ public:
 
                 if (target == "/time")
                 {
-                    response.body() = "11:30";
+                    response.body() = "{'p1': '01:10.45', 'p2': '01:11.10'}";
                 }
                 else if (target == "/gameRunning")
                 {
