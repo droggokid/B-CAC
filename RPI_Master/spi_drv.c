@@ -172,7 +172,6 @@ ssize_t spi_drv_read(struct file *filep, char __user *ubuf,
     t[0].rx_buf = &resultBuff[minor]; // Use minor to index the result buffer based on the current slave
     t[0].len = 1;
     t[0].bits_per_word = 8; // Specify bits_per_word
-    t[0].delay_usecs = 1000;
     spi_message_add_tail(&t[0], &m);
 
     err = spi_sync(spi_devs[minor].spi, &m);
@@ -271,7 +270,7 @@ static int spi_drv_probe(struct spi_device *sdev)
     return err;
 }
 
-static int spi_drv_remove(struct spi_device *sdev)
+static void spi_drv_remove(struct spi_device *sdev)
 {
     int its_minor = 0;
 
@@ -287,8 +286,6 @@ static int spi_drv_remove(struct spi_device *sdev)
         }
         ++its_minor;
     }
-
-    return 0;
 }
 
 /*

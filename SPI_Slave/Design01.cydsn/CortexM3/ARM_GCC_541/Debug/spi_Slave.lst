@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cc7Waj8i.s 			page 1
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\cc3Mqfpu.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cc7Waj8i.s 			page 1
   37 0002 FFF7FEFF 		bl	SPIS_2_Start
   38              	.LVL0:
   39 0006 08BD     		pop	{r3, pc}
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cc7Waj8i.s 			page 2
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\cc3Mqfpu.s 			page 2
 
 
   40              		.cfi_endproc
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cc7Waj8i.s 			page 1
   35:spi_Slave.c   **** }
   77              		.loc 1 35 0
   78 0014 2046     		mov	r0, r4
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cc7Waj8i.s 			page 3
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\cc3Mqfpu.s 			page 3
 
 
   79 0016 10BD     		pop	{r4, pc}
@@ -178,24 +178,24 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cc7Waj8i.s 			page 1
  123              		.section	.debug_info,"",%progbits
  124              	.Ldebug_info0:
  125 0000 A3010000 		.4byte	0x1a3
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cc7Waj8i.s 			page 4
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\cc3Mqfpu.s 			page 4
 
 
  126 0004 0400     		.2byte	0x4
  127 0006 00000000 		.4byte	.Ldebug_abbrev0
  128 000a 04       		.byte	0x4
  129 000b 01       		.uleb128 0x1
- 130 000c 7C000000 		.4byte	.LASF26
+ 130 000c CB000000 		.4byte	.LASF26
  131 0010 0C       		.byte	0xc
  132 0011 4B000000 		.4byte	.LASF27
- 133 0015 0D020000 		.4byte	.LASF28
+ 133 0015 57000000 		.4byte	.LASF28
  134 0019 00000000 		.4byte	.Ldebug_ranges0+0
  135 001d 00000000 		.4byte	0
  136 0021 00000000 		.4byte	.Ldebug_line0
  137 0025 02       		.uleb128 0x2
  138 0026 01       		.byte	0x1
  139 0027 06       		.byte	0x6
- 140 0028 01020000 		.4byte	.LASF0
+ 140 0028 50020000 		.4byte	.LASF0
  141 002c 03       		.uleb128 0x3
  142 002d 0D000000 		.4byte	.LASF4
  143 0031 02       		.byte	0x2
@@ -204,15 +204,15 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cc7Waj8i.s 			page 1
  146 0037 02       		.uleb128 0x2
  147 0038 01       		.byte	0x1
  148 0039 08       		.byte	0x8
- 149 003a 6E000000 		.4byte	.LASF1
+ 149 003a BD000000 		.4byte	.LASF1
  150 003e 02       		.uleb128 0x2
  151 003f 02       		.byte	0x2
  152 0040 05       		.byte	0x5
- 153 0041 CF010000 		.4byte	.LASF2
+ 153 0041 1E020000 		.4byte	.LASF2
  154 0045 02       		.uleb128 0x2
  155 0046 02       		.byte	0x2
  156 0047 07       		.byte	0x7
- 157 0048 1C010000 		.4byte	.LASF3
+ 157 0048 6B010000 		.4byte	.LASF3
  158 004c 03       		.uleb128 0x3
  159 004d 1F000000 		.4byte	.LASF5
  160 0051 02       		.byte	0x2
@@ -221,65 +221,65 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cc7Waj8i.s 			page 1
  163 0057 02       		.uleb128 0x2
  164 0058 04       		.byte	0x4
  165 0059 05       		.byte	0x5
- 166 005a DF010000 		.4byte	.LASF6
+ 166 005a 2E020000 		.4byte	.LASF6
  167 005e 02       		.uleb128 0x2
  168 005f 04       		.byte	0x4
  169 0060 07       		.byte	0x7
- 170 0061 0A010000 		.4byte	.LASF7
+ 170 0061 59010000 		.4byte	.LASF7
  171 0065 02       		.uleb128 0x2
  172 0066 08       		.byte	0x8
  173 0067 05       		.byte	0x5
- 174 0068 BC010000 		.4byte	.LASF8
+ 174 0068 0B020000 		.4byte	.LASF8
  175 006c 02       		.uleb128 0x2
  176 006d 08       		.byte	0x8
  177 006e 07       		.byte	0x7
- 178 006f 8C010000 		.4byte	.LASF9
+ 178 006f DB010000 		.4byte	.LASF9
  179 0073 04       		.uleb128 0x4
  180 0074 04       		.byte	0x4
  181 0075 05       		.byte	0x5
  182 0076 696E7400 		.ascii	"int\000"
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cc7Waj8i.s 			page 5
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\cc3Mqfpu.s 			page 5
 
 
  183 007a 02       		.uleb128 0x2
  184 007b 04       		.byte	0x4
  185 007c 07       		.byte	0x7
- 186 007d 7F010000 		.4byte	.LASF10
+ 186 007d CE010000 		.4byte	.LASF10
  187 0081 03       		.uleb128 0x3
- 188 0082 A3010000 		.4byte	.LASF11
+ 188 0082 F2010000 		.4byte	.LASF11
  189 0086 03       		.byte	0x3
  190 0087 18       		.byte	0x18
  191 0088 2C000000 		.4byte	0x2c
  192 008c 03       		.uleb128 0x3
- 193 008d AB010000 		.4byte	.LASF12
+ 193 008d FA010000 		.4byte	.LASF12
  194 0091 03       		.byte	0x3
  195 0092 2C       		.byte	0x2c
  196 0093 4C000000 		.4byte	0x4c
  197 0097 05       		.uleb128 0x5
- 198 0098 D9010000 		.4byte	.LASF13
+ 198 0098 28020000 		.4byte	.LASF13
  199 009c 04       		.byte	0x4
  200 009d E901     		.2byte	0x1e9
  201 009f 37000000 		.4byte	0x37
  202 00a3 02       		.uleb128 0x2
  203 00a4 04       		.byte	0x4
  204 00a5 04       		.byte	0x4
- 205 00a6 63000000 		.4byte	.LASF14
+ 205 00a6 B2000000 		.4byte	.LASF14
  206 00aa 02       		.uleb128 0x2
  207 00ab 08       		.byte	0x8
  208 00ac 04       		.byte	0x4
- 209 00ad 58010000 		.4byte	.LASF15
+ 209 00ad A7010000 		.4byte	.LASF15
  210 00b1 02       		.uleb128 0x2
  211 00b2 01       		.byte	0x1
  212 00b3 08       		.byte	0x8
- 213 00b4 CA010000 		.4byte	.LASF16
+ 213 00b4 19020000 		.4byte	.LASF16
  214 00b8 02       		.uleb128 0x2
  215 00b9 08       		.byte	0x8
  216 00ba 04       		.byte	0x4
- 217 00bb F5010000 		.4byte	.LASF17
+ 217 00bb 44020000 		.4byte	.LASF17
  218 00bf 02       		.uleb128 0x2
  219 00c0 04       		.byte	0x4
  220 00c1 07       		.byte	0x7
- 221 00c2 B3010000 		.4byte	.LASF18
+ 221 00c2 02020000 		.4byte	.LASF18
  222 00c6 06       		.uleb128 0x6
  223 00c7 3D000000 		.4byte	.LASF19
  224 00cb 01       		.byte	0x1
@@ -294,11 +294,11 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cc7Waj8i.s 			page 1
  233 00e0 6F010000 		.4byte	0x16f
  234 00e4 00       		.byte	0
  235 00e5 08       		.uleb128 0x8
- 236 00e6 57000000 		.4byte	.LASF29
+ 236 00e6 A6000000 		.4byte	.LASF29
  237 00ea 01       		.byte	0x1
  238 00eb 16       		.byte	0x16
  239 00ec 81000000 		.4byte	0x81
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cc7Waj8i.s 			page 6
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\cc3Mqfpu.s 			page 6
 
 
  240 00f0 00000000 		.4byte	.LFB64
@@ -307,7 +307,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cc7Waj8i.s 			page 1
  243 00f9 9C       		.byte	0x9c
  244 00fa 20010000 		.4byte	0x120
  245 00fe 09       		.uleb128 0x9
- 246 00ff E8010000 		.4byte	.LASF30
+ 246 00ff 37020000 		.4byte	.LASF30
  247 0103 01       		.byte	0x1
  248 0104 19       		.byte	0x19
  249 0105 81000000 		.4byte	0x81
@@ -329,7 +329,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cc7Waj8i.s 			page 1
  265 0130 9C       		.byte	0x9c
  266 0131 5E010000 		.4byte	0x15e
  267 0135 0A       		.uleb128 0xa
- 268 0136 69000000 		.4byte	.LASF31
+ 268 0136 B8000000 		.4byte	.LASF31
  269 013a 01       		.byte	0x1
  270 013b 24       		.byte	0x24
  271 013c 81000000 		.4byte	0x81
@@ -349,7 +349,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cc7Waj8i.s 			page 1
  285 015c 00       		.byte	0
  286 015d 00       		.byte	0
  287 015e 0D       		.uleb128 0xd
- 288 015f 72010000 		.4byte	.LASF32
+ 288 015f C1010000 		.4byte	.LASF32
  289 0163 06       		.byte	0x6
  290 0164 1207     		.2byte	0x712
  291 0166 6A010000 		.4byte	0x16a
@@ -358,19 +358,19 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cc7Waj8i.s 			page 1
  294 016f 0F       		.uleb128 0xf
  295 0170 00000000 		.4byte	.LASF21
  296 0174 00000000 		.4byte	.LASF21
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cc7Waj8i.s 			page 7
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\cc3Mqfpu.s 			page 7
 
 
  297 0178 05       		.byte	0x5
  298 0179 46       		.byte	0x46
  299 017a 0F       		.uleb128 0xf
- 300 017b 2F010000 		.4byte	.LASF22
- 301 017f 2F010000 		.4byte	.LASF22
+ 300 017b 7E010000 		.4byte	.LASF22
+ 301 017f 7E010000 		.4byte	.LASF22
  302 0183 05       		.byte	0x5
  303 0184 57       		.byte	0x57
  304 0185 0F       		.uleb128 0xf
- 305 0186 41010000 		.4byte	.LASF23
- 306 018a 41010000 		.4byte	.LASF23
+ 305 0186 90010000 		.4byte	.LASF23
+ 306 018a 90010000 		.4byte	.LASF23
  307 018e 05       		.byte	0x5
  308 018f 58       		.byte	0x58
  309 0190 0F       		.uleb128 0xf
@@ -379,8 +379,8 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cc7Waj8i.s 			page 1
  312 0199 05       		.byte	0x5
  313 019a 4E       		.byte	0x4e
  314 019b 0F       		.uleb128 0xf
- 315 019c 5F010000 		.4byte	.LASF25
- 316 01a0 5F010000 		.4byte	.LASF25
+ 315 019c AE010000 		.4byte	.LASF25
+ 316 01a0 AE010000 		.4byte	.LASF25
  317 01a4 05       		.byte	0x5
  318 01a5 50       		.byte	0x50
  319 01a6 00       		.byte	0
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cc7Waj8i.s 			page 1
  351 001d 00       		.byte	0
  352 001e 03       		.uleb128 0x3
  353 001f 16       		.uleb128 0x16
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cc7Waj8i.s 			page 8
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\cc3Mqfpu.s 			page 8
 
 
  354 0020 00       		.byte	0
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cc7Waj8i.s 			page 1
  408 0056 9742     		.uleb128 0x2117
  409 0058 19       		.uleb128 0x19
  410 0059 01       		.uleb128 0x1
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cc7Waj8i.s 			page 9
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\cc3Mqfpu.s 			page 9
 
 
  411 005a 13       		.uleb128 0x13
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cc7Waj8i.s 			page 1
  465 0093 0A       		.uleb128 0xa
  466 0094 05       		.uleb128 0x5
  467 0095 00       		.byte	0
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cc7Waj8i.s 			page 10
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\cc3Mqfpu.s 			page 10
 
 
  468 0096 03       		.uleb128 0x3
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cc7Waj8i.s 			page 1
  522 00d1 0F       		.uleb128 0xf
  523 00d2 2E       		.uleb128 0x2e
  524 00d3 00       		.byte	0
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cc7Waj8i.s 			page 11
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\cc3Mqfpu.s 			page 11
 
 
  525 00d4 3F       		.uleb128 0x3f
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cc7Waj8i.s 			page 1
  579 001c 18000000 		.4byte	.LFE64-.LFB64
  580 0020 00000000 		.4byte	.LFB65
  581 0024 16000000 		.4byte	.LFE65-.LFB65
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cc7Waj8i.s 			page 12
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\cc3Mqfpu.s 			page 12
 
 
  582 0028 00000000 		.4byte	0
@@ -711,146 +711,146 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cc7Waj8i.s 			page 1
  610 004b 7370695F 		.ascii	"spi_Slave.c\000"
  610      536C6176 
  610      652E6300 
- 611              	.LASF29:
- 612 0057 6D6F6474 		.ascii	"modtagetSPi\000"
- 612      61676574 
- 612      53506900 
- 613              	.LASF14:
- 614 0063 666C6F61 		.ascii	"float\000"
- 614      7400
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cc7Waj8i.s 			page 13
+ 611              	.LASF28:
+ 612 0057 433A5C55 		.ascii	"C:\\Users\\raduf\\OneDrive\\Desktop\\SemesterProjek"
+ 612      73657273 
+ 612      5C726164 
+ 612      75665C4F 
+ 612      6E654472 
+ 613 0085 745C422D 		.ascii	"t\\B-CAC\\SPI_Slave\\Design01.cydsn\000"
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\cc3Mqfpu.s 			page 13
 
 
- 615              	.LASF31:
- 616 0069 64617461 		.ascii	"data\000"
- 616      00
- 617              	.LASF1:
- 618 006e 756E7369 		.ascii	"unsigned char\000"
- 618      676E6564 
- 618      20636861 
- 618      7200
- 619              	.LASF26:
- 620 007c 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 620      43313120 
- 620      352E342E 
- 620      31203230 
- 620      31363036 
- 621 00af 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 621      20726576 
- 621      6973696F 
- 621      6E203233 
- 621      37373135 
- 622 00e2 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 622      66756E63 
- 622      74696F6E 
- 622      2D736563 
- 622      74696F6E 
- 623              	.LASF7:
- 624 010a 6C6F6E67 		.ascii	"long unsigned int\000"
- 624      20756E73 
- 624      69676E65 
- 624      6420696E 
- 624      7400
- 625              	.LASF3:
- 626 011c 73686F72 		.ascii	"short unsigned int\000"
- 626      7420756E 
- 626      7369676E 
- 626      65642069 
- 626      6E7400
- 627              	.LASF22:
- 628 012f 53504953 		.ascii	"SPIS_2_ReadRxData\000"
- 628      5F325F52 
- 628      65616452 
- 628      78446174 
- 628      6100
- 629              	.LASF23:
- 630 0141 53504953 		.ascii	"SPIS_2_GetRxBufferSize\000"
- 630      5F325F47 
- 630      65745278 
- 630      42756666 
- 630      65725369 
- 631              	.LASF15:
- 632 0158 646F7562 		.ascii	"double\000"
- 632      6C6500
- 633              	.LASF25:
- 634 015f 53504953 		.ascii	"SPIS_2_WriteTxData\000"
- 634      5F325F57 
- 634      72697465 
- 634      54784461 
- 634      746100
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cc7Waj8i.s 			page 14
+ 613      4341435C 
+ 613      5350495F 
+ 613      536C6176 
+ 613      655C4465 
+ 614              	.LASF29:
+ 615 00a6 6D6F6474 		.ascii	"modtagetSPi\000"
+ 615      61676574 
+ 615      53506900 
+ 616              	.LASF14:
+ 617 00b2 666C6F61 		.ascii	"float\000"
+ 617      7400
+ 618              	.LASF31:
+ 619 00b8 64617461 		.ascii	"data\000"
+ 619      00
+ 620              	.LASF1:
+ 621 00bd 756E7369 		.ascii	"unsigned char\000"
+ 621      676E6564 
+ 621      20636861 
+ 621      7200
+ 622              	.LASF26:
+ 623 00cb 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 623      43313120 
+ 623      352E342E 
+ 623      31203230 
+ 623      31363036 
+ 624 00fe 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 624      20726576 
+ 624      6973696F 
+ 624      6E203233 
+ 624      37373135 
+ 625 0131 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 625      66756E63 
+ 625      74696F6E 
+ 625      2D736563 
+ 625      74696F6E 
+ 626              	.LASF7:
+ 627 0159 6C6F6E67 		.ascii	"long unsigned int\000"
+ 627      20756E73 
+ 627      69676E65 
+ 627      6420696E 
+ 627      7400
+ 628              	.LASF3:
+ 629 016b 73686F72 		.ascii	"short unsigned int\000"
+ 629      7420756E 
+ 629      7369676E 
+ 629      65642069 
+ 629      6E7400
+ 630              	.LASF22:
+ 631 017e 53504953 		.ascii	"SPIS_2_ReadRxData\000"
+ 631      5F325F52 
+ 631      65616452 
+ 631      78446174 
+ 631      6100
+ 632              	.LASF23:
+ 633 0190 53504953 		.ascii	"SPIS_2_GetRxBufferSize\000"
+ 633      5F325F47 
+ 633      65745278 
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\cc3Mqfpu.s 			page 14
 
 
- 635              	.LASF32:
- 636 0172 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 636      52784275 
- 636      66666572 
- 636      00
- 637              	.LASF10:
- 638 017f 756E7369 		.ascii	"unsigned int\000"
- 638      676E6564 
- 638      20696E74 
- 638      00
- 639              	.LASF9:
- 640 018c 6C6F6E67 		.ascii	"long long unsigned int\000"
- 640      206C6F6E 
- 640      6720756E 
- 640      7369676E 
- 640      65642069 
- 641              	.LASF11:
- 642 01a3 75696E74 		.ascii	"uint8_t\000"
- 642      385F7400 
- 643              	.LASF12:
- 644 01ab 696E7433 		.ascii	"int32_t\000"
- 644      325F7400 
- 645              	.LASF18:
- 646 01b3 73697A65 		.ascii	"sizetype\000"
- 646      74797065 
- 646      00
- 647              	.LASF8:
- 648 01bc 6C6F6E67 		.ascii	"long long int\000"
- 648      206C6F6E 
- 648      6720696E 
- 648      7400
- 649              	.LASF16:
- 650 01ca 63686172 		.ascii	"char\000"
- 650      00
- 651              	.LASF2:
- 652 01cf 73686F72 		.ascii	"short int\000"
- 652      7420696E 
- 652      7400
- 653              	.LASF13:
- 654 01d9 75696E74 		.ascii	"uint8\000"
- 654      3800
- 655              	.LASF6:
- 656 01df 6C6F6E67 		.ascii	"long int\000"
- 656      20696E74 
- 656      00
- 657              	.LASF30:
- 658 01e8 72656365 		.ascii	"receivedData\000"
- 658      69766564 
- 658      44617461 
- 658      00
- 659              	.LASF17:
- 660 01f5 6C6F6E67 		.ascii	"long double\000"
- 660      20646F75 
- 660      626C6500 
- 661              	.LASF0:
- 662 0201 7369676E 		.ascii	"signed char\000"
- 662      65642063 
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cc7Waj8i.s 			page 15
+ 633      42756666 
+ 633      65725369 
+ 634              	.LASF15:
+ 635 01a7 646F7562 		.ascii	"double\000"
+ 635      6C6500
+ 636              	.LASF25:
+ 637 01ae 53504953 		.ascii	"SPIS_2_WriteTxData\000"
+ 637      5F325F57 
+ 637      72697465 
+ 637      54784461 
+ 637      746100
+ 638              	.LASF32:
+ 639 01c1 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 639      52784275 
+ 639      66666572 
+ 639      00
+ 640              	.LASF10:
+ 641 01ce 756E7369 		.ascii	"unsigned int\000"
+ 641      676E6564 
+ 641      20696E74 
+ 641      00
+ 642              	.LASF9:
+ 643 01db 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 643      206C6F6E 
+ 643      6720756E 
+ 643      7369676E 
+ 643      65642069 
+ 644              	.LASF11:
+ 645 01f2 75696E74 		.ascii	"uint8_t\000"
+ 645      385F7400 
+ 646              	.LASF12:
+ 647 01fa 696E7433 		.ascii	"int32_t\000"
+ 647      325F7400 
+ 648              	.LASF18:
+ 649 0202 73697A65 		.ascii	"sizetype\000"
+ 649      74797065 
+ 649      00
+ 650              	.LASF8:
+ 651 020b 6C6F6E67 		.ascii	"long long int\000"
+ 651      206C6F6E 
+ 651      6720696E 
+ 651      7400
+ 652              	.LASF16:
+ 653 0219 63686172 		.ascii	"char\000"
+ 653      00
+ 654              	.LASF2:
+ 655 021e 73686F72 		.ascii	"short int\000"
+ 655      7420696E 
+ 655      7400
+ 656              	.LASF13:
+ 657 0228 75696E74 		.ascii	"uint8\000"
+ 657      3800
+ 658              	.LASF6:
+ 659 022e 6C6F6E67 		.ascii	"long int\000"
+ 659      20696E74 
+ 659      00
+ 660              	.LASF30:
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\cc3Mqfpu.s 			page 15
 
 
- 662      68617200 
- 663              	.LASF28:
- 664 020d 433A5C55 		.ascii	"C:\\Users\\ZakiN\\OneDrive\\Skrivebord\\projekt3\\B"
- 664      73657273 
- 664      5C5A616B 
- 664      694E5C4F 
- 664      6E654472 
- 665 023a 2D434143 		.ascii	"-CAC\\SPI_Slave\\Design01.cydsn\000"
- 665      5C535049 
- 665      5F536C61 
- 665      76655C44 
- 665      65736967 
+ 661 0237 72656365 		.ascii	"receivedData\000"
+ 661      69766564 
+ 661      44617461 
+ 661      00
+ 662              	.LASF17:
+ 663 0244 6C6F6E67 		.ascii	"long double\000"
+ 663      20646F75 
+ 663      626C6500 
+ 664              	.LASF0:
+ 665 0250 7369676E 		.ascii	"signed char\000"
+ 665      65642063 
+ 665      68617200 
  666              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

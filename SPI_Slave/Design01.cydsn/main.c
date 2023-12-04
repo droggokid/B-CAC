@@ -13,6 +13,7 @@ CY_ISR_PROTO(ISR_SPI_rx_handler);
 void handleByteReceived(uint8_t byteReceived);
 static int UCstate=0;
 static uint8_t minutter_ = 0, sekunder_ = 0 , millisekunder_ = 0;
+uint8_t receivedData = 0;
 
 void convert_ms(uint32_t total_ms) {
     minutter_ = total_ms / (1000 * 60);
@@ -52,6 +53,7 @@ int main(void)
            //UC1 Game preperation
     //Øl fjernet
     if(UCstate==1)
+    
     {
     offset_Zerodrift_calibrate( repeats,  startoffset,  factor, preload);
     {
@@ -59,6 +61,7 @@ int main(void)
     //snprintf(uartBuffer,sizeof(uartBuffer),"Read value (g) %f\r\n ", zerodriftOffset);
     //UART_1_PutString(uartBuffer);
     }
+    
     homeStepper(mode);
     stopFlagMotor();
     UCstate=0;
@@ -89,6 +92,7 @@ int main(void)
     //snprintf(uartBuffer,sizeof(uartBuffer),"gameReady (g) %d\r\n ", gameReady);
     //UART_1_PutString(uartBuffer);
     }
+    sendSPi(receivedData);
     UCstate=0;
     }
      
@@ -163,6 +167,7 @@ int main(void)
     
     stepperdriver_rotateTo(90, mode);
     stopFlagMotor();
+    sendSPi(receivedData);
     UCstate=0;
     }
     }
@@ -177,12 +182,14 @@ void handleByteReceived(uint8_t byteReceived)
         {
             //Kalibrering af vægten samt steppermotor
             UCstate=1;
+            
         }
         break;
         case 0xBB :
         {
             //Gameready - venter, læser samt tjekker på vægten
             UCstate=2;
+            
         }
         break;
         case 0xCC :
@@ -195,6 +202,7 @@ void handleByteReceived(uint8_t byteReceived)
         {
             //Flagmotor
             UCstate=4;
+            
         }
         break;
         default :
@@ -212,4 +220,5 @@ CY_ISR(ISR_SPI_rx_handler)
     
     //Handling of recieved SPI data
     handleByteReceived(receivedData);
+    sendSPi(receivedData);
 }
