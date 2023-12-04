@@ -37,11 +37,11 @@ public:
 
             beast::flat_buffer buffer;
             http::request<http::string_body> request;
-            http::read(socket, buffer, request);
 
             bool serverActive = true;
             while (serverActive)
             {
+                http::read(socket, buffer, request);
                 // Handle the received request here
                 http::response<http::string_body> response{http::status::ok, request.version()};
                 response.set(http::field::server, "C++ Server");
