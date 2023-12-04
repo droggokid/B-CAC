@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: Button_1.h  
+* File Name: ADC_SAR_1_ExtVref.h  
 * Version 2.20
 *
 * Description:
@@ -15,8 +15,8 @@
 * the software package with which this file was provided.
 *******************************************************************************/
 
-#if !defined(CY_PINS_Button_1_ALIASES_H) /* Pins Button_1_ALIASES_H */
-#define CY_PINS_Button_1_ALIASES_H
+#if !defined(CY_PINS_ADC_SAR_1_ExtVref_ALIASES_H) /* Pins ADC_SAR_1_ExtVref_ALIASES_H */
+#define CY_PINS_ADC_SAR_1_ExtVref_ALIASES_H
 
 #include "cytypes.h"
 #include "cyfitter.h"
@@ -25,12 +25,12 @@
 /***************************************
 *              Constants        
 ***************************************/
-#define Button_1_0			(Button_1__0__PC)
-#define Button_1_0_INTR	((uint16)((uint16)0x0001u << Button_1__0__SHIFT))
+#define ADC_SAR_1_ExtVref_0			(ADC_SAR_1_ExtVref__0__PC)
+#define ADC_SAR_1_ExtVref_0_INTR	((uint16)((uint16)0x0001u << ADC_SAR_1_ExtVref__0__SHIFT))
 
-#define Button_1_INTR_ALL	 ((uint16)(Button_1_0_INTR))
+#define ADC_SAR_1_ExtVref_INTR_ALL	 ((uint16)(ADC_SAR_1_ExtVref_0_INTR))
 
-#endif /* End Pins Button_1_ALIASES_H */
+#endif /* End Pins ADC_SAR_1_ExtVref_ALIASES_H */
 
 
 /* [] END OF FILE */

@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: Button_1.c  
+* File Name: ledGreen.c  
 * Version 2.20
 *
 * Description:
@@ -15,15 +15,15 @@
 *******************************************************************************/
 
 #include "cytypes.h"
-#include "Button_1.h"
+#include "ledGreen.h"
 
 /* APIs are not generated for P15[7:6] on PSoC 5 */
 #if !(CY_PSOC5A &&\
-	 Button_1__PORT == 15 && ((Button_1__MASK & 0xC0) != 0))
+	 ledGreen__PORT == 15 && ((ledGreen__MASK & 0xC0) != 0))
 
 
 /*******************************************************************************
-* Function Name: Button_1_Write
+* Function Name: ledGreen_Write
 ****************************************************************************//**
 *
 * \brief Writes the value to the physical port (data output register), masking
@@ -52,17 +52,17 @@
 *  this function.
 *
 * \funcusage
-*  \snippet Button_1_SUT.c usage_Button_1_Write
+*  \snippet ledGreen_SUT.c usage_ledGreen_Write
 *******************************************************************************/
-void Button_1_Write(uint8 value)
+void ledGreen_Write(uint8 value)
 {
-    uint8 staticBits = (Button_1_DR & (uint8)(~Button_1_MASK));
-    Button_1_DR = staticBits | ((uint8)(value << Button_1_SHIFT) & Button_1_MASK);
+    uint8 staticBits = (ledGreen_DR & (uint8)(~ledGreen_MASK));
+    ledGreen_DR = staticBits | ((uint8)(value << ledGreen_SHIFT) & ledGreen_MASK);
 }
 
 
 /*******************************************************************************
-* Function Name: Button_1_SetDriveMode
+* Function Name: ledGreen_SetDriveMode
 ****************************************************************************//**
 *
 * \brief Sets the drive mode for each of the Pins component's pins.
@@ -85,16 +85,16 @@ void Button_1_Write(uint8 value)
 *  APIs (primary method) or disable interrupts around this function.
 *
 * \funcusage
-*  \snippet Button_1_SUT.c usage_Button_1_SetDriveMode
+*  \snippet ledGreen_SUT.c usage_ledGreen_SetDriveMode
 *******************************************************************************/
-void Button_1_SetDriveMode(uint8 mode)
+void ledGreen_SetDriveMode(uint8 mode)
 {
-	CyPins_SetPinDriveMode(Button_1_0, mode);
+	CyPins_SetPinDriveMode(ledGreen_0, mode);
 }
 
 
 /*******************************************************************************
-* Function Name: Button_1_Read
+* Function Name: ledGreen_Read
 ****************************************************************************//**
 *
 * \brief Reads the associated physical port (pin status register) and masks 
@@ -108,16 +108,16 @@ void Button_1_SetDriveMode(uint8 mode)
 *  The current value for the pins in the component as a right justified number.
 *
 * \funcusage
-*  \snippet Button_1_SUT.c usage_Button_1_Read  
+*  \snippet ledGreen_SUT.c usage_ledGreen_Read  
 *******************************************************************************/
-uint8 Button_1_Read(void)
+uint8 ledGreen_Read(void)
 {
-    return (Button_1_PS & Button_1_MASK) >> Button_1_SHIFT;
+    return (ledGreen_PS & ledGreen_MASK) >> ledGreen_SHIFT;
 }
 
 
 /*******************************************************************************
-* Function Name: Button_1_ReadDataReg
+* Function Name: ledGreen_ReadDataReg
 ****************************************************************************//**
 *
 * \brief Reads the associated physical port's data output register and masks 
@@ -126,8 +126,8 @@ uint8 Button_1_Read(void)
 *
 * The data output register controls the signal applied to the physical pin in 
 * conjunction with the drive mode parameter. This is not the same as the 
-* preferred Button_1_Read() API because the 
-* Button_1_ReadDataReg() reads the data register instead of the status 
+* preferred ledGreen_Read() API because the 
+* ledGreen_ReadDataReg() reads the data register instead of the status 
 * register. For output pins this is a useful function to determine the value 
 * just written to the pin.
 *
@@ -136,19 +136,19 @@ uint8 Button_1_Read(void)
 *  justified number for the component instance.
 *
 * \funcusage
-*  \snippet Button_1_SUT.c usage_Button_1_ReadDataReg 
+*  \snippet ledGreen_SUT.c usage_ledGreen_ReadDataReg 
 *******************************************************************************/
-uint8 Button_1_ReadDataReg(void)
+uint8 ledGreen_ReadDataReg(void)
 {
-    return (Button_1_DR & Button_1_MASK) >> Button_1_SHIFT;
+    return (ledGreen_DR & ledGreen_MASK) >> ledGreen_SHIFT;
 }
 
 
 /* If interrupt is connected for this Pins component */ 
-#if defined(Button_1_INTSTAT) 
+#if defined(ledGreen_INTSTAT) 
 
     /*******************************************************************************
-    * Function Name: Button_1_SetInterruptMode
+    * Function Name: ledGreen_SetInterruptMode
     ****************************************************************************//**
     *
     * \brief Configures the interrupt mode for each of the Pins component's
@@ -161,12 +161,12 @@ uint8 Button_1_ReadDataReg(void)
     * \param position
     *  The pin position as listed in the Pins component. You may OR these to be 
     *  able to configure the interrupt mode of multiple pins within a Pins 
-    *  component. Or you may use Button_1_INTR_ALL to configure the
+    *  component. Or you may use ledGreen_INTR_ALL to configure the
     *  interrupt mode of all the pins in the Pins component.       
-    *  - Button_1_0_INTR       (First pin in the list)
-    *  - Button_1_1_INTR       (Second pin in the list)
+    *  - ledGreen_0_INTR       (First pin in the list)
+    *  - ledGreen_1_INTR       (Second pin in the list)
     *  - ...
-    *  - Button_1_INTR_ALL     (All pins in Pins component)
+    *  - ledGreen_INTR_ALL     (All pins in Pins component)
     *
     * \param mode
     *  Interrupt mode for the selected pins. Valid options are documented in
@@ -182,19 +182,19 @@ uint8 Button_1_ReadDataReg(void)
     *  port.
     *
     * \funcusage
-    *  \snippet Button_1_SUT.c usage_Button_1_SetInterruptMode
+    *  \snippet ledGreen_SUT.c usage_ledGreen_SetInterruptMode
     *******************************************************************************/
-    void Button_1_SetInterruptMode(uint16 position, uint16 mode)
+    void ledGreen_SetInterruptMode(uint16 position, uint16 mode)
     {
-		if((position & Button_1_0_INTR) != 0u) 
+		if((position & ledGreen_0_INTR) != 0u) 
 		{ 
-			 Button_1_0_INTTYPE_REG = (uint8)mode; 
+			 ledGreen_0_INTTYPE_REG = (uint8)mode; 
 		}
     }
     
     
     /*******************************************************************************
-    * Function Name: Button_1_ClearInterrupt
+    * Function Name: ledGreen_ClearInterrupt
     ****************************************************************************//**
     *
     * \brief Clears any active interrupts attached with the component and returns 
@@ -211,11 +211,11 @@ uint8 Button_1_ReadDataReg(void)
     *  those associated with the Pins component.
     *
     * \funcusage
-    *  \snippet Button_1_SUT.c usage_Button_1_ClearInterrupt
+    *  \snippet ledGreen_SUT.c usage_ledGreen_ClearInterrupt
     *******************************************************************************/
-    uint8 Button_1_ClearInterrupt(void)
+    uint8 ledGreen_ClearInterrupt(void)
     {
-        return (Button_1_INTSTAT & Button_1_MASK) >> Button_1_SHIFT;
+        return (ledGreen_INTSTAT & ledGreen_MASK) >> ledGreen_SHIFT;
     }
 
 #endif /* If Interrupts Are Enabled for this Pins component */ 
