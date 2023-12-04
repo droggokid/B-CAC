@@ -286,8 +286,6 @@ static void spi_drv_remove(struct spi_device *sdev)
         }
         ++its_minor;
     }
-
-    return 0;
 }
 
 /*
