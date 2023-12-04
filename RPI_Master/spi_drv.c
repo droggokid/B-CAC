@@ -168,11 +168,11 @@ ssize_t spi_drv_read(struct file *filep, char __user *ubuf,
     /* Set up the SPI transfer for sending the command to the PSoC */
     /* Set up the SPI transfer for sending the command to the PSoC */
 
-    t[0].tx_buf = &command_byte;
-    t[0].rx_buf = &resultBuff[minor]; // Use minor to index the result buffer based on the current slave
-    t[0].len = 1;
-    t[0].bits_per_word = 8; // Specify bits_per_word
-    t[0].delay_usecs = 1000;
+    t[0]->tx_buf = &command_byte;
+    t[0]->rx_buf = &resultBuff[minor]; // Use minor to index the result buffer based on the current slave
+    t[0]->len = 1;
+    t[0]->bits_per_word = 8; // Specify bits_per_word
+    t[0]->delay_usecs = 1000;
     spi_message_add_tail(&t[0], &m);
 
     err = spi_sync(spi_devs[minor].spi, &m);
