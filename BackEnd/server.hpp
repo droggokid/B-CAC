@@ -13,8 +13,8 @@ namespace net = boost::asio;
 using tcp = boost::asio::ip::tcp;
 using json = nlohmann::json;
 using namespace std;
-string platformOnePath = "/dev/spi_drv0";
-string platformTwoPath = "/dev/spi_drv1";
+char* platformOnePath = "/dev/spi_drv0";
+char* platformTwoPath = "/dev/spi_drv1";
 
 class Server
 {
