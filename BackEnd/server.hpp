@@ -13,6 +13,8 @@ namespace net = boost::asio;
 using tcp = boost::asio::ip::tcp;
 using json = nlohmann::json;
 using namespace std;
+string platformOnePath = "/dev/spi_drv0";
+string platformTwoPath = "/dev/spi_drv1";
 
 class Server
 {
@@ -71,6 +73,16 @@ public:
                 }
                 else if (cmd == "startGame")
                 {
+                    /*For platform 1:*/
+                    int fd1 = openFile(platformOnePath);
+                    //writeFile(fd1, /*start game char array*/);
+                    closeFile(fd1);
+                    /*              */
+                    /*For platform 2*/
+                    int fd2 = openFile(platformTwoPath);
+                    //writeFile( samme smøre );
+                    closeFile(fd2);
+                    /*              */
                     cout << data << endl;
                 }
             }
