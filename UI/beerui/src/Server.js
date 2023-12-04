@@ -1,3 +1,12 @@
+// How 2 host på rpizw med god OS:
+// 1. på en anden maskine kør: npm run build
+// 2. push
+// 3. pull på rpizw
+// 4. på rpizw i build-mappen for ui'en kør: sudo python3 -m http.server 80
+// Hvis der skal skiftes mellem at hoste på gh-pages og lokalt, skal package.json homepage ændres til "."
+// evt. check ip i bunden af denne fil
+// Backenden skal også bygges på en anden maskine, og køres på rpizw med ./backend
+
 class Server
 {
     constructor(url)
@@ -6,12 +15,22 @@ class Server
         this.xhr = new XMLHttpRequest();
     }
 
-    getTime()
+    // GET methods
+
+    getTareReady()
     {
-        // Returns the exact times of the players
-        return this.get("time");
+        // Return boolean if taring is done
+        //return this.get("tareReady") === "true" ? true : false; // Prod
+        return this.get("tareReady") // Dev
     }
 
+    getGameReady()
+    {
+        // Return boolean if the game is ready to start
+        //return this.get("gameReady") === "true" ? true : false; // Prod
+        return this.get("gameReady") // Dev
+    }
+    
     getGameRunning()
     {
         // Return boolean if the game is running
@@ -19,11 +38,19 @@ class Server
         return this.get("gameRunning") // Dev
     }
 
+    getTime()
+    {
+        // Returns the exact times of the players
+        return this.get("time");
+    }
+    
     getLeaderboard()
     {
         // Returns all the leaderboard data
         return this.get("leaderboard");
     }
+
+    // POST methods
 
     postTare()
     {
@@ -34,6 +61,8 @@ class Server
     {
         this.post(`{"cmd": "startGame", "data": {"p1": "${p1Initals}", "p2": "${p2Initials}", "drinkType": "${drinkType}"}}`);
     }
+
+    // Don't touch or use outside class
 
     get(data)
     {
@@ -64,4 +93,4 @@ class Server
     }
 }
 
-export const server = new Server('http://10.9.8.2:8080');
+export const server = new Server('http://192.168.51.214:8080');

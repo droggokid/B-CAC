@@ -25,6 +25,7 @@ function GameMenu(props) {
     const [dropdownDisabled, setDropdownDisabled] = useState(false);
     const [drinkType, setDrinkType] = useState("Vælg");
     const [rmTxtShow, setRmTxtShow] = useState(true);
+    const [rmTxtLabel, setRmTxtLabel] = useState("Fjern alle genstande fra platforme, tryk derefter godkend");
     const [gameRunning, setGameRunning] = useState(false);
     const [count, setCount] = useState(0);
 
@@ -49,7 +50,7 @@ function GameMenu(props) {
                 switch (gameRunningResp)
                 {
                     default:
-                        console.warn("Connection to server lost"); 
+                        console.warn("No connection to server"); 
                     case true:
                         setTimerSec(timerSec + 1);
                         break;
@@ -101,14 +102,18 @@ function GameMenu(props) {
 
         setCheckBtnActive(false);
         setDropdownDisabled(true);
+        setRmTxtLabel("Kalibrerer, rør ikke platforme");
 
-        // Afvent tare godkendt fra psoc, aktiver derefter start-knap
         server.postTare();
+        
+        // Afvent tare godkendt fra psoc, aktiver derefter start-knap
+        server.getTareReady();
 
         setTimeout(() => {
             setStartBtnActive(true);
             setCheckBtnShow(false);
             setCancelBtnShow(true);
+            setRmTxtLabel("Placer genstande på platforme, tryk derefter start");
 
         }, 1000);
     }
@@ -119,6 +124,7 @@ function GameMenu(props) {
         setStartBtnActive(false);
         setCancelBtnShow(false);
         setCheckBtnShow(true);
+        setRmTxtLabel("Fjern alle genstande fra platforme, tryk derefter godkend");
         setCheckBtnActive(!(drinkType === "Vælg"));
     }
 
@@ -135,8 +141,12 @@ function GameMenu(props) {
         setRmTxtShow(false);
         setCountDownShow(true);
 
+        server.postStartGame(p1Initials, p2Initials, drinkType);
+
+        // Afvent game ready fra psoc, start derefter nedtælling til spil start
+        server.getGameReady();
+
         setTimeout(() => {
-            server.postStartGame(p1Initials, p2Initials, drinkType);
             setTimerShow(true);
             setGameRunning(true);
         }, countDown * 1000);
@@ -148,9 +158,9 @@ function GameMenu(props) {
             <PlayerStat id="2" initials={p2Initials} time={p2Time} style={rowStyle} />
             <div id="drinkType" style={rowStyle}>
                 <Text label="Drink type" fontSize="30px" fontFamily="Arial" color="black" />
-                <Dropdown options={["Vælg", "Bajer", "Mokai"]} callback={dropdownCb} disable={dropdownDisabled} fontSize="30px" />
+                <Dropdown options={["Vælg", "Bajer"]} callback={dropdownCb} disable={dropdownDisabled} fontSize="30px" />
             </div>
-            <Text label="Fjern alle genstande fra platforme, tryk derefter godkend" show={rmTxtShow} color="black" fontFamily="arial" />
+            <Text label={rmTxtLabel} show={rmTxtShow} color="black" fontFamily="arial" fontSize="30px" />
             <div className="activeCont">
                 <ActiveBtn
                     label="Godkend"
@@ -158,6 +168,7 @@ function GameMenu(props) {
                     active={checkBtnActive}
                     show={checkBtnShow}
                     onclick={tare}
+                    width={300}
                 />
                 <ActiveBtn
                     label="Annuller"
@@ -166,6 +177,7 @@ function GameMenu(props) {
                     active={true}
                     show={cancelBtnShow}
                     onclick={cancel}
+                    width={300}
                 />
                 <ActiveBtn
                     label="Start"
@@ -173,8 +185,9 @@ function GameMenu(props) {
                     active={startBtnActive}
                     show={startBtnShow}
                     onclick={startGame}
+                    width={300}
                 />
-                <Text label={`Spillet begynder om ${countDownLabel} sekunder`} show={countDownShow} color="#000000" fontFamily="Arial" fontSize="100px" />
+                <Text label={`Spillet begynder om ${countDownLabel} sekunder`} show={countDownShow} color="#000000" fontFamily="Arial" fontSize="30px" />
                 <Text label={`${Math.floor(timerSec / 60)}:${timerSec % 60}`} show={timerShow} color="#000000" fontFamily="Arial" fontSize="100px" />
                 <Text label={winLabel} show={winShow} color="#000000" fontFamily="Arial" fontSize="100px" />
             </div>
