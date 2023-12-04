@@ -13,13 +13,15 @@ namespace net = boost::asio;
 using tcp = boost::asio::ip::tcp;
 using json = nlohmann::json;
 using namespace std;
+
+// Prefer using const char* instead of char* for string literals
 char* platformOnePath = "/dev/spi_drv0";
 char* platformTwoPath = "/dev/spi_drv1";
 
 class Server
 {
 public:
-    Server(){}
+    Server() {}
 
     int start()
     {
@@ -76,16 +78,16 @@ public:
                     }
                     else if (cmd == "startGame")
                     {
-                        /*For platform 1:*/
+                        // For platform 1:
                         int fd1 = openFile(platformOnePath);
-                        //writeFile(fd1, /*start game char array*/);
+                        // writeFile(fd1, /*start game char array*/);
                         closeFile(fd1);
-                        /*              */
-                        /*For platform 2*/
+
+                        // For platform 2
                         int fd2 = openFile(platformTwoPath);
-                        //writeFile( samme smøre );
+                        // writeFile( samme smøre );
                         closeFile(fd2);
-                        /*              */
+
                         cout << data << endl;
                     }
                 }
@@ -97,7 +99,7 @@ public:
 
                     if (target == "/time")
                     {
-                        response.body() = "{'p1': '01:10.45', 'p2': '01:11.10'}";
+                        response.body() = R"({'p1': '01:10.45', 'p2': '01:11.10'})";
                     }
                     else if (target == "/gameRunning")
                     {
@@ -105,9 +107,9 @@ public:
                     }
                     else if (target == "/leaderboard")
                     {
-                        response.body() = "[{'initials': 'XXX', 'time': '01:04.30'}, {'initials': 'XXX', 'time': '01:04.30'}]";
+                        response.body() = R"([{'initials': 'XXX', 'time': '01:04.30'}, {'initials': 'XXX', 'time': '01:04.30'}])";
                     }
-                    else 
+                    else
                     {
                         cout << "target not specified" << endl;
                     }
@@ -126,7 +128,7 @@ public:
             return EXIT_FAILURE;
         }
 
-        cout << "Server exited succesfully" << endl;
+        cout << "Server exited successfully" << endl;
         return EXIT_SUCCESS;
     }
 
