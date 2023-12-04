@@ -2,7 +2,7 @@
 --	Conversion of Design01.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Fri Dec 01 09:15:48 2023
+--	Fri Dec 01 12:01:51 2023
 --
 
 USE cypress.cypress.all;
@@ -1051,7 +1051,7 @@ MOSI_1:cy_psoc3_pins_v1_10
 		slew_rate=>"0",
 		spanning=>'0',
 		sw_only=>'0',
-		vtrip=>"00",
+		vtrip=>"01",
 		width=>1,
 		port_alias_required=>'0',
 		port_alias_group=>"",
@@ -1121,7 +1121,7 @@ SCLK_1:cy_psoc3_pins_v1_10
 		slew_rate=>"0",
 		spanning=>'0',
 		sw_only=>'0',
-		vtrip=>"00",
+		vtrip=>"01",
 		width=>1,
 		port_alias_required=>'0',
 		port_alias_group=>"",
@@ -1261,7 +1261,7 @@ SS_1:cy_psoc3_pins_v1_10
 		slew_rate=>"0",
 		spanning=>'0',
 		sw_only=>'0',
-		vtrip=>"00",
+		vtrip=>"01",
 		width=>1,
 		port_alias_required=>'0',
 		port_alias_group=>"",

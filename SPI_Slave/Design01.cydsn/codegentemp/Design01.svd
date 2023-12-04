@@ -19,7 +19,7 @@
         <register>
           <name>PWM_1__COMPARE1</name>
           <description>UDB.D0 - Assigned Compare1 Value</description>
-          <addressOffset>0x40006422</addressOffset>
+          <addressOffset>0x40006525</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -28,7 +28,7 @@
         <register>
           <name>PWM_1__COMPARE2</name>
           <description>UDB.D1 - Assigned Compare2 Value</description>
-          <addressOffset>0x40006432</addressOffset>
+          <addressOffset>0x40006535</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -37,7 +37,7 @@
         <register>
           <name>PWM_1_Control_Reg</name>
           <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x40006472</addressOffset>
+          <addressOffset>0x40006575</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -69,7 +69,7 @@
         <register>
           <name>PWM_1_STATUS_MASK</name>
           <description>UDB Status bits Interrupt Mask Enable Register</description>
-          <addressOffset>0x40006482</addressOffset>
+          <addressOffset>0x40006585</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -115,7 +115,7 @@
         <register>
           <name>PWM_1_STATUS_AUX_CTRL</name>
           <description>UDB Auxilliary Control Register</description>
-          <addressOffset>0x40006492</addressOffset>
+          <addressOffset>0x40006595</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -270,7 +270,7 @@
         <register>
           <name>Timer_1_Control_Reg</name>
           <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x4000657A</addressOffset>
+          <addressOffset>0x4000657B</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -508,55 +508,9 @@
           <resetMask>0</resetMask>
         </register>
         <register>
-          <name>SPIS_2_TXSTATUS</name>
-          <description>SPIS TX Status Register</description>
-          <addressOffset>0x40006468</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>SPI_Done</name>
-              <description>Set when all of the data in the transmit FIFO has been sent. Set when Byte/Word Complete                           has been set and TX Data FIFO is empty</description>
-              <lsb>0</lsb>
-              <msb>0</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>TX_FIFO_Not_Full</name>
-              <description>Set when the TX Data FIFO is not full</description>
-              <lsb>1</lsb>
-              <msb>1</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>TX_FIFO_Empty</name>
-              <description>Set when the TX Data FIFO is empty</description>
-              <lsb>2</lsb>
-              <msb>2</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>Byte_Word_Complete</name>
-              <description>Set when a byte/word transmit has completed</description>
-              <lsb>6</lsb>
-              <msb>6</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>Interrupt</name>
-              <description>Set when interrupt occurs</description>
-              <lsb>7</lsb>
-              <msb>7</msb>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
           <name>SPIS_2_RXSTATUS</name>
           <description>SPIS RX Status Register</description>
-          <addressOffset>0x40006568</addressOffset>
+          <addressOffset>0x40006468</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -586,6 +540,52 @@
             <field>
               <name>RX_FIFO_Full</name>
               <description>Set when the RX Data FIFO is full</description>
+              <lsb>6</lsb>
+              <msb>6</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>Interrupt</name>
+              <description>Set when interrupt occurs</description>
+              <lsb>7</lsb>
+              <msb>7</msb>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SPIS_2_TXSTATUS</name>
+          <description>SPIS TX Status Register</description>
+          <addressOffset>0x40006568</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>SPI_Done</name>
+              <description>Set when all of the data in the transmit FIFO has been sent. Set when Byte/Word Complete                           has been set and TX Data FIFO is empty</description>
+              <lsb>0</lsb>
+              <msb>0</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>TX_FIFO_Not_Full</name>
+              <description>Set when the TX Data FIFO is not full</description>
+              <lsb>1</lsb>
+              <msb>1</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>TX_FIFO_Empty</name>
+              <description>Set when the TX Data FIFO is empty</description>
+              <lsb>2</lsb>
+              <msb>2</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>Byte_Word_Complete</name>
+              <description>Set when a byte/word transmit has completed</description>
               <lsb>6</lsb>
               <msb>6</msb>
               <access>read-only</access>
