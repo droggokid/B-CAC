@@ -1,5 +1,5 @@
 -- Project:   Design01
--- Generated: 12/01/2023 09:15:49
+-- Generated: 12/01/2023 12:01:52
 -- PSoC Creator  4.4
 
 ENTITY Design01 IS
@@ -193,7 +193,7 @@ ARCHITECTURE __DEFAULT__ OF Design01 IS
     ATTRIBUTE lib_model OF MOSI_1(0) : LABEL IS "iocell1";
     ATTRIBUTE Location OF MOSI_1(0) : LABEL IS "P1[7]";
     ATTRIBUTE lib_model OF SCLK_1(0) : LABEL IS "iocell2";
-    ATTRIBUTE Location OF SCLK_1(0) : LABEL IS "P2[0]";
+    ATTRIBUTE Location OF SCLK_1(0) : LABEL IS "P15[5]";
     ATTRIBUTE lib_model OF MISO_1(0) : LABEL IS "iocell3";
     ATTRIBUTE Location OF MISO_1(0) : LABEL IS "P1[6]";
     ATTRIBUTE lib_model OF SS_1(0) : LABEL IS "iocell4";
@@ -202,6 +202,18 @@ ARCHITECTURE __DEFAULT__ OF Design01 IS
     ATTRIBUTE Location OF \ADC_SAR_1:ExtVref(0)\ : LABEL IS "P0[2]";
     ATTRIBUTE lib_model OF Pin_ADC_in(0) : LABEL IS "iocell6";
     ATTRIBUTE Location OF Pin_ADC_in(0) : LABEL IS "P15[3]";
+    ATTRIBUTE lib_model OF A2(0) : LABEL IS "iocell7";
+    ATTRIBUTE Location OF A2(0) : LABEL IS "P2[4]";
+    ATTRIBUTE lib_model OF B2(0) : LABEL IS "iocell8";
+    ATTRIBUTE Location OF B2(0) : LABEL IS "P2[6]";
+    ATTRIBUTE lib_model OF B1(0) : LABEL IS "iocell9";
+    ATTRIBUTE Location OF B1(0) : LABEL IS "P2[5]";
+    ATTRIBUTE lib_model OF A1(0) : LABEL IS "iocell10";
+    ATTRIBUTE Location OF A1(0) : LABEL IS "P2[3]";
+    ATTRIBUTE lib_model OF ledGreen(0) : LABEL IS "iocell11";
+    ATTRIBUTE Location OF ledGreen(0) : LABEL IS "P3[3]";
+    ATTRIBUTE lib_model OF ledRed(0) : LABEL IS "iocell12";
+    ATTRIBUTE Location OF ledRed(0) : LABEL IS "P3[4]";
     ATTRIBUTE lib_model OF tmpOE__MISO_1_net_0 : LABEL IS "macrocell1";
     ATTRIBUTE lib_model OF \SPIS_2:BSPIS:tx_load\ : LABEL IS "macrocell2";
     ATTRIBUTE lib_model OF \SPIS_2:BSPIS:byte_complete\ : LABEL IS "macrocell3";
@@ -684,7 +696,7 @@ BEGIN
             spanning => 0,
             sw_only => 0,
             use_annotation => "0",
-            vtrip => "00",
+            vtrip => "01",
             width => 1,
             in_clk_inv => 0,
             in_clken_inv => 0,
@@ -775,7 +787,7 @@ BEGIN
             spanning => 0,
             sw_only => 0,
             use_annotation => "0",
-            vtrip => "00",
+            vtrip => "01",
             width => 1,
             in_clk_inv => 0,
             in_clken_inv => 0,
@@ -958,7 +970,7 @@ BEGIN
             spanning => 0,
             sw_only => 0,
             use_annotation => "0",
-            vtrip => "00",
+            vtrip => "01",
             width => 1,
             in_clk_inv => 0,
             in_clken_inv => 0,

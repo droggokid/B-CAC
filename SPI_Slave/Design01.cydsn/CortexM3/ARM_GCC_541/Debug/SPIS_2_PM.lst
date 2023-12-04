@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cctDYRIy.s 			page 1
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\cciqw2LH.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cctDYRIy.s 			page 1
   28:Generated_Source\PSoC5/SPIS_2_PM.c **** * Function Name: SPIS_2_SaveConfig
   29:Generated_Source\PSoC5/SPIS_2_PM.c **** ********************************************************************************
   30:Generated_Source\PSoC5/SPIS_2_PM.c **** *
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cctDYRIy.s 			page 2
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\cciqw2LH.s 			page 2
 
 
   31:Generated_Source\PSoC5/SPIS_2_PM.c **** * Summary:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cctDYRIy.s 			page 1
   50 0000 7047     		bx	lr
   51              		.cfi_endproc
   52              	.LFE1:
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cctDYRIy.s 			page 3
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\cciqw2LH.s 			page 3
 
 
   53              		.size	SPIS_2_RestoreConfig, .-SPIS_2_RestoreConfig
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cctDYRIy.s 			page 1
   77 000c 0122     		movs	r2, #1
   78 000e 054B     		ldr	r3, .L7+4
   79 0010 1A70     		strb	r2, [r3]
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cctDYRIy.s 			page 4
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\cciqw2LH.s 			page 4
 
 
   80 0012 02E0     		b	.L5
@@ -202,7 +202,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cctDYRIy.s 			page 1
   91              	.L8:
   92              		.align	2
   93              	.L7:
-  94 0020 98640040 		.word	1073767576
+  94 0020 98650040 		.word	1073767832
   95 0024 00000000 		.word	.LANCHOR0
   96              		.cfi_endproc
   97              	.LFE2:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cctDYRIy.s 			page 1
  120:Generated_Source\PSoC5/SPIS_2_PM.c **** *  zero.
  121:Generated_Source\PSoC5/SPIS_2_PM.c **** *  SPIS_2_txBufferRead - modified every function call - resets to
  122:Generated_Source\PSoC5/SPIS_2_PM.c **** *  zero.
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cctDYRIy.s 			page 5
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\cciqw2LH.s 			page 5
 
 
  123:Generated_Source\PSoC5/SPIS_2_PM.c **** *  SPIS_2_rxBufferWrite - modified every function call - resets to
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cctDYRIy.s 			page 1
  131              		.cfi_endproc
  132              	.LFE3:
  133              		.size	SPIS_2_Wakeup, .-SPIS_2_Wakeup
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cctDYRIy.s 			page 6
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\cciqw2LH.s 			page 6
 
 
  134              		.data
@@ -323,14 +323,14 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cctDYRIy.s 			page 1
  153 000c 00000000 		.4byte	.LASF26
  154 0010 0C       		.byte	0xc
  155 0011 D8000000 		.4byte	.LASF27
- 156 0015 3D010000 		.4byte	.LASF28
+ 156 0015 21010000 		.4byte	.LASF28
  157 0019 00000000 		.4byte	.Ldebug_ranges0+0
  158 001d 00000000 		.4byte	0
  159 0021 00000000 		.4byte	.Ldebug_line0
  160 0025 02       		.uleb128 0x2
  161 0026 01       		.byte	0x1
  162 0027 06       		.byte	0x6
- 163 0028 24020000 		.4byte	.LASF0
+ 163 0028 37020000 		.4byte	.LASF0
  164 002c 02       		.uleb128 0x2
  165 002d 01       		.byte	0x1
  166 002e 08       		.byte	0x8
@@ -338,7 +338,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cctDYRIy.s 			page 1
  168 0033 02       		.uleb128 0x2
  169 0034 02       		.byte	0x2
  170 0035 05       		.byte	0x5
- 171 0036 F9010000 		.4byte	.LASF2
+ 171 0036 0C020000 		.4byte	.LASF2
  172 003a 02       		.uleb128 0x2
  173 003b 02       		.byte	0x2
  174 003c 07       		.byte	0x7
@@ -346,7 +346,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cctDYRIy.s 			page 1
  176 0041 02       		.uleb128 0x2
  177 0042 04       		.byte	0x4
  178 0043 05       		.byte	0x5
- 179 0044 03020000 		.4byte	.LASF4
+ 179 0044 16020000 		.4byte	.LASF4
  180 0048 02       		.uleb128 0x2
  181 0049 04       		.byte	0x4
  182 004a 07       		.byte	0x7
@@ -354,14 +354,14 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cctDYRIy.s 			page 1
  184 004f 02       		.uleb128 0x2
  185 0050 08       		.byte	0x8
  186 0051 05       		.byte	0x5
- 187 0052 D8010000 		.4byte	.LASF6
+ 187 0052 EB010000 		.4byte	.LASF6
  188 0056 02       		.uleb128 0x2
  189 0057 08       		.byte	0x8
  190 0058 07       		.byte	0x7
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cctDYRIy.s 			page 7
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\cciqw2LH.s 			page 7
 
 
- 191 0059 A6010000 		.4byte	.LASF7
+ 191 0059 B9010000 		.4byte	.LASF7
  192 005d 03       		.uleb128 0x3
  193 005e 04       		.byte	0x4
  194 005f 05       		.byte	0x5
@@ -369,7 +369,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cctDYRIy.s 			page 1
  196 0064 02       		.uleb128 0x2
  197 0065 04       		.byte	0x4
  198 0066 07       		.byte	0x7
- 199 0067 84010000 		.4byte	.LASF8
+ 199 0067 97010000 		.4byte	.LASF8
  200 006b 04       		.uleb128 0x4
  201 006c 0D010000 		.4byte	.LASF12
  202 0070 02       		.byte	0x2
@@ -382,13 +382,13 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cctDYRIy.s 			page 1
  209 007e 02       		.uleb128 0x2
  210 007f 08       		.byte	0x8
  211 0080 04       		.byte	0x4
- 212 0081 21010000 		.4byte	.LASF10
+ 212 0081 70010000 		.4byte	.LASF10
  213 0085 02       		.uleb128 0x2
  214 0086 01       		.byte	0x1
  215 0087 08       		.byte	0x8
- 216 0088 E6010000 		.4byte	.LASF11
+ 216 0088 F9010000 		.4byte	.LASF11
  217 008c 04       		.uleb128 0x4
- 218 008d CA010000 		.4byte	.LASF13
+ 218 008d DD010000 		.4byte	.LASF13
  219 0091 02       		.byte	0x2
  220 0092 9302     		.2byte	0x293
  221 0094 98000000 		.4byte	0x98
@@ -397,34 +397,34 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cctDYRIy.s 			page 1
  224 009d 02       		.uleb128 0x2
  225 009e 08       		.byte	0x8
  226 009f 04       		.byte	0x4
- 227 00a0 18020000 		.4byte	.LASF14
+ 227 00a0 2B020000 		.4byte	.LASF14
  228 00a4 02       		.uleb128 0x2
  229 00a5 04       		.byte	0x4
  230 00a6 07       		.byte	0x7
- 231 00a7 CF010000 		.4byte	.LASF15
+ 231 00a7 E2010000 		.4byte	.LASF15
  232 00ab 06       		.uleb128 0x6
  233 00ac 02       		.byte	0x2
  234 00ad 03       		.byte	0x3
  235 00ae 39       		.byte	0x39
  236 00af CC000000 		.4byte	0xcc
  237 00b3 07       		.uleb128 0x7
- 238 00b4 0C020000 		.4byte	.LASF16
+ 238 00b4 1F020000 		.4byte	.LASF16
  239 00b8 03       		.byte	0x3
  240 00b9 3B       		.byte	0x3b
  241 00ba 6B000000 		.4byte	0x6b
  242 00be 00       		.byte	0
  243 00bf 07       		.uleb128 0x7
- 244 00c0 79010000 		.4byte	.LASF17
+ 244 00c0 8C010000 		.4byte	.LASF17
  245 00c4 03       		.byte	0x3
  246 00c5 3C       		.byte	0x3c
  247 00c6 6B000000 		.4byte	0x6b
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cctDYRIy.s 			page 8
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\cciqw2LH.s 			page 8
 
 
  248 00ca 01       		.byte	0x1
  249 00cb 00       		.byte	0
  250 00cc 08       		.uleb128 0x8
- 251 00cd 91010000 		.4byte	.LASF18
+ 251 00cd A4010000 		.4byte	.LASF18
  252 00d1 03       		.byte	0x3
  253 00d2 3D       		.byte	0x3d
  254 00d3 AB000000 		.4byte	0xab
@@ -437,7 +437,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cctDYRIy.s 			page 1
  261 00e6 01       		.uleb128 0x1
  262 00e7 9C       		.byte	0x9c
  263 00e8 09       		.uleb128 0x9
- 264 00e9 28010000 		.4byte	.LASF20
+ 264 00e9 77010000 		.4byte	.LASF20
  265 00ed 01       		.byte	0x1
  266 00ee 3D       		.byte	0x3d
  267 00ef 00000000 		.4byte	.LFB1
@@ -445,7 +445,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cctDYRIy.s 			page 1
  269 00f7 01       		.uleb128 0x1
  270 00f8 9C       		.byte	0x9c
  271 00f9 0A       		.uleb128 0xa
- 272 00fa BD010000 		.4byte	.LASF21
+ 272 00fa D0010000 		.4byte	.LASF21
  273 00fe 01       		.byte	0x1
  274 00ff 57       		.byte	0x57
  275 0100 00000000 		.4byte	.LFB2
@@ -474,19 +474,19 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cctDYRIy.s 			page 1
  298 013b 67010000 		.4byte	0x167
  299 013f 00       		.byte	0
  300 0140 0C       		.uleb128 0xc
- 301 0141 EB010000 		.4byte	.LASF29
+ 301 0141 FE010000 		.4byte	.LASF29
  302 0145 01       		.byte	0x1
  303 0146 14       		.byte	0x14
  304 0147 CC000000 		.4byte	0xcc
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cctDYRIy.s 			page 9
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\cciqw2LH.s 			page 9
 
 
  305 014b 05       		.uleb128 0x5
  306 014c 03       		.byte	0x3
  307 014d 00000000 		.4byte	SPIS_2_backup
  308 0151 0D       		.uleb128 0xd
- 309 0152 30020000 		.4byte	.LASF23
- 310 0156 30020000 		.4byte	.LASF23
+ 309 0152 43020000 		.4byte	.LASF23
+ 310 0156 43020000 		.4byte	.LASF23
  311 015a 03       		.byte	0x3
  312 015b 47       		.byte	0x47
  313 015c 0D       		.uleb128 0xd
@@ -495,8 +495,8 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cctDYRIy.s 			page 1
  316 0165 03       		.byte	0x3
  317 0166 63       		.byte	0x63
  318 0167 0D       		.uleb128 0xd
- 319 0168 3C020000 		.4byte	.LASF25
- 320 016c 3C020000 		.4byte	.LASF25
+ 319 0168 4F020000 		.4byte	.LASF25
+ 320 016c 4F020000 		.4byte	.LASF25
  321 0170 03       		.byte	0x3
  322 0171 45       		.byte	0x45
  323 0172 00       		.byte	0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cctDYRIy.s 			page 1
  359 0021 0B       		.uleb128 0xb
  360 0022 0B       		.uleb128 0xb
  361 0023 3E       		.uleb128 0x3e
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cctDYRIy.s 			page 10
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\cciqw2LH.s 			page 10
 
 
  362 0024 0B       		.uleb128 0xb
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cctDYRIy.s 			page 1
  416 005a 16       		.uleb128 0x16
  417 005b 00       		.byte	0
  418 005c 03       		.uleb128 0x3
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cctDYRIy.s 			page 11
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\cciqw2LH.s 			page 11
 
 
  419 005d 0E       		.uleb128 0xe
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cctDYRIy.s 			page 1
  473 0095 13       		.uleb128 0x13
  474 0096 00       		.byte	0
  475 0097 00       		.byte	0
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cctDYRIy.s 			page 12
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\cciqw2LH.s 			page 12
 
 
  476 0098 0B       		.uleb128 0xb
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cctDYRIy.s 			page 1
  530 0020 00000000 		.4byte	.LFB2
  531 0024 28000000 		.4byte	.LFE2-.LFB2
  532 0028 00000000 		.4byte	.LFB3
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cctDYRIy.s 			page 13
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\cciqw2LH.s 			page 13
 
 
  533 002c 18000000 		.4byte	.LFE3-.LFB3
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cctDYRIy.s 			page 1
  562 00b9 756E7369 		.ascii	"unsigned char\000"
  562      676E6564 
  562      20636861 
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cctDYRIy.s 			page 14
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\cciqw2LH.s 			page 14
 
 
  562      7200
@@ -808,103 +808,104 @@ ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cctDYRIy.s 			page 1
  572      5F325F57 
  572      616B6575 
  572      7000
- 573              	.LASF10:
- 574 0121 646F7562 		.ascii	"double\000"
- 574      6C6500
- 575              	.LASF20:
- 576 0128 53504953 		.ascii	"SPIS_2_RestoreConfig\000"
- 576      5F325F52 
- 576      6573746F 
- 576      7265436F 
- 576      6E666967 
- 577              	.LASF28:
- 578 013d 433A5C55 		.ascii	"C:\\Users\\ZakiN\\OneDrive\\Skrivebord\\SPI_Slave\\"
- 578      73657273 
- 578      5C5A616B 
- 578      694E5C4F 
- 578      6E654472 
- 579 016a 44657369 		.ascii	"Design01.cydsn\000"
- 579      676E3031 
- 579      2E637964 
- 579      736E00
+ 573              	.LASF28:
+ 574 0121 433A5C55 		.ascii	"C:\\Users\\raduf\\OneDrive\\Desktop\\SemesterProjek"
+ 574      73657273 
+ 574      5C726164 
+ 574      75665C4F 
+ 574      6E654472 
+ 575 014f 745C422D 		.ascii	"t\\B-CAC\\SPI_Slave\\Design01.cydsn\000"
+ 575      4341435C 
+ 575      5350495F 
+ 575      536C6176 
+ 575      655C4465 
+ 576              	.LASF10:
+ 577 0170 646F7562 		.ascii	"double\000"
+ 577      6C6500
+ 578              	.LASF20:
+ 579 0177 53504953 		.ascii	"SPIS_2_RestoreConfig\000"
+ 579      5F325F52 
+ 579      6573746F 
+ 579      7265436F 
+ 579      6E666967 
  580              	.LASF17:
- 581 0179 636E7472 		.ascii	"cntrPeriod\000"
+ 581 018c 636E7472 		.ascii	"cntrPeriod\000"
  581      50657269 
  581      6F6400
  582              	.LASF8:
- 583 0184 756E7369 		.ascii	"unsigned int\000"
+ 583 0197 756E7369 		.ascii	"unsigned int\000"
  583      676E6564 
  583      20696E74 
  583      00
  584              	.LASF18:
- 585 0191 53504953 		.ascii	"SPIS_2_BACKUP_STRUCT\000"
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cctDYRIy.s 			page 15
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\cciqw2LH.s 			page 15
 
 
+ 585 01a4 53504953 		.ascii	"SPIS_2_BACKUP_STRUCT\000"
  585      5F325F42 
  585      41434B55 
  585      505F5354 
  585      52554354 
  586              	.LASF7:
- 587 01a6 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 587 01b9 6C6F6E67 		.ascii	"long long unsigned int\000"
  587      206C6F6E 
  587      6720756E 
  587      7369676E 
  587      65642069 
  588              	.LASF21:
- 589 01bd 53504953 		.ascii	"SPIS_2_Sleep\000"
+ 589 01d0 53504953 		.ascii	"SPIS_2_Sleep\000"
  589      5F325F53 
  589      6C656570 
  589      00
  590              	.LASF13:
- 591 01ca 72656738 		.ascii	"reg8\000"
+ 591 01dd 72656738 		.ascii	"reg8\000"
  591      00
  592              	.LASF15:
- 593 01cf 73697A65 		.ascii	"sizetype\000"
+ 593 01e2 73697A65 		.ascii	"sizetype\000"
  593      74797065 
  593      00
  594              	.LASF6:
- 595 01d8 6C6F6E67 		.ascii	"long long int\000"
+ 595 01eb 6C6F6E67 		.ascii	"long long int\000"
  595      206C6F6E 
  595      6720696E 
  595      7400
  596              	.LASF11:
- 597 01e6 63686172 		.ascii	"char\000"
+ 597 01f9 63686172 		.ascii	"char\000"
  597      00
  598              	.LASF29:
- 599 01eb 53504953 		.ascii	"SPIS_2_backup\000"
+ 599 01fe 53504953 		.ascii	"SPIS_2_backup\000"
  599      5F325F62 
  599      61636B75 
  599      7000
  600              	.LASF2:
- 601 01f9 73686F72 		.ascii	"short int\000"
+ 601 020c 73686F72 		.ascii	"short int\000"
  601      7420696E 
  601      7400
  602              	.LASF4:
- 603 0203 6C6F6E67 		.ascii	"long int\000"
+ 603 0216 6C6F6E67 		.ascii	"long int\000"
  603      20696E74 
  603      00
  604              	.LASF16:
- 605 020c 656E6162 		.ascii	"enableState\000"
+ 605 021f 656E6162 		.ascii	"enableState\000"
  605      6C655374 
  605      61746500 
  606              	.LASF14:
- 607 0218 6C6F6E67 		.ascii	"long double\000"
+ 607 022b 6C6F6E67 		.ascii	"long double\000"
  607      20646F75 
  607      626C6500 
  608              	.LASF0:
- 609 0224 7369676E 		.ascii	"signed char\000"
+ 609 0237 7369676E 		.ascii	"signed char\000"
  609      65642063 
  609      68617200 
  610              	.LASF23:
- 611 0230 53504953 		.ascii	"SPIS_2_Stop\000"
-ARM GAS  C:\Users\ZakiN\AppData\Local\Temp\cctDYRIy.s 			page 16
+ARM GAS  C:\Users\raduf\AppData\Local\Temp\cciqw2LH.s 			page 16
 
 
+ 611 0243 53504953 		.ascii	"SPIS_2_Stop\000"
  611      5F325F53 
  611      746F7000 
  612              	.LASF25:
- 613 023c 53504953 		.ascii	"SPIS_2_Enable\000"
+ 613 024f 53504953 		.ascii	"SPIS_2_Enable\000"
  613      5F325F45 
  613      6E61626C 
  613      6500
