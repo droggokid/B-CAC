@@ -48,72 +48,75 @@ public:
             response.set(http::field::access_control_allow_headers, "Content-Type, Authorization");
             response.set(http::field::access_control_expose_headers, "Authorization");
             response.set(http::field::access_control_max_age, "3600"); // 1 hour
-
-            if (request.method() == http::verb::options)
+            bool serverActive = true;
+            while (serverActive)
             {
-                // Respond to OPTIONS requests immediately
-                response.set(http::field::allow, "GET, POST, OPTIONS");
+                if (request.method() == http::verb::options)
+                {
+                    // Respond to OPTIONS requests immediately
+                    response.set(http::field::allow, "GET, POST, OPTIONS");
+                    http::write(socket, response);
+                    return EXIT_SUCCESS;
+                }
+                else if (request.method() == http::verb::post)
+                {
+                    // Handle POST request
+                    // Assuming the body is in the form of JSON
+                    std::string body = request.body();
+                    cout << "Received POST body: " << body << endl;
+
+                    json bodyJson = json::parse(body);
+                    string cmd = bodyJson["cmd"];
+                    json data = bodyJson["data"];
+
+                    if (cmd == "tare")
+                    {
+                        cout << data << endl;
+                    }
+                    else if (cmd == "startGame")
+                    {
+                        /*For platform 1:*/
+                        int fd1 = openFile(platformOnePath);
+                        //writeFile(fd1, /*start game char array*/);
+                        closeFile(fd1);
+                        /*              */
+                        /*For platform 2*/
+                        int fd2 = openFile(platformTwoPath);
+                        //writeFile( samme smøre );
+                        closeFile(fd2);
+                        /*              */
+                        cout << data << endl;
+                    }
+                }
+                else if (request.method() == http::verb::get)
+                {
+                    boost::beast::string_view target = request.target();
+
+                    cout << "Received GET target: " << target << endl;
+
+                    if (target == "/time")
+                    {
+                        response.body() = "{'p1': '01:10.45', 'p2': '01:11.10'}";
+                    }
+                    else if (target == "/gameRunning")
+                    {
+                        response.body() = "true";
+                    }
+                    else if (target == "/leaderboard")
+                    {
+                        response.body() = "[{'initials': 'XXX', 'time': '01:04.30'}, {'initials': 'XXX', 'time': '01:04.30'}]";
+                    }
+                    else 
+                    {
+                        cout << "target not specified" << endl;
+                    }
+                }
+
+                // For other HTTP methods (GET, POST, etc.), continue processing the request
+                response.keep_alive(request.keep_alive());
+                response.prepare_payload();
                 http::write(socket, response);
-                return EXIT_SUCCESS;
             }
-            else if (request.method() == http::verb::post)
-            {
-                // Handle POST request
-                // Assuming the body is in the form of JSON
-                std::string body = request.body();
-                cout << "Received POST body: " << body << endl;
-
-                json bodyJson = json::parse(body);
-                string cmd = bodyJson["cmd"];
-                json data = bodyJson["data"];
-
-                if (cmd == "tare")
-                {
-                    cout << data << endl;
-                }
-                else if (cmd == "startGame")
-                {
-                    /*For platform 1:*/
-                    int fd1 = openFile(platformOnePath);
-                    //writeFile(fd1, /*start game char array*/);
-                    closeFile(fd1);
-                    /*              */
-                    /*For platform 2*/
-                    int fd2 = openFile(platformTwoPath);
-                    //writeFile( samme smøre );
-                    closeFile(fd2);
-                    /*              */
-                    cout << data << endl;
-                }
-            }
-            else if (request.method() == http::verb::get)
-            {
-                boost::beast::string_view target = request.target();
-
-                cout << "Received GET target: " << target << endl;
-
-                if (target == "/time")
-                {
-                    response.body() = "{'p1': '01:10.45', 'p2': '01:11.10'}";
-                }
-                else if (target == "/gameRunning")
-                {
-                    response.body() = "true";
-                }
-                else if (target == "/leaderboard")
-                {
-                    response.body() = "[{'initials': 'XXX', 'time': '01:04.30'}, {'initials': 'XXX', 'time': '01:04.30'}]";
-                }
-                else 
-                {
-                    cout << "target not specified" << endl;
-                }
-            }
-
-            // For other HTTP methods (GET, POST, etc.), continue processing the request
-            response.keep_alive(request.keep_alive());
-            response.prepare_payload();
-            http::write(socket, response);
         }
         catch (const std::exception &e)
         {
