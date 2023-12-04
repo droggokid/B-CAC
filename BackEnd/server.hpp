@@ -37,20 +37,21 @@ public:
             http::request<http::string_body> request;
             http::read(socket, buffer, request);
 
-            // Handle the received request here
-            http::response<http::string_body> response{http::status::ok, request.version()};
-            response.set(http::field::server, "C++ Server");
-            response.set(http::field::content_type, "application/json");
-
-            // Set CORS headers for all requests
-            response.set(http::field::access_control_allow_origin, "*");
-            response.set(http::field::access_control_allow_methods, "GET, POST, OPTIONS");
-            response.set(http::field::access_control_allow_headers, "Content-Type, Authorization");
-            response.set(http::field::access_control_expose_headers, "Authorization");
-            response.set(http::field::access_control_max_age, "3600"); // 1 hour
             bool serverActive = true;
             while (serverActive)
             {
+                // Handle the received request here
+                http::response<http::string_body> response{http::status::ok, request.version()};
+                response.set(http::field::server, "C++ Server");
+                response.set(http::field::content_type, "application/json");
+
+                // Set CORS headers for all requests
+                response.set(http::field::access_control_allow_origin, "*");
+                response.set(http::field::access_control_allow_methods, "GET, POST, OPTIONS");
+                response.set(http::field::access_control_allow_headers, "Content-Type, Authorization");
+                response.set(http::field::access_control_expose_headers, "Authorization");
+                response.set(http::field::access_control_max_age, "3600"); // 1 hour
+
                 if (request.method() == http::verb::options)
                 {
                     // Respond to OPTIONS requests immediately
