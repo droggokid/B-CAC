@@ -125,7 +125,7 @@ public:
                         string recc = "";
 
                         int fd1 = openFile("test.txt");
-                        writeFile(fd1, "leaderboard test skrivning");
+                        //writeFile(fd1, "leaderboard test skrivning");
                         readFile(fd1, recc);
                         closeFile(fd1);
 
