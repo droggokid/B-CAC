@@ -103,6 +103,8 @@ int main(void)
     
     if(UCstate==3)
     {
+    SPIS_2_ClearTxBuffer();
+    SPIS_2_ClearRxBuffer();
     Result_gram = readWeight(repeats,startoffset, factor, preload);
         {//print
         //snprintf(uartBuffer,sizeof(uartBuffer),"Read value (g) %d\r\n ", Result_gram);
@@ -137,7 +139,7 @@ int main(void)
         }
     //tid sendes
     
-    sendTimeOverSPI(hardcode_tid);
+    sendTimeOverSPI();
     CyDelay(5000);
     Result_gram = readWeight(repeats,startoffset, factor, preload);
         {//print
@@ -190,6 +192,7 @@ void handleByteReceived(uint8_t byteReceived)
         {
             //Loop for aflæsning af vægt - Venter på, at der kommer vægt på vægten / tjekker for eventuel DNF
             UCstate=3;
+            //sendTimeOverSPI();
         }
         break;
         case 0xDD :
@@ -211,7 +214,6 @@ void handleByteReceived(uint8_t byteReceived)
 CY_ISR(ISR_SPI_rx_handler)
 {
     uint8_t receivedData = modtagetSPi();
-    
     //Handling of recieved SPI data
     handleByteReceived(receivedData);
     sendSPi(receivedData);

@@ -120,7 +120,26 @@ public:
                     {
                         cout << "Received GET leaderboard" << endl;
 
-                        response.body() = R"([{'initials': 'ABC', 'time': '01:04.30'}, {'initials': 'MTL', 'time': '01:04.30'}])";
+                        nlohmann::json jsonArr;
+                        nlohmann::json jsonObj1;
+                        jsonObj1["initials"] = "ABC";
+                        jsonObj1["time"] = "01:00.30";
+
+                        jsonArr.push_back(jsonObj1);
+
+                        nlohmann::json jsonObj2;
+                        jsonObj2["initials"] = "ABD";
+                        jsonObj2["time"] = "01:00.40";
+
+                        jsonArr.push_back(jsonObj2);
+
+                        string jsonStr = jsonArr.dump();
+
+                        response.body() = jsonStr;
+                        // response.body() = R"({
+                        //     \"1\": {\"initials\": \"XXX\", \"time\": \"01:04.30\"},
+                        //     \"2\": {\"initials\": \"XXX\", \"time\": \"01:04.30\"}
+                        // })";
                     }
                     else
                     {

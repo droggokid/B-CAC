@@ -48,14 +48,16 @@ uint32 stopTidsTagning()
     return time_interval_ms;
 }
 
-void sendTimeOverSPI(uint32_t time)
+void sendTimeOverSPI()
 {
     // Assuming time is a 32-bit integer
     uint8_t tx_buf[3];
-    tx_buf[0] = (time / (1000 * 60)) & 0xFF;         // Minutes
-    tx_buf[1] = ((time / 1000) % 60) & 0xFF;         // Seconds
-    tx_buf[2] = (time % 1000) & 0xFF;                // Milliseconds
-
+    //tx_buf[0] = (time / (1000 * 60)) & 0xFF;         // Minutes
+    //tx_buf[1] = ((time / 1000) % 60) & 0xFF;         // Seconds
+    //tx_buf[2] = (time % 1000) & 0xFF;                // Milliseconds
+      tx_buf[0] = 0x55;
+      tx_buf[1] = 0x33;
+      tx_buf[2] = 0x81;
     // Initialize SPI
     //InitializeSPI();
 
