@@ -129,7 +129,7 @@ public:
                         readFile(fd1, recc);
                         closeFile(fd1);
 
-                        cout << recc << endl;
+                        cout << "laast: " << recc << endl;
                     }
                     else
                     {
