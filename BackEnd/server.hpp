@@ -121,15 +121,6 @@ public:
                         cout << "Received GET leaderboard" << endl;
 
                         response.body() = R"([{'initials': 'XXX', 'time': '01:04.30'}, {'initials': 'XXX', 'time': '01:04.30'}])";
-                    
-                        string recc;
-
-                        int fd1 = openFile("test.txt");
-                        writeFile(fd1, "aa");
-                        readFile(fd1, recc);
-                        closeFile(fd1);
-
-                        cout << "laast: " << recc << endl;
                     }
                     else
                     {
