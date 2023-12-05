@@ -100,25 +100,25 @@ public:
                     }
                     else if (target == "/gameReady")
                     {
-                        cout << "Received GET tareReady" << endl;
+                        cout << "Received GET gameReady" << endl;
 
                         response.body() = "true";
                     }
                     else if (target == "/time")
                     {
-                        cout << "Received GET tareReady" << endl;
+                        cout << "Received GET time" << endl;
 
                         response.body() = R"({'p1': '01:10.45', 'p2': '01:11.10'})";
                     }
                     else if (target == "/gameRunning")
                     {
-                        cout << "Received GET tareReady" << endl;
+                        cout << "Received GET gameRunning" << endl;
 
                         response.body() = "true";
                     }
                     else if (target == "/leaderboard")
                     {
-                        cout << "Received GET tareReady" << endl;
+                        cout << "Received GET leaderboard" << endl;
 
                         response.body() = R"([{'initials': 'XXX', 'time': '01:04.30'}, {'initials': 'XXX', 'time': '01:04.30'}])";
                     }
