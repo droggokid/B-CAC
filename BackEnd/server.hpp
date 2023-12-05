@@ -125,15 +125,11 @@ public:
                         string recc;
 
                         int fd1 = openFile("test.txt");
-                        //writeFile(fd1, "leaderboard test skrivning");
+                        writeFile(fd1, "aa");
                         readFile(fd1, recc);
                         closeFile(fd1);
 
                         cout << "laast: " << recc << endl;
-                        // for (int i = 0; i < 8; i++){
-                        //     cout << recc[i];
-                        // }
-                        // cout << endl;
                     }
                     else
                     {

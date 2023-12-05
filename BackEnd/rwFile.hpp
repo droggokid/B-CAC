@@ -55,7 +55,8 @@ int readFile(int fileDescriptor, string& receivedDataBuffer)
 
     cout << "Data read from device: " << buffer << endl;
 
-    for (int i = 0; i < 8; i++){
+    for (int i = 0; i < 8; i++)
+    {
         receivedDataBuffer += buffer[i];
     }
 
