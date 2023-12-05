@@ -3,10 +3,12 @@ import Text from './Text';
 import PlayerStat from './PlayerStat';
 import Dropdown from './Dropdown';
 import ActiveBtn from './ActiveBtn';
+import Button from "./Button";
 import { server } from "./Server";
 import { data } from "./Data";
 
-function GameMenu(props) {
+
+function GameMenu({onComponentChange}) {
     const [startBtnActive, setStartBtnActive] = useState(false);
     const [startBtnShow, setStartBtnShow] = useState(true);
     const [checkBtnActive, setCheckBtnActive] = useState(false);
@@ -29,6 +31,8 @@ function GameMenu(props) {
     const [gameRunning, setGameRunning] = useState(false);
     const [count, setCount] = useState(0);
 
+
+
     useEffect(() => {
         setTimeout(() => {
             setCount(count + 1);
@@ -49,11 +53,9 @@ function GameMenu(props) {
                 
                 switch (gameRunningResp)
                 {
-                    default:
-                        console.warn("No connection to server"); 
                     case true:
                         setTimerSec(timerSec + 1);
-                        //break;
+                        break;
                         
                     // End of game code
                     case false:
@@ -69,7 +71,10 @@ function GameMenu(props) {
                         setWinShow(true);
                         
                         break;
-                    
+
+                    default:
+                        console.warn("No connection to server"); 
+                        setTimerSec(timerSec + 1);
                 }
             }
         }, 1000);
@@ -162,7 +167,7 @@ function GameMenu(props) {
                 <Dropdown options={["Vælg", "Bajer"]} callback={dropdownCb} disable={dropdownDisabled} fontSize="30px" />
             </div>
             <Text label={rmTxtLabel} show={rmTxtShow} color="black" fontFamily="arial" fontSize="30px" />
-            <div className="activeCont">
+            <div class="activeCont">
                 <ActiveBtn
                     label="Godkend"
                     height={100}
@@ -190,7 +195,18 @@ function GameMenu(props) {
                 />
                 <Text label={`Spillet begynder om ${countDownLabel} sekunder`} show={countDownShow} color="#000000" fontFamily="Arial" fontSize="30px" />
                 <Text label={`${Math.floor(timerSec / 60)}:${timerSec % 60}`} show={timerShow} color="#000000" fontFamily="Arial" fontSize="100px" />
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '30vh' }}>                
                 <Text label={winLabel} show={winShow} color="#000000" fontFamily="Arial" fontSize="100px" />
+                <ActiveBtn
+                    color="#000000"
+                    fontColor="white"
+                    width={200}
+                    show={winShow}
+                    active={true}
+                    label="Quit"
+                    onclick={() => { onComponentChange("MainMenu"); }} 
+                /> 
+                </div>
             </div>
         </div>
     );

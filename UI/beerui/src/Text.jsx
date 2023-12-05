@@ -6,7 +6,7 @@ function Text(props) {
 
     return (
         <div style={styles || {
-            display: (show == undefined ? 1 : show) ? "block" : "none",
+            display: (show === undefined ? 1 : show) ? "block" : "none",
             color: color || 'white',
             fontFamily: fontFamily || 'Inter',
             fontSize: fontSize || '40px',
