@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccO7AtRY.s 			page 1
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cclHgdeF.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccO7AtRY.s 			page 1
   28:Generated_Source\PSoC5/Timer_1_PM.c **** * Summary:
   29:Generated_Source\PSoC5/Timer_1_PM.c **** *     Save the current user configuration
   30:Generated_Source\PSoC5/Timer_1_PM.c **** *
-ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccO7AtRY.s 			page 2
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cclHgdeF.s 			page 2
 
 
   31:Generated_Source\PSoC5/Timer_1_PM.c **** * Parameters:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccO7AtRY.s 			page 1
   59              		.align	2
   60              		.global	Timer_1_RestoreConfig
   61              		.thumb
-ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccO7AtRY.s 			page 3
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cclHgdeF.s 			page 3
 
 
   62              		.thumb_func
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccO7AtRY.s 			page 1
   87:Generated_Source\PSoC5/Timer_1_PM.c ****         #if(!Timer_1_UDB_CONTROL_REG_REMOVED)
   88:Generated_Source\PSoC5/Timer_1_PM.c ****             Timer_1_WriteControlRegister(Timer_1_backup.TimerControlRegister);
   83              		.loc 1 88 0
-ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccO7AtRY.s 			page 4
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cclHgdeF.s 			page 4
 
 
   84 0010 607A     		ldrb	r0, [r4, #9]	@ zero_extendqisi2
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccO7AtRY.s 			page 1
  115:Generated_Source\PSoC5/Timer_1_PM.c ****         /* Save Counter's enable state */
  116:Generated_Source\PSoC5/Timer_1_PM.c ****         if(Timer_1_CTRL_ENABLE == (Timer_1_CONTROL & Timer_1_CTRL_ENABLE))
  112              		.loc 1 116 0
-ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccO7AtRY.s 			page 5
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cclHgdeF.s 			page 5
 
 
  113 0002 084B     		ldr	r3, .L13
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccO7AtRY.s 			page 1
  133:Generated_Source\PSoC5/Timer_1_PM.c **** * Function Name: Timer_1_Wakeup
  134:Generated_Source\PSoC5/Timer_1_PM.c **** ********************************************************************************
  135:Generated_Source\PSoC5/Timer_1_PM.c **** *
-ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccO7AtRY.s 			page 6
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cclHgdeF.s 			page 6
 
 
  136:Generated_Source\PSoC5/Timer_1_PM.c **** * Summary:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccO7AtRY.s 			page 1
  184              	Timer_1_backup:
  185 0000 00000000 		.space	12
  185      00000000 
-ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccO7AtRY.s 			page 7
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cclHgdeF.s 			page 7
 
 
  185      00000000 
@@ -373,25 +373,25 @@ ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccO7AtRY.s 			page 1
  194 0006 00000000 		.4byte	.Ldebug_abbrev0
  195 000a 04       		.byte	0x4
  196 000b 01       		.uleb128 0x1
- 197 000c DC000000 		.4byte	.LASF32
+ 197 000c 8D000000 		.4byte	.LASF32
  198 0010 0C       		.byte	0xc
- 199 0011 AA000000 		.4byte	.LASF33
- 200 0015 55000000 		.4byte	.LASF34
+ 199 0011 5B000000 		.4byte	.LASF33
+ 200 0015 46010000 		.4byte	.LASF34
  201 0019 00000000 		.4byte	.Ldebug_ranges0+0
  202 001d 00000000 		.4byte	0
  203 0021 00000000 		.4byte	.Ldebug_line0
  204 0025 02       		.uleb128 0x2
  205 0026 01       		.byte	0x1
  206 0027 06       		.byte	0x6
- 207 0028 A7020000 		.4byte	.LASF0
+ 207 0028 A1020000 		.4byte	.LASF0
  208 002c 02       		.uleb128 0x2
  209 002d 01       		.byte	0x1
  210 002e 08       		.byte	0x8
- 211 002f CE000000 		.4byte	.LASF1
+ 211 002f 7F000000 		.4byte	.LASF1
  212 0033 02       		.uleb128 0x2
  213 0034 02       		.byte	0x2
  214 0035 05       		.byte	0x5
- 215 0036 79020000 		.4byte	.LASF2
+ 215 0036 73020000 		.4byte	.LASF2
  216 003a 02       		.uleb128 0x2
  217 003b 02       		.byte	0x2
  218 003c 07       		.byte	0x7
@@ -399,54 +399,54 @@ ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccO7AtRY.s 			page 1
  220 0041 02       		.uleb128 0x2
  221 0042 04       		.byte	0x4
  222 0043 05       		.byte	0x5
- 223 0044 83020000 		.4byte	.LASF4
+ 223 0044 7D020000 		.4byte	.LASF4
  224 0048 02       		.uleb128 0x2
  225 0049 04       		.byte	0x4
  226 004a 07       		.byte	0x7
- 227 004b 6F010000 		.4byte	.LASF5
+ 227 004b 20010000 		.4byte	.LASF5
  228 004f 02       		.uleb128 0x2
  229 0050 08       		.byte	0x8
  230 0051 05       		.byte	0x5
- 231 0052 43020000 		.4byte	.LASF6
+ 231 0052 3D020000 		.4byte	.LASF6
  232 0056 02       		.uleb128 0x2
  233 0057 08       		.byte	0x8
  234 0058 07       		.byte	0x7
- 235 0059 F8010000 		.4byte	.LASF7
+ 235 0059 F2010000 		.4byte	.LASF7
  236 005d 03       		.uleb128 0x3
  237 005e 04       		.byte	0x4
  238 005f 05       		.byte	0x5
  239 0060 696E7400 		.ascii	"int\000"
  240 0064 02       		.uleb128 0x2
  241 0065 04       		.byte	0x4
-ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccO7AtRY.s 			page 8
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cclHgdeF.s 			page 8
 
 
  242 0066 07       		.byte	0x7
- 243 0067 EB010000 		.4byte	.LASF8
+ 243 0067 E5010000 		.4byte	.LASF8
  244 006b 04       		.uleb128 0x4
- 245 006c 8F010000 		.4byte	.LASF9
+ 245 006c 40010000 		.4byte	.LASF9
  246 0070 02       		.byte	0x2
  247 0071 E901     		.2byte	0x1e9
  248 0073 2C000000 		.4byte	0x2c
  249 0077 04       		.uleb128 0x4
- 250 0078 C8010000 		.4byte	.LASF10
+ 250 0078 B3010000 		.4byte	.LASF10
  251 007c 02       		.byte	0x2
  252 007d EB01     		.2byte	0x1eb
  253 007f 48000000 		.4byte	0x48
  254 0083 02       		.uleb128 0x2
  255 0084 04       		.byte	0x4
  256 0085 04       		.byte	0x4
- 257 0086 A4000000 		.4byte	.LASF11
+ 257 0086 55000000 		.4byte	.LASF11
  258 008a 02       		.uleb128 0x2
  259 008b 08       		.byte	0x8
  260 008c 04       		.byte	0x4
- 261 008d A4010000 		.4byte	.LASF12
+ 261 008d 8F010000 		.4byte	.LASF12
  262 0091 02       		.uleb128 0x2
  263 0092 01       		.byte	0x1
  264 0093 08       		.byte	0x8
- 265 0094 51020000 		.4byte	.LASF13
+ 265 0094 4B020000 		.4byte	.LASF13
  266 0098 04       		.uleb128 0x4
- 267 0099 6A010000 		.4byte	.LASF14
+ 267 0099 1B010000 		.4byte	.LASF14
  268 009d 02       		.byte	0x2
  269 009e 9302     		.2byte	0x293
  270 00a0 A4000000 		.4byte	0xa4
@@ -455,11 +455,11 @@ ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccO7AtRY.s 			page 1
  273 00a9 02       		.uleb128 0x2
  274 00aa 08       		.byte	0x8
  275 00ab 04       		.byte	0x4
- 276 00ac 9B020000 		.4byte	.LASF15
+ 276 00ac 95020000 		.4byte	.LASF15
  277 00b0 02       		.uleb128 0x2
  278 00b1 04       		.byte	0x4
  279 00b2 07       		.byte	0x7
- 280 00b3 3A020000 		.4byte	.LASF16
+ 280 00b3 34020000 		.4byte	.LASF16
  281 00b7 06       		.uleb128 0x6
  282 00b8 0C       		.byte	0xc
  283 00b9 03       		.byte	0x3
@@ -478,16 +478,16 @@ ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccO7AtRY.s 			page 1
  296 00d2 77000000 		.4byte	0x77
  297 00d6 04       		.byte	0x4
  298 00d7 07       		.uleb128 0x7
-ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccO7AtRY.s 			page 9
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cclHgdeF.s 			page 9
 
 
- 299 00d8 C0020000 		.4byte	.LASF19
+ 299 00d8 BA020000 		.4byte	.LASF19
  300 00dc 03       		.byte	0x3
  301 00dd 49       		.byte	0x49
  302 00de 6B000000 		.4byte	0x6b
  303 00e2 08       		.byte	0x8
  304 00e3 07       		.uleb128 0x7
- 305 00e4 D3020000 		.4byte	.LASF20
+ 305 00e4 CD020000 		.4byte	.LASF20
  306 00e8 03       		.byte	0x3
  307 00e9 4F       		.byte	0x4f
  308 00ea 6B000000 		.4byte	0x6b
@@ -515,7 +515,7 @@ ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccO7AtRY.s 			page 1
  330 011e B7010000 		.4byte	0x1b7
  331 0122 00       		.byte	0
  332 0123 09       		.uleb128 0x9
- 333 0124 24020000 		.4byte	.LASF23
+ 333 0124 1E020000 		.4byte	.LASF23
  334 0128 01       		.byte	0x1
  335 0129 4D       		.byte	0x4d
  336 012a 00000000 		.4byte	.LFB1
@@ -531,14 +531,14 @@ ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccO7AtRY.s 			page 1
  346 0146 CD010000 		.4byte	0x1cd
  347 014a 00       		.byte	0
  348 014b 09       		.uleb128 0x9
- 349 014c 81010000 		.4byte	.LASF24
+ 349 014c 32010000 		.4byte	.LASF24
  350 0150 01       		.byte	0x1
  351 0151 70       		.byte	0x70
  352 0152 00000000 		.4byte	.LFB2
  353 0156 2C000000 		.4byte	.LFE2-.LFB2
  354 015a 01       		.uleb128 0x1
  355 015b 9C       		.byte	0x9c
-ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccO7AtRY.s 			page 10
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cclHgdeF.s 			page 10
 
 
  356 015c 73010000 		.4byte	0x173
@@ -550,7 +550,7 @@ ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccO7AtRY.s 			page 1
  362 016e FB000000 		.4byte	0xfb
  363 0172 00       		.byte	0
  364 0173 09       		.uleb128 0x9
- 365 0174 8C020000 		.4byte	.LASF25
+ 365 0174 86020000 		.4byte	.LASF25
  366 0178 01       		.byte	0x1
  367 0179 96       		.byte	0x96
  368 017a 00000000 		.4byte	.LFB3
@@ -566,7 +566,7 @@ ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccO7AtRY.s 			page 1
  378 0196 E3010000 		.4byte	0x1e3
  379 019a 00       		.byte	0
  380 019b 0B       		.uleb128 0xb
- 381 019c 6A020000 		.4byte	.LASF35
+ 381 019c 64020000 		.4byte	.LASF35
  382 01a0 01       		.byte	0x1
  383 01a1 15       		.byte	0x15
  384 01a2 F0000000 		.4byte	0xf0
@@ -574,36 +574,36 @@ ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccO7AtRY.s 			page 1
  386 01a7 03       		.byte	0x3
  387 01a8 00000000 		.4byte	Timer_1_backup
  388 01ac 0C       		.uleb128 0xc
- 389 01ad 56020000 		.4byte	.LASF26
- 390 01b1 56020000 		.4byte	.LASF26
+ 389 01ad 50020000 		.4byte	.LASF26
+ 390 01b1 50020000 		.4byte	.LASF26
  391 01b5 03       		.byte	0x3
  392 01b6 69       		.byte	0x69
  393 01b7 0C       		.uleb128 0xc
- 394 01b8 CF010000 		.4byte	.LASF27
- 395 01bc CF010000 		.4byte	.LASF27
+ 394 01b8 C9010000 		.4byte	.LASF27
+ 395 01bc C9010000 		.4byte	.LASF27
  396 01c0 03       		.byte	0x3
  397 01c1 63       		.byte	0x63
  398 01c2 0C       		.uleb128 0xc
- 399 01c3 0F020000 		.4byte	.LASF28
- 400 01c7 0F020000 		.4byte	.LASF28
+ 399 01c3 09020000 		.4byte	.LASF28
+ 400 01c7 09020000 		.4byte	.LASF28
  401 01cb 03       		.byte	0x3
  402 01cc 6A       		.byte	0x6a
  403 01cd 0C       		.uleb128 0xc
- 404 01ce AB010000 		.4byte	.LASF29
- 405 01d2 AB010000 		.4byte	.LASF29
+ 404 01ce 96010000 		.4byte	.LASF29
+ 405 01d2 96010000 		.4byte	.LASF29
  406 01d6 03       		.byte	0x3
  407 01d7 64       		.byte	0x64
  408 01d8 0C       		.uleb128 0xc
- 409 01d9 B3020000 		.4byte	.LASF30
- 410 01dd B3020000 		.4byte	.LASF30
+ 409 01d9 AD020000 		.4byte	.LASF30
+ 410 01dd AD020000 		.4byte	.LASF30
  411 01e1 03       		.byte	0x3
  412 01e2 5B       		.byte	0x5b
-ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccO7AtRY.s 			page 11
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cclHgdeF.s 			page 11
 
 
  413 01e3 0C       		.uleb128 0xc
- 414 01e4 95010000 		.4byte	.LASF31
- 415 01e8 95010000 		.4byte	.LASF31
+ 414 01e4 BA010000 		.4byte	.LASF31
+ 415 01e8 BA010000 		.4byte	.LASF31
  416 01ec 03       		.byte	0x3
  417 01ed 8B       		.byte	0x8b
  418 01ee 00       		.byte	0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccO7AtRY.s 			page 1
  467 002e 3A       		.uleb128 0x3a
  468 002f 0B       		.uleb128 0xb
  469 0030 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccO7AtRY.s 			page 12
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cclHgdeF.s 			page 12
 
 
  470 0031 05       		.uleb128 0x5
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccO7AtRY.s 			page 1
  524 0067 2E       		.uleb128 0x2e
  525 0068 01       		.byte	0x1
  526 0069 3F       		.uleb128 0x3f
-ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccO7AtRY.s 			page 13
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cclHgdeF.s 			page 13
 
 
  527 006a 19       		.uleb128 0x19
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccO7AtRY.s 			page 1
  581 00a3 03       		.uleb128 0x3
  582 00a4 0E       		.uleb128 0xe
  583 00a5 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccO7AtRY.s 			page 14
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cclHgdeF.s 			page 14
 
 
  584 00a6 0B       		.uleb128 0xb
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccO7AtRY.s 			page 1
  626      72756374 
  627              	.LASF3:
  628 0026 73686F72 		.ascii	"short unsigned int\000"
-ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccO7AtRY.s 			page 15
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cclHgdeF.s 			page 15
 
 
  628      7420756E 
@@ -855,110 +855,110 @@ ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccO7AtRY.s 			page 1
  632 004c 54696D65 		.ascii	"TimerUdb\000"
  632      72556462 
  632      00
- 633              	.LASF34:
- 634 0055 433A5C55 		.ascii	"C:\\Users\\raduf\\OneDrive\\Desktop\\SemesterProjek"
- 634      73657273 
- 634      5C726164 
- 634      75665C4F 
- 634      6E654472 
- 635 0083 745C422D 		.ascii	"t\\B-CAC\\SPI_Slave\\Design01.cydsn\000"
- 635      4341435C 
- 635      5350495F 
- 635      536C6176 
- 635      655C4465 
- 636              	.LASF11:
- 637 00a4 666C6F61 		.ascii	"float\000"
- 637      7400
- 638              	.LASF33:
- 639 00aa 47656E65 		.ascii	"Generated_Source\\PSoC5\\Timer_1_PM.c\000"
- 639      72617465 
- 639      645F536F 
- 639      75726365 
- 639      5C50536F 
- 640              	.LASF1:
- 641 00ce 756E7369 		.ascii	"unsigned char\000"
- 641      676E6564 
- 641      20636861 
- 641      7200
- 642              	.LASF32:
- 643 00dc 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 643      43313120 
- 643      352E342E 
- 643      31203230 
- 643      31363036 
- 644 010f 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 644      20726576 
- 644      6973696F 
- 644      6E203233 
- 644      37373135 
- 645 0142 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 645      66756E63 
- 645      74696F6E 
- 645      2D736563 
- 645      74696F6E 
- 646              	.LASF14:
- 647 016a 72656738 		.ascii	"reg8\000"
-ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccO7AtRY.s 			page 16
+ 633              	.LASF11:
+ 634 0055 666C6F61 		.ascii	"float\000"
+ 634      7400
+ 635              	.LASF33:
+ 636 005b 47656E65 		.ascii	"Generated_Source\\PSoC5\\Timer_1_PM.c\000"
+ 636      72617465 
+ 636      645F536F 
+ 636      75726365 
+ 636      5C50536F 
+ 637              	.LASF1:
+ 638 007f 756E7369 		.ascii	"unsigned char\000"
+ 638      676E6564 
+ 638      20636861 
+ 638      7200
+ 639              	.LASF32:
+ 640 008d 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 640      43313120 
+ 640      352E342E 
+ 640      31203230 
+ 640      31363036 
+ 641 00c0 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 641      20726576 
+ 641      6973696F 
+ 641      6E203233 
+ 641      37373135 
+ 642 00f3 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 642      66756E63 
+ 642      74696F6E 
+ 642      2D736563 
+ 642      74696F6E 
+ 643              	.LASF14:
+ 644 011b 72656738 		.ascii	"reg8\000"
+ 644      00
+ 645              	.LASF5:
+ 646 0120 6C6F6E67 		.ascii	"long unsigned int\000"
+ 646      20756E73 
+ 646      69676E65 
+ 646      6420696E 
+ 646      7400
+ 647              	.LASF24:
+ 648 0132 54696D65 		.ascii	"Timer_1_Sleep\000"
+ 648      725F315F 
+ 648      536C6565 
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cclHgdeF.s 			page 16
 
 
- 647      00
- 648              	.LASF5:
- 649 016f 6C6F6E67 		.ascii	"long unsigned int\000"
- 649      20756E73 
- 649      69676E65 
- 649      6420696E 
- 649      7400
- 650              	.LASF24:
- 651 0181 54696D65 		.ascii	"Timer_1_Sleep\000"
- 651      725F315F 
- 651      536C6565 
- 651      7000
- 652              	.LASF9:
- 653 018f 75696E74 		.ascii	"uint8\000"
- 653      3800
- 654              	.LASF31:
- 655 0195 54696D65 		.ascii	"Timer_1_Enable\000"
- 655      725F315F 
- 655      456E6162 
+ 648      7000
+ 649              	.LASF9:
+ 650 0140 75696E74 		.ascii	"uint8\000"
+ 650      3800
+ 651              	.LASF34:
+ 652 0146 433A5C55 		.ascii	"C:\\Users\\deniz\\OneDrive\\Dokumenter\\GitHub\\B-C"
+ 652      73657273 
+ 652      5C64656E 
+ 652      697A5C4F 
+ 652      6E654472 
+ 653 0173 41435C53 		.ascii	"AC\\SPI_Slave\\Design01.cydsn\000"
+ 653      50495F53 
+ 653      6C617665 
+ 653      5C446573 
+ 653      69676E30 
+ 654              	.LASF12:
+ 655 018f 646F7562 		.ascii	"double\000"
  655      6C6500
- 656              	.LASF12:
- 657 01a4 646F7562 		.ascii	"double\000"
- 657      6C6500
- 658              	.LASF29:
- 659 01ab 54696D65 		.ascii	"Timer_1_WriteControlRegister\000"
- 659      725F315F 
- 659      57726974 
- 659      65436F6E 
- 659      74726F6C 
- 660              	.LASF10:
- 661 01c8 75696E74 		.ascii	"uint32\000"
- 661      333200
+ 656              	.LASF29:
+ 657 0196 54696D65 		.ascii	"Timer_1_WriteControlRegister\000"
+ 657      725F315F 
+ 657      57726974 
+ 657      65436F6E 
+ 657      74726F6C 
+ 658              	.LASF10:
+ 659 01b3 75696E74 		.ascii	"uint32\000"
+ 659      333200
+ 660              	.LASF31:
+ 661 01ba 54696D65 		.ascii	"Timer_1_Enable\000"
+ 661      725F315F 
+ 661      456E6162 
+ 661      6C6500
  662              	.LASF27:
- 663 01cf 54696D65 		.ascii	"Timer_1_ReadControlRegister\000"
+ 663 01c9 54696D65 		.ascii	"Timer_1_ReadControlRegister\000"
  663      725F315F 
  663      52656164 
  663      436F6E74 
  663      726F6C52 
  664              	.LASF8:
- 665 01eb 756E7369 		.ascii	"unsigned int\000"
+ 665 01e5 756E7369 		.ascii	"unsigned int\000"
  665      676E6564 
  665      20696E74 
  665      00
  666              	.LASF7:
- 667 01f8 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 667 01f2 6C6F6E67 		.ascii	"long long unsigned int\000"
  667      206C6F6E 
  667      6720756E 
  667      7369676E 
  667      65642069 
  668              	.LASF28:
- 669 020f 54696D65 		.ascii	"Timer_1_WriteCounter\000"
+ 669 0209 54696D65 		.ascii	"Timer_1_WriteCounter\000"
  669      725F315F 
  669      57726974 
  669      65436F75 
  669      6E746572 
  670              	.LASF23:
- 671 0224 54696D65 		.ascii	"Timer_1_RestoreConfig\000"
-ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccO7AtRY.s 			page 17
+ 671 021e 54696D65 		.ascii	"Timer_1_RestoreConfig\000"
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cclHgdeF.s 			page 17
 
 
  671      725F315F 
@@ -966,65 +966,65 @@ ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccO7AtRY.s 			page 1
  671      6F726543 
  671      6F6E6669 
  672              	.LASF16:
- 673 023a 73697A65 		.ascii	"sizetype\000"
+ 673 0234 73697A65 		.ascii	"sizetype\000"
  673      74797065 
  673      00
  674              	.LASF6:
- 675 0243 6C6F6E67 		.ascii	"long long int\000"
+ 675 023d 6C6F6E67 		.ascii	"long long int\000"
  675      206C6F6E 
  675      6720696E 
  675      7400
  676              	.LASF13:
- 677 0251 63686172 		.ascii	"char\000"
+ 677 024b 63686172 		.ascii	"char\000"
  677      00
  678              	.LASF26:
- 679 0256 54696D65 		.ascii	"Timer_1_ReadCounter\000"
+ 679 0250 54696D65 		.ascii	"Timer_1_ReadCounter\000"
  679      725F315F 
  679      52656164 
  679      436F756E 
  679      74657200 
  680              	.LASF35:
- 681 026a 54696D65 		.ascii	"Timer_1_backup\000"
+ 681 0264 54696D65 		.ascii	"Timer_1_backup\000"
  681      725F315F 
  681      6261636B 
  681      757000
  682              	.LASF2:
- 683 0279 73686F72 		.ascii	"short int\000"
+ 683 0273 73686F72 		.ascii	"short int\000"
  683      7420696E 
  683      7400
  684              	.LASF4:
- 685 0283 6C6F6E67 		.ascii	"long int\000"
+ 685 027d 6C6F6E67 		.ascii	"long int\000"
  685      20696E74 
  685      00
  686              	.LASF25:
- 687 028c 54696D65 		.ascii	"Timer_1_Wakeup\000"
+ 687 0286 54696D65 		.ascii	"Timer_1_Wakeup\000"
  687      725F315F 
  687      57616B65 
  687      757000
  688              	.LASF15:
- 689 029b 6C6F6E67 		.ascii	"long double\000"
+ 689 0295 6C6F6E67 		.ascii	"long double\000"
  689      20646F75 
  689      626C6500 
  690              	.LASF0:
- 691 02a7 7369676E 		.ascii	"signed char\000"
+ 691 02a1 7369676E 		.ascii	"signed char\000"
  691      65642063 
  691      68617200 
  692              	.LASF30:
- 693 02b3 54696D65 		.ascii	"Timer_1_Stop\000"
+ 693 02ad 54696D65 		.ascii	"Timer_1_Stop\000"
  693      725F315F 
  693      53746F70 
  693      00
  694              	.LASF19:
- 695 02c0 496E7465 		.ascii	"InterruptMaskValue\000"
+ 695 02ba 496E7465 		.ascii	"InterruptMaskValue\000"
  695      72727570 
  695      744D6173 
-ARM GAS  C:\Users\raduf\AppData\Local\Temp\ccO7AtRY.s 			page 18
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cclHgdeF.s 			page 18
 
 
  695      6B56616C 
  695      756500
  696              	.LASF20:
- 697 02d3 54696D65 		.ascii	"TimerControlRegister\000"
+ 697 02cd 54696D65 		.ascii	"TimerControlRegister\000"
  697      72436F6E 
  697      74726F6C 
  697      52656769 

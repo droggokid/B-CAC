@@ -14,12 +14,9 @@ void handleByteReceived(uint8_t byteReceived);
 static int UCstate=0;
 static uint8_t minutter_ = 0, sekunder_ = 0 , millisekunder_ = 0;
 uint8_t receivedData = 0;
+int roundedNum = 0;
+uint32_t hardcode_tid = 6300;
 
-void convert_ms(uint32_t total_ms) {
-    minutter_ = total_ms / (1000 * 60);
-    sekunder_ = (total_ms / 1000) % 60;
-    millisekunder_ = total_ms % 1000;
-}
 
 int main(void)
 {
@@ -129,14 +126,9 @@ int main(void)
     timestop=1;
     tid = stopTidsTagning(); //tid stoppes
     
-    convert_ms(tid);
     
-    //Kald funktion her
-    sendSPi(minutter_);
-    sendSPi(sekunder_);
-    sendSPi(millisekunder_);
     
-    int roundedNum = (tid + 50) / 100 * 100;//rundes af til nærmeste 100 ms
+    roundedNum = (tid + 50) / 100 * 100;//rundes af til nærmeste 100 ms
         {//print
         //snprintf(uartBuffer,sizeof(uartBuffer),"tid (g) %d\r\n ", tid);
         //UART_1_PutString(uartBuffer);
@@ -144,6 +136,8 @@ int main(void)
         //UART_1_PutString(uartBuffer);
         }
     //tid sendes
+    
+    sendTimeOverSPI(hardcode_tid);
     CyDelay(5000);
     Result_gram = readWeight(repeats,startoffset, factor, preload);
         {//print
@@ -221,4 +215,5 @@ CY_ISR(ISR_SPI_rx_handler)
     //Handling of recieved SPI data
     handleByteReceived(receivedData);
     sendSPi(receivedData);
+        
 }
