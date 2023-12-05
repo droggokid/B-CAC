@@ -129,7 +129,11 @@ public:
                         readFile(fd1, recc);
                         closeFile(fd1);
 
-                        cout << "laast: " << recc << endl;
+                        cout << "laast: ";
+                        for (int i = 0; i < 8; i++){
+                            cout << recc[i];
+                        }
+                        cout << endl;
                     }
                     else
                     {
