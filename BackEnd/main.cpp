@@ -6,10 +6,10 @@ Server server;
 
 int main()
 {
-    char readData[8];
+    string readData;
 
-    fileDescriptor = openFile("/home/root/testRead.txt");
-    writeFile(fileDescriptor, "din tekst fil er grim");
+    fileDescriptor = openFile("test.txt");
+    writeFile(fileDescriptor, "12345678");
     readFile(fileDescriptor, readData);
 
     cout << "read: " << readData << endl;

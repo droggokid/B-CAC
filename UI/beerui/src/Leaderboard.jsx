@@ -38,21 +38,21 @@ function Leaderboard(props) {
 
     return (
         <div style={leaderboardStyle} >
-           <div class="vertcontainer">
+           <div className="vertcontainer">
             <TextBorder>
-                <div class="container">
+                <div className="container">
                     <Text label="Navn 1:" />
                     <Text label="00:00:00" />
                 </div>
             </TextBorder>
             <TextBorder>
-                <div class="container">
+                <div className="container">
                     <Text label="Navn 2:" />
                     <Text label="00:00:00" />
                 </div>
             </TextBorder>
             <TextBorder>
-                <div class="container">
+                <div className="container">
                     <Text label="Navn 3:" />
                     <Text label="00:00:00" />
                 </div>

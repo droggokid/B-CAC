@@ -1,0 +1,88 @@
+Noter:
+Proces:
+Kravspecifikation og Planlægning:
+
+Definition af krav og mål for brugergrænsefladen.
+Planlægning af funktionaliteter og designelementer.
+Teknologivalg:
+
+Beslutning om at anvende React som frontend-framework.
+Identifikation af nødvendige biblioteker og værktøjer.
+UI/UX Design:
+
+Samarbejde med designere for at skabe wireframes og mockups.
+Feedback-loop for at forfine brugeroplevelsen.
+Implementering af Basal Struktur:
+
+Oprettelse af React-projekt med nødvendige filstrukturer.
+Implementering af basale komponenter og routing.
+Komponentudvikling:
+
+Opdeling af brugergrænsefladen i genanvendelige komponenter.
+Implementering af state og props for dynamisk indhold.
+Styling og Layout:
+
+Anvendelse af CSS eller stylingbiblioteker for æstetisk layout.
+Responsivt design for understøttelse af forskellige enheder.
+Tilslutning til Backend:
+
+Opsætning af kommunikation med backend-tjenester.
+Håndtering af asynkrone kald og datahåndtering.
+Testning:
+
+Udvikling og implementering af enhedstests og integrationstests.
+Debugging og fejlretning af identificerede problemer.
+Optimering og Ydeevne:
+
+Optimering af kode for hurtigere indlæsningstider.
+Implementering af caching og andre ydeevneforbedringer.
+Brugertest og Feedback:
+
+Udførelse af brugertests for at evaluere funktionalitet og brugervenlighed.
+Indsamling af feedback og foretagelse af eventuelle nødvendige ændringer.
+Dokumentation:
+
+Oprettelse af teknisk dokumentation og brugsvejledninger.
+Fremtidig vedligeholdelsesplan og versionsovervågning.
+Deployment og Overvågning:
+
+Udrulning af systemet til produktionsmiljøet.
+Implementering af overvågningsværktøjer for at identificere og løse driftsproblemer.
+Iterativ Forbedring:
+
+Kontinuerlig evaluering af brugerfeedback og systemets præstationer.
+Iterativ udvikling med nye funktioner og opdateringer.
+Denne proces sikrer, at udviklingen sker systematisk og at hvert trin tager højde for krav, design, implementering og brugeroplevelse for at skabe en vellykket React-baseret brugergrænseflade."
+
+
+Server.hpp beskrivelse:
+Denne Server.hpp-fil indeholder en simpel implementering af en HTTP-server skrevet i C++ ved hjælp af Boost.Beast og Boost.Asio bibliotekerne. Serveren er designet til at lytte på port 8080 og behandle HTTP GET-, POST- og OPTIONS-anmodninger. Der er også indbygget CORS-support (Cross-Origin Resource Sharing) for at tillade anmodninger fra forskellige domæner.
+
+Lad os se på, hvordan denne server interagerer med klienten:
+
+Serveropsætning (start-metoden):
+
+start-metoden opretter en IO-kontekst og en acceptor, der lytter på IPv4-port 8080.
+Den accepterer en indgående forbindelse og læser HTTP-anmodningen.
+Behandling af HTTP-anmodninger:
+
+Serveren identificerer HTTP-metoden (GET, POST, OPTIONS) og udfører passende handlinger.
+CORS Support:
+
+CORS-headere sættes i alle svar for at tillade kryds-origin-anmodninger fra forskellige domæner.
+GET Anmodning (Eksempel):
+
+Hvis serveren modtager en GET-anmodning med target "/time," svarer den med teksten "11:30."
+POST Anmodning (Eksempel):
+
+Hvis serveren modtager en POST-anmodning, udtrækker den anmodningens krop (forudsat at det er JSON) og behandler den efter behov.
+OPTIONS Anmodning (CORS):
+
+Hvis serveren modtager en OPTIONS-anmodning, svarer den straks med CORS-headere.
+Asynkron Behandling:
+
+Bemærk, at denne server behandler anmodninger synkront, hvilket betyder, at den håndterer en anmodning ad gangen. For at håndtere flere samtidige forbindelser bør du overveje at bruge asynkron I/O.
+Kommunikation med React Client:
+
+Når React-klienten skal sende en anmodning til denne server, kan den bruge standard HTTP-anmodningsmetoder som fetch, axios eller lignende.
+Serveren kan reagere på disse anmodninger i overensstemmelse med den implementerede logik.

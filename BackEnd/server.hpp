@@ -120,20 +120,26 @@ public:
                     {
                         cout << "Received GET leaderboard" << endl;
 
-                        response.body() = R"([{'initials': 'XXX', 'time': '01:04.30'}, {'initials': 'XXX', 'time': '01:04.30'}])";
-                    
-                        char recc[8];
+                        nlohmann::json jsonArr;
+                        nlohmann::json jsonObj1;
+                        jsonObj1["initials"] = "ABC";
+                        jsonObj1["time"] = "01:00.30";
 
-                        int fd1 = openFile("test.txt");
-                        //writeFile(fd1, "leaderboard test skrivning");
-                        readFile(fd1, recc);
-                        closeFile(fd1);
+                        jsonArr.push_back(jsonObj1);
 
-                        cout << "laast: " << recc << endl;
-                        // for (int i = 0; i < 8; i++){
-                        //     cout << recc[i];
-                        // }
-                        // cout << endl;
+                        nlohmann::json jsonObj2;
+                        jsonObj2["initials"] = "ABD";
+                        jsonObj2["time"] = "01:00.40";
+
+                        jsonArr.push_back(jsonObj2);
+
+                        string jsonStr = jsonArr.dump();
+
+                        response.body() = jsonStr;
+                        // response.body() = R"({
+                        //     \"1\": {\"initials\": \"XXX\", \"time\": \"01:04.30\"},
+                        //     \"2\": {\"initials\": \"XXX\", \"time\": \"01:04.30\"}
+                        // })";
                     }
                     else
                     {
@@ -150,6 +156,7 @@ public:
         {
             cout << "not good" << endl;
             std::cerr << "Error: " << e.what() << std::endl;
+            return start();
             return EXIT_FAILURE;
         }
 
