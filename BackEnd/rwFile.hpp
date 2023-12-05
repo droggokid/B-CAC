@@ -41,7 +41,7 @@ int writeFile(int fileDescriptor, const char* data)
 int readFile(int fileDescriptor, string& receivedDataBuffer)
 {
     // Step 8: Read Data from the Device Node
-    char buffer[4]; // Adjust the buffer size based on your needs
+    char buffer[8]; // Adjust the buffer size based on your needs
     ssize_t bytesRead = read(fileDescriptor, buffer, sizeof(buffer));
     if (bytesRead < 0)
     {
