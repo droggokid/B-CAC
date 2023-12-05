@@ -25,7 +25,6 @@ uint32 time_interval_ticks = 0;
 uint32 time_interval_ms=0;
 
 
-
 void startTidsTagning()
 {
     
@@ -52,17 +51,16 @@ uint32 stopTidsTagning()
 void sendTimeOverSPI(uint32_t time)
 {
     // Assuming time is a 32-bit integer
-    uint8_t tx_buf[4];
-    tx_buf[0] = (time >> 24) & 0xFF;
-    tx_buf[1] = (time >> 16) & 0xFF;
-    tx_buf[2] = (time >> 8) & 0xFF;
-    tx_buf[3] = time & 0xFF;
+    uint8_t tx_buf[3];
+    tx_buf[0] = (time / (1000 * 60)) & 0xFF;         // Minutes
+    tx_buf[1] = ((time / 1000) % 60) & 0xFF;         // Seconds
+    tx_buf[2] = (time % 1000) & 0xFF;                // Milliseconds
 
     // Initialize SPI
-    InitializeSPI();
+    //InitializeSPI();
 
     // Send each byte over SPI
-    for (int i = 0; i < 4; ++i)
+    for (int i = 0; i < 3; ++i)
     {
         sendSPi(tx_buf[i]);
     }

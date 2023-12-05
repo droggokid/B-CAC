@@ -67,10 +67,12 @@ public:
 
                     if (cmd == "tare")
                     {
-                        cout << data << endl;
+                        cout << "Received POST tare:" << endl << data << endl;
                     }
                     else if (cmd == "startGame")
                     {
+                        cout << "Received POST startGame:" << endl << data << endl;
+
                         int fd1 = openFile(platformOnePath);
                         // writeFile(fd1, /*start game char array*/);
                         closeFile(fd1);
@@ -78,8 +80,10 @@ public:
                         int fd2 = openFile(platformTwoPath);
                         // writeFile( samme smøre );
                         closeFile(fd2);
-
-                        cout << data << endl;
+                    }
+                    else 
+                    {
+                        cout << "Target not specified" << endl;
                     }
                 }
                 else if (request.method() == http::verb::get)
@@ -88,21 +92,39 @@ public:
 
                     cout << "Received GET target: " << target << endl;
 
-                    if (target == "/time")
+                    if (target == "/tareReady")
                     {
+                        cout << "Received GET tareReady" << endl;
+
+                        response.body() = "true";
+                    }
+                    else if (target == "/gameReady")
+                    {
+                        cout << "Received GET gameReady" << endl;
+
+                        response.body() = "true";
+                    }
+                    else if (target == "/time")
+                    {
+                        cout << "Received GET time" << endl;
+
                         response.body() = R"({'p1': '01:10.45', 'p2': '01:11.10'})";
                     }
                     else if (target == "/gameRunning")
                     {
+                        cout << "Received GET gameRunning" << endl;
+
                         response.body() = "true";
                     }
                     else if (target == "/leaderboard")
                     {
+                        cout << "Received GET leaderboard" << endl;
+
                         response.body() = R"([{'initials': 'XXX', 'time': '01:04.30'}, {'initials': 'XXX', 'time': '01:04.30'}])";
                     }
                     else
                     {
-                        cout << "target not specified" << endl;
+                        cout << "Target not specified" << endl;
                     }
 
                     response.keep_alive(request.keep_alive());
@@ -115,6 +137,7 @@ public:
         {
             cout << "not good" << endl;
             std::cerr << "Error: " << e.what() << std::endl;
+            return start();
             return EXIT_FAILURE;
         }
 
