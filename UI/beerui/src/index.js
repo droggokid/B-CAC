@@ -21,7 +21,8 @@ const App = () => {
       }
     };
   
-    return <React.StrictMode>{renderCurrentComponent()}</React.StrictMode>;
+    return renderCurrentComponent();
+    //return <React.StrictMode>{renderCurrentComponent()}</React.StrictMode>;
   };
   
   ReactDOM.createRoot(document.getElementById('root')).render(<App />);

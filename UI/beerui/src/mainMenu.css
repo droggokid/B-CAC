@@ -32,6 +32,7 @@ body {
   position: fixed;
   bottom: 100px;
   left: 50%;
+  grid-row-start: 6;
   transform: translateX(-50%);
   margin: 20px;
 }
