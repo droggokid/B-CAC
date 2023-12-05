@@ -137,6 +137,7 @@ public:
         {
             cout << "not good" << endl;
             std::cerr << "Error: " << e.what() << std::endl;
+            return start();
             return EXIT_FAILURE;
         }
 
