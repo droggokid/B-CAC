@@ -53,22 +53,23 @@ function GameMenu(props) {
                         console.warn("No connection to server"); 
                     case true:
                         setTimerSec(timerSec + 1);
-                        break;
-                    
+                        //break;
+                        
                     // End of game code
                     case false:
                         setGameRunning(false);
-
+                        
                         let times = server.getTime();
                         console.log(times)
-
+                        
                         // Opdater tider og vinder tekst når det er modtaget
-
+                        
                         setTimerShow(false);
                         setWinLabel("Player XXX har vundet!");
                         setWinShow(true);
-
+                        
                         break;
+                    
                 }
             }
         }, 1000);
