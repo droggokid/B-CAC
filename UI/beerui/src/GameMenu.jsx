@@ -55,7 +55,7 @@ function GameMenu({onComponentChange}) {
                 {
                     case true:
                         setTimerSec(timerSec + 1);
-                        break;
+                        // break;
                         
                     // End of game code
                     case false:
@@ -65,6 +65,8 @@ function GameMenu({onComponentChange}) {
                         console.log(times)
                         
                         // Opdater tider og vinder tekst når det er modtaget
+                        setP1Time("1");
+                        setP2Time("2");
                         
                         setTimerShow(false);
                         setWinLabel("Player XXX har vundet!");
@@ -167,7 +169,7 @@ function GameMenu({onComponentChange}) {
                 <Dropdown options={["Vælg", "Bajer"]} callback={dropdownCb} disable={dropdownDisabled} fontSize="30px" />
             </div>
             <Text label={rmTxtLabel} show={rmTxtShow} color="black" fontFamily="arial" fontSize="30px" />
-            <div class="activeCont">
+            <div className="activeCont">
                 <ActiveBtn
                     label="Godkend"
                     height={100}
