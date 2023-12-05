@@ -22,21 +22,21 @@ class Server
     {
         // Return boolean if taring is done
         //return this.get("tareReady") === "true" ? true : false; // Prod
-        return this.get("tareReady") // Dev
+        return this.get("tareReady"); // Dev
     }
 
     getGameReady()
     {
         // Return boolean if the game is ready to start
         //return this.get("gameReady") === "true" ? true : false; // Prod
-        return this.get("gameReady") // Dev
+        return this.get("gameReady"); // Dev
     }
     
     getGameRunning()
     {
         // Return boolean if the game is running
         //return this.get("gameRunning") === "true" ? true : false; // Prod
-        return this.get("gameRunning") // Dev
+        return this.get("gameRunning"); // Dev
     }
 
     getTime()
