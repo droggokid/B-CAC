@@ -38,7 +38,7 @@ int writeFile(int fileDescriptor, const char* data)
     return bytesWritten;
 };
 
-int readFile(int fileDescriptor, string& receivedDataBuffer)
+int readFile(int fileDescriptor, char* receivedDataBuffer)
 {
     // Step 8: Read Data from the Device Node
     char buffer[8]; // Adjust the buffer size based on your needs
@@ -53,9 +53,9 @@ int readFile(int fileDescriptor, string& receivedDataBuffer)
     // Null-terminate the buffer to treat it as a string
     buffer[bytesRead] = '\0';
 
-    std::cout << "Data read from device: " << buffer << std::endl;
+    cout << "Data read from device: " << buffer << endl;
 
-    receivedDataBuffer.assign(buffer, bytesRead);
+    receivedDataBuffer = buffer;
 
     return bytesRead;
 };

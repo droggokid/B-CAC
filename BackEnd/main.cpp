@@ -6,7 +6,7 @@ Server server;
 
 int main()
 {
-    string readData;
+    char readData[8];
 
     fileDescriptor = openFile("/home/root/testRead.txt");
     writeFile(fileDescriptor, "din tekst fil er grim");
