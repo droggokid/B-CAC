@@ -120,7 +120,7 @@ public:
                     {
                         cout << "Received GET leaderboard" << endl;
 
-                        response.body() = R"([{'initials': 'XXX', 'time': '01:04.30'}, {'initials': 'XXX', 'time': '01:04.30'}])";
+                        response.body() = R"([{'initials': 'ABC', 'time': '01:04.30'}, {'initials': 'MTL', 'time': '01:04.30'}])";
                     }
                     else
                     {

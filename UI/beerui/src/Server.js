@@ -6,6 +6,7 @@
 // Hvis der skal skiftes mellem at hoste på gh-pages og lokalt, skal package.json homepage ændres til "."
 // evt. check ip i bunden af denne fil
 // Backenden skal også bygges på en anden maskine, og køres på rpizw med ./backend
+import { data } from "./Data";
 
 class Server
 {
@@ -44,12 +45,15 @@ class Server
         return this.get("time");
     }
     
-    getLeaderboard()
-    {
+    getLeaderboard() {
         // Returns all the leaderboard data
-        return this.get("leaderboard");
+        //let data1111 = this.get("leaderboard");
+        this.get("leaderboard");
+        setTimeout(() => {
+            console.log(data.recievedData);
+        }, 1000);
+        return data.recievedData;
     }
-
     // POST methods
 
     postTare()
@@ -64,14 +68,15 @@ class Server
 
     // Don't touch or use outside class
 
-    get(data)
+    get(getData)
     {
-        this.xhr.open('GET', `${this.url}/${data}`);
+        this.xhr.open('GET', `${this.url}/${getData}`);
         this.xhr.setRequestHeader("Content-Type", "text/plain");
         this.xhr.onload = () => {
             if (this.xhr.status === 200)
             {
                 console.log(this.xhr.responseText);
+                data.recievedData = (this.xhr.responseText);
             }
         };
         this.xhr.send();
@@ -79,7 +84,7 @@ class Server
         return this.xhr.responseText;
     }
 
-    post(data)
+    post(postData)
     {
         this.xhr.open('POST', this.url);
         this.xhr.setRequestHeader("Content-Type", "text/plain");
@@ -89,7 +94,7 @@ class Server
                 console.log(this.xhr.responseText);
             }
         };
-        this.xhr.send(data);
+        this.xhr.send(postData);
     }
 }
 

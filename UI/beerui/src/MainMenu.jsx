@@ -24,7 +24,7 @@ function MainMenu({onComponentChange}) {
         }
       };
       
-  
+    
 
     const handleOnClickPrepareGame = () => {
         setActiveComponent("InitialsBox");
@@ -32,6 +32,12 @@ function MainMenu({onComponentChange}) {
 
     const handleOnClickLeaderboard = () => {
         setActiveComponent("Leaderboard");
+        //let newdata = '[{"initials":"ABC","time":"01:00.30"},{"initials":"ABD","time":"01:00.40"}]';
+        let newdata = server.getLeaderboard();
+        setTimeout(() => {
+        console.log(typeof data.recievedData);
+        console.log("Data recieved:" + data.recievedData); //Parse lortet til et JSON og find initials og time
+        }, 1000);
     }
 
     const renderActiveComponent = () => {
