@@ -38,7 +38,7 @@ int writeFile(int fileDescriptor, const char* data)
     return bytesWritten;
 };
 
-int readFile(int fileDescriptor, char* receivedDataBuffer)
+int readFile(int fileDescriptor, string& receivedDataBuffer)
 {
     // Step 8: Read Data from the Device Node
     char buffer[8]; // Adjust the buffer size based on your needs
@@ -56,7 +56,7 @@ int readFile(int fileDescriptor, char* receivedDataBuffer)
     cout << "Data read from device: " << buffer << endl;
 
     for (int i = 0; i < 8; i++){
-        receivedDataBuffer[i] = buffer[i];
+        receivedDataBuffer += buffer[i];
     }
 
     return bytesRead;

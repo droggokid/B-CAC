@@ -122,7 +122,7 @@ public:
 
                         response.body() = R"([{'initials': 'XXX', 'time': '01:04.30'}, {'initials': 'XXX', 'time': '01:04.30'}])";
                     
-                        char recc[8];
+                        string recc;
 
                         int fd1 = openFile("test.txt");
                         //writeFile(fd1, "leaderboard test skrivning");
