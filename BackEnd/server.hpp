@@ -14,7 +14,6 @@ using tcp = boost::asio::ip::tcp;
 using json = nlohmann::json;
 using namespace std;
 
-// Prefer using const char* instead of char* for string literals
 char* platformOnePath = "/dev/spi_drv0";
 char* platformTwoPath = "/dev/spi_drv1";
 
@@ -31,40 +30,34 @@ public:
         {
             net::io_context ioc;
             tcp::acceptor acceptor(ioc, {tcp::v4(), 8080});
-            tcp::socket socket(ioc);
 
-            acceptor.accept(socket);
-
-            beast::flat_buffer buffer;
-            http::request<http::string_body> request;
-
-            bool serverActive = true;
-            while (serverActive)
+            while (true)
             {
+                tcp::socket socket(ioc);
+                acceptor.accept(socket);
+
+                beast::flat_buffer buffer;
+                http::request<http::string_body> request;
+
                 http::read(socket, buffer, request);
                 // Handle the received request here
                 http::response<http::string_body> response{http::status::ok, request.version()};
                 response.set(http::field::server, "C++ Server");
                 response.set(http::field::content_type, "application/json");
-
-                // Set CORS headers for all requests
                 response.set(http::field::access_control_allow_origin, "*");
                 response.set(http::field::access_control_allow_methods, "GET, POST, OPTIONS");
                 response.set(http::field::access_control_allow_headers, "Content-Type, Authorization");
                 response.set(http::field::access_control_expose_headers, "Authorization");
-                response.set(http::field::access_control_max_age, "3600"); // 1 hour
+                response.set(http::field::access_control_max_age, "3600");
 
                 if (request.method() == http::verb::options)
                 {
-                    // Respond to OPTIONS requests immediately
                     response.set(http::field::allow, "GET, POST, OPTIONS");
                     http::write(socket, response);
-                    return EXIT_SUCCESS;
+                    continue;
                 }
                 else if (request.method() == http::verb::post)
                 {
-                    // Handle POST request
-                    // Assuming the body is in the form of JSON
                     std::string body = request.body();
                     cout << "Received POST body: " << body << endl;
 
@@ -78,12 +71,10 @@ public:
                     }
                     else if (cmd == "startGame")
                     {
-                        // For platform 1:
                         int fd1 = openFile(platformOnePath);
                         // writeFile(fd1, /*start game char array*/);
                         closeFile(fd1);
 
-                        // For platform 2
                         int fd2 = openFile(platformTwoPath);
                         // writeFile( samme smøre );
                         closeFile(fd2);
@@ -113,12 +104,11 @@ public:
                     {
                         cout << "target not specified" << endl;
                     }
-                }
 
-                // For other HTTP methods (GET, POST, etc.), continue processing the request
-                response.keep_alive(request.keep_alive());
-                response.prepare_payload();
-                http::write(socket, response);
+                    response.keep_alive(request.keep_alive());
+                    response.prepare_payload();
+                    http::write(socket, response);
+                }
             }
         }
         catch (const std::exception &e)
