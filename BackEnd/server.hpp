@@ -133,10 +133,7 @@ public:
 
                         jsonArr.push_back(jsonObj2);
 
-                        nlohmann::json jsonObjM;
-                        jsonObjM["list"] = jsonArr;
-
-                        string jsonStr = jsonObjM.dump();
+                        string jsonStr = jsonArr.dump();
 
                         response.body() = jsonStr;
                         // response.body() = R"({
