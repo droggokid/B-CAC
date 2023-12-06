@@ -114,7 +114,7 @@ public:
                     {
                         cout << "Received GET gameRunning" << endl;
 
-                        response.body() = "true";
+                        response.body() = "false";
                     }
                     else if (target == "/leaderboard")
                     {
@@ -133,7 +133,10 @@ public:
 
                         jsonArr.push_back(jsonObj2);
 
-                        string jsonStr = jsonArr.dump();
+                        nlohmann::json jsonObjM;
+                        jsonObjM["list"] = jsonArr;
+
+                        string jsonStr = jsonObjM.dump();
 
                         response.body() = jsonStr;
                         // response.body() = R"({
