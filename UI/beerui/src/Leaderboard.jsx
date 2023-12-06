@@ -1,9 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {server} from "./Server";
 import TextBorder from "./TextBorder";
 import Text from "./Text";
+import { data } from "./Data";
 
-function Leaderboard(props) {
+export function Leaderboard(props) {
+    const [p1n, setp1n] = useState("Navn 1");
+    const [p2n, setp2n] = useState("Navn 2");
+    const [p3n, setp3n] = useState("Navn 3");
+    const [p1t, setp1t] = useState("00:00:00");
+    const [p2t, setp2t] = useState("00:00:00");
+    const [p3t, setp3t] = useState("00:00:00");
+    
+    useEffect(() => {
+        server.getLeaderboard();
+        setTimeout(() => {
+            console.log('recieved delayed leaderboard ' + data.recievedLeaderboard);
+            let parsedLeaderboard = JSON.parse(data.recievedLeaderboard);
+            setp1n(parsedLeaderboard[0].initials);
+            setp2n(parsedLeaderboard[1].initials);
+            //setp3n(parsedLeaderboard[2].initials);
+            setp1t(parsedLeaderboard[0].time);
+            setp2t(parsedLeaderboard[1].time);
+            //setp3t(parsedLeaderboard[2].time);
+        }, 1000);
+    });
     const leaderboardStyle = {
         display: 'flex',
         alignItems: 'center',
@@ -31,45 +52,40 @@ function Leaderboard(props) {
         position: 'relative', // Adjusted from absolute
         textAlign: 'left',
         paddingLeft: '10px', // Add left padding for better alignment
-    };
-
-    function setPlayerData(players) 
-    {
-        //(player container 1 reference name label) = players[0].name;
     }
-
+    ;
     return (
-        <div style={leaderboardStyle} >
-           <div className="vertcontainer">
-            <TextBorder>
-                <div className="container">
-                    <Text label="Navn 1:" />
-                    <Text label="00:00:00" />
-                </div>
-            </TextBorder>
-            <TextBorder>
-                <div className="container">
-                    <Text label="Navn 2:" />
-                    <Text label="00:00:00" />
-                </div>
-            </TextBorder>
-            <TextBorder>
-                <div className="container">
-                    <Text label="Navn 3:" />
-                    <Text label="00:00:00" />
-                </div>
-            </TextBorder>
+        <div style={leaderboardStyle}>
+            <div className="vertcontainer">
+                <TextBorder>
+                    <div className="container">
+                        <Text label={p1n}/>
+                        <Text label={p1t} id="player1time" />
+                    </div>
+                </TextBorder>
+                <TextBorder>
+                    <div className="container">
+                        <Text label={p2n} id="player2name" />
+                        <Text label={p2t} id="player2time" />
+                    </div>
+                </TextBorder>
+                <TextBorder>
+                    <div className="container">
+                        <Text label={p3n} id="player3name" />
+                        <Text label={p3t} id="player3time" />
+                    </div>
+                </TextBorder>
             </div>
-            {/* <div style={boxStyle}>
-                <div style={textStyle}>Name 1</div>
-                <div style={textStyle}>00:00:00</div>
-                <div style={textStyle}>Name 2</div>
-                <div style={textStyle}>00:00:00</div>
-                <div style={textStyle}>Name 3</div>
-                <div style={textStyle}>00:00:00</div>
-            </div> */}
         </div>
+        
     );
 }
 
-export default Leaderboard;
+// export function setPlayerData(players) 
+// {
+//     setp1n(players[0].initials);
+//     document.getElementById("player1time").innerHTML = players[0].time;
+// }
+
+
+//export default Leaderboard;
