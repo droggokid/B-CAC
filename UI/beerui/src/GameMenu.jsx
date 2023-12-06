@@ -29,13 +29,37 @@ function GameMenu({onComponentChange}) {
     const [rmTxtShow, setRmTxtShow] = useState(true);
     const [rmTxtLabel, setRmTxtLabel] = useState("Fjern alle genstande fra platforme, tryk derefter godkend");
     const [gameRunning, setGameRunning] = useState(false);
+    const [tareReady, setTareReady] = useState(0); // 0: ikke klar, 1: klar og afventer svar, 2: godkendt
+    const [gameReady, setGameReady] = useState(0);
     const [count, setCount] = useState(0);
-
-
 
     useEffect(() => {
         setTimeout(() => {
             setCount(count + 1);
+
+            if (tareReady === 1)
+            {
+                server.getTareReady();
+
+                if (data.recievedTareReady)
+                {
+                    setTareReady(2);
+                    tareDone();
+                    setTareReady(0);
+                }
+            }
+
+            if (gameReady === 1)
+            {
+                server.getGameReady();
+
+                if (data.recievedGameReady)
+                {
+                    setGameReady(2);
+                    setStartBtnActive(true);
+                    setGameReady(0);
+                }
+            }
 
             if (countDownShow)
             {
@@ -134,15 +158,18 @@ function GameMenu({onComponentChange}) {
         server.postTare();
         
         // Afvent tare godkendt fra psoc, aktiver derefter start-knap
-        server.getTareReady();
+        setTareReady(1);
+    }
 
-        setTimeout(() => {
-            setStartBtnActive(true);
-            setCheckBtnShow(false);
-            setCancelBtnShow(true);
-            setRmTxtLabel("Placer genstande på platforme, tryk derefter start");
+    function tareDone()
+    {
+        setStartBtnActive(false);
+        setCheckBtnShow(false);
+        setCancelBtnShow(true);
+        setRmTxtLabel("Placer genstande på platforme, tryk derefter start");
 
-        }, 1000);
+        // Afvent game ready fra psoc, start derefter nedtælling til spil start
+        setGameReady(1);
     }
 
     function cancel()
@@ -169,9 +196,6 @@ function GameMenu({onComponentChange}) {
         setCountDownShow(true);
 
         server.postStartGame(p1Initials, p2Initials, drinkType);
-
-        // Afvent game ready fra psoc, start derefter nedtælling til spil start
-        server.getGameReady();
 
         setTimeout(() => {
             setTimerShow(true);
