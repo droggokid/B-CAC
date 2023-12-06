@@ -33,6 +33,11 @@ function Leaderboard(props) {
         paddingLeft: '10px', // Add left padding for better alignment
     };
 
+    function setPlayerData(players) 
+    {
+        //(player container 1 reference name label) = players[0].name;
+    }
+
     return (
         <div style={leaderboardStyle} >
            <div className="vertcontainer">

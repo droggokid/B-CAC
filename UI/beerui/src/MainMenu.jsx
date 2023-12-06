@@ -30,15 +30,14 @@ function MainMenu({onComponentChange}) {
         setActiveComponent("InitialsBox");
     }
 
-    const handleOnClickLeaderboard = () => {
+    const handleOnClickLeaderboard = async () => {
         setActiveComponent("Leaderboard");
-        //let newdata = '[{"initials":"ABC","time":"01:00.30"},{"initials":"ABD","time":"01:00.40"}]';
-        let newdata = server.getLeaderboard();
-        setTimeout(() => {
-        console.log(typeof data.recievedData);
-        console.log("Data recieved:" + data.recievedData); //Parse lortet til et JSON og find initials og time
-        }, 1000);
-    }
+        let players = await server.getLeaderboard();
+            setTimeout(() => {
+                console.log('recieved delayed leaderboard ' + data.recievedLeaderboard);
+                let parsedLeaderboard = JSON.parse(data.recievedLeaderboard);                
+            }, 1000);
+        }
 
     const renderActiveComponent = () => {
         switch(activeComponent) {

@@ -16,8 +16,9 @@ class Data
         
         this.players[0] = new Player(0);
         this.players[1] = new Player(1);
+        this.players[2] = new Player(2);
 
-        this.recievedData = {};
+        this.recievedLeaderboard = "";
     }
 }
 

@@ -45,14 +45,13 @@ class Server
         return this.get("time");
     }
     
-    getLeaderboard() {
+    async getLeaderboard() {
         // Returns all the leaderboard data
         //let data1111 = this.get("leaderboard");
-        this.get("leaderboard");
+        data.recievedLeaderboard = await this.get("leaderboard");
         setTimeout(() => {
-            console.log(data.recievedData);
-        }, 1000);
-        return data.recievedData;
+            return JSON.parse(data.recievedLeaderboard);
+        }, 900);
     }
     // POST methods
 
@@ -76,12 +75,12 @@ class Server
             if (this.xhr.status === 200)
             {
                 console.log(this.xhr.responseText);
-                data.recievedData = (this.xhr.responseText);
+                data.recievedLeaderboard = this.xhr.responseText;
             }
         };
         this.xhr.send();
 
-        return this.xhr.responseText;
+
     }
 
     post(postData)
