@@ -18,6 +18,12 @@ class Data
         this.players[1] = new Player(1);
         this.players[2] = new Player(2);
 
+        this.recievedGet = {};
+
+        this.recievedTareReady = false;
+        this.recievedGameReady = false;
+        this.recievedGameRunning = false;
+        this.recievedTime = "";
         this.recievedLeaderboard = "";
     }
 }
