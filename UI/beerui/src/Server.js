@@ -14,6 +14,7 @@ class Server
     {
         this.url = url;
         this.xhr = new XMLHttpRequest();
+        this.getDelay = 800;
     }
 
     // GET methods
@@ -21,38 +22,52 @@ class Server
     getTareReady()
     {
         // Return boolean if taring is done
-        //return this.get("tareReady") === "true" ? true : false; // Prod
-        return this.get("tareReady"); // Dev
+        const getStr = "tareReady";
+        this.get(getStr);
+        setTimeout(() => {
+            data.recievedTareReady = data.recievedGet[getStr] === "true" ? true : false;
+        }, this.getDelay);
     }
 
     getGameReady()
     {
         // Return boolean if the game is ready to start
-        //return this.get("gameReady") === "true" ? true : false; // Prod
-        return this.get("gameReady"); // Dev
+        const getStr = "gameReady";
+        this.get(getStr);
+        setTimeout(() => {
+            data.recievedGameReady = data.recievedGet[getStr] === "true" ? true : false;
+        }, this.getDelay);
     }
     
     getGameRunning()
     {
         // Return boolean if the game is running
-        //return this.get("gameRunning") === "true" ? true : false; // Prod
-        return this.get("gameRunning"); // Dev
+        const getStr = "gameRunning";
+        this.get(getStr);
+        setTimeout(() => {
+            data.recievedGameRunning = data.recievedGet[getStr] === "true" ? true : false;
+        }, this.getDelay);
     }
 
     getTime()
     {
         // Returns the exact times of the players
-        return this.get("time");
+        const getStr = "time";
+        this.get(getStr);
+        setTimeout(() => {
+            data.recievedTime = JSON.parse(data.recievedGet[getStr].replace(/'/g, '"'));
+        }, this.getDelay);
     }
     
-    async getLeaderboard() {
+    getLeaderboard() {
         // Returns all the leaderboard data
-        //let data1111 = this.get("leaderboard");
-        data.recievedLeaderboard = await this.get("leaderboard");
+        const getStr = "leaderboard";
+        this.get(getStr);
         setTimeout(() => {
-            return JSON.parse(data.recievedLeaderboard);
-        }, 900);
+            data.recievedLeaderboard = JSON.parse(data.recievedGet[getStr].replace(/'/g, '"'));
+        }, this.getDelay);
     }
+
     // POST methods
 
     postTare()
@@ -74,8 +89,9 @@ class Server
         this.xhr.onload = () => {
             if (this.xhr.status === 200)
             {
-                console.log(this.xhr.responseText);
-                data.recievedLeaderboard = this.xhr.responseText;
+                // console.log(this.xhr.responseText);
+                // data.recievedLeaderboard = this.xhr.responseText;
+                data.recievedGet[getData] = this.xhr.responseText;
             }
         };
         this.xhr.send();
