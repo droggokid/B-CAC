@@ -49,38 +49,52 @@ function GameMenu({onComponentChange}) {
 
             if (gameRunning)
             {
-                let gameRunningResp = true;//server.getGameRunning();
+                server.getGameRunning();
                 
-                switch (gameRunningResp)
+                switch (data.recievedGameRunning)
                 {
                     case true:
                         setTimerSec(timerSec + 1);
-                        // break;
+                        break;
                         
                     // End of game code
-                    default:
                     case false:
                         setGameRunning(false);
                         
                         server.getTime();
                         
-                        setTimeout(() => { 
-                            console.log(data.recievedTime);
+                        setTimeout(() => {
+                            data.players[0].setTime(data.recievedTime["p1"]);
+                            data.players[1].setTime(data.recievedTime["p2"]);
 
                             // Opdater tider og vinder tekst når det er modtaget
-                            setP1Time("1");
-                            setP2Time("2");
+                            setP1Time(data.players[0].dnf ? "DNF" : data.players[0].time);
+                            setP2Time(data.players[1].dnf ? "DNF" : data.players[1].time);
+
+                            let winner = null;
+                            if (!data.players[0].dnf && !data.players[1].dnf)
+                            {
+                                winner = data.players[0].timeMs < data.players[1].timeMs ? 0 : 1;
+                                setWinLabel(`Player ${data.players[winner].initials} har vundet!`);
+                            }
+                            else if (data.players[0].dnf && data.players[1].dnf)
+                            {
+                                winner = "DNF";
+                                setWinLabel(`Alle fik DNF!`);
+                            }
+                            else
+                            {
+                                winner = data.players[0].dnf ? 1 : 0;
+                                setWinLabel(`Player ${data.players[winner].initials} har vundet!`);
+                            }
                             
                             setTimerShow(false);
-                            setWinLabel("Player XXX har vundet!");
                             setWinShow(true);
-                        }, 1000);
-                        
-                        
+                        }, 2000);
                         break;
 
-                    //default:
-                        console.warn("No connection to server"); 
+                    default:
+                        console.warn("Game running response not recognized"); 
                         setTimerSec(timerSec + 1);
                 }
             }

@@ -15,15 +15,22 @@ export function Leaderboard(props) {
     useEffect(() => {
         server.getLeaderboard();
         setTimeout(() => {
-            console.log('recieved delayed leaderboard ' + data.recievedLeaderboard);
-            let parsedLeaderboard = data.recievedLeaderboard;
-            setp1n(parsedLeaderboard[0].initials);
-            setp2n(parsedLeaderboard[1].initials);
-            //setp3n(parsedLeaderboard[2].initials);
-            setp1t(parsedLeaderboard[0].time);
-            setp2t(parsedLeaderboard[1].time);
-            //setp3t(parsedLeaderboard[2].time);
-        }, 1000);
+            try
+            {
+                //console.log('recieved delayed leaderboard ' + data.recievedLeaderboard);
+                let parsedLeaderboard = data.recievedLeaderboard;
+                setp1n(parsedLeaderboard[0].initials);
+                setp2n(parsedLeaderboard[1].initials);
+                //setp3n(parsedLeaderboard[2].initials);
+                setp1t(parsedLeaderboard[0].time);
+                setp2t(parsedLeaderboard[1].time);
+                //setp3t(parsedLeaderboard[2].time);
+            }
+            catch (e)
+            {
+                console.warn(e);
+            }
+        }, 2000);
     });
     const leaderboardStyle = {
         display: 'flex',
