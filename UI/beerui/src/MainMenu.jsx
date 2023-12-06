@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Button from "./Button";
 import InitialsBox from "./InitialsBox";
-import Leaderboard from "./Leaderboard";
+import { Leaderboard, setPlayerData } from "./Leaderboard";
 import yourImage from "./b-cac_logo.png";
 import "./mainMenu.css";
 import { server } from "./Server";
@@ -31,12 +31,7 @@ function MainMenu({onComponentChange}) {
     }
 
     const handleOnClickLeaderboard = async () => {
-        setActiveComponent("Leaderboard");
-        let players = await server.getLeaderboard();
-            setTimeout(() => {
-                console.log('recieved delayed leaderboard ' + data.recievedLeaderboard);
-                let parsedLeaderboard = JSON.parse(data.recievedLeaderboard);                
-            }, 1000);
+        setActiveComponent("Leaderboard" );
         }
 
     const renderActiveComponent = () => {

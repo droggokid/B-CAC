@@ -49,7 +49,7 @@ function GameMenu({onComponentChange}) {
 
             if (gameRunning)
             {
-                let gameRunningResp = server.getGameRunning();
+                let gameRunningResp = true;//server.getGameRunning();
                 
                 switch (gameRunningResp)
                 {
@@ -58,23 +58,28 @@ function GameMenu({onComponentChange}) {
                         // break;
                         
                     // End of game code
+                    default:
                     case false:
                         setGameRunning(false);
                         
-                        let times = server.getTime();
-                        console.log(times)
+                        server.getTime();
                         
-                        // Opdater tider og vinder tekst når det er modtaget
-                        setP1Time("1");
-                        setP2Time("2");
+                        setTimeout(() => { 
+                            console.log(data.recievedTime);
+
+                            // Opdater tider og vinder tekst når det er modtaget
+                            setP1Time("1");
+                            setP2Time("2");
+                            
+                            setTimerShow(false);
+                            setWinLabel("Player XXX har vundet!");
+                            setWinShow(true);
+                        }, 1000);
                         
-                        setTimerShow(false);
-                        setWinLabel("Player XXX har vundet!");
-                        setWinShow(true);
                         
                         break;
 
-                    default:
+                    //default:
                         console.warn("No connection to server"); 
                         setTimerSec(timerSec + 1);
                 }

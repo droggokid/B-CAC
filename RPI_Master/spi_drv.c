@@ -5,6 +5,7 @@
 
 #define MAXLEN 32
 #define MODULE_DEBUG 1 // Enable/Disable Debug messages
+#define BYTES_TO_RECEIVE 3
 
 /* Char Driver Globals */
 static struct spi_driver spi_drv_spi_driver;
@@ -13,6 +14,10 @@ static struct class *spi_drv_class;
 static dev_t devno;
 static struct cdev spi_drv_cdev;
 uint8_t command_byte = 0x00;
+static uint32_t minutter_ = 0;
+static uint32_t sekunder_ = 0;
+static uint32_t millisekunder_ = 0;
+static bool dataProcessed = false;
 
 /* Definition of SPI devices */
 struct psoc_spi_dev
@@ -110,7 +115,7 @@ ssize_t spi_drv_write(struct file *filep, const char __user *ubuf,
 
     printk(KERN_ALERT "Writing to spi_drv [Minor] %i \n", minor);
 
-    /* Limit copy length to MAXLEN allocated andCopy from user */
+    /* Limit copy length to MAXLEN allocated and copy from user */
     len = count < MAXLEN ? count : MAXLEN;
     if (copy_from_user(kbuf, ubuf, len))
         return -EFAULT;
@@ -121,11 +126,7 @@ ssize_t spi_drv_write(struct file *filep, const char __user *ubuf,
     if (MODULE_DEBUG)
         printk("string from user: %s\n", kbuf);
 
-    /* Convert sting to int */
-    sscanf(kbuf, "%i", &value);
-    if (MODULE_DEBUG)
-        printk("value %i\n", value);
-
+    /* Convert string to int */
     if (sscanf(kbuf, "%i", &value) != 1)
     {
         printk(KERN_ALERT "Failed to convert string to integer\n");
@@ -134,10 +135,34 @@ ssize_t spi_drv_write(struct file *filep, const char __user *ubuf,
 
     command_byte = value;
 
+    /* Initialize SPI message and transfers */
+    struct spi_transfer t[1];
+    struct spi_message m;
+    uint8_t tx_buf = command_byte;
+
+    memset(t, 0, sizeof(t));
+    spi_message_init(&m);
+    m.spi = spi_devs[minor].spi;
+
+    /* Set up the SPI transfer for sending the command to the PSoC */
+    t[0].tx_buf = &tx_buf;
+    t[0].len = 1;
+    t[0].bits_per_word = 8;
+    spi_message_add_tail(&t[0], &m);
+
+    /* Send the command byte */
+    int err = spi_sync(spi_devs[minor].spi, &m);
+    if (err)
+    {
+        printk(KERN_ALERT "FAILED spi_sync: %d\n", err);
+        // Handle the error as needed
+        return err;
+    }
+
     /* Legacy file ptr f_pos. Used to support
-     * random access but in char drv we dont!
-     * Move it the length actually  written
-     * for compability */
+     * random access but in char drv we don't!
+     * Move it the length actually written
+     * for compatibility */
     *f_pos += len;
 
     /* return length actually written */
@@ -150,12 +175,14 @@ ssize_t spi_drv_write(struct file *filep, const char __user *ubuf,
 ssize_t spi_drv_read(struct file *filep, char __user *ubuf,
                      size_t count, loff_t *f_pos)
 {
-    int err;
     int minor, len;
     struct spi_transfer t[1];
     struct spi_message m;
     char resultBuf[MAXLEN];
+    uint8_t rx_buf_time[BYTES_TO_RECEIVE];
     uint8_t resultBuff[2];
+    uint8_t tx_byte = 0x01;
+
     s16 result;
 
     minor = iminor(filep->f_inode);
@@ -165,50 +192,52 @@ ssize_t spi_drv_read(struct file *filep, char __user *ubuf,
     spi_message_init(&m);
     m.spi = spi_devs[minor].spi;
 
-    /* Set up the SPI transfer for sending the command to the PSoC */
-    /* Set up the SPI transfer for sending the command to the PSoC */
+        t[0].tx_buf = &tx_byte;
+        t[0].rx_buf = &resultBuff[minor]; // Use minor to index the result buffer based on the current slave
+        t[0].len = 1;
+        t[0].bits_per_word = 8; // Specify bits_per_word
+        t[0].delay_usecs = 1000;
+        spi_message_add_tail(&t[0], &m);
 
-    t[0].tx_buf = &command_byte;
-    t[0].rx_buf = &resultBuff[minor]; // Use minor to index the result buffer based on the current slave
-    t[0].len = 1;
-    t[0].bits_per_word = 8; // Specify bits_per_word
-    spi_message_add_tail(&t[0], &m);
+        int err = spi_sync(spi_devs[minor].spi, &m);
 
-    err = spi_sync(spi_devs[minor].spi, &m);
+        if (err)
+        {
+            printk(KERN_ALERT "FAILED spi_sync: %d\n", err);
+            return err;
+        }
 
-    if (err)
-    {
-        printk(KERN_ALERT "FAILED spi_sync: %d\n", err);
-        return err;
-    }
+        result = resultBuff[minor];
 
-    result = resultBuff[minor];
+        if (MODULE_DEBUG)
+            printk(KERN_ALERT "%s-%i read: %i\n",
+                   spi_devs[minor].spi->modalias, spi_devs[minor].channel, result);
 
-    if (MODULE_DEBUG)
-        printk(KERN_ALERT "%s-%i read: %i\n",
-               spi_devs[minor].spi->modalias, spi_devs[minor].channel, result);
+        /* Convert integer to string limited to "count" size. Returns
+         * length excluding NULL termination */
+        len = snprintf(resultBuf, count, "%u\n", result);
+        if (len >= count)
+        {
+            printk(KERN_ALERT "User buffer too small to hold the result\n");
+            return -EINVAL; // Return an appropriate error code
+        }
 
-    /* Convert integer to string limited to "count" size. Returns
-     * length excluding NULL termination */
-    len = snprintf(resultBuf, count, "%u\n", result);
-    if (len >= count)
-    {
-        printk(KERN_ALERT "User buffer too small to hold the result\n");
-        return -EINVAL; // Return an appropriate error code
-    }
+        /* Append Length of NULL termination */
+        len++;
 
-    /* Append Length of NULL termination */
-    len++;
+        /* Copy data to user space */
+        if (copy_to_user(ubuf, resultBuf, len))
+            return -EFAULT;
 
-    /* Copy data to user space */
-    if (copy_to_user(ubuf, resultBuf, len))
-        return -EFAULT;
-
-    /* Move fileptr */
-    *f_pos += len;
+        /* Move fileptr */
+        *f_pos += len;
 
     return len;
 }
+
+
+  
+    
 
 /*
  * Character Driver File Operations Structure
@@ -270,7 +299,7 @@ static int spi_drv_probe(struct spi_device *sdev)
     return err;
 }
 
-static void spi_drv_remove(struct spi_device *sdev)
+static int spi_drv_remove(struct spi_device *sdev)
 {
     int its_minor = 0;
 
@@ -286,6 +315,8 @@ static void spi_drv_remove(struct spi_device *sdev)
         }
         ++its_minor;
     }
+
+    return 0;
 }
 
 /*
