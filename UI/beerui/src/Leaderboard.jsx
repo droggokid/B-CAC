@@ -5,9 +5,9 @@ import Text from "./Text";
 import { data } from "./Data";
 
 export function Leaderboard(props) {
-    const [p1n, setp1n] = useState("Navn 1");
-    const [p2n, setp2n] = useState("Navn 2");
-    const [p3n, setp3n] = useState("Navn 3");
+    const [p1n, setp1n] = useState("Loading..");
+    const [p2n, setp2n] = useState("Loading..");
+    const [p3n, setp3n] = useState("Loading..");
     const [p1t, setp1t] = useState("00:00:00");
     const [p2t, setp2t] = useState("00:00:00");
     const [p3t, setp3t] = useState("00:00:00");
