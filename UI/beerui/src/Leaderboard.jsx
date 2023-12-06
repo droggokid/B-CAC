@@ -16,7 +16,7 @@ export function Leaderboard(props) {
         server.getLeaderboard();
         setTimeout(() => {
             console.log('recieved delayed leaderboard ' + data.recievedLeaderboard);
-            let parsedLeaderboard = JSON.parse(data.recievedLeaderboard);
+            let parsedLeaderboard = data.recievedLeaderboard;
             setp1n(parsedLeaderboard[0].initials);
             setp2n(parsedLeaderboard[1].initials);
             //setp3n(parsedLeaderboard[2].initials);
