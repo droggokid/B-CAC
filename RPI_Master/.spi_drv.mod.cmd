@@ -1,1 +1,0 @@
-cmd_/home/stud/Desktop/Semesterprojekt/B-CAC/RPI_Master/spi_drv.mod := { echo  /home/stud/Desktop/Semesterprojekt/B-CAC/RPI_Master/spi_drv.o; echo; } > /home/stud/Desktop/Semesterprojekt/B-CAC/RPI_Master/spi_drv.mod
