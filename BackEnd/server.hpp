@@ -108,13 +108,13 @@ public:
                     {
                         cout << "Received GET time" << endl;
 
-                        response.body() = R"({'p1': '01:10.45', 'p2': '01:11.10'})";
+                        response.body() = R"({'p1': '01:12.45', 'p2': '01:11.10'})";
                     }
                     else if (target == "/gameRunning")
                     {
                         cout << "Received GET gameRunning" << endl;
 
-                        response.body() = "true";
+                        response.body() = "false";
                     }
                     else if (target == "/leaderboard")
                     {

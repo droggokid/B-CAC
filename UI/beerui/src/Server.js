@@ -25,7 +25,14 @@ class Server
         const getStr = "tareReady";
         this.get(getStr);
         setTimeout(() => {
-            data.recievedTareReady = data.recievedGet[getStr] === "true" ? true : false;
+            try
+            {
+                data.recievedTareReady = data.recievedGet[getStr] === "true" ? true : false;
+            }
+            catch (e)
+            {
+                console.warn(e);
+            }
         }, this.getDelay);
     }
 
@@ -35,7 +42,14 @@ class Server
         const getStr = "gameReady";
         this.get(getStr);
         setTimeout(() => {
-            data.recievedGameReady = data.recievedGet[getStr] === "true" ? true : false;
+            try
+            {
+                data.recievedGameReady = data.recievedGet[getStr] === "true" ? true : false;
+            }
+            catch (e)
+            {
+                console.warn(e);
+            }
         }, this.getDelay);
     }
     
@@ -45,7 +59,14 @@ class Server
         const getStr = "gameRunning";
         this.get(getStr);
         setTimeout(() => {
-            data.recievedGameRunning = data.recievedGet[getStr] === "true" ? true : false;
+            try
+            {
+                data.recievedGameRunning = data.recievedGet[getStr] === "true" ? true : false;
+            }
+            catch (e)
+            {
+                console.warn(e);
+            }
         }, this.getDelay);
     }
 
@@ -55,7 +76,14 @@ class Server
         const getStr = "time";
         this.get(getStr);
         setTimeout(() => {
-            data.recievedTime = JSON.parse(data.recievedGet[getStr].replace(/'/g, '"'));
+            try
+            {
+                data.recievedTime = JSON.parse(data.recievedGet[getStr].replace(/'/g, '"'));
+            }
+            catch (e)
+            {
+                console.warn(e);
+            }
         }, this.getDelay);
     }
     
@@ -64,7 +92,14 @@ class Server
         const getStr = "leaderboard";
         this.get(getStr);
         setTimeout(() => {
-            data.recievedLeaderboard = JSON.parse(data.recievedGet[getStr].replace(/'/g, '"'));
+            try
+            {
+                data.recievedLeaderboard = JSON.parse(data.recievedGet[getStr].replace(/'/g, '"'));
+            }
+            catch (e)
+            {
+                console.warn(e);
+            }
         }, this.getDelay);
     }
 
@@ -89,8 +124,7 @@ class Server
         this.xhr.onload = () => {
             if (this.xhr.status === 200)
             {
-                // console.log(this.xhr.responseText);
-                // data.recievedLeaderboard = this.xhr.responseText;
+                console.log("Raw response from server: " + this.xhr.responseText);
                 data.recievedGet[getData] = this.xhr.responseText;
             }
         };
