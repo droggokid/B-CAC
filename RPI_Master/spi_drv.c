@@ -17,6 +17,8 @@ uint8_t command_byte = 0x00;
 static uint8_t minutter_ = 0;
 static uint8_t sekunder_ = 0;
 static uint8_t millisekunder_ = 0;
+static uint8_t gameReady_ = 0;
+static uint8_t DNF_ = 0;
 
 /* Definition of SPI devices */
 struct psoc_spi_dev
@@ -179,6 +181,16 @@ ssize_t spi_drv_write(struct file *filep, const char __user *ubuf,
     case 0x04:
         millisekunder_ = rx_buf;
         printk("Millisekunder %u\n", millisekunder_);
+        break;
+
+    case 0x05:
+        gameReady_ = rx_buf;
+        printk("Gameready:c %u\n", gameReady_);
+        break;
+
+    case 0x06:
+        DNF_ = rx_buf;
+        printk("DNF: %u\n", DNF_);
         break;
 
     default:
