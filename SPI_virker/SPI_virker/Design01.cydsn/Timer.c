@@ -50,7 +50,7 @@ uint32 stopTidsTagning()
 uint8_t convertMinutter(uint32_t time_1)
 {
     // Assuming time is a 32-bit integer
-    uint8_t minutter;
+    uint8_t minutter = 0;
     minutter = (time_1 / (1000 * 60)) & 0xFF;   // Minutter
     return minutter;
 }
@@ -58,15 +58,16 @@ uint8_t convertMinutter(uint32_t time_1)
 uint8_t convertSekunder(uint32_t time_2)
 {
     // Assuming time is a 32-bit integer
-    uint8_t sekunder;
+    uint8_t sekunder = 0;
     sekunder = ((time_2 / 1000) % 60) & 0xFF;   // Sekunder
     return sekunder;
 }
 
 uint8_t convertMillisekunder(uint32_t time_3)
 {
+    uint16_t temp = 0;
     // Assuming time is a 32-bit integer
-    uint8_t milliSekunder;
-    milliSekunder = (time_3 % 1000) & 0xFF;     // Millisekunder
+    uint8_t milliSekunder = 0;
+    milliSekunder = ((time_3 % 1000)/100) & 0xFF; // Millisekunder
     return milliSekunder;
 }

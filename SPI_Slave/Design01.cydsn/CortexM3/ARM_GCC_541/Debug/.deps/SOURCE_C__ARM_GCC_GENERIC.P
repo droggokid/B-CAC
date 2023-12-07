@@ -1,120 +1,120 @@
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/CortexM3/ARM_GCC_541/Debug/main.o : C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/A1.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/A1_aliases.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/A2.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/A2_aliases.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/ADC_SAR_1.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/ADC_SAR_1_ExtVref.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/ADC_SAR_1_ExtVref_aliases.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/ADC_SAR_1_IRQ.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/ADC_SAR_1_theACLK.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/B1.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/B1_aliases.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/B2.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/B2_aliases.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/CyDmac.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/CyFlash.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/CyLib.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/CySpc.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/MISO_1.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/MISO_1_aliases.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/MOSI_1.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/MOSI_1_aliases.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/PWM_1.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/Pin_ADC_in.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/Pin_ADC_in_aliases.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/SCLK_1.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/SCLK_1_aliases.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/SPIS_2.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/SPIS_2_IntClock.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/SPIS_2_PVT.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/SPI_RX_ISR.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/SS_1.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/SS_1_aliases.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/Timer_1.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/clock_1.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cmsis_armcc.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cmsis_compiler.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cmsis_gcc.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/core_cm3.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cyPm.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cy_em_eeprom.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cydevice.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cydevice_trm.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cydisabledsheets.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cyfitter.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cypins.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cytypes.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/ledGreen.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/ledGreen_aliases.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/ledRed.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/ledRed_aliases.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/project.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/FlagMotor.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Loadcell.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Timer.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/led.h C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/main.c C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/spi_Slave.h 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/CortexM3/ARM_GCC_541/Debug/main.o : C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/A1.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/A1_aliases.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/A2.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/A2_aliases.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/ADC_SAR_1.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/ADC_SAR_1_ExtVref.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/ADC_SAR_1_ExtVref_aliases.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/ADC_SAR_1_IRQ.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/ADC_SAR_1_theACLK.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/B1.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/B1_aliases.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/B2.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/B2_aliases.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/CyDmac.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/CyFlash.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/CyLib.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/CySpc.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/MISO_1.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/MISO_1_aliases.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/MOSI_1.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/MOSI_1_aliases.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/PWM_1.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/Pin_ADC_in.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/Pin_ADC_in_aliases.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/SCLK_1.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/SCLK_1_aliases.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/SPIS_2.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/SPIS_2_IntClock.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/SPIS_2_PVT.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/SPI_RX_ISR.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/SS_1.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/SS_1_aliases.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/Timer_1.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/clock_1.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cmsis_armcc.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cmsis_compiler.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cmsis_gcc.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/core_cm3.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cyPm.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cy_em_eeprom.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cydevice.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cydevice_trm.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cydisabledsheets.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cyfitter.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cypins.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cytypes.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/ledGreen.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/ledGreen_aliases.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/ledRed.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/ledRed_aliases.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/project.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/FlagMotor.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Loadcell.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Timer.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/led.h C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/main.c C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/spi_Slave.h 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/A1.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/A1.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/A1_aliases.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/A1_aliases.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/A2.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/A2.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/A2_aliases.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/A2_aliases.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/ADC_SAR_1.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/ADC_SAR_1.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/ADC_SAR_1_ExtVref.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/ADC_SAR_1_ExtVref.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/ADC_SAR_1_ExtVref_aliases.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/ADC_SAR_1_ExtVref_aliases.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/ADC_SAR_1_IRQ.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/ADC_SAR_1_IRQ.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/ADC_SAR_1_theACLK.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/ADC_SAR_1_theACLK.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/B1.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/B1.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/B1_aliases.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/B1_aliases.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/B2.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/B2.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/B2_aliases.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/B2_aliases.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/CyDmac.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/CyDmac.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/CyFlash.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/CyFlash.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/CyLib.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/CyLib.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/CySpc.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/CySpc.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/MISO_1.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/MISO_1.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/MISO_1_aliases.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/MISO_1_aliases.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/MOSI_1.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/MOSI_1.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/MOSI_1_aliases.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/MOSI_1_aliases.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/PWM_1.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/PWM_1.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/Pin_ADC_in.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/Pin_ADC_in.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/Pin_ADC_in_aliases.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/Pin_ADC_in_aliases.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/SCLK_1.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/SCLK_1.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/SCLK_1_aliases.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/SCLK_1_aliases.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/SPIS_2.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/SPIS_2.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/SPIS_2_IntClock.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/SPIS_2_IntClock.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/SPIS_2_PVT.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/SPIS_2_PVT.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/SPI_RX_ISR.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/SPI_RX_ISR.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/SS_1.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/SS_1.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/SS_1_aliases.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/SS_1_aliases.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/Timer_1.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/Timer_1.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/clock_1.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/clock_1.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cmsis_armcc.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cmsis_armcc.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cmsis_compiler.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cmsis_compiler.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cmsis_gcc.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cmsis_gcc.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/core_cm3.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/core_cm3.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cyPm.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cyPm.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cy_em_eeprom.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cy_em_eeprom.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cydevice.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cydevice.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cydevice_trm.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cydevice_trm.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cydisabledsheets.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cydisabledsheets.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cyfitter.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cyfitter.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cypins.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cypins.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cytypes.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/cytypes.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/ledGreen.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/ledGreen.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/ledGreen_aliases.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/ledGreen_aliases.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/ledRed.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/ledRed.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/ledRed_aliases.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/ledRed_aliases.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/project.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Generated_Source/PSoC5/project.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/FlagMotor.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/FlagMotor.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Loadcell.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Loadcell.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Timer.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/Timer.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/led.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/led.h : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/main.c : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/main.c : 
 
-C:/Users/deniz/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/spi_Slave.h : 
+C:/Users/jespe/OneDrive/Dokumenter/GitHub/B-CAC/SPI_Slave/Design01.cydsn/spi_Slave.h : 
 
