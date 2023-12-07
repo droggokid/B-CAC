@@ -41,29 +41,32 @@ uint32 stopTidsTagning()
 
     // Konverter tidsintervallet til tid i millisekunder
     time_interval_ms = time_interval_ticks/100;
-        
 
     Timer_1_Stop();
     
     return time_interval_ms;
 }
 
-uint8_t convertsekunds(uint32_t time)
+uint8_t convertMinutter(uint32_t time_1)
+{
+    // Assuming time is a 32-bit integer
+    uint8_t minutter;
+    minutter = (time_1 / (1000 * 60)) & 0xFF;   // Minutter
+    return minutter;
+}
+
+uint8_t convertSekunder(uint32_t time_2)
 {
     // Assuming time is a 32-bit integer
     uint8_t sekunder;
-    //tx_buf[0] = (time / (1000 * 60)) & 0xFF;         // Minutes
-    sekunder = ((time / 1000) % 60) & 0xFF;         // Seconds
-    //tx_buf[2] = (time % 1000) & 0xFF;                // Milliseconds
-      
-    // Initialize SPI
-    //InitializeSPI();
-
-    /* Send each byte over SPI
-    for (int i = 0; i < 3; ++i)
-    {
-        sendSPi(tx_buf[i]);
-    }
-    */
+    sekunder = ((time_2 / 1000) % 60) & 0xFF;   // Sekunder
     return sekunder;
+}
+
+uint8_t convertMillisekunder(uint32_t time_3)
+{
+    // Assuming time is a 32-bit integer
+    uint8_t milliSekunder;
+    milliSekunder = (time_3 % 1000) & 0xFF;     // Millisekunder
+    return milliSekunder;
 }

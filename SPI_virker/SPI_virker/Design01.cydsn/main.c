@@ -6,22 +6,30 @@
 #include "led.h"
 #include "spi_Slave.h"
 
+
 #include <stdio.h>
 
 
 CY_ISR_PROTO(ISR_SPI_rx_handler);
 void handleByteReceived(uint8_t byteReceived);
 static int UCstate=0;
-static uint8_t minutter_ = 0, sekunder_ = 0 , millisekunder_ = 0;
 uint8_t receivedData = 0;
-int roundedNum = 0;
+uint32 roundedNum = 0;
 uint32_t hardcode_tid = 6300;
 
 uint32 tid=0;
+uint8_t minutter = 0;
 uint8_t sekunder = 0;
+uint8_t milliSekunder = 0;
 uint8_t spilleterslut = 0;
 
-
+uint8_t roundNum(uint8_t num) { 
+        int temp = 0;
+        
+        temp = num % 100;
+        
+        return num - temp;
+    }
 
 int main(void)
 {
@@ -67,11 +75,7 @@ int main(void)
     stopFlagMotor();
     UCstate=0;
     spilleterslut = 0;
-    
-    
     }
-    
-    
     
     //der er sat en genstand på platform
     if(UCstate==2)
@@ -100,8 +104,6 @@ int main(void)
      
     //send signal til RPI, Hvis GameReady er 1 så er øllen godkendt
     
-    
-    
     //UC2 play game
     
     //Dermodtages GO signal
@@ -122,20 +124,25 @@ int main(void)
         //snprintf(uartBuffer,sizeof(uartBuffer),"Dnf (g) %d\r\n ", dnf);
         //UART_1_PutString(uartBuffer);
         }
-    startTidsTagning();//timer startes
+    //startTidsTagning();//timer startes
     
     while(Result_gram>10)
     Result_gram = readWeight(repeats,startoffset, factor, preload);
-    CyDelay(5000);
+    //CyDelay(65250);
+    
+    tid = 65250;
     
     //wait_for_weight(startoffset, factor,preload);//venter på der bliver plasseret en øl
-    timestop=1;
     
-    tid = stopTidsTagning(); //tid stoppes
+    
+    //tid = stopTidsTagning(); //tid stoppes 
     spilleterslut = 0x4;
     
     
-    roundedNum = (tid + 50) / 100 * 100;//rundes af til nærmeste 100 ms
+    //roundedNum = (tid + 50) / 100 * 100;//rundes af til nærmeste 100 ms
+    tid = roundNum(tid);
+    
+   
         {//print
         //snprintf(uartBuffer,sizeof(uartBuffer),"tid (g) %d\r\n ", tid);
         //UART_1_PutString(uartBuffer);
@@ -203,23 +210,31 @@ void handleByteReceived(uint8_t byteReceived)
         case 0xDD :
         {
             //Flagmotor
-            UCstate=4;
+            UCstate = 4;
             
         }
+        
         break;
         case 0x2 :
         {
-            //Flagmotor
-            UCstate=4;
-            
+            minutter = convertMinutter(tid);
+            sendSPi(minutter); 
         }
+        
         break;
         case 0x3 :
         {
-            sekunder = convertsekunds(tid);
+            sekunder = convertSekunder(tid);
             sendSPi(sekunder);
-            
         }
+        
+        break;
+        case 0x4 :
+        {
+            milliSekunder = convertMillisekunder(tid);
+            sendSPi(milliSekunder);
+        }
+     
         break;
         default :
         {
@@ -237,6 +252,7 @@ CY_ISR(ISR_SPI_rx_handler)
     if(receivedData == 0x1)
     {
         sendSPi(spilleterslut);
+        
     }
     //Handling of recieved SPI data
     handleByteReceived(receivedData);
