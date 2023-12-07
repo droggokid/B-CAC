@@ -17,9 +17,6 @@ uint8_t command_byte = 0x00;
 static uint8_t minutter_ = 0;
 static uint8_t sekunder_ = 0;
 static uint8_t millisekunder_ = 0;
-static bool dataProcessed = false;
-
-uint8_t secondsRecieved = 0x00;
 
 /* Definition of SPI devices */
 struct psoc_spi_dev
@@ -185,7 +182,6 @@ ssize_t spi_drv_write(struct file *filep, const char __user *ubuf,
         break;
 
     default:
-        // You can add a default case if you want to handle other values of command_byte
         break;
 }
 
