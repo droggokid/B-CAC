@@ -114,7 +114,7 @@ public:
                     {
                         cout << "Received GET gameRunning" << endl;
 
-                        response.body() = "false";
+                        response.body() = "true";
                     }
                     else if (target == "/leaderboard")
                     {
