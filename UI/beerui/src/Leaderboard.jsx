@@ -15,15 +15,22 @@ export function Leaderboard(props) {
     useEffect(() => {
         server.getLeaderboard();
         setTimeout(() => {
-            //console.log('recieved delayed leaderboard ' + data.recievedLeaderboard); //fix så det passer med 
-            let parsedLeaderboard = data.recievedLeaderboard;               //data og server
-            setp1n(parsedLeaderboard[0].initials);                          //TEST LIGE DEN VIRKER NÅR C SERVER KØRER
-            setp2n(parsedLeaderboard[1].initials);                          //OG VI ER FORBUNDET TIL HOTSPOT
-            //setp3n(parsedLeaderboard[2].initials);
-            setp1t(parsedLeaderboard[0].time);
-            setp2t(parsedLeaderboard[1].time);
-            //setp3t(parsedLeaderboard[2].time);
-        }, 1009); 
+            try
+            {
+                //console.log('recieved delayed leaderboard ' + data.recievedLeaderboard);
+                let parsedLeaderboard = data.recievedLeaderboard;
+                setp1n(parsedLeaderboard[0].initials);
+                setp2n(parsedLeaderboard[1].initials);
+                //setp3n(parsedLeaderboard[2].initials);
+                setp1t(parsedLeaderboard[0].time);
+                setp2t(parsedLeaderboard[1].time);
+                //setp3t(parsedLeaderboard[2].time);
+            }
+            catch (e)
+            {
+                console.warn(e);
+            }
+        }, 2000);
     });
     const leaderboardStyle = {
         display: 'flex',

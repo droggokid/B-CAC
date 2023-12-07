@@ -29,13 +29,37 @@ function GameMenu({onComponentChange}) {
     const [rmTxtShow, setRmTxtShow] = useState(true);
     const [rmTxtLabel, setRmTxtLabel] = useState("Fjern alle genstande fra platforme, tryk derefter godkend");
     const [gameRunning, setGameRunning] = useState(false);
+    const [tareReady, setTareReady] = useState(0); // 0: ikke klar, 1: klar og afventer svar, 2: godkendt
+    const [gameReady, setGameReady] = useState(0);
     const [count, setCount] = useState(0);
-
-
 
     useEffect(() => {
         setTimeout(() => {
             setCount(count + 1);
+
+            if (tareReady === 1)
+            {
+                server.getTareReady();
+
+                if (data.recievedTareReady)
+                {
+                    setTareReady(2);
+                    tareDone();
+                    setTareReady(0);
+                }
+            }
+
+            if (gameReady === 1)
+            {
+                server.getGameReady();
+
+                if (data.recievedGameReady)
+                {
+                    setGameReady(2);
+                    setStartBtnActive(true);
+                    setGameReady(0);
+                }
+            }
 
             if (countDownShow)
             {
@@ -49,38 +73,52 @@ function GameMenu({onComponentChange}) {
 
             if (gameRunning)
             {
-                let gameRunningResp = true;//server.getGameRunning();
+                server.getGameRunning();
                 
-                switch (gameRunningResp)
+                switch (data.recievedGameRunning)
                 {
                     case true:
                         setTimerSec(timerSec + 1);
-                        // break;
+                        break;
                         
                     // End of game code
-                    default:
                     case false:
                         setGameRunning(false);
                         
                         server.getTime();
                         
-                        setTimeout(() => { 
-                            console.log(data.recievedTime);
+                        setTimeout(() => {
+                            data.players[0].setTime(data.recievedTime["p1"]);
+                            data.players[1].setTime(data.recievedTime["p2"]);
 
                             // Opdater tider og vinder tekst når det er modtaget
-                            setP1Time("1");
-                            setP2Time("2");
+                            setP1Time(data.players[0].dnf ? "DNF" : data.players[0].time);
+                            setP2Time(data.players[1].dnf ? "DNF" : data.players[1].time);
+
+                            let winner = null;
+                            if (!data.players[0].dnf && !data.players[1].dnf)
+                            {
+                                winner = data.players[0].timeMs < data.players[1].timeMs ? 0 : 1;
+                                setWinLabel(`Player ${data.players[winner].initials} har vundet!`);
+                            }
+                            else if (data.players[0].dnf && data.players[1].dnf)
+                            {
+                                winner = "DNF";
+                                setWinLabel(`Alle fik DNF!`);
+                            }
+                            else
+                            {
+                                winner = data.players[0].dnf ? 1 : 0;
+                                setWinLabel(`Player ${data.players[winner].initials} har vundet!`);
+                            }
                             
                             setTimerShow(false);
-                            setWinLabel("Player XXX har vundet!");
                             setWinShow(true);
-                        }, 1000);
-                        
-                        
+                        }, 2000);
                         break;
 
-                    //default:
-                        console.warn("No connection to server"); 
+                    default:
+                        console.warn("Game running response not recognized"); 
                         setTimerSec(timerSec + 1);
                 }
             }
@@ -120,15 +158,18 @@ function GameMenu({onComponentChange}) {
         server.postTare();
         
         // Afvent tare godkendt fra psoc, aktiver derefter start-knap
-        server.getTareReady();
+        setTareReady(1);
+    }
 
-        setTimeout(() => {
-            setStartBtnActive(true);
-            setCheckBtnShow(false);
-            setCancelBtnShow(true);
-            setRmTxtLabel("Placer genstande på platforme, tryk derefter start");
+    function tareDone()
+    {
+        setStartBtnActive(false);
+        setCheckBtnShow(false);
+        setCancelBtnShow(true);
+        setRmTxtLabel("Placer genstande på platforme, tryk derefter start");
 
-        }, 1000);
+        // Afvent game ready fra psoc, start derefter nedtælling til spil start
+        setGameReady(1);
     }
 
     function cancel()
@@ -155,9 +196,6 @@ function GameMenu({onComponentChange}) {
         setCountDownShow(true);
 
         server.postStartGame(p1Initials, p2Initials, drinkType);
-
-        // Afvent game ready fra psoc, start derefter nedtælling til spil start
-        server.getGameReady();
 
         setTimeout(() => {
             setTimerShow(true);
