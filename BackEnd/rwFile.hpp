@@ -25,7 +25,8 @@ int writeFile(int fileDescriptor, const char* data)
 {
     // Step 5: Write Data to the Device Node
     const char *dataWrite = data;
-    ssize_t bytesWritten = write(fileDescriptor, dataWrite, 22);
+    // ssize_t bytesWritten = write(fileDescriptor, dataWrite, 22);
+    ssize_t bytesWritten = write(fileDescriptor, dataWrite, 8);
     if (bytesWritten < 0)
     {
         perror("Error writing to device node");
