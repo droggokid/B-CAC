@@ -1,4 +1,4 @@
---------------- Build Started: 12/06/2023 17:07:10 Project: Design01, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+--------------- Build Started: 12/07/2023 09:12:03 Project: Design01, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
 The code generation step is up to date.
 arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/main.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM3\ARM_GCC_541\Debug\main.o
 main.c: In function 'main':
@@ -22,6 +22,6 @@ No ELF section .cychecksum found, creating one
 Application checksum calculated and stored in ELF section .cychecksum
 Checksum calculated and stored in ELF section .cymeta
 cyelftool.exe -S C:\Users\deniz\OneDrive\Dokumenter\GitHub\B-CAC\SPI_virker\SPI_virker\Design01.cydsn\CortexM3\ARM_GCC_541\Debug\Design01.elf
-Flash used: 8030 of 262144 bytes (3,1 %).
+Flash used: 8022 of 262144 bytes (3,1 %).
 SRAM used: 2569 of 65536 bytes (3,9 %). Stack: 2048 bytes. Heap: 128 bytes.
---------------- Build Succeeded: 12/06/2023 17:07:13 ---------------
+--------------- Build Succeeded: 12/07/2023 09:12:05 ---------------

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKZoMT2.s 			page 1
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccm3P7Ap.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKZoMT2.s 			page 1
   28:Timer.c       **** void startTidsTagning()
   29:Timer.c       **** {
   28              		.loc 1 29 0
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKZoMT2.s 			page 2
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccm3P7Ap.s 			page 2
 
 
   29              		.cfi_startproc
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKZoMT2.s 			page 1
   40:Timer.c       ****     time_interval_ticks = start_counter - stop_counter;
   73              		.loc 1 40 0
   74 000a 2368     		ldr	r3, [r4]
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKZoMT2.s 			page 3
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccm3P7Ap.s 			page 3
 
 
   75 000c 181A     		subs	r0, r3, r0
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKZoMT2.s 			page 1
   56:Timer.c       **** }
  114              		.loc 1 56 0
  115 0006 C0F38730 		ubfx	r0, r0, #14, #8
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKZoMT2.s 			page 4
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccm3P7Ap.s 			page 4
 
 
  116              	.LVL6:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKZoMT2.s 			page 1
  162              		.section	.text.convertMillisekunder,"ax",%progbits
  163              		.align	2
  164              		.global	convertMillisekunder
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKZoMT2.s 			page 5
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccm3P7Ap.s 			page 5
 
 
  165              		.thumb
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKZoMT2.s 			page 1
  211              		.type	start_counter, %object
  212              		.size	start_counter, 4
  213              	start_counter:
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKZoMT2.s 			page 6
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccm3P7Ap.s 			page 6
 
 
  214 0000 00000000 		.space	4
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKZoMT2.s 			page 1
  268 0033 02       		.uleb128 0x2
  269 0034 01       		.byte	0x1
  270 0035 06       		.byte	0x6
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKZoMT2.s 			page 7
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccm3P7Ap.s 			page 7
 
 
  271 0036 F6020000 		.4byte	.LASF2
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKZoMT2.s 			page 1
  325 00a2 03       		.uleb128 0x3
  326 00a3 D8020000 		.4byte	.LASF14
  327 00a7 03       		.byte	0x3
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKZoMT2.s 			page 8
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccm3P7Ap.s 			page 8
 
 
  328 00a8 30       		.byte	0x30
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKZoMT2.s 			page 1
  382 011c B9000000 		.4byte	0xb9
  383 0120 00000000 		.4byte	.LFB65
  384 0124 2C000000 		.4byte	.LFE65-.LFB65
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKZoMT2.s 			page 9
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccm3P7Ap.s 			page 9
 
 
  385 0128 01       		.uleb128 0x1
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKZoMT2.s 			page 1
  439 01ac 01       		.uleb128 0x1
  440 01ad 50       		.byte	0x50
  441 01ae 00       		.byte	0
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKZoMT2.s 			page 10
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccm3P7Ap.s 			page 10
 
 
  442 01af 09       		.uleb128 0x9
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKZoMT2.s 			page 1
  496 0225 00000000 		.4byte	counter
  497 0229 0E       		.uleb128 0xe
  498 022a 62000000 		.4byte	.LASF36
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKZoMT2.s 			page 11
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccm3P7Ap.s 			page 11
 
 
  499 022e 01       		.byte	0x1
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKZoMT2.s 			page 1
  553 02a3 5B       		.byte	0x5b
  554 02a4 00       		.byte	0
  555              		.section	.debug_abbrev,"",%progbits
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKZoMT2.s 			page 12
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccm3P7Ap.s 			page 12
 
 
  556              	.Ldebug_abbrev0:
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKZoMT2.s 			page 1
  610 0035 00       		.byte	0
  611 0036 05       		.uleb128 0x5
  612 0037 16       		.uleb128 0x16
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKZoMT2.s 			page 13
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccm3P7Ap.s 			page 13
 
 
  613 0038 00       		.byte	0
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKZoMT2.s 			page 1
  667 0071 01       		.byte	0x1
  668 0072 3F       		.uleb128 0x3f
  669 0073 19       		.uleb128 0x19
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKZoMT2.s 			page 14
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccm3P7Ap.s 			page 14
 
 
  670 0074 03       		.uleb128 0x3
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKZoMT2.s 			page 1
  724 00ab 00       		.byte	0
  725 00ac 03       		.uleb128 0x3
  726 00ad 0E       		.uleb128 0xe
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKZoMT2.s 			page 15
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccm3P7Ap.s 			page 15
 
 
  727 00ae 3A       		.uleb128 0x3a
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKZoMT2.s 			page 1
  781 00e4 3F       		.uleb128 0x3f
  782 00e5 19       		.uleb128 0x19
  783 00e6 3C       		.uleb128 0x3c
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKZoMT2.s 			page 16
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccm3P7Ap.s 			page 16
 
 
  784 00e7 19       		.uleb128 0x19
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKZoMT2.s 			page 1
  838 004b 25       		.uleb128 0x25
  839 004c 1E       		.byte	0x1e
  840 004d 08       		.byte	0x8
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKZoMT2.s 			page 17
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccm3P7Ap.s 			page 17
 
 
  841 004e 20       		.byte	0x20
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKZoMT2.s 			page 1
  895 001c 2C000000 		.4byte	.LFE65-.LFB65
  896 0020 00000000 		.4byte	.LFB66
  897 0024 10000000 		.4byte	.LFE66-.LFB66
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKZoMT2.s 			page 18
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccm3P7Ap.s 			page 18
 
 
  898 0028 00000000 		.4byte	.LFB67
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKZoMT2.s 			page 1
  933              	.LASF7:
  934 004a 5F5F696E 		.ascii	"__int32_t\000"
  934      7433325F 
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKZoMT2.s 			page 19
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccm3P7Ap.s 			page 19
 
 
  934      7400
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKZoMT2.s 			page 1
  958      74696F6E 
  958      2D736563 
  958      74696F6E 
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKZoMT2.s 			page 20
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccm3P7Ap.s 			page 20
 
 
  959              	.LASF39:
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKZoMT2.s 			page 1
  981      50495F76 
  981      69726B65 
  981      725C5350 
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKZoMT2.s 			page 21
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccm3P7Ap.s 			page 21
 
 
  981      495F7669 
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKZoMT2.s 			page 1
  1007 02bd 73686F72 		.ascii	"short int\000"
  1007      7420696E 
  1007      7400
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKZoMT2.s 			page 22
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccm3P7Ap.s 			page 22
 
 
  1008              	.LASF47:

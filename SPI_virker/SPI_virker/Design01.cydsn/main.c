@@ -23,13 +23,13 @@ uint8_t sekunder = 0;
 uint8_t milliSekunder = 0;
 uint8_t spilleterslut = 0;
 
-uint8_t roundNum(uint8_t num) { 
-        int temp = 0;
-        
-        temp = num % 100;
-        
-        return num - temp;
-    }
+//uint8_t roundNum(uint8_t num) { 
+//       int temp = 0;
+//        
+//        temp = num % 100;
+//        
+//        return num - temp;
+//    }
 
 int main(void)
 {
@@ -130,7 +130,7 @@ int main(void)
     Result_gram = readWeight(repeats,startoffset, factor, preload);
     //CyDelay(65250);
     
-    tid = 65250;
+    tid = 65270;
     
     //wait_for_weight(startoffset, factor,preload);//venter på der bliver plasseret en øl
     
@@ -139,9 +139,8 @@ int main(void)
     spilleterslut = 0x4;
     
     
-    //roundedNum = (tid + 50) / 100 * 100;//rundes af til nærmeste 100 ms
-    tid = roundNum(tid);
-    
+    roundedNum = (tid + 50) / 100 * 100;//rundes af til nærmeste 100 ms
+    tid = roundedNum;
    
         {//print
         //snprintf(uartBuffer,sizeof(uartBuffer),"tid (g) %d\r\n ", tid);
@@ -232,6 +231,7 @@ void handleByteReceived(uint8_t byteReceived)
         case 0x4 :
         {
             milliSekunder = convertMillisekunder(tid);
+            milliSekunder = milliSekunder/100;
             sendSPi(milliSekunder);
         }
      
