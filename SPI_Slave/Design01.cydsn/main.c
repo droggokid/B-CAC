@@ -17,6 +17,11 @@ uint8_t receivedData = 0;
 int roundedNum = 0;
 uint32_t hardcode_tid = 6300;
 
+uint32 tid=0;
+uint8_t sekunder = 0;
+uint8_t spilleterslut = 0;
+
+
 
 int main(void)
 {
@@ -40,8 +45,7 @@ int main(void)
     uint8_t timestop=0;
     uint8_t dnf=0;
     char mode='h';
-    uint32_t tid=0;
-    
+     
     homeStepper(mode);
     stopFlagMotor();
    
@@ -62,6 +66,7 @@ int main(void)
     homeStepper(mode);
     stopFlagMotor();
     UCstate=0;
+    spilleterslut = 0;
     
     
     }
@@ -89,7 +94,7 @@ int main(void)
     //snprintf(uartBuffer,sizeof(uartBuffer),"gameReady (g) %d\r\n ", gameReady);
     //UART_1_PutString(uartBuffer);
     }
-    sendSPi(receivedData);
+    //sendSPi(receivedData);
     UCstate=0;
     }
      
@@ -103,8 +108,7 @@ int main(void)
     
     if(UCstate==3)
     {
-    SPIS_2_ClearTxBuffer();
-    SPIS_2_ClearRxBuffer();
+    
     Result_gram = readWeight(repeats,startoffset, factor, preload);
         {//print
         //snprintf(uartBuffer,sizeof(uartBuffer),"Read value (g) %d\r\n ", Result_gram);
@@ -122,12 +126,13 @@ int main(void)
     
     while(Result_gram>10)
     Result_gram = readWeight(repeats,startoffset, factor, preload);
+    CyDelay(5000);
     
-    
-    wait_for_weight(startoffset, factor,preload);//venter på der bliver plasseret en øl
+    //wait_for_weight(startoffset, factor,preload);//venter på der bliver plasseret en øl
     timestop=1;
-    tid = stopTidsTagning(); //tid stoppes
     
+    tid = stopTidsTagning(); //tid stoppes
+    spilleterslut = 0x4;
     
     
     roundedNum = (tid + 50) / 100 * 100;//rundes af til nærmeste 100 ms
@@ -139,8 +144,8 @@ int main(void)
         }
     //tid sendes
     
-    sendTimeOverSPI();
-    CyDelay(5000);
+    
+    //CyDelay(5000);
     Result_gram = readWeight(repeats,startoffset, factor, preload);
         {//print
         //snprintf(uartBuffer,sizeof(uartBuffer),"Read value (g) %d\r\n ", Result_gram);
@@ -202,6 +207,20 @@ void handleByteReceived(uint8_t byteReceived)
             
         }
         break;
+        case 0x2 :
+        {
+            //Flagmotor
+            UCstate=4;
+            
+        }
+        break;
+        case 0x3 :
+        {
+            sekunder = convertsekunds(tid);
+            sendSPi(sekunder);
+            
+        }
+        break;
         default :
         {
             // nothing
@@ -214,8 +233,13 @@ void handleByteReceived(uint8_t byteReceived)
 CY_ISR(ISR_SPI_rx_handler)
 {
     uint8_t receivedData = modtagetSPi();
+    
+    if(receivedData == 0x1)
+    {
+        sendSPi(spilleterslut);
+    }
     //Handling of recieved SPI data
     handleByteReceived(receivedData);
-    sendSPi(receivedData);
+    
         
 }

@@ -13,10 +13,11 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="SPI_virker\Design01\Source Files">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="SPI_virker\Design01\Source Files\main.c">
 <ExpandedNodeIds>
 <v>SPI_virker</v>
 <v>SPI_virker\Design01</v>
+<v>SPI_virker\Design01\TopDesign</v>
 <v>SPI_virker\Design01\Header Files</v>
 <v>SPI_virker\Design01\Source Files</v>
 </ExpandedNodeIds>
@@ -112,44 +113,6 @@
 <VisibleNodeIds>
 <v>SPI_virker</v>
 <v>SPI_virker\Design01</v>
-<v>SPI_virker\Design01\CortexM3</v>
-<v>SPI_virker\Design01\CortexM3\ARM_GCC_541</v>
-<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug</v>
-<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
-<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\A1.lst</v>
-<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\A2.lst</v>
-<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1.lst</v>
-<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_ExtVref.lst</v>
-<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_INT.lst</v>
-<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_IRQ.lst</v>
-<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_PM.lst</v>
-<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_theACLK.lst</v>
-<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\B1.lst</v>
-<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\B2.lst</v>
-<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\clock_1.lst</v>
-<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
-<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
-<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
-<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
-<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
-<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
-<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
-<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
-<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
-<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\FlagMotor.lst</v>
-<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\led.lst</v>
-<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\ledGreen.lst</v>
-<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\ledRed.lst</v>
-<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Loadcell.lst</v>
-<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
-<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\MISO_1.lst</v>
-<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\MOSI_1.lst</v>
-<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_ADC_in.lst</v>
-<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_1.lst</v>
-<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_1_PM.lst</v>
-<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\SCLK_1.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -192,8 +155,8 @@
 <Unloaded />
 <OpenDocs>
 <name v=".\Design01.cydsn\main.c" />
-<name v=".\Design01.cydsn\Design01.cydwr" />
-<name v=".\Design01.cydsn\spi_Slave.c" />
+<name v=".\Design01.cydsn\Timer.c" />
+<name v=".\Design01.cydsn\FlagMotor.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -201,7 +164,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1441, 583" SelectedTabbedMdiWindow="e07b4b12-a128-416e-8e43-2ab32d40d6ff"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="484e711b-00d9-46a8-afa6-4e80bcdb638f" /><DocumentWindow Key="C:\Users\jespe\OneDrive\Dokumenter\GitHub\B-CAC\SPI_Slave\Design01.cydsn\main.c" Guid="0f6768b2-bc25-4cea-a6f2-05a8ce3d9f85" /><DocumentWindow Key="C:\Users\jespe\OneDrive\Dokumenter\GitHub\B-CAC\SPI_Slave\Design01.cydsn\Design01.cydwr" Guid="55bb2e8d-b155-418e-9b86-875f8158a958" /><DocumentWindow Key="C:\Users\jespe\OneDrive\Dokumenter\GitHub\B-CAC\SPI_Slave\Design01.cydsn\spi_Slave.c" Guid="e07b4b12-a128-416e-8e43-2ab32d40d6ff" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="585, 574" SelectedTabbedMdiWindow="eb8fdcc6-b187-4e29-b49e-4904f04bb8ed"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="484e711b-00d9-46a8-afa6-4e80bcdb638f" /><DocumentWindow Key="C:\Users\jespe\OneDrive\Dokumenter\GitHub\B-CAC\SPI_virker\SPI_virker\Design01.cydsn\main.c" Guid="45175015-8017-498f-9b69-0b5328d2914a" /><DocumentWindow Key="C:\Users\jespe\OneDrive\Dokumenter\GitHub\B-CAC\SPI_virker\SPI_virker\Design01.cydsn\Timer.c" Guid="9698d804-469f-4eea-9142-676c33f8bf0b" /><DocumentWindow Key="C:\Users\jespe\OneDrive\Dokumenter\GitHub\B-CAC\SPI_virker\SPI_virker\Design01.cydsn\FlagMotor.c" Guid="eb8fdcc6-b187-4e29-b49e-4904f04bb8ed" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

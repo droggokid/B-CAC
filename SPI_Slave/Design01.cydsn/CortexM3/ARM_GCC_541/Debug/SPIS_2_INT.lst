@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccIc4cLU.s 			page 1
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccXDfbBy.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccIc4cLU.s 			page 1
   28:Generated_Source\PSoC5/SPIS_2_INT.c **** /*******************************************************************************
   29:Generated_Source\PSoC5/SPIS_2_INT.c **** * Function Name: SPIS_2_TX_ISR
   30:Generated_Source\PSoC5/SPIS_2_INT.c **** *
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccIc4cLU.s 			page 2
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccXDfbBy.s 			page 2
 
 
   31:Generated_Source\PSoC5/SPIS_2_INT.c **** * Summary:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccIc4cLU.s 			page 1
   68:Generated_Source\PSoC5/SPIS_2_INT.c ****         /* Component interrupt service code */
   69:Generated_Source\PSoC5/SPIS_2_INT.c **** 
   70:Generated_Source\PSoC5/SPIS_2_INT.c ****         /* See if TX data buffer is not empty and there is space in TX FIFO */
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccIc4cLU.s 			page 3
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccXDfbBy.s 			page 3
 
 
   71:Generated_Source\PSoC5/SPIS_2_INT.c ****         while(SPIS_2_txBufferRead != SPIS_2_txBufferWrite)
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccIc4cLU.s 			page 1
  125:Generated_Source\PSoC5/SPIS_2_INT.c **** *  Interrupt Service Routine for RX portion of the SPI Slave.
  126:Generated_Source\PSoC5/SPIS_2_INT.c **** *
  127:Generated_Source\PSoC5/SPIS_2_INT.c **** * Parameters:
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccIc4cLU.s 			page 4
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccXDfbBy.s 			page 4
 
 
  128:Generated_Source\PSoC5/SPIS_2_INT.c **** *  None.
@@ -217,40 +217,40 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccIc4cLU.s 			page 1
   60 0006 00000000 		.4byte	.Ldebug_abbrev0
   61 000a 04       		.byte	0x4
   62 000b 01       		.uleb128 0x1
-  63 000c 72000000 		.4byte	.LASF16
+  63 000c 29000000 		.4byte	.LASF16
   64 0010 0C       		.byte	0xc
-  65 0011 2F010000 		.4byte	.LASF17
-  66 0015 29000000 		.4byte	.LASF18
+  65 0011 E6000000 		.4byte	.LASF17
+  66 0015 5A010000 		.4byte	.LASF18
   67 0019 00000000 		.4byte	.Ldebug_ranges0+0
   68 001d 00000000 		.4byte	0
   69 0021 00000000 		.4byte	.Ldebug_line0
   70 0025 02       		.uleb128 0x2
   71 0026 01       		.byte	0x1
   72 0027 06       		.byte	0x6
-  73 0028 89010000 		.4byte	.LASF0
+  73 0028 40010000 		.4byte	.LASF0
   74 002c 02       		.uleb128 0x2
   75 002d 01       		.byte	0x1
   76 002e 08       		.byte	0x8
-  77 002f 53010000 		.4byte	.LASF1
+  77 002f 0A010000 		.4byte	.LASF1
   78 0033 02       		.uleb128 0x2
   79 0034 02       		.byte	0x2
   80 0035 05       		.byte	0x5
   81 0036 AF010000 		.4byte	.LASF2
   82 003a 02       		.uleb128 0x2
   83 003b 02       		.byte	0x2
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccIc4cLU.s 			page 5
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccXDfbBy.s 			page 5
 
 
   84 003c 07       		.byte	0x7
-  85 003d 76010000 		.4byte	.LASF3
+  85 003d 2D010000 		.4byte	.LASF3
   86 0041 02       		.uleb128 0x2
   87 0042 04       		.byte	0x4
   88 0043 05       		.byte	0x5
-  89 0044 66010000 		.4byte	.LASF4
+  89 0044 1D010000 		.4byte	.LASF4
   90 0048 02       		.uleb128 0x2
   91 0049 04       		.byte	0x4
   92 004a 07       		.byte	0x7
-  93 004b 00010000 		.4byte	.LASF5
+  93 004b B7000000 		.4byte	.LASF5
   94 004f 02       		.uleb128 0x2
   95 0050 08       		.byte	0x8
   96 0051 05       		.byte	0x5
@@ -258,7 +258,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccIc4cLU.s 			page 1
   98 0056 02       		.uleb128 0x2
   99 0057 08       		.byte	0x8
  100 0058 07       		.byte	0x7
- 101 0059 12010000 		.4byte	.LASF7
+ 101 0059 C9000000 		.4byte	.LASF7
  102 005d 03       		.uleb128 0x3
  103 005e 04       		.byte	0x4
  104 005f 05       		.byte	0x5
@@ -270,15 +270,15 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccIc4cLU.s 			page 1
  110 006b 02       		.uleb128 0x2
  111 006c 04       		.byte	0x4
  112 006d 04       		.byte	0x4
- 113 006e 29010000 		.4byte	.LASF9
+ 113 006e E0000000 		.4byte	.LASF9
  114 0072 02       		.uleb128 0x2
  115 0073 08       		.byte	0x8
  116 0074 04       		.byte	0x4
- 117 0075 6F010000 		.4byte	.LASF10
+ 117 0075 26010000 		.4byte	.LASF10
  118 0079 02       		.uleb128 0x2
  119 007a 01       		.byte	0x1
  120 007b 08       		.byte	0x8
- 121 007c 61010000 		.4byte	.LASF11
+ 121 007c 18010000 		.4byte	.LASF11
  122 0080 02       		.uleb128 0x2
  123 0081 08       		.byte	0x8
  124 0082 04       		.byte	0x4
@@ -288,7 +288,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccIc4cLU.s 			page 1
  128 0089 07       		.byte	0x7
  129 008a B9010000 		.4byte	.LASF13
  130 008e 04       		.uleb128 0x4
- 131 008f 95010000 		.4byte	.LASF14
+ 131 008f 4C010000 		.4byte	.LASF14
  132 0093 01       		.byte	0x1
  133 0094 33       		.byte	0x33
  134 0095 00000000 		.4byte	.LFB0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccIc4cLU.s 			page 1
  138 009f 04       		.uleb128 0x4
  139 00a0 1B000000 		.4byte	.LASF15
  140 00a4 01       		.byte	0x1
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccIc4cLU.s 			page 6
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccXDfbBy.s 			page 6
 
 
  141 00a5 90       		.byte	0x90
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccIc4cLU.s 			page 1
  195 002e 03       		.uleb128 0x3
  196 002f 0E       		.uleb128 0xe
  197 0030 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccIc4cLU.s 			page 7
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccXDfbBy.s 			page 7
 
 
  198 0031 0B       		.uleb128 0xb
@@ -418,93 +418,93 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccIc4cLU.s 			page 1
  242      00
  243              	.LASF15:
  244 001b 53504953 		.ascii	"SPIS_2_RX_ISR\000"
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccIc4cLU.s 			page 8
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccXDfbBy.s 			page 8
 
 
  244      5F325F52 
  244      585F4953 
  244      5200
- 245              	.LASF18:
- 246 0029 433A5C55 		.ascii	"C:\\Users\\deniz\\OneDrive\\Dokumenter\\GitHub\\B-C"
- 246      73657273 
- 246      5C64656E 
- 246      697A5C4F 
- 246      6E654472 
- 247 0056 41435C53 		.ascii	"AC\\SPI_Slave\\Design01.cydsn\000"
- 247      50495F53 
- 247      6C617665 
- 247      5C446573 
- 247      69676E30 
- 248              	.LASF16:
- 249 0072 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 249      43313120 
- 249      352E342E 
- 249      31203230 
- 249      31363036 
- 250 00a5 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 250      20726576 
- 250      6973696F 
- 250      6E203233 
- 250      37373135 
- 251 00d8 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 251      66756E63 
- 251      74696F6E 
- 251      2D736563 
- 251      74696F6E 
- 252              	.LASF5:
- 253 0100 6C6F6E67 		.ascii	"long unsigned int\000"
- 253      20756E73 
- 253      69676E65 
- 253      6420696E 
- 253      7400
- 254              	.LASF7:
- 255 0112 6C6F6E67 		.ascii	"long long unsigned int\000"
- 255      206C6F6E 
- 255      6720756E 
- 255      7369676E 
- 255      65642069 
- 256              	.LASF9:
- 257 0129 666C6F61 		.ascii	"float\000"
- 257      7400
- 258              	.LASF17:
- 259 012f 47656E65 		.ascii	"Generated_Source\\PSoC5\\SPIS_2_INT.c\000"
- 259      72617465 
- 259      645F536F 
- 259      75726365 
- 259      5C50536F 
- 260              	.LASF1:
- 261 0153 756E7369 		.ascii	"unsigned char\000"
- 261      676E6564 
- 261      20636861 
- 261      7200
- 262              	.LASF11:
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccIc4cLU.s 			page 9
+ 245              	.LASF16:
+ 246 0029 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 246      43313120 
+ 246      352E342E 
+ 246      31203230 
+ 246      31363036 
+ 247 005c 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 247      20726576 
+ 247      6973696F 
+ 247      6E203233 
+ 247      37373135 
+ 248 008f 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 248      66756E63 
+ 248      74696F6E 
+ 248      2D736563 
+ 248      74696F6E 
+ 249              	.LASF5:
+ 250 00b7 6C6F6E67 		.ascii	"long unsigned int\000"
+ 250      20756E73 
+ 250      69676E65 
+ 250      6420696E 
+ 250      7400
+ 251              	.LASF7:
+ 252 00c9 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 252      206C6F6E 
+ 252      6720756E 
+ 252      7369676E 
+ 252      65642069 
+ 253              	.LASF9:
+ 254 00e0 666C6F61 		.ascii	"float\000"
+ 254      7400
+ 255              	.LASF17:
+ 256 00e6 47656E65 		.ascii	"Generated_Source\\PSoC5\\SPIS_2_INT.c\000"
+ 256      72617465 
+ 256      645F536F 
+ 256      75726365 
+ 256      5C50536F 
+ 257              	.LASF1:
+ 258 010a 756E7369 		.ascii	"unsigned char\000"
+ 258      676E6564 
+ 258      20636861 
+ 258      7200
+ 259              	.LASF11:
+ 260 0118 63686172 		.ascii	"char\000"
+ 260      00
+ 261              	.LASF4:
+ 262 011d 6C6F6E67 		.ascii	"long int\000"
+ 262      20696E74 
+ 262      00
+ 263              	.LASF10:
+ 264 0126 646F7562 		.ascii	"double\000"
+ 264      6C6500
+ 265              	.LASF3:
+ 266 012d 73686F72 		.ascii	"short unsigned int\000"
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccXDfbBy.s 			page 9
 
 
- 263 0161 63686172 		.ascii	"char\000"
- 263      00
- 264              	.LASF4:
- 265 0166 6C6F6E67 		.ascii	"long int\000"
- 265      20696E74 
- 265      00
- 266              	.LASF10:
- 267 016f 646F7562 		.ascii	"double\000"
- 267      6C6500
- 268              	.LASF3:
- 269 0176 73686F72 		.ascii	"short unsigned int\000"
- 269      7420756E 
- 269      7369676E 
- 269      65642069 
- 269      6E7400
- 270              	.LASF0:
- 271 0189 7369676E 		.ascii	"signed char\000"
- 271      65642063 
- 271      68617200 
- 272              	.LASF14:
- 273 0195 53504953 		.ascii	"SPIS_2_TX_ISR\000"
- 273      5F325F54 
- 273      585F4953 
- 273      5200
+ 266      7420756E 
+ 266      7369676E 
+ 266      65642069 
+ 266      6E7400
+ 267              	.LASF0:
+ 268 0140 7369676E 		.ascii	"signed char\000"
+ 268      65642063 
+ 268      68617200 
+ 269              	.LASF14:
+ 270 014c 53504953 		.ascii	"SPIS_2_TX_ISR\000"
+ 270      5F325F54 
+ 270      585F4953 
+ 270      5200
+ 271              	.LASF18:
+ 272 015a 433A5C55 		.ascii	"C:\\Users\\jespe\\OneDrive\\Dokumenter\\GitHub\\B-C"
+ 272      73657273 
+ 272      5C6A6573 
+ 272      70655C4F 
+ 272      6E654472 
+ 273 0187 41435C53 		.ascii	"AC\\SPI_Slave\\Design01.cydsn\000"
+ 273      50495F53 
+ 273      6C617665 
+ 273      5C446573 
+ 273      69676E30 
  274              	.LASF12:
  275 01a3 6C6F6E67 		.ascii	"long double\000"
  275      20646F75 
