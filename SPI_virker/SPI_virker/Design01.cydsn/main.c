@@ -23,14 +23,6 @@ uint8_t sekunder = 0;
 uint8_t milliSekunder = 0;
 uint8_t spilleterslut = 0;
 
-//uint8_t roundNum(uint8_t num) { 
-//       int temp = 0;
-//        
-//        temp = num % 100;
-//        
-//        return num - temp;
-//    }
-
 int main(void)
 {
     CyGlobalIntEnable; /* Enable global interrupts. */
@@ -38,7 +30,6 @@ int main(void)
 
     // Initialize SPI
     InitializeSPI(); // Make sure this function is correctly configuring the SPI module
-    
     
     //Initiering
     initLoadcell();
@@ -59,126 +50,92 @@ int main(void)
    
     for(;;)
     {
-           //UC1 Game preperation
+    //UC1 Game preperation
     //Øl fjernet
-    if(UCstate==1)
+    if(UCstate == 1)
     
     {
     offset_Zerodrift_calibrate( repeats,  startoffset,  factor, preload);
     {
-    float zerodriftOffset = readWeight( repeats,startoffset,  factor, preload);
-    //snprintf(uartBuffer,sizeof(uartBuffer),"Read value (g) %f\r\n ", zerodriftOffset);
-    //UART_1_PutString(uartBuffer);
+    float zerodriftOffset;
     }
     
     homeStepper(mode);
     stopFlagMotor();
-    UCstate=0;
-    spilleterslut = 0x4;
+    initLed();
+    UCstate = 0;
+    spilleterslut = 0xA;
     }
     
     //der er sat en genstand på platform
-    if(UCstate==2)
+    if(UCstate == 2)
     {
-    wait_for_weight(startoffset, factor,preload);//venter på der bliver plasseret en øl
+    wait_for_weight(startoffset, factor,preload); //venter på der bliver plasseret en øl
     CyDelay(3000); //delay så flasken flader til ro
     Result_gram = readWeight( repeats,startoffset, factor, preload);
-    {
     
-    //snprintf(uartBuffer,sizeof(uartBuffer),"Read value (g) %d\r\n ", Result_gram);
-    //UART_1_PutString(uartBuffer);
-    
-    }
-    if(Result_gram>650)
-    gameReady=1;
+    if(Result_gram >= 650)
+    gameReady = 1;
     else
-    gameReady=0;
+    gameReady = 0;
     
-    {
-    //snprintf(uartBuffer,sizeof(uartBuffer),"gameReady (g) %d\r\n ", gameReady);
-    //UART_1_PutString(uartBuffer);
-    }
-    //sendSPi(receivedData);
     UCstate=0;
-    spilleterslut = 0x4;
+    spilleterslut = 0xB;
     }
      
     //send signal til RPI, Hvis GameReady er 1 så er øllen godkendt
-    
     //UC2 play game
-    
     //Dermodtages GO signal
-    
-    if(UCstate==3)
+    if(UCstate == 3)
     {
-    
     Result_gram = readWeight(repeats,startoffset, factor, preload);
-        {//print
-        //snprintf(uartBuffer,sizeof(uartBuffer),"Read value (g) %d\r\n ", Result_gram);
-        //UART_1_PutString(uartBuffer);
-        }
-    if(Result_gram<10)
-        dnf=1;
+
+    if(Result_gram <= 10){
+        dnf = 1;
+    }
     else
-        dnf=0;
-        {//print
-        //snprintf(uartBuffer,sizeof(uartBuffer),"Dnf (g) %d\r\n ", dnf);
-        //UART_1_PutString(uartBuffer);
-        }
-    //startTidsTagning();//timer startes
+        dnf = 0;
+
+    startTidsTagning();  //timer startes
     
-    while(Result_gram>10)
+    while(Result_gram > 10)
     Result_gram = readWeight(repeats,startoffset, factor, preload);
-    //CyDelay(65250);
+    }
     
-    tid = 72670;
-    
-    //wait_for_weight(startoffset, factor,preload);//venter på der bliver plasseret en øl
-    
-    
-    //tid = stopTidsTagning(); //tid stoppes 
-    
-    
-    
+    wait_for_weight(startoffset, factor,preload); //venter på der bliver plasseret en øl
+    tid = stopTidsTagning(); //tid stoppes 
+
     roundedNum = (tid + 50) / 100 * 100;//rundes af til nærmeste 100 ms
     tid = roundedNum;
-   
-        {//print
-        //snprintf(uartBuffer,sizeof(uartBuffer),"tid (g) %d\r\n ", tid);
-        //UART_1_PutString(uartBuffer);
-        //snprintf(uartBuffer,sizeof(uartBuffer),"tid (g) %d\r\n ", roundedNum);
-        //UART_1_PutString(uartBuffer);
-        }
+    spilleterslut = 0xC;
+    
     //tid sendes
-    
-    
-    //CyDelay(5000);
+    CyDelay(5000);
     Result_gram = readWeight(repeats,startoffset, factor, preload);
-        {//print
-        //snprintf(uartBuffer,sizeof(uartBuffer),"Read value (g) %d\r\n ", Result_gram);
-        //UART_1_PutString(uartBuffer);
-        }
-    if(Result_gram>310)
-        dnf=1;
-    //dnf value sendes
     
-        {//print
-        //snprintf(uartBuffer,sizeof(uartBuffer),"Dnf (g) %d\r\n ", dnf);
-        //UART_1_PutString(uartBuffer);
-        }
-    UCstate=0;
-     spilleterslut = 0x4;   
+    if(Result_gram > 310)
+        dnf = 1;
+    
+    //dnf value sendes
+    UCstate = 0;
+    spilleterslut = 0xD;
+    
     }
     
     //modtager win signal fra RPI
-    if(UCstate==4)
+    if(UCstate == 4)
     {
     
     stepperdriver_rotateTo(90, mode);
-    stopFlagMotor();
-    sendSPi(receivedData);
-    UCstate=0;
-    spilleterslut = 0x4;
+    //stopFlagMotor();
+    if (dnf == 0)
+    {
+        startLedGreen(80);
+    }
+    else  
+        startLedRed(100);
+    UCstate = 0;
+    spilleterslut = 0xE;
     }
     }
     
@@ -253,15 +210,13 @@ CY_ISR(ISR_SPI_rx_handler)
     
     if(receivedData == 0x1)
     {            
-            for (uint8_t i = 0; i < 2; i++){
-                sendSPi(spilleterslut); 
-            }
+        for (uint8_t i = 0; i < 2; i++){
+              sendSPi(spilleterslut); 
+        }
             
-        spilleterslut=0;
-        
+        spilleterslut = 0;
     }
     //Handling of recieved SPI data
     handleByteReceived(receivedData);
-    
-        
+
 }

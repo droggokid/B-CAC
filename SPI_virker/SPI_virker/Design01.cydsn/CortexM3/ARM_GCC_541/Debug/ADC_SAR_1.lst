@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
   29:Generated_Source\PSoC5/ADC_SAR_1.c **** static void ADC_SAR_1_CalcGain(uint8 resolution);
   30:Generated_Source\PSoC5/ADC_SAR_1.c **** 
   31:Generated_Source\PSoC5/ADC_SAR_1.c **** 
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 2
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 2
 
 
   32:Generated_Source\PSoC5/ADC_SAR_1.c **** /***************************************
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
   86:Generated_Source\PSoC5/ADC_SAR_1.c **** 
   87:Generated_Source\PSoC5/ADC_SAR_1.c **** /*******************************************************************************
   88:Generated_Source\PSoC5/ADC_SAR_1.c **** * Function Name: ADC_SAR_1_Init
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 3
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 3
 
 
   89:Generated_Source\PSoC5/ADC_SAR_1.c **** ********************************************************************************
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  143:Generated_Source\PSoC5/ADC_SAR_1.c **** void ADC_SAR_1_Enable(void)
  144:Generated_Source\PSoC5/ADC_SAR_1.c **** {
  145:Generated_Source\PSoC5/ADC_SAR_1.c ****     uint8 tmpReg;
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 4
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 4
 
 
  146:Generated_Source\PSoC5/ADC_SAR_1.c ****     uint8 enableInterrupts;
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  200:Generated_Source\PSoC5/ADC_SAR_1.c ****         ADC_SAR_1_SAR_CSR5_REG |= ADC_SAR_1_SAR_SEL_CSEL_DFT_CHAR;
  201:Generated_Source\PSoC5/ADC_SAR_1.c ****     #else /* for <500ksps */
  202:Generated_Source\PSoC5/ADC_SAR_1.c ****         ADC_SAR_1_SAR_CSR5_REG &= (uint8)~ADC_SAR_1_SAR_SEL_CSEL_DFT_CHAR;
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 5
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 5
 
 
  203:Generated_Source\PSoC5/ADC_SAR_1.c ****     #endif /* ADC_SAR_1_HIGH_POWER_PULSE == 0u */
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  257:Generated_Source\PSoC5/ADC_SAR_1.c ****     /* Disable the SAR ADC in Standby Power Mode */
  258:Generated_Source\PSoC5/ADC_SAR_1.c ****     ADC_SAR_1_STBY_PWRMGR_SAR_REG &= (uint8)~ADC_SAR_1_STBY_PWR_SAR_EN;
  259:Generated_Source\PSoC5/ADC_SAR_1.c **** 
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 6
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 6
 
 
  260:Generated_Source\PSoC5/ADC_SAR_1.c ****     /* This is only valid if there is an internal clock */
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  314:Generated_Source\PSoC5/ADC_SAR_1.c **** *  10 ->    RES10
  315:Generated_Source\PSoC5/ADC_SAR_1.c **** *  8  ->    RES8
  316:Generated_Source\PSoC5/ADC_SAR_1.c **** *
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 7
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 7
 
 
  317:Generated_Source\PSoC5/ADC_SAR_1.c **** * Return:
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  371:Generated_Source\PSoC5/ADC_SAR_1.c **** 
  372:Generated_Source\PSoC5/ADC_SAR_1.c ****     /*******************************************************************************
  373:Generated_Source\PSoC5/ADC_SAR_1.c ****     * Function Name: ADC_SAR_1_StartConvert
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 8
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 8
 
 
  374:Generated_Source\PSoC5/ADC_SAR_1.c ****     ********************************************************************************
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  428:Generated_Source\PSoC5/ADC_SAR_1.c ****     *  Stops ADC conversion in Free Running mode.
  429:Generated_Source\PSoC5/ADC_SAR_1.c ****     *
  430:Generated_Source\PSoC5/ADC_SAR_1.c ****     * Side Effects:
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 9
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 9
 
 
  431:Generated_Source\PSoC5/ADC_SAR_1.c ****     *  In Software Trigger sample mode, this function sets a software version of the
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  485:Generated_Source\PSoC5/ADC_SAR_1.c ****     {
  486:Generated_Source\PSoC5/ADC_SAR_1.c ****         /* wait one ADC clock to let the EOC status bit release */
  487:Generated_Source\PSoC5/ADC_SAR_1.c ****         CyDelayUs(1u);
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 10
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 10
 
 
  488:Generated_Source\PSoC5/ADC_SAR_1.c ****         /* Do the unconditional read operation of the CSR1 register to make sure the EOC bit has be
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  542:Generated_Source\PSoC5/ADC_SAR_1.c **** * Global Variables:
  543:Generated_Source\PSoC5/ADC_SAR_1.c **** *  ADC_SAR_1_shift - used to convert the ADC counts to the 2s
  544:Generated_Source\PSoC5/ADC_SAR_1.c **** *  compliment form.
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 11
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 11
 
 
  545:Generated_Source\PSoC5/ADC_SAR_1.c **** *
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  599:Generated_Source\PSoC5/ADC_SAR_1.c **** *  uint8: resolution
  600:Generated_Source\PSoC5/ADC_SAR_1.c **** *
  601:Generated_Source\PSoC5/ADC_SAR_1.c **** * Return:
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 12
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 12
 
 
  602:Generated_Source\PSoC5/ADC_SAR_1.c **** *  None.
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  633:Generated_Source\PSoC5/ADC_SAR_1.c ****                  (ADC_SAR_1_DEFAULT_RANGE == ADC_SAR_1__VSSA_TO_VDDA) || \
  634:Generated_Source\PSoC5/ADC_SAR_1.c ****                  (ADC_SAR_1_DEFAULT_RANGE == ADC_SAR_1__VSSA_TO_VDAC)) )
  635:Generated_Source\PSoC5/ADC_SAR_1.c ****                 diff_zero = ADC_SAR_1_SAR_DIFF_SHIFT >> 2u;
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 13
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 13
 
 
  636:Generated_Source\PSoC5/ADC_SAR_1.c ****             #endif /* End ADC_SAR_1_DEFAULT_RANGE */
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
   78              		.loc 1 659 0
   79 003c 064A     		ldr	r2, .L9+4
   80              	.LVL7:
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 14
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 14
 
 
   81 003e 82FB0302 		smull	r0, r2, r2, r3
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  126 000a 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
  127 000c 43F00203 		orr	r3, r3, #2
  128 0010 1370     		strb	r3, [r2]
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 15
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 15
 
 
  153:Generated_Source\PSoC5/ADC_SAR_1.c **** 
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  173 005c 053B     		subs	r3, r3, #5
  174 005e 1A70     		strb	r2, [r3]
  218:Generated_Source\PSoC5/ADC_SAR_1.c **** 
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 16
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 16
 
 
  175              		.loc 1 218 0
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  251:Generated_Source\PSoC5/ADC_SAR_1.c **** 
  224              		.loc 1 251 0
  225 0002 FFF7FEFF 		bl	CyEnterCriticalSection
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 17
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 17
 
 
  226              	.LVL18:
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  273              		.cfi_startproc
  274              		@ args = 0, pretend = 0, frame = 0
  275              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 18
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 18
 
 
  276              		@ link register save eliminated.
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  348:Generated_Source\PSoC5/ADC_SAR_1.c ****             break;
  325              		.loc 1 348 0
  326 0012 C422     		movs	r2, #196
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 19
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 19
 
 
  327 0014 07E0     		b	.L24
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  373              		.loc 1 107 0
  374              		.cfi_startproc
  375              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 20
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 20
 
 
  376              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  424              	ADC_SAR_1_Start:
  425              	.LFB0:
   75:Generated_Source\PSoC5/ADC_SAR_1.c **** 
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 21
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 21
 
 
  426              		.loc 1 75 0
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  474 0008 1370     		strb	r3, [r2]
  475 000a 7047     		bx	lr
  476              	.L43:
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 22
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 22
 
 
  477              		.align	2
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  527              		.loc 1 481 0 discriminator 2
  528 0002 074B     		ldr	r3, .L52
  529 0004 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 23
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 23
 
 
  530              	.LVL39:
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  576 0006 1088     		ldrh	r0, [r2]
  577 0008 00B2     		sxth	r0, r0
  578 000a 181A     		subs	r0, r3, r0
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 24
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 24
 
 
  523:Generated_Source\PSoC5/ADC_SAR_1.c **** 
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  628              		.thumb_func
  629              		.type	ADC_SAR_1_SetOffset, %function
  630              	ADC_SAR_1_SetOffset:
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 25
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 25
 
 
  631              	.LFB11:
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  691:Generated_Source\PSoC5/ADC_SAR_1.c **** *******************************************************************************/
  692:Generated_Source\PSoC5/ADC_SAR_1.c **** void ADC_SAR_1_SetGain(int16 adcGain)
  693:Generated_Source\PSoC5/ADC_SAR_1.c **** {
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 26
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 26
 
 
  657              		.loc 1 693 0
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  720:Generated_Source\PSoC5/ADC_SAR_1.c **** {
  685              		.loc 1 720 0
  686              		.cfi_startproc
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 27
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 27
 
 
  687              		@ args = 0, pretend = 0, frame = 0
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  717              		.cfi_def_cfa_offset 4
  718              		.cfi_offset 4, -4
  745:Generated_Source\PSoC5/ADC_SAR_1.c ****     int16 mVolts;
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 28
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 28
 
 
  746:Generated_Source\PSoC5/ADC_SAR_1.c ****     int32 countsPer10Volt;
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  757 0038 04EBD470 		add	r0, r4, r4, lsr #31
  758 003c 4010     		asrs	r0, r0, #1
  759 003e 4042     		negs	r0, r0
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 29
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 29
 
 
  760              	.L73:
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  784:Generated_Source\PSoC5/ADC_SAR_1.c **** *******************************************************************************/
  785:Generated_Source\PSoC5/ADC_SAR_1.c **** int32 ADC_SAR_1_CountsTo_uVolts(int16 adcCounts)
  786:Generated_Source\PSoC5/ADC_SAR_1.c **** {
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 30
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 30
 
 
  791              		.loc 1 786 0
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  805:Generated_Source\PSoC5/ADC_SAR_1.c ****     uVolts = (( (int64)adcCounts * ADC_SAR_1_10UV_COUNTS ) / countsPer10Volt);
  827              		.loc 1 805 0
  828 0022 24B2     		sxth	r4, r4
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 31
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 31
 
 
  829 0024 E517     		asrs	r5, r4, #31
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  829:Generated_Source\PSoC5/ADC_SAR_1.c **** float32 ADC_SAR_1_CountsTo_Volts(int16 adcCounts)
  830:Generated_Source\PSoC5/ADC_SAR_1.c **** {
  860              		.loc 1 830 0
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 32
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 32
 
 
  861              		.cfi_startproc
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  899              	.LVL67:
  900 0028 0849     		ldr	r1, .L87+12
  901 002a FFF7FEFF 		bl	__aeabi_fmul
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 33
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 33
 
 
  902              	.LVL68:
@@ -1972,13 +1972,13 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  947 000c 05030000 		.4byte	.LASF66
  948 0010 0C       		.byte	0xc
  949 0011 B4030000 		.4byte	.LASF67
- 950 0015 29020000 		.4byte	.LASF68
+ 950 0015 4D010000 		.4byte	.LASF68
  951 0019 00000000 		.4byte	.Ldebug_ranges0+0
  952 001d 00000000 		.4byte	0
  953 0021 00000000 		.4byte	.Ldebug_line0
  954 0025 02       		.uleb128 0x2
  955 0026 04       		.byte	0x4
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 34
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 34
 
 
  956 0027 05       		.byte	0x5
@@ -1994,7 +1994,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  966 003a 03       		.uleb128 0x3
  967 003b 08       		.byte	0x8
  968 003c 04       		.byte	0x4
- 969 003d 88010000 		.4byte	.LASF2
+ 969 003d DD010000 		.4byte	.LASF2
  970 0041 03       		.uleb128 0x3
  971 0042 01       		.byte	0x1
  972 0043 06       		.byte	0x6
@@ -2026,7 +2026,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  998 0072 03       		.uleb128 0x3
  999 0073 04       		.byte	0x4
  1000 0074 07       		.byte	0x7
- 1001 0075 7F010000 		.4byte	.LASF10
+ 1001 0075 D4010000 		.4byte	.LASF10
  1002 0079 03       		.uleb128 0x3
  1003 007a 01       		.byte	0x1
  1004 007b 08       		.byte	0x8
@@ -2034,75 +2034,75 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  1006 0080 04       		.uleb128 0x4
  1007 0081 A3000000 		.4byte	.LASF12
  1008 0085 02       		.byte	0x2
- 1009 0086 E701     		.2byte	0x1e7
+ 1009 0086 E901     		.2byte	0x1e9
  1010 0088 48000000 		.4byte	0x48
  1011 008c 04       		.uleb128 0x4
  1012 008d 00000000 		.4byte	.LASF13
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 35
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 35
 
 
  1013 0091 02       		.byte	0x2
- 1014 0092 E801     		.2byte	0x1e8
+ 1014 0092 EA01     		.2byte	0x1ea
  1015 0094 56000000 		.4byte	0x56
  1016 0098 04       		.uleb128 0x4
  1017 0099 BA000000 		.4byte	.LASF14
  1018 009d 02       		.byte	0x2
- 1019 009e E901     		.2byte	0x1e9
+ 1019 009e EB01     		.2byte	0x1eb
  1020 00a0 64000000 		.4byte	0x64
  1021 00a4 04       		.uleb128 0x4
- 1022 00a5 4D010000 		.4byte	.LASF15
+ 1022 00a5 A2010000 		.4byte	.LASF15
  1023 00a9 02       		.byte	0x2
- 1024 00aa EA01     		.2byte	0x1ea
+ 1024 00aa EC01     		.2byte	0x1ec
  1025 00ac 41000000 		.4byte	0x41
  1026 00b0 04       		.uleb128 0x4
  1027 00b1 73040000 		.4byte	.LASF16
  1028 00b5 02       		.byte	0x2
- 1029 00b6 EB01     		.2byte	0x1eb
+ 1029 00b6 ED01     		.2byte	0x1ed
  1030 00b8 4F000000 		.4byte	0x4f
  1031 00bc 04       		.uleb128 0x4
  1032 00bd 7D000000 		.4byte	.LASF17
  1033 00c1 02       		.byte	0x2
- 1034 00c2 EC01     		.2byte	0x1ec
+ 1034 00c2 EE01     		.2byte	0x1ee
  1035 00c4 5D000000 		.4byte	0x5d
  1036 00c8 04       		.uleb128 0x4
- 1037 00c9 77010000 		.4byte	.LASF18
+ 1037 00c9 CC010000 		.4byte	.LASF18
  1038 00cd 02       		.byte	0x2
- 1039 00ce ED01     		.2byte	0x1ed
+ 1039 00ce EF01     		.2byte	0x1ef
  1040 00d0 D4000000 		.4byte	0xd4
  1041 00d4 03       		.uleb128 0x3
  1042 00d5 04       		.byte	0x4
  1043 00d6 04       		.byte	0x4
- 1044 00d7 23020000 		.4byte	.LASF19
+ 1044 00d7 78020000 		.4byte	.LASF19
  1045 00db 03       		.uleb128 0x3
  1046 00dc 08       		.byte	0x8
  1047 00dd 04       		.byte	0x4
  1048 00de B3000000 		.4byte	.LASF20
  1049 00e2 04       		.uleb128 0x4
- 1050 00e3 F8010000 		.4byte	.LASF21
+ 1050 00e3 4D020000 		.4byte	.LASF21
  1051 00e7 02       		.byte	0x2
- 1052 00e8 F201     		.2byte	0x1f2
+ 1052 00e8 F401     		.2byte	0x1f4
  1053 00ea 33000000 		.4byte	0x33
  1054 00ee 04       		.uleb128 0x4
  1055 00ef 96020000 		.4byte	.LASF22
  1056 00f3 02       		.byte	0x2
- 1057 00f4 9102     		.2byte	0x291
+ 1057 00f4 9302     		.2byte	0x293
  1058 00f6 FA000000 		.4byte	0xfa
  1059 00fa 05       		.uleb128 0x5
  1060 00fb 80000000 		.4byte	0x80
  1061 00ff 04       		.uleb128 0x4
  1062 0100 9D000000 		.4byte	.LASF23
  1063 0104 02       		.byte	0x2
- 1064 0105 9202     		.2byte	0x292
+ 1064 0105 9402     		.2byte	0x294
  1065 0107 0B010000 		.4byte	0x10b
  1066 010b 05       		.uleb128 0x5
  1067 010c 8C000000 		.4byte	0x8c
  1068 0110 04       		.uleb128 0x4
- 1069 0111 59010000 		.4byte	.LASF24
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 36
+ 1069 0111 AE010000 		.4byte	.LASF24
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 36
 
 
  1070 0115 02       		.byte	0x2
- 1071 0116 9302     		.2byte	0x293
+ 1071 0116 9502     		.2byte	0x295
  1072 0118 1C010000 		.4byte	0x11c
  1073 011c 05       		.uleb128 0x5
  1074 011d 98000000 		.4byte	0x98
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  1124 0191 92       		.byte	0x92
  1125 0192 80000000 		.4byte	0x80
  1126 0196 98000000 		.4byte	.LLST3
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 37
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 37
 
 
  1127 019a 0D       		.uleb128 0xd
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  1181 0210 35020000 		.4byte	0x235
  1182 0214 07       		.uleb128 0x7
  1183 0215 90020000 		.4byte	.LASF32
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 38
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 38
 
 
  1184 0219 01       		.byte	0x1
@@ -2233,7 +2233,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  1193 0230 F0000000 		.4byte	.LLST6
  1194 0234 00       		.byte	0
  1195 0235 0F       		.uleb128 0xf
- 1196 0236 94010000 		.4byte	.LASF33
+ 1196 0236 E9010000 		.4byte	.LASF33
  1197 023a 01       		.byte	0x1
  1198 023b 5401     		.2byte	0x154
  1199 023d 00000000 		.4byte	.LFB5
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  1238 0290 3E010000 		.4byte	.LASF34
  1239 0294 01       		.byte	0x1
  1240 0295 6A       		.byte	0x6a
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 39
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 39
 
 
  1241 0296 00000000 		.4byte	.LFB1
@@ -2332,13 +2332,13 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  1289 02f0 00       		.byte	0
  1290 02f1 00       		.byte	0
  1291 02f2 0B       		.uleb128 0xb
- 1292 02f3 E8010000 		.4byte	.LASF35
+ 1292 02f3 3D020000 		.4byte	.LASF35
  1293 02f7 01       		.byte	0x1
  1294 02f8 4A       		.byte	0x4a
  1295 02f9 00000000 		.4byte	.LFB0
  1296 02fd 1C000000 		.4byte	.LFE0-.LFB0
  1297 0301 01       		.uleb128 0x1
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 40
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 40
 
 
  1298 0302 9C       		.byte	0x9c
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  1352 0385 31       		.byte	0x31
  1353 0386 00       		.byte	0
  1354 0387 00       		.byte	0
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 41
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 41
 
 
  1355 0388 12       		.uleb128 0x12
@@ -2428,7 +2428,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  1379 03c4 AD010000 		.4byte	.LLST11
  1380 03c8 00       		.byte	0
  1381 03c9 0F       		.uleb128 0xf
- 1382 03ca FE010000 		.4byte	.LASF42
+ 1382 03ca 53020000 		.4byte	.LASF42
  1383 03ce 01       		.byte	0x1
  1384 03cf 4902     		.2byte	0x249
  1385 03d1 00000000 		.4byte	.LFB11
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  1409 0409 01       		.byte	0x1
  1410 040a B402     		.2byte	0x2b4
  1411 040c B0000000 		.4byte	0xb0
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 42
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 42
 
 
  1412 0410 C0010000 		.4byte	.LLST12
@@ -2497,7 +2497,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  1445 045c B0000000 		.4byte	0xb0
  1446 0460 E1010000 		.4byte	.LLST13
  1447 0464 15       		.uleb128 0x15
- 1448 0465 52010000 		.4byte	.LASF49
+ 1448 0465 A7010000 		.4byte	.LASF49
  1449 0469 01       		.byte	0x1
  1450 046a E902     		.2byte	0x2e9
  1451 046c B0000000 		.4byte	0xb0
@@ -2511,14 +2511,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  1459 047e FF010000 		.4byte	.LLST14
  1460 0482 00       		.byte	0
  1461 0483 16       		.uleb128 0x16
- 1462 0484 AC010000 		.4byte	.LASF51
+ 1462 0484 01020000 		.4byte	.LASF51
  1463 0488 01       		.byte	0x1
  1464 0489 1103     		.2byte	0x311
  1465 048b BC000000 		.4byte	0xbc
  1466 048f 00000000 		.4byte	.LFB16
  1467 0493 48000000 		.4byte	.LFE16-.LFB16
  1468 0497 01       		.uleb128 0x1
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 43
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 43
 
 
  1469 0498 9C       		.byte	0x9c
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  1523 051a 80000000 		.4byte	0x80
  1524 051e 05       		.uleb128 0x5
  1525 051f 03       		.byte	0x3
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 44
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 44
 
 
  1526 0520 00000000 		.4byte	ADC_SAR_1_initVar
@@ -2593,7 +2593,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  1535 0535 05       		.uleb128 0x5
  1536 0536 B0000000 		.4byte	0xb0
  1537 053a 18       		.uleb128 0x18
- 1538 053b 5F010000 		.4byte	.LASF56
+ 1538 053b B4010000 		.4byte	.LASF56
  1539 053f 01       		.byte	0x1
  1540 0540 25       		.byte	0x25
  1541 0541 35050000 		.4byte	0x535
@@ -2638,17 +2638,17 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  1580 0598 1C000000 		.4byte	.LASF62
  1581 059c 03       		.byte	0x3
  1582 059d 7E       		.byte	0x7e
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 45
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 45
 
 
  1583 059e 19       		.uleb128 0x19
- 1584 059f C6010000 		.4byte	.LASF63
- 1585 05a3 C6010000 		.4byte	.LASF63
+ 1584 059f 1B020000 		.4byte	.LASF63
+ 1585 05a3 1B020000 		.4byte	.LASF63
  1586 05a7 04       		.byte	0x4
  1587 05a8 32       		.byte	0x32
  1588 05a9 19       		.uleb128 0x19
- 1589 05aa 12020000 		.4byte	.LASF64
- 1590 05ae 12020000 		.4byte	.LASF64
+ 1589 05aa 67020000 		.4byte	.LASF64
+ 1590 05ae 67020000 		.4byte	.LASF64
  1591 05b2 03       		.byte	0x3
  1592 05b3 8B       		.byte	0x8b
  1593 05b4 19       		.uleb128 0x19
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  1637 0024 0B       		.uleb128 0xb
  1638 0025 03       		.uleb128 0x3
  1639 0026 0E       		.uleb128 0xe
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 46
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 46
 
 
  1640 0027 00       		.byte	0
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  1694 005e 49       		.uleb128 0x49
  1695 005f 13       		.uleb128 0x13
  1696 0060 02       		.uleb128 0x2
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 47
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 47
 
 
  1697 0061 17       		.uleb128 0x17
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  1751 009c 18       		.uleb128 0x18
  1752 009d 9742     		.uleb128 0x2117
  1753 009f 19       		.uleb128 0x19
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 48
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 48
 
 
  1754 00a0 01       		.uleb128 0x1
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  1808 00da 12       		.uleb128 0x12
  1809 00db 06       		.uleb128 0x6
  1810 00dc 40       		.uleb128 0x40
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 49
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 49
 
 
  1811 00dd 18       		.uleb128 0x18
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  1865 0116 13       		.uleb128 0x13
  1866 0117 00       		.byte	0
  1867 0118 00       		.byte	0
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 50
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 50
 
 
  1868 0119 12       		.uleb128 0x12
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  1922 0150 00       		.byte	0
  1923 0151 15       		.uleb128 0x15
  1924 0152 34       		.uleb128 0x34
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 51
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 51
 
 
  1925 0153 00       		.byte	0
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  1979 018a 34       		.uleb128 0x34
  1980 018b 00       		.byte	0
  1981 018c 03       		.uleb128 0x3
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 52
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 52
 
 
  1982 018d 0E       		.uleb128 0xe
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  2036 0030 50       		.byte	0x50
  2037 0031 9F       		.byte	0x9f
  2038 0032 00000000 		.4byte	0
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 53
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 53
 
 
  2039 0036 00000000 		.4byte	0
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  2093 00be 00000000 		.4byte	.LVL20
  2094 00c2 00000000 		.4byte	.LVL20
  2095 00c6 0100     		.2byte	0x1
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 54
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 54
 
 
  2096 00c8 50       		.byte	0x50
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  2150 0140 00000000 		.4byte	0
  2151 0144 00000000 		.4byte	0
  2152              	.LLST8:
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 55
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 55
 
 
  2153 0148 16000000 		.4byte	.LVL25
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  2207 01ca 50       		.byte	0x50
  2208 01cb 04000000 		.4byte	.LVL46
  2209 01cf 10000000 		.4byte	.LFE13
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 56
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 56
 
 
  2210 01d3 0400     		.2byte	0x4
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  2264 0261 0100     		.2byte	0x1
  2265 0263 50       		.byte	0x50
  2266 0264 22000000 		.4byte	.LVL66
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 57
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 57
 
 
  2267 0268 27000000 		.4byte	.LVL67-1
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  2321 0088 00000000 		.4byte	.LFB15
  2322 008c 58000000 		.4byte	.LFE15-.LFB15
  2323 0090 00000000 		.4byte	.LFB16
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 58
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 58
 
 
  2324 0094 48000000 		.4byte	.LFE16-.LFB16
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  2373      313600
  2374              	.LASF70:
  2375 0007 4144435F 		.ascii	"ADC_SAR_1_GetResult8\000"
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 59
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 59
 
 
  2375      5341525F 
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  2399 00a9 43794465 		.ascii	"CyDelayUs\000"
  2399      6C617955 
  2399      7300
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 60
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 60
 
 
  2400              	.LASF20:
@@ -3594,90 +3594,90 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  2423      5341525F 
  2423      315F496E 
  2423      697400
- 2424              	.LASF15:
- 2425 014d 696E7438 		.ascii	"int8\000"
- 2425      00
- 2426              	.LASF49:
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 61
+ 2424              	.LASF68:
+ 2425 014d 433A5C55 		.ascii	"C:\\Users\\deniz\\OneDrive\\Dokumenter\\GitHub\\B-C"
+ 2425      73657273 
+ 2425      5C64656E 
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 61
 
 
- 2427 0152 6D566F6C 		.ascii	"mVolts\000"
- 2427      747300
- 2428              	.LASF24:
- 2429 0159 72656733 		.ascii	"reg32\000"
- 2429      3200
- 2430              	.LASF56:
- 2431 015f 4144435F 		.ascii	"ADC_SAR_1_countsPerVolt\000"
- 2431      5341525F 
- 2431      315F636F 
- 2431      756E7473 
- 2431      50657256 
- 2432              	.LASF18:
- 2433 0177 666C6F61 		.ascii	"float32\000"
- 2433      74333200 
- 2434              	.LASF10:
- 2435 017f 73697A65 		.ascii	"sizetype\000"
- 2435      74797065 
- 2435      00
- 2436              	.LASF2:
- 2437 0188 6C6F6E67 		.ascii	"long double\000"
- 2437      20646F75 
- 2437      626C6500 
- 2438              	.LASF33:
- 2439 0194 4144435F 		.ascii	"ADC_SAR_1_SetResolution\000"
- 2439      5341525F 
- 2439      315F5365 
- 2439      74526573 
- 2439      6F6C7574 
- 2440              	.LASF51:
- 2441 01ac 4144435F 		.ascii	"ADC_SAR_1_CountsTo_uVolts\000"
- 2441      5341525F 
- 2441      315F436F 
- 2441      756E7473 
- 2441      546F5F75 
- 2442              	.LASF63:
- 2443 01c6 4144435F 		.ascii	"ADC_SAR_1_theACLK_SetModeRegister\000"
- 2443      5341525F 
- 2443      315F7468 
- 2443      6541434C 
- 2443      4B5F5365 
- 2444              	.LASF35:
- 2445 01e8 4144435F 		.ascii	"ADC_SAR_1_Start\000"
- 2445      5341525F 
- 2445      315F5374 
- 2445      61727400 
- 2446              	.LASF21:
- 2447 01f8 696E7436 		.ascii	"int64\000"
- 2447      3400
- 2448              	.LASF42:
- 2449 01fe 4144435F 		.ascii	"ADC_SAR_1_SetOffset\000"
- 2449      5341525F 
- 2449      315F5365 
- 2449      744F6666 
- 2449      73657400 
- 2450              	.LASF64:
- 2451 0212 4379496E 		.ascii	"CyIntSetPriority\000"
- 2451      74536574 
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 62
+ 2425      697A5C4F 
+ 2425      6E654472 
+ 2426 017a 41435C53 		.ascii	"AC\\SPI_virker\\SPI_virker\\Design01.cydsn\000"
+ 2426      50495F76 
+ 2426      69726B65 
+ 2426      725C5350 
+ 2426      495F7669 
+ 2427              	.LASF15:
+ 2428 01a2 696E7438 		.ascii	"int8\000"
+ 2428      00
+ 2429              	.LASF49:
+ 2430 01a7 6D566F6C 		.ascii	"mVolts\000"
+ 2430      747300
+ 2431              	.LASF24:
+ 2432 01ae 72656733 		.ascii	"reg32\000"
+ 2432      3200
+ 2433              	.LASF56:
+ 2434 01b4 4144435F 		.ascii	"ADC_SAR_1_countsPerVolt\000"
+ 2434      5341525F 
+ 2434      315F636F 
+ 2434      756E7473 
+ 2434      50657256 
+ 2435              	.LASF18:
+ 2436 01cc 666C6F61 		.ascii	"float32\000"
+ 2436      74333200 
+ 2437              	.LASF10:
+ 2438 01d4 73697A65 		.ascii	"sizetype\000"
+ 2438      74797065 
+ 2438      00
+ 2439              	.LASF2:
+ 2440 01dd 6C6F6E67 		.ascii	"long double\000"
+ 2440      20646F75 
+ 2440      626C6500 
+ 2441              	.LASF33:
+ 2442 01e9 4144435F 		.ascii	"ADC_SAR_1_SetResolution\000"
+ 2442      5341525F 
+ 2442      315F5365 
+ 2442      74526573 
+ 2442      6F6C7574 
+ 2443              	.LASF51:
+ 2444 0201 4144435F 		.ascii	"ADC_SAR_1_CountsTo_uVolts\000"
+ 2444      5341525F 
+ 2444      315F436F 
+ 2444      756E7473 
+ 2444      546F5F75 
+ 2445              	.LASF63:
+ 2446 021b 4144435F 		.ascii	"ADC_SAR_1_theACLK_SetModeRegister\000"
+ 2446      5341525F 
+ 2446      315F7468 
+ 2446      6541434C 
+ 2446      4B5F5365 
+ 2447              	.LASF35:
+ 2448 023d 4144435F 		.ascii	"ADC_SAR_1_Start\000"
+ 2448      5341525F 
+ 2448      315F5374 
+ 2448      61727400 
+ 2449              	.LASF21:
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 62
 
 
- 2451      5072696F 
- 2451      72697479 
- 2451      00
- 2452              	.LASF19:
- 2453 0223 666C6F61 		.ascii	"float\000"
- 2453      7400
- 2454              	.LASF68:
- 2455 0229 433A5C55 		.ascii	"C:\\Users\\jespe\\OneDrive\\Dokumenter\\GitHub\\B-C"
- 2455      73657273 
- 2455      5C6A6573 
- 2455      70655C4F 
- 2455      6E654472 
- 2456 0256 41435C53 		.ascii	"AC\\SPI_virker\\SPI_virker\\Design01.cydsn\000"
- 2456      50495F76 
- 2456      69726B65 
- 2456      725C5350 
- 2456      495F7669 
+ 2450 024d 696E7436 		.ascii	"int64\000"
+ 2450      3400
+ 2451              	.LASF42:
+ 2452 0253 4144435F 		.ascii	"ADC_SAR_1_SetOffset\000"
+ 2452      5341525F 
+ 2452      315F5365 
+ 2452      744F6666 
+ 2452      73657400 
+ 2453              	.LASF64:
+ 2454 0267 4379496E 		.ascii	"CyIntSetPriority\000"
+ 2454      74536574 
+ 2454      5072696F 
+ 2454      72697479 
+ 2454      00
+ 2455              	.LASF19:
+ 2456 0278 666C6F61 		.ascii	"float\000"
+ 2456      7400
  2457              	.LASF54:
  2458 027e 4144435F 		.ascii	"ADC_SAR_1_initVar\000"
  2458      5341525F 
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  2474      61626C65 
  2474      00
  2475              	.LASF46:
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 63
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 63
 
 
  2476 02ed 4144435F 		.ascii	"ADC_SAR_1_SetScaledGain\000"
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  2494      6E766572 
  2495              	.LASF48:
  2496 0412 61646343 		.ascii	"adcCounts\000"
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 64
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 64
 
 
  2496      6F756E74 
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 1
  2518      5341525F 
  2518      315F5374 
  2518      6F7000
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccwDgTHB.s 			page 65
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccSokOOb.s 			page 65
 
 
  2519              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

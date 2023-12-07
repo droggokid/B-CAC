@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 1
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cc2AnzbG.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 1
   28:Timer.c       **** void startTidsTagning()
   29:Timer.c       **** {
   28              		.loc 1 29 0
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 2
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cc2AnzbG.s 			page 2
 
 
   29              		.cfi_startproc
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 1
   40:Timer.c       ****     time_interval_ticks = start_counter - stop_counter;
   73              		.loc 1 40 0
   74 000a 2368     		ldr	r3, [r4]
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 3
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cc2AnzbG.s 			page 3
 
 
   75 000c 181A     		subs	r0, r3, r0
@@ -168,7 +168,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 1
  108              		@ link register save eliminated.
  109              	.LVL4:
   52:Timer.c       ****     // Assuming time is a 32-bit integer
-  53:Timer.c       ****     uint8_t minutter=0;
+  53:Timer.c       ****     uint8_t minutter = 0;
   54:Timer.c       ****     minutter = (time_1 / (1000 * 60)) & 0xFF;   // Minutter
  110              		.loc 1 54 0
  111 0000 024B     		ldr	r3, .L10
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 1
   56:Timer.c       **** }
  114              		.loc 1 56 0
  115 0006 C0F38730 		ubfx	r0, r0, #14, #8
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 4
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cc2AnzbG.s 			page 4
 
 
  116              	.LVL6:
@@ -208,7 +208,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 1
  137              		@ link register save eliminated.
  138              	.LVL7:
   60:Timer.c       ****     // Assuming time is a 32-bit integer
-  61:Timer.c       ****     uint8_t sekunder=0;
+  61:Timer.c       ****     uint8_t sekunder = 0;
   62:Timer.c       ****     sekunder = ((time_2 / 1000) % 60) & 0xFF;   // Sekunder
  139              		.loc 1 62 0
  140 0000 064B     		ldr	r3, .L13
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 1
  162              		.section	.text.convertMillisekunder,"ax",%progbits
  163              		.align	2
  164              		.global	convertMillisekunder
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 5
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cc2AnzbG.s 			page 5
 
 
  165              		.thumb
@@ -257,7 +257,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 1
  175              	.LVL10:
   68:Timer.c       ****     uint16_t temp = 0;
   69:Timer.c       ****     // Assuming time is a 32-bit integer
-  70:Timer.c       ****     uint8_t milliSekunder=0;
+  70:Timer.c       ****     uint8_t milliSekunder = 0;
   71:Timer.c       ****     milliSekunder = ((time_3 % 1000)/100) & 0xFF; // Millisekunder
  176              		.loc 1 71 0
  177 0000 064B     		ldr	r3, .L16
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 1
  210              	tick_period_ms:
  211 0000 0A000000 		.word	10
  212              		.bss
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 6
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cc2AnzbG.s 			page 6
 
 
  213              		.align	2
@@ -333,8 +333,8 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 1
  242 0016 0000     		.space	2
  243              		.text
  244              	.Letext0:
- 245              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
- 246              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 245              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 246              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
  247              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
  248              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
  249              		.file 6 "Generated_Source\\PSoC5/Timer_1.h"
@@ -348,21 +348,21 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 1
  257 000c BF000000 		.4byte	.LASF47
  258 0010 0C       		.byte	0xc
  259 0011 98010000 		.4byte	.LASF48
- 260 0015 1D020000 		.4byte	.LASF49
+ 260 0015 E3010000 		.4byte	.LASF49
  261 0019 00000000 		.4byte	.Ldebug_ranges0+0
  262 001d 00000000 		.4byte	0
  263 0021 00000000 		.4byte	.Ldebug_line0
  264 0025 02       		.uleb128 0x2
  265 0026 08       		.byte	0x8
  266 0027 07       		.byte	0x7
- 267 0028 FE010000 		.4byte	.LASF0
+ 267 0028 53020000 		.4byte	.LASF0
  268 002c 02       		.uleb128 0x2
  269 002d 04       		.byte	0x4
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 7
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cc2AnzbG.s 			page 7
 
 
  270 002e 07       		.byte	0x7
- 271 002f F1010000 		.4byte	.LASF1
+ 271 002f 46020000 		.4byte	.LASF1
  272 0033 02       		.uleb128 0x2
  273 0034 01       		.byte	0x1
  274 0035 06       		.byte	0x6
@@ -416,9 +416,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 1
  322 0092 05       		.byte	0x5
  323 0093 696E7400 		.ascii	"int\000"
  324 0097 03       		.uleb128 0x3
- 325 0098 15020000 		.4byte	.LASF13
+ 325 0098 6A020000 		.4byte	.LASF13
  326 009c 03       		.byte	0x3
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 8
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cc2AnzbG.s 			page 8
 
 
  327 009d 18       		.byte	0x18
@@ -439,14 +439,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 1
  342 00be 30       		.byte	0x30
  343 00bf 77000000 		.4byte	0x77
  344 00c3 05       		.uleb128 0x5
- 345 00c4 E3010000 		.4byte	.LASF17
+ 345 00c4 38020000 		.4byte	.LASF17
  346 00c8 04       		.byte	0x4
- 347 00c9 E801     		.2byte	0x1e8
+ 347 00c9 EA01     		.2byte	0x1ea
  348 00cb 5E000000 		.4byte	0x5e
  349 00cf 05       		.uleb128 0x5
- 350 00d0 EA010000 		.4byte	.LASF18
+ 350 00d0 3F020000 		.4byte	.LASF18
  351 00d4 04       		.byte	0x4
- 352 00d5 E901     		.2byte	0x1e9
+ 352 00d5 EB01     		.2byte	0x1eb
  353 00d7 82000000 		.4byte	0x82
  354 00db 02       		.uleb128 0x2
  355 00dc 04       		.byte	0x4
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 1
  381 010e 14000000 		.4byte	.LFE64-.LFB64
  382 0112 01       		.uleb128 0x1
  383 0113 9C       		.byte	0x9c
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 9
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cc2AnzbG.s 			page 9
 
 
  384 0114 2B010000 		.4byte	0x12b
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 1
  438 019e 24000000 		.4byte	.LFE67-.LFB67
  439 01a2 01       		.uleb128 0x1
  440 01a3 9C       		.byte	0x9c
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 10
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cc2AnzbG.s 			page 10
 
 
  441 01a4 C7010000 		.4byte	0x1c7
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 1
  495 0223 F0000000 		.4byte	0xf0
  496 0227 05       		.uleb128 0x5
  497 0228 03       		.byte	0x3
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 11
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cc2AnzbG.s 			page 11
 
 
  498 0229 00000000 		.4byte	startCount
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 1
  552 029e 19       		.byte	0x19
  553 029f CF000000 		.4byte	0xcf
  554 02a3 05       		.uleb128 0x5
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 12
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cc2AnzbG.s 			page 12
 
 
  555 02a4 03       		.byte	0x3
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 1
  609 0022 0E       		.uleb128 0xe
  610 0023 3A       		.uleb128 0x3a
  611 0024 0B       		.uleb128 0xb
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 13
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cc2AnzbG.s 			page 13
 
 
  612 0025 3B       		.uleb128 0x3b
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 1
  666 005b 40       		.uleb128 0x40
  667 005c 18       		.uleb128 0x18
  668 005d 9742     		.uleb128 0x2117
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 14
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cc2AnzbG.s 			page 14
 
 
  669 005f 19       		.uleb128 0x19
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 1
  723 0098 00       		.byte	0
  724 0099 00       		.byte	0
  725 009a 0B       		.uleb128 0xb
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 15
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cc2AnzbG.s 			page 15
 
 
  726 009b 34       		.uleb128 0x34
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 1
  780 00d1 0B       		.uleb128 0xb
  781 00d2 49       		.uleb128 0x49
  782 00d3 13       		.uleb128 0x13
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 16
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cc2AnzbG.s 			page 16
 
 
  783 00d4 3F       		.uleb128 0x3f
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 1
  837 0031 0A000000 		.4byte	.LVL6
  838 0035 0900     		.2byte	0x9
  839 0037 70       		.byte	0x70
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 17
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cc2AnzbG.s 			page 17
 
 
  840 0038 00       		.sleb128 0
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 1
  894 0090 00000000 		.4byte	.LVL7
  895 0094 18000000 		.4byte	.LVL9
  896 0098 0200     		.2byte	0x2
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 18
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cc2AnzbG.s 			page 18
 
 
  897 009a 30       		.byte	0x30
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 1
  951 0104 D34D6210 		.4byte	0x10624dd3
  952 0108 F7       		.byte	0xf7
  953 0109 25       		.uleb128 0x25
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 19
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cc2AnzbG.s 			page 19
 
 
  954 010a 1E       		.byte	0x1e
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 1
  1008 002c 24000000 		.4byte	.LFE67-.LFB67
  1009 0030 00000000 		.4byte	.LFB68
  1010 0034 24000000 		.4byte	.LFE68-.LFB68
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 20
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cc2AnzbG.s 			page 20
 
 
  1011 0038 00000000 		.4byte	0
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 1
  1044              	.LASF32:
  1045 0054 74696D65 		.ascii	"time_3\000"
  1045      5F3300
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 21
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cc2AnzbG.s 			page 21
 
 
  1046              	.LASF20:
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 1
  1069 014d 74696D65 		.ascii	"time_interval_ticks\000"
  1069      5F696E74 
  1069      65727661 
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 22
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cc2AnzbG.s 			page 22
 
 
  1069      6C5F7469 
@@ -1311,40 +1311,40 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 1
  1091 01d8 5F5F7569 		.ascii	"__uint32_t\000"
  1091      6E743332 
  1091      5F7400
- 1092              	.LASF17:
- 1093 01e3 75696E74 		.ascii	"uint16\000"
- 1093      313600
- 1094              	.LASF18:
- 1095 01ea 75696E74 		.ascii	"uint32\000"
- 1095      333200
- 1096              	.LASF1:
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 23
+ 1092              	.LASF49:
+ 1093 01e3 433A5C55 		.ascii	"C:\\Users\\deniz\\OneDrive\\Dokumenter\\GitHub\\B-C"
+ 1093      73657273 
+ 1093      5C64656E 
+ 1093      697A5C4F 
+ 1093      6E654472 
+ 1094 0210 41435C53 		.ascii	"AC\\SPI_virker\\SPI_virker\\Design01.cydsn\000"
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cc2AnzbG.s 			page 23
 
 
- 1097 01f1 756E7369 		.ascii	"unsigned int\000"
- 1097      676E6564 
- 1097      20696E74 
- 1097      00
- 1098              	.LASF0:
- 1099 01fe 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1099      206C6F6E 
- 1099      6720756E 
- 1099      7369676E 
- 1099      65642069 
- 1100              	.LASF13:
- 1101 0215 75696E74 		.ascii	"uint8_t\000"
- 1101      385F7400 
- 1102              	.LASF49:
- 1103 021d 433A5C55 		.ascii	"C:\\Users\\jespe\\OneDrive\\Dokumenter\\GitHub\\B-C"
- 1103      73657273 
- 1103      5C6A6573 
- 1103      70655C4F 
- 1103      6E654472 
- 1104 024a 41435C53 		.ascii	"AC\\SPI_virker\\SPI_virker\\Design01.cydsn\000"
- 1104      50495F76 
- 1104      69726B65 
- 1104      725C5350 
- 1104      495F7669 
+ 1094      50495F76 
+ 1094      69726B65 
+ 1094      725C5350 
+ 1094      495F7669 
+ 1095              	.LASF17:
+ 1096 0238 75696E74 		.ascii	"uint16\000"
+ 1096      313600
+ 1097              	.LASF18:
+ 1098 023f 75696E74 		.ascii	"uint32\000"
+ 1098      333200
+ 1099              	.LASF1:
+ 1100 0246 756E7369 		.ascii	"unsigned int\000"
+ 1100      676E6564 
+ 1100      20696E74 
+ 1100      00
+ 1101              	.LASF0:
+ 1102 0253 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1102      206C6F6E 
+ 1102      6720756E 
+ 1102      7369676E 
+ 1102      65642069 
+ 1103              	.LASF13:
+ 1104 026a 75696E74 		.ascii	"uint8_t\000"
+ 1104      385F7400 
  1105              	.LASF15:
  1106 0272 696E7433 		.ascii	"int32_t\000"
  1106      325F7400 
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 1
  1118      756E7465 
  1118      7200
  1119              	.LASF4:
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccIri5xe.s 			page 24
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cc2AnzbG.s 			page 24
 
 
  1120 02cd 73686F72 		.ascii	"short int\000"

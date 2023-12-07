@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccxzTWkk.s 			page 1
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cc1lpEPk.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccxzTWkk.s 			page 1
   28:Generated_Source\PSoC5/SPIS_2_PM.c **** * Function Name: SPIS_2_SaveConfig
   29:Generated_Source\PSoC5/SPIS_2_PM.c **** ********************************************************************************
   30:Generated_Source\PSoC5/SPIS_2_PM.c **** *
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccxzTWkk.s 			page 2
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cc1lpEPk.s 			page 2
 
 
   31:Generated_Source\PSoC5/SPIS_2_PM.c **** * Summary:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccxzTWkk.s 			page 1
   50 0000 7047     		bx	lr
   51              		.cfi_endproc
   52              	.LFE1:
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccxzTWkk.s 			page 3
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cc1lpEPk.s 			page 3
 
 
   53              		.size	SPIS_2_RestoreConfig, .-SPIS_2_RestoreConfig
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccxzTWkk.s 			page 1
   77 000c 0122     		movs	r2, #1
   78 000e 054B     		ldr	r3, .L7+4
   79 0010 1A70     		strb	r2, [r3]
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccxzTWkk.s 			page 4
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cc1lpEPk.s 			page 4
 
 
   80 0012 02E0     		b	.L5
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccxzTWkk.s 			page 1
  120:Generated_Source\PSoC5/SPIS_2_PM.c **** *  zero.
  121:Generated_Source\PSoC5/SPIS_2_PM.c **** *  SPIS_2_txBufferRead - modified every function call - resets to
  122:Generated_Source\PSoC5/SPIS_2_PM.c **** *  zero.
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccxzTWkk.s 			page 5
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cc1lpEPk.s 			page 5
 
 
  123:Generated_Source\PSoC5/SPIS_2_PM.c **** *  SPIS_2_rxBufferWrite - modified every function call - resets to
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccxzTWkk.s 			page 1
  131              		.cfi_endproc
  132              	.LFE3:
  133              		.size	SPIS_2_Wakeup, .-SPIS_2_Wakeup
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccxzTWkk.s 			page 6
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cc1lpEPk.s 			page 6
 
 
  134              		.data
@@ -323,7 +323,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccxzTWkk.s 			page 1
  153 000c 00000000 		.4byte	.LASF26
  154 0010 0C       		.byte	0xc
  155 0011 D8000000 		.4byte	.LASF27
- 156 0015 8E010000 		.4byte	.LASF28
+ 156 0015 28010000 		.4byte	.LASF28
  157 0019 00000000 		.4byte	.Ldebug_ranges0+0
  158 001d 00000000 		.4byte	0
  159 0021 00000000 		.4byte	.Ldebug_line0
@@ -358,10 +358,10 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccxzTWkk.s 			page 1
  188 0056 02       		.uleb128 0x2
  189 0057 08       		.byte	0x8
  190 0058 07       		.byte	0x7
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccxzTWkk.s 			page 7
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cc1lpEPk.s 			page 7
 
 
- 191 0059 6A010000 		.4byte	.LASF7
+ 191 0059 BF010000 		.4byte	.LASF7
  192 005d 03       		.uleb128 0x3
  193 005e 04       		.byte	0x4
  194 005f 05       		.byte	0x5
@@ -369,11 +369,11 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccxzTWkk.s 			page 1
  196 0064 02       		.uleb128 0x2
  197 0065 04       		.byte	0x4
  198 0066 07       		.byte	0x7
- 199 0067 48010000 		.4byte	.LASF8
+ 199 0067 9D010000 		.4byte	.LASF8
  200 006b 04       		.uleb128 0x4
  201 006c 0D010000 		.4byte	.LASF12
  202 0070 02       		.byte	0x2
- 203 0071 E701     		.2byte	0x1e7
+ 203 0071 E901     		.2byte	0x1e9
  204 0073 2C000000 		.4byte	0x2c
  205 0077 02       		.uleb128 0x2
  206 0078 04       		.byte	0x4
@@ -390,7 +390,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccxzTWkk.s 			page 1
  217 008c 04       		.uleb128 0x4
  218 008d E3010000 		.4byte	.LASF13
  219 0091 02       		.byte	0x2
- 220 0092 9102     		.2byte	0x291
+ 220 0092 9302     		.2byte	0x293
  221 0094 98000000 		.4byte	0x98
  222 0098 05       		.uleb128 0x5
  223 0099 6B000000 		.4byte	0x6b
@@ -414,17 +414,17 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccxzTWkk.s 			page 1
  241 00ba 6B000000 		.4byte	0x6b
  242 00be 00       		.byte	0
  243 00bf 07       		.uleb128 0x7
- 244 00c0 3D010000 		.4byte	.LASF17
+ 244 00c0 92010000 		.4byte	.LASF17
  245 00c4 03       		.byte	0x3
  246 00c5 3C       		.byte	0x3c
  247 00c6 6B000000 		.4byte	0x6b
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccxzTWkk.s 			page 8
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cc1lpEPk.s 			page 8
 
 
  248 00ca 01       		.byte	0x1
  249 00cb 00       		.byte	0
  250 00cc 08       		.uleb128 0x8
- 251 00cd 55010000 		.4byte	.LASF18
+ 251 00cd AA010000 		.4byte	.LASF18
  252 00d1 03       		.byte	0x3
  253 00d2 3D       		.byte	0x3d
  254 00d3 AB000000 		.4byte	0xab
@@ -437,7 +437,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccxzTWkk.s 			page 1
  261 00e6 01       		.uleb128 0x1
  262 00e7 9C       		.byte	0x9c
  263 00e8 09       		.uleb128 0x9
- 264 00e9 28010000 		.4byte	.LASF20
+ 264 00e9 7D010000 		.4byte	.LASF20
  265 00ed 01       		.byte	0x1
  266 00ee 3D       		.byte	0x3d
  267 00ef 00000000 		.4byte	.LFB1
@@ -445,7 +445,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccxzTWkk.s 			page 1
  269 00f7 01       		.uleb128 0x1
  270 00f8 9C       		.byte	0x9c
  271 00f9 0A       		.uleb128 0xa
- 272 00fa 81010000 		.4byte	.LASF21
+ 272 00fa D6010000 		.4byte	.LASF21
  273 00fe 01       		.byte	0x1
  274 00ff 57       		.byte	0x57
  275 0100 00000000 		.4byte	.LFB2
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccxzTWkk.s 			page 1
  302 0145 01       		.byte	0x1
  303 0146 14       		.byte	0x14
  304 0147 CC000000 		.4byte	0xcc
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccxzTWkk.s 			page 9
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cc1lpEPk.s 			page 9
 
 
  305 014b 05       		.uleb128 0x5
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccxzTWkk.s 			page 1
  359 0021 0B       		.uleb128 0xb
  360 0022 0B       		.uleb128 0xb
  361 0023 3E       		.uleb128 0x3e
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccxzTWkk.s 			page 10
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cc1lpEPk.s 			page 10
 
 
  362 0024 0B       		.uleb128 0xb
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccxzTWkk.s 			page 1
  416 005a 16       		.uleb128 0x16
  417 005b 00       		.byte	0
  418 005c 03       		.uleb128 0x3
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccxzTWkk.s 			page 11
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cc1lpEPk.s 			page 11
 
 
  419 005d 0E       		.uleb128 0xe
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccxzTWkk.s 			page 1
  473 0095 13       		.uleb128 0x13
  474 0096 00       		.byte	0
  475 0097 00       		.byte	0
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccxzTWkk.s 			page 12
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cc1lpEPk.s 			page 12
 
 
  476 0098 0B       		.uleb128 0xb
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccxzTWkk.s 			page 1
  530 0020 00000000 		.4byte	.LFB2
  531 0024 28000000 		.4byte	.LFE2-.LFB2
  532 0028 00000000 		.4byte	.LFB3
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccxzTWkk.s 			page 13
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cc1lpEPk.s 			page 13
 
 
  533 002c 18000000 		.4byte	.LFE3-.LFB3
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccxzTWkk.s 			page 1
  562 00b9 756E7369 		.ascii	"unsigned char\000"
  562      676E6564 
  562      20636861 
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccxzTWkk.s 			page 14
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cc1lpEPk.s 			page 14
 
 
  562      7200
@@ -811,52 +811,52 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccxzTWkk.s 			page 1
  573              	.LASF10:
  574 0121 646F7562 		.ascii	"double\000"
  574      6C6500
- 575              	.LASF20:
- 576 0128 53504953 		.ascii	"SPIS_2_RestoreConfig\000"
- 576      5F325F52 
- 576      6573746F 
- 576      7265436F 
- 576      6E666967 
- 577              	.LASF17:
- 578 013d 636E7472 		.ascii	"cntrPeriod\000"
- 578      50657269 
- 578      6F6400
- 579              	.LASF8:
- 580 0148 756E7369 		.ascii	"unsigned int\000"
- 580      676E6564 
- 580      20696E74 
- 580      00
- 581              	.LASF18:
- 582 0155 53504953 		.ascii	"SPIS_2_BACKUP_STRUCT\000"
- 582      5F325F42 
- 582      41434B55 
- 582      505F5354 
- 582      52554354 
- 583              	.LASF7:
- 584 016a 6C6F6E67 		.ascii	"long long unsigned int\000"
- 584      206C6F6E 
- 584      6720756E 
- 584      7369676E 
- 584      65642069 
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccxzTWkk.s 			page 15
+ 575              	.LASF28:
+ 576 0128 433A5C55 		.ascii	"C:\\Users\\deniz\\OneDrive\\Dokumenter\\GitHub\\B-C"
+ 576      73657273 
+ 576      5C64656E 
+ 576      697A5C4F 
+ 576      6E654472 
+ 577 0155 41435C53 		.ascii	"AC\\SPI_virker\\SPI_virker\\Design01.cydsn\000"
+ 577      50495F76 
+ 577      69726B65 
+ 577      725C5350 
+ 577      495F7669 
+ 578              	.LASF20:
+ 579 017d 53504953 		.ascii	"SPIS_2_RestoreConfig\000"
+ 579      5F325F52 
+ 579      6573746F 
+ 579      7265436F 
+ 579      6E666967 
+ 580              	.LASF17:
+ 581 0192 636E7472 		.ascii	"cntrPeriod\000"
+ 581      50657269 
+ 581      6F6400
+ 582              	.LASF8:
+ 583 019d 756E7369 		.ascii	"unsigned int\000"
+ 583      676E6564 
+ 583      20696E74 
+ 583      00
+ 584              	.LASF18:
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cc1lpEPk.s 			page 15
 
 
- 585              	.LASF21:
- 586 0181 53504953 		.ascii	"SPIS_2_Sleep\000"
- 586      5F325F53 
- 586      6C656570 
- 586      00
- 587              	.LASF28:
- 588 018e 433A5C55 		.ascii	"C:\\Users\\jespe\\OneDrive\\Dokumenter\\GitHub\\B-C"
- 588      73657273 
- 588      5C6A6573 
- 588      70655C4F 
- 588      6E654472 
- 589 01bb 41435C53 		.ascii	"AC\\SPI_virker\\SPI_virker\\Design01.cydsn\000"
- 589      50495F76 
- 589      69726B65 
- 589      725C5350 
- 589      495F7669 
+ 585 01aa 53504953 		.ascii	"SPIS_2_BACKUP_STRUCT\000"
+ 585      5F325F42 
+ 585      41434B55 
+ 585      505F5354 
+ 585      52554354 
+ 586              	.LASF7:
+ 587 01bf 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 587      206C6F6E 
+ 587      6720756E 
+ 587      7369676E 
+ 587      65642069 
+ 588              	.LASF21:
+ 589 01d6 53504953 		.ascii	"SPIS_2_Sleep\000"
+ 589      5F325F53 
+ 589      6C656570 
+ 589      00
  590              	.LASF13:
  591 01e3 72656738 		.ascii	"reg8\000"
  591      00
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccxzTWkk.s 			page 1
  609      65642063 
  609      68617200 
  610              	.LASF23:
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccxzTWkk.s 			page 16
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\cc1lpEPk.s 			page 16
 
 
  611 0249 53504953 		.ascii	"SPIS_2_Stop\000"

@@ -1,6 +1,6 @@
--- Project:   C:\Users\jespe\OneDrive\Dokumenter\GitHub\B-CAC\SPI_virker\SPI_virker\Design01.cydsn\Design01.cyprj
--- Generated: 12/07/2023 09:25:50
--- PSoC Creator  4.2
+-- Project:   C:\Users\deniz\OneDrive\Dokumenter\GitHub\B-CAC\SPI_virker\SPI_virker\Design01.cydsn\Design01.cyprj
+-- Generated: 12/07/2023 10:50:32
+-- PSoC Creator  4.4
 
 ENTITY Design01 IS
     PORT(

@@ -52,7 +52,7 @@ void offset_Zerodrift_calibrate(uint8_t repeats, float startoffset, float factor
 void wait_for_weight(float startoffset, float factor,uint8_t preload)
 {
     float result_gram;
-    while(result_gram<50)
+    while(result_gram<200)
     {
     if (ADC_SAR_1_IsEndConversion(ADC_SAR_1_WAIT_FOR_RESULT))
         {
