@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxpLNyV.s 			page 1
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccjJQyax.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxpLNyV.s 			page 1
   37 0002 FFF7FEFF 		bl	SPIS_2_Start
   38              	.LVL0:
   39 0006 08BD     		pop	{r3, pc}
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxpLNyV.s 			page 2
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccjJQyax.s 			page 2
 
 
   40              		.cfi_endproc
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxpLNyV.s 			page 1
   35:spi_Slave.c   **** }
   77              		.loc 1 35 0
   78 0014 2046     		mov	r0, r4
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxpLNyV.s 			page 3
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccjJQyax.s 			page 3
 
 
   79 0016 10BD     		pop	{r4, pc}
@@ -177,11 +177,11 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxpLNyV.s 			page 1
  120              		.size	sendSPi, .-sendSPi
  121 001e 00BF     		.text
  122              	.Letext0:
- 123              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxpLNyV.s 			page 4
+ 123              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccjJQyax.s 			page 4
 
 
- 124              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 124              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
  125              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
  126              		.file 5 "Generated_Source\\PSoC5/SPIS_2.h"
  127              		.file 6 "Generated_Source\\PSoC5/core_cm3.h"
@@ -195,7 +195,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxpLNyV.s 			page 1
  135 000c 7C000000 		.4byte	.LASF28
  136 0010 0C       		.byte	0xc
  137 0011 4B000000 		.4byte	.LASF29
- 138 0015 70010000 		.4byte	.LASF30
+ 138 0015 A9010000 		.4byte	.LASF30
  139 0019 00000000 		.4byte	.Ldebug_ranges0+0
  140 001d 00000000 		.4byte	0
  141 0021 00000000 		.4byte	.Ldebug_line0
@@ -238,12 +238,12 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxpLNyV.s 			page 1
  178 0067 05       		.byte	0x5
  179 0068 0F020000 		.4byte	.LASF8
  180 006c 02       		.uleb128 0x2
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxpLNyV.s 			page 5
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccjJQyax.s 			page 5
 
 
  181 006d 08       		.byte	0x8
  182 006e 07       		.byte	0x7
- 183 006f DF010000 		.4byte	.LASF9
+ 183 006f 8A010000 		.4byte	.LASF9
  184 0073 04       		.uleb128 0x4
  185 0074 04       		.byte	0x4
  186 0075 05       		.byte	0x5
@@ -251,9 +251,9 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxpLNyV.s 			page 1
  188 007a 02       		.uleb128 0x2
  189 007b 04       		.byte	0x4
  190 007c 07       		.byte	0x7
- 191 007d D2010000 		.4byte	.LASF10
+ 191 007d 7D010000 		.4byte	.LASF10
  192 0081 03       		.uleb128 0x3
- 193 0082 F6010000 		.4byte	.LASF11
+ 193 0082 A1010000 		.4byte	.LASF11
  194 0086 03       		.byte	0x3
  195 0087 18       		.byte	0x18
  196 0088 2C000000 		.4byte	0x2c
@@ -265,7 +265,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxpLNyV.s 			page 1
  202 0097 05       		.uleb128 0x5
  203 0098 41020000 		.4byte	.LASF13
  204 009c 04       		.byte	0x4
- 205 009d E901     		.2byte	0x1e9
+ 205 009d E701     		.2byte	0x1e7
  206 009f 37000000 		.4byte	0x37
  207 00a3 02       		.uleb128 0x2
  208 00a4 04       		.byte	0x4
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxpLNyV.s 			page 1
  235 00d7 E5000000 		.4byte	0xe5
  236 00db 07       		.uleb128 0x7
  237 00dc 06000000 		.4byte	.LVL0
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxpLNyV.s 			page 6
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccjJQyax.s 			page 6
 
 
  238 00e0 81010000 		.4byte	0x181
@@ -358,14 +358,14 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxpLNyV.s 			page 1
  292 016a 50       		.byte	0x50
  293 016b 02       		.uleb128 0x2
  294 016c 74       		.byte	0x74
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxpLNyV.s 			page 7
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccjJQyax.s 			page 7
 
 
  295 016d 00       		.sleb128 0
  296 016e 00       		.byte	0
  297 016f 00       		.byte	0
  298 0170 0D       		.uleb128 0xd
- 299 0171 C5010000 		.4byte	.LASF34
+ 299 0171 70010000 		.4byte	.LASF34
  300 0175 06       		.byte	0x6
  301 0176 1207     		.2byte	0x712
  302 0178 7C010000 		.4byte	0x17c
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxpLNyV.s 			page 1
  349 0006 0B       		.uleb128 0xb
  350 0007 03       		.uleb128 0x3
  351 0008 0E       		.uleb128 0xe
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxpLNyV.s 			page 8
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccjJQyax.s 			page 8
 
 
  352 0009 1B       		.uleb128 0x1b
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxpLNyV.s 			page 1
  406 003f 49       		.uleb128 0x49
  407 0040 13       		.uleb128 0x13
  408 0041 00       		.byte	0
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxpLNyV.s 			page 9
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccjJQyax.s 			page 9
 
 
  409 0042 00       		.byte	0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxpLNyV.s 			page 1
  463 007b 40       		.uleb128 0x40
  464 007c 18       		.uleb128 0x18
  465 007d 9742     		.uleb128 0x2117
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxpLNyV.s 			page 10
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccjJQyax.s 			page 10
 
 
  466 007f 19       		.uleb128 0x19
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxpLNyV.s 			page 1
  520 00ba 34       		.uleb128 0x34
  521 00bb 00       		.byte	0
  522 00bc 03       		.uleb128 0x3
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxpLNyV.s 			page 11
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccjJQyax.s 			page 11
 
 
  523 00bd 0E       		.uleb128 0xe
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxpLNyV.s 			page 1
  577 0023 07000000 		.4byte	.LVL7-1
  578 0027 0100     		.2byte	0x1
  579 0029 50       		.byte	0x50
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxpLNyV.s 			page 12
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccjJQyax.s 			page 12
 
 
  580 002a 07000000 		.4byte	.LVL7-1
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxpLNyV.s 			page 1
  624              	.LASF5:
  625 001f 5F5F696E 		.ascii	"__int32_t\000"
  625      7433325F 
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxpLNyV.s 			page 13
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccjJQyax.s 			page 13
 
 
  625      7400
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxpLNyV.s 			page 1
  647 011c 73686F72 		.ascii	"short unsigned int\000"
  647      7420756E 
  647      7369676E 
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxpLNyV.s 			page 14
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccjJQyax.s 			page 14
 
 
  647      65642069 
@@ -804,41 +804,41 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxpLNyV.s 			page 1
  655      72697465 
  655      54784461 
  655      746100
- 656              	.LASF30:
- 657 0170 433A5C55 		.ascii	"C:\\Users\\deniz\\OneDrive\\Dokumenter\\GitHub\\B-C"
- 657      73657273 
- 657      5C64656E 
- 657      697A5C4F 
- 657      6E654472 
- 658 019d 41435C53 		.ascii	"AC\\SPI_virker\\SPI_virker\\Design01.cydsn\000"
- 658      50495F76 
- 658      69726B65 
- 658      725C5350 
- 658      495F7669 
- 659              	.LASF34:
- 660 01c5 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 660      52784275 
- 660      66666572 
- 660      00
- 661              	.LASF10:
- 662 01d2 756E7369 		.ascii	"unsigned int\000"
- 662      676E6564 
- 662      20696E74 
- 662      00
- 663              	.LASF9:
- 664 01df 6C6F6E67 		.ascii	"long long unsigned int\000"
- 664      206C6F6E 
- 664      6720756E 
- 664      7369676E 
- 664      65642069 
- 665              	.LASF11:
- 666 01f6 75696E74 		.ascii	"uint8_t\000"
- 666      385F7400 
+ 656              	.LASF34:
+ 657 0170 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 657      52784275 
+ 657      66666572 
+ 657      00
+ 658              	.LASF10:
+ 659 017d 756E7369 		.ascii	"unsigned int\000"
+ 659      676E6564 
+ 659      20696E74 
+ 659      00
+ 660              	.LASF9:
+ 661 018a 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 661      206C6F6E 
+ 661      6720756E 
+ 661      7369676E 
+ 661      65642069 
+ 662              	.LASF11:
+ 663 01a1 75696E74 		.ascii	"uint8_t\000"
+ 663      385F7400 
+ 664              	.LASF30:
+ 665 01a9 433A5C55 		.ascii	"C:\\Users\\jespe\\OneDrive\\Dokumenter\\GitHub\\B-C"
+ 665      73657273 
+ 665      5C6A6573 
+ 665      70655C4F 
+ 665      6E654472 
+ 666 01d6 41435C53 		.ascii	"AC\\SPI_virker\\SPI_virker\\Design01.cydsn\000"
+ 666      50495F76 
+ 666      69726B65 
+ 666      725C5350 
+ 666      495F7669 
  667              	.LASF12:
  668 01fe 696E7433 		.ascii	"int32_t\000"
  668      325F7400 
  669              	.LASF18:
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxpLNyV.s 			page 15
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccjJQyax.s 			page 15
 
 
  670 0206 73697A65 		.ascii	"sizetype\000"

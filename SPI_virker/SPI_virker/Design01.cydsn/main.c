@@ -74,7 +74,7 @@ int main(void)
     homeStepper(mode);
     stopFlagMotor();
     UCstate=0;
-    spilleterslut = 0;
+    spilleterslut = 0x4;
     }
     
     //der er sat en genstand på platform
@@ -100,6 +100,7 @@ int main(void)
     }
     //sendSPi(receivedData);
     UCstate=0;
+    spilleterslut = 0x4;
     }
      
     //send signal til RPI, Hvis GameReady er 1 så er øllen godkendt
@@ -130,13 +131,13 @@ int main(void)
     Result_gram = readWeight(repeats,startoffset, factor, preload);
     //CyDelay(65250);
     
-    tid = 65270;
+    tid = 72670;
     
     //wait_for_weight(startoffset, factor,preload);//venter på der bliver plasseret en øl
     
     
     //tid = stopTidsTagning(); //tid stoppes 
-    spilleterslut = 0x4;
+    
     
     
     roundedNum = (tid + 50) / 100 * 100;//rundes af til nærmeste 100 ms
@@ -166,6 +167,7 @@ int main(void)
         //UART_1_PutString(uartBuffer);
         }
     UCstate=0;
+     spilleterslut = 0x4;   
     }
     
     //modtager win signal fra RPI
@@ -176,6 +178,7 @@ int main(void)
     stopFlagMotor();
     sendSPi(receivedData);
     UCstate=0;
+    spilleterslut = 0x4;
     }
     }
     
@@ -231,7 +234,6 @@ void handleByteReceived(uint8_t byteReceived)
         case 0x4 :
         {
             milliSekunder = convertMillisekunder(tid);
-            milliSekunder = milliSekunder/100;
             sendSPi(milliSekunder);
         }
      
@@ -250,8 +252,12 @@ CY_ISR(ISR_SPI_rx_handler)
     uint8_t receivedData = modtagetSPi();
     
     if(receivedData == 0x1)
-    {
-        sendSPi(spilleterslut);
+    {            
+            for (uint8_t i = 0; i < 2; i++){
+                sendSPi(spilleterslut); 
+            }
+            
+        spilleterslut=0;
         
     }
     //Handling of recieved SPI data

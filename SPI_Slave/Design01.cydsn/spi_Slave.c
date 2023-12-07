@@ -36,12 +36,16 @@ uint8_t modtagetSPi(void)
 void sendSPi(uint8_t data)
 {
    // Vent, indtil TX-bufferen er klar til at sende data
-//    while ((SPIS_2_ReadTxStatus() & SPIS_2_STS_TX_FIFO_NOT_FULL)==0)
-//    {
-        // Vent, indtil TX-bufferen er klar
-//    }
-    SPIS_2_ClearTxBuffer();
+   SPIS_2_ClearTxBuffer();
+   SPIS_2_ClearRxBuffer();
+   while ((SPIS_2_ReadTxStatus() & SPIS_2_STS_TX_FIFO_NOT_FULL)==0)
+    {
+         //Vent, indtil TX-bufferen er klar
+    }
+    
     // Skriver data til TX-bufferen for at sende det til masteren
     SPIS_2_WriteTxData(data);
+    
+    
 }
 /* [] END OF FILE */

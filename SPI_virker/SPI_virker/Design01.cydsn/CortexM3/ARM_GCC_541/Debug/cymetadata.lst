@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 1
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccY9gr6q.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 1
   55 001a 01       		.byte	1
   56 001b 40       		.byte	64
   57 001c 20       		.byte	32
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 2
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccY9gr6q.s 			page 2
 
 
   58 001d 15       		.byte	21
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 1
  112 0053 40       		.byte	64
  113 0054 04       		.byte	4
  114 0055 4D       		.byte	77
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 3
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccY9gr6q.s 			page 3
 
 
  115 0056 01       		.byte	1
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 1
  169 008c B0       		.byte	-80
  170 008d 04       		.byte	4
  171 008e B1       		.byte	-79
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 4
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccY9gr6q.s 			page 4
 
 
  172 008f 01       		.byte	1
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 1
  226 00c5 08       		.byte	8
  227 00c6 DF       		.byte	-33
  228 00c7 01       		.byte	1
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 5
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccY9gr6q.s 			page 5
 
 
  229 00c8 E8       		.byte	-24
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 1
  283 00fe 62       		.byte	98
  284 00ff 44       		.byte	68
  285 0100 65       		.byte	101
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 6
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccY9gr6q.s 			page 6
 
 
  286 0101 80       		.byte	-128
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 1
  340 0137 01       		.byte	1
  341 0138 B7       		.byte	-73
  342 0139 04       		.byte	4
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 7
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccY9gr6q.s 			page 7
 
 
  343 013a BE       		.byte	-66
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 1
  397 0170 E8       		.byte	-24
  398 0171 C0       		.byte	-64
  399 0172 EA       		.byte	-22
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 8
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccY9gr6q.s 			page 8
 
 
  400 0173 C0       		.byte	-64
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 1
  454 01a9 10       		.byte	16
  455 01aa CC       		.byte	-52
  456 01ab C0       		.byte	-64
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 9
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccY9gr6q.s 			page 9
 
 
  457 01ac CE       		.byte	-50
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 1
  511 01e2 87       		.byte	-121
  512 01e3 01       		.byte	1
  513 01e4 89       		.byte	-119
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 10
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccY9gr6q.s 			page 10
 
 
  514 01e5 05       		.byte	5
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 1
  568 021b 03       		.byte	3
  569 021c CF       		.byte	-49
  570 021d 01       		.byte	1
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 11
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccY9gr6q.s 			page 11
 
 
  571 021e D0       		.byte	-48
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 1
  625 0254 21       		.byte	33
  626 0255 10       		.byte	16
  627 0256 22       		.byte	34
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 12
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccY9gr6q.s 			page 12
 
 
  628 0257 80       		.byte	-128
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 1
  682 028d 84       		.byte	-124
  683 028e AC       		.byte	-84
  684 028f 40       		.byte	64
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 13
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccY9gr6q.s 			page 13
 
 
  685 0290 B1       		.byte	-79
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 1
  739 02c6 60       		.byte	96
  740 02c7 40       		.byte	64
  741 02c8 62       		.byte	98
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 14
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccY9gr6q.s 			page 14
 
 
  742 02c9 40       		.byte	64
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 1
  796 02ff 04       		.byte	4
  797 0300 DD       		.byte	-35
  798 0301 11       		.byte	17
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 15
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccY9gr6q.s 			page 15
 
 
  799 0302 DF       		.byte	-33
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 1
  853 0338 80       		.byte	-128
  854 0339 04       		.byte	4
  855 033a 82       		.byte	-126
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 16
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccY9gr6q.s 			page 16
 
 
  856 033b 40       		.byte	64
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 1
  910 0371 80       		.byte	-128
  911 0372 53       		.byte	83
  912 0373 10       		.byte	16
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 17
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccY9gr6q.s 			page 17
 
 
  913 0374 62       		.byte	98
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 1
  967 03aa 0C       		.byte	12
  968 03ab 01       		.byte	1
  969 03ac 10       		.byte	16
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 18
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccY9gr6q.s 			page 18
 
 
  970 03ad 03       		.byte	3
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 1
  1024              		.size	cy_meta_wonvl, 4
  1025              	cy_meta_wonvl:
  1026 0000 BC       		.byte	-68
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 19
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccY9gr6q.s 			page 19
 
 
  1027 0001 90       		.byte	-112
@@ -1122,8 +1122,8 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 1
  1061      00000000 
  1062              		.text
  1063              	.Letext0:
- 1064              		.file 1 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
- 1065              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 1064              		.file 1 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 1065              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
  1066              		.file 3 "Generated_Source\\PSoC5\\cymetadata.c"
  1067              		.section	.debug_info,"",%progbits
  1068              	.Ldebug_info0:
@@ -1135,10 +1135,10 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 1
  1074 000c 24000000 		.4byte	.LASF17
  1075 0010 0C       		.byte	0xc
  1076 0011 D3010000 		.4byte	.LASF18
- 1077 0015 E7000000 		.4byte	.LASF19
+ 1077 0015 3A010000 		.4byte	.LASF19
  1078 0019 00000000 		.4byte	.Ldebug_line0
  1079 001d 02       		.uleb128 0x2
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 20
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccY9gr6q.s 			page 20
 
 
  1080 001e 01       		.byte	0x1
@@ -1176,7 +1176,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 1
  1112 0059 02       		.uleb128 0x2
  1113 005a 08       		.byte	0x8
  1114 005b 07       		.byte	0x7
- 1115 005c 5B010000 		.4byte	.LASF7
+ 1115 005c 06010000 		.4byte	.LASF7
  1116 0060 04       		.uleb128 0x4
  1117 0061 04       		.byte	0x4
  1118 0062 05       		.byte	0x5
@@ -1184,9 +1184,9 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 1
  1120 0067 02       		.uleb128 0x2
  1121 0068 04       		.byte	0x4
  1122 0069 07       		.byte	0x7
- 1123 006a 4E010000 		.4byte	.LASF8
+ 1123 006a F9000000 		.4byte	.LASF8
  1124 006e 03       		.uleb128 0x3
- 1125 006f 72010000 		.4byte	.LASF10
+ 1125 006f 1D010000 		.4byte	.LASF10
  1126 0073 02       		.byte	0x2
  1127 0074 18       		.byte	0x18
  1128 0075 24000000 		.4byte	0x24
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 1
  1134 0087 DF03     		.2byte	0x3df
  1135 0089 00       		.byte	0
  1136 008a 02       		.uleb128 0x2
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 21
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccY9gr6q.s 			page 21
 
 
  1137 008b 04       		.byte	0x4
@@ -1207,7 +1207,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 1
  1140 0091 07       		.uleb128 0x7
  1141 0092 6E000000 		.4byte	0x6e
  1142 0096 08       		.uleb128 0x8
- 1143 0097 3C010000 		.4byte	.LASF12
+ 1143 0097 E7000000 		.4byte	.LASF12
  1144 009b 03       		.byte	0x3
  1145 009c 1F       		.byte	0x1f
  1146 009d A7000000 		.4byte	0xa7
@@ -1251,14 +1251,14 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 1
  1184 00f6 FF       		.byte	0xff
  1185 00f7 00       		.byte	0
  1186 00f8 08       		.uleb128 0x8
- 1187 00f9 7A010000 		.4byte	.LASF15
+ 1187 00f9 25010000 		.4byte	.LASF15
  1188 00fd 03       		.byte	0x3
  1189 00fe C4       		.byte	0xc4
  1190 00ff 09010000 		.4byte	0x109
  1191 0103 05       		.uleb128 0x5
  1192 0104 03       		.byte	0x3
  1193 0105 00000000 		.4byte	cy_meta_flashprotect
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 22
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccY9gr6q.s 			page 22
 
 
  1194 0109 07       		.uleb128 0x7
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 1
  1248 0020 0B       		.uleb128 0xb
  1249 0021 3B       		.uleb128 0x3b
  1250 0022 0B       		.uleb128 0xb
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 23
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccY9gr6q.s 			page 23
 
 
  1251 0023 49       		.uleb128 0x49
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 1
  1305 0059 18       		.uleb128 0x18
  1306 005a 00       		.byte	0
  1307 005b 00       		.byte	0
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 24
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccY9gr6q.s 			page 24
 
 
  1308 005c 09       		.uleb128 0x9
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 1
  1340      2D736563 
  1340      74696F6E 
  1341              	.LASF5:
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 25
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccY9gr6q.s 			page 25
 
 
  1342 00b2 6C6F6E67 		.ascii	"long unsigned int\000"
@@ -1457,48 +1457,48 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 1
  1346      6574615F 
  1346      63757374 
  1346      6E766C00 
- 1347              	.LASF19:
- 1348 00e7 433A5C55 		.ascii	"C:\\Users\\deniz\\OneDrive\\Dokumenter\\GitHub\\B-C"
- 1348      73657273 
- 1348      5C64656E 
- 1348      697A5C4F 
- 1348      6E654472 
- 1349 0114 41435C53 		.ascii	"AC\\SPI_virker\\SPI_virker\\Design01.cydsn\000"
- 1349      50495F76 
- 1349      69726B65 
- 1349      725C5350 
- 1349      495F7669 
- 1350              	.LASF12:
- 1351 013c 63795F6D 		.ascii	"cy_meta_configecc\000"
- 1351      6574615F 
- 1351      636F6E66 
- 1351      69676563 
- 1351      6300
- 1352              	.LASF8:
- 1353 014e 756E7369 		.ascii	"unsigned int\000"
- 1353      676E6564 
- 1353      20696E74 
- 1353      00
- 1354              	.LASF7:
- 1355 015b 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1355      206C6F6E 
- 1355      6720756E 
- 1355      7369676E 
- 1355      65642069 
- 1356              	.LASF10:
- 1357 0172 75696E74 		.ascii	"uint8_t\000"
- 1357      385F7400 
- 1358              	.LASF15:
- 1359 017a 63795F6D 		.ascii	"cy_meta_flashprotect\000"
- 1359      6574615F 
- 1359      666C6173 
- 1359      6870726F 
- 1359      74656374 
+ 1347              	.LASF12:
+ 1348 00e7 63795F6D 		.ascii	"cy_meta_configecc\000"
+ 1348      6574615F 
+ 1348      636F6E66 
+ 1348      69676563 
+ 1348      6300
+ 1349              	.LASF8:
+ 1350 00f9 756E7369 		.ascii	"unsigned int\000"
+ 1350      676E6564 
+ 1350      20696E74 
+ 1350      00
+ 1351              	.LASF7:
+ 1352 0106 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1352      206C6F6E 
+ 1352      6720756E 
+ 1352      7369676E 
+ 1352      65642069 
+ 1353              	.LASF10:
+ 1354 011d 75696E74 		.ascii	"uint8_t\000"
+ 1354      385F7400 
+ 1355              	.LASF15:
+ 1356 0125 63795F6D 		.ascii	"cy_meta_flashprotect\000"
+ 1356      6574615F 
+ 1356      666C6173 
+ 1356      6870726F 
+ 1356      74656374 
+ 1357              	.LASF19:
+ 1358 013a 433A5C55 		.ascii	"C:\\Users\\jespe\\OneDrive\\Dokumenter\\GitHub\\B-C"
+ 1358      73657273 
+ 1358      5C6A6573 
+ 1358      70655C4F 
+ 1358      6E654472 
+ 1359 0167 41435C53 		.ascii	"AC\\SPI_virker\\SPI_virker\\Design01.cydsn\000"
+ 1359      50495F76 
+ 1359      69726B65 
+ 1359      725C5350 
+ 1359      495F7669 
  1360              	.LASF14:
  1361 018f 63795F6D 		.ascii	"cy_meta_wonvl\000"
  1361      6574615F 
  1361      776F6E76 
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccsQBHKF.s 			page 26
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccY9gr6q.s 			page 26
 
 
  1361      6C00
