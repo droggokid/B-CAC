@@ -44,6 +44,8 @@ uint32 stopTidsTagning()
 
     Timer_1_Stop();
     
+    Timer_1_WriteCounter(0);
+    
     return time_interval_ms;
 }
 
