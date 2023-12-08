@@ -17,6 +17,8 @@ uint8_t command_byte = 0x00;
 static uint8_t minutter_ = 0;
 static uint8_t sekunder_ = 0;
 static uint8_t millisekunder_ = 0;
+static uint8_t gameReady_ = 0;
+static uint8_t DNF_ = 0;
 
 /* Definition of SPI devices */
 struct psoc_spi_dev
@@ -140,7 +142,7 @@ ssize_t spi_drv_write(struct file *filep, const char __user *ubuf,
     struct spi_transfer t[1];
     struct spi_message m;
     uint8_t tx_buf = command_byte;
-        uint8_t rx_buf = command_byte;
+    uint8_t rx_buf = command_byte;
 
 
     memset(t, 0, sizeof(t));
@@ -169,6 +171,7 @@ ssize_t spi_drv_write(struct file *filep, const char __user *ubuf,
     case 0x02:
         minutter_ = rx_buf;
         printk("Minutter %u\n", minutter_);
+        
         break;
 
     case 0x03:
@@ -179,6 +182,16 @@ ssize_t spi_drv_write(struct file *filep, const char __user *ubuf,
     case 0x04:
         millisekunder_ = rx_buf;
         printk("Millisekunder %u\n", millisekunder_);
+        break;
+
+    case 0x05:
+        gameReady_ = rx_buf;
+        printk("Gameready %u\n", gameReady_);
+        break;
+
+    case 0x06:
+        DNF_ = rx_buf;
+        printk("DNF: %u\n", DNF_);
         break;
 
     default:
@@ -201,6 +214,7 @@ ssize_t spi_drv_write(struct file *filep, const char __user *ubuf,
 /*
  * Character Driver Read File Operations Method
  */
+ 
 ssize_t spi_drv_read(struct file *filep, char __user *ubuf,
                      size_t count, loff_t *f_pos)
 {
@@ -220,6 +234,8 @@ ssize_t spi_drv_read(struct file *filep, char __user *ubuf,
     memset(t, 0, sizeof(t));
     spi_message_init(&m);
     m.spi = spi_devs[minor].spi;
+
+    //if(Minor)
 
         t[0].tx_buf = &tx_byte;
         t[0].rx_buf = &resultBuff[minor]; // Use minor to index the result buffer based on the current slave
@@ -245,6 +261,8 @@ ssize_t spi_drv_read(struct file *filep, char __user *ubuf,
         /* Convert integer to string limited to "count" size. Returns
          * length excluding NULL termination */
         len = snprintf(resultBuf, count, "%u\n", result);
+        int sidsteChar = lenght(resultBuf);
+        resultBuf[sidsteChar] = "\0";
         if (len >= count)
         {
             printk(KERN_ALERT "User buffer too small to hold the result\n");
