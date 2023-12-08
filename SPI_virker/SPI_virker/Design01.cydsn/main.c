@@ -19,8 +19,8 @@ uint32 roundedNum = 0;
 uint8_t gameReady = 0;//spi_drv1
 uint8_t minutter = 0; //spi_drv2
 uint8_t sekunder = 0; //spi_drv3
-uint8_t milliSekunder = 0;//spi_drv4
-uint8_t dnf=0;//spi_drv5
+uint8_t milliSekunder = 0; //spi_drv4
+uint8_t dnf = 0; //spi_drv5
 uint8_t receivedData = 0;
 uint8_t spilleterslut = 0;
 
