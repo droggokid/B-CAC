@@ -13,14 +13,14 @@
 CY_ISR_PROTO(ISR_SPI_rx_handler);
 void handleByteReceived(uint8_t byteReceived);
 static int UCstate=0;
-uint8_t receivedData = 0;
+uint32 tid=0;
 uint32 roundedNum = 0;
 
-uint32 tid=0;
 uint8_t dnf=0;
 uint8_t minutter = 0;
 uint8_t sekunder = 0;
 uint8_t gameReady = 0;
+uint8_t receivedData = 0;
 uint8_t milliSekunder = 0;
 uint8_t spilleterslut = 0;
 
@@ -171,25 +171,25 @@ void handleByteReceived(uint8_t byteReceived)
         break;
         case 0x2 :
         {
+            sendSPi(gameReady);
+        }
+        break;
+        case 0x3 :
+        {
             minutter = convertMinutter(tid);
             sendSPi(minutter); 
         }
         break;
-        case 0x3 :
+        case 0x4 :
         {
             sekunder = convertSekunder(tid);
             sendSPi(sekunder);
         }
         break;
-        case 0x4 :
+        case 0x5 :
         {
             milliSekunder = convertMillisekunder(tid);
             sendSPi(milliSekunder);
-        }
-        break;
-        case 0x5 :
-        {
-           sendSPi(gameReady);
         }
         break;
         case 0x6 :
