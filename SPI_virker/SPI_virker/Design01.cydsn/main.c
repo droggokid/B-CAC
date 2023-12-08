@@ -16,12 +16,12 @@ static int UCstate=0;
 uint32 tid=0;
 uint32 roundedNum = 0;
 
-uint8_t dnf=0;
-uint8_t minutter = 0;
-uint8_t sekunder = 0;
-uint8_t gameReady = 0;
+uint8_t gameReady = 0;//spi_drv1
+uint8_t minutter = 0; //spi_drv2
+uint8_t sekunder = 0; //spi_drv3
+uint8_t milliSekunder = 0;//spi_drv4
+uint8_t dnf=0;//spi_drv5
 uint8_t receivedData = 0;
-uint8_t milliSekunder = 0;
 uint8_t spilleterslut = 0;
 
 
@@ -42,7 +42,7 @@ int main(void)
     float factor = 4.672;
     int preload=0;
     uint16_t Result_gram;
-    uint8_t timestop=0;
+    //uint8_t timestop=0;
     char mode='h';
      
     homeStepper(mode);
@@ -71,7 +71,7 @@ int main(void)
             CyDelay(3000); // delay så flasken falder til ro
             Result_gram = readWeight(repeats, startoffset, factor, preload);
     
-            if(Result_gram >= 100) {
+            if(Result_gram >= 100) { //husk at ændre til 650!!!
                 gameReady = 1;
             }
 
@@ -212,12 +212,12 @@ CY_ISR(ISR_SPI_rx_handler)
     
     if(receivedData == 0x1)
     {            
-        for (uint8_t i = 0; i < 2; i++)
-        {
+        //for (uint8_t i = 0; i < 2; i++)
+        //{
           sendSPi(spilleterslut); 
-        }
+        //}
             
-        spilleterslut = 0;
+        //spilleterslut = 0;
     }
     
     // Handling of received SPI data
