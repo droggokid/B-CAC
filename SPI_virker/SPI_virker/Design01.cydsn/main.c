@@ -16,11 +16,11 @@ static int UCstate=0;
 uint32 tid=0;
 uint32 roundedNum = 0;
 
-uint8_t gameReady = 0;//spi_drv1
-uint8_t minutter = 0; //spi_drv2
-uint8_t sekunder = 0; //spi_drv3
-uint8_t milliSekunder = 0; //spi_drv4
-uint8_t dnf = 0; //spi_drv5
+uint8_t gameReady = 0;      //spi_drv1
+uint8_t minutter = 0;       //spi_drv2
+uint8_t sekunder = 0;       //spi_drv3
+uint8_t milliSekunder = 0;  //spi_drv4
+uint8_t dnf = 0;            //spi_drv5
 uint8_t receivedData = 0;
 uint8_t spilleterslut = 0;
 
@@ -40,10 +40,10 @@ int main(void)
     int repeats = 50;
     float startoffset = 164.5;
     float factor = 4.672;
-    int preload=0;
+    int preload = 0;
     uint16_t Result_gram;
     //uint8_t timestop=0;
-    char mode='h';
+    char mode = 'h';
      
     homeStepper(mode);
     stopFlagMotor();

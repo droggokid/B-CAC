@@ -17,9 +17,6 @@
 float zeroDriftOffset=0;
 
 
-
-
-
 void initLoadcell(void)
 {
     ADC_SAR_1_Start();
