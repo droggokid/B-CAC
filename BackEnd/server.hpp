@@ -69,7 +69,7 @@ public:
                     {
                         cout << "Received POST tare:" << endl << data << endl;
                     }
-                    else if (cmd == "startGame")
+                    else if (cmd == "startGame") //start game trykket
                     {
                         cout << "Received POST startGame:" << endl << data << endl;
 
