@@ -29,8 +29,8 @@ struct psoc_spi_dev
 
 /* Array of SPI devices */
 /* Minor used to index array */
-struct psoc_spi_dev spi_devs[5];
-const int spi_devs_len = 5;  // Max nbr of devices
+struct psoc_spi_dev spi_devs[12];
+const int spi_devs_len = 12;  // Max nbr of devices
 static int spi_devs_cnt = 0; // Nbr devices present
 
 /* Macro to handle Errors */
@@ -52,13 +52,13 @@ static int __init spi_drv_init(void)
     printk("spi_drv driver initializing\n");
 
     /* Allocate major number range for spi_devs_len devices */
-    err = alloc_chrdev_region(&devno, 0, 255, "spi_drv");
+    err = alloc_chrdev_region(&devno, 0, spi_devs_len, "spi_drv");
     if (err < 0)
         ERRGOTO(err_no_cleanup, "Failed to register chardev\n");
     printk(KERN_ALERT "Assigned major no: %i\n", MAJOR(devno));
 
     cdev_init(&spi_drv_cdev, &spi_drv_fops);
-    err = cdev_add(&spi_drv_cdev, devno, 255);
+    err = cdev_add(&spi_drv_cdev, devno, spi_devs_len);
     if (err)
         ERRGOTO(err_cleanup_chrdev, "Failed to create class");
 
@@ -232,23 +232,23 @@ ssize_t spi_drv_read(struct file* filep, char __user* ubuf,
     memset(t, 0, sizeof(t));
     spi_message_init(&m);
     m.spi = spi_devs[minor].spi;
-    if (minor == 1)
+    if (minor == 1 || minor == 7)
     {
         tx_byte = 0x02;
     }
-    if (minor == 2)
+    if (minor == 2 || minor == 8)
     {
         tx_byte = 0x03;
     }
-    if (minor == 3)
+    if (minor == 3 || minor == 9)
     {
         tx_byte = 0x04;
     }
-    if (minor == 4)
+    if (minor == 4 || minor == 10)
     {
         tx_byte = 0x05;
     }
-    if (minor == 5)
+    if (minor == 5 || minor == 11)
     {
         tx_byte = 0x06;
     }
@@ -392,7 +392,7 @@ static const struct of_device_id of_spi_drv_spi_device_match[] = {
     {
         .compatible = "ase, spi_drv",
     },
-    {},
+    
 };
 
 static struct spi_driver spi_drv_spi_driver = {
