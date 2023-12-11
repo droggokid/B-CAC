@@ -1,6 +1,6 @@
-C:\Users\deniz\OneDrive\Dokumenter\GitHub\B-CAC\SPI_virker\SPI_virker\Design01.cydsn\Design01.cyprj|2a67eceb-d3b0-411d-8f00-30409da8fd2b
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|cfaae784-4e22-47d2-aaf4-10c3e87cdc4f
-C:\Users\deniz\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|701e8cd0-7400-4c3a-a312-a3d026b907f9
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|d71573f3-197c-4abf-b56c-c5be425bf76f
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|2a5e82bc-9f5f-4258-98f3-13743af7bb62
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|9ef897cd-64f0-4d87-9c7d-1e73c788b156
+C:\UNI_FILES\GitPROJEKT\B-CAC\SPI_virker\SPI_virker\Design01.cydsn\Design01.cyprj|028f482c-edd7-44f0-98e5-2b19ff993b52
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|cc170ad3-bc5a-4ef3-a24d-3717b91b120c
+C:\Users\Morten T\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|4f7cd208-07c4-4456-a2d1-ff3552ca965d
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|38f54f72-fd7e-4c41-9011-74cad940682d
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|1b8faaaf-5710-4aaa-a5a7-330f980a6541
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|93c5d727-37f2-4ac8-acf0-1d7bec9ecd1e

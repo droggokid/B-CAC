@@ -1,3 +1,3 @@
-# Component constraints for C:\Users\deniz\OneDrive\Dokumenter\GitHub\B-CAC\SPI_virker\SPI_virker\Design01.cydsn\TopDesign\TopDesign.cysch
-# Project: C:\Users\deniz\OneDrive\Dokumenter\GitHub\B-CAC\SPI_virker\SPI_virker\Design01.cydsn\Design01.cyprj
-# Date: Thu, 07 Dec 2023 09:50:29 GMT
+# Component constraints for C:\UNI_FILES\GitPROJEKT\B-CAC\SPI_virker\SPI_virker\Design01.cydsn\TopDesign\TopDesign.cysch
+# Project: C:\UNI_FILES\GitPROJEKT\B-CAC\SPI_virker\SPI_virker\Design01.cydsn\Design01.cyprj
+# Date: Fri, 08 Dec 2023 10:35:33 GMT
