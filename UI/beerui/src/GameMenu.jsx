@@ -86,7 +86,9 @@ function GameMenu({onComponentChange}) {
                     case false:
                         setGameRunning(false);
                         
-                        server.getTime();
+                        setTimeout(() => {
+                            server.getTime();
+                        }, 5500);
                         
                         setTimeout(() => {
                             data.players[0].setTime(data.recievedTime["p1"]);
@@ -105,7 +107,7 @@ function GameMenu({onComponentChange}) {
                             }
                             else if (data.players[0].dnf && data.players[1].dnf)
                             {
-                                winner = "DNF";
+                                winner = -1;
                                 setWinLabel(`Alle fik DNF!`);
                             }
                             else
@@ -113,10 +115,12 @@ function GameMenu({onComponentChange}) {
                                 winner = data.players[0].dnf ? 1 : 0;
                                 setWinLabel(`Player ${data.players[winner].initials} har vundet!`);
                             }
+
+                            server.postWinner(winner);
                             
                             setTimerShow(false);
                             setWinShow(true);
-                        }, 2000);
+                        }, 7500);
                         break;
 
                     default:
