@@ -34,6 +34,8 @@ bool tare1Done = false;
 bool tare2Done = false;
 bool player1Done = false;
 bool player2Done = false;
+bool p1DNF = false;
+bool p2DNF = false;
 
 //string readData;
 bool sentBB = false;
@@ -177,6 +179,42 @@ public:
 
                         closeFile(fileDescriptor);
                     }
+                    else if (cmd == "winner")
+                    {
+                        cout << "Received POST winner:" << endl << data << endl;
+                        int winnerId = data["winnerId"];
+                        switch (winnerId)
+                        {
+                        case -1:
+                            cout << "Both players lost haha" << endl;
+                            fileDescriptor = openFile(platformOnePath);
+                            writeFile(fileDescriptor, "0xEE");
+                            closeFile(fileDescriptor);
+                            fileDescriptor2 = openFile(platformTwoPath);
+                            writeFile(fileDescriptor2, "0xEE");
+                            closeFile(fileDescriptor2);
+                            break;
+                        case 0:
+                            cout << "Player 1 won" << endl;
+                            fileDescriptor = openFile(platformOnePath);
+                            writeFile(fileDescriptor, "0xDD");
+                            closeFile(fileDescriptor);
+                            fileDescriptor2 = openFile(platformTwoPath);
+                            writeFile(fileDescriptor2, "0xEE");
+                            closeFile(fileDescriptor2);
+                            break;
+                        case 1:
+                            cout << "Player 2 won" << endl;
+                            fileDescriptor = openFile(platformOnePath);
+                            writeFile(fileDescriptor, "0xEE");
+                            closeFile(fileDescriptor);
+
+                            fileDescriptor2 = openFile(platformTwoPath);
+                            writeFile(fileDescriptor2, "0xDD");
+                            closeFile(fileDescriptor2);
+                            break;
+                        }
+                    }
                     else 
                     {
                         cout << "Target not specified" << endl;
@@ -195,28 +233,28 @@ public:
                         string searchedString = "10";
                         string readData;
                         string readData2;
-                        openFile(platformOnePath);
-                        openFile(platformTwoPath);
+                        fileDescriptor = openFile(platformOnePath);
+                        fileDescriptor2 = openFile(platformTwoPath);
                         readFile(fileDescriptor, readData);
-                        readFile(fileDescriptor, readData2);
+                        readFile(fileDescriptor2, readData2);
                         if (search(searchedString, readData))
                         {
                             cout << "TARE 1 REQUEST DONE" << readData << endl;
-                            bool tare1Ready = true;
-                            if (tare2Ready)
-                                response.body() = "true";
+                            tare1Ready = true;
                         }
                         if (search(searchedString, readData2))
                         {
                             cout << "TARE 2 REQUEST DONE" << readData2 << endl;
-                            bool tare2Ready = true;
-                            if (tare1Ready)
-                                response.body() = "true";
+                            tare2Ready = true;
                         }
+
+                        if (tare1Ready && tare2Ready)
+                            response.body() = "true";
                         else 
                             response.body() = "false";
 
-                        closeFile(fileDescriptor);                        
+                        closeFile(fileDescriptor);  
+                        closeFile(fileDescriptor2);                      
                     }
                     else if (target == "/gameReady")
                     {
@@ -253,11 +291,13 @@ public:
                     }
                     else if (target == "/time")
                     {
-                        //hejs flag
-                        fileDescriptor = openFile(platformOnePath);
-                        writeFile(fileDescriptor, "0xDD");
-                        closeFile(fileDescriptor);  
-                        // for (uint32_t i = 0; i < 40000000; i++)
+                        //----------------hejs flag----------------
+                        // fileDescriptor = openFile(platformOnePath);
+                        // writeFile(fileDescriptor, "0xDD");
+                        // closeFile(fileDescriptor);  
+                        //------------------------------------------
+                        
+                        // // for (uint32_t i = 0; i < 40000000; i++)
                         // {
                         //     int tal;
                         //     ++tal;
@@ -266,6 +306,8 @@ public:
                         // }
 
                         //flush buffer (evt add forloop)
+                        cout << "Received GET time" << endl;
+
                         {
                             string flush;
                             fileDescriptor = openFile(platformOnePath);
@@ -295,16 +337,70 @@ public:
                         closeFile(fileDescriptor);
                         }
 
-                        cout << "Received GET time" << endl;
-                        //players_[0].time = minutter_ + ":" + sekunder_ + ":" + milisekunder_;
-                        //players_[1].time = minutter_ + ":" + sekunder_ + ":" + milisekunder_;
+                        string minutter2_, sekunder2_, milisekunder2_;
+                        for (int i = 0; i < 3; i++){
+                        fileDescriptor2 = openFile(minutes2);
+                        readFile(fileDescriptor2, minutter2_);
+                        minutter2_ = minutter2_.substr(0, 1);
+                        closeFile(fileDescriptor2);
+                        }
 
-                        //nohmann::json jsonStrPlayers;
-                        //string jsonStrPlayers = json(players_).dump();
+                        for (int i = 0; i < 3; i++){
+                        fileDescriptor2 = openFile(sekunder2);
+                        readFile(fileDescriptor2, sekunder2_);
+                        sekunder2_ = sekunder2_.substr(0, 2);
+                        closeFile(fileDescriptor2);
+                        }
+
+                        for (int i = 0; i < 3; i++){
+                        fileDescriptor2 = openFile(milisekunder2);
+                        readFile(fileDescriptor2, milisekunder2_);
+                        milisekunder2_ = milisekunder2_.substr(0, 1);
+                        closeFile(fileDescriptor2);
+                        }
                         
-                        //response.body() = jsonStrPlayers;
-                        //response.body() = R"({'p1': '01:12.45', 'p2': '01:11.10'})"; //lav det om så den læser tiden i stedet
-                        response.body() = "{'p1': '" + minutter_ + ":" + sekunder_ + "." + milisekunder_ + "', 'p2': '01:23.45'}"; //det her kan vi ikke bruge
+                        fileDescriptor = openFile(dnf1);
+                        string readData;
+                        string searchedString = "1";
+                        for (int i = 0; i < 3; i++)
+                            readFile(fileDescriptor, readData);
+                        
+                        closeFile(fileDescriptor);
+                        
+                        if (search(searchedString, readData))
+                        {
+                            cout << "PLAYER 1 DNF " << readData << endl;
+                            minutter_ = "DNF";
+                            sekunder_ = "";
+                            milisekunder_ = "";
+                            p1DNF = true;
+                            fileDescriptor = openFile(platformOnePath);
+                            writeFile(fileDescriptor, "0xEE");
+                            closeFile(fileDescriptor);
+                        }
+
+                        fileDescriptor2 = openFile(dnf2);
+                        string readData2;
+                        for (int i = 0; i < 3; i++){
+                            readFile(fileDescriptor2, readData2);
+                        }
+
+                        closeFile(fileDescriptor2);
+                        if (search(searchedString, readData2))
+                        {
+                            cout << "PLAYER 2 DNF " << readData2 << endl;
+                            minutter2_ = "DNF";
+                            sekunder2_ = "";
+                            milisekunder2_ = "";
+                            p2DNF = true;
+                            fileDescriptor2 = openFile(platformTwoPath);
+                            writeFile(fileDescriptor2, "0xEE");
+                            closeFile(fileDescriptor2);
+                        }
+
+
+                        response.body() = "{'p1': '" + minutter_ + ":" + sekunder_ + "." + milisekunder_ + "', 'p2': '" + minutter2_ + ":" + sekunder2_ + "." + milisekunder2_ + "'}";
+                        //response.body() = "{'p1': '" + minutter_ + ":" + sekunder_ + "." + milisekunder_ + "', 'p2': '01:23.45'}"; //det her kan vi ikke bruge
                         /*
                                 FIKS PARSING ERROR NÅR VI SENDER TIDEN FOR SPILLERNE
                         */
@@ -328,17 +424,15 @@ public:
                         if (search(searchedString, readData))
                         {
                             cout << "PLAYER 1 FINISHED " << readData << endl;
-                            player1Done = true;    
-                            if (player2Done)
-                                response.body() = "false"; //game running bliver false
+                            player1Done = true;
                         }
                         if (search(searchedString, readData2))
                         {
                             cout << "PLAYER 2 FINISHED " << readData2 << endl;
                             player2Done = true;
-                            if (player1Done)
-                                response.body() = "false"; //game running bliver false
                         }
+                        if (player1Done && player2Done)
+                            response.body() = "false";
                         else
                             response.body() = "true";
                     }
