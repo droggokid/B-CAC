@@ -57,6 +57,7 @@ function GameMenu({onComponentChange}) {
                 {
                     setGameReady(2);
                     setStartBtnActive(true);
+                    console.log("START KNAP KLAR");
                     setGameReady(0);
                 }
             }
@@ -90,11 +91,12 @@ function GameMenu({onComponentChange}) {
                         setTimeout(() => {
                             data.players[0].setTime(data.recievedTime["p1"]);
                             data.players[1].setTime(data.recievedTime["p2"]);
-
+                            console.log("player 1 time " + data.players[0].time);
+                            console.log("player 2 time " + data.players[1].time);
                             // Opdater tider og vinder tekst når det er modtaget
                             setP1Time(data.players[0].dnf ? "DNF" : data.players[0].time);
                             setP2Time(data.players[1].dnf ? "DNF" : data.players[1].time);
-
+                            //setP2Time(data.recievedTime["p2"]);
                             let winner = null;
                             if (!data.players[0].dnf && !data.players[1].dnf)
                             {
