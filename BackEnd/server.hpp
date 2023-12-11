@@ -28,9 +28,17 @@ char* sekunder2 = "/dev/spi_drv9";
 char* milisekunder2 = "/dev/spi_drv10";
 char* dnf2 = "/dev/spi_drv11";
 
+bool tare1Ready = false;
+bool tare2Ready = false;
+bool tare1Done = false;
+bool tare2Done = false;
+bool player1Done = false;
+bool player2Done = false;
+
 //string readData;
 bool sentBB = false;
 bool sentCC = false;
+
 
 //opret player struct/class med time og initials (evt drink type)
 struct Player
@@ -41,6 +49,7 @@ struct Player
 
 
 int fileDescriptor;
+int fileDescriptor2;
 bool okRecieved = false;
                                                         /*
                                                         DET SOM ER GALT:
@@ -126,21 +135,13 @@ public:
                     {
                         cout << "Received POST tare:" << endl << data << endl;
                         fileDescriptor = openFile(platformOnePath);
+                        fileDescriptor2 = openFile(platformTwoPath);
                         string readData;
                         okRecieved = false;
                         writeFile(fileDescriptor, "0xAA");
-                        string searchedString = "10";
-                        while (!okRecieved)
-                        {
-                            readFile(fileDescriptor, readData);
-                            //if (readData != "10"/*readData == "10" || readData == "0xA" || stoi(readData) == 10*/) // HVAD ER DER GALT MED DEN STRING
-                            if (search(searchedString, readData))
-                            {
-                                okRecieved = true;
-                                cout << "TARE REQUEST DONE" << readData << endl;
-                            }
-                        }
+                        writeFile(fileDescriptor2, "0xAA");
                         closeFile(fileDescriptor);
+                        closeFile(fileDescriptor2);
                     }
                     else if (cmd == "startGame")
                     {
@@ -152,10 +153,13 @@ public:
                         //players_[0].initials = json.dump(p1Initials); //det er ikk så vigtigt,
                         //players_[1].initials = json.dump(p2Initials); //de bliver vist oss gemt på client
                         string readData;
+                        string readData2;
                         fileDescriptor = openFile(platformOnePath);
+                        fileDescriptor2 = openFile(platformTwoPath);
                         if (!sentCC)
                         {
                             writeFile(fileDescriptor, "0xCC");
+                            writeFile(fileDescriptor2, "0xCC");
                             sentCC = true;
                         }
                         // readFile(fileDescriptor, readData);
@@ -188,54 +192,64 @@ public:
                     {
                         cout << "Received GET tareReady" << endl;
 
-
-                        //while (!okRecieved)
-                        //{
+                        string searchedString = "10";
                         string readData;
-                        fileDescriptor = openFile(platformOnePath);
-                        if (!sentBB)
-                        {
-                            writeFile(fileDescriptor, "0xBB");
-                            sentBB = true;
-                        }
-                        //writeFile(fileDescriptor, "0xBB");
+                        string readData2;
+                        openFile(platformOnePath);
+                        openFile(platformTwoPath);
                         readFile(fileDescriptor, readData);
-                        //if (readData == "11" || readData == "0xB") // HVAD ER DER GALT MED DEN STRING
-                        string searchedString = "11";
+                        readFile(fileDescriptor, readData2);
                         if (search(searchedString, readData))
                         {
-                            okRecieved = true; //gammel kode til while looped, lige meget
-                            cout << "TARE FINISHED " << readData << endl;
-                            response.body() = "true";
+                            cout << "TARE 1 REQUEST DONE" << readData << endl;
+                            bool tare1Ready = true;
+                            if (tare2Ready)
+                                response.body() = "true";
                         }
-                        
-                        //}
-                        /*
-                        fileDescriptor = openFile(platformOnePath);
-                        string readData;
-                        readFile(fileDescriptor, "0xAA")
-                        while (!okRecieved)
+                        if (search(searchedString, readData2))
                         {
-                            readFile(fileDescriptor, readData);
-                            if (readData == "10" || readData == "0xA" || stoi(readData) == 10) // HVAD ER DER GALT MED DEN STRING
-                            {
-                                okRecieved = true;
-                                cout << "TARE REQUEST " << readData << endl;
-                            }
+                            cout << "TARE 2 REQUEST DONE" << readData2 << endl;
+                            bool tare2Ready = true;
+                            if (tare1Ready)
+                                response.body() = "true";
                         }
-                        closeFile(fileDescriptor);
-                        */
-                    else
-                        response.body() = "false";
-                        
-                    closeFile(fileDescriptor);
-                        
+                        else 
+                            response.body() = "false";
+
+                        closeFile(fileDescriptor);                        
                     }
                     else if (target == "/gameReady")
                     {
                         cout << "Received GET gameReady" << endl;
-                        response.body() = "true";
-
+                        string readData;
+                        string readData2;
+                        fileDescriptor = openFile(platformOnePath);
+                        fileDescriptor2 = openFile(platformTwoPath);
+                        if (!sentBB)
+                        {
+                            writeFile(fileDescriptor, "0xBB");
+                            writeFile(fileDescriptor2, "0xBB");
+                            sentBB = true;
+                        }
+                        readFile(fileDescriptor, readData);
+                        readFile(fileDescriptor2, readData2);
+                        string searchedString = "11";
+                        if (search(searchedString, readData))
+                        {
+                            cout << "TARE 1 FINISHED " << readData << endl;
+                            tare1Done = true;
+                            if (tare2Done)
+                                response.body() = "true";
+                        }
+                        if (search(searchedString, readData2))
+                        {
+                            cout << "TARE 2 FINISHED " << readData2 << endl;
+                            tare2Done = true;
+                            if (tare1Done)
+                                response.body() = "true";
+                        }
+                        else
+                            response.body() = "false"; 
                     }
                     else if (target == "/time")
                     {
@@ -303,14 +317,27 @@ public:
                         cout << "Received GET gameRunning" << endl;
 
                         string readData;
+                        string readData2;
                         fileDescriptor = openFile(platformOnePath);
+                        fileDescriptor2 = openFile(platformTwoPath);
                         readFile(fileDescriptor, readData);
+                        readFile(fileDescriptor2, readData2);
                         closeFile(fileDescriptor);
+                        closeFile(fileDescriptor2);
                         string searchedString = "12";
                         if (search(searchedString, readData))
                         {
-                            cout << "GAME FINISHED " << readData << endl;
-                            response.body() = "false"; //game running bliver false
+                            cout << "PLAYER 1 FINISHED " << readData << endl;
+                            player1Done = true;    
+                            if (player2Done)
+                                response.body() = "false"; //game running bliver false
+                        }
+                        if (search(searchedString, readData2))
+                        {
+                            cout << "PLAYER 2 FINISHED " << readData2 << endl;
+                            player2Done = true;
+                            if (player1Done)
+                                response.body() = "false"; //game running bliver false
                         }
                         else
                             response.body() = "true";
