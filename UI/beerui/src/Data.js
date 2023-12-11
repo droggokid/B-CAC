@@ -18,8 +18,8 @@ class Player
                 this.dnf = true;
                 return;
             }
-            this.timeMs = this.strToMs(timeStr) - 3000;
-            this.time = this.msToStr(this.timeMs);
+            this.timeMs = this.strToMs(timeStr);
+            this.time = timeStr;
         }
         catch (e)
         {
