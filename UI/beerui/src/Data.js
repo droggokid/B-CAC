@@ -13,7 +13,7 @@ class Player
     {
         try
         {
-            if (timeStr.includes("dnf"))
+            if (timeStr.includes("DNF"))
             {
                 this.dnf = true;
                 return;

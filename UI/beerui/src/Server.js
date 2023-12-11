@@ -115,6 +115,11 @@ class Server
         this.post(`{"cmd": "startGame", "data": {"p1": "${p1Initals}", "p2": "${p2Initials}", "drinkType": "${drinkType}"}}`);
     }
 
+    postWinner(winnerId)
+    {
+        this.post(`{"cmd": "winner", "data": {"winnerId": ${winnerId}}}`);
+    }
+
     // Don't touch or use outside class
 
     get(getData)
