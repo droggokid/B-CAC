@@ -16,11 +16,11 @@ static int UCstate=0;
 uint32 tid=0;
 uint32 roundedNum = 0;
 
-uint8_t gameReady = 0;//spi_drv1
-uint8_t minutter = 0; //spi_drv2
-uint8_t sekunder = 0; //spi_drv3
-uint8_t milliSekunder = 0;//spi_drv4
-uint8_t dnf=0;//spi_drv5
+uint8_t gameReady = 5;//spi_drv1
+uint8_t minutter = 6; //spi_drv2
+uint8_t sekunder = 2; //spi_drv3
+uint8_t milliSekunder = 9;//spi_drv4
+uint8_t dnf=1;//spi_drv5
 uint8_t receivedData = 0;
 uint8_t spilleterslut = 0;
 
@@ -176,19 +176,19 @@ void handleByteReceived(uint8_t byteReceived)
         break;
         case 0x3 :
         {
-            minutter = convertMinutter(tid);
+            //minutter = convertMinutter(tid);
             sendSPi(minutter); 
         }
         break;
         case 0x4 :
         {
-            sekunder = convertSekunder(tid);
+            //sekunder = convertSekunder(tid);
             sendSPi(sekunder);
         }
         break;
         case 0x5 :
         {
-            milliSekunder = convertMillisekunder(tid);
+            //milliSekunder = convertMillisekunder(tid);
             sendSPi(milliSekunder);
         }
         break;
