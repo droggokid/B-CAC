@@ -18,8 +18,8 @@ class Player
                 this.dnf = true;
                 return;
             }
-            this.time = timeStr;
-            this.timeMs = this.strToMs(timeStr);
+            this.timeMs = this.strToMs(timeStr) - 3000;
+            this.time = this.msToStr(this.timeMs);
         }
         catch (e)
         {
@@ -33,6 +33,14 @@ class Player
         const [sec, ms] = secMs.split('.');
         const totalMs = (+min) * 60000 + (+sec) * 1000 + (+ms);
         return totalMs;
+    }
+    
+    msToStr(ms)
+    {
+        const min = Math.floor(ms / 60000);
+        const sec = Math.floor((ms % 60000) / 1000);
+        const msStr = Math.floor((ms % 1000) / 10);
+        return `${min}:${sec < 10 ? '0' : ''}${sec}.${msStr < 10 ? '0' : ''}${msStr}`;
     }
 }
 

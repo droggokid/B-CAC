@@ -201,7 +201,9 @@ function GameMenu({onComponentChange}) {
         setRmTxtShow(false);
         setCountDownShow(true);
 
-        server.postStartGame(p1Initials, p2Initials, drinkType);
+        setTimeout(() => {
+            server.postStartGame(p1Initials, p2Initials, drinkType);
+        }, countDown * 1000);
 
         setTimeout(() => {
             setTimerShow(true);
