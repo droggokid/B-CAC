@@ -68,7 +68,10 @@ function GameMenu({onComponentChange}) {
 
                 if (countDownLabel <= 1)
                 {
-                    setCountDownShow(false);
+                    setCountDownLabel("GO!");
+                    setTimeout(() => {
+                        setCountDownShow(false);
+                    }, 1000);
                 }
             }
 
