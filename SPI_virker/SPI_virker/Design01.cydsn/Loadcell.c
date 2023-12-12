@@ -25,7 +25,7 @@ void initLoadcell(void)
 
 
 
-void offset_Zerodrift_calibrate(uint8_t repeats, float startoffset, float factor,uint8_t preload)
+void offsetZerodriftCalibrate(uint8_t repeats, float startoffset, float factor,uint8_t preload)
 {
    float result_array[repeats];
     float result_gram;
@@ -46,7 +46,7 @@ void offset_Zerodrift_calibrate(uint8_t repeats, float startoffset, float factor
     result_gram = (((float)result-startoffset)/factor); // Konvertering til gram
     zeroDriftOffset= result_gram-preload;
 }
-void wait_for_weight(float startoffset, float factor,uint8_t preload)
+void waitForWeight(float startoffset, float factor,uint8_t preload)
 {
     float result_gram;
     while(result_gram<200)

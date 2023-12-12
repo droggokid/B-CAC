@@ -47,7 +47,7 @@ void stopFlagMotor(void);
 
 //tager et step og kan bestemme modes wavedrive=w fullstep=f halfstep=h
 //frem 1 er frem 0 er tilbage
-void takestep(char step_mode, char frem);
+void takeStep(char stepMode, char frem);
 
 // tager antal steps og stepper det antal 
 //og vis man tage - step rotere den baglæns
@@ -55,7 +55,7 @@ void numberOfSteps(int steps, char mode);
 
 void homeStepper(char mode);
 
-void flagMotor_rotateTo(int targetDegrees, char mode);
+void flagMotorRotateTo(int targetDegrees, char mode);
 
 
 /* [] END OF FILE */

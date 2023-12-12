@@ -1,10 +1,10 @@
 (DELAYFILE
  (SDFVERSION "IEEE 1497 4.0")
- (DATE "2023-12-12T08:42:22Z")
+ (DATE "2023-12-12T14:15:33Z")
  (DESIGN "Design01")
  (VENDOR "Cypress Semiconductor")
  (PROGRAM "PSoC Creator")
- (VERSION " 4.2")
+ (VERSION " 4.4")
  (DIVIDER .)
  (TIMESCALE 1 ns)
  (CELL

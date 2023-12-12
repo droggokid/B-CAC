@@ -26,7 +26,7 @@
 #define STEPS_PER_DEGREE_half 0.267 // Assuming a standard 200 steps per revolution stepper motor
 #define STEPS_PER_DEGREE_other 0.133
 
-static char stepcount=0;
+static char stepCount = 0;
 int currentPosition = CLOSED_ANGLE;
 
 
@@ -96,14 +96,14 @@ void stopFlagMotor(void)
 }
 
 
-void takestep(char step_mode, char direction)
+void takeStep(char stepMode, char direction)
 {
 	
-	 switch(step_mode)
+	 switch(stepMode)
 	 {
 		 case 'w':
 		 {
-			 switch(stepcount)
+			 switch(stepCount)
 			 {
 				 case 0:
 				 case 1:
@@ -115,7 +115,7 @@ void takestep(char step_mode, char direction)
 					 else
 						coilB2();
                         
-                        stepcount+=2;
+                        stepCount+=2;
 					 
 				 }
 				 break;
@@ -129,7 +129,7 @@ void takestep(char step_mode, char direction)
 					 else
                         coilB1();
 						
-                        stepcount+=2;
+                        stepCount+=2;
 				 }
 				 break;
 				 case 4:
@@ -141,7 +141,7 @@ void takestep(char step_mode, char direction)
 					else
 						coilA2();
                         
-                        stepcount+=2;
+                        stepCount+=2;
 					 
 				 }
 				 break;
@@ -154,7 +154,7 @@ void takestep(char step_mode, char direction)
 						
 					 else
 						coilA1();
-                        stepcount=0;
+                        stepCount=0;
                         
                 }
 				 break;
@@ -165,7 +165,7 @@ void takestep(char step_mode, char direction)
 		 break;
 		 case 'f' :
 		 {
-			 switch(stepcount)
+			 switch(stepCount)
 			 {
 				 case 0:
 				 case 1:
@@ -177,7 +177,7 @@ void takestep(char step_mode, char direction)
 					 else
 						coilB2A1();
                         
-                        stepcount+=2;
+                        stepCount+=2;
 					 
 				 }
 				 break;
@@ -190,7 +190,7 @@ void takestep(char step_mode, char direction)
 					 else
 						coilB1B2();
                         
-                    stepcount+=2;
+                    stepCount+=2;
 				 }
 				 break;
 				 case 4:
@@ -202,7 +202,7 @@ void takestep(char step_mode, char direction)
 					 else
 						coilA2B1();
 					 
-                    stepcount+=2;
+                    stepCount+=2;
 				 }
 				 break;
 				 case 6:
@@ -215,7 +215,7 @@ void takestep(char step_mode, char direction)
 					    coilA1A2();
 				 }
                 
-                stepcount=0;
+                stepCount=0;
 				 break;
 				 
 				 
@@ -224,7 +224,7 @@ void takestep(char step_mode, char direction)
 		 break;
 		 case 'h' :
 		 {
-			 switch(stepcount)
+			 switch(stepCount)
 			 {
 				 case 0:
 				 {
@@ -232,10 +232,10 @@ void takestep(char step_mode, char direction)
 					 
 					 if(direction==1)
                     {coilA1();
-                    stepcount++;}
+                    stepCount++;}
 					 else
                     {coilB2A1();
-                    stepcount++;}
+                    stepCount++;}
                     
 					 
 				 }
@@ -246,10 +246,10 @@ void takestep(char step_mode, char direction)
 					 
 					 if(direction==1)
                     {coilA1A2();
-                    stepcount++;}
+                    stepCount++;}
 					 else
                     {coilB2();
-                    stepcount++;}
+                    stepCount++;}
 					 
                     
 				 }
@@ -259,10 +259,10 @@ void takestep(char step_mode, char direction)
 					 
 					 if(direction==1)
                     {coilA2();
-                    stepcount++;}
+                    stepCount++;}
 					 else
                     {coilB1B2();
-                    stepcount++;}
+                    stepCount++;}
                         
                      
 				 }
@@ -272,10 +272,10 @@ void takestep(char step_mode, char direction)
 					 
 					 if(direction==1)
                     {coilA2B1();
-                    stepcount++;}
+                    stepCount++;}
 					 else
                     {coilB1();
-                    stepcount++;}
+                    stepCount++;}
                         
                     
 				 }
@@ -285,10 +285,10 @@ void takestep(char step_mode, char direction)
 					 
 					 if(direction==1)
                     {coilB1();
-                    stepcount++;}
+                    stepCount++;}
 					 else
                     {coilA2B1();
-                    stepcount++;}
+                    stepCount++;}
                     
 					 
 				 }
@@ -298,10 +298,10 @@ void takestep(char step_mode, char direction)
 					 
 					 if(direction==1)
                     {coilB1B2();
-                    stepcount++;}
+                    stepCount++;}
 					 else
                     {coilA2();
-                    stepcount++;}
+                    stepCount++;}
                     
 				 }
 				 break;
@@ -310,10 +310,10 @@ void takestep(char step_mode, char direction)
 					 
 					 if(direction==1)
                     {coilB2();
-                    stepcount++;}
+                    stepCount++;}
 					 else
                     {coilA1A2();
-                    stepcount++;}
+                    stepCount++;}
                         
                     
 				 }
@@ -323,10 +323,10 @@ void takestep(char step_mode, char direction)
 					 
 					 if(direction==1)
                     {coilB2A1();
-                    stepcount=0;}
+                    stepCount=0;}
 					 else
                     {coilA1();
-                    stepcount=0;}
+                    stepCount=0;}
                    
 				 }
 				 break;
@@ -349,7 +349,7 @@ void numberOfSteps(int steps, char mode)
 	for(int i=0; i>steps; i--)// tager antal steps
 	{
 		
-		takestep(mode, 0);
+		takeStep(mode, 0);
     	CyDelay(5);
 		
 	}
@@ -357,7 +357,7 @@ void numberOfSteps(int steps, char mode)
 	 for(int i=0; i<steps; i++)// tager antal steps
 	 {
 		 
-		takestep(mode, 1);
+		takeStep(mode, 1);
 	    CyDelay(5);
 		 
 	 }
@@ -372,12 +372,12 @@ void homeStepper(char mode){
     else
     numberOfSteps(-48, mode);
     currentPosition=0;
-    flagMotor_rotateTo(0, mode);
+    flagMotorRotateTo(0, mode);
     
 }
 
 
-void flagMotor_rotateTo(int targetDegrees, char mode) {
+void flagMotorRotateTo(int targetDegrees, char mode) {
 	
 	
     if(mode == 'h')

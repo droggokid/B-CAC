@@ -1,5 +1,5 @@
 #include "project.h"
-
+#include <stdio.h>
 #include "Loadcell.h"
 #include "Timer.h"
 #include "FlagMotor.h"
@@ -7,22 +7,19 @@
 #include "spi_Slave.h"
 
 
-#include <stdio.h>
-
-
 CY_ISR_PROTO(ISR_SPI_rx_handler);
 void handleByteReceived(uint8_t byteReceived);
-static int UCstate=0;
-uint32 tid=0;
+static int UCstate = 0;
+uint32 tid = 0;
 uint32 roundedNum = 0;
 
-uint8_t gameReady = 0;      //spi_drv1
-uint8_t minutter = 0;       //spi_drv2
-uint8_t sekunder = 0;       //spi_drv3
-uint8_t milliSekunder = 0;  //spi_drv4
-uint8_t dnf = 0;            //spi_drv5
+uint8_t gameReady = 0;     //spi_drv1
+uint8_t minutes = 0;       //spi_drv2
+uint8_t seconds = 0;       //spi_drv3
+uint8_t milliSeconds = 0;  //spi_drv4
+uint8_t dnf = 0;           //spi_drv5
 uint8_t receivedData = 0;
-uint8_t spilleterslut = 0;
+uint8_t gameDone  = 0;
 
 
 int main(void)
@@ -38,8 +35,11 @@ int main(void)
     
     // Variable definitions
     int repeats = 50;
-    float startoffset = 164.5;
-    float factor = 4.672;
+    float startoffset = 178.74; // vægt 63
+    //float startoffset = 126.07; //vægt 101
+    float factor = 3.98;//vægt 63
+    //float factor = 4.24; //vægt 101
+    
     int preload = 0;
     uint16_t Result_gram;
     //uint8_t timestop=0;
@@ -54,29 +54,29 @@ int main(void)
         // Øl fjernet
         if(UCstate == 1)
         {
-            offset_Zerodrift_calibrate(repeats, startoffset, factor, preload);
+            offsetZerodriftCalibrate(repeats, startoffset, factor, preload);
     
             homeStepper(mode);
             stopFlagMotor();
             initLed();
             UCstate = 0;
-            spilleterslut = 0xA;
+            gameDone = 0xA;
         }
     
         // der er sat en genstand på platform
         if(UCstate == 2)
         {
             gameReady = 0; 
-            wait_for_weight(startoffset, factor, preload); // venter på der bliver placeret en øl
+            waitForWeight(startoffset, factor, preload); // venter på der bliver placeret en øl
             CyDelay(3000); // delay så flasken falder til ro
             Result_gram = readWeight(repeats, startoffset, factor, preload);
     
-            if(Result_gram >= 100) { //husk at ændre til 650!!!
-                gameReady = 1;
+            if(Result_gram >= 620) { //husk at ændre til 650!!!
+                gameReady = 9;
             }
 
             UCstate=0;
-            spilleterslut = 0xB;
+            gameDone = 0xB;
         }
      
         // send signal til RPI, Hvis GameReady er 1 så er øllen godkendt
@@ -85,7 +85,7 @@ int main(void)
         if(UCstate == 3)
         {
             dnf = 0;
-            startTidsTagning();  // timer startes
+            startTimer();  // timer startes
             Result_gram = readWeight(repeats, startoffset, factor, preload);
     
             if(Result_gram <= 10){
@@ -96,33 +96,33 @@ int main(void)
                 Result_gram = readWeight(repeats, startoffset, factor, preload);
             }
     
-            wait_for_weight(startoffset, factor, preload); // venter på der bliver placeret en øl
+            waitForWeight(startoffset, factor, preload); // venter på der bliver placeret en øl
     
-            tid = stopTidsTagning(); // tid stoppes 
+            tid = stopTimer(); // tid stoppes 
     
             roundedNum = (tid + 50) / 100 * 100; // rundes af til nærmeste 100 ms
             tid = roundedNum;
-            spilleterslut = 0xC;
+            gameDone = 0xC;
     
             // tid sendes
             CyDelay(5000);
             Result_gram = readWeight(repeats, startoffset, factor, preload);
     
-            if(Result_gram > 310){
+            if(Result_gram > 320){
                 dnf = 1;
             }
             
     
             // dnf value 
             UCstate = 0;
-            spilleterslut = 0xD;
+            gameDone = 0xD;
         }
     
         // modtager win signal fra RPI
         if(UCstate == 4)
         {
     
-            flagMotor_rotateTo(90, mode);
+            flagMotorRotateTo(90, mode);
             // stopFlagMotor();
             if (dnf == 0)
             {
@@ -133,7 +133,23 @@ int main(void)
             }
     
             UCstate = 0;
-            spilleterslut = 0xE;
+            gameDone = 0xE;
+        }
+         // modtager win signal fra RPI
+        if(UCstate == 5)
+        {
+    
+           
+            if (dnf == 0)
+            {
+                startLedGreen(80);
+            }
+            else  { 
+                startLedRed(100);
+            }
+    
+            UCstate = 0;
+            gameDone = 0xF;
         }
     }
 }
@@ -165,8 +181,13 @@ void handleByteReceived(uint8_t byteReceived)
         case 0xDD :
         {
             // Flagmotor
-            UCstate = 4;
+            UCstate = 4; //win
             
+        }
+        break;
+        case 0xEE : 
+        {
+            UCstate = 5; //lose
         }
         break;
         case 0x2 :
@@ -176,20 +197,20 @@ void handleByteReceived(uint8_t byteReceived)
         break;
         case 0x3 :
         {
-            minutter = convertMinutter(tid);
-            sendSPi(minutter); 
+            minutes = convertMinutes(tid);
+            sendSPi(minutes); 
         }
         break;
         case 0x4 :
         {
-            sekunder = convertSekunder(tid);
-            sendSPi(sekunder);
+            seconds = convertSeconds(tid);
+            sendSPi(seconds);
         }
         break;
         case 0x5 :
         {
-            milliSekunder = convertMillisekunder(tid);
-            sendSPi(milliSekunder);
+            milliSeconds = convertMilliseconds(tid);
+            sendSPi(milliSeconds);
         }
         break;
         case 0x6 :
@@ -208,16 +229,11 @@ void handleByteReceived(uint8_t byteReceived)
 
 CY_ISR(ISR_SPI_rx_handler)
 {
-    uint8_t receivedData = modtagetSPi();
+    uint8_t receivedData = receivedSPi();
     
     if(receivedData == 0x1)
     {            
-        //for (uint8_t i = 0; i < 2; i++)
-        //{
-          sendSPi(spilleterslut); 
-        //}
-            
-        //spilleterslut = 0;
+          sendSPi(gameDone); 
     }
     
     // Handling of received SPI data

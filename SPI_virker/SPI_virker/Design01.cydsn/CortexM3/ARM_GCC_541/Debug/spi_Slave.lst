@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccnnzISD.s 			page 1
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 1
 
 
    1              		.syntax unified
@@ -58,24 +58,24 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccnnzISD.s 			page 1
   37 0002 FFF7FEFF 		bl	SPIS_2_Start
   38              	.LVL0:
   39 0006 08BD     		pop	{r3, pc}
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccnnzISD.s 			page 2
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 2
 
 
   40              		.cfi_endproc
   41              	.LFE63:
   42              		.size	InitializeSPI, .-InitializeSPI
-  43              		.section	.text.modtagetSPi,"ax",%progbits
+  43              		.section	.text.receivedSPi,"ax",%progbits
   44              		.align	2
-  45              		.global	modtagetSPi
+  45              		.global	receivedSPi
   46              		.thumb
   47              		.thumb_func
-  48              		.type	modtagetSPi, %function
-  49              	modtagetSPi:
+  48              		.type	receivedSPi, %function
+  49              	receivedSPi:
   50              	.LFB64:
   19:spi_Slave.c   ****     
   20:spi_Slave.c   **** }
   21:spi_Slave.c   **** 
-  22:spi_Slave.c   **** uint8_t modtagetSPi(void)
+  22:spi_Slave.c   **** uint8_t receivedSPi(void)
   23:spi_Slave.c   **** {
   51              		.loc 1 23 0
   52              		.cfi_startproc
@@ -118,13 +118,13 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccnnzISD.s 			page 1
   35:spi_Slave.c   **** }
   77              		.loc 1 35 0
   78 0014 2046     		mov	r0, r4
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccnnzISD.s 			page 3
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 3
 
 
   79 0016 10BD     		pop	{r4, pc}
   80              		.cfi_endproc
   81              	.LFE64:
-  82              		.size	modtagetSPi, .-modtagetSPi
+  82              		.size	receivedSPi, .-receivedSPi
   83              		.section	.text.sendSPi,"ax",%progbits
   84              		.align	2
   85              		.global	sendSPi
@@ -177,11 +177,11 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccnnzISD.s 			page 1
  120              		.size	sendSPi, .-sendSPi
  121 001e 00BF     		.text
  122              	.Letext0:
- 123              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccnnzISD.s 			page 4
+ 123              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 4
 
 
- 124              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 124              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
  125              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
  126              		.file 5 "Generated_Source\\PSoC5/SPIS_2.h"
  127              		.file 6 "Generated_Source\\PSoC5/core_cm3.h"
@@ -192,10 +192,10 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccnnzISD.s 			page 1
  132 0006 00000000 		.4byte	.Ldebug_abbrev0
  133 000a 04       		.byte	0x4
  134 000b 01       		.uleb128 0x1
- 135 000c 7C000000 		.4byte	.LASF28
+ 135 000c 70000000 		.4byte	.LASF28
  136 0010 0C       		.byte	0xc
  137 0011 4B000000 		.4byte	.LASF29
- 138 0015 A9010000 		.4byte	.LASF30
+ 138 0015 64010000 		.4byte	.LASF30
  139 0019 00000000 		.4byte	.Ldebug_ranges0+0
  140 001d 00000000 		.4byte	0
  141 0021 00000000 		.4byte	.Ldebug_line0
@@ -211,7 +211,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccnnzISD.s 			page 1
  151 0037 02       		.uleb128 0x2
  152 0038 01       		.byte	0x1
  153 0039 08       		.byte	0x8
- 154 003a 6E000000 		.4byte	.LASF1
+ 154 003a 62000000 		.4byte	.LASF1
  155 003e 02       		.uleb128 0x2
  156 003f 02       		.byte	0x2
  157 0040 05       		.byte	0x5
@@ -219,7 +219,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccnnzISD.s 			page 1
  159 0045 02       		.uleb128 0x2
  160 0046 02       		.byte	0x2
  161 0047 07       		.byte	0x7
- 162 0048 1C010000 		.4byte	.LASF3
+ 162 0048 10010000 		.4byte	.LASF3
  163 004c 03       		.uleb128 0x3
  164 004d 1F000000 		.4byte	.LASF5
  165 0051 02       		.byte	0x2
@@ -232,18 +232,18 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccnnzISD.s 			page 1
  172 005e 02       		.uleb128 0x2
  173 005f 04       		.byte	0x4
  174 0060 07       		.byte	0x7
- 175 0061 0A010000 		.4byte	.LASF7
+ 175 0061 FE000000 		.4byte	.LASF7
  176 0065 02       		.uleb128 0x2
  177 0066 08       		.byte	0x8
  178 0067 05       		.byte	0x5
  179 0068 0F020000 		.4byte	.LASF8
  180 006c 02       		.uleb128 0x2
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccnnzISD.s 			page 5
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 5
 
 
  181 006d 08       		.byte	0x8
  182 006e 07       		.byte	0x7
- 183 006f 8A010000 		.4byte	.LASF9
+ 183 006f D3010000 		.4byte	.LASF9
  184 0073 04       		.uleb128 0x4
  185 0074 04       		.byte	0x4
  186 0075 05       		.byte	0x5
@@ -251,9 +251,9 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccnnzISD.s 			page 1
  188 007a 02       		.uleb128 0x2
  189 007b 04       		.byte	0x4
  190 007c 07       		.byte	0x7
- 191 007d 7D010000 		.4byte	.LASF10
+ 191 007d C6010000 		.4byte	.LASF10
  192 0081 03       		.uleb128 0x3
- 193 0082 A1010000 		.4byte	.LASF11
+ 193 0082 EA010000 		.4byte	.LASF11
  194 0086 03       		.byte	0x3
  195 0087 18       		.byte	0x18
  196 0088 2C000000 		.4byte	0x2c
@@ -265,16 +265,16 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccnnzISD.s 			page 1
  202 0097 05       		.uleb128 0x5
  203 0098 41020000 		.4byte	.LASF13
  204 009c 04       		.byte	0x4
- 205 009d E701     		.2byte	0x1e7
+ 205 009d E901     		.2byte	0x1e9
  206 009f 37000000 		.4byte	0x37
  207 00a3 02       		.uleb128 0x2
  208 00a4 04       		.byte	0x4
  209 00a5 04       		.byte	0x4
- 210 00a6 63000000 		.4byte	.LASF14
+ 210 00a6 57000000 		.4byte	.LASF14
  211 00aa 02       		.uleb128 0x2
  212 00ab 08       		.byte	0x8
  213 00ac 04       		.byte	0x4
- 214 00ad 56010000 		.4byte	.LASF15
+ 214 00ad 4A010000 		.4byte	.LASF15
  215 00b1 02       		.uleb128 0x2
  216 00b2 01       		.byte	0x1
  217 00b3 08       		.byte	0x8
@@ -298,13 +298,13 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccnnzISD.s 			page 1
  235 00d7 E5000000 		.4byte	0xe5
  236 00db 07       		.uleb128 0x7
  237 00dc 06000000 		.4byte	.LVL0
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccnnzISD.s 			page 6
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 6
 
 
  238 00e0 81010000 		.4byte	0x181
  239 00e4 00       		.byte	0
  240 00e5 08       		.uleb128 0x8
- 241 00e6 57000000 		.4byte	.LASF31
+ 241 00e6 F2010000 		.4byte	.LASF31
  242 00ea 01       		.byte	0x1
  243 00eb 16       		.byte	0x16
  244 00ec 81000000 		.4byte	0x81
@@ -336,7 +336,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccnnzISD.s 			page 1
  270 0130 9C       		.byte	0x9c
  271 0131 70010000 		.4byte	0x170
  272 0135 0A       		.uleb128 0xa
- 273 0136 69000000 		.4byte	.LASF33
+ 273 0136 5D000000 		.4byte	.LASF33
  274 013a 01       		.byte	0x1
  275 013b 24       		.byte	0x24
  276 013c 81000000 		.4byte	0x81
@@ -358,14 +358,14 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccnnzISD.s 			page 1
  292 016a 50       		.byte	0x50
  293 016b 02       		.uleb128 0x2
  294 016c 74       		.byte	0x74
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccnnzISD.s 			page 7
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 7
 
 
  295 016d 00       		.sleb128 0
  296 016e 00       		.byte	0
  297 016f 00       		.byte	0
  298 0170 0D       		.uleb128 0xd
- 299 0171 70010000 		.4byte	.LASF34
+ 299 0171 B9010000 		.4byte	.LASF34
  300 0175 06       		.byte	0x6
  301 0176 1207     		.2byte	0x712
  302 0178 7C010000 		.4byte	0x17c
@@ -377,8 +377,8 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccnnzISD.s 			page 1
  308 018a 05       		.byte	0x5
  309 018b 46       		.byte	0x46
  310 018c 0F       		.uleb128 0xf
- 311 018d 2F010000 		.4byte	.LASF22
- 312 0191 2F010000 		.4byte	.LASF22
+ 311 018d 23010000 		.4byte	.LASF22
+ 312 0191 23010000 		.4byte	.LASF22
  313 0195 05       		.byte	0x5
  314 0196 57       		.byte	0x57
  315 0197 0F       		.uleb128 0xf
@@ -387,8 +387,8 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccnnzISD.s 			page 1
  318 01a0 05       		.byte	0x5
  319 01a1 58       		.byte	0x58
  320 01a2 0F       		.uleb128 0xf
- 321 01a3 41010000 		.4byte	.LASF24
- 322 01a7 41010000 		.4byte	.LASF24
+ 321 01a3 35010000 		.4byte	.LASF24
+ 322 01a7 35010000 		.4byte	.LASF24
  323 01ab 05       		.byte	0x5
  324 01ac 5B       		.byte	0x5b
  325 01ad 0F       		.uleb128 0xf
@@ -402,8 +402,8 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccnnzISD.s 			page 1
  333 01c1 05       		.byte	0x5
  334 01c2 4E       		.byte	0x4e
  335 01c3 0F       		.uleb128 0xf
- 336 01c4 5D010000 		.4byte	.LASF27
- 337 01c8 5D010000 		.4byte	.LASF27
+ 336 01c4 51010000 		.4byte	.LASF27
+ 337 01c8 51010000 		.4byte	.LASF27
  338 01cc 05       		.byte	0x5
  339 01cd 50       		.byte	0x50
  340 01ce 00       		.byte	0
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccnnzISD.s 			page 1
  349 0006 0B       		.uleb128 0xb
  350 0007 03       		.uleb128 0x3
  351 0008 0E       		.uleb128 0xe
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccnnzISD.s 			page 8
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 8
 
 
  352 0009 1B       		.uleb128 0x1b
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccnnzISD.s 			page 1
  406 003f 49       		.uleb128 0x49
  407 0040 13       		.uleb128 0x13
  408 0041 00       		.byte	0
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccnnzISD.s 			page 9
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 9
 
 
  409 0042 00       		.byte	0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccnnzISD.s 			page 1
  463 007b 40       		.uleb128 0x40
  464 007c 18       		.uleb128 0x18
  465 007d 9742     		.uleb128 0x2117
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccnnzISD.s 			page 10
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 10
 
 
  466 007f 19       		.uleb128 0x19
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccnnzISD.s 			page 1
  520 00ba 34       		.uleb128 0x34
  521 00bb 00       		.byte	0
  522 00bc 03       		.uleb128 0x3
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccnnzISD.s 			page 11
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 11
 
 
  523 00bd 0E       		.uleb128 0xe
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccnnzISD.s 			page 1
  577 0023 07000000 		.4byte	.LVL7-1
  578 0027 0100     		.2byte	0x1
  579 0029 50       		.byte	0x50
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccnnzISD.s 			page 12
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 12
 
 
  580 002a 07000000 		.4byte	.LVL7-1
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccnnzISD.s 			page 1
  624              	.LASF5:
  625 001f 5F5F696E 		.ascii	"__int32_t\000"
  625      7433325F 
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccnnzISD.s 			page 13
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 13
 
 
  625      7400
@@ -737,108 +737,108 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccnnzISD.s 			page 1
  631 004b 7370695F 		.ascii	"spi_Slave.c\000"
  631      536C6176 
  631      652E6300 
- 632              	.LASF31:
- 633 0057 6D6F6474 		.ascii	"modtagetSPi\000"
- 633      61676574 
- 633      53506900 
- 634              	.LASF14:
- 635 0063 666C6F61 		.ascii	"float\000"
- 635      7400
- 636              	.LASF33:
- 637 0069 64617461 		.ascii	"data\000"
- 637      00
- 638              	.LASF1:
- 639 006e 756E7369 		.ascii	"unsigned char\000"
- 639      676E6564 
- 639      20636861 
- 639      7200
- 640              	.LASF28:
- 641 007c 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 641      43313120 
- 641      352E342E 
- 641      31203230 
- 641      31363036 
- 642 00af 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 642      20726576 
- 642      6973696F 
- 642      6E203233 
- 642      37373135 
- 643 00e2 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 643      66756E63 
- 643      74696F6E 
- 643      2D736563 
- 643      74696F6E 
- 644              	.LASF7:
- 645 010a 6C6F6E67 		.ascii	"long unsigned int\000"
- 645      20756E73 
- 645      69676E65 
- 645      6420696E 
- 645      7400
- 646              	.LASF3:
- 647 011c 73686F72 		.ascii	"short unsigned int\000"
- 647      7420756E 
- 647      7369676E 
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccnnzISD.s 			page 14
+ 632              	.LASF14:
+ 633 0057 666C6F61 		.ascii	"float\000"
+ 633      7400
+ 634              	.LASF33:
+ 635 005d 64617461 		.ascii	"data\000"
+ 635      00
+ 636              	.LASF1:
+ 637 0062 756E7369 		.ascii	"unsigned char\000"
+ 637      676E6564 
+ 637      20636861 
+ 637      7200
+ 638              	.LASF28:
+ 639 0070 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 639      43313120 
+ 639      352E342E 
+ 639      31203230 
+ 639      31363036 
+ 640 00a3 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 640      20726576 
+ 640      6973696F 
+ 640      6E203233 
+ 640      37373135 
+ 641 00d6 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 641      66756E63 
+ 641      74696F6E 
+ 641      2D736563 
+ 641      74696F6E 
+ 642              	.LASF7:
+ 643 00fe 6C6F6E67 		.ascii	"long unsigned int\000"
+ 643      20756E73 
+ 643      69676E65 
+ 643      6420696E 
+ 643      7400
+ 644              	.LASF3:
+ 645 0110 73686F72 		.ascii	"short unsigned int\000"
+ 645      7420756E 
+ 645      7369676E 
+ 645      65642069 
+ 645      6E7400
+ 646              	.LASF22:
+ 647 0123 53504953 		.ascii	"SPIS_2_ReadRxData\000"
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 14
 
 
- 647      65642069 
- 647      6E7400
- 648              	.LASF22:
- 649 012f 53504953 		.ascii	"SPIS_2_ReadRxData\000"
- 649      5F325F52 
- 649      65616452 
- 649      78446174 
- 649      6100
- 650              	.LASF24:
- 651 0141 53504953 		.ascii	"SPIS_2_ClearTxBuffer\000"
- 651      5F325F43 
- 651      6C656172 
- 651      54784275 
- 651      66666572 
- 652              	.LASF15:
- 653 0156 646F7562 		.ascii	"double\000"
- 653      6C6500
- 654              	.LASF27:
- 655 015d 53504953 		.ascii	"SPIS_2_WriteTxData\000"
- 655      5F325F57 
- 655      72697465 
- 655      54784461 
- 655      746100
- 656              	.LASF34:
- 657 0170 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 657      52784275 
- 657      66666572 
- 657      00
- 658              	.LASF10:
- 659 017d 756E7369 		.ascii	"unsigned int\000"
- 659      676E6564 
- 659      20696E74 
- 659      00
- 660              	.LASF9:
- 661 018a 6C6F6E67 		.ascii	"long long unsigned int\000"
- 661      206C6F6E 
- 661      6720756E 
- 661      7369676E 
- 661      65642069 
- 662              	.LASF11:
- 663 01a1 75696E74 		.ascii	"uint8_t\000"
- 663      385F7400 
- 664              	.LASF30:
- 665 01a9 433A5C55 		.ascii	"C:\\Users\\jespe\\OneDrive\\Dokumenter\\GitHub\\B-C"
- 665      73657273 
- 665      5C6A6573 
- 665      70655C4F 
- 665      6E654472 
- 666 01d6 41435C53 		.ascii	"AC\\SPI_virker\\SPI_virker\\Design01.cydsn\000"
- 666      50495F76 
- 666      69726B65 
- 666      725C5350 
- 666      495F7669 
+ 647      5F325F52 
+ 647      65616452 
+ 647      78446174 
+ 647      6100
+ 648              	.LASF24:
+ 649 0135 53504953 		.ascii	"SPIS_2_ClearTxBuffer\000"
+ 649      5F325F43 
+ 649      6C656172 
+ 649      54784275 
+ 649      66666572 
+ 650              	.LASF15:
+ 651 014a 646F7562 		.ascii	"double\000"
+ 651      6C6500
+ 652              	.LASF27:
+ 653 0151 53504953 		.ascii	"SPIS_2_WriteTxData\000"
+ 653      5F325F57 
+ 653      72697465 
+ 653      54784461 
+ 653      746100
+ 654              	.LASF30:
+ 655 0164 433A5C55 		.ascii	"C:\\Users\\deniz\\OneDrive\\Dokumenter\\GitHub\\B-C"
+ 655      73657273 
+ 655      5C64656E 
+ 655      697A5C4F 
+ 655      6E654472 
+ 656 0191 41435C53 		.ascii	"AC\\SPI_virker\\SPI_virker\\Design01.cydsn\000"
+ 656      50495F76 
+ 656      69726B65 
+ 656      725C5350 
+ 656      495F7669 
+ 657              	.LASF34:
+ 658 01b9 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 658      52784275 
+ 658      66666572 
+ 658      00
+ 659              	.LASF10:
+ 660 01c6 756E7369 		.ascii	"unsigned int\000"
+ 660      676E6564 
+ 660      20696E74 
+ 660      00
+ 661              	.LASF9:
+ 662 01d3 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 662      206C6F6E 
+ 662      6720756E 
+ 662      7369676E 
+ 662      65642069 
+ 663              	.LASF11:
+ 664 01ea 75696E74 		.ascii	"uint8_t\000"
+ 664      385F7400 
+ 665              	.LASF31:
+ 666 01f2 72656365 		.ascii	"receivedSPi\000"
+ 666      69766564 
+ 666      53506900 
  667              	.LASF12:
  668 01fe 696E7433 		.ascii	"int32_t\000"
  668      325F7400 
  669              	.LASF18:
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccnnzISD.s 			page 15
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 15
 
 
  670 0206 73697A65 		.ascii	"sizetype\000"

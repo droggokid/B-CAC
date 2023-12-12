@@ -20,18 +20,18 @@ uint32 counter=0;
 
 const uint32 tick_period_ms = 10;
 uint32 start_counter = 0;
-uint32 stop_counter=0;
+uint32 stop_counter = 0;
 uint32 time_interval_ticks = 0;
-uint32 time_interval_ms=0;
+uint32 time_interval_ms = 0;
 
 
-void startTidsTagning()
+void startTimer()
 {
     
     Timer_1_Start();
     start_counter = Timer_1_ReadCounter();
 }
-uint32 stopTidsTagning()
+uint32 stopTimer()
 {
     
     stop_counter = Timer_1_ReadCounter();
@@ -49,7 +49,7 @@ uint32 stopTidsTagning()
     return time_interval_ms;
 }
 
-uint8_t convertMinutter(uint32_t time_1)
+uint8_t convertMinutes(uint32_t time_1)
 {
     // Assuming time is a 32-bit integer
     uint8_t minutter = 0;
@@ -57,7 +57,7 @@ uint8_t convertMinutter(uint32_t time_1)
     return minutter;
 }
 
-uint8_t convertSekunder(uint32_t time_2)
+uint8_t convertSeconds(uint32_t time_2)
 {
     // Assuming time is a 32-bit integer
     uint8_t sekunder = 0;
@@ -65,7 +65,7 @@ uint8_t convertSekunder(uint32_t time_2)
     return sekunder;
 }
 
-uint8_t convertMillisekunder(uint32_t time_3)
+uint8_t convertMilliseconds(uint32_t time_3)
 {
     uint16_t temp = 0;
     // Assuming time is a 32-bit integer
