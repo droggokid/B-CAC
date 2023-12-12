@@ -264,6 +264,11 @@ function GameMenu({onComponentChange}) {
                 /> 
                 </div>
             </div>
+            <div id="debug" onClick={() => {
+                server.getGameRunning = () => { data.recievedGameRunning = false; };
+            }}>
+                O
+            </div>
         </div>
     );
 }

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import MainMenu from './MainMenu';
 import GameMenu from './GameMenu';
 
+
 const App = () => {
     const [currentComponent, setCurrentComponent] = useState('MainMenu');
   
