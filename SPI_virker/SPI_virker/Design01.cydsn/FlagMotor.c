@@ -372,12 +372,12 @@ void homeStepper(char mode){
     else
     numberOfSteps(-48, mode);
     currentPosition=0;
-    stepperdriver_rotateTo(0, mode);
+    flagMotor_rotateTo(0, mode);
     
 }
 
 
-void stepperdriver_rotateTo(int targetDegrees, char mode) {
+void flagMotor_rotateTo(int targetDegrees, char mode) {
 	
 	
     if(mode == 'h')

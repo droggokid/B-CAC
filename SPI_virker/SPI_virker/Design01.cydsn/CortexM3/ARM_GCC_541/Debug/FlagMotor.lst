@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
   28:FlagMotor.c   **** 
   29:FlagMotor.c   **** static char stepcount=0;
   30:FlagMotor.c   **** int currentPosition = CLOSED_ANGLE;
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 2
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 2
 
 
   31:FlagMotor.c   **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
   70              		.cfi_offset 3, -8
   71              		.cfi_offset 14, -4
   43:FlagMotor.c   ****     B1_Write(0);
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 3
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 3
 
 
   72              		.loc 1 43 0
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  117 000e 0020     		movs	r0, #0
  118 0010 FFF7FEFF 		bl	A1_Write
  119              	.LVL10:
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 4
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 4
 
 
   53:FlagMotor.c   ****     B1_Write(1);
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  166              		.global	coilA1A2
  167              		.thumb
  168              		.thumb_func
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 5
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 5
 
 
  169              		.type	coilA1A2, %function
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  213              		.cfi_def_cfa_offset 8
  214              		.cfi_offset 3, -8
  215              		.cfi_offset 14, -4
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 6
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 6
 
 
   71:FlagMotor.c   ****     A1_Write(0);
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  260              		.loc 1 80 0
  261 000e 0120     		movs	r0, #1
  262 0010 FFF7FEFF 		bl	B2_Write
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 7
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 7
 
 
  263              	.LVL26:
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  309              		.align	2
  310              		.global	stopFlagMotor
  311              		.thumb
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 8
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 8
 
 
  312              		.thumb_func
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  354              		@ args = 0, pretend = 0, frame = 0
  355              		@ frame_needed = 0, uses_anonymous_args = 0
  356              	.LVL36:
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 9
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 9
 
 
  357 0000 08B5     		push	{r3, lr}
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  116:FlagMotor.c   **** 						coilB2();
  396              		.loc 1 116 0
  397 0032 FFF7FEFF 		bl	coilB2
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 10
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 10
 
 
  398              	.LVL39:
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  138:FlagMotor.c   **** 					 
  139:FlagMotor.c   **** 					 if(direction==1)
  431              		.loc 1 139 0
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 11
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 11
 
 
  432 0058 0129     		cmp	r1, #1
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  468 0080 624B     		ldr	r3, .L68
  469 0082 1A70     		strb	r2, [r3]
  158:FlagMotor.c   ****                         
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 12
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 12
 
 
  159:FlagMotor.c   ****                 }
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  179:FlagMotor.c   ****                         
  180:FlagMotor.c   ****                         stepcount+=2;
  504              		.loc 1 180 0
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 13
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 13
 
 
  505 00aa 584A     		ldr	r2, .L68
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  538              		.loc 1 201 0
  539 00d0 FFF7FEFF 		bl	coilB1B2
  540              	.LVL61:
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 14
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 14
 
 
  541 00d4 01E0     		b	.L47
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  577              	.L21:
  220:FlagMotor.c   **** 				 
  221:FlagMotor.c   **** 				 
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 15
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 15
 
 
  222:FlagMotor.c   **** 			 }
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  615 012a 0133     		adds	r3, r3, #1
  616 012c 1370     		strb	r3, [r2]
  617 012e 08BD     		pop	{r3, pc}
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 16
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 16
 
 
  618              	.LVL72:
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  649 0154 FFF7FEFF 		bl	coilA2
  650              	.LVL77:
  262:FlagMotor.c   ****                     stepcount++;}
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 17
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 17
 
 
  651              		.loc 1 262 0
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  689 0188 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
  690 018a 0133     		adds	r3, r3, #1
  691 018c 1370     		strb	r3, [r2]
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 18
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 18
 
 
  692 018e 08BD     		pop	{r3, pc}
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  724 01b4 FFF7FEFF 		bl	coilB1B2
  725              	.LVL89:
  301:FlagMotor.c   ****                     stepcount++;}
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 19
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 19
 
 
  726              		.loc 1 301 0
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  765 01ea 0133     		adds	r3, r3, #1
  766 01ec 1370     		strb	r3, [r2]
  767 01ee 08BD     		pop	{r3, pc}
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 20
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 20
 
 
  768              	.LVL96:
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  332:FlagMotor.c   **** 				 break;
  333:FlagMotor.c   **** 				 
  334:FlagMotor.c   **** 				 
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 21
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 21
 
 
  335:FlagMotor.c   **** 			 }
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  841              	.LBE2:
  842 001c 0024     		movs	r4, #0
  843              	.LVL106:
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 22
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 22
 
 
  844              	.L71:
@@ -1314,16 +1314,16 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  879              		.global	__aeabi_i2d
  880              		.global	__aeabi_dmul
  881              		.global	__aeabi_d2iz
- 882              		.section	.text.stepperdriver_rotateTo,"ax",%progbits
+ 882              		.section	.text.flagMotor_rotateTo,"ax",%progbits
  883              		.align	2
- 884              		.global	stepperdriver_rotateTo
+ 884              		.global	flagMotor_rotateTo
  885              		.thumb
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 23
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 23
 
 
  886              		.thumb_func
- 887              		.type	stepperdriver_rotateTo, %function
- 888              	stepperdriver_rotateTo:
+ 887              		.type	flagMotor_rotateTo, %function
+ 888              	flagMotor_rotateTo:
  889              	.LFB75:
  366:FlagMotor.c   **** 
  367:FlagMotor.c   **** 
@@ -1334,12 +1334,12 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  372:FlagMotor.c   ****     else
  373:FlagMotor.c   ****     numberOfSteps(-48, mode);
  374:FlagMotor.c   ****     currentPosition=0;
- 375:FlagMotor.c   ****     stepperdriver_rotateTo(0, mode);
+ 375:FlagMotor.c   ****     flagMotor_rotateTo(0, mode);
  376:FlagMotor.c   ****     
  377:FlagMotor.c   **** }
  378:FlagMotor.c   **** 
  379:FlagMotor.c   **** 
- 380:FlagMotor.c   **** void stepperdriver_rotateTo(int targetDegrees, char mode) {
+ 380:FlagMotor.c   **** void flagMotor_rotateTo(int targetDegrees, char mode) {
  890              		.loc 1 380 0
  891              		.cfi_startproc
  892              		@ args = 0, pretend = 0, frame = 0
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  918 001a D3E90023 		ldrd	r2, [r3]
  919 001e FFF7FEFF 		bl	__aeabi_dmul
  920              	.LVL115:
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 24
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 24
 
 
  921 0022 FFF7FEFF 		bl	__aeabi_d2iz
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  960              	.LVL124:
  961              	.L83:
  962 005a 00BFAFF3 		.align	3
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 25
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 25
 
 
  962      0080
@@ -1451,7 +1451,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  969              	.LBE6:
  970              		.cfi_endproc
  971              	.LFE75:
- 972              		.size	stepperdriver_rotateTo, .-stepperdriver_rotateTo
+ 972              		.size	flagMotor_rotateTo, .-flagMotor_rotateTo
  973              		.section	.text.homeStepper,"ax",%progbits
  974              		.align	2
  975              		.global	homeStepper
@@ -1493,18 +1493,18 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  1007 001a FFF7FEFF 		bl	numberOfSteps
  1008              	.LVL130:
  1009              	.L86:
- 374:FlagMotor.c   ****     stepperdriver_rotateTo(0, mode);
+ 374:FlagMotor.c   ****     flagMotor_rotateTo(0, mode);
  1010              		.loc 1 374 0
  1011 001e 0020     		movs	r0, #0
  1012 0020 024B     		ldr	r3, .L88
  1013 0022 5860     		str	r0, [r3, #4]
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 26
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 26
 
 
  375:FlagMotor.c   ****     
  1014              		.loc 1 375 0
  1015 0024 2146     		mov	r1, r4
- 1016 0026 FFF7FEFF 		bl	stepperdriver_rotateTo
+ 1016 0026 FFF7FEFF 		bl	flagMotor_rotateTo
  1017              	.LVL131:
  1018 002a 10BD     		pop	{r4, pc}
  1019              	.L89:
@@ -1544,53 +1544,53 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  1053 0006 00000000 		.4byte	.Ldebug_abbrev0
  1054 000a 04       		.byte	0x4
  1055 000b 01       		.uleb128 0x1
- 1056 000c CC010000 		.4byte	.LASF43
+ 1056 000c C8010000 		.4byte	.LASF43
  1057 0010 0C       		.byte	0xc
- 1058 0011 21000000 		.4byte	.LASF44
- 1059 0015 77010000 		.4byte	.LASF45
+ 1058 0011 0A000000 		.4byte	.LASF44
+ 1059 0015 73010000 		.4byte	.LASF45
  1060 0019 18000000 		.4byte	.Ldebug_ranges0+0x18
  1061 001d 00000000 		.4byte	0
  1062 0021 00000000 		.4byte	.Ldebug_line0
  1063 0025 02       		.uleb128 0x2
  1064 0026 01       		.byte	0x1
  1065 0027 06       		.byte	0x6
- 1066 0028 9E020000 		.4byte	.LASF0
+ 1066 0028 9A020000 		.4byte	.LASF0
  1067 002c 02       		.uleb128 0x2
  1068 002d 01       		.byte	0x1
  1069 002e 08       		.byte	0x8
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 27
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 27
 
 
- 1070 002f 9A000000 		.4byte	.LASF1
+ 1070 002f 96000000 		.4byte	.LASF1
  1071 0033 02       		.uleb128 0x2
  1072 0034 02       		.byte	0x2
  1073 0035 05       		.byte	0x5
- 1074 0036 7E020000 		.4byte	.LASF2
+ 1074 0036 7A020000 		.4byte	.LASF2
  1075 003a 02       		.uleb128 0x2
  1076 003b 02       		.byte	0x2
  1077 003c 07       		.byte	0x7
- 1078 003d BA000000 		.4byte	.LASF3
+ 1078 003d B6000000 		.4byte	.LASF3
  1079 0041 03       		.uleb128 0x3
- 1080 0042 3D000000 		.4byte	.LASF9
+ 1080 0042 39000000 		.4byte	.LASF9
  1081 0046 02       		.byte	0x2
  1082 0047 3F       		.byte	0x3f
  1083 0048 4C000000 		.4byte	0x4c
  1084 004c 02       		.uleb128 0x2
  1085 004d 04       		.byte	0x4
  1086 004e 05       		.byte	0x5
- 1087 004f 47000000 		.4byte	.LASF4
+ 1087 004f 43000000 		.4byte	.LASF4
  1088 0053 02       		.uleb128 0x2
  1089 0054 04       		.byte	0x4
  1090 0055 07       		.byte	0x7
- 1091 0056 2A010000 		.4byte	.LASF5
+ 1091 0056 26010000 		.4byte	.LASF5
  1092 005a 02       		.uleb128 0x2
  1093 005b 08       		.byte	0x8
  1094 005c 05       		.byte	0x5
- 1095 005d 6B020000 		.4byte	.LASF6
+ 1095 005d 67020000 		.4byte	.LASF6
  1096 0061 02       		.uleb128 0x2
  1097 0062 08       		.byte	0x8
  1098 0063 07       		.byte	0x7
- 1099 0064 52010000 		.4byte	.LASF7
+ 1099 0064 4E010000 		.4byte	.LASF7
  1100 0068 04       		.uleb128 0x4
  1101 0069 04       		.byte	0x4
  1102 006a 05       		.byte	0x5
@@ -1598,37 +1598,37 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  1104 006f 02       		.uleb128 0x2
  1105 0070 04       		.byte	0x4
  1106 0071 07       		.byte	0x7
- 1107 0072 3C010000 		.4byte	.LASF8
+ 1107 0072 38010000 		.4byte	.LASF8
  1108 0076 03       		.uleb128 0x3
- 1109 0077 5A020000 		.4byte	.LASF10
+ 1109 0077 56020000 		.4byte	.LASF10
  1110 007b 03       		.byte	0x3
  1111 007c 2C       		.byte	0x2c
  1112 007d 41000000 		.4byte	0x41
  1113 0081 02       		.uleb128 0x2
  1114 0082 04       		.byte	0x4
  1115 0083 04       		.byte	0x4
- 1116 0084 84000000 		.4byte	.LASF11
+ 1116 0084 80000000 		.4byte	.LASF11
  1117 0088 02       		.uleb128 0x2
  1118 0089 08       		.byte	0x8
  1119 008a 04       		.byte	0x4
- 1120 008b 73000000 		.4byte	.LASF12
+ 1120 008b 6F000000 		.4byte	.LASF12
  1121 008f 02       		.uleb128 0x2
  1122 0090 01       		.byte	0x1
  1123 0091 08       		.byte	0x8
- 1124 0092 79020000 		.4byte	.LASF13
+ 1124 0092 75020000 		.4byte	.LASF13
  1125 0096 02       		.uleb128 0x2
  1126 0097 08       		.byte	0x8
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 28
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 28
 
 
  1127 0098 04       		.byte	0x4
- 1128 0099 92020000 		.4byte	.LASF14
+ 1128 0099 8E020000 		.4byte	.LASF14
  1129 009d 02       		.uleb128 0x2
  1130 009e 04       		.byte	0x4
  1131 009f 07       		.byte	0x7
- 1132 00a0 62020000 		.4byte	.LASF15
+ 1132 00a0 5E020000 		.4byte	.LASF15
  1133 00a4 05       		.uleb128 0x5
- 1134 00a5 AA020000 		.4byte	.LASF16
+ 1134 00a5 A6020000 		.4byte	.LASF16
  1135 00a9 01       		.byte	0x1
  1136 00aa 22       		.byte	0x22
  1137 00ab 00000000 		.4byte	.LFB63
@@ -1677,8 +1677,8 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  1180 0100 00       		.byte	0
  1181 0101 00       		.byte	0
  1182 0102 05       		.uleb128 0x5
- 1183 0103 B1020000 		.4byte	.LASF17
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 29
+ 1183 0103 AD020000 		.4byte	.LASF17
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 29
 
 
  1184 0107 01       		.byte	0x1
@@ -1729,7 +1729,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  1229 015e 00       		.byte	0
  1230 015f 00       		.byte	0
  1231 0160 05       		.uleb128 0x5
- 1232 0161 E2000000 		.4byte	.LASF18
+ 1232 0161 DE000000 		.4byte	.LASF18
  1233 0165 01       		.byte	0x1
  1234 0166 30       		.byte	0x30
  1235 0167 00000000 		.4byte	.LFB65
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  1238 0170 9C       		.byte	0x9c
  1239 0171 BE010000 		.4byte	0x1be
  1240 0175 06       		.uleb128 0x6
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 30
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 30
 
 
  1241 0176 08000000 		.4byte	.LVL8
@@ -1781,7 +1781,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  1278 01bc 00       		.byte	0
  1279 01bd 00       		.byte	0
  1280 01be 05       		.uleb128 0x5
- 1281 01bf 8A000000 		.4byte	.LASF19
+ 1281 01bf 86000000 		.4byte	.LASF19
  1282 01c3 01       		.byte	0x1
  1283 01c4 37       		.byte	0x37
  1284 01c5 00000000 		.4byte	.LFB66
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  1295 01e2 50       		.byte	0x50
  1296 01e3 01       		.uleb128 0x1
  1297 01e4 30       		.byte	0x30
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 31
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 31
 
 
  1298 01e5 00       		.byte	0
@@ -1833,7 +1833,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  1327 021a 00       		.byte	0
  1328 021b 00       		.byte	0
  1329 021c 05       		.uleb128 0x5
- 1330 021d 69010000 		.4byte	.LASF20
+ 1330 021d 65010000 		.4byte	.LASF20
  1331 0221 01       		.byte	0x1
  1332 0222 3E       		.byte	0x3e
  1333 0223 00000000 		.4byte	.LFB67
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  1352 0251 07       		.uleb128 0x7
  1353 0252 01       		.uleb128 0x1
  1354 0253 50       		.byte	0x50
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 32
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 32
 
 
  1355 0254 01       		.uleb128 0x1
@@ -1885,7 +1885,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  1376 0278 00       		.byte	0
  1377 0279 00       		.byte	0
  1378 027a 05       		.uleb128 0x5
- 1379 027b EF000000 		.4byte	.LASF21
+ 1379 027b EB000000 		.4byte	.LASF21
  1380 027f 01       		.byte	0x1
  1381 0280 45       		.byte	0x45
  1382 0281 00000000 		.4byte	.LFB68
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  1409 02ba 38070000 		.4byte	0x738
  1410 02be C8020000 		.4byte	0x2c8
  1411 02c2 07       		.uleb128 0x7
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 33
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 33
 
 
  1412 02c3 01       		.uleb128 0x1
@@ -1937,7 +1937,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  1425 02d6 00       		.byte	0
  1426 02d7 00       		.byte	0
  1427 02d8 05       		.uleb128 0x5
- 1428 02d9 B1000000 		.4byte	.LASF22
+ 1428 02d9 AD000000 		.4byte	.LASF22
  1429 02dd 01       		.byte	0x1
  1430 02de 4C       		.byte	0x4c
  1431 02df 00000000 		.4byte	.LFB69
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  1466 0326 08       		.uleb128 0x8
  1467 0327 1A000000 		.4byte	.LVL27
  1468 032b 38070000 		.4byte	0x738
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 34
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 34
 
 
  1469 032f 07       		.uleb128 0x7
@@ -1989,7 +1989,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  1474 0334 00       		.byte	0
  1475 0335 00       		.byte	0
  1476 0336 05       		.uleb128 0x5
- 1477 0337 6A000000 		.4byte	.LASF23
+ 1477 0337 66000000 		.4byte	.LASF23
  1478 033b 01       		.byte	0x1
  1479 033c 53       		.byte	0x53
  1480 033d 00000000 		.4byte	.LFB70
@@ -2038,10 +2038,10 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  1523 0392 00       		.byte	0
  1524 0393 00       		.byte	0
  1525 0394 05       		.uleb128 0x5
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 35
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 35
 
 
- 1526 0395 50000000 		.4byte	.LASF24
+ 1526 0395 4C000000 		.4byte	.LASF24
  1527 0399 01       		.byte	0x1
  1528 039a 5A       		.byte	0x5a
  1529 039b 00000000 		.4byte	.LFB71
@@ -2090,7 +2090,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  1572 03f0 00       		.byte	0
  1573 03f1 00       		.byte	0
  1574 03f2 05       		.uleb128 0x5
- 1575 03f3 91000000 		.4byte	.LASF25
+ 1575 03f3 8D000000 		.4byte	.LASF25
  1576 03f7 01       		.byte	0x1
  1577 03f8 63       		.byte	0x63
  1578 03f9 00000000 		.4byte	.LFB72
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  1580 0401 01       		.uleb128 0x1
  1581 0402 9C       		.byte	0x9c
  1582 0403 46050000 		.4byte	0x546
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 36
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 36
 
 
  1583 0407 09       		.uleb128 0x9
@@ -2108,7 +2108,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  1587 040e 8F000000 		.4byte	0x8f
  1588 0412 00000000 		.4byte	.LLST0
  1589 0416 09       		.uleb128 0x9
- 1590 0417 7A000000 		.4byte	.LASF27
+ 1590 0417 76000000 		.4byte	.LASF27
  1591 041b 01       		.byte	0x1
  1592 041c 63       		.byte	0x63
  1593 041d 8F000000 		.4byte	0x8f
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  1637 04a3 0A       		.uleb128 0xa
  1638 04a4 EC000000 		.4byte	.LVL65
  1639 04a8 36030000 		.4byte	0x336
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 37
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 37
 
 
  1640 04ac 0A       		.uleb128 0xa
@@ -2214,11 +2214,11 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  1690 0541 A4000000 		.4byte	0xa4
  1691 0545 00       		.byte	0
  1692 0546 0B       		.uleb128 0xb
- 1693 0547 1C010000 		.4byte	.LASF28
+ 1693 0547 18010000 		.4byte	.LASF28
  1694 054b 01       		.byte	0x1
  1695 054c 5A01     		.2byte	0x15a
  1696 054e 00000000 		.4byte	.LFB73
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 38
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 38
 
 
  1697 0552 3C000000 		.4byte	.LFE73-.LFB73
@@ -2226,13 +2226,13 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  1699 0557 9C       		.byte	0x9c
  1700 0558 FB050000 		.4byte	0x5fb
  1701 055c 0C       		.uleb128 0xc
- 1702 055d E9000000 		.4byte	.LASF29
+ 1702 055d E5000000 		.4byte	.LASF29
  1703 0561 01       		.byte	0x1
  1704 0562 5A01     		.2byte	0x15a
  1705 0564 68000000 		.4byte	0x68
  1706 0568 50060000 		.4byte	.LLST2
  1707 056c 0C       		.uleb128 0xc
- 1708 056d 72010000 		.4byte	.LASF30
+ 1708 056d 6E010000 		.4byte	.LASF30
  1709 0571 01       		.byte	0x1
  1710 0572 5A01     		.2byte	0x15a
  1711 0574 8F000000 		.4byte	0x8f
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  1751 05c5 10       		.uleb128 0x10
  1752 05c6 6900     		.ascii	"i\000"
  1753 05c8 01       		.byte	0x1
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 39
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 39
 
 
  1754 05c9 6501     		.2byte	0x165
@@ -2313,7 +2313,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  1783 05f9 00       		.byte	0
  1784 05fa 00       		.byte	0
  1785 05fb 11       		.uleb128 0x11
- 1786 05fc 0A000000 		.4byte	.LASF31
+ 1786 05fc 26000000 		.4byte	.LASF31
  1787 0600 01       		.byte	0x1
  1788 0601 7C01     		.2byte	0x17c
  1789 0603 00000000 		.4byte	.LFB75
@@ -2322,13 +2322,13 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  1792 060c 9C       		.byte	0x9c
  1793 060d 8A060000 		.4byte	0x68a
  1794 0611 0C       		.uleb128 0xc
- 1795 0612 01010000 		.4byte	.LASF32
+ 1795 0612 FD000000 		.4byte	.LASF32
  1796 0616 01       		.byte	0x1
  1797 0617 7C01     		.2byte	0x17c
  1798 0619 68000000 		.4byte	0x68
  1799 061d DC060000 		.4byte	.LLST5
  1800 0621 0C       		.uleb128 0xc
- 1801 0622 72010000 		.4byte	.LASF30
+ 1801 0622 6E010000 		.4byte	.LASF30
  1802 0626 01       		.byte	0x1
  1803 0627 7C01     		.2byte	0x17c
  1804 0629 8F000000 		.4byte	0x8f
@@ -2338,10 +2338,10 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  1808 0636 20000000 		.4byte	.LBE5-.LBB5
  1809 063a 5F060000 		.4byte	0x65f
  1810 063e 13       		.uleb128 0x13
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 40
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 40
 
 
- 1811 063f 5E000000 		.4byte	.LASF33
+ 1811 063f 5A000000 		.4byte	.LASF33
  1812 0643 01       		.byte	0x1
  1813 0644 8301     		.2byte	0x183
  1814 0646 68000000 		.4byte	0x68
@@ -2361,7 +2361,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  1828 0660 3A000000 		.4byte	.LBB6
  1829 0664 3A000000 		.4byte	.LBE6-.LBB6
  1830 0668 13       		.uleb128 0x13
- 1831 0669 5E000000 		.4byte	.LASF33
+ 1831 0669 5A000000 		.4byte	.LASF33
  1832 066d 01       		.byte	0x1
  1833 066e 8E01     		.2byte	0x18e
  1834 0670 68000000 		.4byte	0x68
@@ -2379,7 +2379,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  1846 0688 00       		.byte	0
  1847 0689 00       		.byte	0
  1848 068a 0B       		.uleb128 0xb
- 1849 068b D6000000 		.4byte	.LASF34
+ 1849 068b D2000000 		.4byte	.LASF34
  1850 068f 01       		.byte	0x1
  1851 0690 7101     		.2byte	0x171
  1852 0692 00000000 		.4byte	.LFB74
@@ -2388,7 +2388,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  1855 069b 9C       		.byte	0x9c
  1856 069c FA060000 		.4byte	0x6fa
  1857 06a0 0C       		.uleb128 0xc
- 1858 06a1 72010000 		.4byte	.LASF30
+ 1858 06a1 6E010000 		.4byte	.LASF30
  1859 06a5 01       		.byte	0x1
  1860 06a6 7101     		.2byte	0x171
  1861 06a8 8F000000 		.4byte	0x8f
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  1865 06b5 46050000 		.4byte	0x546
  1866 06b9 CA060000 		.4byte	0x6ca
  1867 06bd 07       		.uleb128 0x7
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 41
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 41
 
 
  1868 06be 01       		.uleb128 0x1
@@ -2447,7 +2447,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  1911 06f8 00       		.byte	0
  1912 06f9 00       		.byte	0
  1913 06fa 14       		.uleb128 0x14
- 1914 06fb 88020000 		.4byte	.LASF35
+ 1914 06fb 84020000 		.4byte	.LASF35
  1915 06ff 01       		.byte	0x1
  1916 0700 1D       		.byte	0x1d
  1917 0701 8F000000 		.4byte	0x8f
@@ -2455,17 +2455,17 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  1919 0706 03       		.byte	0x3
  1920 0707 00000000 		.4byte	stepcount
  1921 070b 15       		.uleb128 0x15
- 1922 070c 0F010000 		.4byte	.LASF36
+ 1922 070c 0B010000 		.4byte	.LASF36
  1923 0710 04       		.byte	0x4
  1924 0711 1207     		.2byte	0x712
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 42
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 42
 
 
  1925 0713 17070000 		.4byte	0x717
  1926 0717 16       		.uleb128 0x16
  1927 0718 76000000 		.4byte	0x76
  1928 071c 17       		.uleb128 0x17
- 1929 071d 2D000000 		.4byte	.LASF37
+ 1929 071d 16000000 		.4byte	.LASF37
  1930 0721 01       		.byte	0x1
  1931 0722 1E       		.byte	0x1e
  1932 0723 68000000 		.4byte	0x68
@@ -2473,28 +2473,28 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  1934 0728 03       		.byte	0x3
  1935 0729 00000000 		.4byte	currentPosition
  1936 072d 18       		.uleb128 0x18
- 1937 072e 49010000 		.4byte	.LASF38
- 1938 0732 49010000 		.4byte	.LASF38
+ 1937 072e 45010000 		.4byte	.LASF38
+ 1938 0732 45010000 		.4byte	.LASF38
  1939 0736 05       		.byte	0x5
  1940 0737 26       		.byte	0x26
  1941 0738 18       		.uleb128 0x18
- 1942 0739 A8000000 		.4byte	.LASF39
- 1943 073d A8000000 		.4byte	.LASF39
+ 1942 0739 A4000000 		.4byte	.LASF39
+ 1943 073d A4000000 		.4byte	.LASF39
  1944 0741 06       		.byte	0x6
  1945 0742 26       		.byte	0x26
  1946 0743 18       		.uleb128 0x18
- 1947 0744 CD000000 		.4byte	.LASF40
- 1948 0748 CD000000 		.4byte	.LASF40
+ 1947 0744 C9000000 		.4byte	.LASF40
+ 1948 0748 C9000000 		.4byte	.LASF40
  1949 074c 07       		.byte	0x7
  1950 074d 26       		.byte	0x26
  1951 074e 18       		.uleb128 0x18
- 1952 074f F8000000 		.4byte	.LASF41
- 1953 0753 F8000000 		.4byte	.LASF41
+ 1952 074f F4000000 		.4byte	.LASF41
+ 1953 0753 F4000000 		.4byte	.LASF41
  1954 0757 08       		.byte	0x8
  1955 0758 26       		.byte	0x26
  1956 0759 18       		.uleb128 0x18
- 1957 075a B8020000 		.4byte	.LASF42
- 1958 075e B8020000 		.4byte	.LASF42
+ 1957 075a B4020000 		.4byte	.LASF42
+ 1958 075e B4020000 		.4byte	.LASF42
  1959 0762 09       		.byte	0x9
  1960 0763 76       		.byte	0x76
  1961 0764 00       		.byte	0
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  1979 000f 10       		.uleb128 0x10
  1980 0010 17       		.uleb128 0x17
  1981 0011 00       		.byte	0
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 43
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 43
 
 
  1982 0012 00       		.byte	0
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  2036 0048 18       		.uleb128 0x18
  2037 0049 9742     		.uleb128 0x2117
  2038 004b 19       		.uleb128 0x19
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 44
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 44
 
 
  2039 004c 01       		.uleb128 0x1
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  2093 008b 13       		.uleb128 0x13
  2094 008c 00       		.byte	0
  2095 008d 00       		.byte	0
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 45
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 45
 
 
  2096 008e 0B       		.uleb128 0xb
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  2150 00c5 3A       		.uleb128 0x3a
  2151 00c6 0B       		.uleb128 0xb
  2152 00c7 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 46
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 46
 
 
  2153 00c8 05       		.uleb128 0x5
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  2207 00ff 00       		.byte	0
  2208 0100 00       		.byte	0
  2209 0101 12       		.uleb128 0x12
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 47
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 47
 
 
  2210 0102 0B       		.uleb128 0xb
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  2264 0138 19       		.uleb128 0x19
  2265 0139 00       		.byte	0
  2266 013a 00       		.byte	0
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 48
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 48
 
 
  2267 013b 16       		.uleb128 0x16
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  2321 0017 50       		.byte	0x50
  2322 0018 9F       		.byte	0x9f
  2323 0019 32000000 		.4byte	.LVL38
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 49
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 49
 
 
  2324 001d 35000000 		.4byte	.LVL39-1
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  2378 0096 70000000 		.4byte	.LVL48
  2379 009a 77000000 		.4byte	.LVL49-1
  2380 009e 0100     		.2byte	0x1
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 50
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 50
 
 
  2381 00a0 50       		.byte	0x50
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  2435 011b 0100     		.2byte	0x1
  2436 011d 50       		.byte	0x50
  2437 011e C1000000 		.4byte	.LVL59-1
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 51
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 51
 
 
  2438 0122 CC000000 		.4byte	.LVL60
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  2492 019b 17010000 		.4byte	.LVL69-1
  2493 019f 22010000 		.4byte	.LVL70
  2494 01a3 0400     		.2byte	0x4
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 52
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 52
 
 
  2495 01a5 F3       		.byte	0xf3
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  2549 0220 0400     		.2byte	0x4
  2550 0222 F3       		.byte	0xf3
  2551 0223 01       		.uleb128 0x1
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 53
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 53
 
 
  2552 0224 50       		.byte	0x50
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  2606 02a0 01       		.uleb128 0x1
  2607 02a1 50       		.byte	0x50
  2608 02a2 9F       		.byte	0x9f
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 54
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 54
 
 
  2609 02a3 C2010000 		.4byte	.LVL90
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  2663 031f 9F       		.byte	0x9f
  2664 0320 00000000 		.4byte	0
  2665 0324 00000000 		.4byte	0
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 55
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 55
 
 
  2666              	.LLST1:
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  2720 03a3 51       		.byte	0x51
  2721 03a4 9F       		.byte	0x9f
  2722 03a5 62000000 		.4byte	.LVL46
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 56
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 56
 
 
  2723 03a9 65000000 		.4byte	.LVL47-1
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  2777 0422 B4000000 		.4byte	.LVL56
  2778 0426 BB000000 		.4byte	.LVL57-1
  2779 042a 0100     		.2byte	0x1
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 57
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 57
 
 
  2780 042c 51       		.byte	0x51
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  2834 04a7 0100     		.2byte	0x1
  2835 04a9 51       		.byte	0x51
  2836 04aa F1000000 		.4byte	.LVL67-1
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 58
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 58
 
 
  2837 04ae FA000000 		.4byte	.LVL68
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  2891 0527 57010000 		.4byte	.LVL77-1
  2892 052b 62010000 		.4byte	.LVL78
  2893 052f 0400     		.2byte	0x4
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 59
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 59
 
 
  2894 0531 F3       		.byte	0xf3
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  2948 05ac 0400     		.2byte	0x4
  2949 05ae F3       		.byte	0xf3
  2950 05af 01       		.uleb128 0x1
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 60
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 60
 
 
  2951 05b0 51       		.byte	0x51
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  3005 062c 01       		.uleb128 0x1
  3006 062d 51       		.byte	0x51
  3007 062e 9F       		.byte	0x9f
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 61
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 61
 
 
  3008 062f 00020000 		.4byte	.LVL98
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  3062 06b5 9F       		.byte	0x9f
  3063 06b6 00000000 		.4byte	0
  3064 06ba 00000000 		.4byte	0
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 62
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 62
 
 
  3065              	.LLST4:
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  3119 0746 74000000 		.4byte	.LFE75
  3120 074a 0400     		.2byte	0x4
  3121 074c F3       		.byte	0xf3
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 63
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 63
 
 
  3122 074d 01       		.uleb128 0x1
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  3176 0018 00000000 		.4byte	.LFB64
  3177 001c 1C000000 		.4byte	.LFE64-.LFB64
  3178 0020 00000000 		.4byte	.LFB65
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 64
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 64
 
 
  3179 0024 1C000000 		.4byte	.LFE65-.LFB65
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  3233 0074 74000000 		.4byte	.LFE75
  3234 0078 00000000 		.4byte	.LFB74
  3235 007c 30000000 		.4byte	.LFE74
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 65
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 65
 
 
  3236 0080 00000000 		.4byte	0
@@ -3854,217 +3854,217 @@ ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 1
  3242 0000 73746570 		.ascii	"step_mode\000"
  3242      5F6D6F64 
  3242      6500
- 3243              	.LASF31:
- 3244 000a 73746570 		.ascii	"stepperdriver_rotateTo\000"
- 3244      70657264 
- 3244      72697665 
- 3244      725F726F 
- 3244      74617465 
- 3245              	.LASF44:
- 3246 0021 466C6167 		.ascii	"FlagMotor.c\000"
- 3246      4D6F746F 
- 3246      722E6300 
- 3247              	.LASF37:
- 3248 002d 63757272 		.ascii	"currentPosition\000"
- 3248      656E7450 
- 3248      6F736974 
- 3248      696F6E00 
+ 3243              	.LASF44:
+ 3244 000a 466C6167 		.ascii	"FlagMotor.c\000"
+ 3244      4D6F746F 
+ 3244      722E6300 
+ 3245              	.LASF37:
+ 3246 0016 63757272 		.ascii	"currentPosition\000"
+ 3246      656E7450 
+ 3246      6F736974 
+ 3246      696F6E00 
+ 3247              	.LASF31:
+ 3248 0026 666C6167 		.ascii	"flagMotor_rotateTo\000"
+ 3248      4D6F746F 
+ 3248      725F726F 
+ 3248      74617465 
+ 3248      546F00
  3249              	.LASF9:
- 3250 003d 5F5F696E 		.ascii	"__int32_t\000"
+ 3250 0039 5F5F696E 		.ascii	"__int32_t\000"
  3250      7433325F 
  3250      7400
  3251              	.LASF4:
- 3252 0047 6C6F6E67 		.ascii	"long int\000"
+ 3252 0043 6C6F6E67 		.ascii	"long int\000"
  3252      20696E74 
  3252      00
  3253              	.LASF24:
- 3254 0050 73746F70 		.ascii	"stopFlagMotor\000"
+ 3254 004c 73746F70 		.ascii	"stopFlagMotor\000"
  3254      466C6167 
  3254      4D6F746F 
  3254      7200
  3255              	.LASF33:
- 3256 005e 73746570 		.ascii	"stepsToTake\000"
+ 3256 005a 73746570 		.ascii	"stepsToTake\000"
  3256      73546F54 
  3256      616B6500 
  3257              	.LASF23:
- 3258 006a 636F696C 		.ascii	"coilB2A1\000"
+ 3258 0066 636F696C 		.ascii	"coilB2A1\000"
  3258      42324131 
  3258      00
  3259              	.LASF12:
- 3260 0073 646F7562 		.ascii	"double\000"
+ 3260 006f 646F7562 		.ascii	"double\000"
  3260      6C6500
  3261              	.LASF27:
- 3262 007a 64697265 		.ascii	"direction\000"
+ 3262 0076 64697265 		.ascii	"direction\000"
  3262      6374696F 
  3262      6E00
  3263              	.LASF11:
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 66
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 66
 
 
- 3264 0084 666C6F61 		.ascii	"float\000"
+ 3264 0080 666C6F61 		.ascii	"float\000"
  3264      7400
  3265              	.LASF19:
- 3266 008a 636F696C 		.ascii	"coilB2\000"
+ 3266 0086 636F696C 		.ascii	"coilB2\000"
  3266      423200
  3267              	.LASF25:
- 3268 0091 74616B65 		.ascii	"takestep\000"
+ 3268 008d 74616B65 		.ascii	"takestep\000"
  3268      73746570 
  3268      00
  3269              	.LASF1:
- 3270 009a 756E7369 		.ascii	"unsigned char\000"
+ 3270 0096 756E7369 		.ascii	"unsigned char\000"
  3270      676E6564 
  3270      20636861 
  3270      7200
  3271              	.LASF39:
- 3272 00a8 42315F57 		.ascii	"B1_Write\000"
+ 3272 00a4 42315F57 		.ascii	"B1_Write\000"
  3272      72697465 
  3272      00
  3273              	.LASF22:
- 3274 00b1 636F696C 		.ascii	"coilB1B2\000"
+ 3274 00ad 636F696C 		.ascii	"coilB1B2\000"
  3274      42314232 
  3274      00
  3275              	.LASF3:
- 3276 00ba 73686F72 		.ascii	"short unsigned int\000"
+ 3276 00b6 73686F72 		.ascii	"short unsigned int\000"
  3276      7420756E 
  3276      7369676E 
  3276      65642069 
  3276      6E7400
  3277              	.LASF40:
- 3278 00cd 42325F57 		.ascii	"B2_Write\000"
+ 3278 00c9 42325F57 		.ascii	"B2_Write\000"
  3278      72697465 
  3278      00
  3279              	.LASF34:
- 3280 00d6 686F6D65 		.ascii	"homeStepper\000"
+ 3280 00d2 686F6D65 		.ascii	"homeStepper\000"
  3280      53746570 
  3280      70657200 
  3281              	.LASF18:
- 3282 00e2 636F696C 		.ascii	"coilB1\000"
+ 3282 00de 636F696C 		.ascii	"coilB1\000"
  3282      423100
  3283              	.LASF29:
- 3284 00e9 73746570 		.ascii	"steps\000"
+ 3284 00e5 73746570 		.ascii	"steps\000"
  3284      7300
  3285              	.LASF21:
- 3286 00ef 636F696C 		.ascii	"coilA2B1\000"
+ 3286 00eb 636F696C 		.ascii	"coilA2B1\000"
  3286      41324231 
  3286      00
  3287              	.LASF41:
- 3288 00f8 41315F57 		.ascii	"A1_Write\000"
+ 3288 00f4 41315F57 		.ascii	"A1_Write\000"
  3288      72697465 
  3288      00
  3289              	.LASF32:
- 3290 0101 74617267 		.ascii	"targetDegrees\000"
+ 3290 00fd 74617267 		.ascii	"targetDegrees\000"
  3290      65744465 
  3290      67726565 
  3290      7300
  3291              	.LASF36:
- 3292 010f 49544D5F 		.ascii	"ITM_RxBuffer\000"
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 67
+ 3292 010b 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 67
 
 
  3292      52784275 
  3292      66666572 
  3292      00
  3293              	.LASF28:
- 3294 011c 6E756D62 		.ascii	"numberOfSteps\000"
+ 3294 0118 6E756D62 		.ascii	"numberOfSteps\000"
  3294      65724F66 
  3294      53746570 
  3294      7300
  3295              	.LASF5:
- 3296 012a 6C6F6E67 		.ascii	"long unsigned int\000"
+ 3296 0126 6C6F6E67 		.ascii	"long unsigned int\000"
  3296      20756E73 
  3296      69676E65 
  3296      6420696E 
  3296      7400
  3297              	.LASF8:
- 3298 013c 756E7369 		.ascii	"unsigned int\000"
+ 3298 0138 756E7369 		.ascii	"unsigned int\000"
  3298      676E6564 
  3298      20696E74 
  3298      00
  3299              	.LASF38:
- 3300 0149 41325F57 		.ascii	"A2_Write\000"
+ 3300 0145 41325F57 		.ascii	"A2_Write\000"
  3300      72697465 
  3300      00
  3301              	.LASF7:
- 3302 0152 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 3302 014e 6C6F6E67 		.ascii	"long long unsigned int\000"
  3302      206C6F6E 
  3302      6720756E 
  3302      7369676E 
  3302      65642069 
  3303              	.LASF20:
- 3304 0169 636F696C 		.ascii	"coilA1A2\000"
+ 3304 0165 636F696C 		.ascii	"coilA1A2\000"
  3304      41314132 
  3304      00
  3305              	.LASF30:
- 3306 0172 6D6F6465 		.ascii	"mode\000"
+ 3306 016e 6D6F6465 		.ascii	"mode\000"
  3306      00
  3307              	.LASF45:
- 3308 0177 433A5C55 		.ascii	"C:\\Users\\jespe\\OneDrive\\Dokumenter\\GitHub\\B-C"
+ 3308 0173 433A5C55 		.ascii	"C:\\Users\\jespe\\OneDrive\\Dokumenter\\GitHub\\B-C"
  3308      73657273 
  3308      5C6A6573 
  3308      70655C4F 
  3308      6E654472 
- 3309 01a4 41435C53 		.ascii	"AC\\SPI_virker\\SPI_virker\\Design01.cydsn\000"
+ 3309 01a0 41435C53 		.ascii	"AC\\SPI_virker\\SPI_virker\\Design01.cydsn\000"
  3309      50495F76 
  3309      69726B65 
  3309      725C5350 
  3309      495F7669 
  3310              	.LASF43:
- 3311 01cc 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 3311 01c8 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
  3311      43313120 
  3311      352E342E 
  3311      31203230 
  3311      31363036 
- 3312 01ff 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 3312 01fb 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
  3312      20726576 
  3312      6973696F 
  3312      6E203233 
-ARM GAS  C:\Users\jespe\AppData\Local\Temp\cciHWBSS.s 			page 68
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccmpLTWw.s 			page 68
 
 
  3312      37373135 
- 3313 0232 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 3313 022e 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
  3313      66756E63 
  3313      74696F6E 
  3313      2D736563 
  3313      74696F6E 
  3314              	.LASF10:
- 3315 025a 696E7433 		.ascii	"int32_t\000"
+ 3315 0256 696E7433 		.ascii	"int32_t\000"
  3315      325F7400 
  3316              	.LASF15:
- 3317 0262 73697A65 		.ascii	"sizetype\000"
+ 3317 025e 73697A65 		.ascii	"sizetype\000"
  3317      74797065 
  3317      00
  3318              	.LASF6:
- 3319 026b 6C6F6E67 		.ascii	"long long int\000"
+ 3319 0267 6C6F6E67 		.ascii	"long long int\000"
  3319      206C6F6E 
  3319      6720696E 
  3319      7400
  3320              	.LASF13:
- 3321 0279 63686172 		.ascii	"char\000"
+ 3321 0275 63686172 		.ascii	"char\000"
  3321      00
  3322              	.LASF2:
- 3323 027e 73686F72 		.ascii	"short int\000"
+ 3323 027a 73686F72 		.ascii	"short int\000"
  3323      7420696E 
  3323      7400
  3324              	.LASF35:
- 3325 0288 73746570 		.ascii	"stepcount\000"
+ 3325 0284 73746570 		.ascii	"stepcount\000"
  3325      636F756E 
  3325      7400
  3326              	.LASF14:
- 3327 0292 6C6F6E67 		.ascii	"long double\000"
+ 3327 028e 6C6F6E67 		.ascii	"long double\000"
  3327      20646F75 
  3327      626C6500 
  3328              	.LASF0:
- 3329 029e 7369676E 		.ascii	"signed char\000"
+ 3329 029a 7369676E 		.ascii	"signed char\000"
  3329      65642063 
  3329      68617200 
  3330              	.LASF16:
- 3331 02aa 636F696C 		.ascii	"coilA1\000"
+ 3331 02a6 636F696C 		.ascii	"coilA1\000"
  3331      413100
  3332              	.LASF17:
- 3333 02b1 636F696C 		.ascii	"coilA2\000"
+ 3333 02ad 636F696C 		.ascii	"coilA2\000"
  3333      413200
  3334              	.LASF42:
- 3335 02b8 43794465 		.ascii	"CyDelay\000"
+ 3335 02b4 43794465 		.ascii	"CyDelay\000"
  3335      6C617900 
  3336              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

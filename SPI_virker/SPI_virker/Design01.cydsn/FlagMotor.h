@@ -55,7 +55,7 @@ void numberOfSteps(int steps, char mode);
 
 void homeStepper(char mode);
 
-void stepperdriver_rotateTo(int targetDegrees, char mode);
+void flagMotor_rotateTo(int targetDegrees, char mode);
 
 
 /* [] END OF FILE */

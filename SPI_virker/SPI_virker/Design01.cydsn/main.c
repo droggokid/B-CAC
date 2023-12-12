@@ -122,7 +122,7 @@ int main(void)
         if(UCstate == 4)
         {
     
-            stepperdriver_rotateTo(90, mode);
+            flagMotor_rotateTo(90, mode);
             // stopFlagMotor();
             if (dnf == 0)
             {
