@@ -265,6 +265,7 @@ function GameMenu({onComponentChange}) {
                 </div>
             </div>
             <div id="debug" onClick={() => {
+                server.getTime = () => { data.recievedTime = { p1: "00:18.2", p2: "00:15.8" }; };
                 server.getGameRunning = () => { data.recievedGameRunning = false; };
             }}>
                 O
