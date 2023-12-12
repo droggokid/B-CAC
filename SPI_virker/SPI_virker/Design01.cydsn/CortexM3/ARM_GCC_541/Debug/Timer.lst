@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 1
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc6bGFxi.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 1
   28:Timer.c       **** void startTidsTagning()
   29:Timer.c       **** {
   28              		.loc 1 29 0
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 2
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc6bGFxi.s 			page 2
 
 
   29              		.cfi_startproc
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 1
   40:Timer.c       ****     time_interval_ticks = start_counter - stop_counter;
   73              		.loc 1 40 0
   74 000a 2368     		ldr	r3, [r4]
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 3
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc6bGFxi.s 			page 3
 
 
   75 000c 181A     		subs	r0, r3, r0
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 1
   56:Timer.c       ****     minutter = (time_1 / (1000 * 60)) & 0xFF;   // Minutter
  114              		.loc 1 56 0
  115 0000 024B     		ldr	r3, .L10
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 4
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc6bGFxi.s 			page 4
 
 
  116 0002 A3FB0030 		umull	r3, r0, r3, r0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 1
  160              	.L13:
  161 001c D34D6210 		.word	274877907
  162 0020 89888888 		.word	-2004318071
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 5
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc6bGFxi.s 			page 5
 
 
  163              		.cfi_endproc
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 1
  208              		.global	stopCount
  209              		.global	startCount
  210              		.section	.rodata
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 6
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc6bGFxi.s 			page 6
 
 
  211              		.align	2
@@ -351,28 +351,28 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 1
  258 0006 00000000 		.4byte	.Ldebug_abbrev0
  259 000a 04       		.byte	0x4
  260 000b 01       		.uleb128 0x1
- 261 000c 17010000 		.4byte	.LASF48
+ 261 000c D4000000 		.4byte	.LASF48
  262 0010 0C       		.byte	0xc
- 263 0011 F0010000 		.4byte	.LASF49
- 264 0015 70000000 		.4byte	.LASF50
+ 263 0011 AD010000 		.4byte	.LASF49
+ 264 0015 32020000 		.4byte	.LASF50
  265 0019 00000000 		.4byte	.Ldebug_ranges0+0
  266 001d 00000000 		.4byte	0
  267 0021 00000000 		.4byte	.Ldebug_line0
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 7
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc6bGFxi.s 			page 7
 
 
  268 0025 02       		.uleb128 0x2
  269 0026 08       		.byte	0x8
  270 0027 07       		.byte	0x7
- 271 0028 56020000 		.4byte	.LASF0
+ 271 0028 13020000 		.4byte	.LASF0
  272 002c 02       		.uleb128 0x2
  273 002d 04       		.byte	0x4
  274 002e 07       		.byte	0x7
- 275 002f 49020000 		.4byte	.LASF1
+ 275 002f 06020000 		.4byte	.LASF1
  276 0033 02       		.uleb128 0x2
  277 0034 01       		.byte	0x1
  278 0035 06       		.byte	0x6
- 279 0036 12030000 		.4byte	.LASF2
+ 279 0036 24030000 		.4byte	.LASF2
  280 003a 03       		.uleb128 0x3
  281 003b 0A000000 		.4byte	.LASF5
  282 003f 02       		.byte	0x2
@@ -381,20 +381,20 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 1
  285 0045 02       		.uleb128 0x2
  286 0046 01       		.byte	0x1
  287 0047 08       		.byte	0x8
- 288 0048 09010000 		.4byte	.LASF3
+ 288 0048 C6000000 		.4byte	.LASF3
  289 004c 02       		.uleb128 0x2
  290 004d 02       		.byte	0x2
  291 004e 05       		.byte	0x5
- 292 004f D0020000 		.4byte	.LASF4
+ 292 004f E2020000 		.4byte	.LASF4
  293 0053 03       		.uleb128 0x3
- 294 0054 FF010000 		.4byte	.LASF6
+ 294 0054 BC010000 		.4byte	.LASF6
  295 0058 02       		.byte	0x2
  296 0059 2B       		.byte	0x2b
  297 005a 5E000000 		.4byte	0x5e
  298 005e 02       		.uleb128 0x2
  299 005f 02       		.byte	0x2
  300 0060 07       		.byte	0x7
- 301 0061 D0010000 		.4byte	.LASF7
+ 301 0061 8D010000 		.4byte	.LASF7
  302 0065 03       		.uleb128 0x3
  303 0066 5F000000 		.4byte	.LASF8
  304 006a 02       		.byte	0x2
@@ -403,82 +403,82 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 1
  307 0070 02       		.uleb128 0x2
  308 0071 04       		.byte	0x4
  309 0072 05       		.byte	0x5
- 310 0073 FD020000 		.4byte	.LASF9
+ 310 0073 0F030000 		.4byte	.LASF9
  311 0077 03       		.uleb128 0x3
- 312 0078 30020000 		.4byte	.LASF10
+ 312 0078 ED010000 		.4byte	.LASF10
  313 007c 02       		.byte	0x2
  314 007d 41       		.byte	0x41
  315 007e 82000000 		.4byte	0x82
  316 0082 02       		.uleb128 0x2
  317 0083 04       		.byte	0x4
  318 0084 07       		.byte	0x7
- 319 0085 B9010000 		.4byte	.LASF11
+ 319 0085 76010000 		.4byte	.LASF11
  320 0089 02       		.uleb128 0x2
  321 008a 08       		.byte	0x8
  322 008b 05       		.byte	0x5
- 323 008c 9B020000 		.4byte	.LASF12
+ 323 008c AD020000 		.4byte	.LASF12
  324 0090 04       		.uleb128 0x4
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 8
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc6bGFxi.s 			page 8
 
 
  325 0091 04       		.byte	0x4
  326 0092 05       		.byte	0x5
  327 0093 696E7400 		.ascii	"int\000"
  328 0097 03       		.uleb128 0x3
- 329 0098 6D020000 		.4byte	.LASF13
+ 329 0098 2A020000 		.4byte	.LASF13
  330 009c 03       		.byte	0x3
  331 009d 18       		.byte	0x18
  332 009e 3A000000 		.4byte	0x3a
  333 00a2 03       		.uleb128 0x3
- 334 00a3 DA020000 		.4byte	.LASF14
+ 334 00a3 EC020000 		.4byte	.LASF14
  335 00a7 03       		.byte	0x3
  336 00a8 24       		.byte	0x24
  337 00a9 53000000 		.4byte	0x53
  338 00ad 03       		.uleb128 0x3
- 339 00ae 75020000 		.4byte	.LASF15
+ 339 00ae 87020000 		.4byte	.LASF15
  340 00b2 03       		.byte	0x3
  341 00b3 2C       		.byte	0x2c
  342 00b4 65000000 		.4byte	0x65
  343 00b8 03       		.uleb128 0x3
- 344 00b9 F4020000 		.4byte	.LASF16
+ 344 00b9 06030000 		.4byte	.LASF16
  345 00bd 03       		.byte	0x3
  346 00be 30       		.byte	0x30
  347 00bf 77000000 		.4byte	0x77
  348 00c3 05       		.uleb128 0x5
- 349 00c4 3B020000 		.4byte	.LASF17
+ 349 00c4 F8010000 		.4byte	.LASF17
  350 00c8 04       		.byte	0x4
  351 00c9 E801     		.2byte	0x1e8
  352 00cb 5E000000 		.4byte	0x5e
  353 00cf 05       		.uleb128 0x5
- 354 00d0 42020000 		.4byte	.LASF18
+ 354 00d0 FF010000 		.4byte	.LASF18
  355 00d4 04       		.byte	0x4
  356 00d5 E901     		.2byte	0x1e9
  357 00d7 82000000 		.4byte	0x82
  358 00db 02       		.uleb128 0x2
  359 00dc 04       		.byte	0x4
  360 00dd 04       		.byte	0x4
- 361 00de F2000000 		.4byte	.LASF19
+ 361 00de AF000000 		.4byte	.LASF19
  362 00e2 02       		.uleb128 0x2
  363 00e3 08       		.byte	0x8
  364 00e4 04       		.byte	0x4
- 365 00e5 B3000000 		.4byte	.LASF20
+ 365 00e5 70000000 		.4byte	.LASF20
  366 00e9 02       		.uleb128 0x2
  367 00ea 01       		.byte	0x1
  368 00eb 08       		.byte	0x8
- 369 00ec A9020000 		.4byte	.LASF21
+ 369 00ec BB020000 		.4byte	.LASF21
  370 00f0 06       		.uleb128 0x6
  371 00f1 C3000000 		.4byte	0xc3
  372 00f5 02       		.uleb128 0x2
  373 00f6 08       		.byte	0x8
  374 00f7 04       		.byte	0x4
- 375 00f8 06030000 		.4byte	.LASF22
+ 375 00f8 18030000 		.4byte	.LASF22
  376 00fc 02       		.uleb128 0x2
  377 00fd 04       		.byte	0x4
  378 00fe 07       		.byte	0x7
- 379 00ff 92020000 		.4byte	.LASF23
+ 379 00ff A4020000 		.4byte	.LASF23
  380 0103 07       		.uleb128 0x7
- 381 0104 E3020000 		.4byte	.LASF51
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 9
+ 381 0104 F5020000 		.4byte	.LASF51
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc6bGFxi.s 			page 9
 
 
  382 0108 01       		.byte	0x1
@@ -496,7 +496,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 1
  394 0126 C3020000 		.4byte	0x2c3
  395 012a 00       		.byte	0
  396 012b 09       		.uleb128 0x9
- 397 012c 20020000 		.4byte	.LASF24
+ 397 012c DD010000 		.4byte	.LASF24
  398 0130 01       		.byte	0x1
  399 0131 22       		.byte	0x22
  400 0132 CF000000 		.4byte	0xcf
@@ -522,7 +522,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 1
  420 0164 00       		.byte	0
  421 0165 00       		.byte	0
  422 0166 09       		.uleb128 0x9
- 423 0167 E2000000 		.4byte	.LASF25
+ 423 0167 9F000000 		.4byte	.LASF25
  424 016b 01       		.byte	0x1
  425 016c 34       		.byte	0x34
  426 016d 97000000 		.4byte	0x97
@@ -538,10 +538,10 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 1
  436 0186 B8000000 		.4byte	0xb8
  437 018a 00000000 		.4byte	.LLST0
  438 018e 0D       		.uleb128 0xd
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 10
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc6bGFxi.s 			page 10
 
 
- 439 018f 0A020000 		.4byte	.LASF29
+ 439 018f C7010000 		.4byte	.LASF29
  440 0193 01       		.byte	0x1
  441 0194 37       		.byte	0x37
  442 0195 97000000 		.4byte	0x97
@@ -558,20 +558,20 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 1
  453 01b2 9C       		.byte	0x9c
  454 01b3 D6010000 		.4byte	0x1d6
  455 01b7 0C       		.uleb128 0xc
- 456 01b8 F8010000 		.4byte	.LASF28
+ 456 01b8 B5010000 		.4byte	.LASF28
  457 01bc 01       		.byte	0x1
  458 01bd 3C       		.byte	0x3c
  459 01be B8000000 		.4byte	0xb8
  460 01c2 6F000000 		.4byte	.LLST2
  461 01c6 0D       		.uleb128 0xd
- 462 01c7 00010000 		.4byte	.LASF30
+ 462 01c7 BD000000 		.4byte	.LASF30
  463 01cb 01       		.byte	0x1
  464 01cc 3F       		.byte	0x3f
  465 01cd 97000000 		.4byte	0x97
  466 01d1 90000000 		.4byte	.LLST3
  467 01d5 00       		.byte	0
  468 01d6 09       		.uleb128 0x9
- 469 01d7 7D020000 		.4byte	.LASF31
+ 469 01d7 8F020000 		.4byte	.LASF31
  470 01db 01       		.byte	0x1
  471 01dc 44       		.byte	0x44
  472 01dd 97000000 		.4byte	0x97
@@ -587,30 +587,30 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 1
  482 01f6 B8000000 		.4byte	0xb8
  483 01fa AF000000 		.4byte	.LLST4
  484 01fe 0E       		.uleb128 0xe
- 485 01ff CB010000 		.4byte	.LASF33
+ 485 01ff 88010000 		.4byte	.LASF33
  486 0203 01       		.byte	0x1
  487 0204 46       		.byte	0x46
  488 0205 A2000000 		.4byte	0xa2
  489 0209 00       		.byte	0
  490 020a 0D       		.uleb128 0xd
- 491 020b D4000000 		.4byte	.LASF34
+ 491 020b 91000000 		.4byte	.LASF34
  492 020f 01       		.byte	0x1
  493 0210 48       		.byte	0x48
  494 0211 97000000 		.4byte	0x97
  495 0215 D0000000 		.4byte	.LLST5
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 11
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc6bGFxi.s 			page 11
 
 
  496 0219 00       		.byte	0
  497 021a 0F       		.uleb128 0xf
- 498 021b E3010000 		.4byte	.LASF35
+ 498 021b A0010000 		.4byte	.LASF35
  499 021f 05       		.byte	0x5
  500 0220 1207     		.2byte	0x712
  501 0222 26020000 		.4byte	0x226
  502 0226 06       		.uleb128 0x6
  503 0227 AD000000 		.4byte	0xad
  504 022b 10       		.uleb128 0x10
- 505 022c C9000000 		.4byte	.LASF36
+ 505 022c 86000000 		.4byte	.LASF36
  506 0230 01       		.byte	0x1
  507 0231 11       		.byte	0x11
  508 0232 F0000000 		.4byte	0xf0
@@ -626,7 +626,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 1
  518 0248 03       		.byte	0x3
  519 0249 00000000 		.4byte	stopCount
  520 024d 10       		.uleb128 0x10
- 521 024e F8000000 		.4byte	.LASF38
+ 521 024e B5000000 		.4byte	.LASF38
  522 0252 01       		.byte	0x1
  523 0253 13       		.byte	0x13
  524 0254 CF000000 		.4byte	0xcf
@@ -634,7 +634,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 1
  526 0259 03       		.byte	0x3
  527 025a 00000000 		.4byte	counter
  528 025e 10       		.uleb128 0x10
- 529 025f BA000000 		.4byte	.LASF39
+ 529 025f 77000000 		.4byte	.LASF39
  530 0263 01       		.byte	0x1
  531 0264 15       		.byte	0x15
  532 0265 6F020000 		.4byte	0x26f
@@ -644,7 +644,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 1
  536 026f 11       		.uleb128 0x11
  537 0270 CF000000 		.4byte	0xcf
  538 0274 10       		.uleb128 0x10
- 539 0275 C2020000 		.4byte	.LASF40
+ 539 0275 D4020000 		.4byte	.LASF40
  540 0279 01       		.byte	0x1
  541 027a 16       		.byte	0x16
  542 027b CF000000 		.4byte	0xcf
@@ -652,18 +652,18 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 1
  544 0280 03       		.byte	0x3
  545 0281 00000000 		.4byte	start_counter
  546 0285 10       		.uleb128 0x10
- 547 0286 13020000 		.4byte	.LASF41
+ 547 0286 D0010000 		.4byte	.LASF41
  548 028a 01       		.byte	0x1
  549 028b 17       		.byte	0x17
  550 028c CF000000 		.4byte	0xcf
  551 0290 05       		.uleb128 0x5
  552 0291 03       		.byte	0x3
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 12
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc6bGFxi.s 			page 12
 
 
  553 0292 00000000 		.4byte	stop_counter
  554 0296 10       		.uleb128 0x10
- 555 0297 A5010000 		.4byte	.LASF42
+ 555 0297 62010000 		.4byte	.LASF42
  556 029b 01       		.byte	0x1
  557 029c 18       		.byte	0x18
  558 029d CF000000 		.4byte	0xcf
@@ -684,13 +684,13 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 1
  573 02c1 06       		.byte	0x6
  574 02c2 5A       		.byte	0x5a
  575 02c3 12       		.uleb128 0x12
- 576 02c4 AE020000 		.4byte	.LASF45
- 577 02c8 AE020000 		.4byte	.LASF45
+ 576 02c4 C0020000 		.4byte	.LASF45
+ 577 02c8 C0020000 		.4byte	.LASF45
  578 02cc 06       		.byte	0x6
  579 02cd 69       		.byte	0x69
  580 02ce 12       		.uleb128 0x12
- 581 02cf 1E030000 		.4byte	.LASF46
- 582 02d3 1E030000 		.4byte	.LASF46
+ 581 02cf 30030000 		.4byte	.LASF46
+ 582 02d3 30030000 		.4byte	.LASF46
  583 02d7 06       		.byte	0x6
  584 02d8 5B       		.byte	0x5b
  585 02d9 12       		.uleb128 0x12
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 1
  607 000e 01       		.uleb128 0x1
  608 000f 10       		.uleb128 0x10
  609 0010 17       		.uleb128 0x17
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 13
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc6bGFxi.s 			page 13
 
 
  610 0011 00       		.byte	0
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 1
  664 0047 13       		.uleb128 0x13
  665 0048 00       		.byte	0
  666 0049 00       		.byte	0
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 14
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc6bGFxi.s 			page 14
 
 
  667 004a 07       		.uleb128 0x7
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 1
  721 0083 18       		.uleb128 0x18
  722 0084 9742     		.uleb128 0x2117
  723 0086 19       		.uleb128 0x19
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 15
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc6bGFxi.s 			page 15
 
 
  724 0087 01       		.uleb128 0x1
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 1
  778 00c2 00       		.byte	0
  779 00c3 03       		.uleb128 0x3
  780 00c4 0E       		.uleb128 0xe
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 16
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc6bGFxi.s 			page 16
 
 
  781 00c5 3A       		.uleb128 0x3a
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 1
  835 00fb 3F       		.uleb128 0x3f
  836 00fc 19       		.uleb128 0x19
  837 00fd 3C       		.uleb128 0x3c
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 17
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc6bGFxi.s 			page 17
 
 
  838 00fe 19       		.uleb128 0x19
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 1
  892 004f F7       		.byte	0xf7
  893 0050 25       		.uleb128 0x25
  894 0051 0C       		.byte	0xc
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 18
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc6bGFxi.s 			page 18
 
 
  895 0052 73B2E745 		.4byte	0x45e7b273
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 1
  949 00c4 F3       		.byte	0xf3
  950 00c5 01       		.uleb128 0x1
  951 00c6 50       		.byte	0x50
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 19
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc6bGFxi.s 			page 19
 
 
  952 00c7 9F       		.byte	0x9f
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 1
  1006 011a F7       		.byte	0xf7
  1007 011b 25       		.uleb128 0x25
  1008 011c 0C       		.byte	0xc
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 20
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc6bGFxi.s 			page 20
 
 
  1009 011d 1F85EB51 		.4byte	0x51eb851f
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 1
  1063              		.section	.debug_line,"",%progbits
  1064              	.Ldebug_line0:
  1065 0000 BA010000 		.section	.debug_str,"MS",%progbits,1
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 21
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc6bGFxi.s 			page 21
 
 
  1065      02005A01 
@@ -1245,220 +1245,220 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 1
  1082              	.LASF32:
  1083 0069 74696D65 		.ascii	"time_3\000"
  1083      5F3300
- 1084              	.LASF50:
- 1085 0070 433A5C55 		.ascii	"C:\\UNI_FILES\\GitPROJEKT\\B-CAC\\SPI_virker\\SPI_v"
- 1085      4E495F46 
- 1085      494C4553 
- 1085      5C476974 
- 1085      50524F4A 
- 1086 009e 69726B65 		.ascii	"irker\\Design01.cydsn\000"
- 1086      725C4465 
- 1086      7369676E 
- 1086      30312E63 
- 1086      7964736E 
- 1087              	.LASF20:
- 1088 00b3 646F7562 		.ascii	"double\000"
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 22
+ 1084              	.LASF20:
+ 1085 0070 646F7562 		.ascii	"double\000"
+ 1085      6C6500
+ 1086              	.LASF39:
+ 1087 0077 7469636B 		.ascii	"tick_period_ms\000"
+ 1087      5F706572 
+ 1087      696F645F 
+ 1087      6D7300
+ 1088              	.LASF36:
+ 1089 0086 73746172 		.ascii	"startCount\000"
+ 1089      74436F75 
+ 1089      6E7400
+ 1090              	.LASF34:
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc6bGFxi.s 			page 22
 
 
- 1088      6C6500
- 1089              	.LASF39:
- 1090 00ba 7469636B 		.ascii	"tick_period_ms\000"
- 1090      5F706572 
- 1090      696F645F 
- 1090      6D7300
- 1091              	.LASF36:
- 1092 00c9 73746172 		.ascii	"startCount\000"
- 1092      74436F75 
- 1092      6E7400
- 1093              	.LASF34:
- 1094 00d4 6D696C6C 		.ascii	"milliSekunder\000"
- 1094      6953656B 
- 1094      756E6465 
- 1094      7200
- 1095              	.LASF25:
- 1096 00e2 636F6E76 		.ascii	"convertMinutter\000"
- 1096      6572744D 
- 1096      696E7574 
- 1096      74657200 
- 1097              	.LASF19:
- 1098 00f2 666C6F61 		.ascii	"float\000"
- 1098      7400
- 1099              	.LASF38:
- 1100 00f8 636F756E 		.ascii	"counter\000"
- 1100      74657200 
- 1101              	.LASF30:
- 1102 0100 73656B75 		.ascii	"sekunder\000"
- 1102      6E646572 
- 1102      00
- 1103              	.LASF3:
- 1104 0109 756E7369 		.ascii	"unsigned char\000"
- 1104      676E6564 
- 1104      20636861 
- 1104      7200
- 1105              	.LASF48:
- 1106 0117 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 1106      43313120 
- 1106      352E342E 
- 1106      31203230 
- 1106      31363036 
- 1107 014a 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 1107      20726576 
- 1107      6973696F 
- 1107      6E203233 
- 1107      37373135 
- 1108 017d 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 1108      66756E63 
- 1108      74696F6E 
- 1108      2D736563 
- 1108      74696F6E 
- 1109              	.LASF42:
- 1110 01a5 74696D65 		.ascii	"time_interval_ticks\000"
- 1110      5F696E74 
- 1110      65727661 
- 1110      6C5F7469 
- 1110      636B7300 
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 23
+ 1091 0091 6D696C6C 		.ascii	"milliSekunder\000"
+ 1091      6953656B 
+ 1091      756E6465 
+ 1091      7200
+ 1092              	.LASF25:
+ 1093 009f 636F6E76 		.ascii	"convertMinutter\000"
+ 1093      6572744D 
+ 1093      696E7574 
+ 1093      74657200 
+ 1094              	.LASF19:
+ 1095 00af 666C6F61 		.ascii	"float\000"
+ 1095      7400
+ 1096              	.LASF38:
+ 1097 00b5 636F756E 		.ascii	"counter\000"
+ 1097      74657200 
+ 1098              	.LASF30:
+ 1099 00bd 73656B75 		.ascii	"sekunder\000"
+ 1099      6E646572 
+ 1099      00
+ 1100              	.LASF3:
+ 1101 00c6 756E7369 		.ascii	"unsigned char\000"
+ 1101      676E6564 
+ 1101      20636861 
+ 1101      7200
+ 1102              	.LASF48:
+ 1103 00d4 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1103      43313120 
+ 1103      352E342E 
+ 1103      31203230 
+ 1103      31363036 
+ 1104 0107 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1104      20726576 
+ 1104      6973696F 
+ 1104      6E203233 
+ 1104      37373135 
+ 1105 013a 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1105      66756E63 
+ 1105      74696F6E 
+ 1105      2D736563 
+ 1105      74696F6E 
+ 1106              	.LASF42:
+ 1107 0162 74696D65 		.ascii	"time_interval_ticks\000"
+ 1107      5F696E74 
+ 1107      65727661 
+ 1107      6C5F7469 
+ 1107      636B7300 
+ 1108              	.LASF11:
+ 1109 0176 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1109      20756E73 
+ 1109      69676E65 
+ 1109      6420696E 
+ 1109      7400
+ 1110              	.LASF33:
+ 1111 0188 74656D70 		.ascii	"temp\000"
+ 1111      00
+ 1112              	.LASF7:
+ 1113 018d 73686F72 		.ascii	"short unsigned int\000"
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc6bGFxi.s 			page 23
 
 
- 1111              	.LASF11:
- 1112 01b9 6C6F6E67 		.ascii	"long unsigned int\000"
- 1112      20756E73 
- 1112      69676E65 
- 1112      6420696E 
- 1112      7400
- 1113              	.LASF33:
- 1114 01cb 74656D70 		.ascii	"temp\000"
- 1114      00
- 1115              	.LASF7:
- 1116 01d0 73686F72 		.ascii	"short unsigned int\000"
- 1116      7420756E 
- 1116      7369676E 
- 1116      65642069 
- 1116      6E7400
- 1117              	.LASF35:
- 1118 01e3 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 1118      52784275 
- 1118      66666572 
- 1118      00
- 1119              	.LASF49:
- 1120 01f0 54696D65 		.ascii	"Timer.c\000"
- 1120      722E6300 
- 1121              	.LASF28:
- 1122 01f8 74696D65 		.ascii	"time_2\000"
- 1122      5F3200
- 1123              	.LASF6:
- 1124 01ff 5F5F7569 		.ascii	"__uint16_t\000"
- 1124      6E743136 
- 1124      5F7400
- 1125              	.LASF29:
- 1126 020a 6D696E75 		.ascii	"minutter\000"
- 1126      74746572 
- 1126      00
- 1127              	.LASF41:
- 1128 0213 73746F70 		.ascii	"stop_counter\000"
- 1128      5F636F75 
- 1128      6E746572 
- 1128      00
- 1129              	.LASF24:
- 1130 0220 73746F70 		.ascii	"stopTidsTagning\000"
- 1130      54696473 
- 1130      5461676E 
- 1130      696E6700 
- 1131              	.LASF10:
- 1132 0230 5F5F7569 		.ascii	"__uint32_t\000"
- 1132      6E743332 
- 1132      5F7400
- 1133              	.LASF17:
- 1134 023b 75696E74 		.ascii	"uint16\000"
- 1134      313600
- 1135              	.LASF18:
- 1136 0242 75696E74 		.ascii	"uint32\000"
- 1136      333200
- 1137              	.LASF1:
- 1138 0249 756E7369 		.ascii	"unsigned int\000"
- 1138      676E6564 
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 24
+ 1113      7420756E 
+ 1113      7369676E 
+ 1113      65642069 
+ 1113      6E7400
+ 1114              	.LASF35:
+ 1115 01a0 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1115      52784275 
+ 1115      66666572 
+ 1115      00
+ 1116              	.LASF49:
+ 1117 01ad 54696D65 		.ascii	"Timer.c\000"
+ 1117      722E6300 
+ 1118              	.LASF28:
+ 1119 01b5 74696D65 		.ascii	"time_2\000"
+ 1119      5F3200
+ 1120              	.LASF6:
+ 1121 01bc 5F5F7569 		.ascii	"__uint16_t\000"
+ 1121      6E743136 
+ 1121      5F7400
+ 1122              	.LASF29:
+ 1123 01c7 6D696E75 		.ascii	"minutter\000"
+ 1123      74746572 
+ 1123      00
+ 1124              	.LASF41:
+ 1125 01d0 73746F70 		.ascii	"stop_counter\000"
+ 1125      5F636F75 
+ 1125      6E746572 
+ 1125      00
+ 1126              	.LASF24:
+ 1127 01dd 73746F70 		.ascii	"stopTidsTagning\000"
+ 1127      54696473 
+ 1127      5461676E 
+ 1127      696E6700 
+ 1128              	.LASF10:
+ 1129 01ed 5F5F7569 		.ascii	"__uint32_t\000"
+ 1129      6E743332 
+ 1129      5F7400
+ 1130              	.LASF17:
+ 1131 01f8 75696E74 		.ascii	"uint16\000"
+ 1131      313600
+ 1132              	.LASF18:
+ 1133 01ff 75696E74 		.ascii	"uint32\000"
+ 1133      333200
+ 1134              	.LASF1:
+ 1135 0206 756E7369 		.ascii	"unsigned int\000"
+ 1135      676E6564 
+ 1135      20696E74 
+ 1135      00
+ 1136              	.LASF0:
+ 1137 0213 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1137      206C6F6E 
+ 1137      6720756E 
+ 1137      7369676E 
+ 1137      65642069 
+ 1138              	.LASF13:
+ 1139 022a 75696E74 		.ascii	"uint8_t\000"
+ 1139      385F7400 
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc6bGFxi.s 			page 24
 
 
- 1138      20696E74 
- 1138      00
- 1139              	.LASF0:
- 1140 0256 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1140      206C6F6E 
- 1140      6720756E 
- 1140      7369676E 
- 1140      65642069 
- 1141              	.LASF13:
- 1142 026d 75696E74 		.ascii	"uint8_t\000"
- 1142      385F7400 
+ 1140              	.LASF50:
+ 1141 0232 433A5C55 		.ascii	"C:\\Users\\jespe\\OneDrive\\Dokumenter\\GitHub\\B-C"
+ 1141      73657273 
+ 1141      5C6A6573 
+ 1141      70655C4F 
+ 1141      6E654472 
+ 1142 025f 41435C53 		.ascii	"AC\\SPI_virker\\SPI_virker\\Design01.cydsn\000"
+ 1142      50495F76 
+ 1142      69726B65 
+ 1142      725C5350 
+ 1142      495F7669 
  1143              	.LASF15:
- 1144 0275 696E7433 		.ascii	"int32_t\000"
+ 1144 0287 696E7433 		.ascii	"int32_t\000"
  1144      325F7400 
  1145              	.LASF31:
- 1146 027d 636F6E76 		.ascii	"convertMillisekunder\000"
+ 1146 028f 636F6E76 		.ascii	"convertMillisekunder\000"
  1146      6572744D 
  1146      696C6C69 
  1146      73656B75 
  1146      6E646572 
  1147              	.LASF23:
- 1148 0292 73697A65 		.ascii	"sizetype\000"
+ 1148 02a4 73697A65 		.ascii	"sizetype\000"
  1148      74797065 
  1148      00
  1149              	.LASF12:
- 1150 029b 6C6F6E67 		.ascii	"long long int\000"
+ 1150 02ad 6C6F6E67 		.ascii	"long long int\000"
  1150      206C6F6E 
  1150      6720696E 
  1150      7400
  1151              	.LASF21:
- 1152 02a9 63686172 		.ascii	"char\000"
+ 1152 02bb 63686172 		.ascii	"char\000"
  1152      00
  1153              	.LASF45:
- 1154 02ae 54696D65 		.ascii	"Timer_1_ReadCounter\000"
+ 1154 02c0 54696D65 		.ascii	"Timer_1_ReadCounter\000"
  1154      725F315F 
  1154      52656164 
  1154      436F756E 
  1154      74657200 
  1155              	.LASF40:
- 1156 02c2 73746172 		.ascii	"start_counter\000"
+ 1156 02d4 73746172 		.ascii	"start_counter\000"
  1156      745F636F 
  1156      756E7465 
  1156      7200
  1157              	.LASF4:
- 1158 02d0 73686F72 		.ascii	"short int\000"
+ 1158 02e2 73686F72 		.ascii	"short int\000"
  1158      7420696E 
  1158      7400
  1159              	.LASF14:
- 1160 02da 75696E74 		.ascii	"uint16_t\000"
+ 1160 02ec 75696E74 		.ascii	"uint16_t\000"
  1160      31365F74 
  1160      00
  1161              	.LASF51:
- 1162 02e3 73746172 		.ascii	"startTidsTagning\000"
+ 1162 02f5 73746172 		.ascii	"startTidsTagning\000"
  1162      74546964 
  1162      73546167 
  1162      6E696E67 
  1162      00
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\cc3nT3uV.s 			page 25
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cc6bGFxi.s 			page 25
 
 
  1163              	.LASF16:
- 1164 02f4 75696E74 		.ascii	"uint32_t\000"
+ 1164 0306 75696E74 		.ascii	"uint32_t\000"
  1164      33325F74 
  1164      00
  1165              	.LASF9:
- 1166 02fd 6C6F6E67 		.ascii	"long int\000"
+ 1166 030f 6C6F6E67 		.ascii	"long int\000"
  1166      20696E74 
  1166      00
  1167              	.LASF22:
- 1168 0306 6C6F6E67 		.ascii	"long double\000"
+ 1168 0318 6C6F6E67 		.ascii	"long double\000"
  1168      20646F75 
  1168      626C6500 
  1169              	.LASF2:
- 1170 0312 7369676E 		.ascii	"signed char\000"
+ 1170 0324 7369676E 		.ascii	"signed char\000"
  1170      65642063 
  1170      68617200 
  1171              	.LASF46:
- 1172 031e 54696D65 		.ascii	"Timer_1_Stop\000"
+ 1172 0330 54696D65 		.ascii	"Timer_1_Stop\000"
  1172      725F315F 
  1172      53746F70 
  1172      00

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 1
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccdIQTpe.s 			page 1
 
 
    1              		.syntax unified
@@ -47,28 +47,25 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 1
   17:Loadcell.c    **** float zeroDriftOffset=0;
   18:Loadcell.c    **** 
   19:Loadcell.c    **** 
-  20:Loadcell.c    **** 
-  21:Loadcell.c    **** 
-  22:Loadcell.c    **** 
-  23:Loadcell.c    **** void initLoadcell(void)
-  24:Loadcell.c    **** {
-  28              		.loc 1 24 0
+  20:Loadcell.c    **** void initLoadcell(void)
+  21:Loadcell.c    **** {
+  28              		.loc 1 21 0
   29              		.cfi_startproc
   30              		@ args = 0, pretend = 0, frame = 0
   31              		@ frame_needed = 0, uses_anonymous_args = 0
   32 0000 08B5     		push	{r3, lr}
   33              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 2
-
-
   34              		.cfi_offset 3, -8
   35              		.cfi_offset 14, -4
-  25:Loadcell.c    ****     ADC_SAR_1_Start();
-  36              		.loc 1 25 0
+  22:Loadcell.c    ****     ADC_SAR_1_Start();
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccdIQTpe.s 			page 2
+
+
+  36              		.loc 1 22 0
   37 0002 FFF7FEFF 		bl	ADC_SAR_1_Start
   38              	.LVL0:
-  26:Loadcell.c    ****     ADC_SAR_1_StartConvert();
-  39              		.loc 1 26 0
+  23:Loadcell.c    ****     ADC_SAR_1_StartConvert();
+  39              		.loc 1 23 0
   40 0006 FFF7FEFF 		bl	ADC_SAR_1_StartConvert
   41              	.LVL1:
   42 000a 08BD     		pop	{r3, pc}
@@ -87,13 +84,13 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 1
   55              		.type	offset_Zerodrift_calibrate, %function
   56              	offset_Zerodrift_calibrate:
   57              	.LFB65:
-  27:Loadcell.c    **** }
-  28:Loadcell.c    **** 
-  29:Loadcell.c    **** 
-  30:Loadcell.c    **** 
-  31:Loadcell.c    **** void offset_Zerodrift_calibrate(uint8_t repeats, float startoffset, float factor,uint8_t preload)
-  32:Loadcell.c    **** {
-  58              		.loc 1 32 0
+  24:Loadcell.c    **** }
+  25:Loadcell.c    **** 
+  26:Loadcell.c    **** 
+  27:Loadcell.c    **** 
+  28:Loadcell.c    **** void offset_Zerodrift_calibrate(uint8_t repeats, float startoffset, float factor,uint8_t preload)
+  29:Loadcell.c    **** {
+  58              		.loc 1 29 0
   59              		.cfi_startproc
   60              		@ args = 0, pretend = 0, frame = 8
   61              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -117,13 +114,13 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 1
   79 000a 8A46     		mov	r10, r1
   80 000c 9146     		mov	r9, r2
   81 000e 7B60     		str	r3, [r7, #4]
-  33:Loadcell.c    ****    float result_array[repeats];
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 3
-
-
-  82              		.loc 1 33 0
+  30:Loadcell.c    ****    float result_array[repeats];
+  82              		.loc 1 30 0
   83 0010 0546     		mov	r5, r0
   84              	.LVL3:
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccdIQTpe.s 			page 3
+
+
   85 0012 8300     		lsls	r3, r0, #2
   86              	.LVL4:
   87 0014 0A33     		adds	r3, r3, #10
@@ -131,60 +128,60 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 1
   89 001a ADEB030D 		sub	sp, sp, r3
   90 001e EB46     		mov	fp, sp
   91              	.LVL5:
-  34:Loadcell.c    ****     float result_gram;
-  35:Loadcell.c    ****     float result=0;
-  36:Loadcell.c    ****     
-  37:Loadcell.c    ****     int i=0;
-  92              		.loc 1 37 0
+  31:Loadcell.c    ****     float result_gram;
+  32:Loadcell.c    ****     float result=0;
+  33:Loadcell.c    ****     
+  34:Loadcell.c    ****     int i=0;
+  92              		.loc 1 34 0
   93 0020 0024     		movs	r4, #0
-  35:Loadcell.c    ****     
-  94              		.loc 1 35 0
+  32:Loadcell.c    ****     
+  94              		.loc 1 32 0
   95 0022 4FF00008 		mov	r8, #0
-  38:Loadcell.c    ****             while(i<repeats)
-  96              		.loc 1 38 0
+  35:Loadcell.c    ****             while(i<repeats)
+  96              		.loc 1 35 0
   97 0026 0FE0     		b	.L5
   98              	.LVL6:
   99              	.L6:
-  39:Loadcell.c    ****             {
-  40:Loadcell.c    ****                 if (ADC_SAR_1_IsEndConversion(ADC_SAR_1_WAIT_FOR_RESULT))
- 100              		.loc 1 40 0
+  36:Loadcell.c    ****             {
+  37:Loadcell.c    ****                 if (ADC_SAR_1_IsEndConversion(ADC_SAR_1_WAIT_FOR_RESULT))
+ 100              		.loc 1 37 0
  101 0028 0020     		movs	r0, #0
  102 002a FFF7FEFF 		bl	ADC_SAR_1_IsEndConversion
  103              	.LVL7:
  104 002e 58B1     		cbz	r0, .L5
-  41:Loadcell.c    ****                 {
-  42:Loadcell.c    ****                 result_array[i]=ADC_SAR_1_GetResult16();
- 105              		.loc 1 42 0
+  38:Loadcell.c    ****                 {
+  39:Loadcell.c    ****                 result_array[i]=ADC_SAR_1_GetResult16();
+ 105              		.loc 1 39 0
  106 0030 FFF7FEFF 		bl	ADC_SAR_1_GetResult16
  107              	.LVL8:
  108 0034 FFF7FEFF 		bl	__aeabi_i2f
  109              	.LVL9:
  110 0038 0146     		mov	r1, r0
  111 003a 4BF82400 		str	r0, [fp, r4, lsl #2]	@ float
-  43:Loadcell.c    ****                 result+=result_array[i];
- 112              		.loc 1 43 0
+  40:Loadcell.c    ****                 result+=result_array[i];
+ 112              		.loc 1 40 0
  113 003e 4046     		mov	r0, r8
  114 0040 FFF7FEFF 		bl	__aeabi_fadd
  115              	.LVL10:
  116 0044 8046     		mov	r8, r0
  117              	.LVL11:
-  44:Loadcell.c    ****                 i++;
- 118              		.loc 1 44 0
+  41:Loadcell.c    ****                 i++;
+ 118              		.loc 1 41 0
  119 0046 0134     		adds	r4, r4, #1
  120              	.LVL12:
  121              	.L5:
-  38:Loadcell.c    ****             {
- 122              		.loc 1 38 0
+  35:Loadcell.c    ****             {
+ 122              		.loc 1 35 0
  123 0048 AC42     		cmp	r4, r5
  124 004a EDDB     		blt	.L6
-  45:Loadcell.c    ****                 }
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 4
+  42:Loadcell.c    ****                 }
+  43:Loadcell.c    ****             }
+  44:Loadcell.c    ****             
+  45:Loadcell.c    ****     result=result/repeats; 
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccdIQTpe.s 			page 4
 
 
-  46:Loadcell.c    ****             }
-  47:Loadcell.c    ****             
-  48:Loadcell.c    ****     result=result/repeats; 
- 125              		.loc 1 48 0
+ 125              		.loc 1 45 0
  126 004c 3046     		mov	r0, r6
  127 004e FFF7FEFF 		bl	__aeabi_i2f
  128              	.LVL13:
@@ -192,8 +189,8 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 1
  130 0054 4046     		mov	r0, r8
  131 0056 FFF7FEFF 		bl	__aeabi_fdiv
  132              	.LVL14:
-  49:Loadcell.c    ****     result_gram = (((float)result-startoffset)/factor); // Konvertering til gram
- 133              		.loc 1 49 0
+  46:Loadcell.c    ****     result_gram = (((float)result-startoffset)/factor); // Konvertering til gram
+ 133              		.loc 1 46 0
  134 005a 5146     		mov	r1, r10
  135 005c FFF7FEFF 		bl	__aeabi_fsub
  136              	.LVL15:
@@ -202,8 +199,8 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 1
  139              	.LVL16:
  140 0066 0446     		mov	r4, r0
  141              	.LVL17:
-  50:Loadcell.c    ****     zeroDriftOffset= result_gram-preload;
- 142              		.loc 1 50 0
+  47:Loadcell.c    ****     zeroDriftOffset= result_gram-preload;
+ 142              		.loc 1 47 0
  143 0068 7868     		ldr	r0, [r7, #4]
  144              	.LVL18:
  145 006a FFF7FEFF 		bl	__aeabi_i2f
@@ -214,8 +211,8 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 1
  150              	.LVL20:
  151 0076 034B     		ldr	r3, .L8
  152 0078 1860     		str	r0, [r3]	@ float
-  51:Loadcell.c    **** }
- 153              		.loc 1 51 0
+  48:Loadcell.c    **** }
+ 153              		.loc 1 48 0
  154 007a 0C37     		adds	r7, r7, #12
  155              		.cfi_def_cfa_offset 36
  156 007c BD46     		mov	sp, r7
@@ -238,14 +235,14 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 1
  173              		.thumb
  174              		.thumb_func
  175              		.type	wait_for_weight, %function
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 5
-
-
  176              	wait_for_weight:
  177              	.LFB66:
-  52:Loadcell.c    **** void wait_for_weight(float startoffset, float factor,uint8_t preload)
-  53:Loadcell.c    **** {
- 178              		.loc 1 53 0
+  49:Loadcell.c    **** void wait_for_weight(float startoffset, float factor,uint8_t preload)
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccdIQTpe.s 			page 5
+
+
+  50:Loadcell.c    **** {
+ 178              		.loc 1 50 0
  179              		.cfi_startproc
  180              		@ args = 0, pretend = 0, frame = 0
  181              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -261,27 +258,27 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 1
  191 0002 0746     		mov	r7, r0
  192 0004 0E46     		mov	r6, r1
  193 0006 1546     		mov	r5, r2
-  54:Loadcell.c    ****     float result_gram;
-  55:Loadcell.c    ****     while(result_gram<200)
- 194              		.loc 1 55 0
+  51:Loadcell.c    ****     float result_gram;
+  52:Loadcell.c    ****     while(result_gram<200)
+ 194              		.loc 1 52 0
  195 0008 1BE0     		b	.L12
  196              	.LVL23:
  197              	.L13:
-  56:Loadcell.c    ****     {
-  57:Loadcell.c    ****     if (ADC_SAR_1_IsEndConversion(ADC_SAR_1_WAIT_FOR_RESULT))
- 198              		.loc 1 57 0
+  53:Loadcell.c    ****     {
+  54:Loadcell.c    ****     if (ADC_SAR_1_IsEndConversion(ADC_SAR_1_WAIT_FOR_RESULT))
+ 198              		.loc 1 54 0
  199 000a 0020     		movs	r0, #0
  200 000c FFF7FEFF 		bl	ADC_SAR_1_IsEndConversion
  201              	.LVL24:
  202 0010 B8B1     		cbz	r0, .L12
  203              	.LBB2:
-  58:Loadcell.c    ****         {
-  59:Loadcell.c    ****             uint16_t result = ADC_SAR_1_GetResult16(); // << NOTE! This is NOT a voltage or a weigh
- 204              		.loc 1 59 0
+  55:Loadcell.c    ****         {
+  56:Loadcell.c    ****             uint16_t result = ADC_SAR_1_GetResult16(); // << NOTE! This is NOT a voltage or a weigh
+ 204              		.loc 1 56 0
  205 0012 FFF7FEFF 		bl	ADC_SAR_1_GetResult16
  206              	.LVL25:
-  60:Loadcell.c    ****             result_gram = (((float)result-startoffset)/factor); // Konvertering til gram
- 207              		.loc 1 60 0
+  57:Loadcell.c    ****             result_gram = (((float)result-startoffset)/factor); // Konvertering til gram
+ 207              		.loc 1 57 0
  208 0016 80B2     		uxth	r0, r0
  209 0018 FFF7FEFF 		bl	__aeabi_ui2f
  210              	.LVL26:
@@ -291,19 +288,19 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 1
  214 0022 3146     		mov	r1, r6
  215 0024 FFF7FEFF 		bl	__aeabi_fdiv
  216              	.LVL28:
-  61:Loadcell.c    ****             result_gram -=zeroDriftOffset;
- 217              		.loc 1 61 0
+  58:Loadcell.c    ****             result_gram -=zeroDriftOffset;
+ 217              		.loc 1 58 0
  218 0028 094B     		ldr	r3, .L15
  219 002a 1968     		ldr	r1, [r3]	@ float
  220 002c FFF7FEFF 		bl	__aeabi_fsub
  221              	.LVL29:
  222 0030 0446     		mov	r4, r0
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 6
-
-
  223              	.LVL30:
-  62:Loadcell.c    ****             result_gram -=preload;
- 224              		.loc 1 62 0
+  59:Loadcell.c    ****             result_gram -=preload;
+ 224              		.loc 1 59 0
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccdIQTpe.s 			page 6
+
+
  225 0032 2846     		mov	r0, r5
  226              	.LVL31:
  227 0034 FFF7FEFF 		bl	__aeabi_i2f
@@ -316,18 +313,18 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 1
  234              	.LVL34:
  235              	.L12:
  236              	.LBE2:
-  55:Loadcell.c    ****     {
- 237              		.loc 1 55 0
+  52:Loadcell.c    ****     {
+ 237              		.loc 1 52 0
  238 0042 0449     		ldr	r1, .L15+4
  239 0044 2046     		mov	r0, r4
  240 0046 FFF7FEFF 		bl	__aeabi_fcmplt
  241              	.LVL35:
  242 004a 0028     		cmp	r0, #0
  243 004c DDD1     		bne	.L13
-  63:Loadcell.c    ****         }
-  64:Loadcell.c    ****     }
-  65:Loadcell.c    **** }
- 244              		.loc 1 65 0
+  60:Loadcell.c    ****         }
+  61:Loadcell.c    ****     }
+  62:Loadcell.c    **** }
+ 244              		.loc 1 62 0
  245 004e F8BD     		pop	{r3, r4, r5, r6, r7, pc}
  246              	.LVL36:
  247              	.L16:
@@ -346,10 +343,10 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 1
  260              		.type	readWeight, %function
  261              	readWeight:
  262              	.LFB67:
-  66:Loadcell.c    **** 
-  67:Loadcell.c    **** float readWeight(uint8_t repeats,float startoffset, float factor,uint8_t preload)
-  68:Loadcell.c    **** {
- 263              		.loc 1 68 0
+  63:Loadcell.c    **** 
+  64:Loadcell.c    **** float readWeight(uint8_t repeats,float startoffset, float factor,uint8_t preload)
+  65:Loadcell.c    **** {
+ 263              		.loc 1 65 0
  264              		.cfi_startproc
  265              		@ args = 0, pretend = 0, frame = 8
  266              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -358,12 +355,12 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 1
  269              		.cfi_def_cfa_offset 36
  270              		.cfi_offset 4, -36
  271              		.cfi_offset 5, -32
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 7
-
-
  272              		.cfi_offset 6, -28
  273              		.cfi_offset 7, -24
  274              		.cfi_offset 8, -20
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccdIQTpe.s 			page 7
+
+
  275              		.cfi_offset 9, -16
  276              		.cfi_offset 10, -12
  277              		.cfi_offset 11, -8
@@ -377,9 +374,9 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 1
  285 000c 9146     		mov	r9, r2
  286 000e 7B60     		str	r3, [r7, #4]
  287              	.LVL38:
-  69:Loadcell.c    ****     uint8_t repeating = repeats;
-  70:Loadcell.c    ****     float result_array[repeating];
- 288              		.loc 1 70 0
+  66:Loadcell.c    ****     uint8_t repeating = repeats;
+  67:Loadcell.c    ****     float result_array[repeating];
+ 288              		.loc 1 67 0
  289 0010 0546     		mov	r5, r0
  290              	.LVL39:
  291 0012 8300     		lsls	r3, r0, #2
@@ -389,61 +386,61 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 1
  295 001a ADEB030D 		sub	sp, sp, r3
  296 001e EB46     		mov	fp, sp
  297              	.LVL41:
-  71:Loadcell.c    ****     float result_gram;
-  72:Loadcell.c    ****     float result=0;
-  73:Loadcell.c    ****     
-  74:Loadcell.c    ****     int i=0;
- 298              		.loc 1 74 0
+  68:Loadcell.c    ****     float result_gram;
+  69:Loadcell.c    ****     float result=0;
+  70:Loadcell.c    ****     
+  71:Loadcell.c    ****     int i=0;
+ 298              		.loc 1 71 0
  299 0020 0024     		movs	r4, #0
-  72:Loadcell.c    ****     
- 300              		.loc 1 72 0
+  69:Loadcell.c    ****     
+ 300              		.loc 1 69 0
  301 0022 4FF00008 		mov	r8, #0
-  75:Loadcell.c    ****             while(i<repeating)
- 302              		.loc 1 75 0
+  72:Loadcell.c    ****             while(i<repeating)
+ 302              		.loc 1 72 0
  303 0026 0FE0     		b	.L19
  304              	.LVL42:
  305              	.L20:
-  76:Loadcell.c    ****             {
-  77:Loadcell.c    ****                 if (ADC_SAR_1_IsEndConversion(ADC_SAR_1_WAIT_FOR_RESULT))
- 306              		.loc 1 77 0
+  73:Loadcell.c    ****             {
+  74:Loadcell.c    ****                 if (ADC_SAR_1_IsEndConversion(ADC_SAR_1_WAIT_FOR_RESULT))
+ 306              		.loc 1 74 0
  307 0028 0020     		movs	r0, #0
  308 002a FFF7FEFF 		bl	ADC_SAR_1_IsEndConversion
  309              	.LVL43:
  310 002e 58B1     		cbz	r0, .L19
-  78:Loadcell.c    ****                 {
-  79:Loadcell.c    ****                 result_array[i]=ADC_SAR_1_GetResult16();
- 311              		.loc 1 79 0
+  75:Loadcell.c    ****                 {
+  76:Loadcell.c    ****                 result_array[i]=ADC_SAR_1_GetResult16();
+ 311              		.loc 1 76 0
  312 0030 FFF7FEFF 		bl	ADC_SAR_1_GetResult16
  313              	.LVL44:
  314 0034 FFF7FEFF 		bl	__aeabi_i2f
  315              	.LVL45:
  316 0038 0146     		mov	r1, r0
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 8
-
-
  317 003a 4BF82400 		str	r0, [fp, r4, lsl #2]	@ float
-  80:Loadcell.c    ****                 result+=result_array[i];
- 318              		.loc 1 80 0
+  77:Loadcell.c    ****                 result+=result_array[i];
+ 318              		.loc 1 77 0
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccdIQTpe.s 			page 8
+
+
  319 003e 4046     		mov	r0, r8
  320 0040 FFF7FEFF 		bl	__aeabi_fadd
  321              	.LVL46:
  322 0044 8046     		mov	r8, r0
  323              	.LVL47:
-  81:Loadcell.c    ****                 i++;
- 324              		.loc 1 81 0
+  78:Loadcell.c    ****                 i++;
+ 324              		.loc 1 78 0
  325 0046 0134     		adds	r4, r4, #1
  326              	.LVL48:
  327              	.L19:
-  75:Loadcell.c    ****             {
- 328              		.loc 1 75 0
+  72:Loadcell.c    ****             {
+ 328              		.loc 1 72 0
  329 0048 AC42     		cmp	r4, r5
  330 004a EDDB     		blt	.L20
-  82:Loadcell.c    ****                 }
-  83:Loadcell.c    ****                 
-  84:Loadcell.c    ****             }
-  85:Loadcell.c    ****             
-  86:Loadcell.c    ****             result=result/repeating; 
- 331              		.loc 1 86 0
+  79:Loadcell.c    ****                 }
+  80:Loadcell.c    ****                 
+  81:Loadcell.c    ****             }
+  82:Loadcell.c    ****             
+  83:Loadcell.c    ****             result=result/repeating; 
+ 331              		.loc 1 83 0
  332 004c 3046     		mov	r0, r6
  333 004e FFF7FEFF 		bl	__aeabi_i2f
  334              	.LVL49:
@@ -451,17 +448,17 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 1
  336 0054 4046     		mov	r0, r8
  337 0056 FFF7FEFF 		bl	__aeabi_fdiv
  338              	.LVL50:
-  87:Loadcell.c    ****             result_gram = (((float)result-startoffset)/factor); // Konvertering til gram
- 339              		.loc 1 87 0
+  84:Loadcell.c    ****             result_gram = (((float)result-startoffset)/factor); // Konvertering til gram
+ 339              		.loc 1 84 0
  340 005a 5146     		mov	r1, r10
  341 005c FFF7FEFF 		bl	__aeabi_fsub
  342              	.LVL51:
  343 0060 4946     		mov	r1, r9
  344 0062 FFF7FEFF 		bl	__aeabi_fdiv
  345              	.LVL52:
-  88:Loadcell.c    ****             
-  89:Loadcell.c    ****     return result_gram-zeroDriftOffset-(float)preload;
- 346              		.loc 1 89 0
+  85:Loadcell.c    ****             
+  86:Loadcell.c    ****     return result_gram-zeroDriftOffset-(float)preload;
+ 346              		.loc 1 86 0
  347 0066 084B     		ldr	r3, .L22
  348 0068 1968     		ldr	r1, [r3]	@ float
  349 006a FFF7FEFF 		bl	__aeabi_fsub
@@ -475,15 +472,15 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 1
  357 0078 2046     		mov	r0, r4
  358 007a FFF7FEFF 		bl	__aeabi_fsub
  359              	.LVL56:
-  90:Loadcell.c    **** }
- 360              		.loc 1 90 0
+  87:Loadcell.c    **** }
+ 360              		.loc 1 87 0
  361 007e 0C37     		adds	r7, r7, #12
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 9
-
-
  362              		.cfi_def_cfa_offset 36
  363 0080 BD46     		mov	sp, r7
  364              		.cfi_def_cfa_register 13
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccdIQTpe.s 			page 9
+
+
  365              		@ sp needed
  366 0082 BDE8F08F 		pop	{r4, r5, r6, r7, r8, r9, r10, fp, pc}
  367              	.LVL57:
@@ -515,21 +512,21 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 1
  393 0006 00000000 		.4byte	.Ldebug_abbrev0
  394 000a 04       		.byte	0x4
  395 000b 01       		.uleb128 0x1
- 396 000c F3000000 		.4byte	.LASF37
+ 396 000c B0000000 		.4byte	.LASF37
  397 0010 0C       		.byte	0xc
- 398 0011 5C020000 		.4byte	.LASF38
- 399 0015 62000000 		.4byte	.LASF39
+ 398 0011 6E020000 		.4byte	.LASF38
+ 399 0015 DF010000 		.4byte	.LASF39
  400 0019 00000000 		.4byte	.Ldebug_ranges0+0
  401 001d 00000000 		.4byte	0
  402 0021 00000000 		.4byte	.Ldebug_line0
  403 0025 02       		.uleb128 0x2
  404 0026 04       		.byte	0x4
  405 0027 04       		.byte	0x4
- 406 0028 BA000000 		.4byte	.LASF0
+ 406 0028 77000000 		.4byte	.LASF0
  407 002c 02       		.uleb128 0x2
  408 002d 01       		.byte	0x1
  409 002e 06       		.byte	0x6
- 410 002f 97020000 		.4byte	.LASF1
+ 410 002f A9020000 		.4byte	.LASF1
  411 0033 03       		.uleb128 0x3
  412 0034 08000000 		.4byte	.LASF4
  413 0038 02       		.byte	0x2
@@ -538,16 +535,16 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 1
  416 003e 02       		.uleb128 0x2
  417 003f 01       		.byte	0x1
  418 0040 08       		.byte	0x8
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 10
-
-
- 419 0041 B7010000 		.4byte	.LASF2
+ 419 0041 74010000 		.4byte	.LASF2
  420 0045 02       		.uleb128 0x2
  421 0046 02       		.byte	0x2
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccdIQTpe.s 			page 10
+
+
  422 0047 05       		.byte	0x5
- 423 0048 67020000 		.4byte	.LASF3
+ 423 0048 79020000 		.4byte	.LASF3
  424 004c 03       		.uleb128 0x3
- 425 004d C5010000 		.4byte	.LASF5
+ 425 004d 82010000 		.4byte	.LASF5
  426 0051 02       		.byte	0x2
  427 0052 2B       		.byte	0x2b
  428 0053 57000000 		.4byte	0x57
@@ -563,19 +560,19 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 1
  438 0069 02       		.uleb128 0x2
  439 006a 04       		.byte	0x4
  440 006b 05       		.byte	0x5
- 441 006c 7A020000 		.4byte	.LASF8
+ 441 006c 8C020000 		.4byte	.LASF8
  442 0070 02       		.uleb128 0x2
  443 0071 04       		.byte	0x4
  444 0072 07       		.byte	0x7
- 445 0073 81010000 		.4byte	.LASF9
+ 445 0073 3E010000 		.4byte	.LASF9
  446 0077 02       		.uleb128 0x2
  447 0078 08       		.byte	0x8
  448 0079 05       		.byte	0x5
- 449 007a 49020000 		.4byte	.LASF10
+ 449 007a 5B020000 		.4byte	.LASF10
  450 007e 02       		.uleb128 0x2
  451 007f 08       		.byte	0x8
  452 0080 07       		.byte	0x7
- 453 0081 F8010000 		.4byte	.LASF11
+ 453 0081 B5010000 		.4byte	.LASF11
  454 0085 04       		.uleb128 0x4
  455 0086 04       		.byte	0x4
  456 0087 05       		.byte	0x5
@@ -583,45 +580,45 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 1
  458 008c 02       		.uleb128 0x2
  459 008d 04       		.byte	0x4
  460 008e 07       		.byte	0x7
- 461 008f EB010000 		.4byte	.LASF12
+ 461 008f A8010000 		.4byte	.LASF12
  462 0093 03       		.uleb128 0x3
  463 0094 5A000000 		.4byte	.LASF13
  464 0098 03       		.byte	0x3
  465 0099 18       		.byte	0x18
  466 009a 33000000 		.4byte	0x33
  467 009e 03       		.uleb128 0x3
- 468 009f 71020000 		.4byte	.LASF14
+ 468 009f 83020000 		.4byte	.LASF14
  469 00a3 03       		.byte	0x3
  470 00a4 24       		.byte	0x24
  471 00a5 4C000000 		.4byte	0x4c
  472 00a9 03       		.uleb128 0x3
- 473 00aa 22020000 		.4byte	.LASF15
+ 473 00aa 34020000 		.4byte	.LASF15
  474 00ae 03       		.byte	0x3
  475 00af 2C       		.byte	0x2c
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 11
-
-
  476 00b0 5E000000 		.4byte	0x5e
  477 00b4 02       		.uleb128 0x2
  478 00b5 08       		.byte	0x8
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccdIQTpe.s 			page 11
+
+
  479 00b6 04       		.byte	0x4
- 480 00b7 D0010000 		.4byte	.LASF16
+ 480 00b7 8D010000 		.4byte	.LASF16
  481 00bb 02       		.uleb128 0x2
  482 00bc 01       		.byte	0x1
  483 00bd 08       		.byte	0x8
- 484 00be 57020000 		.4byte	.LASF17
+ 484 00be 69020000 		.4byte	.LASF17
  485 00c2 02       		.uleb128 0x2
  486 00c3 08       		.byte	0x8
  487 00c4 04       		.byte	0x4
- 488 00c5 8B020000 		.4byte	.LASF18
+ 488 00c5 9D020000 		.4byte	.LASF18
  489 00c9 02       		.uleb128 0x2
  490 00ca 04       		.byte	0x4
  491 00cb 07       		.byte	0x7
- 492 00cc 2A020000 		.4byte	.LASF19
+ 492 00cc 3C020000 		.4byte	.LASF19
  493 00d0 05       		.uleb128 0x5
- 494 00d1 DE010000 		.4byte	.LASF20
+ 494 00d1 9B010000 		.4byte	.LASF20
  495 00d5 01       		.byte	0x1
- 496 00d6 17       		.byte	0x17
+ 496 00d6 14       		.byte	0x14
  497 00d7 00000000 		.4byte	.LFB64
  498 00db 0C000000 		.4byte	.LFE64-.LFB64
  499 00df 01       		.uleb128 0x1
@@ -637,64 +634,64 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 1
  509 00f8 07       		.uleb128 0x7
  510 00f9 12000000 		.4byte	.LASF21
  511 00fd 01       		.byte	0x1
- 512 00fe 1F       		.byte	0x1f
+ 512 00fe 1C       		.byte	0x1c
  513 00ff 00000000 		.4byte	.LFB65
  514 0103 88000000 		.4byte	.LFE65-.LFB65
  515 0107 01       		.uleb128 0x1
  516 0108 9C       		.byte	0x9c
  517 0109 A9010000 		.4byte	0x1a9
  518 010d 08       		.uleb128 0x8
- 519 010e 83020000 		.4byte	.LASF22
+ 519 010e 95020000 		.4byte	.LASF22
  520 0112 01       		.byte	0x1
- 521 0113 1F       		.byte	0x1f
+ 521 0113 1C       		.byte	0x1c
  522 0114 93000000 		.4byte	0x93
  523 0118 00000000 		.4byte	.LLST0
  524 011c 08       		.uleb128 0x8
- 525 011d 0F020000 		.4byte	.LASF23
+ 525 011d CC010000 		.4byte	.LASF23
  526 0121 01       		.byte	0x1
- 527 0122 1F       		.byte	0x1f
+ 527 0122 1C       		.byte	0x1c
  528 0123 25000000 		.4byte	0x25
  529 0127 21000000 		.4byte	.LLST1
  530 012b 08       		.uleb128 0x8
- 531 012c D7010000 		.4byte	.LASF24
+ 531 012c 94010000 		.4byte	.LASF24
  532 0130 01       		.byte	0x1
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 12
-
-
- 533 0131 1F       		.byte	0x1f
+ 533 0131 1C       		.byte	0x1c
  534 0132 25000000 		.4byte	0x25
  535 0136 4F000000 		.4byte	.LLST2
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccdIQTpe.s 			page 12
+
+
  536 013a 08       		.uleb128 0x8
  537 013b 00000000 		.4byte	.LASF25
  538 013f 01       		.byte	0x1
- 539 0140 1F       		.byte	0x1f
+ 539 0140 1C       		.byte	0x1c
  540 0141 93000000 		.4byte	0x93
  541 0145 7D000000 		.4byte	.LLST3
  542 0149 09       		.uleb128 0x9
  543 014a BC010000 		.4byte	0x1bc
  544 014e 9E000000 		.4byte	.LLST4
  545 0152 0A       		.uleb128 0xa
- 546 0153 E6000000 		.4byte	.LASF26
+ 546 0153 A3000000 		.4byte	.LASF26
  547 0157 01       		.byte	0x1
- 548 0158 21       		.byte	0x21
+ 548 0158 1E       		.byte	0x1e
  549 0159 A9010000 		.4byte	0x1a9
  550 015d C0000000 		.4byte	.LLST5
  551 0161 0A       		.uleb128 0xa
- 552 0162 DA000000 		.4byte	.LASF27
+ 552 0162 97000000 		.4byte	.LASF27
  553 0166 01       		.byte	0x1
- 554 0167 22       		.byte	0x22
+ 554 0167 1F       		.byte	0x1f
  555 0168 25000000 		.4byte	0x25
  556 016c D4000000 		.4byte	.LLST6
  557 0170 0A       		.uleb128 0xa
- 558 0171 1B020000 		.4byte	.LASF28
+ 558 0171 D8010000 		.4byte	.LASF28
  559 0175 01       		.byte	0x1
- 560 0176 23       		.byte	0x23
+ 560 0176 20       		.byte	0x20
  561 0177 25000000 		.4byte	0x25
  562 017b F2000000 		.4byte	.LLST7
  563 017f 0B       		.uleb128 0xb
  564 0180 6900     		.ascii	"i\000"
  565 0182 01       		.byte	0x1
- 566 0183 25       		.byte	0x25
+ 566 0183 22       		.byte	0x22
  567 0184 85000000 		.4byte	0x85
  568 0188 36010000 		.4byte	.LLST8
  569 018c 0C       		.uleb128 0xc
@@ -718,42 +715,42 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 1
  587 01b3 C9000000 		.4byte	0xc9
  588 01b7 49010000 		.4byte	0x149
  589 01bb 00       		.byte	0
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 13
-
-
  590 01bc 10       		.uleb128 0x10
  591 01bd C9000000 		.4byte	0xc9
  592 01c1 07       		.uleb128 0x7
- 593 01c2 B3020000 		.4byte	.LASF29
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccdIQTpe.s 			page 13
+
+
+ 593 01c2 C5020000 		.4byte	.LASF29
  594 01c6 01       		.byte	0x1
- 595 01c7 34       		.byte	0x34
+ 595 01c7 31       		.byte	0x31
  596 01c8 00000000 		.4byte	.LFB66
  597 01cc 58000000 		.4byte	.LFE66-.LFB66
  598 01d0 01       		.uleb128 0x1
  599 01d1 9C       		.byte	0x9c
  600 01d2 48020000 		.4byte	0x248
  601 01d6 08       		.uleb128 0x8
- 602 01d7 0F020000 		.4byte	.LASF23
+ 602 01d7 CC010000 		.4byte	.LASF23
  603 01db 01       		.byte	0x1
- 604 01dc 34       		.byte	0x34
+ 604 01dc 31       		.byte	0x31
  605 01dd 25000000 		.4byte	0x25
  606 01e1 55010000 		.4byte	.LLST9
  607 01e5 08       		.uleb128 0x8
- 608 01e6 D7010000 		.4byte	.LASF24
+ 608 01e6 94010000 		.4byte	.LASF24
  609 01ea 01       		.byte	0x1
- 610 01eb 34       		.byte	0x34
+ 610 01eb 31       		.byte	0x31
  611 01ec 25000000 		.4byte	0x25
  612 01f0 83010000 		.4byte	.LLST10
  613 01f4 08       		.uleb128 0x8
  614 01f5 00000000 		.4byte	.LASF25
  615 01f9 01       		.byte	0x1
- 616 01fa 34       		.byte	0x34
+ 616 01fa 31       		.byte	0x31
  617 01fb 93000000 		.4byte	0x93
  618 01ff B1010000 		.4byte	.LLST11
  619 0203 0A       		.uleb128 0xa
- 620 0204 DA000000 		.4byte	.LASF27
+ 620 0204 97000000 		.4byte	.LASF27
  621 0208 01       		.byte	0x1
- 622 0209 36       		.byte	0x36
+ 622 0209 33       		.byte	0x33
  623 020a 25000000 		.4byte	0x25
  624 020e D2010000 		.4byte	.LLST12
  625 0212 11       		.uleb128 0x11
@@ -761,9 +758,9 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 1
  627 0217 30000000 		.4byte	.LBE2-.LBB2
  628 021b 38020000 		.4byte	0x238
  629 021f 0A       		.uleb128 0xa
- 630 0220 1B020000 		.4byte	.LASF28
+ 630 0220 D8010000 		.4byte	.LASF28
  631 0224 01       		.byte	0x1
- 632 0225 3B       		.byte	0x3b
+ 632 0225 38       		.byte	0x38
  633 0226 9E000000 		.4byte	0x9e
  634 022a 06020000 		.4byte	.LLST13
  635 022e 06       		.uleb128 0x6
@@ -778,15 +775,15 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 1
  644 0243 50       		.byte	0x50
  645 0244 01       		.uleb128 0x1
  646 0245 30       		.byte	0x30
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 14
-
-
  647 0246 00       		.byte	0
  648 0247 00       		.byte	0
  649 0248 13       		.uleb128 0x13
- 650 0249 AF000000 		.4byte	.LASF40
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccdIQTpe.s 			page 14
+
+
+ 650 0249 6C000000 		.4byte	.LASF40
  651 024d 01       		.byte	0x1
- 652 024e 43       		.byte	0x43
+ 652 024e 40       		.byte	0x40
  653 024f 25000000 		.4byte	0x25
  654 0253 00000000 		.4byte	.LFB67
  655 0257 8C000000 		.4byte	.LFE67-.LFB67
@@ -794,63 +791,63 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 1
  657 025c 9C       		.byte	0x9c
  658 025d 0C030000 		.4byte	0x30c
  659 0261 08       		.uleb128 0x8
- 660 0262 83020000 		.4byte	.LASF22
+ 660 0262 95020000 		.4byte	.LASF22
  661 0266 01       		.byte	0x1
- 662 0267 43       		.byte	0x43
+ 662 0267 40       		.byte	0x40
  663 0268 93000000 		.4byte	0x93
  664 026c 19020000 		.4byte	.LLST14
  665 0270 08       		.uleb128 0x8
- 666 0271 0F020000 		.4byte	.LASF23
+ 666 0271 CC010000 		.4byte	.LASF23
  667 0275 01       		.byte	0x1
- 668 0276 43       		.byte	0x43
+ 668 0276 40       		.byte	0x40
  669 0277 25000000 		.4byte	0x25
  670 027b 3A020000 		.4byte	.LLST15
  671 027f 08       		.uleb128 0x8
- 672 0280 D7010000 		.4byte	.LASF24
+ 672 0280 94010000 		.4byte	.LASF24
  673 0284 01       		.byte	0x1
- 674 0285 43       		.byte	0x43
+ 674 0285 40       		.byte	0x40
  675 0286 25000000 		.4byte	0x25
  676 028a 68020000 		.4byte	.LLST16
  677 028e 08       		.uleb128 0x8
  678 028f 00000000 		.4byte	.LASF25
  679 0293 01       		.byte	0x1
- 680 0294 43       		.byte	0x43
+ 680 0294 40       		.byte	0x40
  681 0295 93000000 		.4byte	0x93
  682 0299 96020000 		.4byte	.LLST17
  683 029d 0A       		.uleb128 0xa
- 684 029e A5000000 		.4byte	.LASF30
+ 684 029e 62000000 		.4byte	.LASF30
  685 02a2 01       		.byte	0x1
- 686 02a3 45       		.byte	0x45
+ 686 02a3 42       		.byte	0x42
  687 02a4 93000000 		.4byte	0x93
  688 02a8 B7020000 		.4byte	.LLST18
  689 02ac 09       		.uleb128 0x9
  690 02ad 1F030000 		.4byte	0x31f
  691 02b1 D8020000 		.4byte	.LLST19
  692 02b5 0A       		.uleb128 0xa
- 693 02b6 E6000000 		.4byte	.LASF26
+ 693 02b6 A3000000 		.4byte	.LASF26
  694 02ba 01       		.byte	0x1
- 695 02bb 46       		.byte	0x46
+ 695 02bb 43       		.byte	0x43
  696 02bc 0C030000 		.4byte	0x30c
  697 02c0 FA020000 		.4byte	.LLST20
  698 02c4 0A       		.uleb128 0xa
- 699 02c5 DA000000 		.4byte	.LASF27
+ 699 02c5 97000000 		.4byte	.LASF27
  700 02c9 01       		.byte	0x1
- 701 02ca 47       		.byte	0x47
+ 701 02ca 44       		.byte	0x44
  702 02cb 25000000 		.4byte	0x25
  703 02cf 0E030000 		.4byte	.LLST21
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 15
-
-
  704 02d3 0A       		.uleb128 0xa
- 705 02d4 1B020000 		.4byte	.LASF28
+ 705 02d4 D8010000 		.4byte	.LASF28
  706 02d8 01       		.byte	0x1
- 707 02d9 48       		.byte	0x48
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccdIQTpe.s 			page 15
+
+
+ 707 02d9 45       		.byte	0x45
  708 02da 25000000 		.4byte	0x25
  709 02de 21030000 		.4byte	.LLST22
  710 02e2 0B       		.uleb128 0xb
  711 02e3 6900     		.ascii	"i\000"
  712 02e5 01       		.byte	0x1
- 713 02e6 4A       		.byte	0x4a
+ 713 02e6 47       		.byte	0x47
  714 02e7 85000000 		.4byte	0x85
  715 02eb 65030000 		.4byte	.LLST23
  716 02ef 0C       		.uleb128 0xc
@@ -877,7 +874,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 1
  737 031f 10       		.uleb128 0x10
  738 0320 C9000000 		.4byte	0xc9
  739 0324 14       		.uleb128 0x14
- 740 0325 AA010000 		.4byte	.LASF31
+ 740 0325 67010000 		.4byte	.LASF31
  741 0329 04       		.byte	0x4
  742 032a 1207     		.2byte	0x712
  743 032c 30030000 		.4byte	0x330
@@ -892,26 +889,26 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 1
  752 0341 03       		.byte	0x3
  753 0342 00000000 		.4byte	zeroDriftOffset
  754 0346 17       		.uleb128 0x17
- 755 0347 A3020000 		.4byte	.LASF33
- 756 034b A3020000 		.4byte	.LASF33
+ 755 0347 B5020000 		.4byte	.LASF33
+ 756 034b B5020000 		.4byte	.LASF33
  757 034f 05       		.byte	0x5
  758 0350 34       		.byte	0x34
  759 0351 17       		.uleb128 0x17
- 760 0352 93010000 		.4byte	.LASF34
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 16
-
-
- 761 0356 93010000 		.4byte	.LASF34
+ 760 0352 50010000 		.4byte	.LASF34
+ 761 0356 50010000 		.4byte	.LASF34
  762 035a 05       		.byte	0x5
  763 035b D1       		.byte	0xd1
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccdIQTpe.s 			page 16
+
+
  764 035c 17       		.uleb128 0x17
- 765 035d C0000000 		.4byte	.LASF35
- 766 0361 C0000000 		.4byte	.LASF35
+ 765 035d 7D000000 		.4byte	.LASF35
+ 766 0361 7D000000 		.4byte	.LASF35
  767 0365 05       		.byte	0x5
  768 0366 39       		.byte	0x39
  769 0367 17       		.uleb128 0x17
- 770 0368 33020000 		.4byte	.LASF36
- 771 036c 33020000 		.4byte	.LASF36
+ 770 0368 45020000 		.4byte	.LASF36
+ 771 036c 45020000 		.4byte	.LASF36
  772 0370 05       		.byte	0x5
  773 0371 3B       		.byte	0x3b
  774 0372 00       		.byte	0
@@ -958,12 +955,12 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 1
  815 0026 0B       		.uleb128 0xb
  816 0027 49       		.uleb128 0x49
  817 0028 13       		.uleb128 0x13
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 17
-
-
  818 0029 00       		.byte	0
  819 002a 00       		.byte	0
  820 002b 04       		.uleb128 0x4
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccdIQTpe.s 			page 17
+
+
  821 002c 24       		.uleb128 0x24
  822 002d 00       		.byte	0
  823 002e 0B       		.uleb128 0xb
@@ -1018,12 +1015,12 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 1
  872 0062 3A       		.uleb128 0x3a
  873 0063 0B       		.uleb128 0xb
  874 0064 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 18
-
-
  875 0065 0B       		.uleb128 0xb
  876 0066 27       		.uleb128 0x27
  877 0067 19       		.uleb128 0x19
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccdIQTpe.s 			page 18
+
+
  878 0068 11       		.uleb128 0x11
  879 0069 01       		.uleb128 0x1
  880 006a 12       		.uleb128 0x12
@@ -1078,12 +1075,12 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 1
  929 009c 00       		.byte	0
  930 009d 00       		.byte	0
  931 009e 0B       		.uleb128 0xb
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 19
-
-
  932 009f 34       		.uleb128 0x34
  933 00a0 00       		.byte	0
  934 00a1 03       		.uleb128 0x3
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccdIQTpe.s 			page 19
+
+
  935 00a2 08       		.uleb128 0x8
  936 00a3 3A       		.uleb128 0x3a
  937 00a4 0B       		.uleb128 0xb
@@ -1138,12 +1135,12 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 1
  986 00da 00       		.byte	0
  987 00db 49       		.uleb128 0x49
  988 00dc 13       		.uleb128 0x13
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 20
-
-
  989 00dd 00       		.byte	0
  990 00de 00       		.byte	0
  991 00df 11       		.uleb128 0x11
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccdIQTpe.s 			page 20
+
+
  992 00e0 0B       		.uleb128 0xb
  993 00e1 01       		.byte	0x1
  994 00e2 11       		.uleb128 0x11
@@ -1198,12 +1195,12 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 1
  1043 0116 3A       		.uleb128 0x3a
  1044 0117 0B       		.uleb128 0xb
  1045 0118 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 21
-
-
  1046 0119 05       		.uleb128 0x5
  1047 011a 49       		.uleb128 0x49
  1048 011b 13       		.uleb128 0x13
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccdIQTpe.s 			page 21
+
+
  1049 011c 3F       		.uleb128 0x3f
  1050 011d 19       		.uleb128 0x19
  1051 011e 3C       		.uleb128 0x3c
@@ -1258,12 +1255,12 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 1
  1100 0000 00000000 		.4byte	.LVL2
  1101 0004 28000000 		.4byte	.LVL6
  1102 0008 0100     		.2byte	0x1
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 22
-
-
  1103 000a 50       		.byte	0x50
  1104 000b 28000000 		.4byte	.LVL6
  1105 000f 88000000 		.4byte	.LFE65
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccdIQTpe.s 			page 22
+
+
  1106 0013 0400     		.2byte	0x4
  1107 0015 F3       		.byte	0xf3
  1108 0016 01       		.uleb128 0x1
@@ -1318,12 +1315,12 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 1
  1157 0087 53       		.byte	0x53
  1158 0088 14000000 		.4byte	.LVL4
  1159 008c 88000000 		.4byte	.LFE65
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 23
-
-
  1160 0090 0400     		.2byte	0x4
  1161 0092 F3       		.byte	0xf3
  1162 0093 01       		.uleb128 0x1
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccdIQTpe.s 			page 23
+
+
  1163 0094 53       		.byte	0x53
  1164 0095 9F       		.byte	0x9f
  1165 0096 00000000 		.4byte	0
@@ -1378,12 +1375,12 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 1
  1214 0115 0100     		.2byte	0x1
  1215 0117 50       		.byte	0x50
  1216 0118 48000000 		.4byte	.LVL12
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 24
-
-
  1217 011c 5A000000 		.4byte	.LVL14
  1218 0120 0100     		.2byte	0x1
  1219 0122 58       		.byte	0x58
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccdIQTpe.s 			page 24
+
+
  1220 0123 5A000000 		.4byte	.LVL14
  1221 0127 5F000000 		.4byte	.LVL15-1
  1222 012b 0100     		.2byte	0x1
@@ -1438,12 +1435,12 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 1
  1271 01a4 03       		.uleb128 0x3
  1272 01a5 F5       		.byte	0xf5
  1273 01a6 01       		.uleb128 0x1
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 25
-
-
  1274 01a7 25       		.uleb128 0x25
  1275 01a8 9F       		.byte	0x9f
  1276 01a9 00000000 		.4byte	0
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccdIQTpe.s 			page 25
+
+
  1277 01ad 00000000 		.4byte	0
  1278              	.LLST11:
  1279 01b1 00000000 		.4byte	.LVL22
@@ -1498,12 +1495,12 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 1
  1328 0230 50       		.byte	0x50
  1329 0231 9F       		.byte	0x9f
  1330 0232 00000000 		.4byte	0
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 26
-
-
  1331 0236 00000000 		.4byte	0
  1332              	.LLST15:
  1333 023a 00000000 		.4byte	.LVL37
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccdIQTpe.s 			page 26
+
+
  1334 023e 28000000 		.4byte	.LVL42
  1335 0242 0100     		.2byte	0x1
  1336 0244 51       		.byte	0x51
@@ -1558,12 +1555,12 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 1
  1385 02b3 00000000 		.4byte	0
  1386              	.LLST18:
  1387 02b7 10000000 		.4byte	.LVL38
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 27
-
-
  1388 02bb 28000000 		.4byte	.LVL42
  1389 02bf 0100     		.2byte	0x1
  1390 02c1 50       		.byte	0x50
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccdIQTpe.s 			page 27
+
+
  1391 02c2 28000000 		.4byte	.LVL42
  1392 02c6 8C000000 		.4byte	.LFE67
  1393 02ca 0400     		.2byte	0x4
@@ -1618,12 +1615,12 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 1
  1442 0340 48000000 		.4byte	.LVL48
  1443 0344 0100     		.2byte	0x1
  1444 0346 50       		.byte	0x50
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 28
-
-
  1445 0347 48000000 		.4byte	.LVL48
  1446 034b 5A000000 		.4byte	.LVL50
  1447 034f 0100     		.2byte	0x1
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccdIQTpe.s 			page 28
+
+
  1448 0351 58       		.byte	0x58
  1449 0352 5A000000 		.4byte	.LVL50
  1450 0356 5F000000 		.4byte	.LVL51-1
@@ -1678,12 +1675,12 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 1
  1499 0000 C5010000 		.section	.debug_str,"MS",%progbits,1
  1499      02005201 
  1499      00000201 
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 29
-
-
  1499      FB0E0D00 
  1499      01010101 
  1500              	.LASF25:
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccdIQTpe.s 			page 29
+
+
  1501 0000 7072656C 		.ascii	"preload\000"
  1501      6F616400 
  1502              	.LASF4:
@@ -1714,178 +1711,178 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 1
  1512              	.LASF13:
  1513 005a 75696E74 		.ascii	"uint8_t\000"
  1513      385F7400 
- 1514              	.LASF39:
- 1515 0062 433A5C55 		.ascii	"C:\\UNI_FILES\\GitPROJEKT\\B-CAC\\SPI_virker\\SPI_v"
- 1515      4E495F46 
- 1515      494C4553 
- 1515      5C476974 
- 1515      50524F4A 
- 1516 0090 69726B65 		.ascii	"irker\\Design01.cydsn\000"
- 1516      725C4465 
- 1516      7369676E 
- 1516      30312E63 
- 1516      7964736E 
- 1517              	.LASF30:
- 1518 00a5 72657065 		.ascii	"repeating\000"
- 1518      6174696E 
- 1518      6700
- 1519              	.LASF40:
- 1520 00af 72656164 		.ascii	"readWeight\000"
- 1520      57656967 
- 1520      687400
- 1521              	.LASF0:
- 1522 00ba 666C6F61 		.ascii	"float\000"
- 1522      7400
- 1523              	.LASF35:
- 1524 00c0 4144435F 		.ascii	"ADC_SAR_1_IsEndConversion\000"
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 30
+ 1514              	.LASF30:
+ 1515 0062 72657065 		.ascii	"repeating\000"
+ 1515      6174696E 
+ 1515      6700
+ 1516              	.LASF40:
+ 1517 006c 72656164 		.ascii	"readWeight\000"
+ 1517      57656967 
+ 1517      687400
+ 1518              	.LASF0:
+ 1519 0077 666C6F61 		.ascii	"float\000"
+ 1519      7400
+ 1520              	.LASF35:
+ 1521 007d 4144435F 		.ascii	"ADC_SAR_1_IsEndConversion\000"
+ 1521      5341525F 
+ 1521      315F4973 
+ 1521      456E6443 
+ 1521      6F6E7665 
+ 1522              	.LASF27:
+ 1523 0097 72657375 		.ascii	"result_gram\000"
+ 1523      6C745F67 
+ 1523      72616D00 
+ 1524              	.LASF26:
+ 1525 00a3 72657375 		.ascii	"result_array\000"
+ 1525      6C745F61 
+ 1525      72726179 
+ 1525      00
+ 1526              	.LASF37:
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccdIQTpe.s 			page 30
 
 
- 1524      5341525F 
- 1524      315F4973 
- 1524      456E6443 
- 1524      6F6E7665 
- 1525              	.LASF27:
- 1526 00da 72657375 		.ascii	"result_gram\000"
- 1526      6C745F67 
- 1526      72616D00 
- 1527              	.LASF26:
- 1528 00e6 72657375 		.ascii	"result_array\000"
- 1528      6C745F61 
- 1528      72726179 
- 1528      00
- 1529              	.LASF37:
- 1530 00f3 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 1530      43313120 
- 1530      352E342E 
- 1530      31203230 
- 1530      31363036 
- 1531 0126 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 1531      20726576 
- 1531      6973696F 
- 1531      6E203233 
- 1531      37373135 
- 1532 0159 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 1532      66756E63 
- 1532      74696F6E 
- 1532      2D736563 
- 1532      74696F6E 
- 1533              	.LASF9:
- 1534 0181 6C6F6E67 		.ascii	"long unsigned int\000"
- 1534      20756E73 
- 1534      69676E65 
- 1534      6420696E 
- 1534      7400
- 1535              	.LASF34:
- 1536 0193 4144435F 		.ascii	"ADC_SAR_1_StartConvert\000"
- 1536      5341525F 
- 1536      315F5374 
- 1536      61727443 
- 1536      6F6E7665 
- 1537              	.LASF31:
- 1538 01aa 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 1538      52784275 
- 1538      66666572 
- 1538      00
- 1539              	.LASF2:
- 1540 01b7 756E7369 		.ascii	"unsigned char\000"
- 1540      676E6564 
- 1540      20636861 
- 1540      7200
- 1541              	.LASF5:
- 1542 01c5 5F5F7569 		.ascii	"__uint16_t\000"
- 1542      6E743136 
- 1542      5F7400
- 1543              	.LASF16:
- 1544 01d0 646F7562 		.ascii	"double\000"
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 31
+ 1527 00b0 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1527      43313120 
+ 1527      352E342E 
+ 1527      31203230 
+ 1527      31363036 
+ 1528 00e3 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1528      20726576 
+ 1528      6973696F 
+ 1528      6E203233 
+ 1528      37373135 
+ 1529 0116 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1529      66756E63 
+ 1529      74696F6E 
+ 1529      2D736563 
+ 1529      74696F6E 
+ 1530              	.LASF9:
+ 1531 013e 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1531      20756E73 
+ 1531      69676E65 
+ 1531      6420696E 
+ 1531      7400
+ 1532              	.LASF34:
+ 1533 0150 4144435F 		.ascii	"ADC_SAR_1_StartConvert\000"
+ 1533      5341525F 
+ 1533      315F5374 
+ 1533      61727443 
+ 1533      6F6E7665 
+ 1534              	.LASF31:
+ 1535 0167 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1535      52784275 
+ 1535      66666572 
+ 1535      00
+ 1536              	.LASF2:
+ 1537 0174 756E7369 		.ascii	"unsigned char\000"
+ 1537      676E6564 
+ 1537      20636861 
+ 1537      7200
+ 1538              	.LASF5:
+ 1539 0182 5F5F7569 		.ascii	"__uint16_t\000"
+ 1539      6E743136 
+ 1539      5F7400
+ 1540              	.LASF16:
+ 1541 018d 646F7562 		.ascii	"double\000"
+ 1541      6C6500
+ 1542              	.LASF24:
+ 1543 0194 66616374 		.ascii	"factor\000"
+ 1543      6F7200
+ 1544              	.LASF20:
+ 1545 019b 696E6974 		.ascii	"initLoadcell\000"
+ 1545      4C6F6164 
+ 1545      63656C6C 
+ 1545      00
+ 1546              	.LASF12:
+ 1547 01a8 756E7369 		.ascii	"unsigned int\000"
+ 1547      676E6564 
+ 1547      20696E74 
+ 1547      00
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccdIQTpe.s 			page 31
 
 
- 1544      6C6500
- 1545              	.LASF24:
- 1546 01d7 66616374 		.ascii	"factor\000"
- 1546      6F7200
- 1547              	.LASF20:
- 1548 01de 696E6974 		.ascii	"initLoadcell\000"
- 1548      4C6F6164 
- 1548      63656C6C 
- 1548      00
- 1549              	.LASF12:
- 1550 01eb 756E7369 		.ascii	"unsigned int\000"
- 1550      676E6564 
- 1550      20696E74 
- 1550      00
- 1551              	.LASF11:
- 1552 01f8 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1552      206C6F6E 
- 1552      6720756E 
- 1552      7369676E 
- 1552      65642069 
- 1553              	.LASF23:
- 1554 020f 73746172 		.ascii	"startoffset\000"
- 1554      746F6666 
- 1554      73657400 
- 1555              	.LASF28:
- 1556 021b 72657375 		.ascii	"result\000"
- 1556      6C7400
+ 1548              	.LASF11:
+ 1549 01b5 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1549      206C6F6E 
+ 1549      6720756E 
+ 1549      7369676E 
+ 1549      65642069 
+ 1550              	.LASF23:
+ 1551 01cc 73746172 		.ascii	"startoffset\000"
+ 1551      746F6666 
+ 1551      73657400 
+ 1552              	.LASF28:
+ 1553 01d8 72657375 		.ascii	"result\000"
+ 1553      6C7400
+ 1554              	.LASF39:
+ 1555 01df 433A5C55 		.ascii	"C:\\Users\\jespe\\OneDrive\\Dokumenter\\GitHub\\B-C"
+ 1555      73657273 
+ 1555      5C6A6573 
+ 1555      70655C4F 
+ 1555      6E654472 
+ 1556 020c 41435C53 		.ascii	"AC\\SPI_virker\\SPI_virker\\Design01.cydsn\000"
+ 1556      50495F76 
+ 1556      69726B65 
+ 1556      725C5350 
+ 1556      495F7669 
  1557              	.LASF15:
- 1558 0222 696E7433 		.ascii	"int32_t\000"
+ 1558 0234 696E7433 		.ascii	"int32_t\000"
  1558      325F7400 
  1559              	.LASF19:
- 1560 022a 73697A65 		.ascii	"sizetype\000"
+ 1560 023c 73697A65 		.ascii	"sizetype\000"
  1560      74797065 
  1560      00
  1561              	.LASF36:
- 1562 0233 4144435F 		.ascii	"ADC_SAR_1_GetResult16\000"
+ 1562 0245 4144435F 		.ascii	"ADC_SAR_1_GetResult16\000"
  1562      5341525F 
  1562      315F4765 
  1562      74526573 
  1562      756C7431 
  1563              	.LASF10:
- 1564 0249 6C6F6E67 		.ascii	"long long int\000"
+ 1564 025b 6C6F6E67 		.ascii	"long long int\000"
  1564      206C6F6E 
  1564      6720696E 
  1564      7400
  1565              	.LASF17:
- 1566 0257 63686172 		.ascii	"char\000"
+ 1566 0269 63686172 		.ascii	"char\000"
  1566      00
  1567              	.LASF38:
- 1568 025c 4C6F6164 		.ascii	"Loadcell.c\000"
+ 1568 026e 4C6F6164 		.ascii	"Loadcell.c\000"
  1568      63656C6C 
  1568      2E6300
  1569              	.LASF3:
- 1570 0267 73686F72 		.ascii	"short int\000"
+ 1570 0279 73686F72 		.ascii	"short int\000"
  1570      7420696E 
  1570      7400
  1571              	.LASF14:
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccL6tQRK.s 			page 32
-
-
- 1572 0271 75696E74 		.ascii	"uint16_t\000"
+ 1572 0283 75696E74 		.ascii	"uint16_t\000"
  1572      31365F74 
  1572      00
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\ccdIQTpe.s 			page 32
+
+
  1573              	.LASF8:
- 1574 027a 6C6F6E67 		.ascii	"long int\000"
+ 1574 028c 6C6F6E67 		.ascii	"long int\000"
  1574      20696E74 
  1574      00
  1575              	.LASF22:
- 1576 0283 72657065 		.ascii	"repeats\000"
+ 1576 0295 72657065 		.ascii	"repeats\000"
  1576      61747300 
  1577              	.LASF18:
- 1578 028b 6C6F6E67 		.ascii	"long double\000"
+ 1578 029d 6C6F6E67 		.ascii	"long double\000"
  1578      20646F75 
  1578      626C6500 
  1579              	.LASF1:
- 1580 0297 7369676E 		.ascii	"signed char\000"
+ 1580 02a9 7369676E 		.ascii	"signed char\000"
  1580      65642063 
  1580      68617200 
  1581              	.LASF33:
- 1582 02a3 4144435F 		.ascii	"ADC_SAR_1_Start\000"
+ 1582 02b5 4144435F 		.ascii	"ADC_SAR_1_Start\000"
  1582      5341525F 
  1582      315F5374 
  1582      61727400 
  1583              	.LASF29:
- 1584 02b3 77616974 		.ascii	"wait_for_weight\000"
+ 1584 02c5 77616974 		.ascii	"wait_for_weight\000"
  1584      5F666F72 
  1584      5F776569 
  1584      67687400 

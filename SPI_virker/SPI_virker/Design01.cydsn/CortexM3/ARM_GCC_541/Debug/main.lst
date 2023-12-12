@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctVGrpS.s 			page 1
 
 
    1              		.syntax unified
@@ -47,18 +47,18 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
   16:main.c        **** uint32 tid=0;
   17:main.c        **** uint32 roundedNum = 0;
   18:main.c        **** 
-  19:main.c        **** uint8_t gameReady = 0;//spi_drv1
-  20:main.c        **** uint8_t minutter = 0; //spi_drv2
-  21:main.c        **** uint8_t sekunder = 0; //spi_drv3
-  22:main.c        **** uint8_t milliSekunder = 0; //spi_drv4
-  23:main.c        **** uint8_t dnf = 0; //spi_drv5
+  19:main.c        **** uint8_t gameReady = 0;      //spi_drv1
+  20:main.c        **** uint8_t minutter = 0;       //spi_drv2
+  21:main.c        **** uint8_t sekunder = 0;       //spi_drv3
+  22:main.c        **** uint8_t milliSekunder = 0;  //spi_drv4
+  23:main.c        **** uint8_t dnf = 0;            //spi_drv5
   24:main.c        **** uint8_t receivedData = 0;
   25:main.c        **** uint8_t spilleterslut = 0;
   26:main.c        **** 
   27:main.c        **** 
   28:main.c        **** int main(void)
   29:main.c        **** {
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 2
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctVGrpS.s 			page 2
 
 
   29              		.loc 1 29 0
@@ -101,10 +101,10 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
   40:main.c        ****     int repeats = 50;
   41:main.c        ****     float startoffset = 164.5;
   42:main.c        ****     float factor = 4.672;
-  43:main.c        ****     int preload=0;
+  43:main.c        ****     int preload = 0;
   44:main.c        ****     uint16_t Result_gram;
   45:main.c        ****     //uint8_t timestop=0;
-  46:main.c        ****     char mode='h';
+  46:main.c        ****     char mode = 'h';
   47:main.c        ****      
   48:main.c        ****     homeStepper(mode);
   56              		.loc 1 48 0
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
   63              	.L10:
   50:main.c        ****    
   51:main.c        ****     for(;;)
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 3
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctVGrpS.s 			page 3
 
 
   52:main.c        ****     {
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  100 0050 0024     		movs	r4, #0
  101 0052 464B     		ldr	r3, .L15+4
  102 0054 5C71     		strb	r4, [r3, #5]
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 4
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctVGrpS.s 			page 4
 
 
   70:main.c        ****             wait_for_weight(startoffset, factor, preload); // venter på der bliver placeret en øl
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
   84:main.c        ****         // Der modtages GO signal
   85:main.c        ****         if(UCstate == 3)
  143              		.loc 1 85 0
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 5
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctVGrpS.s 			page 5
 
 
  144 0092 364B     		ldr	r3, .L15+4
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  187              	.L7:
   95:main.c        ****                 Result_gram = readWeight(repeats, startoffset, factor, preload);
  188              		.loc 1 95 0
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 6
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctVGrpS.s 			page 6
 
 
  189 00d4 0A28     		cmp	r0, #10
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  230 011c 80B2     		uxth	r0, r0
  231              	.LVL29:
  110:main.c        ****     
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 7
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctVGrpS.s 			page 7
 
 
  111:main.c        ****             if(Result_gram > 310){
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  267 0152 02E0     		b	.L12
  268              	.L11:
  130:main.c        ****             }
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 8
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctVGrpS.s 			page 8
 
 
  131:main.c        ****             else  { 
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  310              		.loc 1 143 0
  311 0002 0628     		cmp	r0, #6
  312 0004 43D0     		beq	.L19
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 9
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctVGrpS.s 			page 9
 
 
  313 0006 0AD8     		bhi	.L20
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  353              	.L29:
  158:main.c        ****         case 0xCC :
  159:main.c        ****         {
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 10
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctVGrpS.s 			page 10
 
 
  160:main.c        ****             // Loop for aflæsning af vægt - Venter på, at der kommer vægt på vægten / tjekker
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  387              	.LVL40:
  181:main.c        ****         }
  182:main.c        ****         break;
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 11
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctVGrpS.s 			page 11
 
 
  388              		.loc 1 182 0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  427              	.L33:
  428              		.align	2
  429              	.L32:
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 12
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctVGrpS.s 			page 12
 
 
  430 0098 00000000 		.word	.LANCHOR0
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  464              	.L35:
  218:main.c        ****         //}
  219:main.c        ****             
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 13
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctVGrpS.s 			page 13
 
 
  220:main.c        ****         //spilleterslut = 0;
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  514              		.type	minutter, %object
  515              		.size	minutter, 1
  516              	minutter:
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 14
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctVGrpS.s 			page 14
 
 
  517 0010 00       		.space	1
@@ -796,8 +796,8 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  529 0013 00       		.space	1
  530              		.text
  531              	.Letext0:
- 532              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
- 533              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 532              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 533              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
  534              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
  535              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
  536              		.file 6 "Generated_Source\\PSoC5/SPI_RX_ISR.h"
@@ -816,29 +816,29 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  549 000b 01       		.uleb128 0x1
  550 000c 20030000 		.4byte	.LASF58
  551 0010 0C       		.byte	0xc
- 552 0011 07020000 		.4byte	.LASF59
- 553 0015 0E020000 		.4byte	.LASF60
+ 552 0011 5C020000 		.4byte	.LASF59
+ 553 0015 93000000 		.4byte	.LASF60
  554 0019 00000000 		.4byte	.Ldebug_ranges0+0
  555 001d 00000000 		.4byte	0
  556 0021 00000000 		.4byte	.Ldebug_line0
  557 0025 02       		.uleb128 0x2
  558 0026 04       		.byte	0x4
  559 0027 04       		.byte	0x4
- 560 0028 AC000000 		.4byte	.LASF0
+ 560 0028 01010000 		.4byte	.LASF0
  561 002c 02       		.uleb128 0x2
  562 002d 01       		.byte	0x1
  563 002e 06       		.byte	0x6
- 564 002f 55010000 		.4byte	.LASF1
+ 564 002f AA010000 		.4byte	.LASF1
  565 0033 03       		.uleb128 0x3
- 566 0034 E6000000 		.4byte	.LASF4
+ 566 0034 3B010000 		.4byte	.LASF4
  567 0038 02       		.byte	0x2
  568 0039 1D       		.byte	0x1d
  569 003a 3E000000 		.4byte	0x3e
  570 003e 02       		.uleb128 0x2
  571 003f 01       		.byte	0x1
  572 0040 08       		.byte	0x8
- 573 0041 24010000 		.4byte	.LASF2
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 15
+ 573 0041 79010000 		.4byte	.LASF2
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctVGrpS.s 			page 15
 
 
  574 0045 02       		.uleb128 0x2
@@ -853,7 +853,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  583 0057 02       		.uleb128 0x2
  584 0058 02       		.byte	0x2
  585 0059 07       		.byte	0x7
- 586 005a 96010000 		.4byte	.LASF6
+ 586 005a EB010000 		.4byte	.LASF6
  587 005e 03       		.uleb128 0x3
  588 005f B2020000 		.4byte	.LASF7
  589 0063 02       		.byte	0x2
@@ -862,7 +862,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  592 0069 02       		.uleb128 0x2
  593 006a 04       		.byte	0x4
  594 006b 05       		.byte	0x5
- 595 006c D5000000 		.4byte	.LASF8
+ 595 006c 2A010000 		.4byte	.LASF8
  596 0070 02       		.uleb128 0x2
  597 0071 04       		.byte	0x4
  598 0072 07       		.byte	0x7
@@ -870,11 +870,11 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  600 0077 02       		.uleb128 0x2
  601 0078 08       		.byte	0x8
  602 0079 05       		.byte	0x5
- 603 007a BF000000 		.4byte	.LASF10
+ 603 007a 14010000 		.4byte	.LASF10
  604 007e 02       		.uleb128 0x2
  605 007f 08       		.byte	0x8
  606 0080 07       		.byte	0x7
- 607 0081 61010000 		.4byte	.LASF11
+ 607 0081 B6010000 		.4byte	.LASF11
  608 0085 04       		.uleb128 0x4
  609 0086 04       		.byte	0x4
  610 0087 05       		.byte	0x5
@@ -882,29 +882,29 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  612 008c 02       		.uleb128 0x2
  613 008d 04       		.byte	0x4
  614 008e 07       		.byte	0x7
- 615 008f 78010000 		.4byte	.LASF12
+ 615 008f CD010000 		.4byte	.LASF12
  616 0093 03       		.uleb128 0x3
  617 0094 7D000000 		.4byte	.LASF13
  618 0098 03       		.byte	0x3
  619 0099 18       		.byte	0x18
  620 009a 33000000 		.4byte	0x33
  621 009e 03       		.uleb128 0x3
- 622 009f 85010000 		.4byte	.LASF14
+ 622 009f DA010000 		.4byte	.LASF14
  623 00a3 03       		.byte	0x3
  624 00a4 24       		.byte	0x24
  625 00a5 4C000000 		.4byte	0x4c
  626 00a9 03       		.uleb128 0x3
- 627 00aa B7010000 		.4byte	.LASF15
+ 627 00aa 0C020000 		.4byte	.LASF15
  628 00ae 03       		.byte	0x3
  629 00af 2C       		.byte	0x2c
  630 00b0 5E000000 		.4byte	0x5e
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 16
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctVGrpS.s 			page 16
 
 
  631 00b4 05       		.uleb128 0x5
- 632 00b5 00020000 		.4byte	.LASF16
+ 632 00b5 55020000 		.4byte	.LASF16
  633 00b9 04       		.byte	0x4
- 634 00ba EB01     		.2byte	0x1eb
+ 634 00ba E901     		.2byte	0x1e9
  635 00bc 70000000 		.4byte	0x70
  636 00c0 02       		.uleb128 0x2
  637 00c1 08       		.byte	0x8
@@ -913,11 +913,11 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  640 00c7 02       		.uleb128 0x2
  641 00c8 01       		.byte	0x1
  642 00c9 08       		.byte	0x8
- 643 00ca A9010000 		.4byte	.LASF18
+ 643 00ca FE010000 		.4byte	.LASF18
  644 00ce 02       		.uleb128 0x2
  645 00cf 08       		.byte	0x8
  646 00d0 04       		.byte	0x4
- 647 00d1 39010000 		.4byte	.LASF19
+ 647 00d1 8E010000 		.4byte	.LASF19
  648 00d5 02       		.uleb128 0x2
  649 00d6 04       		.byte	0x4
  650 00d7 07       		.byte	0x7
@@ -939,26 +939,26 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  666 00fc 85000000 		.4byte	0x85
  667 0100 32       		.byte	0x32
  668 0101 08       		.uleb128 0x8
- 669 0102 93000000 		.4byte	.LASF22
+ 669 0102 E8000000 		.4byte	.LASF22
  670 0106 01       		.byte	0x1
  671 0107 29       		.byte	0x29
  672 0108 25000000 		.4byte	0x25
  673 010c 04       		.byte	0x4
  674 010d 00802443 		.4byte	0x43248000
  675 0111 08       		.uleb128 0x8
- 676 0112 32010000 		.4byte	.LASF23
+ 676 0112 87010000 		.4byte	.LASF23
  677 0116 01       		.byte	0x1
  678 0117 2A       		.byte	0x2a
  679 0118 25000000 		.4byte	0x25
  680 011c 04       		.byte	0x4
  681 011d 06819540 		.4byte	0x40958106
  682 0121 07       		.uleb128 0x7
- 683 0122 CD000000 		.4byte	.LASF24
+ 683 0122 22010000 		.4byte	.LASF24
  684 0126 01       		.byte	0x1
  685 0127 2B       		.byte	0x2b
  686 0128 85000000 		.4byte	0x85
  687 012c 00       		.byte	0
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 17
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctVGrpS.s 			page 17
 
 
  688 012d 09       		.uleb128 0x9
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  742 01a2 01       		.uleb128 0x1
  743 01a3 53       		.byte	0x53
  744 01a4 01       		.uleb128 0x1
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 18
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctVGrpS.s 			page 18
 
 
  745 01a5 30       		.byte	0x30
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  799 0203 00       		.byte	0
  800 0204 0A       		.uleb128 0xa
  801 0205 78000000 		.4byte	.LVL11
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 19
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctVGrpS.s 			page 19
 
 
  802 0209 E0040000 		.4byte	0x4e0
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  856 025d 01       		.uleb128 0x1
  857 025e 50       		.byte	0x50
  858 025f 02       		.uleb128 0x2
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 20
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctVGrpS.s 			page 20
 
 
  859 0260 08       		.byte	0x8
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  913 02b8 02       		.uleb128 0x2
  914 02b9 08       		.byte	0x8
  915 02ba 32       		.byte	0x32
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 21
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctVGrpS.s 			page 21
 
 
  916 02bb 0B       		.uleb128 0xb
@@ -1258,13 +1258,13 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  970 0309 02       		.uleb128 0x2
  971 030a 08       		.byte	0x8
  972 030b 64       		.byte	0x64
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 22
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctVGrpS.s 			page 22
 
 
  973 030c 00       		.byte	0
  974 030d 00       		.byte	0
  975 030e 0E       		.uleb128 0xe
- 976 030f FC000000 		.4byte	.LASF27
+ 976 030f 51010000 		.4byte	.LASF27
  977 0313 01       		.byte	0x1
  978 0314 8D       		.byte	0x8d
  979 0315 00000000 		.4byte	.LFB65
@@ -1273,7 +1273,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  982 031e 9C       		.byte	0x9c
  983 031f 7B030000 		.4byte	0x37b
  984 0323 0F       		.uleb128 0xf
- 985 0324 9F000000 		.4byte	.LASF62
+ 985 0324 F4000000 		.4byte	.LASF62
  986 0328 01       		.byte	0x1
  987 0329 8D       		.byte	0x8d
  988 032a 93000000 		.4byte	0x93
@@ -1313,12 +1313,12 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  1022 038b 9C       		.byte	0x9c
  1023 038c C2030000 		.4byte	0x3c2
  1024 0390 09       		.uleb128 0x9
- 1025 0391 B2000000 		.4byte	.LASF29
+ 1025 0391 07010000 		.4byte	.LASF29
  1026 0395 01       		.byte	0x1
  1027 0396 D3       		.byte	0xd3
  1028 0397 93000000 		.4byte	0x93
  1029 039b B9000000 		.4byte	.LLST2
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 23
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctVGrpS.s 			page 23
 
 
  1030 039f 0C       		.uleb128 0xc
@@ -1339,7 +1339,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  1045 03c0 00       		.byte	0
  1046 03c1 00       		.byte	0
  1047 03c2 10       		.uleb128 0x10
- 1048 03c3 EB010000 		.4byte	.LASF30
+ 1048 03c3 40020000 		.4byte	.LASF30
  1049 03c7 01       		.byte	0x1
  1050 03c8 0F       		.byte	0xf
  1051 03c9 85000000 		.4byte	0x85
@@ -1378,10 +1378,10 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  1084 0412 03       		.byte	0x3
  1085 0413 00000000 		.4byte	gameReady
  1086 0417 14       		.uleb128 0x14
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 24
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctVGrpS.s 			page 24
 
 
- 1087 0418 0F010000 		.4byte	.LASF34
+ 1087 0418 64010000 		.4byte	.LASF34
  1088 041c 01       		.byte	0x1
  1089 041d 14       		.byte	0x14
  1090 041e 93000000 		.4byte	0x93
@@ -1389,7 +1389,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  1092 0423 03       		.byte	0x3
  1093 0424 00000000 		.4byte	minutter
  1094 0428 14       		.uleb128 0x14
- 1095 0429 AE010000 		.4byte	.LASF35
+ 1095 0429 03020000 		.4byte	.LASF35
  1096 042d 01       		.byte	0x1
  1097 042e 15       		.byte	0x15
  1098 042f 93000000 		.4byte	0x93
@@ -1413,7 +1413,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  1116 0456 03       		.byte	0x3
  1117 0457 00000000 		.4byte	dnf
  1118 045b 14       		.uleb128 0x14
- 1119 045c B2000000 		.4byte	.LASF29
+ 1119 045c 07010000 		.4byte	.LASF29
  1120 0460 01       		.byte	0x1
  1121 0461 18       		.byte	0x18
  1122 0462 93000000 		.4byte	0x93
@@ -1421,7 +1421,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  1124 0467 03       		.byte	0x3
  1125 0468 00000000 		.4byte	receivedData
  1126 046c 14       		.uleb128 0x14
- 1127 046d CD010000 		.4byte	.LASF37
+ 1127 046d 22020000 		.4byte	.LASF37
  1128 0471 01       		.byte	0x1
  1129 0472 19       		.byte	0x19
  1130 0473 93000000 		.4byte	0x93
@@ -1438,22 +1438,22 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  1141 048d CF020000 		.4byte	.LASF39
  1142 0491 07       		.byte	0x7
  1143 0492 0E       		.byte	0xe
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 25
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctVGrpS.s 			page 25
 
 
  1144 0493 15       		.uleb128 0x15
- 1145 0494 F3010000 		.4byte	.LASF40
- 1146 0498 F3010000 		.4byte	.LASF40
+ 1145 0494 48020000 		.4byte	.LASF40
+ 1146 0498 48020000 		.4byte	.LASF40
  1147 049c 08       		.byte	0x8
  1148 049d 06       		.byte	0x6
  1149 049e 15       		.uleb128 0x15
- 1150 049f 18010000 		.4byte	.LASF41
- 1151 04a3 18010000 		.4byte	.LASF41
+ 1150 049f 6D010000 		.4byte	.LASF41
+ 1151 04a3 6D010000 		.4byte	.LASF41
  1152 04a7 09       		.byte	0x9
  1153 04a8 38       		.byte	0x38
  1154 04a9 15       		.uleb128 0x15
- 1155 04aa BF010000 		.4byte	.LASF42
- 1156 04ae BF010000 		.4byte	.LASF42
+ 1155 04aa 14020000 		.4byte	.LASF42
+ 1156 04ae 14020000 		.4byte	.LASF42
  1157 04b2 09       		.byte	0x9
  1158 04b3 2C       		.byte	0x2c
  1159 04b4 15       		.uleb128 0x15
@@ -1462,8 +1462,8 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  1162 04bd 08       		.byte	0x8
  1163 04be 03       		.byte	0x3
  1164 04bf 15       		.uleb128 0x15
- 1165 04c0 8E010000 		.4byte	.LASF44
- 1166 04c4 8E010000 		.4byte	.LASF44
+ 1165 04c0 E3010000 		.4byte	.LASF44
+ 1166 04c4 E3010000 		.4byte	.LASF44
  1167 04c8 0A       		.byte	0xa
  1168 04c9 0E       		.byte	0xe
  1169 04ca 15       		.uleb128 0x15
@@ -1487,8 +1487,8 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  1187 04f4 0C       		.byte	0xc
  1188 04f5 0F       		.byte	0xf
  1189 04f6 15       		.uleb128 0x15
- 1190 04f7 45010000 		.4byte	.LASF49
- 1191 04fb 45010000 		.4byte	.LASF49
+ 1190 04f7 9A010000 		.4byte	.LASF49
+ 1191 04fb 9A010000 		.4byte	.LASF49
  1192 04ff 0C       		.byte	0xc
  1193 0500 10       		.byte	0x10
  1194 0501 15       		.uleb128 0x15
@@ -1498,25 +1498,25 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  1198 050b 3A       		.byte	0x3a
  1199 050c 15       		.uleb128 0x15
  1200 050d 85000000 		.4byte	.LASF51
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 26
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctVGrpS.s 			page 26
 
 
  1201 0511 85000000 		.4byte	.LASF51
  1202 0515 0A       		.byte	0xa
  1203 0516 0F       		.byte	0xf
  1204 0517 15       		.uleb128 0x15
- 1205 0518 F0000000 		.4byte	.LASF52
- 1206 051c F0000000 		.4byte	.LASF52
+ 1205 0518 45010000 		.4byte	.LASF52
+ 1206 051c 45010000 		.4byte	.LASF52
  1207 0520 0A       		.byte	0xa
  1208 0521 11       		.byte	0x11
  1209 0522 15       		.uleb128 0x15
- 1210 0523 DE000000 		.4byte	.LASF53
- 1211 0527 DE000000 		.4byte	.LASF53
+ 1210 0523 33010000 		.4byte	.LASF53
+ 1211 0527 33010000 		.4byte	.LASF53
  1212 052b 07       		.byte	0x7
  1213 052c 10       		.byte	0x10
  1214 052d 15       		.uleb128 0x15
- 1215 052e DB010000 		.4byte	.LASF54
- 1216 0532 DB010000 		.4byte	.LASF54
+ 1215 052e 30020000 		.4byte	.LASF54
+ 1216 0532 30020000 		.4byte	.LASF54
  1217 0536 0C       		.byte	0xc
  1218 0537 12       		.byte	0x12
  1219 0538 15       		.uleb128 0x15
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  1255 0012 00       		.byte	0
  1256 0013 02       		.uleb128 0x2
  1257 0014 24       		.uleb128 0x24
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 27
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctVGrpS.s 			page 27
 
 
  1258 0015 00       		.byte	0
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  1312 004b 0B       		.uleb128 0xb
  1313 004c 3B       		.uleb128 0x3b
  1314 004d 0B       		.uleb128 0xb
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 28
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctVGrpS.s 			page 28
 
 
  1315 004e 27       		.uleb128 0x27
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  1369 0086 0B       		.uleb128 0xb
  1370 0087 3B       		.uleb128 0x3b
  1371 0088 0B       		.uleb128 0xb
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 29
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctVGrpS.s 			page 29
 
 
  1372 0089 49       		.uleb128 0x49
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  1426 00c8 0B       		.uleb128 0xb
  1427 00c9 27       		.uleb128 0x27
  1428 00ca 19       		.uleb128 0x19
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 30
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctVGrpS.s 			page 30
 
 
  1429 00cb 11       		.uleb128 0x11
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  1483 0102 19       		.uleb128 0x19
  1484 0103 3C       		.uleb128 0x3c
  1485 0104 19       		.uleb128 0x19
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 31
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctVGrpS.s 			page 31
 
 
  1486 0105 00       		.byte	0
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  1540 013b 3A       		.uleb128 0x3a
  1541 013c 0B       		.uleb128 0xb
  1542 013d 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 32
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctVGrpS.s 			page 32
 
 
  1543 013e 0B       		.uleb128 0xb
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  1597 0079 0400     		.2byte	0x4
  1598 007b F3       		.byte	0xf3
  1599 007c 01       		.uleb128 0x1
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 33
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctVGrpS.s 			page 33
 
 
  1600 007d 50       		.byte	0x50
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  1654 000c 9C000000 		.4byte	.LFE65
  1655 0010 00000000 		.4byte	.LFB66
  1656 0014 20000000 		.4byte	.LFE66
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 34
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctVGrpS.s 			page 34
 
 
  1657 0018 00000000 		.4byte	0
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  1684              	.LASF13:
  1685 007d 75696E74 		.ascii	"uint8_t\000"
  1685      385F7400 
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 35
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctVGrpS.s 			page 35
 
 
  1686              	.LASF51:
@@ -2046,161 +2046,161 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  1687      744C6564 
  1687      47726565 
  1687      6E00
- 1688              	.LASF22:
- 1689 0093 73746172 		.ascii	"startoffset\000"
- 1689      746F6666 
- 1689      73657400 
- 1690              	.LASF62:
- 1691 009f 62797465 		.ascii	"byteReceived\000"
- 1691      52656365 
- 1691      69766564 
- 1691      00
- 1692              	.LASF0:
- 1693 00ac 666C6F61 		.ascii	"float\000"
- 1693      7400
- 1694              	.LASF29:
- 1695 00b2 72656365 		.ascii	"receivedData\000"
- 1695      69766564 
- 1695      44617461 
- 1695      00
- 1696              	.LASF10:
- 1697 00bf 6C6F6E67 		.ascii	"long long int\000"
- 1697      206C6F6E 
- 1697      6720696E 
- 1697      7400
- 1698              	.LASF24:
- 1699 00cd 7072656C 		.ascii	"preload\000"
- 1699      6F616400 
- 1700              	.LASF8:
- 1701 00d5 6C6F6E67 		.ascii	"long int\000"
- 1701      20696E74 
- 1701      00
- 1702              	.LASF53:
- 1703 00de 73656E64 		.ascii	"sendSPi\000"
- 1703      53506900 
- 1704              	.LASF4:
- 1705 00e6 5F5F7569 		.ascii	"__uint8_t\000"
- 1705      6E74385F 
- 1705      7400
- 1706              	.LASF52:
- 1707 00f0 73746172 		.ascii	"startLedRed\000"
- 1707      744C6564 
- 1707      52656400 
- 1708              	.LASF27:
- 1709 00fc 68616E64 		.ascii	"handleByteReceived\000"
- 1709      6C654279 
- 1709      74655265 
- 1709      63656976 
- 1709      656400
- 1710              	.LASF34:
- 1711 010f 6D696E75 		.ascii	"minutter\000"
- 1711      74746572 
- 1711      00
- 1712              	.LASF41:
- 1713 0118 686F6D65 		.ascii	"homeStepper\000"
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 36
+ 1688              	.LASF60:
+ 1689 0093 433A5C55 		.ascii	"C:\\Users\\jespe\\OneDrive\\Dokumenter\\GitHub\\B-C"
+ 1689      73657273 
+ 1689      5C6A6573 
+ 1689      70655C4F 
+ 1689      6E654472 
+ 1690 00c0 41435C53 		.ascii	"AC\\SPI_virker\\SPI_virker\\Design01.cydsn\000"
+ 1690      50495F76 
+ 1690      69726B65 
+ 1690      725C5350 
+ 1690      495F7669 
+ 1691              	.LASF22:
+ 1692 00e8 73746172 		.ascii	"startoffset\000"
+ 1692      746F6666 
+ 1692      73657400 
+ 1693              	.LASF62:
+ 1694 00f4 62797465 		.ascii	"byteReceived\000"
+ 1694      52656365 
+ 1694      69766564 
+ 1694      00
+ 1695              	.LASF0:
+ 1696 0101 666C6F61 		.ascii	"float\000"
+ 1696      7400
+ 1697              	.LASF29:
+ 1698 0107 72656365 		.ascii	"receivedData\000"
+ 1698      69766564 
+ 1698      44617461 
+ 1698      00
+ 1699              	.LASF10:
+ 1700 0114 6C6F6E67 		.ascii	"long long int\000"
+ 1700      206C6F6E 
+ 1700      6720696E 
+ 1700      7400
+ 1701              	.LASF24:
+ 1702 0122 7072656C 		.ascii	"preload\000"
+ 1702      6F616400 
+ 1703              	.LASF8:
+ 1704 012a 6C6F6E67 		.ascii	"long int\000"
+ 1704      20696E74 
+ 1704      00
+ 1705              	.LASF53:
+ 1706 0133 73656E64 		.ascii	"sendSPi\000"
+ 1706      53506900 
+ 1707              	.LASF4:
+ 1708 013b 5F5F7569 		.ascii	"__uint8_t\000"
+ 1708      6E74385F 
+ 1708      7400
+ 1709              	.LASF52:
+ 1710 0145 73746172 		.ascii	"startLedRed\000"
+ 1710      744C6564 
+ 1710      52656400 
+ 1711              	.LASF27:
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctVGrpS.s 			page 36
 
 
- 1713      53746570 
- 1713      70657200 
- 1714              	.LASF2:
- 1715 0124 756E7369 		.ascii	"unsigned char\000"
- 1715      676E6564 
- 1715      20636861 
- 1715      7200
- 1716              	.LASF23:
- 1717 0132 66616374 		.ascii	"factor\000"
- 1717      6F7200
- 1718              	.LASF19:
- 1719 0139 6C6F6E67 		.ascii	"long double\000"
- 1719      20646F75 
- 1719      626C6500 
- 1720              	.LASF49:
- 1721 0145 73746F70 		.ascii	"stopTidsTagning\000"
- 1721      54696473 
- 1721      5461676E 
- 1721      696E6700 
- 1722              	.LASF1:
- 1723 0155 7369676E 		.ascii	"signed char\000"
- 1723      65642063 
- 1723      68617200 
- 1724              	.LASF11:
- 1725 0161 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1725      206C6F6E 
- 1725      6720756E 
- 1725      7369676E 
- 1725      65642069 
- 1726              	.LASF12:
- 1727 0178 756E7369 		.ascii	"unsigned int\000"
- 1727      676E6564 
- 1727      20696E74 
- 1727      00
- 1728              	.LASF14:
- 1729 0185 75696E74 		.ascii	"uint16_t\000"
- 1729      31365F74 
- 1729      00
- 1730              	.LASF44:
- 1731 018e 696E6974 		.ascii	"initLed\000"
- 1731      4C656400 
- 1732              	.LASF6:
- 1733 0196 73686F72 		.ascii	"short unsigned int\000"
- 1733      7420756E 
- 1733      7369676E 
- 1733      65642069 
- 1733      6E7400
- 1734              	.LASF18:
- 1735 01a9 63686172 		.ascii	"char\000"
- 1735      00
- 1736              	.LASF35:
- 1737 01ae 73656B75 		.ascii	"sekunder\000"
- 1737      6E646572 
- 1737      00
- 1738              	.LASF15:
- 1739 01b7 696E7433 		.ascii	"int32_t\000"
- 1739      325F7400 
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 37
+ 1712 0151 68616E64 		.ascii	"handleByteReceived\000"
+ 1712      6C654279 
+ 1712      74655265 
+ 1712      63656976 
+ 1712      656400
+ 1713              	.LASF34:
+ 1714 0164 6D696E75 		.ascii	"minutter\000"
+ 1714      74746572 
+ 1714      00
+ 1715              	.LASF41:
+ 1716 016d 686F6D65 		.ascii	"homeStepper\000"
+ 1716      53746570 
+ 1716      70657200 
+ 1717              	.LASF2:
+ 1718 0179 756E7369 		.ascii	"unsigned char\000"
+ 1718      676E6564 
+ 1718      20636861 
+ 1718      7200
+ 1719              	.LASF23:
+ 1720 0187 66616374 		.ascii	"factor\000"
+ 1720      6F7200
+ 1721              	.LASF19:
+ 1722 018e 6C6F6E67 		.ascii	"long double\000"
+ 1722      20646F75 
+ 1722      626C6500 
+ 1723              	.LASF49:
+ 1724 019a 73746F70 		.ascii	"stopTidsTagning\000"
+ 1724      54696473 
+ 1724      5461676E 
+ 1724      696E6700 
+ 1725              	.LASF1:
+ 1726 01aa 7369676E 		.ascii	"signed char\000"
+ 1726      65642063 
+ 1726      68617200 
+ 1727              	.LASF11:
+ 1728 01b6 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1728      206C6F6E 
+ 1728      6720756E 
+ 1728      7369676E 
+ 1728      65642069 
+ 1729              	.LASF12:
+ 1730 01cd 756E7369 		.ascii	"unsigned int\000"
+ 1730      676E6564 
+ 1730      20696E74 
+ 1730      00
+ 1731              	.LASF14:
+ 1732 01da 75696E74 		.ascii	"uint16_t\000"
+ 1732      31365F74 
+ 1732      00
+ 1733              	.LASF44:
+ 1734 01e3 696E6974 		.ascii	"initLed\000"
+ 1734      4C656400 
+ 1735              	.LASF6:
+ 1736 01eb 73686F72 		.ascii	"short unsigned int\000"
+ 1736      7420756E 
+ 1736      7369676E 
+ 1736      65642069 
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctVGrpS.s 			page 37
 
 
- 1740              	.LASF42:
- 1741 01bf 73746F70 		.ascii	"stopFlagMotor\000"
- 1741      466C6167 
- 1741      4D6F746F 
- 1741      7200
- 1742              	.LASF37:
- 1743 01cd 7370696C 		.ascii	"spilleterslut\000"
- 1743      6C657465 
- 1743      72736C75 
- 1743      7400
- 1744              	.LASF54:
- 1745 01db 636F6E76 		.ascii	"convertMinutter\000"
- 1745      6572744D 
- 1745      696E7574 
- 1745      74657200 
- 1746              	.LASF30:
- 1747 01eb 55437374 		.ascii	"UCstate\000"
- 1747      61746500 
- 1748              	.LASF40:
- 1749 01f3 696E6974 		.ascii	"initLoadcell\000"
- 1749      4C6F6164 
- 1749      63656C6C 
- 1749      00
- 1750              	.LASF16:
- 1751 0200 75696E74 		.ascii	"uint32\000"
- 1751      333200
- 1752              	.LASF59:
- 1753 0207 6D61696E 		.ascii	"main.c\000"
- 1753      2E6300
- 1754              	.LASF60:
- 1755 020e 433A5C55 		.ascii	"C:\\Users\\deniz\\OneDrive\\Dokumenter\\GitHub\\B-C"
- 1755      73657273 
- 1755      5C64656E 
- 1755      697A5C4F 
- 1755      6E654472 
- 1756 023b 41435C53 		.ascii	"AC\\SPI_virker\\SPI_virker\\Design01.cydsn\000"
- 1756      50495F76 
- 1756      69726B65 
- 1756      725C5350 
- 1756      495F7669 
+ 1736      6E7400
+ 1737              	.LASF18:
+ 1738 01fe 63686172 		.ascii	"char\000"
+ 1738      00
+ 1739              	.LASF35:
+ 1740 0203 73656B75 		.ascii	"sekunder\000"
+ 1740      6E646572 
+ 1740      00
+ 1741              	.LASF15:
+ 1742 020c 696E7433 		.ascii	"int32_t\000"
+ 1742      325F7400 
+ 1743              	.LASF42:
+ 1744 0214 73746F70 		.ascii	"stopFlagMotor\000"
+ 1744      466C6167 
+ 1744      4D6F746F 
+ 1744      7200
+ 1745              	.LASF37:
+ 1746 0222 7370696C 		.ascii	"spilleterslut\000"
+ 1746      6C657465 
+ 1746      72736C75 
+ 1746      7400
+ 1747              	.LASF54:
+ 1748 0230 636F6E76 		.ascii	"convertMinutter\000"
+ 1748      6572744D 
+ 1748      696E7574 
+ 1748      74657200 
+ 1749              	.LASF30:
+ 1750 0240 55437374 		.ascii	"UCstate\000"
+ 1750      61746500 
+ 1751              	.LASF40:
+ 1752 0248 696E6974 		.ascii	"initLoadcell\000"
+ 1752      4C6F6164 
+ 1752      63656C6C 
+ 1752      00
+ 1753              	.LASF16:
+ 1754 0255 75696E74 		.ascii	"uint32\000"
+ 1754      333200
+ 1755              	.LASF59:
+ 1756 025c 6D61696E 		.ascii	"main.c\000"
+ 1756      2E6300
  1757              	.LASF9:
  1758 0263 6C6F6E67 		.ascii	"long unsigned int\000"
  1758      20756E73 
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  1762      457800
  1763              	.LASF43:
  1764 028f 6F666673 		.ascii	"offset_Zerodrift_calibrate\000"
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 38
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctVGrpS.s 			page 38
 
 
  1764      65745F5A 
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 1
  1783      37373135 
  1784 0386 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
  1784      66756E63 
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccyuGk02.s 			page 39
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cctVGrpS.s 			page 39
 
 
  1784      74696F6E 

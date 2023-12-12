@@ -1,6 +1,7 @@
-C:\UNI_FILES\GitPROJEKT\B-CAC\SPI_virker\SPI_virker\Design01.cydsn\Design01.cyprj|028f482c-edd7-44f0-98e5-2b19ff993b52
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|cc170ad3-bc5a-4ef3-a24d-3717b91b120c
-C:\Users\Morten T\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|4f7cd208-07c4-4456-a2d1-ff3552ca965d
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|38f54f72-fd7e-4c41-9011-74cad940682d
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|1b8faaaf-5710-4aaa-a5a7-330f980a6541
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|93c5d727-37f2-4ac8-acf0-1d7bec9ecd1e
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|eda90152-339a-43f2-a6b6-709d22df6155
+C:\Users\jespe\OneDrive\Dokumenter\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|5756955c-f018-4894-afd4-9197d7df9458
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|92764f56-df70-4bbd-ab64-e9bf9a11b8ef
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|963dbe15-d96a-46b3-ad3a-592b5900024a
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|8628cd03-489e-49ea-9192-c214da259cdb
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|ff41e1a5-ad0b-465f-96bc-1b7ec6c0c5c1
+C:\Users\jespe\OneDrive\Dokumenter\GitHub\B-CAC\SPI_virker\SPI_virker\Design01.cydsn\Design01.cyprj|97800579-debe-4a45-946c-4a0ac11e436b

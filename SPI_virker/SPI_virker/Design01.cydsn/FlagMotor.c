@@ -96,7 +96,7 @@ void stopFlagMotor(void)
 }
 
 
-void takestep(char step_mode, char frem)
+void takestep(char step_mode, char direction)
 {
 	
 	 switch(step_mode)
@@ -110,7 +110,7 @@ void takestep(char step_mode, char frem)
 				 {
 					 
 					 
-					 if(frem==1)
+					 if(direction==1)
 						coilA1();
 					 else
 						coilB2();
@@ -123,7 +123,7 @@ void takestep(char step_mode, char frem)
 				 case 3:
 				 {
 					 
-					 if(frem==1)
+					 if(direction==1)
                         coilA2();
 						
 					 else
@@ -136,7 +136,7 @@ void takestep(char step_mode, char frem)
 				 case 5:
 				 {
 					 
-					 if(frem==1)
+					 if(direction==1)
                         coilB1();
 					else
 						coilA2();
@@ -149,7 +149,7 @@ void takestep(char step_mode, char frem)
 				 case 7:
 				 {
 					 
-					 if(frem==1)
+					 if(direction==1)
                         coilB2();
 						
 					 else
@@ -172,7 +172,7 @@ void takestep(char step_mode, char frem)
 				 {
 					 
 					 
-					 if(frem==1)
+					 if(direction==1)
                         coilA1A2();
 					 else
 						coilB2A1();
@@ -185,7 +185,7 @@ void takestep(char step_mode, char frem)
 				 case 3:
 				 {
 					 
-					 if(frem==1)
+					 if(direction==1)
 						coilA2B1();
 					 else
 						coilB1B2();
@@ -197,7 +197,7 @@ void takestep(char step_mode, char frem)
 				 case 5:
 				 {
 					 
-					 if(frem==1)
+					 if(direction==1)
 						coilB1B2();
 					 else
 						coilA2B1();
@@ -209,7 +209,7 @@ void takestep(char step_mode, char frem)
 				 case 7:
 				 {
 					 
-					 if(frem==1)
+					 if(direction==1)
 						coilB2A1();
 					 else
 					    coilA1A2();
@@ -230,7 +230,7 @@ void takestep(char step_mode, char frem)
 				 {
 					 
 					 
-					 if(frem==1)
+					 if(direction==1)
                     {coilA1();
                     stepcount++;}
 					 else
@@ -244,7 +244,7 @@ void takestep(char step_mode, char frem)
 				 {
 					 
 					 
-					 if(frem==1)
+					 if(direction==1)
                     {coilA1A2();
                     stepcount++;}
 					 else
@@ -257,7 +257,7 @@ void takestep(char step_mode, char frem)
 				 case 2:
 				 {
 					 
-					 if(frem==1)
+					 if(direction==1)
                     {coilA2();
                     stepcount++;}
 					 else
@@ -270,7 +270,7 @@ void takestep(char step_mode, char frem)
 				 case 3:
 				 {
 					 
-					 if(frem==1)
+					 if(direction==1)
                     {coilA2B1();
                     stepcount++;}
 					 else
@@ -283,7 +283,7 @@ void takestep(char step_mode, char frem)
 				 case 4:
 				 {
 					 
-					 if(frem==1)
+					 if(direction==1)
                     {coilB1();
                     stepcount++;}
 					 else
@@ -296,7 +296,7 @@ void takestep(char step_mode, char frem)
 				 case 5:
 				 {
 					 
-					 if(frem==1)
+					 if(direction==1)
                     {coilB1B2();
                     stepcount++;}
 					 else
@@ -308,7 +308,7 @@ void takestep(char step_mode, char frem)
 				 case 6:
 				 {
 					 
-					 if(frem==1)
+					 if(direction==1)
                     {coilB2();
                     stepcount++;}
 					 else
@@ -321,7 +321,7 @@ void takestep(char step_mode, char frem)
 				 case 7:
 				 {
 					 
-					 if(frem==1)
+					 if(direction==1)
                     {coilB2A1();
                     stepcount=0;}
 					 else
@@ -345,24 +345,20 @@ void takestep(char step_mode, char frem)
 
 void numberOfSteps(int steps, char mode)
 {
-	char step_mode = mode;
 	if(steps<0)
 	for(int i=0; i>steps; i--)// tager antal steps
 	{
 		
-			takestep(step_mode, 0);
-		
-		
-			 CyDelay(5);
+		takestep(mode, 0);
+    	CyDelay(5);
 		
 	}
 	
 	 for(int i=0; i<steps; i++)// tager antal steps
 	 {
 		 
-		 {takestep(step_mode, 1);}
-		 
-		  CyDelay(5);
+		takestep(mode, 1);
+	    CyDelay(5);
 		 
 	 }
 	 
