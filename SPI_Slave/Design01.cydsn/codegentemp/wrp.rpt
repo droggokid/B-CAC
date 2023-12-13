@@ -1,0 +1,13 @@
+
+======================================================================
+Program  :   vlogfe
+Options  :    -swork lcpsoc3 -q10
+======================================================================
+
+vlogfe V6.3 IR 41:  Verilog parser
+Tue Dec 05 12:08:09 2023
+
+Setting library 'work' to directory 'lcpsoc3'
+
+vlogfe:  No errors.
+

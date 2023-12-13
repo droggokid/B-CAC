@@ -16,37 +16,37 @@
 
 volatile uint16 startCount = 0;
 volatile uint16 stopCount = 0;
-uint32 counter=0;
+uint32 counter = 0;
 
-const uint32 tick_period_ms = 10;
-uint32 start_counter = 0;
-uint32 stop_counter = 0;
-uint32 time_interval_ticks = 0;
-uint32 time_interval_ms = 0;
+const uint32 tickPeriodMs = 10;
+uint32 startCounter = 0;
+uint32 stopCounter = 0;
+uint32 timeIntervalTicks = 0;
+uint32 timeIntervalMs = 0;
 
 
 void startTimer()
 {
     
     Timer_1_Start();
-    start_counter = Timer_1_ReadCounter();
+    startCounter = Timer_1_ReadCounter();
 }
 uint32 stopTimer()
 {
     
-    stop_counter = Timer_1_ReadCounter();
+    stopCounter = Timer_1_ReadCounter();
 
     // Beregn tidsintervallet i ticks
-    time_interval_ticks = start_counter - stop_counter;
+    timeIntervalTicks = startCounter - stopCounter;
 
     // Konverter tidsintervallet til tid i millisekunder
-    time_interval_ms = time_interval_ticks/100;
+    timeIntervalMs = timeIntervalTicks/100;
 
     Timer_1_Stop();
     
     Timer_1_WriteCounter(0);
     
-    return time_interval_ms;
+    return timeIntervalMs;
 }
 
 uint8_t convertMinutes(uint32_t time_1)

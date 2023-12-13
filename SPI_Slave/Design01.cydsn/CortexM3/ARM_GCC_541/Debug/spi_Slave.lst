@@ -1,0 +1,891 @@
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cczQXhkD.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"spi_Slave.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.InitializeSPI,"ax",%progbits
+  20              		.align	2
+  21              		.global	InitializeSPI
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	InitializeSPI, %function
+  25              	InitializeSPI:
+  26              	.LFB63:
+  27              		.file 1 "spi_Slave.c"
+   1:spi_Slave.c   **** /* ========================================
+   2:spi_Slave.c   ****  *
+   3:spi_Slave.c   ****  * Copyright YOUR COMPANY, THE YEAR
+   4:spi_Slave.c   ****  * All Rights Reserved
+   5:spi_Slave.c   ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:spi_Slave.c   ****  *
+   7:spi_Slave.c   ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:spi_Slave.c   ****  * WHICH IS THE PROPERTY OF your company.
+   9:spi_Slave.c   ****  *
+  10:spi_Slave.c   ****  * ========================================
+  11:spi_Slave.c   **** */
+  12:spi_Slave.c   **** 
+  13:spi_Slave.c   **** #include "spi_Slave.h"
+  14:spi_Slave.c   **** 
+  15:spi_Slave.c   **** void InitializeSPI(void)
+  16:spi_Slave.c   **** {
+  28              		.loc 1 16 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 08B5     		push	{r3, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 3, -8
+  35              		.cfi_offset 14, -4
+  17:spi_Slave.c   ****     // Initialiser SPI-modulet her
+  18:spi_Slave.c   ****     SPIS_2_Start();
+  36              		.loc 1 18 0
+  37 0002 FFF7FEFF 		bl	SPIS_2_Start
+  38              	.LVL0:
+  39 0006 08BD     		pop	{r3, pc}
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cczQXhkD.s 			page 2
+
+
+  40              		.cfi_endproc
+  41              	.LFE63:
+  42              		.size	InitializeSPI, .-InitializeSPI
+  43              		.section	.text.modtagetSPi,"ax",%progbits
+  44              		.align	2
+  45              		.global	modtagetSPi
+  46              		.thumb
+  47              		.thumb_func
+  48              		.type	modtagetSPi, %function
+  49              	modtagetSPi:
+  50              	.LFB64:
+  19:spi_Slave.c   ****     
+  20:spi_Slave.c   **** }
+  21:spi_Slave.c   **** 
+  22:spi_Slave.c   **** uint8_t modtagetSPi(void)
+  23:spi_Slave.c   **** {
+  51              		.loc 1 23 0
+  52              		.cfi_startproc
+  53              		@ args = 0, pretend = 0, frame = 0
+  54              		@ frame_needed = 0, uses_anonymous_args = 0
+  55 0000 10B5     		push	{r4, lr}
+  56              		.cfi_def_cfa_offset 8
+  57              		.cfi_offset 4, -8
+  58              		.cfi_offset 14, -4
+  59              	.LVL1:
+  24:spi_Slave.c   ****     
+  25:spi_Slave.c   ****     uint8_t receivedData = 0;
+  60              		.loc 1 25 0
+  61 0002 0024     		movs	r4, #0
+  26:spi_Slave.c   ****     // Lyt for kommandoer fra masteren via SPI
+  27:spi_Slave.c   ****     
+  28:spi_Slave.c   ****     while(SPIS_2_GetRxBufferSize() != 0)
+  62              		.loc 1 28 0
+  63 0004 02E0     		b	.L4
+  64              	.LVL2:
+  65              	.L5:
+  29:spi_Slave.c   ****     {
+  30:spi_Slave.c   ****         receivedData = SPIS_2_ReadRxData();
+  66              		.loc 1 30 0
+  67 0006 FFF7FEFF 		bl	SPIS_2_ReadRxData
+  68              	.LVL3:
+  69 000a 0446     		mov	r4, r0
+  70              	.LVL4:
+  71              	.L4:
+  28:spi_Slave.c   ****     {
+  72              		.loc 1 28 0
+  73 000c FFF7FEFF 		bl	SPIS_2_GetRxBufferSize
+  74              	.LVL5:
+  75 0010 0028     		cmp	r0, #0
+  76 0012 F8D1     		bne	.L5
+  31:spi_Slave.c   ****     }
+  32:spi_Slave.c   ****    //returnere dataen    
+  33:spi_Slave.c   ****     return receivedData;
+  34:spi_Slave.c   ****      
+  35:spi_Slave.c   **** }
+  77              		.loc 1 35 0
+  78 0014 2046     		mov	r0, r4
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cczQXhkD.s 			page 3
+
+
+  79 0016 10BD     		pop	{r4, pc}
+  80              		.cfi_endproc
+  81              	.LFE64:
+  82              		.size	modtagetSPi, .-modtagetSPi
+  83              		.section	.text.sendSPi,"ax",%progbits
+  84              		.align	2
+  85              		.global	sendSPi
+  86              		.thumb
+  87              		.thumb_func
+  88              		.type	sendSPi, %function
+  89              	sendSPi:
+  90              	.LFB65:
+  36:spi_Slave.c   **** void sendSPi(uint8_t data)
+  37:spi_Slave.c   **** {
+  91              		.loc 1 37 0
+  92              		.cfi_startproc
+  93              		@ args = 0, pretend = 0, frame = 0
+  94              		@ frame_needed = 0, uses_anonymous_args = 0
+  95              	.LVL6:
+  96 0000 10B5     		push	{r4, lr}
+  97              		.cfi_def_cfa_offset 8
+  98              		.cfi_offset 4, -8
+  99              		.cfi_offset 14, -4
+ 100 0002 0446     		mov	r4, r0
+  38:spi_Slave.c   ****    // Vent, indtil TX-bufferen er klar til at sende data
+  39:spi_Slave.c   ****    SPIS_2_ClearTxBuffer();
+ 101              		.loc 1 39 0
+ 102 0004 FFF7FEFF 		bl	SPIS_2_ClearTxBuffer
+ 103              	.LVL7:
+  40:spi_Slave.c   ****    SPIS_2_ClearRxBuffer();
+ 104              		.loc 1 40 0
+ 105 0008 FFF7FEFF 		bl	SPIS_2_ClearRxBuffer
+ 106              	.LVL8:
+ 107              	.L8:
+  41:spi_Slave.c   ****    while ((SPIS_2_ReadTxStatus() & SPIS_2_STS_TX_FIFO_NOT_FULL)==0)
+ 108              		.loc 1 41 0 discriminator 1
+ 109 000c FFF7FEFF 		bl	SPIS_2_ReadTxStatus
+ 110              	.LVL9:
+ 111 0010 10F0020F 		tst	r0, #2
+ 112 0014 FAD0     		beq	.L8
+  42:spi_Slave.c   ****     {
+  43:spi_Slave.c   ****          //Vent, indtil TX-bufferen er klar
+  44:spi_Slave.c   ****     }
+  45:spi_Slave.c   ****     
+  46:spi_Slave.c   ****     // Skriver data til TX-bufferen for at sende det til masteren
+  47:spi_Slave.c   ****     SPIS_2_WriteTxData(data);
+ 113              		.loc 1 47 0
+ 114 0016 2046     		mov	r0, r4
+ 115 0018 FFF7FEFF 		bl	SPIS_2_WriteTxData
+ 116              	.LVL10:
+ 117 001c 10BD     		pop	{r4, pc}
+ 118              		.cfi_endproc
+ 119              	.LFE65:
+ 120              		.size	sendSPi, .-sendSPi
+ 121 001e 00BF     		.text
+ 122              	.Letext0:
+ 123              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cczQXhkD.s 			page 4
+
+
+ 124              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 125              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 126              		.file 5 "Generated_Source\\PSoC5/SPIS_2.h"
+ 127              		.file 6 "Generated_Source\\PSoC5/core_cm3.h"
+ 128              		.section	.debug_info,"",%progbits
+ 129              	.Ldebug_info0:
+ 130 0000 CB010000 		.4byte	0x1cb
+ 131 0004 0400     		.2byte	0x4
+ 132 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 133 000a 04       		.byte	0x4
+ 134 000b 01       		.uleb128 0x1
+ 135 000c C5000000 		.4byte	.LASF28
+ 136 0010 0C       		.byte	0xc
+ 137 0011 94000000 		.4byte	.LASF29
+ 138 0015 17000000 		.4byte	.LASF30
+ 139 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 140 001d 00000000 		.4byte	0
+ 141 0021 00000000 		.4byte	.Ldebug_line0
+ 142 0025 02       		.uleb128 0x2
+ 143 0026 01       		.byte	0x1
+ 144 0027 06       		.byte	0x6
+ 145 0028 74020000 		.4byte	.LASF0
+ 146 002c 03       		.uleb128 0x3
+ 147 002d 0D000000 		.4byte	.LASF4
+ 148 0031 02       		.byte	0x2
+ 149 0032 1D       		.byte	0x1d
+ 150 0033 37000000 		.4byte	0x37
+ 151 0037 02       		.uleb128 0x2
+ 152 0038 01       		.byte	0x1
+ 153 0039 08       		.byte	0x8
+ 154 003a B7000000 		.4byte	.LASF1
+ 155 003e 02       		.uleb128 0x2
+ 156 003f 02       		.byte	0x2
+ 157 0040 05       		.byte	0x5
+ 158 0041 2B020000 		.4byte	.LASF2
+ 159 0045 02       		.uleb128 0x2
+ 160 0046 02       		.byte	0x2
+ 161 0047 07       		.byte	0x7
+ 162 0048 65010000 		.4byte	.LASF3
+ 163 004c 03       		.uleb128 0x3
+ 164 004d 68000000 		.4byte	.LASF5
+ 165 0051 02       		.byte	0x2
+ 166 0052 3F       		.byte	0x3f
+ 167 0053 57000000 		.4byte	0x57
+ 168 0057 02       		.uleb128 0x2
+ 169 0058 04       		.byte	0x4
+ 170 0059 05       		.byte	0x5
+ 171 005a 52020000 		.4byte	.LASF6
+ 172 005e 02       		.uleb128 0x2
+ 173 005f 04       		.byte	0x4
+ 174 0060 07       		.byte	0x7
+ 175 0061 53010000 		.4byte	.LASF7
+ 176 0065 02       		.uleb128 0x2
+ 177 0066 08       		.byte	0x8
+ 178 0067 05       		.byte	0x5
+ 179 0068 03020000 		.4byte	.LASF8
+ 180 006c 02       		.uleb128 0x2
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cczQXhkD.s 			page 5
+
+
+ 181 006d 08       		.byte	0x8
+ 182 006e 07       		.byte	0x7
+ 183 006f D3010000 		.4byte	.LASF9
+ 184 0073 04       		.uleb128 0x4
+ 185 0074 04       		.byte	0x4
+ 186 0075 05       		.byte	0x5
+ 187 0076 696E7400 		.ascii	"int\000"
+ 188 007a 02       		.uleb128 0x2
+ 189 007b 04       		.byte	0x4
+ 190 007c 07       		.byte	0x7
+ 191 007d C6010000 		.4byte	.LASF10
+ 192 0081 03       		.uleb128 0x3
+ 193 0082 EA010000 		.4byte	.LASF11
+ 194 0086 03       		.byte	0x3
+ 195 0087 18       		.byte	0x18
+ 196 0088 2C000000 		.4byte	0x2c
+ 197 008c 03       		.uleb128 0x3
+ 198 008d F2010000 		.4byte	.LASF12
+ 199 0091 03       		.byte	0x3
+ 200 0092 2C       		.byte	0x2c
+ 201 0093 4C000000 		.4byte	0x4c
+ 202 0097 05       		.uleb128 0x5
+ 203 0098 35020000 		.4byte	.LASF13
+ 204 009c 04       		.byte	0x4
+ 205 009d E701     		.2byte	0x1e7
+ 206 009f 37000000 		.4byte	0x37
+ 207 00a3 02       		.uleb128 0x2
+ 208 00a4 04       		.byte	0x4
+ 209 00a5 04       		.byte	0x4
+ 210 00a6 AC000000 		.4byte	.LASF14
+ 211 00aa 02       		.uleb128 0x2
+ 212 00ab 08       		.byte	0x8
+ 213 00ac 04       		.byte	0x4
+ 214 00ad 9F010000 		.4byte	.LASF15
+ 215 00b1 02       		.uleb128 0x2
+ 216 00b2 01       		.byte	0x1
+ 217 00b3 08       		.byte	0x8
+ 218 00b4 11020000 		.4byte	.LASF16
+ 219 00b8 02       		.uleb128 0x2
+ 220 00b9 08       		.byte	0x8
+ 221 00ba 04       		.byte	0x4
+ 222 00bb 68020000 		.4byte	.LASF17
+ 223 00bf 02       		.uleb128 0x2
+ 224 00c0 04       		.byte	0x4
+ 225 00c1 07       		.byte	0x7
+ 226 00c2 FA010000 		.4byte	.LASF18
+ 227 00c6 06       		.uleb128 0x6
+ 228 00c7 86000000 		.4byte	.LASF19
+ 229 00cb 01       		.byte	0x1
+ 230 00cc 0F       		.byte	0xf
+ 231 00cd 00000000 		.4byte	.LFB63
+ 232 00d1 08000000 		.4byte	.LFE63-.LFB63
+ 233 00d5 01       		.uleb128 0x1
+ 234 00d6 9C       		.byte	0x9c
+ 235 00d7 E5000000 		.4byte	0xe5
+ 236 00db 07       		.uleb128 0x7
+ 237 00dc 06000000 		.4byte	.LVL0
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cczQXhkD.s 			page 6
+
+
+ 238 00e0 81010000 		.4byte	0x181
+ 239 00e4 00       		.byte	0
+ 240 00e5 08       		.uleb128 0x8
+ 241 00e6 A0000000 		.4byte	.LASF31
+ 242 00ea 01       		.byte	0x1
+ 243 00eb 16       		.byte	0x16
+ 244 00ec 81000000 		.4byte	0x81
+ 245 00f0 00000000 		.4byte	.LFB64
+ 246 00f4 18000000 		.4byte	.LFE64-.LFB64
+ 247 00f8 01       		.uleb128 0x1
+ 248 00f9 9C       		.byte	0x9c
+ 249 00fa 20010000 		.4byte	0x120
+ 250 00fe 09       		.uleb128 0x9
+ 251 00ff 5B020000 		.4byte	.LASF32
+ 252 0103 01       		.byte	0x1
+ 253 0104 19       		.byte	0x19
+ 254 0105 81000000 		.4byte	0x81
+ 255 0109 00000000 		.4byte	.LLST0
+ 256 010d 07       		.uleb128 0x7
+ 257 010e 0A000000 		.4byte	.LVL3
+ 258 0112 8C010000 		.4byte	0x18c
+ 259 0116 07       		.uleb128 0x7
+ 260 0117 10000000 		.4byte	.LVL5
+ 261 011b 97010000 		.4byte	0x197
+ 262 011f 00       		.byte	0
+ 263 0120 06       		.uleb128 0x6
+ 264 0121 60000000 		.4byte	.LASF20
+ 265 0125 01       		.byte	0x1
+ 266 0126 24       		.byte	0x24
+ 267 0127 00000000 		.4byte	.LFB65
+ 268 012b 1E000000 		.4byte	.LFE65-.LFB65
+ 269 012f 01       		.uleb128 0x1
+ 270 0130 9C       		.byte	0x9c
+ 271 0131 70010000 		.4byte	0x170
+ 272 0135 0A       		.uleb128 0xa
+ 273 0136 B2000000 		.4byte	.LASF33
+ 274 013a 01       		.byte	0x1
+ 275 013b 24       		.byte	0x24
+ 276 013c 81000000 		.4byte	0x81
+ 277 0140 1F000000 		.4byte	.LLST1
+ 278 0144 07       		.uleb128 0x7
+ 279 0145 08000000 		.4byte	.LVL7
+ 280 0149 A2010000 		.4byte	0x1a2
+ 281 014d 07       		.uleb128 0x7
+ 282 014e 0C000000 		.4byte	.LVL8
+ 283 0152 AD010000 		.4byte	0x1ad
+ 284 0156 07       		.uleb128 0x7
+ 285 0157 10000000 		.4byte	.LVL9
+ 286 015b B8010000 		.4byte	0x1b8
+ 287 015f 0B       		.uleb128 0xb
+ 288 0160 1C000000 		.4byte	.LVL10
+ 289 0164 C3010000 		.4byte	0x1c3
+ 290 0168 0C       		.uleb128 0xc
+ 291 0169 01       		.uleb128 0x1
+ 292 016a 50       		.byte	0x50
+ 293 016b 02       		.uleb128 0x2
+ 294 016c 74       		.byte	0x74
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cczQXhkD.s 			page 7
+
+
+ 295 016d 00       		.sleb128 0
+ 296 016e 00       		.byte	0
+ 297 016f 00       		.byte	0
+ 298 0170 0D       		.uleb128 0xd
+ 299 0171 B9010000 		.4byte	.LASF34
+ 300 0175 06       		.byte	0x6
+ 301 0176 1207     		.2byte	0x712
+ 302 0178 7C010000 		.4byte	0x17c
+ 303 017c 0E       		.uleb128 0xe
+ 304 017d 8C000000 		.4byte	0x8c
+ 305 0181 0F       		.uleb128 0xf
+ 306 0182 00000000 		.4byte	.LASF21
+ 307 0186 00000000 		.4byte	.LASF21
+ 308 018a 05       		.byte	0x5
+ 309 018b 46       		.byte	0x46
+ 310 018c 0F       		.uleb128 0xf
+ 311 018d 78010000 		.4byte	.LASF22
+ 312 0191 78010000 		.4byte	.LASF22
+ 313 0195 05       		.byte	0x5
+ 314 0196 57       		.byte	0x57
+ 315 0197 0F       		.uleb128 0xf
+ 316 0198 3B020000 		.4byte	.LASF23
+ 317 019c 3B020000 		.4byte	.LASF23
+ 318 01a0 05       		.byte	0x5
+ 319 01a1 58       		.byte	0x58
+ 320 01a2 0F       		.uleb128 0xf
+ 321 01a3 8A010000 		.4byte	.LASF24
+ 322 01a7 8A010000 		.4byte	.LASF24
+ 323 01ab 05       		.byte	0x5
+ 324 01ac 5B       		.byte	0x5b
+ 325 01ad 0F       		.uleb128 0xf
+ 326 01ae 16020000 		.4byte	.LASF25
+ 327 01b2 16020000 		.4byte	.LASF25
+ 328 01b6 05       		.byte	0x5
+ 329 01b7 5A       		.byte	0x5a
+ 330 01b8 0F       		.uleb128 0xf
+ 331 01b9 72000000 		.4byte	.LASF26
+ 332 01bd 72000000 		.4byte	.LASF26
+ 333 01c1 05       		.byte	0x5
+ 334 01c2 4E       		.byte	0x4e
+ 335 01c3 0F       		.uleb128 0xf
+ 336 01c4 A6010000 		.4byte	.LASF27
+ 337 01c8 A6010000 		.4byte	.LASF27
+ 338 01cc 05       		.byte	0x5
+ 339 01cd 50       		.byte	0x50
+ 340 01ce 00       		.byte	0
+ 341              		.section	.debug_abbrev,"",%progbits
+ 342              	.Ldebug_abbrev0:
+ 343 0000 01       		.uleb128 0x1
+ 344 0001 11       		.uleb128 0x11
+ 345 0002 01       		.byte	0x1
+ 346 0003 25       		.uleb128 0x25
+ 347 0004 0E       		.uleb128 0xe
+ 348 0005 13       		.uleb128 0x13
+ 349 0006 0B       		.uleb128 0xb
+ 350 0007 03       		.uleb128 0x3
+ 351 0008 0E       		.uleb128 0xe
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cczQXhkD.s 			page 8
+
+
+ 352 0009 1B       		.uleb128 0x1b
+ 353 000a 0E       		.uleb128 0xe
+ 354 000b 55       		.uleb128 0x55
+ 355 000c 17       		.uleb128 0x17
+ 356 000d 11       		.uleb128 0x11
+ 357 000e 01       		.uleb128 0x1
+ 358 000f 10       		.uleb128 0x10
+ 359 0010 17       		.uleb128 0x17
+ 360 0011 00       		.byte	0
+ 361 0012 00       		.byte	0
+ 362 0013 02       		.uleb128 0x2
+ 363 0014 24       		.uleb128 0x24
+ 364 0015 00       		.byte	0
+ 365 0016 0B       		.uleb128 0xb
+ 366 0017 0B       		.uleb128 0xb
+ 367 0018 3E       		.uleb128 0x3e
+ 368 0019 0B       		.uleb128 0xb
+ 369 001a 03       		.uleb128 0x3
+ 370 001b 0E       		.uleb128 0xe
+ 371 001c 00       		.byte	0
+ 372 001d 00       		.byte	0
+ 373 001e 03       		.uleb128 0x3
+ 374 001f 16       		.uleb128 0x16
+ 375 0020 00       		.byte	0
+ 376 0021 03       		.uleb128 0x3
+ 377 0022 0E       		.uleb128 0xe
+ 378 0023 3A       		.uleb128 0x3a
+ 379 0024 0B       		.uleb128 0xb
+ 380 0025 3B       		.uleb128 0x3b
+ 381 0026 0B       		.uleb128 0xb
+ 382 0027 49       		.uleb128 0x49
+ 383 0028 13       		.uleb128 0x13
+ 384 0029 00       		.byte	0
+ 385 002a 00       		.byte	0
+ 386 002b 04       		.uleb128 0x4
+ 387 002c 24       		.uleb128 0x24
+ 388 002d 00       		.byte	0
+ 389 002e 0B       		.uleb128 0xb
+ 390 002f 0B       		.uleb128 0xb
+ 391 0030 3E       		.uleb128 0x3e
+ 392 0031 0B       		.uleb128 0xb
+ 393 0032 03       		.uleb128 0x3
+ 394 0033 08       		.uleb128 0x8
+ 395 0034 00       		.byte	0
+ 396 0035 00       		.byte	0
+ 397 0036 05       		.uleb128 0x5
+ 398 0037 16       		.uleb128 0x16
+ 399 0038 00       		.byte	0
+ 400 0039 03       		.uleb128 0x3
+ 401 003a 0E       		.uleb128 0xe
+ 402 003b 3A       		.uleb128 0x3a
+ 403 003c 0B       		.uleb128 0xb
+ 404 003d 3B       		.uleb128 0x3b
+ 405 003e 05       		.uleb128 0x5
+ 406 003f 49       		.uleb128 0x49
+ 407 0040 13       		.uleb128 0x13
+ 408 0041 00       		.byte	0
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cczQXhkD.s 			page 9
+
+
+ 409 0042 00       		.byte	0
+ 410 0043 06       		.uleb128 0x6
+ 411 0044 2E       		.uleb128 0x2e
+ 412 0045 01       		.byte	0x1
+ 413 0046 3F       		.uleb128 0x3f
+ 414 0047 19       		.uleb128 0x19
+ 415 0048 03       		.uleb128 0x3
+ 416 0049 0E       		.uleb128 0xe
+ 417 004a 3A       		.uleb128 0x3a
+ 418 004b 0B       		.uleb128 0xb
+ 419 004c 3B       		.uleb128 0x3b
+ 420 004d 0B       		.uleb128 0xb
+ 421 004e 27       		.uleb128 0x27
+ 422 004f 19       		.uleb128 0x19
+ 423 0050 11       		.uleb128 0x11
+ 424 0051 01       		.uleb128 0x1
+ 425 0052 12       		.uleb128 0x12
+ 426 0053 06       		.uleb128 0x6
+ 427 0054 40       		.uleb128 0x40
+ 428 0055 18       		.uleb128 0x18
+ 429 0056 9742     		.uleb128 0x2117
+ 430 0058 19       		.uleb128 0x19
+ 431 0059 01       		.uleb128 0x1
+ 432 005a 13       		.uleb128 0x13
+ 433 005b 00       		.byte	0
+ 434 005c 00       		.byte	0
+ 435 005d 07       		.uleb128 0x7
+ 436 005e 898201   		.uleb128 0x4109
+ 437 0061 00       		.byte	0
+ 438 0062 11       		.uleb128 0x11
+ 439 0063 01       		.uleb128 0x1
+ 440 0064 31       		.uleb128 0x31
+ 441 0065 13       		.uleb128 0x13
+ 442 0066 00       		.byte	0
+ 443 0067 00       		.byte	0
+ 444 0068 08       		.uleb128 0x8
+ 445 0069 2E       		.uleb128 0x2e
+ 446 006a 01       		.byte	0x1
+ 447 006b 3F       		.uleb128 0x3f
+ 448 006c 19       		.uleb128 0x19
+ 449 006d 03       		.uleb128 0x3
+ 450 006e 0E       		.uleb128 0xe
+ 451 006f 3A       		.uleb128 0x3a
+ 452 0070 0B       		.uleb128 0xb
+ 453 0071 3B       		.uleb128 0x3b
+ 454 0072 0B       		.uleb128 0xb
+ 455 0073 27       		.uleb128 0x27
+ 456 0074 19       		.uleb128 0x19
+ 457 0075 49       		.uleb128 0x49
+ 458 0076 13       		.uleb128 0x13
+ 459 0077 11       		.uleb128 0x11
+ 460 0078 01       		.uleb128 0x1
+ 461 0079 12       		.uleb128 0x12
+ 462 007a 06       		.uleb128 0x6
+ 463 007b 40       		.uleb128 0x40
+ 464 007c 18       		.uleb128 0x18
+ 465 007d 9742     		.uleb128 0x2117
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cczQXhkD.s 			page 10
+
+
+ 466 007f 19       		.uleb128 0x19
+ 467 0080 01       		.uleb128 0x1
+ 468 0081 13       		.uleb128 0x13
+ 469 0082 00       		.byte	0
+ 470 0083 00       		.byte	0
+ 471 0084 09       		.uleb128 0x9
+ 472 0085 34       		.uleb128 0x34
+ 473 0086 00       		.byte	0
+ 474 0087 03       		.uleb128 0x3
+ 475 0088 0E       		.uleb128 0xe
+ 476 0089 3A       		.uleb128 0x3a
+ 477 008a 0B       		.uleb128 0xb
+ 478 008b 3B       		.uleb128 0x3b
+ 479 008c 0B       		.uleb128 0xb
+ 480 008d 49       		.uleb128 0x49
+ 481 008e 13       		.uleb128 0x13
+ 482 008f 02       		.uleb128 0x2
+ 483 0090 17       		.uleb128 0x17
+ 484 0091 00       		.byte	0
+ 485 0092 00       		.byte	0
+ 486 0093 0A       		.uleb128 0xa
+ 487 0094 05       		.uleb128 0x5
+ 488 0095 00       		.byte	0
+ 489 0096 03       		.uleb128 0x3
+ 490 0097 0E       		.uleb128 0xe
+ 491 0098 3A       		.uleb128 0x3a
+ 492 0099 0B       		.uleb128 0xb
+ 493 009a 3B       		.uleb128 0x3b
+ 494 009b 0B       		.uleb128 0xb
+ 495 009c 49       		.uleb128 0x49
+ 496 009d 13       		.uleb128 0x13
+ 497 009e 02       		.uleb128 0x2
+ 498 009f 17       		.uleb128 0x17
+ 499 00a0 00       		.byte	0
+ 500 00a1 00       		.byte	0
+ 501 00a2 0B       		.uleb128 0xb
+ 502 00a3 898201   		.uleb128 0x4109
+ 503 00a6 01       		.byte	0x1
+ 504 00a7 11       		.uleb128 0x11
+ 505 00a8 01       		.uleb128 0x1
+ 506 00a9 31       		.uleb128 0x31
+ 507 00aa 13       		.uleb128 0x13
+ 508 00ab 00       		.byte	0
+ 509 00ac 00       		.byte	0
+ 510 00ad 0C       		.uleb128 0xc
+ 511 00ae 8A8201   		.uleb128 0x410a
+ 512 00b1 00       		.byte	0
+ 513 00b2 02       		.uleb128 0x2
+ 514 00b3 18       		.uleb128 0x18
+ 515 00b4 9142     		.uleb128 0x2111
+ 516 00b6 18       		.uleb128 0x18
+ 517 00b7 00       		.byte	0
+ 518 00b8 00       		.byte	0
+ 519 00b9 0D       		.uleb128 0xd
+ 520 00ba 34       		.uleb128 0x34
+ 521 00bb 00       		.byte	0
+ 522 00bc 03       		.uleb128 0x3
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cczQXhkD.s 			page 11
+
+
+ 523 00bd 0E       		.uleb128 0xe
+ 524 00be 3A       		.uleb128 0x3a
+ 525 00bf 0B       		.uleb128 0xb
+ 526 00c0 3B       		.uleb128 0x3b
+ 527 00c1 05       		.uleb128 0x5
+ 528 00c2 49       		.uleb128 0x49
+ 529 00c3 13       		.uleb128 0x13
+ 530 00c4 3F       		.uleb128 0x3f
+ 531 00c5 19       		.uleb128 0x19
+ 532 00c6 3C       		.uleb128 0x3c
+ 533 00c7 19       		.uleb128 0x19
+ 534 00c8 00       		.byte	0
+ 535 00c9 00       		.byte	0
+ 536 00ca 0E       		.uleb128 0xe
+ 537 00cb 35       		.uleb128 0x35
+ 538 00cc 00       		.byte	0
+ 539 00cd 49       		.uleb128 0x49
+ 540 00ce 13       		.uleb128 0x13
+ 541 00cf 00       		.byte	0
+ 542 00d0 00       		.byte	0
+ 543 00d1 0F       		.uleb128 0xf
+ 544 00d2 2E       		.uleb128 0x2e
+ 545 00d3 00       		.byte	0
+ 546 00d4 3F       		.uleb128 0x3f
+ 547 00d5 19       		.uleb128 0x19
+ 548 00d6 3C       		.uleb128 0x3c
+ 549 00d7 19       		.uleb128 0x19
+ 550 00d8 6E       		.uleb128 0x6e
+ 551 00d9 0E       		.uleb128 0xe
+ 552 00da 03       		.uleb128 0x3
+ 553 00db 0E       		.uleb128 0xe
+ 554 00dc 3A       		.uleb128 0x3a
+ 555 00dd 0B       		.uleb128 0xb
+ 556 00de 3B       		.uleb128 0x3b
+ 557 00df 0B       		.uleb128 0xb
+ 558 00e0 00       		.byte	0
+ 559 00e1 00       		.byte	0
+ 560 00e2 00       		.byte	0
+ 561              		.section	.debug_loc,"",%progbits
+ 562              	.Ldebug_loc0:
+ 563              	.LLST0:
+ 564 0000 02000000 		.4byte	.LVL1
+ 565 0004 06000000 		.4byte	.LVL2
+ 566 0008 0200     		.2byte	0x2
+ 567 000a 30       		.byte	0x30
+ 568 000b 9F       		.byte	0x9f
+ 569 000c 06000000 		.4byte	.LVL2
+ 570 0010 18000000 		.4byte	.LFE64
+ 571 0014 0100     		.2byte	0x1
+ 572 0016 54       		.byte	0x54
+ 573 0017 00000000 		.4byte	0
+ 574 001b 00000000 		.4byte	0
+ 575              	.LLST1:
+ 576 001f 00000000 		.4byte	.LVL6
+ 577 0023 07000000 		.4byte	.LVL7-1
+ 578 0027 0100     		.2byte	0x1
+ 579 0029 50       		.byte	0x50
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cczQXhkD.s 			page 12
+
+
+ 580 002a 07000000 		.4byte	.LVL7-1
+ 581 002e 1E000000 		.4byte	.LFE65
+ 582 0032 0400     		.2byte	0x4
+ 583 0034 F3       		.byte	0xf3
+ 584 0035 01       		.uleb128 0x1
+ 585 0036 50       		.byte	0x50
+ 586 0037 9F       		.byte	0x9f
+ 587 0038 00000000 		.4byte	0
+ 588 003c 00000000 		.4byte	0
+ 589              		.section	.debug_aranges,"",%progbits
+ 590 0000 2C000000 		.4byte	0x2c
+ 591 0004 0200     		.2byte	0x2
+ 592 0006 00000000 		.4byte	.Ldebug_info0
+ 593 000a 04       		.byte	0x4
+ 594 000b 00       		.byte	0
+ 595 000c 0000     		.2byte	0
+ 596 000e 0000     		.2byte	0
+ 597 0010 00000000 		.4byte	.LFB63
+ 598 0014 08000000 		.4byte	.LFE63-.LFB63
+ 599 0018 00000000 		.4byte	.LFB64
+ 600 001c 18000000 		.4byte	.LFE64-.LFB64
+ 601 0020 00000000 		.4byte	.LFB65
+ 602 0024 1E000000 		.4byte	.LFE65-.LFB65
+ 603 0028 00000000 		.4byte	0
+ 604 002c 00000000 		.4byte	0
+ 605              		.section	.debug_ranges,"",%progbits
+ 606              	.Ldebug_ranges0:
+ 607 0000 00000000 		.4byte	.LFB63
+ 608 0004 08000000 		.4byte	.LFE63
+ 609 0008 00000000 		.4byte	.LFB64
+ 610 000c 18000000 		.4byte	.LFE64
+ 611 0010 00000000 		.4byte	.LFB65
+ 612 0014 1E000000 		.4byte	.LFE65
+ 613 0018 00000000 		.4byte	0
+ 614 001c 00000000 		.4byte	0
+ 615              		.section	.debug_line,"",%progbits
+ 616              	.Ldebug_line0:
+ 617 0000 9E010000 		.section	.debug_str,"MS",%progbits,1
+ 617      02005D01 
+ 617      00000201 
+ 617      FB0E0D00 
+ 617      01010101 
+ 618              	.LASF21:
+ 619 0000 53504953 		.ascii	"SPIS_2_Start\000"
+ 619      5F325F53 
+ 619      74617274 
+ 619      00
+ 620              	.LASF4:
+ 621 000d 5F5F7569 		.ascii	"__uint8_t\000"
+ 621      6E74385F 
+ 621      7400
+ 622              	.LASF30:
+ 623 0017 433A5C55 		.ascii	"C:\\Users\\jespe\\OneDrive\\Dokumenter\\GitHub\\B-C"
+ 623      73657273 
+ 623      5C6A6573 
+ 623      70655C4F 
+ 623      6E654472 
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cczQXhkD.s 			page 13
+
+
+ 624 0044 41435C53 		.ascii	"AC\\SPI_Slave\\Design01.cydsn\000"
+ 624      50495F53 
+ 624      6C617665 
+ 624      5C446573 
+ 624      69676E30 
+ 625              	.LASF20:
+ 626 0060 73656E64 		.ascii	"sendSPi\000"
+ 626      53506900 
+ 627              	.LASF5:
+ 628 0068 5F5F696E 		.ascii	"__int32_t\000"
+ 628      7433325F 
+ 628      7400
+ 629              	.LASF26:
+ 630 0072 53504953 		.ascii	"SPIS_2_ReadTxStatus\000"
+ 630      5F325F52 
+ 630      65616454 
+ 630      78537461 
+ 630      74757300 
+ 631              	.LASF19:
+ 632 0086 496E6974 		.ascii	"InitializeSPI\000"
+ 632      69616C69 
+ 632      7A655350 
+ 632      4900
+ 633              	.LASF29:
+ 634 0094 7370695F 		.ascii	"spi_Slave.c\000"
+ 634      536C6176 
+ 634      652E6300 
+ 635              	.LASF31:
+ 636 00a0 6D6F6474 		.ascii	"modtagetSPi\000"
+ 636      61676574 
+ 636      53506900 
+ 637              	.LASF14:
+ 638 00ac 666C6F61 		.ascii	"float\000"
+ 638      7400
+ 639              	.LASF33:
+ 640 00b2 64617461 		.ascii	"data\000"
+ 640      00
+ 641              	.LASF1:
+ 642 00b7 756E7369 		.ascii	"unsigned char\000"
+ 642      676E6564 
+ 642      20636861 
+ 642      7200
+ 643              	.LASF28:
+ 644 00c5 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 644      43313120 
+ 644      352E342E 
+ 644      31203230 
+ 644      31363036 
+ 645 00f8 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 645      20726576 
+ 645      6973696F 
+ 645      6E203233 
+ 645      37373135 
+ 646 012b 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 646      66756E63 
+ 646      74696F6E 
+ 646      2D736563 
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cczQXhkD.s 			page 14
+
+
+ 646      74696F6E 
+ 647              	.LASF7:
+ 648 0153 6C6F6E67 		.ascii	"long unsigned int\000"
+ 648      20756E73 
+ 648      69676E65 
+ 648      6420696E 
+ 648      7400
+ 649              	.LASF3:
+ 650 0165 73686F72 		.ascii	"short unsigned int\000"
+ 650      7420756E 
+ 650      7369676E 
+ 650      65642069 
+ 650      6E7400
+ 651              	.LASF22:
+ 652 0178 53504953 		.ascii	"SPIS_2_ReadRxData\000"
+ 652      5F325F52 
+ 652      65616452 
+ 652      78446174 
+ 652      6100
+ 653              	.LASF24:
+ 654 018a 53504953 		.ascii	"SPIS_2_ClearTxBuffer\000"
+ 654      5F325F43 
+ 654      6C656172 
+ 654      54784275 
+ 654      66666572 
+ 655              	.LASF15:
+ 656 019f 646F7562 		.ascii	"double\000"
+ 656      6C6500
+ 657              	.LASF27:
+ 658 01a6 53504953 		.ascii	"SPIS_2_WriteTxData\000"
+ 658      5F325F57 
+ 658      72697465 
+ 658      54784461 
+ 658      746100
+ 659              	.LASF34:
+ 660 01b9 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 660      52784275 
+ 660      66666572 
+ 660      00
+ 661              	.LASF10:
+ 662 01c6 756E7369 		.ascii	"unsigned int\000"
+ 662      676E6564 
+ 662      20696E74 
+ 662      00
+ 663              	.LASF9:
+ 664 01d3 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 664      206C6F6E 
+ 664      6720756E 
+ 664      7369676E 
+ 664      65642069 
+ 665              	.LASF11:
+ 666 01ea 75696E74 		.ascii	"uint8_t\000"
+ 666      385F7400 
+ 667              	.LASF12:
+ 668 01f2 696E7433 		.ascii	"int32_t\000"
+ 668      325F7400 
+ 669              	.LASF18:
+ARM GAS  C:\Users\jespe\AppData\Local\Temp\cczQXhkD.s 			page 15
+
+
+ 670 01fa 73697A65 		.ascii	"sizetype\000"
+ 670      74797065 
+ 670      00
+ 671              	.LASF8:
+ 672 0203 6C6F6E67 		.ascii	"long long int\000"
+ 672      206C6F6E 
+ 672      6720696E 
+ 672      7400
+ 673              	.LASF16:
+ 674 0211 63686172 		.ascii	"char\000"
+ 674      00
+ 675              	.LASF25:
+ 676 0216 53504953 		.ascii	"SPIS_2_ClearRxBuffer\000"
+ 676      5F325F43 
+ 676      6C656172 
+ 676      52784275 
+ 676      66666572 
+ 677              	.LASF2:
+ 678 022b 73686F72 		.ascii	"short int\000"
+ 678      7420696E 
+ 678      7400
+ 679              	.LASF13:
+ 680 0235 75696E74 		.ascii	"uint8\000"
+ 680      3800
+ 681              	.LASF23:
+ 682 023b 53504953 		.ascii	"SPIS_2_GetRxBufferSize\000"
+ 682      5F325F47 
+ 682      65745278 
+ 682      42756666 
+ 682      65725369 
+ 683              	.LASF6:
+ 684 0252 6C6F6E67 		.ascii	"long int\000"
+ 684      20696E74 
+ 684      00
+ 685              	.LASF32:
+ 686 025b 72656365 		.ascii	"receivedData\000"
+ 686      69766564 
+ 686      44617461 
+ 686      00
+ 687              	.LASF17:
+ 688 0268 6C6F6E67 		.ascii	"long double\000"
+ 688      20646F75 
+ 688      626C6500 
+ 689              	.LASF0:
+ 690 0274 7369676E 		.ascii	"signed char\000"
+ 690      65642063 
+ 690      68617200 
+ 691              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

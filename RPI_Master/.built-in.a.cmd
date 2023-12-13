@@ -1,0 +1,1 @@
+cmd_/home/stud/Desktop/Semesterprojekt/B-CAC/RPI_Master/built-in.a := rm -f /home/stud/Desktop/Semesterprojekt/B-CAC/RPI_Master/built-in.a; arm-poky-linux-gnueabi-ar cDPrST /home/stud/Desktop/Semesterprojekt/B-CAC/RPI_Master/built-in.a 
