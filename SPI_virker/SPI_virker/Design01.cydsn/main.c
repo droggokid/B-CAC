@@ -35,15 +35,18 @@ int main(void)
     
     // Variable definitions
     int repeats = 50;
-    float startoffset = 178.74; // vægt 63
-    //float startoffset = 126.07; //vægt 101
-    float factor = 3.98;//vægt 63
-    //float factor = 4.24; //vægt 101
-    
     int preload = 0;
-    uint16_t Result_gram;
-    //uint8_t timestop=0;
     char mode = 'h';
+    uint16_t Result_gram;
+    
+    //Værdier for vægt 63
+    float startoffset = 178.74; // vægt 63
+    float factor = 3.98;//vægt 63
+    
+    //Værdier for vægt 101
+    //float startoffset = 126.07; //vægt 101
+    //float factor = 4.24; //vægt 101
+    //uint8_t timestop=0;
      
     homeStepper(mode);
     stopFlagMotor();
