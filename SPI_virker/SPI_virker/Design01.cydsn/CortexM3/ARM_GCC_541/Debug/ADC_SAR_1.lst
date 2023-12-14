@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
   29:Generated_Source\PSoC5/ADC_SAR_1.c **** static void ADC_SAR_1_CalcGain(uint8 resolution);
   30:Generated_Source\PSoC5/ADC_SAR_1.c **** 
   31:Generated_Source\PSoC5/ADC_SAR_1.c **** 
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 2
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 2
 
 
   32:Generated_Source\PSoC5/ADC_SAR_1.c **** /***************************************
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
   86:Generated_Source\PSoC5/ADC_SAR_1.c **** 
   87:Generated_Source\PSoC5/ADC_SAR_1.c **** /*******************************************************************************
   88:Generated_Source\PSoC5/ADC_SAR_1.c **** * Function Name: ADC_SAR_1_Init
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 3
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 3
 
 
   89:Generated_Source\PSoC5/ADC_SAR_1.c **** ********************************************************************************
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  143:Generated_Source\PSoC5/ADC_SAR_1.c **** void ADC_SAR_1_Enable(void)
  144:Generated_Source\PSoC5/ADC_SAR_1.c **** {
  145:Generated_Source\PSoC5/ADC_SAR_1.c ****     uint8 tmpReg;
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 4
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 4
 
 
  146:Generated_Source\PSoC5/ADC_SAR_1.c ****     uint8 enableInterrupts;
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  200:Generated_Source\PSoC5/ADC_SAR_1.c ****         ADC_SAR_1_SAR_CSR5_REG |= ADC_SAR_1_SAR_SEL_CSEL_DFT_CHAR;
  201:Generated_Source\PSoC5/ADC_SAR_1.c ****     #else /* for <500ksps */
  202:Generated_Source\PSoC5/ADC_SAR_1.c ****         ADC_SAR_1_SAR_CSR5_REG &= (uint8)~ADC_SAR_1_SAR_SEL_CSEL_DFT_CHAR;
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 5
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 5
 
 
  203:Generated_Source\PSoC5/ADC_SAR_1.c ****     #endif /* ADC_SAR_1_HIGH_POWER_PULSE == 0u */
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  257:Generated_Source\PSoC5/ADC_SAR_1.c ****     /* Disable the SAR ADC in Standby Power Mode */
  258:Generated_Source\PSoC5/ADC_SAR_1.c ****     ADC_SAR_1_STBY_PWRMGR_SAR_REG &= (uint8)~ADC_SAR_1_STBY_PWR_SAR_EN;
  259:Generated_Source\PSoC5/ADC_SAR_1.c **** 
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 6
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 6
 
 
  260:Generated_Source\PSoC5/ADC_SAR_1.c ****     /* This is only valid if there is an internal clock */
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  314:Generated_Source\PSoC5/ADC_SAR_1.c **** *  10 ->    RES10
  315:Generated_Source\PSoC5/ADC_SAR_1.c **** *  8  ->    RES8
  316:Generated_Source\PSoC5/ADC_SAR_1.c **** *
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 7
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 7
 
 
  317:Generated_Source\PSoC5/ADC_SAR_1.c **** * Return:
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  371:Generated_Source\PSoC5/ADC_SAR_1.c **** 
  372:Generated_Source\PSoC5/ADC_SAR_1.c ****     /*******************************************************************************
  373:Generated_Source\PSoC5/ADC_SAR_1.c ****     * Function Name: ADC_SAR_1_StartConvert
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 8
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 8
 
 
  374:Generated_Source\PSoC5/ADC_SAR_1.c ****     ********************************************************************************
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  428:Generated_Source\PSoC5/ADC_SAR_1.c ****     *  Stops ADC conversion in Free Running mode.
  429:Generated_Source\PSoC5/ADC_SAR_1.c ****     *
  430:Generated_Source\PSoC5/ADC_SAR_1.c ****     * Side Effects:
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 9
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 9
 
 
  431:Generated_Source\PSoC5/ADC_SAR_1.c ****     *  In Software Trigger sample mode, this function sets a software version of the
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  485:Generated_Source\PSoC5/ADC_SAR_1.c ****     {
  486:Generated_Source\PSoC5/ADC_SAR_1.c ****         /* wait one ADC clock to let the EOC status bit release */
  487:Generated_Source\PSoC5/ADC_SAR_1.c ****         CyDelayUs(1u);
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 10
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 10
 
 
  488:Generated_Source\PSoC5/ADC_SAR_1.c ****         /* Do the unconditional read operation of the CSR1 register to make sure the EOC bit has be
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  542:Generated_Source\PSoC5/ADC_SAR_1.c **** * Global Variables:
  543:Generated_Source\PSoC5/ADC_SAR_1.c **** *  ADC_SAR_1_shift - used to convert the ADC counts to the 2s
  544:Generated_Source\PSoC5/ADC_SAR_1.c **** *  compliment form.
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 11
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 11
 
 
  545:Generated_Source\PSoC5/ADC_SAR_1.c **** *
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  599:Generated_Source\PSoC5/ADC_SAR_1.c **** *  uint8: resolution
  600:Generated_Source\PSoC5/ADC_SAR_1.c **** *
  601:Generated_Source\PSoC5/ADC_SAR_1.c **** * Return:
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 12
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 12
 
 
  602:Generated_Source\PSoC5/ADC_SAR_1.c **** *  None.
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  633:Generated_Source\PSoC5/ADC_SAR_1.c ****                  (ADC_SAR_1_DEFAULT_RANGE == ADC_SAR_1__VSSA_TO_VDDA) || \
  634:Generated_Source\PSoC5/ADC_SAR_1.c ****                  (ADC_SAR_1_DEFAULT_RANGE == ADC_SAR_1__VSSA_TO_VDAC)) )
  635:Generated_Source\PSoC5/ADC_SAR_1.c ****                 diff_zero = ADC_SAR_1_SAR_DIFF_SHIFT >> 2u;
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 13
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 13
 
 
  636:Generated_Source\PSoC5/ADC_SAR_1.c ****             #endif /* End ADC_SAR_1_DEFAULT_RANGE */
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
   78              		.loc 1 659 0
   79 003c 064A     		ldr	r2, .L9+4
   80              	.LVL7:
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 14
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 14
 
 
   81 003e 82FB0302 		smull	r0, r2, r2, r3
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  126 000a 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
  127 000c 43F00203 		orr	r3, r3, #2
  128 0010 1370     		strb	r3, [r2]
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 15
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 15
 
 
  153:Generated_Source\PSoC5/ADC_SAR_1.c **** 
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  173 005c 053B     		subs	r3, r3, #5
  174 005e 1A70     		strb	r2, [r3]
  218:Generated_Source\PSoC5/ADC_SAR_1.c **** 
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 16
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 16
 
 
  175              		.loc 1 218 0
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  251:Generated_Source\PSoC5/ADC_SAR_1.c **** 
  224              		.loc 1 251 0
  225 0002 FFF7FEFF 		bl	CyEnterCriticalSection
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 17
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 17
 
 
  226              	.LVL18:
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  273              		.cfi_startproc
  274              		@ args = 0, pretend = 0, frame = 0
  275              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 18
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 18
 
 
  276              		@ link register save eliminated.
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  348:Generated_Source\PSoC5/ADC_SAR_1.c ****             break;
  325              		.loc 1 348 0
  326 0012 C422     		movs	r2, #196
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 19
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 19
 
 
  327 0014 07E0     		b	.L24
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  373              		.loc 1 107 0
  374              		.cfi_startproc
  375              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 20
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 20
 
 
  376              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  424              	ADC_SAR_1_Start:
  425              	.LFB0:
   75:Generated_Source\PSoC5/ADC_SAR_1.c **** 
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 21
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 21
 
 
  426              		.loc 1 75 0
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  474 0008 1370     		strb	r3, [r2]
  475 000a 7047     		bx	lr
  476              	.L43:
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 22
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 22
 
 
  477              		.align	2
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  527              		.loc 1 481 0 discriminator 2
  528 0002 074B     		ldr	r3, .L52
  529 0004 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 23
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 23
 
 
  530              	.LVL39:
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  576 0006 1088     		ldrh	r0, [r2]
  577 0008 00B2     		sxth	r0, r0
  578 000a 181A     		subs	r0, r3, r0
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 24
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 24
 
 
  523:Generated_Source\PSoC5/ADC_SAR_1.c **** 
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  628              		.thumb_func
  629              		.type	ADC_SAR_1_SetOffset, %function
  630              	ADC_SAR_1_SetOffset:
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 25
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 25
 
 
  631              	.LFB11:
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  691:Generated_Source\PSoC5/ADC_SAR_1.c **** *******************************************************************************/
  692:Generated_Source\PSoC5/ADC_SAR_1.c **** void ADC_SAR_1_SetGain(int16 adcGain)
  693:Generated_Source\PSoC5/ADC_SAR_1.c **** {
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 26
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 26
 
 
  657              		.loc 1 693 0
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  720:Generated_Source\PSoC5/ADC_SAR_1.c **** {
  685              		.loc 1 720 0
  686              		.cfi_startproc
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 27
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 27
 
 
  687              		@ args = 0, pretend = 0, frame = 0
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  717              		.cfi_def_cfa_offset 4
  718              		.cfi_offset 4, -4
  745:Generated_Source\PSoC5/ADC_SAR_1.c ****     int16 mVolts;
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 28
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 28
 
 
  746:Generated_Source\PSoC5/ADC_SAR_1.c ****     int32 countsPer10Volt;
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  757 0038 04EBD470 		add	r0, r4, r4, lsr #31
  758 003c 4010     		asrs	r0, r0, #1
  759 003e 4042     		negs	r0, r0
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 29
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 29
 
 
  760              	.L73:
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  784:Generated_Source\PSoC5/ADC_SAR_1.c **** *******************************************************************************/
  785:Generated_Source\PSoC5/ADC_SAR_1.c **** int32 ADC_SAR_1_CountsTo_uVolts(int16 adcCounts)
  786:Generated_Source\PSoC5/ADC_SAR_1.c **** {
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 30
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 30
 
 
  791              		.loc 1 786 0
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  805:Generated_Source\PSoC5/ADC_SAR_1.c ****     uVolts = (( (int64)adcCounts * ADC_SAR_1_10UV_COUNTS ) / countsPer10Volt);
  827              		.loc 1 805 0
  828 0022 24B2     		sxth	r4, r4
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 31
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 31
 
 
  829 0024 E517     		asrs	r5, r4, #31
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  829:Generated_Source\PSoC5/ADC_SAR_1.c **** float32 ADC_SAR_1_CountsTo_Volts(int16 adcCounts)
  830:Generated_Source\PSoC5/ADC_SAR_1.c **** {
  860              		.loc 1 830 0
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 32
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 32
 
 
  861              		.cfi_startproc
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  899              	.LVL67:
  900 0028 0849     		ldr	r1, .L87+12
  901 002a FFF7FEFF 		bl	__aeabi_fmul
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 33
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 33
 
 
  902              	.LVL68:
@@ -1969,16 +1969,16 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  944 0006 00000000 		.4byte	.Ldebug_abbrev0
  945 000a 04       		.byte	0x4
  946 000b 01       		.uleb128 0x1
- 947 000c F3020000 		.4byte	.LASF66
+ 947 000c 05030000 		.4byte	.LASF66
  948 0010 0C       		.byte	0xc
- 949 0011 A2030000 		.4byte	.LASF67
- 950 0015 5F010000 		.4byte	.LASF68
+ 949 0011 B4030000 		.4byte	.LASF67
+ 950 0015 4D010000 		.4byte	.LASF68
  951 0019 00000000 		.4byte	.Ldebug_ranges0+0
  952 001d 00000000 		.4byte	0
  953 0021 00000000 		.4byte	.Ldebug_line0
  954 0025 02       		.uleb128 0x2
  955 0026 04       		.byte	0x4
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 34
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 34
 
 
  956 0027 05       		.byte	0x5
@@ -1994,7 +1994,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  966 003a 03       		.uleb128 0x3
  967 003b 08       		.byte	0x8
  968 003c 04       		.byte	0x4
- 969 003d CB010000 		.4byte	.LASF2
+ 969 003d DD010000 		.4byte	.LASF2
  970 0041 03       		.uleb128 0x3
  971 0042 01       		.byte	0x1
  972 0043 06       		.byte	0x6
@@ -2002,11 +2002,11 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  974 0048 03       		.uleb128 0x3
  975 0049 01       		.byte	0x1
  976 004a 08       		.byte	0x8
- 977 004b 90020000 		.4byte	.LASF4
+ 977 004b A2020000 		.4byte	.LASF4
  978 004f 03       		.uleb128 0x3
  979 0050 02       		.byte	0x2
  980 0051 05       		.byte	0x5
- 981 0052 B8020000 		.4byte	.LASF5
+ 981 0052 CA020000 		.4byte	.LASF5
  982 0056 03       		.uleb128 0x3
  983 0057 02       		.byte	0x2
  984 0058 07       		.byte	0x7
@@ -2026,83 +2026,83 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  998 0072 03       		.uleb128 0x3
  999 0073 04       		.byte	0x4
  1000 0074 07       		.byte	0x7
- 1001 0075 C2010000 		.4byte	.LASF10
+ 1001 0075 D4010000 		.4byte	.LASF10
  1002 0079 03       		.uleb128 0x3
  1003 007a 01       		.byte	0x1
  1004 007b 08       		.byte	0x8
- 1005 007c C5030000 		.4byte	.LASF11
+ 1005 007c D7030000 		.4byte	.LASF11
  1006 0080 04       		.uleb128 0x4
  1007 0081 A3000000 		.4byte	.LASF12
  1008 0085 02       		.byte	0x2
- 1009 0086 E701     		.2byte	0x1e7
+ 1009 0086 E901     		.2byte	0x1e9
  1010 0088 48000000 		.4byte	0x48
  1011 008c 04       		.uleb128 0x4
  1012 008d 00000000 		.4byte	.LASF13
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 35
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 35
 
 
  1013 0091 02       		.byte	0x2
- 1014 0092 E801     		.2byte	0x1e8
+ 1014 0092 EA01     		.2byte	0x1ea
  1015 0094 56000000 		.4byte	0x56
  1016 0098 04       		.uleb128 0x4
  1017 0099 BA000000 		.4byte	.LASF14
  1018 009d 02       		.byte	0x2
- 1019 009e E901     		.2byte	0x1e9
+ 1019 009e EB01     		.2byte	0x1eb
  1020 00a0 64000000 		.4byte	0x64
  1021 00a4 04       		.uleb128 0x4
- 1022 00a5 4D010000 		.4byte	.LASF15
+ 1022 00a5 A2010000 		.4byte	.LASF15
  1023 00a9 02       		.byte	0x2
- 1024 00aa EA01     		.2byte	0x1ea
+ 1024 00aa EC01     		.2byte	0x1ec
  1025 00ac 41000000 		.4byte	0x41
  1026 00b0 04       		.uleb128 0x4
- 1027 00b1 61040000 		.4byte	.LASF16
+ 1027 00b1 73040000 		.4byte	.LASF16
  1028 00b5 02       		.byte	0x2
- 1029 00b6 EB01     		.2byte	0x1eb
+ 1029 00b6 ED01     		.2byte	0x1ed
  1030 00b8 4F000000 		.4byte	0x4f
  1031 00bc 04       		.uleb128 0x4
  1032 00bd 7D000000 		.4byte	.LASF17
  1033 00c1 02       		.byte	0x2
- 1034 00c2 EC01     		.2byte	0x1ec
+ 1034 00c2 EE01     		.2byte	0x1ee
  1035 00c4 5D000000 		.4byte	0x5d
  1036 00c8 04       		.uleb128 0x4
- 1037 00c9 BA010000 		.4byte	.LASF18
+ 1037 00c9 CC010000 		.4byte	.LASF18
  1038 00cd 02       		.byte	0x2
- 1039 00ce ED01     		.2byte	0x1ed
+ 1039 00ce EF01     		.2byte	0x1ef
  1040 00d0 D4000000 		.4byte	0xd4
  1041 00d4 03       		.uleb128 0x3
  1042 00d5 04       		.byte	0x4
  1043 00d6 04       		.byte	0x4
- 1044 00d7 66020000 		.4byte	.LASF19
+ 1044 00d7 78020000 		.4byte	.LASF19
  1045 00db 03       		.uleb128 0x3
  1046 00dc 08       		.byte	0x8
  1047 00dd 04       		.byte	0x4
  1048 00de B3000000 		.4byte	.LASF20
  1049 00e2 04       		.uleb128 0x4
- 1050 00e3 3B020000 		.4byte	.LASF21
+ 1050 00e3 4D020000 		.4byte	.LASF21
  1051 00e7 02       		.byte	0x2
- 1052 00e8 F201     		.2byte	0x1f2
+ 1052 00e8 F401     		.2byte	0x1f4
  1053 00ea 33000000 		.4byte	0x33
  1054 00ee 04       		.uleb128 0x4
- 1055 00ef 84020000 		.4byte	.LASF22
+ 1055 00ef 96020000 		.4byte	.LASF22
  1056 00f3 02       		.byte	0x2
- 1057 00f4 9102     		.2byte	0x291
+ 1057 00f4 9302     		.2byte	0x293
  1058 00f6 FA000000 		.4byte	0xfa
  1059 00fa 05       		.uleb128 0x5
  1060 00fb 80000000 		.4byte	0x80
  1061 00ff 04       		.uleb128 0x4
  1062 0100 9D000000 		.4byte	.LASF23
  1063 0104 02       		.byte	0x2
- 1064 0105 9202     		.2byte	0x292
+ 1064 0105 9402     		.2byte	0x294
  1065 0107 0B010000 		.4byte	0x10b
  1066 010b 05       		.uleb128 0x5
  1067 010c 8C000000 		.4byte	0x8c
  1068 0110 04       		.uleb128 0x4
- 1069 0111 59010000 		.4byte	.LASF24
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 36
+ 1069 0111 AE010000 		.4byte	.LASF24
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 36
 
 
  1070 0115 02       		.byte	0x2
- 1071 0116 9302     		.2byte	0x293
+ 1071 0116 9502     		.2byte	0x295
  1072 0118 1C010000 		.4byte	0x11c
  1073 011c 05       		.uleb128 0x5
  1074 011d 98000000 		.4byte	0x98
@@ -2116,7 +2116,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  1082 0132 9C       		.byte	0x9c
  1083 0133 67010000 		.4byte	0x167
  1084 0137 07       		.uleb128 0x7
- 1085 0138 97030000 		.4byte	.LASF31
+ 1085 0138 A9030000 		.4byte	.LASF31
  1086 013c 01       		.byte	0x1
  1087 013d 6302     		.2byte	0x263
  1088 013f 80000000 		.4byte	0x80
@@ -2138,7 +2138,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  1104 0165 00       		.byte	0
  1105 0166 00       		.byte	0
  1106 0167 0B       		.uleb128 0xb
- 1107 0168 CA020000 		.4byte	.LASF28
+ 1107 0168 DC020000 		.4byte	.LASF28
  1108 016c 01       		.byte	0x1
  1109 016d 8F       		.byte	0x8f
  1110 016e 00000000 		.4byte	.LFB2
@@ -2147,18 +2147,18 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  1113 0177 9C       		.byte	0x9c
  1114 0178 C7010000 		.4byte	0x1c7
  1115 017c 0C       		.uleb128 0xc
- 1116 017d 98040000 		.4byte	.LASF26
+ 1116 017d AA040000 		.4byte	.LASF26
  1117 0181 01       		.byte	0x1
  1118 0182 91       		.byte	0x91
  1119 0183 80000000 		.4byte	0x80
  1120 0187 67000000 		.4byte	.LLST2
  1121 018b 0C       		.uleb128 0xc
- 1122 018c 0A040000 		.4byte	.LASF27
+ 1122 018c 1C040000 		.4byte	.LASF27
  1123 0190 01       		.byte	0x1
  1124 0191 92       		.byte	0x92
  1125 0192 80000000 		.4byte	0x80
  1126 0196 98000000 		.4byte	.LLST3
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 37
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 37
 
 
  1127 019a 0D       		.uleb128 0xd
@@ -2186,7 +2186,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  1149 01c5 00       		.byte	0
  1150 01c6 00       		.byte	0
  1151 01c7 0B       		.uleb128 0xb
- 1152 01c8 AF040000 		.4byte	.LASF29
+ 1152 01c8 C1040000 		.4byte	.LASF29
  1153 01cc 01       		.byte	0x1
  1154 01cd F8       		.byte	0xf8
  1155 01ce 00000000 		.4byte	.LFB3
@@ -2195,7 +2195,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  1158 01d7 9C       		.byte	0x9c
  1159 01d8 FE010000 		.4byte	0x1fe
  1160 01dc 0C       		.uleb128 0xc
- 1161 01dd 0A040000 		.4byte	.LASF27
+ 1161 01dd 1C040000 		.4byte	.LASF27
  1162 01e1 01       		.byte	0x1
  1163 01e2 FA       		.byte	0xfa
  1164 01e3 80000000 		.4byte	0x80
@@ -2208,7 +2208,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  1171 01f9 93050000 		.4byte	0x593
  1172 01fd 00       		.byte	0
  1173 01fe 0F       		.uleb128 0xf
- 1174 01ff 3C040000 		.4byte	.LASF30
+ 1174 01ff 4E040000 		.4byte	.LASF30
  1175 0203 01       		.byte	0x1
  1176 0204 2201     		.2byte	0x122
  1177 0206 00000000 		.4byte	.LFB4
@@ -2217,8 +2217,8 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  1180 020f 9C       		.byte	0x9c
  1181 0210 35020000 		.4byte	0x235
  1182 0214 07       		.uleb128 0x7
- 1183 0215 7E020000 		.4byte	.LASF32
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 38
+ 1183 0215 90020000 		.4byte	.LASF32
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 38
 
 
  1184 0219 01       		.byte	0x1
@@ -2226,14 +2226,14 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  1186 021c 80000000 		.4byte	0x80
  1187 0220 BE000000 		.4byte	.LLST5
  1188 0224 08       		.uleb128 0x8
- 1189 0225 98040000 		.4byte	.LASF26
+ 1189 0225 AA040000 		.4byte	.LASF26
  1190 0229 01       		.byte	0x1
  1191 022a 2401     		.2byte	0x124
  1192 022c 80000000 		.4byte	0x80
  1193 0230 F0000000 		.4byte	.LLST6
  1194 0234 00       		.byte	0
  1195 0235 0F       		.uleb128 0xf
- 1196 0236 D7010000 		.4byte	.LASF33
+ 1196 0236 E9010000 		.4byte	.LASF33
  1197 023a 01       		.byte	0x1
  1198 023b 5401     		.2byte	0x154
  1199 023d 00000000 		.4byte	.LFB5
@@ -2242,13 +2242,13 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  1202 0246 9C       		.byte	0x9c
  1203 0247 8F020000 		.4byte	0x28f
  1204 024b 07       		.uleb128 0x7
- 1205 024c 97030000 		.4byte	.LASF31
+ 1205 024c A9030000 		.4byte	.LASF31
  1206 0250 01       		.byte	0x1
  1207 0251 5401     		.2byte	0x154
  1208 0253 80000000 		.4byte	0x80
  1209 0257 0E010000 		.4byte	.LLST7
  1210 025b 08       		.uleb128 0x8
- 1211 025c 98040000 		.4byte	.LASF26
+ 1211 025c AA040000 		.4byte	.LASF26
  1212 0260 01       		.byte	0x1
  1213 0261 5601     		.2byte	0x156
  1214 0263 80000000 		.4byte	0x80
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  1238 0290 3E010000 		.4byte	.LASF34
  1239 0294 01       		.byte	0x1
  1240 0295 6A       		.byte	0x6a
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 39
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 39
 
 
  1241 0296 00000000 		.4byte	.LFB1
@@ -2332,13 +2332,13 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  1289 02f0 00       		.byte	0
  1290 02f1 00       		.byte	0
  1291 02f2 0B       		.uleb128 0xb
- 1292 02f3 2B020000 		.4byte	.LASF35
+ 1292 02f3 3D020000 		.4byte	.LASF35
  1293 02f7 01       		.byte	0x1
  1294 02f8 4A       		.byte	0x4a
  1295 02f9 00000000 		.4byte	.LFB0
  1296 02fd 1C000000 		.4byte	.LFE0-.LFB0
  1297 0301 01       		.uleb128 0x1
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 40
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 40
 
 
  1298 0302 9C       		.byte	0x9c
@@ -2351,7 +2351,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  1305 0315 67010000 		.4byte	0x167
  1306 0319 00       		.byte	0
  1307 031a 10       		.uleb128 0x10
- 1308 031b 81040000 		.4byte	.LASF36
+ 1308 031b 93040000 		.4byte	.LASF36
  1309 031f 01       		.byte	0x1
  1310 0320 9101     		.2byte	0x191
  1311 0322 00000000 		.4byte	.LFB6
@@ -2359,7 +2359,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  1313 032a 01       		.uleb128 0x1
  1314 032b 9C       		.byte	0x9c
  1315 032c 10       		.uleb128 0x10
- 1316 032d EA030000 		.4byte	.LASF37
+ 1316 032d FC030000 		.4byte	.LASF37
  1317 0331 01       		.byte	0x1
  1318 0332 B301     		.2byte	0x1b3
  1319 0334 00000000 		.4byte	.LFB7
@@ -2367,7 +2367,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  1321 033c 01       		.uleb128 0x1
  1322 033d 9C       		.byte	0x9c
  1323 033e 11       		.uleb128 0x11
- 1324 033f 22040000 		.4byte	.LASF40
+ 1324 033f 34040000 		.4byte	.LASF40
  1325 0343 01       		.byte	0x1
  1326 0344 DB01     		.2byte	0x1db
  1327 0346 80000000 		.4byte	0x80
@@ -2383,7 +2383,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  1337 0360 80000000 		.4byte	0x80
  1338 0364 75010000 		.4byte	.LLST9
  1339 0368 08       		.uleb128 0x8
- 1340 0369 1B040000 		.4byte	.LASF39
+ 1340 0369 2D040000 		.4byte	.LASF39
  1341 036d 01       		.byte	0x1
  1342 036e DD01     		.2byte	0x1dd
  1343 0370 80000000 		.4byte	0x80
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  1352 0385 31       		.byte	0x31
  1353 0386 00       		.byte	0
  1354 0387 00       		.byte	0
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 41
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 41
 
 
  1355 0388 12       		.uleb128 0x12
@@ -2411,7 +2411,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  1362 039c 01       		.uleb128 0x1
  1363 039d 9C       		.byte	0x9c
  1364 039e 11       		.uleb128 0x11
- 1365 039f 81030000 		.4byte	.LASF41
+ 1365 039f 93030000 		.4byte	.LASF41
  1366 03a3 01       		.byte	0x1
  1367 03a4 2602     		.2byte	0x226
  1368 03a6 B0000000 		.4byte	0xb0
@@ -2428,7 +2428,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  1379 03c4 AD010000 		.4byte	.LLST11
  1380 03c8 00       		.byte	0
  1381 03c9 0F       		.uleb128 0xf
- 1382 03ca 41020000 		.4byte	.LASF42
+ 1382 03ca 53020000 		.4byte	.LASF42
  1383 03ce 01       		.byte	0x1
  1384 03cf 4902     		.2byte	0x249
  1385 03d1 00000000 		.4byte	.LFB11
@@ -2437,7 +2437,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  1388 03da 9C       		.byte	0x9c
  1389 03db EE030000 		.4byte	0x3ee
  1390 03df 14       		.uleb128 0x14
- 1391 03e0 E3030000 		.4byte	.LASF43
+ 1391 03e0 F5030000 		.4byte	.LASF43
  1392 03e4 01       		.byte	0x1
  1393 03e5 4902     		.2byte	0x249
  1394 03e7 B0000000 		.4byte	0xb0
@@ -2445,7 +2445,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  1396 03ec 50       		.byte	0x50
  1397 03ed 00       		.byte	0
  1398 03ee 0F       		.uleb128 0xf
- 1399 03ef 4F040000 		.4byte	.LASF44
+ 1399 03ef 61040000 		.4byte	.LASF44
  1400 03f3 01       		.byte	0x1
  1401 03f4 B402     		.2byte	0x2b4
  1402 03f6 00000000 		.4byte	.LFB13
@@ -2454,17 +2454,17 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  1405 03ff 9C       		.byte	0x9c
  1406 0400 15040000 		.4byte	0x415
  1407 0404 07       		.uleb128 0x7
- 1408 0405 C2020000 		.4byte	.LASF45
+ 1408 0405 D4020000 		.4byte	.LASF45
  1409 0409 01       		.byte	0x1
  1410 040a B402     		.2byte	0x2b4
  1411 040c B0000000 		.4byte	0xb0
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 42
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 42
 
 
  1412 0410 C0010000 		.4byte	.LLST12
  1413 0414 00       		.byte	0
  1414 0415 0F       		.uleb128 0xf
- 1415 0416 DB020000 		.4byte	.LASF46
+ 1415 0416 ED020000 		.4byte	.LASF46
  1416 041a 01       		.byte	0x1
  1417 041b CF02     		.2byte	0x2cf
  1418 041d 00000000 		.4byte	.LFB14
@@ -2473,7 +2473,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  1421 0426 9C       		.byte	0x9c
  1422 0427 3A040000 		.4byte	0x43a
  1423 042b 14       		.uleb128 0x14
- 1424 042c C2020000 		.4byte	.LASF45
+ 1424 042c D4020000 		.4byte	.LASF45
  1425 0430 01       		.byte	0x1
  1426 0431 CF02     		.2byte	0x2cf
  1427 0433 BC000000 		.4byte	0xbc
@@ -2481,7 +2481,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  1429 0438 50       		.byte	0x50
  1430 0439 00       		.byte	0
  1431 043a 11       		.uleb128 0x11
- 1432 043b 9E020000 		.4byte	.LASF47
+ 1432 043b B0020000 		.4byte	.LASF47
  1433 043f 01       		.byte	0x1
  1434 0440 E702     		.2byte	0x2e7
  1435 0442 B0000000 		.4byte	0xb0
@@ -2491,13 +2491,13 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  1439 044f 9C       		.byte	0x9c
  1440 0450 83040000 		.4byte	0x483
  1441 0454 07       		.uleb128 0x7
- 1442 0455 00040000 		.4byte	.LASF48
+ 1442 0455 12040000 		.4byte	.LASF48
  1443 0459 01       		.byte	0x1
  1444 045a E702     		.2byte	0x2e7
  1445 045c B0000000 		.4byte	0xb0
  1446 0460 E1010000 		.4byte	.LLST13
  1447 0464 15       		.uleb128 0x15
- 1448 0465 52010000 		.4byte	.LASF49
+ 1448 0465 A7010000 		.4byte	.LASF49
  1449 0469 01       		.byte	0x1
  1450 046a E902     		.2byte	0x2e9
  1451 046c B0000000 		.4byte	0xb0
@@ -2511,20 +2511,20 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  1459 047e FF010000 		.4byte	.LLST14
  1460 0482 00       		.byte	0
  1461 0483 16       		.uleb128 0x16
- 1462 0484 EF010000 		.4byte	.LASF51
+ 1462 0484 01020000 		.4byte	.LASF51
  1463 0488 01       		.byte	0x1
  1464 0489 1103     		.2byte	0x311
  1465 048b BC000000 		.4byte	0xbc
  1466 048f 00000000 		.4byte	.LFB16
  1467 0493 48000000 		.4byte	.LFE16-.LFB16
  1468 0497 01       		.uleb128 0x1
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 43
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 43
 
 
  1469 0498 9C       		.byte	0x9c
  1470 0499 CA040000 		.4byte	0x4ca
  1471 049d 07       		.uleb128 0x7
- 1472 049e 00040000 		.4byte	.LASF48
+ 1472 049e 12040000 		.4byte	.LASF48
  1473 04a2 01       		.byte	0x1
  1474 04a3 1103     		.2byte	0x311
  1475 04a5 B0000000 		.4byte	0xb0
@@ -2542,7 +2542,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  1487 04c5 3B020000 		.4byte	.LLST16
  1488 04c9 00       		.byte	0
  1489 04ca 16       		.uleb128 0x16
- 1490 04cb CA030000 		.4byte	.LASF52
+ 1490 04cb DC030000 		.4byte	.LASF52
  1491 04cf 01       		.byte	0x1
  1492 04d0 3D03     		.2byte	0x33d
  1493 04d2 C8000000 		.4byte	0xc8
@@ -2552,7 +2552,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  1497 04df 9C       		.byte	0x9c
  1498 04e0 13050000 		.4byte	0x513
  1499 04e4 07       		.uleb128 0x7
- 1500 04e5 00040000 		.4byte	.LASF48
+ 1500 04e5 12040000 		.4byte	.LASF48
  1501 04e9 01       		.byte	0x1
  1502 04ea 3D03     		.2byte	0x33d
  1503 04ec B0000000 		.4byte	0xb0
@@ -2572,13 +2572,13 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  1517 050e 77020000 		.4byte	.LLST18
  1518 0512 00       		.byte	0
  1519 0513 18       		.uleb128 0x18
- 1520 0514 6C020000 		.4byte	.LASF54
+ 1520 0514 7E020000 		.4byte	.LASF54
  1521 0518 01       		.byte	0x1
  1522 0519 23       		.byte	0x23
  1523 051a 80000000 		.4byte	0x80
  1524 051e 05       		.uleb128 0x5
  1525 051f 03       		.byte	0x3
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 44
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 44
 
 
  1526 0520 00000000 		.4byte	ADC_SAR_1_initVar
@@ -2593,7 +2593,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  1535 0535 05       		.uleb128 0x5
  1536 0536 B0000000 		.4byte	0xb0
  1537 053a 18       		.uleb128 0x18
- 1538 053b A2010000 		.4byte	.LASF56
+ 1538 053b B4010000 		.4byte	.LASF56
  1539 053f 01       		.byte	0x1
  1540 0540 25       		.byte	0x25
  1541 0541 35050000 		.4byte	0x535
@@ -2601,7 +2601,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  1543 0546 03       		.byte	0x3
  1544 0547 00000000 		.4byte	ADC_SAR_1_countsPerVolt
  1545 054b 18       		.uleb128 0x18
- 1546 054c 67040000 		.4byte	.LASF57
+ 1546 054c 79040000 		.4byte	.LASF57
  1547 0550 01       		.byte	0x1
  1548 0551 26       		.byte	0x26
  1549 0552 5C050000 		.4byte	0x55c
@@ -2611,7 +2611,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  1553 055c 05       		.uleb128 0x5
  1554 055d BC000000 		.4byte	0xbc
  1555 0561 18       		.uleb128 0x18
- 1556 0562 9F040000 		.4byte	.LASF58
+ 1556 0562 B1040000 		.4byte	.LASF58
  1557 0566 01       		.byte	0x1
  1558 0567 27       		.byte	0x27
  1559 0568 35050000 		.4byte	0x535
@@ -2619,8 +2619,8 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  1561 056d 03       		.byte	0x3
  1562 056e 00000000 		.4byte	ADC_SAR_1_shift
  1563 0572 19       		.uleb128 0x19
- 1564 0573 89020000 		.4byte	.LASF59
- 1565 0577 89020000 		.4byte	.LASF59
+ 1564 0573 9B020000 		.4byte	.LASF59
+ 1565 0577 9B020000 		.4byte	.LASF59
  1566 057b 03       		.byte	0x3
  1567 057c 7F       		.byte	0x7f
  1568 057d 19       		.uleb128 0x19
@@ -2638,17 +2638,17 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  1580 0598 1C000000 		.4byte	.LASF62
  1581 059c 03       		.byte	0x3
  1582 059d 7E       		.byte	0x7e
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 45
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 45
 
 
  1583 059e 19       		.uleb128 0x19
- 1584 059f 09020000 		.4byte	.LASF63
- 1585 05a3 09020000 		.4byte	.LASF63
+ 1584 059f 1B020000 		.4byte	.LASF63
+ 1585 05a3 1B020000 		.4byte	.LASF63
  1586 05a7 04       		.byte	0x4
  1587 05a8 32       		.byte	0x32
  1588 05a9 19       		.uleb128 0x19
- 1589 05aa 55020000 		.4byte	.LASF64
- 1590 05ae 55020000 		.4byte	.LASF64
+ 1589 05aa 67020000 		.4byte	.LASF64
+ 1590 05ae 67020000 		.4byte	.LASF64
  1591 05b2 03       		.byte	0x3
  1592 05b3 8B       		.byte	0x8b
  1593 05b4 19       		.uleb128 0x19
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  1637 0024 0B       		.uleb128 0xb
  1638 0025 03       		.uleb128 0x3
  1639 0026 0E       		.uleb128 0xe
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 46
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 46
 
 
  1640 0027 00       		.byte	0
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  1694 005e 49       		.uleb128 0x49
  1695 005f 13       		.uleb128 0x13
  1696 0060 02       		.uleb128 0x2
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 47
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 47
 
 
  1697 0061 17       		.uleb128 0x17
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  1751 009c 18       		.uleb128 0x18
  1752 009d 9742     		.uleb128 0x2117
  1753 009f 19       		.uleb128 0x19
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 48
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 48
 
 
  1754 00a0 01       		.uleb128 0x1
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  1808 00da 12       		.uleb128 0x12
  1809 00db 06       		.uleb128 0x6
  1810 00dc 40       		.uleb128 0x40
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 49
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 49
 
 
  1811 00dd 18       		.uleb128 0x18
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  1865 0116 13       		.uleb128 0x13
  1866 0117 00       		.byte	0
  1867 0118 00       		.byte	0
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 50
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 50
 
 
  1868 0119 12       		.uleb128 0x12
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  1922 0150 00       		.byte	0
  1923 0151 15       		.uleb128 0x15
  1924 0152 34       		.uleb128 0x34
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 51
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 51
 
 
  1925 0153 00       		.byte	0
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  1979 018a 34       		.uleb128 0x34
  1980 018b 00       		.byte	0
  1981 018c 03       		.uleb128 0x3
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 52
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 52
 
 
  1982 018d 0E       		.uleb128 0xe
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  2036 0030 50       		.byte	0x50
  2037 0031 9F       		.byte	0x9f
  2038 0032 00000000 		.4byte	0
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 53
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 53
 
 
  2039 0036 00000000 		.4byte	0
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  2093 00be 00000000 		.4byte	.LVL20
  2094 00c2 00000000 		.4byte	.LVL20
  2095 00c6 0100     		.2byte	0x1
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 54
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 54
 
 
  2096 00c8 50       		.byte	0x50
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  2150 0140 00000000 		.4byte	0
  2151 0144 00000000 		.4byte	0
  2152              	.LLST8:
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 55
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 55
 
 
  2153 0148 16000000 		.4byte	.LVL25
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  2207 01ca 50       		.byte	0x50
  2208 01cb 04000000 		.4byte	.LVL46
  2209 01cf 10000000 		.4byte	.LFE13
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 56
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 56
 
 
  2210 01d3 0400     		.2byte	0x4
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  2264 0261 0100     		.2byte	0x1
  2265 0263 50       		.byte	0x50
  2266 0264 22000000 		.4byte	.LVL66
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 57
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 57
 
 
  2267 0268 27000000 		.4byte	.LVL67-1
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  2321 0088 00000000 		.4byte	.LFB15
  2322 008c 58000000 		.4byte	.LFE15-.LFB15
  2323 0090 00000000 		.4byte	.LFB16
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 58
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 58
 
 
  2324 0094 48000000 		.4byte	.LFE16-.LFB16
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  2373      313600
  2374              	.LASF70:
  2375 0007 4144435F 		.ascii	"ADC_SAR_1_GetResult8\000"
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 59
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 59
 
 
  2375      5341525F 
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  2399 00a9 43794465 		.ascii	"CyDelayUs\000"
  2399      6C617955 
  2399      7300
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 60
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 60
 
 
  2400              	.LASF20:
@@ -3594,251 +3594,251 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 1
  2423      5341525F 
  2423      315F496E 
  2423      697400
- 2424              	.LASF15:
- 2425 014d 696E7438 		.ascii	"int8\000"
- 2425      00
- 2426              	.LASF49:
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 61
+ 2424              	.LASF68:
+ 2425 014d 433A5C55 		.ascii	"C:\\Users\\deniz\\OneDrive\\Dokumenter\\GitHub\\B-C"
+ 2425      73657273 
+ 2425      5C64656E 
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 61
 
 
- 2427 0152 6D566F6C 		.ascii	"mVolts\000"
- 2427      747300
- 2428              	.LASF24:
- 2429 0159 72656733 		.ascii	"reg32\000"
- 2429      3200
- 2430              	.LASF68:
- 2431 015f 433A5C55 		.ascii	"C:\\UNI_FILES\\GitPROJEKT\\B-CAC\\SPI_virker\\SPI_v"
- 2431      4E495F46 
- 2431      494C4553 
- 2431      5C476974 
- 2431      50524F4A 
- 2432 018d 69726B65 		.ascii	"irker\\Design01.cydsn\000"
- 2432      725C4465 
- 2432      7369676E 
- 2432      30312E63 
- 2432      7964736E 
+ 2425      697A5C4F 
+ 2425      6E654472 
+ 2426 017a 41435C53 		.ascii	"AC\\SPI_virker\\SPI_virker\\Design01.cydsn\000"
+ 2426      50495F76 
+ 2426      69726B65 
+ 2426      725C5350 
+ 2426      495F7669 
+ 2427              	.LASF15:
+ 2428 01a2 696E7438 		.ascii	"int8\000"
+ 2428      00
+ 2429              	.LASF49:
+ 2430 01a7 6D566F6C 		.ascii	"mVolts\000"
+ 2430      747300
+ 2431              	.LASF24:
+ 2432 01ae 72656733 		.ascii	"reg32\000"
+ 2432      3200
  2433              	.LASF56:
- 2434 01a2 4144435F 		.ascii	"ADC_SAR_1_countsPerVolt\000"
+ 2434 01b4 4144435F 		.ascii	"ADC_SAR_1_countsPerVolt\000"
  2434      5341525F 
  2434      315F636F 
  2434      756E7473 
  2434      50657256 
  2435              	.LASF18:
- 2436 01ba 666C6F61 		.ascii	"float32\000"
+ 2436 01cc 666C6F61 		.ascii	"float32\000"
  2436      74333200 
  2437              	.LASF10:
- 2438 01c2 73697A65 		.ascii	"sizetype\000"
+ 2438 01d4 73697A65 		.ascii	"sizetype\000"
  2438      74797065 
  2438      00
  2439              	.LASF2:
- 2440 01cb 6C6F6E67 		.ascii	"long double\000"
+ 2440 01dd 6C6F6E67 		.ascii	"long double\000"
  2440      20646F75 
  2440      626C6500 
  2441              	.LASF33:
- 2442 01d7 4144435F 		.ascii	"ADC_SAR_1_SetResolution\000"
+ 2442 01e9 4144435F 		.ascii	"ADC_SAR_1_SetResolution\000"
  2442      5341525F 
  2442      315F5365 
  2442      74526573 
  2442      6F6C7574 
  2443              	.LASF51:
- 2444 01ef 4144435F 		.ascii	"ADC_SAR_1_CountsTo_uVolts\000"
+ 2444 0201 4144435F 		.ascii	"ADC_SAR_1_CountsTo_uVolts\000"
  2444      5341525F 
  2444      315F436F 
  2444      756E7473 
  2444      546F5F75 
  2445              	.LASF63:
- 2446 0209 4144435F 		.ascii	"ADC_SAR_1_theACLK_SetModeRegister\000"
+ 2446 021b 4144435F 		.ascii	"ADC_SAR_1_theACLK_SetModeRegister\000"
  2446      5341525F 
  2446      315F7468 
  2446      6541434C 
  2446      4B5F5365 
  2447              	.LASF35:
- 2448 022b 4144435F 		.ascii	"ADC_SAR_1_Start\000"
+ 2448 023d 4144435F 		.ascii	"ADC_SAR_1_Start\000"
  2448      5341525F 
  2448      315F5374 
  2448      61727400 
  2449              	.LASF21:
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 62
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 62
 
 
- 2450 023b 696E7436 		.ascii	"int64\000"
+ 2450 024d 696E7436 		.ascii	"int64\000"
  2450      3400
  2451              	.LASF42:
- 2452 0241 4144435F 		.ascii	"ADC_SAR_1_SetOffset\000"
+ 2452 0253 4144435F 		.ascii	"ADC_SAR_1_SetOffset\000"
  2452      5341525F 
  2452      315F5365 
  2452      744F6666 
  2452      73657400 
  2453              	.LASF64:
- 2454 0255 4379496E 		.ascii	"CyIntSetPriority\000"
+ 2454 0267 4379496E 		.ascii	"CyIntSetPriority\000"
  2454      74536574 
  2454      5072696F 
  2454      72697479 
  2454      00
  2455              	.LASF19:
- 2456 0266 666C6F61 		.ascii	"float\000"
+ 2456 0278 666C6F61 		.ascii	"float\000"
  2456      7400
  2457              	.LASF54:
- 2458 026c 4144435F 		.ascii	"ADC_SAR_1_initVar\000"
+ 2458 027e 4144435F 		.ascii	"ADC_SAR_1_initVar\000"
  2458      5341525F 
  2458      315F696E 
  2458      69745661 
  2458      7200
  2459              	.LASF32:
- 2460 027e 706F7765 		.ascii	"power\000"
+ 2460 0290 706F7765 		.ascii	"power\000"
  2460      7200
  2461              	.LASF22:
- 2462 0284 72656738 		.ascii	"reg8\000"
+ 2462 0296 72656738 		.ascii	"reg8\000"
  2462      00
  2463              	.LASF59:
- 2464 0289 43794861 		.ascii	"CyHalt\000"
+ 2464 029b 43794861 		.ascii	"CyHalt\000"
  2464      6C7400
  2465              	.LASF4:
- 2466 0290 756E7369 		.ascii	"unsigned char\000"
+ 2466 02a2 756E7369 		.ascii	"unsigned char\000"
  2466      676E6564 
  2466      20636861 
  2466      7200
  2467              	.LASF47:
- 2468 029e 4144435F 		.ascii	"ADC_SAR_1_CountsTo_mVolts\000"
+ 2468 02b0 4144435F 		.ascii	"ADC_SAR_1_CountsTo_mVolts\000"
  2468      5341525F 
  2468      315F436F 
  2468      756E7473 
  2468      546F5F6D 
  2469              	.LASF5:
- 2470 02b8 73686F72 		.ascii	"short int\000"
+ 2470 02ca 73686F72 		.ascii	"short int\000"
  2470      7420696E 
  2470      7400
  2471              	.LASF45:
- 2472 02c2 61646347 		.ascii	"adcGain\000"
+ 2472 02d4 61646347 		.ascii	"adcGain\000"
  2472      61696E00 
  2473              	.LASF28:
- 2474 02ca 4144435F 		.ascii	"ADC_SAR_1_Enable\000"
+ 2474 02dc 4144435F 		.ascii	"ADC_SAR_1_Enable\000"
  2474      5341525F 
  2474      315F456E 
  2474      61626C65 
  2474      00
  2475              	.LASF46:
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 63
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 63
 
 
- 2476 02db 4144435F 		.ascii	"ADC_SAR_1_SetScaledGain\000"
+ 2476 02ed 4144435F 		.ascii	"ADC_SAR_1_SetScaledGain\000"
  2476      5341525F 
  2476      315F5365 
  2476      74536361 
  2476      6C656447 
  2477              	.LASF66:
- 2478 02f3 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 2478 0305 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
  2478      43313120 
  2478      352E342E 
  2478      31203230 
  2478      31363036 
- 2479 0326 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 2479 0338 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
  2479      20726576 
  2479      6973696F 
  2479      6E203233 
  2479      37373135 
- 2480 0359 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 2480 036b 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
  2480      66756E63 
  2480      74696F6E 
  2480      2D736563 
  2480      74696F6E 
  2481              	.LASF41:
- 2482 0381 4144435F 		.ascii	"ADC_SAR_1_GetResult16\000"
+ 2482 0393 4144435F 		.ascii	"ADC_SAR_1_GetResult16\000"
  2482      5341525F 
  2482      315F4765 
  2482      74526573 
  2482      756C7431 
  2483              	.LASF31:
- 2484 0397 7265736F 		.ascii	"resolution\000"
+ 2484 03a9 7265736F 		.ascii	"resolution\000"
  2484      6C757469 
  2484      6F6E00
  2485              	.LASF67:
- 2486 03a2 47656E65 		.ascii	"Generated_Source\\PSoC5\\ADC_SAR_1.c\000"
+ 2486 03b4 47656E65 		.ascii	"Generated_Source\\PSoC5\\ADC_SAR_1.c\000"
  2486      72617465 
  2486      645F536F 
  2486      75726365 
  2486      5C50536F 
  2487              	.LASF11:
- 2488 03c5 63686172 		.ascii	"char\000"
+ 2488 03d7 63686172 		.ascii	"char\000"
  2488      00
  2489              	.LASF52:
- 2490 03ca 4144435F 		.ascii	"ADC_SAR_1_CountsTo_Volts\000"
+ 2490 03dc 4144435F 		.ascii	"ADC_SAR_1_CountsTo_Volts\000"
  2490      5341525F 
  2490      315F436F 
  2490      756E7473 
  2490      546F5F56 
  2491              	.LASF43:
- 2492 03e3 6F666673 		.ascii	"offset\000"
+ 2492 03f5 6F666673 		.ascii	"offset\000"
  2492      657400
  2493              	.LASF37:
- 2494 03ea 4144435F 		.ascii	"ADC_SAR_1_StopConvert\000"
+ 2494 03fc 4144435F 		.ascii	"ADC_SAR_1_StopConvert\000"
  2494      5341525F 
  2494      315F5374 
  2494      6F70436F 
  2494      6E766572 
  2495              	.LASF48:
- 2496 0400 61646343 		.ascii	"adcCounts\000"
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 64
+ 2496 0412 61646343 		.ascii	"adcCounts\000"
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 64
 
 
  2496      6F756E74 
  2496      7300
  2497              	.LASF27:
- 2498 040a 656E6162 		.ascii	"enableInterrupts\000"
+ 2498 041c 656E6162 		.ascii	"enableInterrupts\000"
  2498      6C65496E 
  2498      74657272 
  2498      75707473 
  2498      00
  2499              	.LASF39:
- 2500 041b 73746174 		.ascii	"status\000"
+ 2500 042d 73746174 		.ascii	"status\000"
  2500      757300
  2501              	.LASF40:
- 2502 0422 4144435F 		.ascii	"ADC_SAR_1_IsEndConversion\000"
+ 2502 0434 4144435F 		.ascii	"ADC_SAR_1_IsEndConversion\000"
  2502      5341525F 
  2502      315F4973 
  2502      456E6443 
  2502      6F6E7665 
  2503              	.LASF30:
- 2504 043c 4144435F 		.ascii	"ADC_SAR_1_SetPower\000"
+ 2504 044e 4144435F 		.ascii	"ADC_SAR_1_SetPower\000"
  2504      5341525F 
  2504      315F5365 
  2504      74506F77 
  2504      657200
  2505              	.LASF44:
- 2506 044f 4144435F 		.ascii	"ADC_SAR_1_SetGain\000"
+ 2506 0461 4144435F 		.ascii	"ADC_SAR_1_SetGain\000"
  2506      5341525F 
  2506      315F5365 
  2506      74476169 
  2506      6E00
  2507              	.LASF16:
- 2508 0461 696E7431 		.ascii	"int16\000"
+ 2508 0473 696E7431 		.ascii	"int16\000"
  2508      3600
  2509              	.LASF57:
- 2510 0467 4144435F 		.ascii	"ADC_SAR_1_countsPer10Volt\000"
+ 2510 0479 4144435F 		.ascii	"ADC_SAR_1_countsPer10Volt\000"
  2510      5341525F 
  2510      315F636F 
  2510      756E7473 
  2510      50657231 
  2511              	.LASF36:
- 2512 0481 4144435F 		.ascii	"ADC_SAR_1_StartConvert\000"
+ 2512 0493 4144435F 		.ascii	"ADC_SAR_1_StartConvert\000"
  2512      5341525F 
  2512      315F5374 
  2512      61727443 
  2512      6F6E7665 
  2513              	.LASF26:
- 2514 0498 746D7052 		.ascii	"tmpReg\000"
+ 2514 04aa 746D7052 		.ascii	"tmpReg\000"
  2514      656700
  2515              	.LASF58:
- 2516 049f 4144435F 		.ascii	"ADC_SAR_1_shift\000"
+ 2516 04b1 4144435F 		.ascii	"ADC_SAR_1_shift\000"
  2516      5341525F 
  2516      315F7368 
  2516      69667400 
  2517              	.LASF29:
- 2518 04af 4144435F 		.ascii	"ADC_SAR_1_Stop\000"
+ 2518 04c1 4144435F 		.ascii	"ADC_SAR_1_Stop\000"
  2518      5341525F 
  2518      315F5374 
  2518      6F7000
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccVCm8J5.s 			page 65
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEGlX4b.s 			page 65
 
 
  2519              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

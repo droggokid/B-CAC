@@ -68,7 +68,10 @@ function GameMenu({onComponentChange}) {
 
                 if (countDownLabel <= 1)
                 {
-                    setCountDownShow(false);
+                    setCountDownLabel("GO!");
+                    setTimeout(() => {
+                        setCountDownShow(false);
+                    }, 1000);
                 }
             }
 
@@ -201,7 +204,9 @@ function GameMenu({onComponentChange}) {
         setRmTxtShow(false);
         setCountDownShow(true);
 
-        server.postStartGame(p1Initials, p2Initials, drinkType);
+        setTimeout(() => {
+            server.postStartGame(p1Initials, p2Initials, drinkType);
+        }, countDown * 1000);
 
         setTimeout(() => {
             setTimerShow(true);
@@ -258,6 +263,12 @@ function GameMenu({onComponentChange}) {
                     onclick={() => { onComponentChange("MainMenu"); }} 
                 /> 
                 </div>
+            </div>
+            <div id="debug" onClick={() => {
+                server.getTime = () => { data.recievedTime = { p1: "00:18.2", p2: "00:15.8" }; };
+                server.getGameRunning = () => { data.recievedGameRunning = false; };
+            }}>
+                O
             </div>
         </div>
     );

@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="SPI_virker\Design01\Source Files\main.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="SPI_virker\Design01\Source Files\Timer.c">
 <ExpandedNodeIds>
 <v>SPI_virker</v>
 <v>SPI_virker\Design01</v>
@@ -46,8 +46,6 @@
 <v>SPI_virker\Design01\Generated_Source\PSoC5</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
-<v>SPI_virker</v>
-<v>SPI_virker\Design01</v>
 <v>SPI_virker\Design01\TopDesign</v>
 <v>SPI_virker\Design01\Design01.cydwr</v>
 <v>SPI_virker\Design01\Design01.cydwr\Pins</v>
@@ -85,6 +83,8 @@
 <v>SPI_virker\Design01\Generated_Source\PSoC5\B2</v>
 <v>SPI_virker\Design01\Generated_Source\PSoC5\clock_1</v>
 <v>SPI_virker\Design01\Generated_Source\PSoC5\cy_boot</v>
+<v>SPI_virker\Design01\Generated_Source\PSoC5\Em_EEPROM_Dynamic</v>
+<v>SPI_virker\Design01\Generated_Source\PSoC5\ledGreen</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">

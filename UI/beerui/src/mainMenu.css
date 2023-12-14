@@ -49,8 +49,8 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  width: 250px; 
-  height: 100px; 
+  width: 500px; 
+  height: 200px; 
   margin: 30px; 
 }
 
@@ -75,4 +75,12 @@ body {
   flex-direction: row;
   justify-content: flex-start;
   column-gap: 300px;
+}
+
+#debug {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  color: #48525f;
 }

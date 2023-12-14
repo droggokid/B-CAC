@@ -12,8 +12,8 @@
 
 /* [] END OF FILE */
 #include "project.h"
-void startTidsTagning(void);
-uint32 stopTidsTagning(void);
-uint8_t convertSekunder(uint32_t time);
-uint8_t convertMinutter(uint32_t time);
-uint8_t convertMillisekunder(uint32_t time);
+void startTimer(void);
+uint32 stopTimer(void);
+uint8_t convertSeconds(uint32_t time);
+uint8_t convertMinutes(uint32_t time);
+uint8_t convertMilliseconds(uint32_t time);

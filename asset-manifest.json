@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/B-CAC/static/css/main.d4b4b1ef.css",
+    "main.js": "/B-CAC/static/js/main.0234052a.js",
+    "static/media/b-cac_logo.png": "/B-CAC/static/media/b-cac_logo.1ef4e2914016951e2478.png",
+    "index.html": "/B-CAC/index.html",
+    "main.d4b4b1ef.css.map": "/B-CAC/static/css/main.d4b4b1ef.css.map",
+    "main.0234052a.js.map": "/B-CAC/static/js/main.0234052a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d4b4b1ef.css",
+    "static/js/main.0234052a.js"
+  ]
+}

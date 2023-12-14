@@ -65,12 +65,13 @@ function MainMenu({onComponentChange}) {
             <div className="Button--bottom">
                 <Button label="Leaderboard" onClick={handleOnClickLeaderboard}/>
             </div>
-
-            {/* <Button label="POST (test)" onClick={() => {
-                // server.postInitials('{"1": "abc", "2": "def"}');
-                server.getTime();
-            }} /> */}
-
+            <div id="debug" onClick={() => {
+                server.getTareReady = () => { data.recievedTareReady = true; };
+                server.getGameReady = () => { data.recievedGameReady = true; };
+                server.getGameRunning = () => { data.recievedGameRunning = true; };
+            }}>
+                O
+            </div>            
             {renderActiveComponent()} 
         </div>
     );

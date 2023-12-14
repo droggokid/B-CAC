@@ -19,7 +19,7 @@ void InitializeSPI(void)
     
 }
 
-uint8_t modtagetSPi(void)
+uint8_t receivedSPi(void)
 {
     
     uint8_t receivedData = 0;

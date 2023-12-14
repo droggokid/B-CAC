@@ -1,0 +1,6 @@
+C:\Users\jespe\OneDrive\Dokumenter\GitHub\B-CAC\SPI_Slave\Design01.cydsn\Design01.cyprj|81cc2c28-3e65-4f33-ad88-e99bf7df82d4
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|2fb69183-a259-4473-b217-ce7b807fcfb4
+C:\Users\jespe\OneDrive\Dokumenter\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|f93e215d-6f32-4549-aed8-c469c43f3790
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|4f915f39-7a80-4761-b074-9be0bf1bb5c7
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|9734681a-394e-4348-8c12-1f4bdc6eee1b
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|bc9255c9-aa83-4288-a326-f003f6a1d399

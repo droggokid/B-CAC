@@ -12,7 +12,7 @@
 #include "project.h"
 
 void InitializeSPI(void);
-uint8_t modtagetSPi(void);
+uint8_t receivedSPi(void);
 void sendSPi(uint8_t data);
 
 

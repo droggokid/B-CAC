@@ -113,6 +113,44 @@
 <VisibleNodeIds>
 <v>SPI_virker</v>
 <v>SPI_virker\Design01</v>
+<v>SPI_virker\Design01\CortexM3</v>
+<v>SPI_virker\Design01\CortexM3\ARM_GCC_541</v>
+<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug</v>
+<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\A1.lst</v>
+<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\A2.lst</v>
+<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1.lst</v>
+<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_ExtVref.lst</v>
+<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_INT.lst</v>
+<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_IRQ.lst</v>
+<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_PM.lst</v>
+<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_theACLK.lst</v>
+<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\B1.lst</v>
+<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\B2.lst</v>
+<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\clock_1.lst</v>
+<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\FlagMotor.lst</v>
+<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\led.lst</v>
+<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\ledGreen.lst</v>
+<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\ledRed.lst</v>
+<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Loadcell.lst</v>
+<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\MISO_1.lst</v>
+<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\MOSI_1.lst</v>
+<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_ADC_in.lst</v>
+<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_1.lst</v>
+<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_1_PM.lst</v>
+<v>SPI_virker\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\SCLK_1.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>

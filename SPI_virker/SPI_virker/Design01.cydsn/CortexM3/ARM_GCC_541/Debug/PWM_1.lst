@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
   28:Generated_Source\PSoC5/PWM_1.c ****     #error PWM_v3_30 detected with a constant 0 for the enable or \
   29:Generated_Source\PSoC5/PWM_1.c ****          constant 1 for reset. This will prevent the component from operating.
   30:Generated_Source\PSoC5/PWM_1.c **** #endif /* PWM_1_PWMUDB_genblk1_ctrlreg__REMOVED */
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 2
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 2
 
 
   31:Generated_Source\PSoC5/PWM_1.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
   85:Generated_Source\PSoC5/PWM_1.c **** {
   86:Generated_Source\PSoC5/PWM_1.c ****     #if (PWM_1_UsingFixedFunction || PWM_1_UseControl)
   87:Generated_Source\PSoC5/PWM_1.c ****         uint8 ctrl;
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 3
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 3
 
 
   88:Generated_Source\PSoC5/PWM_1.c ****     #endif /* (PWM_1_UsingFixedFunction || PWM_1_UseControl) */
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  142:Generated_Source\PSoC5/PWM_1.c ****             PWM_1_WriteCompare2(PWM_1_INIT_COMPARE_VALUE2);
  143:Generated_Source\PSoC5/PWM_1.c ****         #endif /* (PWM_1_UseOneCompareMode) */
  144:Generated_Source\PSoC5/PWM_1.c **** 
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 4
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 4
 
 
  145:Generated_Source\PSoC5/PWM_1.c ****         #if (PWM_1_KillModeMinTime)
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  199:Generated_Source\PSoC5/PWM_1.c **** void PWM_1_Enable(void) 
  200:Generated_Source\PSoC5/PWM_1.c **** {
   28              		.loc 1 200 0
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 5
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 5
 
 
   29              		.cfi_startproc
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  230:Generated_Source\PSoC5/PWM_1.c **** *  has no effect on the operation of the PWM
  231:Generated_Source\PSoC5/PWM_1.c **** *
  232:Generated_Source\PSoC5/PWM_1.c **** *******************************************************************************/
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 6
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 6
 
 
  233:Generated_Source\PSoC5/PWM_1.c **** void PWM_1_Stop(void) 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  261:Generated_Source\PSoC5/PWM_1.c ****         *
  262:Generated_Source\PSoC5/PWM_1.c ****         * Return:
  263:Generated_Source\PSoC5/PWM_1.c ****         *  None
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 7
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 7
 
 
  264:Generated_Source\PSoC5/PWM_1.c ****         *
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  318:Generated_Source\PSoC5/PWM_1.c ****         * Parameters:
  319:Generated_Source\PSoC5/PWM_1.c ****         *  comparemode:  The new compare mode for the PWM output. Use the compare types
  320:Generated_Source\PSoC5/PWM_1.c ****         *                defined in the H file as input arguments.
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 8
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 8
 
 
  321:Generated_Source\PSoC5/PWM_1.c ****         *
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  375:Generated_Source\PSoC5/PWM_1.c ****     #endif /*PWM_1_CompareMode2SW */
  376:Generated_Source\PSoC5/PWM_1.c **** 
  377:Generated_Source\PSoC5/PWM_1.c **** #endif /* UseOneCompareMode */
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 9
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 9
 
 
  378:Generated_Source\PSoC5/PWM_1.c **** 
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  407:Generated_Source\PSoC5/PWM_1.c ****     }
  408:Generated_Source\PSoC5/PWM_1.c **** 
  409:Generated_Source\PSoC5/PWM_1.c **** 
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 10
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 10
 
 
  410:Generated_Source\PSoC5/PWM_1.c ****     /*******************************************************************************
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  435:Generated_Source\PSoC5/PWM_1.c **** 
  436:Generated_Source\PSoC5/PWM_1.c ****     #if (PWM_1_UseStatus)
  437:Generated_Source\PSoC5/PWM_1.c **** 
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 11
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 11
 
 
  438:Generated_Source\PSoC5/PWM_1.c **** 
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  486:Generated_Source\PSoC5/PWM_1.c ****     #else
  487:Generated_Source\PSoC5/PWM_1.c ****         CY_SET_REG8(PWM_1_PERIOD_LSB_PTR, period);
  140              		.loc 1 487 0
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 12
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 12
 
 
  141 0000 014B     		ldr	r3, .L14
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  524:Generated_Source\PSoC5/PWM_1.c **** 
  525:Generated_Source\PSoC5/PWM_1.c ****         #if (PWM_1_PWMMode == PWM_1__B_PWM__DITHER)
  526:Generated_Source\PSoC5/PWM_1.c ****             #if(PWM_1_UsingFixedFunction)
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 13
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 13
 
 
  527:Generated_Source\PSoC5/PWM_1.c ****                 CY_SET_REG16(PWM_1_COMPARE2_LSB_PTR, (uint16)(compare + 1u));
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  178              		.global	PWM_1_WriteCompare2
  179              		.thumb
  180              		.thumb_func
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 14
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 14
 
 
  181              		.type	PWM_1_WriteCompare2, %function
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  206              		.type	PWM_1_SetInterruptMode, %function
  207              	PWM_1_SetInterruptMode:
  208              	.LFB10:
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 15
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 15
 
 
  591:Generated_Source\PSoC5/PWM_1.c ****         #endif /* (PWM_1_UsingFixedFunction) */
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  645:Generated_Source\PSoC5/PWM_1.c ****     *  Dead Band Counts
  646:Generated_Source\PSoC5/PWM_1.c ****     *
  647:Generated_Source\PSoC5/PWM_1.c ****     *******************************************************************************/
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 16
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 16
 
 
  648:Generated_Source\PSoC5/PWM_1.c ****     uint8 PWM_1_ReadDeadTime(void) 
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  224              	.LFE10:
  225              		.size	PWM_1_SetInterruptMode, .-PWM_1_SetInterruptMode
  226              		.section	.text.PWM_1_ReadStatusRegister,"ax",%progbits
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 17
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 17
 
 
  227              		.align	2
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  253              		.global	PWM_1_ReadControlRegister
  254              		.thumb
  255              		.thumb_func
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 18
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 18
 
 
  256              		.type	PWM_1_ReadControlRegister, %function
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  281              		.thumb_func
  282              		.type	PWM_1_WriteControlRegister, %function
  283              	PWM_1_WriteControlRegister:
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 19
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 19
 
 
  284              	.LFB13:
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  772:Generated_Source\PSoC5/PWM_1.c **** 
  773:Generated_Source\PSoC5/PWM_1.c **** #if (!PWM_1_UsingFixedFunction)
  774:Generated_Source\PSoC5/PWM_1.c **** 
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 20
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 20
 
 
  775:Generated_Source\PSoC5/PWM_1.c **** 
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  343              		.loc 1 455 0
  344 0002 01E0     		b	.L38
  345              	.L39:
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 21
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 21
 
 
  457:Generated_Source\PSoC5/PWM_1.c ****             }
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  392 001c FFF7FEFF 		bl	PWM_1_WriteCounter
  393              	.LVL11:
  136:Generated_Source\PSoC5/PWM_1.c **** 
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 22
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 22
 
 
  394              		.loc 1 136 0
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  440              		.loc 1 56 0
  441              		.cfi_startproc
  442              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 23
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 23
 
 
  443              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  808:Generated_Source\PSoC5/PWM_1.c ****     *
  809:Generated_Source\PSoC5/PWM_1.c ****     * Parameters:
  810:Generated_Source\PSoC5/PWM_1.c ****     *  None
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 24
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 24
 
 
  811:Generated_Source\PSoC5/PWM_1.c ****     *
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  498              		.global	PWM_1_ReadCompare2
  499              		.thumb
  500              		.thumb_func
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 25
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 25
 
 
  501              		.type	PWM_1_ReadCompare2, %function
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  872:Generated_Source\PSoC5/PWM_1.c **** ********************************************************************************
  873:Generated_Source\PSoC5/PWM_1.c **** *
  874:Generated_Source\PSoC5/PWM_1.c **** * Summary:
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 26
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 26
 
 
  875:Generated_Source\PSoC5/PWM_1.c **** *  Reads the period value used by the PWM hardware.
@@ -1553,12 +1553,12 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  561 0006 00000000 		.4byte	.Ldebug_abbrev0
  562 000a 04       		.byte	0x4
  563 000b 01       		.uleb128 0x1
- 564 000c 0E010000 		.4byte	.LASF43
+ 564 000c CB000000 		.4byte	.LASF43
  565 0010 0C       		.byte	0xc
- 566 0011 A8020000 		.4byte	.LASF44
- 567 0015 70000000 		.4byte	.LASF45
+ 566 0011 BA020000 		.4byte	.LASF44
+ 567 0015 F3010000 		.4byte	.LASF45
  568 0019 00000000 		.4byte	.Ldebug_ranges0+0
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 27
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 27
 
 
  569 001d 00000000 		.4byte	0
@@ -1566,15 +1566,15 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  571 0025 02       		.uleb128 0x2
  572 0026 01       		.byte	0x1
  573 0027 06       		.byte	0x6
- 574 0028 5B030000 		.4byte	.LASF0
+ 574 0028 6D030000 		.4byte	.LASF0
  575 002c 02       		.uleb128 0x2
  576 002d 01       		.byte	0x1
  577 002e 08       		.byte	0x8
- 578 002f 00010000 		.4byte	.LASF1
+ 578 002f BD000000 		.4byte	.LASF1
  579 0033 02       		.uleb128 0x2
  580 0034 02       		.byte	0x2
  581 0035 05       		.byte	0x5
- 582 0036 2C020000 		.4byte	.LASF2
+ 582 0036 E9010000 		.4byte	.LASF2
  583 003a 02       		.uleb128 0x2
  584 003b 02       		.byte	0x2
  585 003c 07       		.byte	0x7
@@ -1582,19 +1582,19 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  587 0041 02       		.uleb128 0x2
  588 0042 04       		.byte	0x4
  589 0043 05       		.byte	0x5
- 590 0044 41030000 		.4byte	.LASF4
+ 590 0044 53030000 		.4byte	.LASF4
  591 0048 02       		.uleb128 0x2
  592 0049 04       		.byte	0x4
  593 004a 07       		.byte	0x7
- 594 004b B2010000 		.4byte	.LASF5
+ 594 004b 6F010000 		.4byte	.LASF5
  595 004f 02       		.uleb128 0x2
  596 0050 08       		.byte	0x8
  597 0051 05       		.byte	0x5
- 598 0052 DC020000 		.4byte	.LASF6
+ 598 0052 EE020000 		.4byte	.LASF6
  599 0056 02       		.uleb128 0x2
  600 0057 08       		.byte	0x8
  601 0058 07       		.byte	0x7
- 602 0059 E9000000 		.4byte	.LASF7
+ 602 0059 A6000000 		.4byte	.LASF7
  603 005d 03       		.uleb128 0x3
  604 005e 04       		.byte	0x4
  605 005f 05       		.byte	0x5
@@ -1602,42 +1602,42 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  607 0064 02       		.uleb128 0x2
  608 0065 04       		.byte	0x4
  609 0066 07       		.byte	0x7
- 610 0067 85020000 		.4byte	.LASF8
+ 610 0067 97020000 		.4byte	.LASF8
  611 006b 04       		.uleb128 0x4
- 612 006c C4010000 		.4byte	.LASF12
+ 612 006c 81010000 		.4byte	.LASF12
  613 0070 02       		.byte	0x2
- 614 0071 E701     		.2byte	0x1e7
+ 614 0071 E901     		.2byte	0x1e9
  615 0073 2C000000 		.4byte	0x2c
  616 0077 02       		.uleb128 0x2
  617 0078 04       		.byte	0x4
  618 0079 04       		.byte	0x4
- 619 007a DB000000 		.4byte	.LASF9
+ 619 007a 98000000 		.4byte	.LASF9
  620 007e 02       		.uleb128 0x2
  621 007f 08       		.byte	0x8
  622 0080 04       		.byte	0x4
- 623 0081 02020000 		.4byte	.LASF10
+ 623 0081 BF010000 		.4byte	.LASF10
  624 0085 02       		.uleb128 0x2
  625 0086 01       		.byte	0x1
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 28
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 28
 
 
  626 0087 08       		.byte	0x8
- 627 0088 4A030000 		.4byte	.LASF11
+ 627 0088 5C030000 		.4byte	.LASF11
  628 008c 04       		.uleb128 0x4
- 629 008d 9C010000 		.4byte	.LASF13
+ 629 008d 59010000 		.4byte	.LASF13
  630 0091 02       		.byte	0x2
- 631 0092 9102     		.2byte	0x291
+ 631 0092 9302     		.2byte	0x293
  632 0094 98000000 		.4byte	0x98
  633 0098 05       		.uleb128 0x5
  634 0099 6B000000 		.4byte	0x6b
  635 009d 02       		.uleb128 0x2
  636 009e 08       		.byte	0x8
  637 009f 04       		.byte	0x4
- 638 00a0 4F030000 		.4byte	.LASF14
+ 638 00a0 61030000 		.4byte	.LASF14
  639 00a4 02       		.uleb128 0x2
  640 00a5 04       		.byte	0x4
  641 00a6 07       		.byte	0x7
- 642 00a7 D3020000 		.4byte	.LASF15
+ 642 00a7 E5020000 		.4byte	.LASF15
  643 00ab 06       		.uleb128 0x6
  644 00ac 00000000 		.4byte	.LASF16
  645 00b0 01       		.byte	0x1
@@ -1647,7 +1647,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  649 00ba 01       		.uleb128 0x1
  650 00bb 9C       		.byte	0x9c
  651 00bc 06       		.uleb128 0x6
- 652 00bd 36030000 		.4byte	.LASF17
+ 652 00bd 48030000 		.4byte	.LASF17
  653 00c1 01       		.byte	0x1
  654 00c2 E9       		.byte	0xe9
  655 00c3 00000000 		.4byte	.LFB3
@@ -1664,7 +1664,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  666 00de 9C       		.byte	0x9c
  667 00df F2000000 		.4byte	0xf2
  668 00e3 08       		.uleb128 0x8
- 669 00e4 E1000000 		.4byte	.LASF20
+ 669 00e4 9E000000 		.4byte	.LASF20
  670 00e8 01       		.byte	0x1
  671 00e9 9301     		.2byte	0x193
  672 00eb 6B000000 		.4byte	0x6b
@@ -1672,19 +1672,19 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  674 00f0 50       		.byte	0x50
  675 00f1 00       		.byte	0
  676 00f2 09       		.uleb128 0x9
- 677 00f3 24030000 		.4byte	.LASF27
+ 677 00f3 36030000 		.4byte	.LASF27
  678 00f7 01       		.byte	0x1
  679 00f8 A901     		.2byte	0x1a9
  680 00fa 6B000000 		.4byte	0x6b
  681 00fe 00000000 		.4byte	.LFB5
  682 0102 14000000 		.4byte	.LFE5-.LFB5
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 29
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 29
 
 
  683 0106 01       		.uleb128 0x1
  684 0107 9C       		.byte	0x9c
  685 0108 07       		.uleb128 0x7
- 686 0109 12030000 		.4byte	.LASF19
+ 686 0109 24030000 		.4byte	.LASF19
  687 010d 01       		.byte	0x1
  688 010e E201     		.2byte	0x1e2
  689 0110 00000000 		.4byte	.LFB7
@@ -1701,7 +1701,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  700 012b 50       		.byte	0x50
  701 012c 00       		.byte	0
  702 012d 07       		.uleb128 0x7
- 703 012e B3000000 		.4byte	.LASF22
+ 703 012e 70000000 		.4byte	.LASF22
  704 0132 01       		.byte	0x1
  705 0133 2B02     		.2byte	0x22b
  706 0135 00000000 		.4byte	.LFB8
@@ -1710,7 +1710,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  709 013e 9C       		.byte	0x9c
  710 013f 52010000 		.4byte	0x152
  711 0143 08       		.uleb128 0x8
- 712 0144 67030000 		.4byte	.LASF23
+ 712 0144 79030000 		.4byte	.LASF23
  713 0148 01       		.byte	0x1
  714 0149 2B02     		.2byte	0x22b
  715 014b 6B000000 		.4byte	0x6b
@@ -1718,7 +1718,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  717 0150 50       		.byte	0x50
  718 0151 00       		.byte	0
  719 0152 07       		.uleb128 0x7
- 720 0153 C7000000 		.4byte	.LASF24
+ 720 0153 84000000 		.4byte	.LASF24
  721 0157 01       		.byte	0x1
  722 0158 4802     		.2byte	0x248
  723 015a 00000000 		.4byte	.LFB9
@@ -1727,7 +1727,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  726 0163 9C       		.byte	0x9c
  727 0164 77010000 		.4byte	0x177
  728 0168 08       		.uleb128 0x8
- 729 0169 67030000 		.4byte	.LASF23
+ 729 0169 79030000 		.4byte	.LASF23
  730 016d 01       		.byte	0x1
  731 016e 4802     		.2byte	0x248
  732 0170 6B000000 		.4byte	0x6b
@@ -1735,10 +1735,10 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  734 0175 50       		.byte	0x50
  735 0176 00       		.byte	0
  736 0177 07       		.uleb128 0x7
- 737 0178 D2010000 		.4byte	.LASF25
+ 737 0178 8F010000 		.4byte	.LASF25
  738 017c 01       		.byte	0x1
  739 017d AC02     		.2byte	0x2ac
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 30
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 30
 
 
  740 017f 00000000 		.4byte	.LFB10
@@ -1747,7 +1747,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  743 0188 9C       		.byte	0x9c
  744 0189 9C010000 		.4byte	0x19c
  745 018d 08       		.uleb128 0x8
- 746 018e 04030000 		.4byte	.LASF26
+ 746 018e 16030000 		.4byte	.LASF26
  747 0192 01       		.byte	0x1
  748 0193 AC02     		.2byte	0x2ac
  749 0195 6B000000 		.4byte	0x6b
@@ -1755,7 +1755,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  751 019a 50       		.byte	0x50
  752 019b 00       		.byte	0
  753 019c 09       		.uleb128 0x9
- 754 019d E9010000 		.4byte	.LASF28
+ 754 019d A6010000 		.4byte	.LASF28
  755 01a1 01       		.byte	0x1
  756 01a2 C702     		.2byte	0x2c7
  757 01a4 6B000000 		.4byte	0x6b
@@ -1764,7 +1764,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  760 01b0 01       		.uleb128 0x1
  761 01b1 9C       		.byte	0x9c
  762 01b2 0A       		.uleb128 0xa
- 763 01b3 EA020000 		.4byte	.LASF46
+ 763 01b3 FC020000 		.4byte	.LASF46
  764 01b7 01       		.byte	0x1
  765 01b8 E102     		.2byte	0x2e1
  766 01ba 6B000000 		.4byte	0x6b
@@ -1774,7 +1774,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  770 01c7 9C       		.byte	0x9c
  771 01c8 DB010000 		.4byte	0x1db
  772 01cc 0B       		.uleb128 0xb
- 773 01cd C7020000 		.4byte	.LASF34
+ 773 01cd D9020000 		.4byte	.LASF34
  774 01d1 01       		.byte	0x1
  775 01d2 E302     		.2byte	0x2e3
  776 01d4 6B000000 		.4byte	0x6b
@@ -1782,7 +1782,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  778 01d9 50       		.byte	0x50
  779 01da 00       		.byte	0
  780 01db 07       		.uleb128 0x7
- 781 01dc 48020000 		.4byte	.LASF29
+ 781 01dc 5A020000 		.4byte	.LASF29
  782 01e0 01       		.byte	0x1
  783 01e1 FD02     		.2byte	0x2fd
  784 01e3 00000000 		.4byte	.LFB13
@@ -1791,18 +1791,18 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  787 01ec 9C       		.byte	0x9c
  788 01ed 00020000 		.4byte	0x200
  789 01f1 08       		.uleb128 0x8
- 790 01f2 CA010000 		.4byte	.LASF30
+ 790 01f2 87010000 		.4byte	.LASF30
  791 01f6 01       		.byte	0x1
  792 01f7 FD02     		.2byte	0x2fd
  793 01f9 6B000000 		.4byte	0x6b
  794 01fd 01       		.uleb128 0x1
  795 01fe 50       		.byte	0x50
  796 01ff 00       		.byte	0
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 31
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 31
 
 
  797 0200 09       		.uleb128 0x9
- 798 0201 36020000 		.4byte	.LASF31
+ 798 0201 48020000 		.4byte	.LASF31
  799 0205 01       		.byte	0x1
  800 0206 1603     		.2byte	0x316
  801 0208 6B000000 		.4byte	0x6b
@@ -1827,7 +1827,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  820 023a 9C010000 		.4byte	0x19c
  821 023e 00       		.byte	0
  822 023f 0D       		.uleb128 0xd
- 823 0240 63020000 		.4byte	.LASF33
+ 823 0240 75020000 		.4byte	.LASF33
  824 0244 01       		.byte	0x1
  825 0245 54       		.byte	0x54
  826 0246 00000000 		.4byte	.LFB1
@@ -1836,13 +1836,13 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  829 024f 9C       		.byte	0x9c
  830 0250 EF020000 		.4byte	0x2ef
  831 0254 0E       		.uleb128 0xe
- 832 0255 CE020000 		.4byte	.LASF35
+ 832 0255 E0020000 		.4byte	.LASF35
  833 0259 01       		.byte	0x1
  834 025a 57       		.byte	0x57
  835 025b 6B000000 		.4byte	0x6b
  836 025f 00000000 		.4byte	.LLST0
  837 0263 0E       		.uleb128 0xe
- 838 0264 09020000 		.4byte	.LASF36
+ 838 0264 C6010000 		.4byte	.LASF36
  839 0268 01       		.byte	0x1
  840 0269 5D       		.byte	0x5d
  841 026a 6B000000 		.4byte	0x6b
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  851 0283 08       		.byte	0x8
  852 0284 64       		.byte	0x64
  853 0285 00       		.byte	0
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 32
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 32
 
 
  854 0286 0F       		.uleb128 0xf
@@ -1913,12 +1913,12 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  903 02ea 16020000 		.4byte	0x216
  904 02ee 00       		.byte	0
  905 02ef 0D       		.uleb128 0xd
- 906 02f0 6F030000 		.4byte	.LASF37
+ 906 02f0 81030000 		.4byte	.LASF37
  907 02f4 01       		.byte	0x1
  908 02f5 37       		.byte	0x37
  909 02f6 00000000 		.4byte	.LFB0
  910 02fa 1C000000 		.4byte	.LFE0-.LFB0
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 33
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 33
 
 
  911 02fe 01       		.uleb128 0x1
@@ -1950,7 +1950,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  937 0341 01       		.uleb128 0x1
  938 0342 9C       		.byte	0x9c
  939 0343 09       		.uleb128 0x9
- 940 0344 A1010000 		.4byte	.LASF40
+ 940 0344 5E010000 		.4byte	.LASF40
  941 0348 01       		.byte	0x1
  942 0349 7403     		.2byte	0x374
  943 034b 6B000000 		.4byte	0x6b
@@ -1959,7 +1959,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  946 0357 01       		.uleb128 0x1
  947 0358 9C       		.byte	0x9c
  948 0359 11       		.uleb128 0x11
- 949 035a 1E020000 		.4byte	.LASF47
+ 949 035a DB010000 		.4byte	.LASF47
  950 035e 01       		.byte	0x1
  951 035f 20       		.byte	0x20
  952 0360 6B000000 		.4byte	0x6b
@@ -1967,18 +1967,18 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  954 0365 03       		.byte	0x3
  955 0366 00000000 		.4byte	PWM_1_initVar
  956 036a 12       		.uleb128 0x12
- 957 036b 6E020000 		.4byte	.LASF41
- 958 036f 6E020000 		.4byte	.LASF41
+ 957 036b 80020000 		.4byte	.LASF41
+ 958 036f 80020000 		.4byte	.LASF41
  959 0373 03       		.byte	0x3
  960 0374 7D       		.byte	0x7d
  961 0375 12       		.uleb128 0x12
- 962 0376 92020000 		.4byte	.LASF42
- 963 037a 92020000 		.4byte	.LASF42
+ 962 0376 A4020000 		.4byte	.LASF42
+ 963 037a A4020000 		.4byte	.LASF42
  964 037e 03       		.byte	0x3
  965 037f 7E       		.byte	0x7e
  966 0380 00       		.byte	0
  967              		.section	.debug_abbrev,"",%progbits
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 34
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 34
 
 
  968              	.Ldebug_abbrev0:
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  1022 0035 00       		.byte	0
  1023 0036 05       		.uleb128 0x5
  1024 0037 35       		.uleb128 0x35
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 35
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 35
 
 
  1025 0038 00       		.byte	0
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  1079 0070 05       		.uleb128 0x5
  1080 0071 00       		.byte	0
  1081 0072 03       		.uleb128 0x3
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 36
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 36
 
 
  1082 0073 0E       		.uleb128 0xe
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  1136 00aa 06       		.uleb128 0x6
  1137 00ab 40       		.uleb128 0x40
  1138 00ac 18       		.uleb128 0x18
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 37
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 37
 
 
  1139 00ad 9742     		.uleb128 0x2117
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  1193 00e7 00       		.byte	0
  1194 00e8 0E       		.uleb128 0xe
  1195 00e9 34       		.uleb128 0x34
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 38
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 38
 
 
  1196 00ea 00       		.byte	0
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  1250 0125 19       		.uleb128 0x19
  1251 0126 3C       		.uleb128 0x3c
  1252 0127 19       		.uleb128 0x19
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 39
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 39
 
 
  1253 0128 6E       		.uleb128 0x6e
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  1307 005c 0C000000 		.4byte	.LFE12-.LFB12
  1308 0060 00000000 		.4byte	.LFB13
  1309 0064 0C000000 		.4byte	.LFE13-.LFB13
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 40
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 40
 
 
  1310 0068 00000000 		.4byte	.LFB14
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  1364 0090 00000000 		.4byte	0
  1365 0094 00000000 		.4byte	0
  1366              		.section	.debug_line,"",%progbits
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 41
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 41
 
 
  1367              	.Ldebug_line0:
@@ -2444,226 +2444,226 @@ ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 1
  1382      7369676E 
  1382      65642069 
  1382      6E7400
- 1383              	.LASF45:
- 1384 0070 433A5C55 		.ascii	"C:\\UNI_FILES\\GitPROJEKT\\B-CAC\\SPI_virker\\SPI_v"
- 1384      4E495F46 
- 1384      494C4553 
- 1384      5C476974 
- 1384      50524F4A 
- 1385 009e 69726B65 		.ascii	"irker\\Design01.cydsn\000"
- 1385      725C4465 
- 1385      7369676E 
- 1385      30312E63 
- 1385      7964736E 
- 1386              	.LASF22:
- 1387 00b3 50574D5F 		.ascii	"PWM_1_WriteCompare1\000"
- 1387      315F5772 
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 42
+ 1383              	.LASF22:
+ 1384 0070 50574D5F 		.ascii	"PWM_1_WriteCompare1\000"
+ 1384      315F5772 
+ 1384      69746543 
+ 1384      6F6D7061 
+ 1384      72653100 
+ 1385              	.LASF24:
+ 1386 0084 50574D5F 		.ascii	"PWM_1_WriteCompare2\000"
+ 1386      315F5772 
+ 1386      69746543 
+ 1386      6F6D7061 
+ 1386      72653200 
+ 1387              	.LASF9:
+ 1388 0098 666C6F61 		.ascii	"float\000"
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 42
 
 
- 1387      69746543 
- 1387      6F6D7061 
- 1387      72653100 
- 1388              	.LASF24:
- 1389 00c7 50574D5F 		.ascii	"PWM_1_WriteCompare2\000"
- 1389      315F5772 
- 1389      69746543 
- 1389      6F6D7061 
- 1389      72653200 
- 1390              	.LASF9:
- 1391 00db 666C6F61 		.ascii	"float\000"
- 1391      7400
- 1392              	.LASF20:
- 1393 00e1 636F756E 		.ascii	"counter\000"
- 1393      74657200 
- 1394              	.LASF7:
- 1395 00e9 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1395      206C6F6E 
- 1395      6720756E 
- 1395      7369676E 
- 1395      65642069 
- 1396              	.LASF1:
- 1397 0100 756E7369 		.ascii	"unsigned char\000"
- 1397      676E6564 
- 1397      20636861 
- 1397      7200
- 1398              	.LASF43:
- 1399 010e 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 1399      43313120 
- 1399      352E342E 
- 1399      31203230 
- 1399      31363036 
- 1400 0141 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 1400      20726576 
- 1400      6973696F 
- 1400      6E203233 
- 1400      37373135 
- 1401 0174 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 1401      66756E63 
- 1401      74696F6E 
- 1401      2D736563 
- 1401      74696F6E 
- 1402              	.LASF13:
- 1403 019c 72656738 		.ascii	"reg8\000"
- 1403      00
- 1404              	.LASF40:
- 1405 01a1 50574D5F 		.ascii	"PWM_1_ReadPeriod\000"
- 1405      315F5265 
- 1405      61645065 
- 1405      72696F64 
- 1405      00
- 1406              	.LASF5:
- 1407 01b2 6C6F6E67 		.ascii	"long unsigned int\000"
- 1407      20756E73 
- 1407      69676E65 
- 1407      6420696E 
- 1407      7400
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 43
+ 1388      7400
+ 1389              	.LASF20:
+ 1390 009e 636F756E 		.ascii	"counter\000"
+ 1390      74657200 
+ 1391              	.LASF7:
+ 1392 00a6 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1392      206C6F6E 
+ 1392      6720756E 
+ 1392      7369676E 
+ 1392      65642069 
+ 1393              	.LASF1:
+ 1394 00bd 756E7369 		.ascii	"unsigned char\000"
+ 1394      676E6564 
+ 1394      20636861 
+ 1394      7200
+ 1395              	.LASF43:
+ 1396 00cb 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1396      43313120 
+ 1396      352E342E 
+ 1396      31203230 
+ 1396      31363036 
+ 1397 00fe 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1397      20726576 
+ 1397      6973696F 
+ 1397      6E203233 
+ 1397      37373135 
+ 1398 0131 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1398      66756E63 
+ 1398      74696F6E 
+ 1398      2D736563 
+ 1398      74696F6E 
+ 1399              	.LASF13:
+ 1400 0159 72656738 		.ascii	"reg8\000"
+ 1400      00
+ 1401              	.LASF40:
+ 1402 015e 50574D5F 		.ascii	"PWM_1_ReadPeriod\000"
+ 1402      315F5265 
+ 1402      61645065 
+ 1402      72696F64 
+ 1402      00
+ 1403              	.LASF5:
+ 1404 016f 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1404      20756E73 
+ 1404      69676E65 
+ 1404      6420696E 
+ 1404      7400
+ 1405              	.LASF12:
+ 1406 0181 75696E74 		.ascii	"uint8\000"
+ 1406      3800
+ 1407              	.LASF30:
+ 1408 0187 636F6E74 		.ascii	"control\000"
+ 1408      726F6C00 
+ 1409              	.LASF25:
+ 1410 018f 50574D5F 		.ascii	"PWM_1_SetInterruptMode\000"
+ 1410      315F5365 
+ 1410      74496E74 
+ 1410      65727275 
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 43
 
 
- 1408              	.LASF12:
- 1409 01c4 75696E74 		.ascii	"uint8\000"
- 1409      3800
- 1410              	.LASF30:
- 1411 01ca 636F6E74 		.ascii	"control\000"
- 1411      726F6C00 
- 1412              	.LASF25:
- 1413 01d2 50574D5F 		.ascii	"PWM_1_SetInterruptMode\000"
- 1413      315F5365 
- 1413      74496E74 
- 1413      65727275 
- 1413      70744D6F 
- 1414              	.LASF28:
- 1415 01e9 50574D5F 		.ascii	"PWM_1_ReadStatusRegister\000"
- 1415      315F5265 
- 1415      61645374 
- 1415      61747573 
- 1415      52656769 
- 1416              	.LASF10:
- 1417 0202 646F7562 		.ascii	"double\000"
- 1417      6C6500
- 1418              	.LASF36:
- 1419 0209 50574D5F 		.ascii	"PWM_1_interruptState\000"
- 1419      315F696E 
- 1419      74657272 
- 1419      75707453 
- 1419      74617465 
- 1420              	.LASF47:
- 1421 021e 50574D5F 		.ascii	"PWM_1_initVar\000"
- 1421      315F696E 
- 1421      69745661 
- 1421      7200
- 1422              	.LASF2:
- 1423 022c 73686F72 		.ascii	"short int\000"
- 1423      7420696E 
- 1423      7400
+ 1410      70744D6F 
+ 1411              	.LASF28:
+ 1412 01a6 50574D5F 		.ascii	"PWM_1_ReadStatusRegister\000"
+ 1412      315F5265 
+ 1412      61645374 
+ 1412      61747573 
+ 1412      52656769 
+ 1413              	.LASF10:
+ 1414 01bf 646F7562 		.ascii	"double\000"
+ 1414      6C6500
+ 1415              	.LASF36:
+ 1416 01c6 50574D5F 		.ascii	"PWM_1_interruptState\000"
+ 1416      315F696E 
+ 1416      74657272 
+ 1416      75707453 
+ 1416      74617465 
+ 1417              	.LASF47:
+ 1418 01db 50574D5F 		.ascii	"PWM_1_initVar\000"
+ 1418      315F696E 
+ 1418      69745661 
+ 1418      7200
+ 1419              	.LASF2:
+ 1420 01e9 73686F72 		.ascii	"short int\000"
+ 1420      7420696E 
+ 1420      7400
+ 1421              	.LASF45:
+ 1422 01f3 433A5C55 		.ascii	"C:\\Users\\deniz\\OneDrive\\Dokumenter\\GitHub\\B-C"
+ 1422      73657273 
+ 1422      5C64656E 
+ 1422      697A5C4F 
+ 1422      6E654472 
+ 1423 0220 41435C53 		.ascii	"AC\\SPI_virker\\SPI_virker\\Design01.cydsn\000"
+ 1423      50495F76 
+ 1423      69726B65 
+ 1423      725C5350 
+ 1423      495F7669 
  1424              	.LASF31:
- 1425 0236 50574D5F 		.ascii	"PWM_1_ReadCapture\000"
+ 1425 0248 50574D5F 		.ascii	"PWM_1_ReadCapture\000"
  1425      315F5265 
  1425      61644361 
  1425      70747572 
  1425      6500
  1426              	.LASF29:
- 1427 0248 50574D5F 		.ascii	"PWM_1_WriteControlRegister\000"
+ 1427 025a 50574D5F 		.ascii	"PWM_1_WriteControlRegister\000"
  1427      315F5772 
  1427      69746543 
  1427      6F6E7472 
  1427      6F6C5265 
  1428              	.LASF33:
- 1429 0263 50574D5F 		.ascii	"PWM_1_Init\000"
+ 1429 0275 50574D5F 		.ascii	"PWM_1_Init\000"
  1429      315F496E 
  1429      697400
  1430              	.LASF41:
- 1431 026e 4379456E 		.ascii	"CyEnterCriticalSection\000"
+ 1431 0280 4379456E 		.ascii	"CyEnterCriticalSection\000"
  1431      74657243 
  1431      72697469 
  1431      63616C53 
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 44
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 44
 
 
  1431      65637469 
  1432              	.LASF8:
- 1433 0285 756E7369 		.ascii	"unsigned int\000"
+ 1433 0297 756E7369 		.ascii	"unsigned int\000"
  1433      676E6564 
  1433      20696E74 
  1433      00
  1434              	.LASF42:
- 1435 0292 43794578 		.ascii	"CyExitCriticalSection\000"
+ 1435 02a4 43794578 		.ascii	"CyExitCriticalSection\000"
  1435      69744372 
  1435      69746963 
  1435      616C5365 
  1435      6374696F 
  1436              	.LASF44:
- 1437 02a8 47656E65 		.ascii	"Generated_Source\\PSoC5\\PWM_1.c\000"
+ 1437 02ba 47656E65 		.ascii	"Generated_Source\\PSoC5\\PWM_1.c\000"
  1437      72617465 
  1437      645F536F 
  1437      75726365 
  1437      5C50536F 
  1438              	.LASF34:
- 1439 02c7 72657375 		.ascii	"result\000"
+ 1439 02d9 72657375 		.ascii	"result\000"
  1439      6C7400
  1440              	.LASF35:
- 1441 02ce 6374726C 		.ascii	"ctrl\000"
+ 1441 02e0 6374726C 		.ascii	"ctrl\000"
  1441      00
  1442              	.LASF15:
- 1443 02d3 73697A65 		.ascii	"sizetype\000"
+ 1443 02e5 73697A65 		.ascii	"sizetype\000"
  1443      74797065 
  1443      00
  1444              	.LASF6:
- 1445 02dc 6C6F6E67 		.ascii	"long long int\000"
+ 1445 02ee 6C6F6E67 		.ascii	"long long int\000"
  1445      206C6F6E 
  1445      6720696E 
  1445      7400
  1446              	.LASF46:
- 1447 02ea 50574D5F 		.ascii	"PWM_1_ReadControlRegister\000"
+ 1447 02fc 50574D5F 		.ascii	"PWM_1_ReadControlRegister\000"
  1447      315F5265 
  1447      6164436F 
  1447      6E74726F 
  1447      6C526567 
  1448              	.LASF26:
- 1449 0304 696E7465 		.ascii	"interruptMode\000"
+ 1449 0316 696E7465 		.ascii	"interruptMode\000"
  1449      72727570 
  1449      744D6F64 
  1449      6500
  1450              	.LASF19:
- 1451 0312 50574D5F 		.ascii	"PWM_1_WritePeriod\000"
+ 1451 0324 50574D5F 		.ascii	"PWM_1_WritePeriod\000"
  1451      315F5772 
  1451      69746550 
  1451      6572696F 
  1451      6400
  1452              	.LASF27:
- 1453 0324 50574D5F 		.ascii	"PWM_1_ReadCounter\000"
+ 1453 0336 50574D5F 		.ascii	"PWM_1_ReadCounter\000"
  1453      315F5265 
  1453      6164436F 
  1453      756E7465 
  1453      7200
  1454              	.LASF17:
-ARM GAS  C:\Users\MORTEN~1\AppData\Local\Temp\ccTGevSV.s 			page 45
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccpQrcU0.s 			page 45
 
 
- 1455 0336 50574D5F 		.ascii	"PWM_1_Stop\000"
+ 1455 0348 50574D5F 		.ascii	"PWM_1_Stop\000"
  1455      315F5374 
  1455      6F7000
  1456              	.LASF4:
- 1457 0341 6C6F6E67 		.ascii	"long int\000"
+ 1457 0353 6C6F6E67 		.ascii	"long int\000"
  1457      20696E74 
  1457      00
  1458              	.LASF11:
- 1459 034a 63686172 		.ascii	"char\000"
+ 1459 035c 63686172 		.ascii	"char\000"
  1459      00
  1460              	.LASF14:
- 1461 034f 6C6F6E67 		.ascii	"long double\000"
+ 1461 0361 6C6F6E67 		.ascii	"long double\000"
  1461      20646F75 
  1461      626C6500 
  1462              	.LASF0:
- 1463 035b 7369676E 		.ascii	"signed char\000"
+ 1463 036d 7369676E 		.ascii	"signed char\000"
  1463      65642063 
  1463      68617200 
  1464              	.LASF23:
- 1465 0367 636F6D70 		.ascii	"compare\000"
+ 1465 0379 636F6D70 		.ascii	"compare\000"
  1465      61726500 
  1466              	.LASF37:
- 1467 036f 50574D5F 		.ascii	"PWM_1_Start\000"
+ 1467 0381 50574D5F 		.ascii	"PWM_1_Start\000"
  1467      315F5374 
  1467      61727400 
  1468              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

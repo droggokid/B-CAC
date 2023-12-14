@@ -1,0 +1,6 @@
+C:\Users\raduf\OneDrive\Desktop\SemesterProjekt\B-CAC\Workspace01\SPI_Master.cydsn\SPI_Master.cyprj|50079e64-13f6-4d08-bbde-d853a7177654
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|6f4c8823-9fc3-4f26-9f27-f6734027fbc0
+C:\Users\raduf\OneDrive\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|693f0de9-e5ef-4d17-84fe-d405e37c7314
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|ba127530-de95-4245-ad16-123cdbef19f3
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|7be0d6f2-9b54-4189-8d18-6cfd66bd88bc
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|322657fb-9b1f-41a4-946b-2b0c7c93a239
