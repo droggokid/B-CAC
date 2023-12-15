@@ -261,8 +261,8 @@ public:
                         cout << "Received GET gameReady" << endl;
                         string readData;
                         string readData2;
-                        fileDescriptor = openFile(platformOnePath);
-                        fileDescriptor2 = openFile(platformTwoPath);
+                        fileDescriptor = openFile(GR1);
+                        fileDescriptor2 = openFile(GR2);
                         if (!sentBB)
                         {
                             writeFile(fileDescriptor, "0xBB");
@@ -271,7 +271,7 @@ public:
                         }
                         readFile(fileDescriptor, readData);
                         readFile(fileDescriptor2, readData2);
-                        string searchedString = "11";
+                        string searchedString = "9";
                         if (search(searchedString, readData))
                         {
                             cout << "TARE 1 FINISHED " << readData << endl;
