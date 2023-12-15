@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 1
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccMw06YH.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 1
   37 0002 FFF7FEFF 		bl	SPIS_2_Start
   38              	.LVL0:
   39 0006 08BD     		pop	{r3, pc}
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 2
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccMw06YH.s 			page 2
 
 
   40              		.cfi_endproc
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 1
   35:spi_Slave.c   **** }
   77              		.loc 1 35 0
   78 0014 2046     		mov	r0, r4
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 3
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccMw06YH.s 			page 3
 
 
   79 0016 10BD     		pop	{r4, pc}
@@ -133,9 +133,10 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 1
   88              		.type	sendSPi, %function
   89              	sendSPi:
   90              	.LFB65:
-  36:spi_Slave.c   **** void sendSPi(uint8_t data)
-  37:spi_Slave.c   **** {
-  91              		.loc 1 37 0
+  36:spi_Slave.c   **** 
+  37:spi_Slave.c   ****     void sendSPi(uint8_t data)
+  38:spi_Slave.c   ****     {
+  91              		.loc 1 38 0
   92              		.cfi_startproc
   93              		@ args = 0, pretend = 0, frame = 0
   94              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -145,29 +146,29 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 1
   98              		.cfi_offset 4, -8
   99              		.cfi_offset 14, -4
  100 0002 0446     		mov	r4, r0
-  38:spi_Slave.c   ****    // Vent, indtil TX-bufferen er klar til at sende data
-  39:spi_Slave.c   ****    SPIS_2_ClearTxBuffer();
- 101              		.loc 1 39 0
+  39:spi_Slave.c   ****         // Vent, indtil TX-bufferen er klar til at sende data
+  40:spi_Slave.c   ****         SPIS_2_ClearTxBuffer();
+ 101              		.loc 1 40 0
  102 0004 FFF7FEFF 		bl	SPIS_2_ClearTxBuffer
  103              	.LVL7:
-  40:spi_Slave.c   ****    SPIS_2_ClearRxBuffer();
- 104              		.loc 1 40 0
+  41:spi_Slave.c   ****         SPIS_2_ClearRxBuffer();
+ 104              		.loc 1 41 0
  105 0008 FFF7FEFF 		bl	SPIS_2_ClearRxBuffer
  106              	.LVL8:
  107              	.L8:
-  41:spi_Slave.c   ****    while ((SPIS_2_ReadTxStatus() & SPIS_2_STS_TX_FIFO_NOT_FULL)==0)
- 108              		.loc 1 41 0 discriminator 1
+  42:spi_Slave.c   ****         while ((SPIS_2_ReadTxStatus() & SPIS_2_STS_TX_FIFO_NOT_FULL)==0)
+ 108              		.loc 1 42 0 discriminator 1
  109 000c FFF7FEFF 		bl	SPIS_2_ReadTxStatus
  110              	.LVL9:
  111 0010 10F0020F 		tst	r0, #2
  112 0014 FAD0     		beq	.L8
-  42:spi_Slave.c   ****     {
-  43:spi_Slave.c   ****          //Vent, indtil TX-bufferen er klar
-  44:spi_Slave.c   ****     }
-  45:spi_Slave.c   ****     
-  46:spi_Slave.c   ****     // Skriver data til TX-bufferen for at sende det til masteren
-  47:spi_Slave.c   ****     SPIS_2_WriteTxData(data);
- 113              		.loc 1 47 0
+  43:spi_Slave.c   ****         {
+  44:spi_Slave.c   ****         //Vent, indtil TX-bufferen er klar
+  45:spi_Slave.c   ****         }   
+  46:spi_Slave.c   ****     
+  47:spi_Slave.c   ****         // Skriver data til TX-bufferen for at sende det til masteren
+  48:spi_Slave.c   ****         SPIS_2_WriteTxData(data);
+ 113              		.loc 1 48 0
  114 0016 2046     		mov	r0, r4
  115 0018 FFF7FEFF 		bl	SPIS_2_WriteTxData
  116              	.LVL10:
@@ -177,10 +178,10 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 1
  120              		.size	sendSPi, .-sendSPi
  121 001e 00BF     		.text
  122              	.Letext0:
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccMw06YH.s 			page 4
+
+
  123              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 4
-
-
  124              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
  125              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
  126              		.file 5 "Generated_Source\\PSoC5/SPIS_2.h"
@@ -237,10 +238,10 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 1
  177 0066 08       		.byte	0x8
  178 0067 05       		.byte	0x5
  179 0068 0F020000 		.4byte	.LASF8
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccMw06YH.s 			page 5
+
+
  180 006c 02       		.uleb128 0x2
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 5
-
-
  181 006d 08       		.byte	0x8
  182 006e 07       		.byte	0x7
  183 006f D3010000 		.4byte	.LASF9
@@ -297,10 +298,10 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 1
  234 00d6 9C       		.byte	0x9c
  235 00d7 E5000000 		.4byte	0xe5
  236 00db 07       		.uleb128 0x7
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccMw06YH.s 			page 6
+
+
  237 00dc 06000000 		.4byte	.LVL0
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 6
-
-
  238 00e0 81010000 		.4byte	0x181
  239 00e4 00       		.byte	0
  240 00e5 08       		.uleb128 0x8
@@ -329,7 +330,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 1
  263 0120 06       		.uleb128 0x6
  264 0121 17000000 		.4byte	.LASF20
  265 0125 01       		.byte	0x1
- 266 0126 24       		.byte	0x24
+ 266 0126 25       		.byte	0x25
  267 0127 00000000 		.4byte	.LFB65
  268 012b 1E000000 		.4byte	.LFE65-.LFB65
  269 012f 01       		.uleb128 0x1
@@ -338,7 +339,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 1
  272 0135 0A       		.uleb128 0xa
  273 0136 5D000000 		.4byte	.LASF33
  274 013a 01       		.byte	0x1
- 275 013b 24       		.byte	0x24
+ 275 013b 25       		.byte	0x25
  276 013c 81000000 		.4byte	0x81
  277 0140 1F000000 		.4byte	.LLST1
  278 0144 07       		.uleb128 0x7
@@ -357,10 +358,10 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 1
  291 0169 01       		.uleb128 0x1
  292 016a 50       		.byte	0x50
  293 016b 02       		.uleb128 0x2
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccMw06YH.s 			page 7
+
+
  294 016c 74       		.byte	0x74
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 7
-
-
  295 016d 00       		.sleb128 0
  296 016e 00       		.byte	0
  297 016f 00       		.byte	0
@@ -417,10 +418,10 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 1
  348 0005 13       		.uleb128 0x13
  349 0006 0B       		.uleb128 0xb
  350 0007 03       		.uleb128 0x3
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccMw06YH.s 			page 8
+
+
  351 0008 0E       		.uleb128 0xe
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 8
-
-
  352 0009 1B       		.uleb128 0x1b
  353 000a 0E       		.uleb128 0xe
  354 000b 55       		.uleb128 0x55
@@ -477,10 +478,10 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 1
  405 003e 05       		.uleb128 0x5
  406 003f 49       		.uleb128 0x49
  407 0040 13       		.uleb128 0x13
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccMw06YH.s 			page 9
+
+
  408 0041 00       		.byte	0
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 9
-
-
  409 0042 00       		.byte	0
  410 0043 06       		.uleb128 0x6
  411 0044 2E       		.uleb128 0x2e
@@ -537,10 +538,10 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 1
  462 007a 06       		.uleb128 0x6
  463 007b 40       		.uleb128 0x40
  464 007c 18       		.uleb128 0x18
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccMw06YH.s 			page 10
+
+
  465 007d 9742     		.uleb128 0x2117
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 10
-
-
  466 007f 19       		.uleb128 0x19
  467 0080 01       		.uleb128 0x1
  468 0081 13       		.uleb128 0x13
@@ -597,10 +598,10 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 1
  519 00b9 0D       		.uleb128 0xd
  520 00ba 34       		.uleb128 0x34
  521 00bb 00       		.byte	0
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccMw06YH.s 			page 11
+
+
  522 00bc 03       		.uleb128 0x3
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 11
-
-
  523 00bd 0E       		.uleb128 0xe
  524 00be 3A       		.uleb128 0x3a
  525 00bf 0B       		.uleb128 0xb
@@ -657,10 +658,10 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 1
  576 001f 00000000 		.4byte	.LVL6
  577 0023 07000000 		.4byte	.LVL7-1
  578 0027 0100     		.2byte	0x1
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccMw06YH.s 			page 12
+
+
  579 0029 50       		.byte	0x50
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 12
-
-
  580 002a 07000000 		.4byte	.LVL7-1
  581 002e 1E000000 		.4byte	.LFE65
  582 0032 0400     		.2byte	0x4
@@ -717,10 +718,10 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 1
  623      53506900 
  624              	.LASF5:
  625 001f 5F5F696E 		.ascii	"__int32_t\000"
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccMw06YH.s 			page 13
+
+
  625      7433325F 
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 13
-
-
  625      7400
  626              	.LASF26:
  627 0029 53504953 		.ascii	"SPIS_2_ReadTxStatus\000"
@@ -777,10 +778,10 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 1
  645      65642069 
  645      6E7400
  646              	.LASF22:
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccMw06YH.s 			page 14
+
+
  647 0123 53504953 		.ascii	"SPIS_2_ReadRxData\000"
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 14
-
-
  647      5F325F52 
  647      65616452 
  647      78446174 
@@ -837,10 +838,10 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 1
  667              	.LASF12:
  668 01fe 696E7433 		.ascii	"int32_t\000"
  668      325F7400 
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccMw06YH.s 			page 15
+
+
  669              	.LASF18:
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccKNfAjA.s 			page 15
-
-
  670 0206 73697A65 		.ascii	"sizetype\000"
  670      74797065 
  670      00

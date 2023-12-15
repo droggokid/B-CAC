@@ -74,7 +74,7 @@ int main(void)
             CyDelay(3000); // delay så flasken falder til ro
             Result_gram = readWeight(repeats, startoffset, factor, preload);
     
-            if(Result_gram >= 620) { //husk at ændre til 650!!!
+            if(Result_gram >= 620) {
                 gameReady = 9;
             }
 
@@ -114,8 +114,7 @@ int main(void)
             if(Result_gram > 320){
                 dnf = 1;
             }
-            
-    
+           
             // dnf value 
             UCstate = 0;
             gameDone = 0xD;
@@ -138,11 +137,10 @@ int main(void)
             UCstate = 0;
             gameDone = 0xE;
         }
+        
          // modtager win signal fra RPI
         if(UCstate == 5)
         {
-    
-           
             if (dnf == 0)
             {
                 startLedGreen(80);
@@ -184,8 +182,7 @@ void handleByteReceived(uint8_t byteReceived)
         case 0xDD :
         {
             // Flagmotor
-            UCstate = 4; //win
-            
+            UCstate = 4; //win  
         }
         break;
         case 0xEE : 
@@ -242,3 +239,4 @@ CY_ISR(ISR_SPI_rx_handler)
     // Handling of received SPI data
     handleByteReceived(receivedData);
 }
+
