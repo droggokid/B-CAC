@@ -176,7 +176,6 @@ void handleByteReceived(uint8_t byteReceived)
         {
             // Loop for aflæsning af vægt - Venter på, at der kommer vægt på vægten / tjekker for eventuel DNF
             UCstate=3;
-            // sendTimeOverSPI();
         }
         break;
         case 0xDD :
