@@ -152,4 +152,4 @@ class Server
     }
 }
 
-export const server = new Server('http://192.168.137.10:8080');
+export const server = new Server('http://192.168.137.190:8080');
