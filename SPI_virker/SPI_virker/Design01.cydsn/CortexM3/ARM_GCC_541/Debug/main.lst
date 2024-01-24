@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccPw7hTe.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
   29              		.loc 1 26 0
   30              		.cfi_startproc
   31              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 2
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccPw7hTe.s 			page 2
 
 
   32              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
   60              		.loc 1 52 0
   61 0018 FFF7FEFF 		bl	stopFlagMotor
   62              	.LVL4:
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 3
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccPw7hTe.s 			page 3
 
 
   63              	.L13:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
   71:main.c        ****         {
   72:main.c        ****             gameReady = 0; 
   99              		.loc 1 72 0
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 4
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccPw7hTe.s 			page 4
 
 
  100 0050 0024     		movs	r4, #0
@@ -211,7 +211,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
  124 007c 80B2     		uxth	r0, r0
  125              	.LVL13:
   76:main.c        ****     
-  77:main.c        ****             if(Result_gram >= 620) { //husk at ændre til 650!!!
+  77:main.c        ****             if(Result_gram >= 620) {
  126              		.loc 1 77 0
  127 007e B0F51B7F 		cmp	r0, #620
  128 0082 02D3     		bcc	.L4
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
   84:main.c        ****      
   85:main.c        ****         // send signal til RPI, Hvis GameReady er 1 så er øllen godkendt
   86:main.c        ****         // UC2 play game
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 5
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccPw7hTe.s 			page 5
 
 
   87:main.c        ****         // Der modtages GO signal
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
  184              	.LVL21:
  185 00d4 80B2     		uxth	r0, r0
  186              	.LVL22:
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 6
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccPw7hTe.s 			page 6
 
 
  187              	.L7:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
  227              	.LVL27:
  228 011a FFF7FEFF 		bl	__aeabi_f2uiz
  229              	.LVL28:
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 7
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccPw7hTe.s 			page 7
 
 
  230 011e 80B2     		uxth	r0, r0
@@ -375,75 +375,75 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
  238 012a 9A71     		strb	r2, [r3, #6]
  239              	.L9:
  116:main.c        ****             }
- 117:main.c        ****             
- 118:main.c        ****     
- 119:main.c        ****             // dnf value 
- 120:main.c        ****             UCstate = 0;
- 240              		.loc 1 120 0
+ 117:main.c        ****            
+ 118:main.c        ****             // dnf value 
+ 119:main.c        ****             UCstate = 0;
+ 240              		.loc 1 119 0
  241 012c 194B     		ldr	r3, .L18+4
  242 012e 0022     		movs	r2, #0
  243 0130 1A60     		str	r2, [r3]
- 121:main.c        ****             gameDone = 0xD;
- 244              		.loc 1 121 0
+ 120:main.c        ****             gameDone = 0xD;
+ 244              		.loc 1 120 0
  245 0132 0D22     		movs	r2, #13
  246 0134 1A71     		strb	r2, [r3, #4]
  247              	.LVL30:
  248              	.L5:
- 122:main.c        ****         }
- 123:main.c        ****     
- 124:main.c        ****         // modtager win signal fra RPI
- 125:main.c        ****         if(UCstate == 4)
- 249              		.loc 1 125 0
+ 121:main.c        ****         }
+ 122:main.c        ****     
+ 123:main.c        ****         // modtager win signal fra RPI
+ 124:main.c        ****         if(UCstate == 4)
+ 249              		.loc 1 124 0
  250 0136 174B     		ldr	r3, .L18+4
  251 0138 1B68     		ldr	r3, [r3]
  252 013a 042B     		cmp	r3, #4
  253 013c 12D1     		bne	.L10
- 126:main.c        ****         {
- 127:main.c        ****     
- 128:main.c        ****             flagMotorRotateTo(90, mode);
- 254              		.loc 1 128 0
+ 125:main.c        ****         {
+ 126:main.c        ****     
+ 127:main.c        ****             flagMotorRotateTo(90, mode);
+ 254              		.loc 1 127 0
  255 013e 6821     		movs	r1, #104
  256 0140 5A20     		movs	r0, #90
  257 0142 FFF7FEFF 		bl	flagMotorRotateTo
  258              	.LVL31:
- 129:main.c        ****             // stopFlagMotor();
- 130:main.c        ****             if (dnf == 0)
- 259              		.loc 1 130 0
+ 128:main.c        ****             // stopFlagMotor();
+ 129:main.c        ****             if (dnf == 0)
+ 259              		.loc 1 129 0
  260 0146 134B     		ldr	r3, .L18+4
  261 0148 9B79     		ldrb	r3, [r3, #6]	@ zero_extendqisi2
  262 014a 1BB9     		cbnz	r3, .L11
- 131:main.c        ****             {
- 132:main.c        ****                 startLedGreen(80);
- 263              		.loc 1 132 0
+ 130:main.c        ****             {
+ 131:main.c        ****                 startLedGreen(80);
+ 263              		.loc 1 131 0
  264 014c 5020     		movs	r0, #80
  265 014e FFF7FEFF 		bl	startLedGreen
  266              	.LVL32:
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 8
-
-
  267 0152 02E0     		b	.L12
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccPw7hTe.s 			page 8
+
+
  268              	.L11:
- 133:main.c        ****             }
- 134:main.c        ****             else  { 
- 135:main.c        ****                 startLedRed(100);
- 269              		.loc 1 135 0
+ 132:main.c        ****             }
+ 133:main.c        ****             else  { 
+ 134:main.c        ****                 startLedRed(100);
+ 269              		.loc 1 134 0
  270 0154 6420     		movs	r0, #100
  271 0156 FFF7FEFF 		bl	startLedRed
  272              	.LVL33:
  273              	.L12:
- 136:main.c        ****             }
- 137:main.c        ****     
- 138:main.c        ****             UCstate = 0;
- 274              		.loc 1 138 0
+ 135:main.c        ****             }
+ 136:main.c        ****     
+ 137:main.c        ****             UCstate = 0;
+ 274              		.loc 1 137 0
  275 015a 0E4B     		ldr	r3, .L18+4
  276 015c 0022     		movs	r2, #0
  277 015e 1A60     		str	r2, [r3]
- 139:main.c        ****             gameDone = 0xE;
- 278              		.loc 1 139 0
+ 138:main.c        ****             gameDone = 0xE;
+ 278              		.loc 1 138 0
  279 0160 0E22     		movs	r2, #14
  280 0162 1A71     		strb	r2, [r3, #4]
  281              	.L10:
- 140:main.c        ****         }
+ 139:main.c        ****         }
+ 140:main.c        ****         
  141:main.c        ****          // modtager win signal fra RPI
  142:main.c        ****         if(UCstate == 5)
  282              		.loc 1 142 0
@@ -452,41 +452,39 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
  285 0168 052B     		cmp	r3, #5
  286 016a 7FF457AF 		bne	.L13
  143:main.c        ****         {
- 144:main.c        ****     
- 145:main.c        ****            
- 146:main.c        ****             if (dnf == 0)
- 287              		.loc 1 146 0
+ 144:main.c        ****             if (dnf == 0)
+ 287              		.loc 1 144 0
  288 016e 094B     		ldr	r3, .L18+4
  289 0170 9B79     		ldrb	r3, [r3, #6]	@ zero_extendqisi2
  290 0172 1BB9     		cbnz	r3, .L14
- 147:main.c        ****             {
- 148:main.c        ****                 startLedGreen(80);
- 291              		.loc 1 148 0
+ 145:main.c        ****             {
+ 146:main.c        ****                 startLedGreen(80);
+ 291              		.loc 1 146 0
  292 0174 5020     		movs	r0, #80
  293 0176 FFF7FEFF 		bl	startLedGreen
  294              	.LVL34:
  295 017a 02E0     		b	.L15
  296              	.L14:
- 149:main.c        ****             }
- 150:main.c        ****             else  { 
- 151:main.c        ****                 startLedRed(100);
- 297              		.loc 1 151 0
+ 147:main.c        ****             }
+ 148:main.c        ****             else  { 
+ 149:main.c        ****                 startLedRed(100);
+ 297              		.loc 1 149 0
  298 017c 6420     		movs	r0, #100
  299 017e FFF7FEFF 		bl	startLedRed
  300              	.LVL35:
  301              	.L15:
- 152:main.c        ****             }
- 153:main.c        ****     
- 154:main.c        ****             UCstate = 0;
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 9
-
-
- 302              		.loc 1 154 0
+ 150:main.c        ****             }
+ 151:main.c        ****     
+ 152:main.c        ****             UCstate = 0;
+ 302              		.loc 1 152 0
  303 0182 044B     		ldr	r3, .L18+4
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccPw7hTe.s 			page 9
+
+
  304 0184 0022     		movs	r2, #0
  305 0186 1A60     		str	r2, [r3]
- 155:main.c        ****             gameDone = 0xF;
- 306              		.loc 1 155 0
+ 153:main.c        ****             gameDone = 0xF;
+ 306              		.loc 1 153 0
  307 0188 0F22     		movs	r2, #15
  308 018a 1A71     		strb	r2, [r3, #4]
  309 018c 46E7     		b	.L13
@@ -509,13 +507,13 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
  326              		.type	handleByteReceived, %function
  327              	handleByteReceived:
  328              	.LFB65:
- 156:main.c        ****         }
- 157:main.c        ****     }
- 158:main.c        **** }
- 159:main.c        **** 
- 160:main.c        **** void handleByteReceived(uint8_t byteReceived)
- 161:main.c        **** {
- 329              		.loc 1 161 0
+ 154:main.c        ****         }
+ 155:main.c        ****     }
+ 156:main.c        **** }
+ 157:main.c        **** 
+ 158:main.c        **** void handleByteReceived(uint8_t byteReceived)
+ 159:main.c        **** {
+ 329              		.loc 1 159 0
  330              		.cfi_startproc
  331              		@ args = 0, pretend = 0, frame = 0
  332              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -524,8 +522,8 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
  335              		.cfi_def_cfa_offset 8
  336              		.cfi_offset 4, -8
  337              		.cfi_offset 14, -4
- 162:main.c        ****     switch(byteReceived)
- 338              		.loc 1 162 0
+ 160:main.c        ****     switch(byteReceived)
+ 338              		.loc 1 160 0
  339 0002 0628     		cmp	r0, #6
  340 0004 49D0     		beq	.L22
  341 0006 0AD8     		bhi	.L23
@@ -538,11 +536,11 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
  348              	.L25:
  349 0014 0428     		cmp	r0, #4
  350 0016 30D0     		beq	.L27
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 10
-
-
  351 0018 0528     		cmp	r0, #5
  352 001a 36D0     		beq	.L28
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccPw7hTe.s 			page 10
+
+
  353 001c 10BD     		pop	{r4, pc}
  354              	.L23:
  355 001e CC28     		cmp	r0, #204
@@ -560,170 +558,169 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
  367 0034 10D0     		beq	.L34
  368 0036 10BD     		pop	{r4, pc}
  369              	.L31:
- 163:main.c        ****     {
- 164:main.c        ****         case 0xAA :
- 165:main.c        ****         {
- 166:main.c        ****             // Kalibrering af vægten samt steppermotor
- 167:main.c        ****             UCstate=1;
- 370              		.loc 1 167 0
+ 161:main.c        ****     {
+ 162:main.c        ****         case 0xAA :
+ 163:main.c        ****         {
+ 164:main.c        ****             // Kalibrering af vægten samt steppermotor
+ 165:main.c        ****             UCstate=1;
+ 370              		.loc 1 165 0
  371 0038 0122     		movs	r2, #1
  372 003a 1A4B     		ldr	r3, .L36
  373 003c 1A60     		str	r2, [r3]
- 168:main.c        ****         }
- 169:main.c        ****         break;
- 374              		.loc 1 169 0
+ 166:main.c        ****         }
+ 167:main.c        ****         break;
+ 374              		.loc 1 167 0
  375 003e 10BD     		pop	{r4, pc}
  376              	.L32:
- 170:main.c        ****         case 0xBB :
- 171:main.c        ****         {
- 172:main.c        ****             // Gameready - venter, læser samt tjekker på vægten
- 173:main.c        ****             UCstate = 2;
- 377              		.loc 1 173 0
+ 168:main.c        ****         case 0xBB :
+ 169:main.c        ****         {
+ 170:main.c        ****             // Gameready - venter, læser samt tjekker på vægten
+ 171:main.c        ****             UCstate = 2;
+ 377              		.loc 1 171 0
  378 0040 0222     		movs	r2, #2
  379 0042 184B     		ldr	r3, .L36
  380 0044 1A60     		str	r2, [r3]
- 174:main.c        ****             
- 175:main.c        ****         }
- 176:main.c        ****         break;
- 381              		.loc 1 176 0
+ 172:main.c        ****             
+ 173:main.c        ****         }
+ 174:main.c        ****         break;
+ 381              		.loc 1 174 0
  382 0046 10BD     		pop	{r4, pc}
  383              	.L29:
- 177:main.c        ****         case 0xCC :
- 178:main.c        ****         {
- 179:main.c        ****             // Loop for aflæsning af vægt - Venter på, at der kommer vægt på vægten / tjekker
- 180:main.c        ****             UCstate=3;
- 384              		.loc 1 180 0
+ 175:main.c        ****         case 0xCC :
+ 176:main.c        ****         {
+ 177:main.c        ****             // Loop for aflæsning af vægt - Venter på, at der kommer vægt på vægten / tjekker
+ 178:main.c        ****             UCstate=3;
+ 384              		.loc 1 178 0
  385 0048 0322     		movs	r2, #3
  386 004a 164B     		ldr	r3, .L36
  387 004c 1A60     		str	r2, [r3]
- 181:main.c        ****             // sendTimeOverSPI();
- 182:main.c        ****         }
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 11
+ 179:main.c        ****             // sendTimeOverSPI();
+ 180:main.c        ****         }
+ 181:main.c        ****         break;
+ 388              		.loc 1 181 0
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccPw7hTe.s 			page 11
 
 
- 183:main.c        ****         break;
- 388              		.loc 1 183 0
  389 004e 10BD     		pop	{r4, pc}
  390              	.L33:
- 184:main.c        ****         case 0xDD :
- 185:main.c        ****         {
- 186:main.c        ****             // Flagmotor
- 187:main.c        ****             UCstate = 4; //win
- 391              		.loc 1 187 0
+ 182:main.c        ****         case 0xDD :
+ 183:main.c        ****         {
+ 184:main.c        ****             // Flagmotor
+ 185:main.c        ****             UCstate = 4; //win  
+ 391              		.loc 1 185 0
  392 0050 0422     		movs	r2, #4
  393 0052 144B     		ldr	r3, .L36
  394 0054 1A60     		str	r2, [r3]
- 188:main.c        ****             
- 189:main.c        ****         }
- 190:main.c        ****         break;
- 395              		.loc 1 190 0
+ 186:main.c        ****         }
+ 187:main.c        ****         break;
+ 395              		.loc 1 187 0
  396 0056 10BD     		pop	{r4, pc}
  397              	.L34:
- 191:main.c        ****         case 0xEE : 
- 192:main.c        ****         {
- 193:main.c        ****             UCstate = 5; //lose
- 398              		.loc 1 193 0
+ 188:main.c        ****         case 0xEE : 
+ 189:main.c        ****         {
+ 190:main.c        ****             UCstate = 5; //lose
+ 398              		.loc 1 190 0
  399 0058 0522     		movs	r2, #5
  400 005a 124B     		ldr	r3, .L36
  401 005c 1A60     		str	r2, [r3]
- 194:main.c        ****         }
- 195:main.c        ****         break;
- 402              		.loc 1 195 0
+ 191:main.c        ****         }
+ 192:main.c        ****         break;
+ 402              		.loc 1 192 0
  403 005e 10BD     		pop	{r4, pc}
  404              	.L26:
- 196:main.c        ****         case 0x2 :
- 197:main.c        ****         {
- 198:main.c        ****             sendSPi(gameReady);
- 405              		.loc 1 198 0
+ 193:main.c        ****         case 0x2 :
+ 194:main.c        ****         {
+ 195:main.c        ****             sendSPi(gameReady);
+ 405              		.loc 1 195 0
  406 0060 104B     		ldr	r3, .L36
  407 0062 5879     		ldrb	r0, [r3, #5]	@ zero_extendqisi2
  408              	.LVL37:
  409 0064 FFF7FEFF 		bl	sendSPi
  410              	.LVL38:
- 199:main.c        ****         }
- 200:main.c        ****         break;
- 411              		.loc 1 200 0
+ 196:main.c        ****         }
+ 197:main.c        ****         break;
+ 411              		.loc 1 197 0
  412 0068 10BD     		pop	{r4, pc}
  413              	.LVL39:
  414              	.L24:
- 201:main.c        ****         case 0x3 :
- 202:main.c        ****         {
- 203:main.c        ****             minutes = convertMinutes(tid);
- 415              		.loc 1 203 0
+ 198:main.c        ****         case 0x3 :
+ 199:main.c        ****         {
+ 200:main.c        ****             minutes = convertMinutes(tid);
+ 415              		.loc 1 200 0
  416 006a 0E4C     		ldr	r4, .L36
  417 006c A068     		ldr	r0, [r4, #8]
  418              	.LVL40:
  419 006e FFF7FEFF 		bl	convertMinutes
  420              	.LVL41:
  421 0072 2074     		strb	r0, [r4, #16]
- 204:main.c        ****             sendSPi(minutes); 
- 422              		.loc 1 204 0
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 12
-
-
+ 201:main.c        ****             sendSPi(minutes); 
+ 422              		.loc 1 201 0
  423 0074 FFF7FEFF 		bl	sendSPi
  424              	.LVL42:
- 205:main.c        ****         }
- 206:main.c        ****         break;
- 425              		.loc 1 206 0
+ 202:main.c        ****         }
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccPw7hTe.s 			page 12
+
+
+ 203:main.c        ****         break;
+ 425              		.loc 1 203 0
  426 0078 10BD     		pop	{r4, pc}
  427              	.LVL43:
  428              	.L27:
- 207:main.c        ****         case 0x4 :
- 208:main.c        ****         {
- 209:main.c        ****             seconds = convertSeconds(tid);
- 429              		.loc 1 209 0
+ 204:main.c        ****         case 0x4 :
+ 205:main.c        ****         {
+ 206:main.c        ****             seconds = convertSeconds(tid);
+ 429              		.loc 1 206 0
  430 007a 0A4C     		ldr	r4, .L36
  431 007c A068     		ldr	r0, [r4, #8]
  432              	.LVL44:
  433 007e FFF7FEFF 		bl	convertSeconds
  434              	.LVL45:
  435 0082 6074     		strb	r0, [r4, #17]
- 210:main.c        ****             sendSPi(seconds);
- 436              		.loc 1 210 0
+ 207:main.c        ****             sendSPi(seconds);
+ 436              		.loc 1 207 0
  437 0084 FFF7FEFF 		bl	sendSPi
  438              	.LVL46:
- 211:main.c        ****         }
- 212:main.c        ****         break;
- 439              		.loc 1 212 0
+ 208:main.c        ****         }
+ 209:main.c        ****         break;
+ 439              		.loc 1 209 0
  440 0088 10BD     		pop	{r4, pc}
  441              	.LVL47:
  442              	.L28:
- 213:main.c        ****         case 0x5 :
- 214:main.c        ****         {
- 215:main.c        ****             milliSeconds = convertMilliseconds(tid);
- 443              		.loc 1 215 0
+ 210:main.c        ****         case 0x5 :
+ 211:main.c        ****         {
+ 212:main.c        ****             milliSeconds = convertMilliseconds(tid);
+ 443              		.loc 1 212 0
  444 008a 064C     		ldr	r4, .L36
  445 008c A068     		ldr	r0, [r4, #8]
  446              	.LVL48:
  447 008e FFF7FEFF 		bl	convertMilliseconds
  448              	.LVL49:
  449 0092 A074     		strb	r0, [r4, #18]
- 216:main.c        ****             sendSPi(milliSeconds);
- 450              		.loc 1 216 0
+ 213:main.c        ****             sendSPi(milliSeconds);
+ 450              		.loc 1 213 0
  451 0094 FFF7FEFF 		bl	sendSPi
  452              	.LVL50:
- 217:main.c        ****         }
- 218:main.c        ****         break;
- 453              		.loc 1 218 0
+ 214:main.c        ****         }
+ 215:main.c        ****         break;
+ 453              		.loc 1 215 0
  454 0098 10BD     		pop	{r4, pc}
  455              	.LVL51:
  456              	.L22:
- 219:main.c        ****         case 0x6 :
- 220:main.c        ****         {
- 221:main.c        ****            sendSPi(dnf);
- 457              		.loc 1 221 0
+ 216:main.c        ****         case 0x6 :
+ 217:main.c        ****         {
+ 218:main.c        ****            sendSPi(dnf);
+ 457              		.loc 1 218 0
  458 009a 024B     		ldr	r3, .L36
  459 009c 9879     		ldrb	r0, [r3, #6]	@ zero_extendqisi2
  460              	.LVL52:
  461 009e FFF7FEFF 		bl	sendSPi
  462              	.LVL53:
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 13
-
-
  463 00a2 10BD     		pop	{r4, pc}
  464              	.L37:
  465              		.align	2
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccPw7hTe.s 			page 13
+
+
  466              	.L36:
  467 00a4 00000000 		.word	.LANCHOR0
  468              		.cfi_endproc
@@ -737,20 +734,20 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
  476              		.type	ISR_SPI_rx_handler, %function
  477              	ISR_SPI_rx_handler:
  478              	.LFB66:
- 222:main.c        ****         }
- 223:main.c        ****         break;
- 224:main.c        ****         default :
- 225:main.c        ****         {
- 226:main.c        ****             // nothing
- 227:main.c        ****         }
- 228:main.c        ****         break;
+ 219:main.c        ****         }
+ 220:main.c        ****         break;
+ 221:main.c        ****         default :
+ 222:main.c        ****         {
+ 223:main.c        ****             // nothing
+ 224:main.c        ****         }
+ 225:main.c        ****         break;
+ 226:main.c        **** 
+ 227:main.c        ****     }
+ 228:main.c        **** }
  229:main.c        **** 
- 230:main.c        ****     }
- 231:main.c        **** }
- 232:main.c        **** 
- 233:main.c        **** CY_ISR(ISR_SPI_rx_handler)
- 234:main.c        **** {
- 479              		.loc 1 234 0
+ 230:main.c        **** CY_ISR(ISR_SPI_rx_handler)
+ 231:main.c        **** {
+ 479              		.loc 1 231 0
  480              		.cfi_startproc
  481              		@ args = 0, pretend = 0, frame = 0
  482              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -758,34 +755,34 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
  484              		.cfi_def_cfa_offset 8
  485              		.cfi_offset 4, -8
  486              		.cfi_offset 14, -4
- 235:main.c        ****     uint8_t receivedData = receivedSPi();
- 487              		.loc 1 235 0
+ 232:main.c        ****     uint8_t receivedData = receivedSPi();
+ 487              		.loc 1 232 0
  488 0002 FFF7FEFF 		bl	receivedSPi
  489              	.LVL54:
  490 0006 0446     		mov	r4, r0
  491              	.LVL55:
- 236:main.c        ****     
- 237:main.c        ****     if(receivedData == 0x1)
- 492              		.loc 1 237 0
+ 233:main.c        ****     
+ 234:main.c        ****     if(receivedData == 0x1)
+ 492              		.loc 1 234 0
  493 0008 0128     		cmp	r0, #1
  494 000a 03D1     		bne	.L39
- 238:main.c        ****     {            
- 239:main.c        ****           sendSPi(gameDone); 
- 495              		.loc 1 239 0
+ 235:main.c        ****     {            
+ 236:main.c        ****           sendSPi(gameDone); 
+ 495              		.loc 1 236 0
  496 000c 034B     		ldr	r3, .L41
  497 000e 1879     		ldrb	r0, [r3, #4]	@ zero_extendqisi2
  498              	.LVL56:
  499 0010 FFF7FEFF 		bl	sendSPi
  500              	.LVL57:
  501              	.L39:
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 14
+ 237:main.c        ****     }
+ 238:main.c        ****     
+ 239:main.c        ****     // Handling of received SPI data
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccPw7hTe.s 			page 14
 
 
- 240:main.c        ****     }
- 241:main.c        ****     
- 242:main.c        ****     // Handling of received SPI data
- 243:main.c        ****     handleByteReceived(receivedData);
- 502              		.loc 1 243 0
+ 240:main.c        ****     handleByteReceived(receivedData);
+ 502              		.loc 1 240 0
  503 0014 2046     		mov	r0, r4
  504 0016 FFF7FEFF 		bl	handleByteReceived
  505              	.LVL58:
@@ -838,12 +835,12 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
  552              		.size	minutes, 1
  553              	minutes:
  554 0010 00       		.space	1
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 15
-
-
  555              		.type	seconds, %object
  556              		.size	seconds, 1
  557              	seconds:
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccPw7hTe.s 			page 15
+
+
  558 0011 00       		.space	1
  559              		.type	milliSeconds, %object
  560              		.size	milliSeconds, 1
@@ -898,12 +895,12 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
  609 0040 08       		.byte	0x8
  610 0041 6F010000 		.4byte	.LASF2
  611 0045 02       		.uleb128 0x2
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 16
-
-
  612 0046 02       		.byte	0x2
  613 0047 05       		.byte	0x5
  614 0048 75000000 		.4byte	.LASF3
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccPw7hTe.s 			page 16
+
+
  615 004c 03       		.uleb128 0x3
  616 004d 5F000000 		.4byte	.LASF5
  617 0051 02       		.byte	0x2
@@ -958,12 +955,12 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
  666 00af 2C       		.byte	0x2c
  667 00b0 5E000000 		.4byte	0x5e
  668 00b4 05       		.uleb128 0x5
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 17
-
-
  669 00b5 17020000 		.4byte	.LASF16
  670 00b9 04       		.byte	0x4
  671 00ba EB01     		.2byte	0x1eb
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccPw7hTe.s 			page 17
+
+
  672 00bc 70000000 		.4byte	0x70
  673 00c0 02       		.uleb128 0x2
  674 00c1 08       		.byte	0x8
@@ -1018,12 +1015,12 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
  723 0128 09       		.uleb128 0x9
  724 0129 A7000000 		.4byte	.LASF25
  725 012d 01       		.byte	0x1
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 18
-
-
  726 012e 2B       		.byte	0x2b
  727 012f 25000000 		.4byte	0x25
  728 0133 04       		.byte	0x4
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccPw7hTe.s 			page 18
+
+
  729 0134 71BD3243 		.4byte	0x4332bd71
  730 0138 09       		.uleb128 0x9
  731 0139 5C010000 		.4byte	.LASF26
@@ -1078,12 +1075,12 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
  780 01a3 53       		.byte	0x53
  781 01a4 01       		.uleb128 0x1
  782 01a5 30       		.byte	0x30
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 19
-
-
  783 01a6 00       		.byte	0
  784 01a7 0A       		.uleb128 0xa
  785 01a8 36000000 		.4byte	.LVL6
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccPw7hTe.s 			page 19
+
+
  786 01ac C6040000 		.4byte	0x4c6
  787 01b0 BB010000 		.4byte	0x1bb
  788 01b4 0B       		.uleb128 0xb
@@ -1138,12 +1135,12 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
  837 0204 0A       		.uleb128 0xa
  838 0205 78000000 		.4byte	.LVL11
  839 0209 08050000 		.4byte	0x508
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 20
-
-
  840 020d 2C020000 		.4byte	0x22c
  841 0211 0B       		.uleb128 0xb
  842 0212 01       		.uleb128 0x1
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccPw7hTe.s 			page 20
+
+
  843 0213 50       		.byte	0x50
  844 0214 02       		.uleb128 0x2
  845 0215 08       		.byte	0x8
@@ -1198,12 +1195,12 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
  894 025e 50       		.byte	0x50
  895 025f 02       		.uleb128 0x2
  896 0260 08       		.byte	0x8
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 21
-
-
  897 0261 32       		.byte	0x32
  898 0262 0B       		.uleb128 0xb
  899 0263 01       		.uleb128 0x1
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccPw7hTe.s 			page 21
+
+
  900 0264 53       		.byte	0x53
  901 0265 02       		.uleb128 0x2
  902 0266 74       		.byte	0x74
@@ -1258,12 +1255,12 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
  951 02b9 08       		.byte	0x8
  952 02ba 32       		.byte	0x32
  953 02bb 0B       		.uleb128 0xb
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 22
-
-
  954 02bc 01       		.uleb128 0x1
  955 02bd 51       		.byte	0x51
  956 02be 03       		.uleb128 0x3
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccPw7hTe.s 			page 22
+
+
  957 02bf F5       		.byte	0xf5
  958 02c0 04       		.uleb128 0x4
  959 02c1 25       		.uleb128 0x25
@@ -1318,12 +1315,12 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
  1008 030d 02       		.uleb128 0x2
  1009 030e 08       		.byte	0x8
  1010 030f 64       		.byte	0x64
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 23
-
-
  1011 0310 00       		.byte	0
  1012 0311 0A       		.uleb128 0xa
  1013 0312 7A010000 		.4byte	.LVL34
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccPw7hTe.s 			page 23
+
+
  1014 0316 34050000 		.4byte	0x534
  1015 031a 25030000 		.4byte	0x325
  1016 031e 0B       		.uleb128 0xb
@@ -1347,7 +1344,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
  1034 0336 0E       		.uleb128 0xe
  1035 0337 1C010000 		.4byte	.LASF27
  1036 033b 01       		.byte	0x1
- 1037 033c A0       		.byte	0xa0
+ 1037 033c 9E       		.byte	0x9e
  1038 033d 00000000 		.4byte	.LFB65
  1039 0341 A8000000 		.4byte	.LFE65-.LFB65
  1040 0345 01       		.uleb128 0x1
@@ -1356,7 +1353,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
  1043 034b 0F       		.uleb128 0xf
  1044 034c B3000000 		.4byte	.LASF62
  1045 0350 01       		.byte	0x1
- 1046 0351 A0       		.byte	0xa0
+ 1046 0351 9E       		.byte	0x9e
  1047 0352 93000000 		.4byte	0x93
  1048 0356 34000000 		.4byte	.LLST1
  1049 035a 0C       		.uleb128 0xc
@@ -1378,19 +1375,19 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
  1065 0388 92000000 		.4byte	.LVL49
  1066 038c 6B050000 		.4byte	0x56b
  1067 0390 0C       		.uleb128 0xc
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 24
-
-
  1068 0391 98000000 		.4byte	.LVL50
  1069 0395 4A050000 		.4byte	0x54a
  1070 0399 0C       		.uleb128 0xc
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccPw7hTe.s 			page 24
+
+
  1071 039a A2000000 		.4byte	.LVL53
  1072 039e 4A050000 		.4byte	0x54a
  1073 03a2 00       		.byte	0
  1074 03a3 0E       		.uleb128 0xe
  1075 03a4 B1020000 		.4byte	.LASF28
  1076 03a8 01       		.byte	0x1
- 1077 03a9 E9       		.byte	0xe9
+ 1077 03a9 E6       		.byte	0xe6
  1078 03aa 00000000 		.4byte	.LFB66
  1079 03ae 20000000 		.4byte	.LFE66-.LFB66
  1080 03b2 01       		.uleb128 0x1
@@ -1399,7 +1396,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
  1083 03b8 08       		.uleb128 0x8
  1084 03b9 38010000 		.4byte	.LASF29
  1085 03bd 01       		.byte	0x1
- 1086 03be EB       		.byte	0xeb
+ 1086 03be E8       		.byte	0xe8
  1087 03bf 93000000 		.4byte	0x93
  1088 03c3 B9000000 		.4byte	.LLST2
  1089 03c7 0C       		.uleb128 0xc
@@ -1438,12 +1435,12 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
  1122 040d 74696400 		.ascii	"tid\000"
  1123 0411 01       		.byte	0x1
  1124 0412 0D       		.byte	0xd
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 25
-
-
  1125 0413 B4000000 		.4byte	0xb4
  1126 0417 05       		.uleb128 0x5
  1127 0418 03       		.byte	0x3
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccPw7hTe.s 			page 25
+
+
  1128 0419 00000000 		.4byte	tid
  1129 041d 14       		.uleb128 0x14
  1130 041e 6A000000 		.4byte	.LASF32
@@ -1498,12 +1495,12 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
  1179 0488 01       		.byte	0x1
  1180 0489 15       		.byte	0x15
  1181 048a 93000000 		.4byte	0x93
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 26
-
-
  1182 048e 05       		.uleb128 0x5
  1183 048f 03       		.byte	0x3
  1184 0490 00000000 		.4byte	receivedData
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccPw7hTe.s 			page 26
+
+
  1185 0494 14       		.uleb128 0x14
  1186 0495 2F010000 		.4byte	.LASF37
  1187 0499 01       		.byte	0x1
@@ -1558,12 +1555,12 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
  1236 0506 0B       		.byte	0xb
  1237 0507 76       		.byte	0x76
  1238 0508 15       		.uleb128 0x15
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 27
-
-
  1239 0509 18000000 		.4byte	.LASF47
  1240 050d 18000000 		.4byte	.LASF47
  1241 0511 08       		.byte	0x8
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccPw7hTe.s 			page 27
+
+
  1242 0512 05       		.byte	0x5
  1243 0513 15       		.uleb128 0x15
  1244 0514 51010000 		.4byte	.LASF48
@@ -1618,12 +1615,12 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
  1293 0581 00       		.byte	0
  1294              		.section	.debug_abbrev,"",%progbits
  1295              	.Ldebug_abbrev0:
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 28
-
-
  1296 0000 01       		.uleb128 0x1
  1297 0001 11       		.uleb128 0x11
  1298 0002 01       		.byte	0x1
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccPw7hTe.s 			page 28
+
+
  1299 0003 25       		.uleb128 0x25
  1300 0004 0E       		.uleb128 0xe
  1301 0005 13       		.uleb128 0x13
@@ -1678,12 +1675,12 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
  1350 0036 05       		.uleb128 0x5
  1351 0037 16       		.uleb128 0x16
  1352 0038 00       		.byte	0
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 29
-
-
  1353 0039 03       		.uleb128 0x3
  1354 003a 0E       		.uleb128 0xe
  1355 003b 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccPw7hTe.s 			page 29
+
+
  1356 003c 0B       		.uleb128 0xb
  1357 003d 3B       		.uleb128 0x3b
  1358 003e 05       		.uleb128 0x5
@@ -1738,12 +1735,12 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
  1407 0071 08       		.uleb128 0x8
  1408 0072 34       		.uleb128 0x34
  1409 0073 00       		.byte	0
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 30
-
-
  1410 0074 03       		.uleb128 0x3
  1411 0075 0E       		.uleb128 0xe
  1412 0076 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccPw7hTe.s 			page 30
+
+
  1413 0077 0B       		.uleb128 0xb
  1414 0078 3B       		.uleb128 0x3b
  1415 0079 0B       		.uleb128 0xb
@@ -1798,12 +1795,12 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
  1464 00b1 00       		.byte	0
  1465 00b2 00       		.byte	0
  1466 00b3 0D       		.uleb128 0xd
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 31
-
-
  1467 00b4 898201   		.uleb128 0x4109
  1468 00b7 01       		.byte	0x1
  1469 00b8 11       		.uleb128 0x11
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccPw7hTe.s 			page 31
+
+
  1470 00b9 01       		.uleb128 0x1
  1471 00ba 31       		.uleb128 0x31
  1472 00bb 13       		.uleb128 0x13
@@ -1858,12 +1855,12 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
  1521 00ed 0B       		.uleb128 0xb
  1522 00ee 3B       		.uleb128 0x3b
  1523 00ef 0B       		.uleb128 0xb
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 32
-
-
  1524 00f0 49       		.uleb128 0x49
  1525 00f1 13       		.uleb128 0x13
  1526 00f2 02       		.uleb128 0x2
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccPw7hTe.s 			page 32
+
+
  1527 00f3 18       		.uleb128 0x18
  1528 00f4 00       		.byte	0
  1529 00f5 00       		.byte	0
@@ -1918,12 +1915,12 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
  1578 0126 3B       		.uleb128 0x3b
  1579 0127 0B       		.uleb128 0xb
  1580 0128 49       		.uleb128 0x49
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 33
-
-
  1581 0129 13       		.uleb128 0x13
  1582 012a 3F       		.uleb128 0x3f
  1583 012b 19       		.uleb128 0x19
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccPw7hTe.s 			page 33
+
+
  1584 012c 02       		.uleb128 0x2
  1585 012d 18       		.uleb128 0x18
  1586 012e 00       		.byte	0
@@ -1978,12 +1975,12 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
  1635 0049 F3       		.byte	0xf3
  1636 004a 01       		.uleb128 0x1
  1637 004b 50       		.byte	0x50
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 34
-
-
  1638 004c 9F       		.byte	0x9f
  1639 004d 6A000000 		.4byte	.LVL39
  1640 0051 6E000000 		.4byte	.LVL40
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccPw7hTe.s 			page 34
+
+
  1641 0055 0100     		.2byte	0x1
  1642 0057 50       		.byte	0x50
  1643 0058 6E000000 		.4byte	.LVL40
@@ -2038,12 +2035,12 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
  1692              		.section	.debug_aranges,"",%progbits
  1693 0000 2C000000 		.4byte	0x2c
  1694 0004 0200     		.2byte	0x2
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 35
-
-
  1695 0006 00000000 		.4byte	.Ldebug_info0
  1696 000a 04       		.byte	0x4
  1697 000b 00       		.byte	0
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccPw7hTe.s 			page 35
+
+
  1698 000c 0000     		.2byte	0
  1699 000e 0000     		.2byte	0
  1700 0010 00000000 		.4byte	.LFB64
@@ -2098,12 +2095,12 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
  1732      74797065 
  1732      00
  1733              	.LASF54:
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 36
-
-
  1734 0046 636F6E76 		.ascii	"convertMinutes\000"
  1734      6572744D 
  1734      696E7574 
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccPw7hTe.s 			page 36
+
+
  1734      657300
  1735              	.LASF61:
  1736 0055 6D61696E 		.ascii	"main\000"
@@ -2158,12 +2155,12 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
  1759              	.LASF10:
  1760 00df 6C6F6E67 		.ascii	"long long int\000"
  1760      206C6F6E 
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 37
-
-
  1760      6720696E 
  1760      7400
  1761              	.LASF22:
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccPw7hTe.s 			page 37
+
+
  1762 00ed 7072656C 		.ascii	"preload\000"
  1762      6F616400 
  1763              	.LASF8:
@@ -2218,12 +2215,12 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
  1786      7200
  1787              	.LASF1:
  1788 017d 7369676E 		.ascii	"signed char\000"
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 38
-
-
  1788      65642063 
  1788      68617200 
  1789              	.LASF11:
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccPw7hTe.s 			page 38
+
+
  1790 0189 6C6F6E67 		.ascii	"long long unsigned int\000"
  1790      206C6F6E 
  1790      6720756E 
@@ -2278,12 +2275,12 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
  1814      333200
  1815              	.LASF59:
  1816 021e 6D61696E 		.ascii	"main.c\000"
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 39
-
-
  1816      2E6300
  1817              	.LASF60:
  1818 0225 433A5C55 		.ascii	"C:\\Users\\deniz\\OneDrive\\Dokumenter\\GitHub\\B-C"
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccPw7hTe.s 			page 39
+
+
  1818      73657273 
  1818      5C64656E 
  1818      697A5C4F 
@@ -2338,12 +2335,12 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 1
  1838              	.LASF31:
  1839 02f4 49544D5F 		.ascii	"ITM_RxBuffer\000"
  1839      52784275 
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccEgju3d.s 			page 40
-
-
  1839      66666572 
  1839      00
  1840              	.LASF58:
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccPw7hTe.s 			page 40
+
+
  1841 0301 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
  1841      43313120 
  1841      352E342E 

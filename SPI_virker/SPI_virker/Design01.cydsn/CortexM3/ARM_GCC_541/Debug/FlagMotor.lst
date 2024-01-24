@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
   28:FlagMotor.c   **** 
   29:FlagMotor.c   **** static char stepCount = 0;
   30:FlagMotor.c   **** int currentPosition = CLOSED_ANGLE;
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 2
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 2
 
 
   31:FlagMotor.c   **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
   70              		.cfi_offset 3, -8
   71              		.cfi_offset 14, -4
   43:FlagMotor.c   ****     B1_Write(0);
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 3
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 3
 
 
   72              		.loc 1 43 0
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  117 000e 0020     		movs	r0, #0
  118 0010 FFF7FEFF 		bl	A1_Write
  119              	.LVL10:
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 4
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 4
 
 
   53:FlagMotor.c   ****     B1_Write(1);
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  166              		.global	coilA1A2
  167              		.thumb
  168              		.thumb_func
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 5
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 5
 
 
  169              		.type	coilA1A2, %function
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  213              		.cfi_def_cfa_offset 8
  214              		.cfi_offset 3, -8
  215              		.cfi_offset 14, -4
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 6
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 6
 
 
   71:FlagMotor.c   ****     A1_Write(0);
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  260              		.loc 1 80 0
  261 000e 0120     		movs	r0, #1
  262 0010 FFF7FEFF 		bl	B2_Write
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 7
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 7
 
 
  263              	.LVL26:
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  309              		.align	2
  310              		.global	stopFlagMotor
  311              		.thumb
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 8
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 8
 
 
  312              		.thumb_func
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  354              		@ args = 0, pretend = 0, frame = 0
  355              		@ frame_needed = 0, uses_anonymous_args = 0
  356              	.LVL36:
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 9
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 9
 
 
  357 0000 08B5     		push	{r3, lr}
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  116:FlagMotor.c   **** 						coilB2();
  396              		.loc 1 116 0
  397 0032 FFF7FEFF 		bl	coilB2
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 10
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 10
 
 
  398              	.LVL39:
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  138:FlagMotor.c   **** 					 
  139:FlagMotor.c   **** 					 if(direction==1)
  431              		.loc 1 139 0
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 11
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 11
 
 
  432 0058 0129     		cmp	r1, #1
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  468 0080 624B     		ldr	r3, .L68
  469 0082 1A70     		strb	r2, [r3]
  158:FlagMotor.c   ****                         
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 12
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 12
 
 
  159:FlagMotor.c   ****                 }
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  179:FlagMotor.c   ****                         
  180:FlagMotor.c   ****                         stepCount+=2;
  504              		.loc 1 180 0
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 13
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 13
 
 
  505 00aa 584A     		ldr	r2, .L68
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  538              		.loc 1 201 0
  539 00d0 FFF7FEFF 		bl	coilB1B2
  540              	.LVL61:
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 14
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 14
 
 
  541 00d4 01E0     		b	.L47
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  577              	.L21:
  220:FlagMotor.c   **** 				 
  221:FlagMotor.c   **** 				 
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 15
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 15
 
 
  222:FlagMotor.c   **** 			 }
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  615 012a 0133     		adds	r3, r3, #1
  616 012c 1370     		strb	r3, [r2]
  617 012e 08BD     		pop	{r3, pc}
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 16
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 16
 
 
  618              	.LVL72:
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  649 0154 FFF7FEFF 		bl	coilA2
  650              	.LVL77:
  262:FlagMotor.c   ****                     stepCount++;}
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 17
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 17
 
 
  651              		.loc 1 262 0
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  689 0188 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
  690 018a 0133     		adds	r3, r3, #1
  691 018c 1370     		strb	r3, [r2]
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 18
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 18
 
 
  692 018e 08BD     		pop	{r3, pc}
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  724 01b4 FFF7FEFF 		bl	coilB1B2
  725              	.LVL89:
  301:FlagMotor.c   ****                     stepCount++;}
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 19
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 19
 
 
  726              		.loc 1 301 0
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  765 01ea 0133     		adds	r3, r3, #1
  766 01ec 1370     		strb	r3, [r2]
  767 01ee 08BD     		pop	{r3, pc}
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 20
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 20
 
 
  768              	.LVL96:
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  332:FlagMotor.c   **** 				 break;
  333:FlagMotor.c   **** 				 
  334:FlagMotor.c   **** 				 
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 21
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 21
 
 
  335:FlagMotor.c   **** 			 }
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  841              	.LBE2:
  842 001c 0024     		movs	r4, #0
  843              	.LVL106:
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 22
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 22
 
 
  844              	.L71:
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  883              		.align	2
  884              		.global	flagMotorRotateTo
  885              		.thumb
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 23
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 23
 
 
  886              		.thumb_func
@@ -1333,8 +1333,8 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  371:FlagMotor.c   ****     numberOfSteps(-96, mode);
  372:FlagMotor.c   ****     else
  373:FlagMotor.c   ****     numberOfSteps(-48, mode);
- 374:FlagMotor.c   ****     currentPosition=0;
- 375:FlagMotor.c   ****     flagMotorRotateTo(0, mode);
+ 374:FlagMotor.c   ****     currentPosition = CLOSED_ANGLE;
+ 375:FlagMotor.c   ****     flagMotorRotateTo(CLOSED_ANGLE, mode);
  376:FlagMotor.c   ****     
  377:FlagMotor.c   **** }
  378:FlagMotor.c   **** 
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  918 001a D3E90023 		ldrd	r2, [r3]
  919 001e FFF7FEFF 		bl	__aeabi_dmul
  920              	.LVL115:
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 24
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 24
 
 
  921 0022 FFF7FEFF 		bl	__aeabi_d2iz
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  960              	.LVL124:
  961              	.L83:
  962 005a 00BFAFF3 		.align	3
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 25
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 25
 
 
  962      0080
@@ -1485,7 +1485,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  1000 0012 04E0     		b	.L86
  1001              	.LVL128:
  1002              	.L85:
- 373:FlagMotor.c   ****     currentPosition=0;
+ 373:FlagMotor.c   ****     currentPosition = CLOSED_ANGLE;
  1003              		.loc 1 373 0
  1004 0014 0146     		mov	r1, r0
  1005 0016 6FF02F00 		mvn	r0, #47
@@ -1493,12 +1493,12 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  1007 001a FFF7FEFF 		bl	numberOfSteps
  1008              	.LVL130:
  1009              	.L86:
- 374:FlagMotor.c   ****     flagMotorRotateTo(0, mode);
+ 374:FlagMotor.c   ****     flagMotorRotateTo(CLOSED_ANGLE, mode);
  1010              		.loc 1 374 0
  1011 001e 0020     		movs	r0, #0
  1012 0020 024B     		ldr	r3, .L88
  1013 0022 5860     		str	r0, [r3, #4]
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 26
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 26
 
 
  375:FlagMotor.c   ****     
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  1067 002c 02       		.uleb128 0x2
  1068 002d 01       		.byte	0x1
  1069 002e 08       		.byte	0x8
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 27
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 27
 
 
  1070 002f 67000000 		.4byte	.LASF1
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  1124 0092 16020000 		.4byte	.LASF13
  1125 0096 02       		.uleb128 0x2
  1126 0097 08       		.byte	0x8
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 28
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 28
 
 
  1127 0098 04       		.byte	0x4
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  1181 0101 00       		.byte	0
  1182 0102 05       		.uleb128 0x5
  1183 0103 AB020000 		.4byte	.LASF17
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 29
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 29
 
 
  1184 0107 01       		.byte	0x1
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  1238 0170 9C       		.byte	0x9c
  1239 0171 BE010000 		.4byte	0x1be
  1240 0175 06       		.uleb128 0x6
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 30
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 30
 
 
  1241 0176 08000000 		.4byte	.LVL8
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  1295 01e2 50       		.byte	0x50
  1296 01e3 01       		.uleb128 0x1
  1297 01e4 30       		.byte	0x30
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 31
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 31
 
 
  1298 01e5 00       		.byte	0
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  1352 0251 07       		.uleb128 0x7
  1353 0252 01       		.uleb128 0x1
  1354 0253 50       		.byte	0x50
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 32
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 32
 
 
  1355 0254 01       		.uleb128 0x1
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  1409 02ba 38070000 		.4byte	0x738
  1410 02be C8020000 		.4byte	0x2c8
  1411 02c2 07       		.uleb128 0x7
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 33
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 33
 
 
  1412 02c3 01       		.uleb128 0x1
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  1466 0326 08       		.uleb128 0x8
  1467 0327 1A000000 		.4byte	.LVL27
  1468 032b 38070000 		.4byte	0x738
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 34
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 34
 
 
  1469 032f 07       		.uleb128 0x7
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  1523 0392 00       		.byte	0
  1524 0393 00       		.byte	0
  1525 0394 05       		.uleb128 0x5
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 35
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 35
 
 
  1526 0395 26000000 		.4byte	.LASF24
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  1580 0401 01       		.uleb128 0x1
  1581 0402 9C       		.byte	0x9c
  1582 0403 46050000 		.4byte	0x546
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 36
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 36
 
 
  1583 0407 09       		.uleb128 0x9
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  1637 04a3 0A       		.uleb128 0xa
  1638 04a4 EC000000 		.4byte	.LVL65
  1639 04a8 36030000 		.4byte	0x336
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 37
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 37
 
 
  1640 04ac 0A       		.uleb128 0xa
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  1694 054b 01       		.byte	0x1
  1695 054c 5A01     		.2byte	0x15a
  1696 054e 00000000 		.4byte	.LFB73
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 38
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 38
 
 
  1697 0552 3C000000 		.4byte	.LFE73-.LFB73
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  1751 05c5 10       		.uleb128 0x10
  1752 05c6 6900     		.ascii	"i\000"
  1753 05c8 01       		.byte	0x1
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 39
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 39
 
 
  1754 05c9 6501     		.2byte	0x165
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  1808 0636 20000000 		.4byte	.LBE5-.LBB5
  1809 063a 5F060000 		.4byte	0x65f
  1810 063e 13       		.uleb128 0x13
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 40
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 40
 
 
  1811 063f 34000000 		.4byte	.LASF33
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  1865 06b5 46050000 		.4byte	0x546
  1866 06b9 CA060000 		.4byte	0x6ca
  1867 06bd 07       		.uleb128 0x7
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 41
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 41
 
 
  1868 06be 01       		.uleb128 0x1
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  1922 070c EE000000 		.4byte	.LASF36
  1923 0710 04       		.byte	0x4
  1924 0711 1207     		.2byte	0x712
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 42
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 42
 
 
  1925 0713 17070000 		.4byte	0x717
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  1979 000f 10       		.uleb128 0x10
  1980 0010 17       		.uleb128 0x17
  1981 0011 00       		.byte	0
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 43
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 43
 
 
  1982 0012 00       		.byte	0
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  2036 0048 18       		.uleb128 0x18
  2037 0049 9742     		.uleb128 0x2117
  2038 004b 19       		.uleb128 0x19
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 44
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 44
 
 
  2039 004c 01       		.uleb128 0x1
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  2093 008b 13       		.uleb128 0x13
  2094 008c 00       		.byte	0
  2095 008d 00       		.byte	0
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 45
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 45
 
 
  2096 008e 0B       		.uleb128 0xb
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  2150 00c5 3A       		.uleb128 0x3a
  2151 00c6 0B       		.uleb128 0xb
  2152 00c7 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 46
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 46
 
 
  2153 00c8 05       		.uleb128 0x5
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  2207 00ff 00       		.byte	0
  2208 0100 00       		.byte	0
  2209 0101 12       		.uleb128 0x12
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 47
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 47
 
 
  2210 0102 0B       		.uleb128 0xb
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  2264 0138 19       		.uleb128 0x19
  2265 0139 00       		.byte	0
  2266 013a 00       		.byte	0
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 48
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 48
 
 
  2267 013b 16       		.uleb128 0x16
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  2321 0017 50       		.byte	0x50
  2322 0018 9F       		.byte	0x9f
  2323 0019 32000000 		.4byte	.LVL38
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 49
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 49
 
 
  2324 001d 35000000 		.4byte	.LVL39-1
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  2378 0096 70000000 		.4byte	.LVL48
  2379 009a 77000000 		.4byte	.LVL49-1
  2380 009e 0100     		.2byte	0x1
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 50
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 50
 
 
  2381 00a0 50       		.byte	0x50
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  2435 011b 0100     		.2byte	0x1
  2436 011d 50       		.byte	0x50
  2437 011e C1000000 		.4byte	.LVL59-1
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 51
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 51
 
 
  2438 0122 CC000000 		.4byte	.LVL60
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  2492 019b 17010000 		.4byte	.LVL69-1
  2493 019f 22010000 		.4byte	.LVL70
  2494 01a3 0400     		.2byte	0x4
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 52
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 52
 
 
  2495 01a5 F3       		.byte	0xf3
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  2549 0220 0400     		.2byte	0x4
  2550 0222 F3       		.byte	0xf3
  2551 0223 01       		.uleb128 0x1
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 53
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 53
 
 
  2552 0224 50       		.byte	0x50
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  2606 02a0 01       		.uleb128 0x1
  2607 02a1 50       		.byte	0x50
  2608 02a2 9F       		.byte	0x9f
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 54
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 54
 
 
  2609 02a3 C2010000 		.4byte	.LVL90
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  2663 031f 9F       		.byte	0x9f
  2664 0320 00000000 		.4byte	0
  2665 0324 00000000 		.4byte	0
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 55
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 55
 
 
  2666              	.LLST1:
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  2720 03a3 51       		.byte	0x51
  2721 03a4 9F       		.byte	0x9f
  2722 03a5 62000000 		.4byte	.LVL46
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 56
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 56
 
 
  2723 03a9 65000000 		.4byte	.LVL47-1
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  2777 0422 B4000000 		.4byte	.LVL56
  2778 0426 BB000000 		.4byte	.LVL57-1
  2779 042a 0100     		.2byte	0x1
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 57
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 57
 
 
  2780 042c 51       		.byte	0x51
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  2834 04a7 0100     		.2byte	0x1
  2835 04a9 51       		.byte	0x51
  2836 04aa F1000000 		.4byte	.LVL67-1
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 58
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 58
 
 
  2837 04ae FA000000 		.4byte	.LVL68
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  2891 0527 57010000 		.4byte	.LVL77-1
  2892 052b 62010000 		.4byte	.LVL78
  2893 052f 0400     		.2byte	0x4
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 59
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 59
 
 
  2894 0531 F3       		.byte	0xf3
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  2948 05ac 0400     		.2byte	0x4
  2949 05ae F3       		.byte	0xf3
  2950 05af 01       		.uleb128 0x1
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 60
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 60
 
 
  2951 05b0 51       		.byte	0x51
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  3005 062c 01       		.uleb128 0x1
  3006 062d 51       		.byte	0x51
  3007 062e 9F       		.byte	0x9f
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 61
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 61
 
 
  3008 062f 00020000 		.4byte	.LVL98
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  3062 06b5 9F       		.byte	0x9f
  3063 06b6 00000000 		.4byte	0
  3064 06ba 00000000 		.4byte	0
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 62
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 62
 
 
  3065              	.LLST4:
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  3119 0746 74000000 		.4byte	.LFE75
  3120 074a 0400     		.2byte	0x4
  3121 074c F3       		.byte	0xf3
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 63
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 63
 
 
  3122 074d 01       		.uleb128 0x1
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  3176 0018 00000000 		.4byte	.LFB64
  3177 001c 1C000000 		.4byte	.LFE64-.LFB64
  3178 0020 00000000 		.4byte	.LFB65
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 64
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 64
 
 
  3179 0024 1C000000 		.4byte	.LFE65-.LFB65
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  3233 0074 74000000 		.4byte	.LFE75
  3234 0078 00000000 		.4byte	.LFB74
  3235 007c 30000000 		.4byte	.LFE74
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 65
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 65
 
 
  3236 0080 00000000 		.4byte	0
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  3264 0075 42315F57 		.ascii	"B1_Write\000"
  3264      72697465 
  3264      00
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 66
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 66
 
 
  3265              	.LASF22:
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  3290 0109 73746570 		.ascii	"stepCount\000"
  3290      436F756E 
  3290      7400
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 67
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 67
 
 
  3291              	.LASF8:
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 1
  3312      00
  3313              	.LASF6:
  3314 0208 6C6F6E67 		.ascii	"long long int\000"
-ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccxsGX4j.s 			page 68
+ARM GAS  C:\Users\deniz\AppData\Local\Temp\ccLFoF6x.s 			page 68
 
 
  3314      206C6F6E 

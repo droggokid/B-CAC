@@ -371,8 +371,8 @@ void homeStepper(char mode){
     numberOfSteps(-96, mode);
     else
     numberOfSteps(-48, mode);
-    currentPosition=0;
-    flagMotorRotateTo(0, mode);
+    currentPosition = CLOSED_ANGLE;
+    flagMotorRotateTo(CLOSED_ANGLE, mode);
     
 }
 
@@ -382,7 +382,7 @@ void flagMotorRotateTo(int targetDegrees, char mode) {
 	
     if(mode == 'h')
     {
-    	if(targetDegrees!=currentPosition)
+    	if(targetDegrees!=currentPosition) //konvertere grader til steps
 		{
 			int stepsToTake = (targetDegrees - currentPosition) * STEPS_PER_DEGREE_half;
 
@@ -393,7 +393,7 @@ void flagMotorRotateTo(int targetDegrees, char mode) {
         }
     else
         {
-		if(targetDegrees!=currentPosition)
+		if(targetDegrees!=currentPosition) //konvertere grader til steps
 		{
 			int stepsToTake = (targetDegrees - currentPosition) * STEPS_PER_DEGREE_other;
 

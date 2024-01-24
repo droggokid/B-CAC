@@ -14,11 +14,6 @@
 #include "spi_Slave.h"
 #include <stdio.h>
 
-volatile uint16 startCount = 0;
-volatile uint16 stopCount = 0;
-uint32 counter = 0;
-
-const uint32 tickPeriodMs = 10;
 uint32 startCounter = 0;
 uint32 stopCounter = 0;
 uint32 timeIntervalTicks = 0;
